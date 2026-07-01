@@ -1,0 +1,37 @@
+/*
+  GainParam
+
+*/
+{
+  "SettingParam": {
+    "OscilloType": "JiHe_MSO7000X",
+    "FilePath": "自动校准xml生成\\JiHe7000\\TiAdc校准.xml",
+    "TiAdcTimeScaleByS": "0.000001",  //TiAdc自动校准时，时基
+    "TiAdcAcqMode": "NORMal",         //TiAdc自动校准时，采样模式设置
+    "TiAdcBandwidth": "1GHz",         //TiAdc自动校准时，带宽限制
+    "TiAdcSourceFrequency": "1E9",    //TiAdc自动校准时，信号源频率，单位Hz
+    "SourceImp": "50",                //信号源阻抗
+    "SourceVoltageByV": "0.25",       //信号源幅度
+
+    //通道循环
+    "ModesStart": "0,2,4,6",          //模式循环起点定义
+
+    //TiAdc模式循环
+    "ModesForLoop": {
+      "Start": "@ModesStart@",
+      "Count": 2    //每次循环校准模式个数
+    },
+    "ModeName": "C1C2_5G, C1_10G, C1C2_5G, C2_10G, C3C4_5G, C3_10G, C3C4_5G, C4_10G"  //TiAdc模式定义
+  },
+  "FuncParam" :{
+    "BaseLine": {
+      "TiAdcErrorByLsb": "20",  //在TiAdc校准中的，基线校准的精度
+      "TiAdcMaxWaitMilliseconds": 25  //在TiAdc校准中的，基线校准超时时间
+    },
+    "Gain": {
+      "TiAdcErrorByPercent": "20",  //在TiAdc校准中的，幅度校准的精度
+      "TiAdcGainAmpMeasureType": "AMPL",  //在TiAdc校准中的，幅度校准获取幅度的方式
+      "TiAdcMaxWaitMilliseconds": 25      //在TiAdc校准中的，幅度校准超时时间
+    }
+  }
+}

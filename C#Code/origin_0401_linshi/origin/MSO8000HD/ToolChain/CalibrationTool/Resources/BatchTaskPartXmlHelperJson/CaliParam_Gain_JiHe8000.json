@@ -1,0 +1,26 @@
+/*
+  GainParam
+
+*/
+{
+  "SettingParam": {
+    "OscilloType": "JiHe_MSO8000X",
+    "FilePath": "自动校准xml生成\\JiHe8000\\幅度校准.xml",
+
+    //垂直档位循环
+    "GainStage": "Fpga, Dsa ,Dsa,Dsa ,Dsa  ,Dsa,Dsa ,Dsa  ,Dsa   ,Dsa,Dsa ,Dsa  ,Dsa,Dsa"
+  },
+
+  "FuncParam": {
+    "BaseLine": {
+      "GainErrorByLsb": "300",
+      "GainMaxWaitMilliseconds": 30
+    },
+    "Gain":{
+      "ErrorByPercent": "3",
+      "DSAStepPercent": "2.92",
+      "DSACtrlWord": "0, 127",
+      "ADCCtrlWord": "0, 65535"
+    }
+  }
+}

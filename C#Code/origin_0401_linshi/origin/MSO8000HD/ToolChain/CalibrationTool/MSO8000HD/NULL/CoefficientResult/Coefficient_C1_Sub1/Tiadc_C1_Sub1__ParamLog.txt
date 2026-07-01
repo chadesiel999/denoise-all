@@ -1,0 +1,9 @@
+Version=2.3temp
+Designer=Yu Zhao
+LastEditor=Zhixiang Pan
+LastEditTime=20250522
+SourceDataFilePath=D:\2U_origin_20250821_20G\2U_origin_20250820_after\MSO8000HD\ToolChain\CalibrationTool\MSO8000HD\NULL\ScanFrequencyResultData\\
+SourceDataFilePrefix=C1_Sub1_
+DebugFilePath=D:\2U_origin_20250821_20G\2U_origin_20250820_after\MSO8000HD\ToolChain\CalibrationTool\MSO8000HD\NULL\CoefficientResult\Coefficient_C1_Sub1\\
+DebugFilePrefix=Tiadc_C1_Sub1_
+OtherTransparencyParameter=20e9 2 2048 12 4 10000 - - - _ M 2 1 on F 38 Y

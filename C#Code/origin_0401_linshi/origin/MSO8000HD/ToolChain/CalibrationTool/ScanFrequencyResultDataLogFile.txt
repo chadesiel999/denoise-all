@@ -1,0 +1,2 @@
+无法读取文件 'D:\MyWork2022\Dso2021MergeHardware\Z_Dso2021MergeHardware\Uestc.Auto6.Dso.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\.\ScanFrequencyResultDataC1_4G_Used4Afc_1mV_MeasureData.txt.txt'。没有此类文件或目录。
+MatlabGenerateCoefficientsTable_Afc at 18

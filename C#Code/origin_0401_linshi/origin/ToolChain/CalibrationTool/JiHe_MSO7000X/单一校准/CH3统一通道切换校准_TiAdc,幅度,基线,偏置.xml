@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--=======region 重要说明=====-->
+<!--DriverType 目前只支持 VISA; 我们自己的只支持UU_ETHERNET(GHz_MSO7000X), UU_USB374(示波表)-->
+<!--CommandType 有2两种:check和scpi，check用于弹出准备就绪与否的对话框;scpi为SCPI命令，需要指定仪器-->
+<!--AfterWaitSec 表示执行一条scpi命令后，需要等待的时间(以秒为单位)-->
+<!--QueryOvertimeSec 表示执行查询命令时的超时时间(以秒为单位)。对有些操作，仪器端可能需要花费较长的时间后才能查询，比如校准。在此期间如果有比较等待操作，就需要多次执行，直到超时-->
+<!--基本概念：一个文件称为一个解决方案，一个方案中包含多个任务，一个任务包含一系列的命令-->
+<!--一个方案中使用的所有仪器在Instrumentations 段定义，在后续的命令中的InstrumentationName 必须使用该段中Name字段 中的内容==-->
+<!--如果使用厂家自用的校准工具，对待校准的仪器（示波器），请在仪器段中对该仪器使用IsOurTargetDso="1"来标识，其地址可以为空。==-->
+<!--==对使用新的厂家提供的校准工具进行校准时，在Command 段，可以使用程序自定义的函数来校准==-->
+<!--==此时，包括3个标签：IsProgramFunc（指示是否该命令是程序函数来完成），ProgramFuncName(程序函数的名称，有程序员提供)，ProgramFuncOverSec（程序函数超时时间，秒）==-->
+<!--=======endregion 重要说明=====-->
+
+<InstrumentationAutoControlSolution SolutionDescription="GHz_MSO7000X程控校准方案">
+	<!--=======region 方案中使用到的仪器的定义=====-->
+	<Instrumentations>
+		<Instrumentation
+			Name="信号源9500B"
+			Description="信号源9500B"
+			DriverType="VISA"
+			Address="GPIB0::19::INSTR"
+			Timeout="0"
+		></Instrumentation>
+		<!--== 待校准的目标仪器，使用此标识，并可不标识Address标签==-->
+		<Instrumentation
+			Name="GHz_MSO7000X"
+			Description="GHz_MSO7000X示波器"
+			DriverType="VISA"
+			IsOurTargetDso="true"
+			Timeout="0"
+		></Instrumentation>
+	</Instrumentations>
+	<!--=======endregion 方案中使用到的仪器的定义=====-->
+	
+	<!--=======region 方案中任务列表=====-->
+	<Tasks>
+		<Task Description="校准通道的高阻、低阻全档位增益" ImportanceTipMessage="该任务是通过程控来校准示波器的通道增益。">
+			<!--通道循环-->
+			<ForeachLoop StartIndex="2" Count="1">
+				<Group Description="定义循环变量">
+					<VarintDefine name="OpenChannel"  		valuelist="1,2,3,4"></VarintDefine>
+					<VarintDefine name="InterleaveStart"  		valuelist="0,2,4,6"></VarintDefine>
+				</Group>
+
+				<Command Description="现在即将对 “通道 (@OpenChannel@) ” 进行校准，请确保将信号源的输出接入到相应的通道！"
+					InstrumentationName="信号源9500B"
+					CommandType="check"
+					SCPICmd=""
+          ></Command>
+
+				<!--TiAdc校准-->
+				<Group Description="TiAdc校准: 示波器及信号源初始化">
+					<Command Description="检查信号源与示波器的连接情况"
+					  InstrumentationName="信号源9500B"
+					  CommandType="check"
+					  SCPICmd=""
+          ></Command>
+					<Command Description="信号源复位"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="*RST"
+					  AfterWaitSec="1"
+          ></Command>
+					<Command Description="设置通道1输出波形"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="ROUTe:SIGNal CH1"
+          ></Command>
+					<Command Description="输出波形选择正弦波"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="SCOpe SIN"
+          ></Command>
+					<Command Description="设置信号源输出频率为1G"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="FREQuency 1E9"
+          ></Command>
+					<Command Description="信号源:低阻"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="ROUT:SIGN:IMP 50"
+            ></Command>
+					<Command Description="设置信号源输出幅度"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="VOLTage 0.25"
+          ></Command>
+					<Command Description="信号源:复位 "
+						InstrumentationName="GHz_MSO7000X"
+						CommandType="scpi"
+						SCPICmd="*RST"
+						AfterWaitSec="1"
+            ></Command>
+					<Command Description="设置时基到实时档（1us/div）"
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":TIM:SCAL 0.000001"
+          ></Command>
+					<Command Description="打开正常采集模式"
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":ACQuire:TYPe NORMal"
+          ></Command>
+				</Group>
+				<Command Description="STEP2.1:目标示波器状态准备：系统配置:关闭数字触发、关闭DSP"
+					InstrumentationName="GHz_MSO7000X"
+					CommandType="scpi"
+					SCPICmd=":FACT:CALI:SPEC:DATA DebugVariant,bEnable_DigitTrigger:false,bEnable_Dsp:false"
+				></Command>					
+			<ForeachLoop Description="TiAdc校准" StartIndex="@InterleaveStart@" Count="2">
+					<VarintDefine name="InterleaveName"  	valuelist="C1C2_5G	,C1_10G	,C1C2_5G,C2_10G	,C3C4_5G,C3_10G	,C3C4_5G,C4_10G	"></VarintDefine>
+					<Group Description="常量设置">
+						<ConstVariantDefine name="HardwareValidMs_TiAdc" value="200"></ConstVariantDefine>
+						<ConstVariantDefine name="NeedStaticTimes_TiAdc" value="1"></ConstVariantDefine>
+						<ConstVariantDefine name="TotalErrorByPercent_TiAdc" value="15"></ConstVariantDefine>
+						<ConstVariantDefine name="DSAStepPercent_TiAdc" value="12.2"></ConstVariantDefine>
+						<ConstVariantDefine name="ADCStepPercent_TiAdc" value="0.06"></ConstVariantDefine>
+						<ConstVariantDefine name="FPGAYLevelID_TiAdc" value="1"></ConstVariantDefine>
+						<ConstVariantDefine name="DSACtrlWord_TiAdc" value="0,32" Description="包含两个参数"></ConstVariantDefine>
+						<ConstVariantDefine name="ADCCtrlWord_TiAdc" value="0,255"></ConstVariantDefine>
+						<ConstVariantDefine name="FpgaCtrlWord_TiAdc" value="200,5000"></ConstVariantDefine>
+						<ConstVariantDefine name="AmpMeasureType_TiAdc" value="AMPL"></ConstVariantDefine>
+					</Group>
+
+					<Group Description="示波器校准基线和幅度">
+						<Command Description="所有通道,50mV档,低阻"
+						  InstrumentationName="GHz_MSO7000X"
+						  CommandType="scpi"
+						  SCPICmd=":FACTory:ALLSource:APPLy 1,50,0,2,1,0,0,9,0,0"
+              ></Command>
+						<Command Description="存储深度：25K"
+						  InstrumentationName="GHz_MSO7000X"
+						  CommandType="scpi"
+						  SCPICmd=":FACT:STOR Of25KDots"
+              ></Command>
+						<Command Description="通道1 1GHz 带宽限制"
+						  InstrumentationName="GHz_MSO7000X"
+						  CommandType="scpi"
+						  SCPICmd=":CHAN1:BWL 1GHz"
+              ></Command>
+						<Command Description="通道2 1GHz 带宽限制"
+						  InstrumentationName="GHz_MSO7000X"
+						  CommandType="scpi"
+						  SCPICmd=":CHAN2:BWL 1GHz"
+              ></Command>
+						<Command Description="通道3 1GHz 带宽限制"
+						  InstrumentationName="GHz_MSO7000X"
+						  CommandType="scpi"
+						  SCPICmd=":CHAN3:BWL 1GHz"
+              ></Command>
+						<Command Description="通道4 1GHz 带宽限制"
+						  InstrumentationName="GHz_MSO7000X"
+						  CommandType="scpi"
+						  SCPICmd=":CHAN4:BWL 1GHz"
+              ></Command>
+						<Command Description="关闭源1输出，用于基线基本校准"
+						  InstrumentationName="信号源9500B"
+						  CommandType="scpi"
+						  SCPICmd="OUTPut OFF"
+            ></Command>
+
+						<Command Description="通道 “@OpenChannel@” ，低阻档，50mv档:基线0Div校准"
+						  InstrumentationName="GHz_MSO7000X"
+						  IsProgramFunc="true"
+						  ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @OpenChannel@,LOW,50,0,0,20000,100,10,5,400,20,true"
+						  ProgramFuncOverSec="20"
+            ></Command>
+
+						<Command Description="打开源1输出，用于幅度基本校准"
+						  InstrumentationName="信号源9500B"
+						  CommandType="scpi"
+						  SCPICmd="OUTPut ON"
+            ></Command>
+						<Command Description="通道 “@OpenChannel@” ，低阻档，50mv档:幅度校准"
+						  InstrumentationName="GHz_MSO7000X"
+						  IsProgramFunc="true"
+						  ProgramFuncName="BatchTaskPart_CaliChannelGain @OpenChannel@,LOW,50,0.25,Dsa_Adc_Fpga,@HardwareValidMs_TiAdc@,@NeedStaticTimes_TiAdc@,@TotalErrorByPercent_TiAdc@
+                          ,@DSAStepPercent_TiAdc@,@ADCStepPercent_TiAdc@,@FPGAYLevelID_TiAdc@,@DSACtrlWord_TiAdc@,@ADCCtrlWord_TiAdc@,@FpgaCtrlWord_TiAdc@,@AmpMeasureType_TiAdc@"
+						  ProgramFuncOverSec="40"
+              ></Command>
+					</Group>
+
+					<Command Description="模式(@InterleaveName@),通道(@OpenChannel@):Tiadc校准"
+					  InstrumentationName="GHz_MSO7000X"
+					  IsProgramFunc="true"
+					  ProgramFuncName="BatchTaskPart_TiAdc_JiHe_MSO7000X @InterleaveName@,@OpenChannel@,Low,50,1000,2500,0.15,0.3,600,5"
+					  ProgramFuncOverSec="80"
+            ></Command>
+					<Command Description="源输出1关闭"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="OUTPut OFF"
+            ></Command>
+				</ForeachLoop>
+				<Command Description="STEP2.1:目标示波器状态准备：系统配置:关闭数字触发、关闭DSP"
+					InstrumentationName="GHz_MSO7000X"
+					CommandType="scpi"
+					SCPICmd=":FACT:CALI:SPEC:DATA DebugVariant,bEnable_DigitTrigger:true,bEnable_Dsp:true"
+				></Command>	
+				<Command Description="保存校准数据"
+				  InstrumentationName="GHz_MSO7000X"
+				  IsProgramFunc="true"
+				  ProgramFuncName="BatchTaskPart_SaveCaliDataToFile TiAdc_PhaseOffsetGain_JiHe_MSO7000X"
+				></Command>
+				<!--幅度校准-->
+				<Group Description="幅度校准: 示波器及信号源初始化">
+				<Command Description="示波器:时基档(200us) "
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":TIM:SCAL 0.0002"
+				></Command>
+				<Command Description="示波器:触发模式为(边沿) "
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":TRIG:TYP EDGe"
+				></Command>
+				<Command Description="示波器:打开高分辨率模式 "
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":ACQuire:TYPe HIGHres"
+				></Command>
+				<Command Description="示波器:触发源设置(CH@OpenChannel@) "
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":TRIG:EDG:SOUR C@OpenChannel@"
+				></Command>
+				<Command Description="示波器:触发电平设置(0) "
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":TRIG:EDG:LEV 0"
+				></Command>
+				<Command Description="信号源:复位 "
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="*RST"
+					  AfterWaitSec="1"
+				></Command>
+					<Command Description="信号源:输出1打开 "
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="ROUTe:SIGNal CH1"
+				></Command>
+				<Command Description="信号源:输出方波 "
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="SCOpe SQU"
+				></Command>
+				<Command Description="信号源:输出1KHz "
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="FREQuency 1000"
+				></Command>
+				<Command Description="信号源:方波设置(SYMM) "
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd=":PAR:SQU:POL SYMM"
+				></Command>
+				</Group>
+				<Command Description="STEP2.1:目标示波器状态准备：系统配置:关闭数字触发、关闭DSP"
+					InstrumentationName="GHz_MSO7000X"
+					CommandType="scpi"
+					SCPICmd=":FACT:CALI:SPEC:DATA DebugVariant,bEnable_DigitTrigger:false,bEnable_Dsp:false"
+				></Command>	
+				<ForeachLoop Description="幅度校准" StartIndex="0" Count="2">
+					<VarintDefine name="SourceIMPedanceName"  valuelist="50欧姆,高阻"></VarintDefine>
+					<VarintDefine name="SourceIMPedanceSetting"  valuelist="50,1E6"></VarintDefine>
+					<VarintDefine name="BatchTaskIMPedanceSetting"  valuelist="LOW,HIGH"></VarintDefine>
+					<VarintDefine name="DsoIMPedanceOfALLSourceAPPLySetting"  valuelist="2,0"></VarintDefine>
+					<VarintDefine name="StartYScale"  valuelist="2,13"></VarintDefine>
+					<VarintDefine name="YScaleCount"  valuelist="9,12"></VarintDefine>
+					<Command Description="信号源:阻抗(@SourceIMPedanceName@) "
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="ROUT:SIGN:IMP @SourceIMPedanceSetting@"
+            ></Command>
+					<!--==挡位循环循环==-->
+					<ForeachLoop StartIndex="@StartYScale@" Count="@YScaleCount@">
+						<VarintDefine name="SourceAmpVoltByV" valuelist="0.003,0.006,0.012   ,0.03    ,0.06    ,0.12    ,0.3     ,0.6     ,1.2     ,3       ,5       ,0.003,0.006,0.012   ,0.03    ,0.06    ,0.12    ,0.3     ,0.6     ,1.2     ,3       ,6,12      ,30      ,60      "></VarintDefine>
+						<VarintDefine name="inputLevelBymV"   valuelist="0.5  ,1    ,2       ,5       ,10      ,20      ,50      ,100     ,200     ,500     ,1000    ,0.5  ,1    ,2       ,5       ,10      ,20      ,50      ,100     ,200     ,500     ,1000,2000    ,5000    ,10000   "></VarintDefine>
+						<VarintDefine name="Stage"  		  valuelist="Fpga, Fpga ,Dsa_Adc_Fpga	,Dsa_Adc_Fpga	 ,Dsa_Adc_Fpga	  ,Dsa_Adc_Fpga	,Dsa_Adc_Fpga	 ,Dsa_Adc_Fpga,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga   ,Dsa_Adc_Fpga	,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga,Dsa_Adc_Fpga，Fpga, Fpga ,Dsa_Adc_Fpga	,Dsa_Adc_Fpga	 ,Dsa_Adc_Fpga	  ,Dsa_Adc_Fpga	,Dsa_Adc_Fpga	 ,Dsa_Adc_Fpga,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga   ,Dsa_Adc_Fpga	,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga,Dsa_Adc_Fpga"></VarintDefine>
+						<Group Description="常量设置">
+							<ConstVariantDefine name="HardwareValidMs" value="200"></ConstVariantDefine>
+							<ConstVariantDefine name="NeedStaticTimes" value="3"></ConstVariantDefine>
+							<ConstVariantDefine name="TotalErrorByPercent" value="0.6"></ConstVariantDefine>
+							<ConstVariantDefine name="DSAStepPercent" value="12.2"></ConstVariantDefine>
+							<ConstVariantDefine name="ADCStepPercent" value="0.06"></ConstVariantDefine>
+							<ConstVariantDefine name="FPGAYLevelID" value="1"></ConstVariantDefine>
+							<ConstVariantDefine name="DSACtrlWord" value="0,32" Description="包含两个参数"></ConstVariantDefine>
+							<ConstVariantDefine name="ADCCtrlWord" value="0,255"></ConstVariantDefine>
+							<ConstVariantDefine name="FpgaCtrlWord" value="200,5000"></ConstVariantDefine>
+							<ConstVariantDefine name="AmpMeasureType" value="STDD"></ConstVariantDefine>
+						</Group>
+
+						<Group Description="示波器通道设置">
+							<Command Description="信号源:输出电平(@SourceAmpVoltByV@V) "
+							  InstrumentationName="信号源9500B"
+							  CommandType="scpi"
+							  SCPICmd="VOLTage @SourceAmpVoltByV@"
+                ></Command>
+							<Command Description="示波器:所有通道,@inputLevelBymV@mV档,@SourceIMPedanceName@,20MHz带宽限制"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":FACTory:ALLSource:APPLy 1,@inputLevelBymV@,0,@DsoIMPedanceOfALLSourceAPPLySetting@,3,0,0,9,0,0"
+							  AfterWaitSec="1"
+                ></Command>
+							<Command Description="存储深度:25K"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":FACT:STOR Of25KDots"
+                ></Command>
+							<Command Description="示波器:通道1 20MHz 带宽限制"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":CHAN1:BWL 20MHz"
+                ></Command>
+							<Command Description="示波器:通道2 20MHz 带宽限制"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":CHAN2:BWL 20MHz"
+                ></Command>
+							<Command Description="示波器:通道3 20MHz 带宽限制"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":CHAN3:BWL 20MHz"
+                ></Command>
+							<Command Description="示波器:通道4 20MHz 带宽限制"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":CHAN4:BWL 20MHz"
+                ></Command>
+						</Group>
+
+						<Group Description="先校准基线0Div">
+							<Command Description="信号源:输出1关闭"
+							  InstrumentationName="信号源9500B"
+							  CommandType="scpi"
+							  SCPICmd="OUTPut OFF"
+                ></Command>
+
+							<Command Description="通道@OpenChannel@_@inputLevelBymV@mV档_@SourceIMPedanceName@:基线0Div校准"
+							  InstrumentationName="GHz_MSO7000X"
+							  IsProgramFunc="true"
+							  ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @OpenChannel@,@BatchTaskIMPedanceSetting@,@inputLevelBymV@,0,0,50000,100,3,2,500,50,true"
+							  ProgramFuncOverSec="20"
+              ></Command>
+
+							<Command Description="信号源:输出1打开"
+							  InstrumentationName="信号源9500B"
+							  CommandType="scpi"
+							  SCPICmd="OUTPut ON"
+                ></Command>
+						</Group>
+
+						<Group Description="再校准幅度">
+							<Command Description="通道@OpenChannel@_@inputLevelBymV@mV档_@SourceIMPedanceName@:幅度校准"
+							  InstrumentationName="GHz_MSO7000X"
+							  IsProgramFunc="true"
+							  ProgramFuncName="BatchTaskPart_CaliChannelGain @OpenChannel@,@BatchTaskIMPedanceSetting@,@inputLevelBymV@,@SourceAmpVoltByV@,@Stage@,@HardwareValidMs@,@NeedStaticTimes@,@TotalErrorByPercent@
+                        ,@DSAStepPercent@,@ADCStepPercent@,@FPGAYLevelID@,@DSACtrlWord@,@ADCCtrlWord@,@FpgaCtrlWord@,@AmpMeasureType@"
+							  ProgramFuncOverSec="40"
+                ></Command>
+							<Command Description="信号源:输出1关闭"
+							  InstrumentationName="信号源9500B"
+							  CommandType="scpi"
+							  SCPICmd="OUTPut OFF"
+                ></Command>
+						</Group>
+					</ForeachLoop>
+				</ForeachLoop>
+				<Command Description="信号源:复位 "
+					InstrumentationName="信号源9500B"
+					CommandType="scpi"
+					SCPICmd="*RST"
+				></Command>
+				<Command Description="STEP2.1:目标示波器状态准备：系统配置:关闭数字触发、关闭DSP"
+					InstrumentationName="GHz_MSO7000X"
+					CommandType="scpi"
+					SCPICmd=":FACT:CALI:SPEC:DATA DebugVariant,bEnable_DigitTrigger:true,bEnable_Dsp:true"
+				></Command>	
+				<Command Description="保存校准数据"
+				  InstrumentationName="GHz_MSO7000X"
+				  IsProgramFunc="true"
+				  ProgramFuncName="BatchTaskPart_SaveCaliDataToFile PhyChannel"
+        ></Command>
+
+				<!--基线校准-->
+				<Group Description="基线校准: 示波器及信号源初始化">
+					<Command Description="信号源:复位 "
+					 InstrumentationName="信号源9500B"
+					 CommandType="scpi"
+					 SCPICmd="*RST"
+					 AfterWaitSec="1"
+				></Command>
+					<Command Description="时基档1ms" InstrumentationName="GHz_MSO7000X" CommandType="scpi"
+					  SCPICmd=":TIM:SCAL 0.0002"/>
+					<Command Description="打开高分辨率模式"  InstrumentationName="GHz_MSO7000X" CommandType="scpi"
+					  SCPICmd=":ACQuire:TYPe HIGHres" />
+					<Command Description="存储深度：25K"
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":FACT:STOR Of25KDots"
+					  AfterWaitSec="3"
+            ></Command>
+				<Command Description="现在即将对通道基线进行校准，请确保将无输入信号接入通道！" InstrumentationName="JiHe_MSO7000X" CommandType="check"
+				SCPICmd="" />
+				</Group>
+				<Command Description="STEP2.1:目标示波器状态准备：系统配置:关闭数字触发、关闭DSP"
+					InstrumentationName="GHz_MSO7000X"
+					CommandType="scpi"
+					SCPICmd=":FACT:CALI:SPEC:DATA DebugVariant,bEnable_DigitTrigger:false,bEnable_Dsp:false"
+				></Command>	
+				<ForeachLoop Description="低阻" StartIndex="2" Count="9">
+					<VarintDefine name="inputLevelBymV"  		valuelist="0.5 ,1   ,2   ,5   ,10  ,20  ,50  ,100 ,200 ,500 ,1000,2000 ,5000,10000"></VarintDefine>
+					<VarintDefine name="Step"  					valuelist="50  ,50  ,50  ,50  ,100 ,100 ,100 ,100 ,100 ,100 ,100 ,100  ,100 ,100  "></VarintDefine>
+					<VarintDefine name="TotalErrorByPercent"  	valuelist="2   ,0.5   ,0.5   ,0.5   ,0.5  ,0.5  ,0.5   ,0.5   ,0.5   ,0.5  ,0.5   ,0.5    ,0.5   ,0.5    "></VarintDefine>
+					<VarintDefine name="Delta"  				valuelist="8000,8500,8400,8100,7600,6800,7000,5500,6500,7600,6500,10500,9000,7000 "></VarintDefine>
+					<Group Description="示波器通道设置">
+						<Command Description="所有通道,@inputLevelBymV@mV档,低阻,20MHz带宽限制" InstrumentationName="GHz_MSO7000X" CommandType="scpi" AfterWaitSec="2"
+							SCPICmd=":FACTory:ALLSource:APPLy 1,@inputLevelBymV@,0,2,3,0,0,9,0,0" />
+
+						<Command Description="通道1 20MHz 带宽限制" InstrumentationName="GHz_MSO7000X" CommandType="scpi"
+						  SCPICmd=":CHAN1:BWL 20MHz" />
+						<Command Description="通道2 20MHz 带宽限制"  InstrumentationName="GHz_MSO7000X" CommandType="scpi"
+						  SCPICmd=":CHAN2:BWL 20MHz"/>
+						<Command Description="通道3 20MHz 带宽限制" InstrumentationName="GHz_MSO7000X" CommandType="scpi"
+						  SCPICmd=":CHAN3:BWL 20MHz"/>
+						<Command Description="通道4 20MHz 带宽限制" InstrumentationName="GHz_MSO7000X" CommandType="scpi"
+						  SCPICmd=":CHAN4:BWL 20MHz"/>
+					</Group>
+
+					<Command Description="@inputLevelBymV@mV档、低阻:基线0Div校准" InstrumentationName="GHz_MSO7000X" IsProgramFunc="true" ProgramFuncOverSec="30"
+					  ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @OpenChannel@,LOW,@inputLevelBymV@,0,0,20000,@Step@,@TotalErrorByPercent@,2,450,50,true"/>
+					<Command Description="@inputLevelBymV@mV档、低阻:基线3Div校准" InstrumentationName="GHz_MSO7000X" IsProgramFunc="true" ProgramFuncOverSec="30"
+					  ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @OpenChannel@,LOW,@inputLevelBymV@,3,0,10000,@Step@,@TotalErrorByPercent@,2,450,50,false"/>
+					<Command Description="@inputLevelBymV@mV档、低阻:基线-3Div校准" InstrumentationName="GHz_MSO7000X" IsProgramFunc="true" ProgramFuncOverSec="30"
+					  ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @OpenChannel@,LOW,@inputLevelBymV@,-3,0,10000,@Step@,@TotalErrorByPercent@,2,450,50,false"/>
+				</ForeachLoop>
+				<ForeachLoop Description="高阻" StartIndex="2" Count="12">
+					<VarintDefine name="inputLevelBymV"  			valuelist="0.5 ,1   ,2   ,5   ,10  ,20  ,50  ,100 ,200 ,500 ,1000,2000 ,5000,10000"></VarintDefine>
+					<VarintDefine name="Step"  								valuelist="50  ,50  ,50  ,50  ,100 ,100 ,100 ,100 ,100 ,100 ,100 ,100  ,100 ,100  "></VarintDefine>
+					<VarintDefine name="TotalErrorByPercent"  valuelist="3   ,0.5    ,0.5    ,0.5    ,0.5    ,0.5   ,0.5    ,0.5    ,0.5    ,0.5    ,0.5    ,0.5    ,0.5    ,0.5     "></VarintDefine>
+					<VarintDefine name="Delta"  							valuelist="8000,8500,8400,8100,7600,6800,7000,5500,6500,7600,6500,10500,9000,7000 "></VarintDefine>
+					<Group Description="示波器通道设置">
+						<Command Description="所有通道,@inputLevelBymV@mV档,高阻,20MHz带宽限制" InstrumentationName="GHz_MSO7000X" CommandType="scpi" AfterWaitSec="2"
+						  SCPICmd=":FACTory:ALLSource:APPLy 1,@inputLevelBymV@,0,0,3,0,0,9,0,0"/>
+						<Command Description="通道1 20MHz 带宽限制" InstrumentationName="GHz_MSO7000X" CommandType="scpi"
+						  SCPICmd=":CHAN1:BWL 20MHz" />
+						<Command Description="通道2 20MHz 带宽限制"  InstrumentationName="GHz_MSO7000X" CommandType="scpi"
+						  SCPICmd=":CHAN2:BWL 20MHz"/>
+						<Command Description="通道3 20MHz 带宽限制" InstrumentationName="GHz_MSO7000X" CommandType="scpi"
+						  SCPICmd=":CHAN3:BWL 20MHz"/>
+						<Command Description="通道4 20MHz 带宽限制" InstrumentationName="GHz_MSO7000X" CommandType="scpi"
+						  SCPICmd=":CHAN4:BWL 20MHz"/>
+					</Group>
+
+					<Command Description="@inputLevelBymV@mV档、高阻:基线0Div校准" InstrumentationName="GHz_MSO7000X" IsProgramFunc="true" ProgramFuncOverSec="20"
+					  ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @OpenChannel@,HIGH,@inputLevelBymV@,0,0,50000,@Step@,@TotalErrorByPercent@,2,500,50,true"/>
+					<Command Description="@inputLevelBymV@mV档、高阻:基线3Div校准" InstrumentationName="GHz_MSO7000X" IsProgramFunc="true" ProgramFuncOverSec="20"
+					  ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @OpenChannel@,HIGH,@inputLevelBymV@,3,0,10000,@Step@,@TotalErrorByPercent@,2,500,50,false"/>
+					<Command Description="@inputLevelBymV@mV档、高阻:基线-3Div校准" InstrumentationName="GHz_MSO7000X" IsProgramFunc="true" ProgramFuncOverSec="20"
+					  ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @OpenChannel@,HIGH,@inputLevelBymV@,-3,0,10000,@Step@,@TotalErrorByPercent@,2,500,50,false"/>		
+				</ForeachLoop>
+				<Command Description="读取设置基线校准完成后通道温度" InstrumentationName="GHz_MSO7000X" IsProgramFunc="true"
+				  ProgramFuncName="BatchTaskPart_SetAnalogChannelTemperatue BaseLine" />
+				<Command Description="STEP2.1:目标示波器状态准备：系统配置:关闭数字触发、关闭DSP"
+					InstrumentationName="GHz_MSO7000X"
+					CommandType="scpi"
+					SCPICmd=":FACT:CALI:SPEC:DATA DebugVariant,bEnable_DigitTrigger:true,bEnable_Dsp:true"
+				></Command>	
+				<Command Description="保存校准数据" InstrumentationName="GHz_MSO7000X" IsProgramFunc="true"
+				  ProgramFuncName="BatchTaskPart_SaveCaliDataToFile PhyChannel" />
+
+				<!--偏置校准-->
+				<Group Description="偏置校准前提: 示波器及信号源初始化">
+					<Command Description="现在即将对示波器通道@OpenChannel@的偏执进行校准，检查信号源与示波器的连接情况！" InstrumentationName="信号源9500B" CommandType="check"
+	SCPICmd="" />
+					<Command Description="时基档1us"
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":TIM:SCAL 0.001"
+            ></Command>
+					<Command Description="打开高分辨率模式"
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":ACQuire:TYPe HIGHres"
+            ></Command>
+					<Command Description="存储深度：25K"
+					  InstrumentationName="GHz_MSO7000X"
+					  CommandType="scpi"
+					  SCPICmd=":FACT:STOR Of25KDots"
+            ></Command>
+					<Command Description="源复位"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="*RST"
+					  AfterWaitSec="2"
+            ></Command>
+					<Command Description="源输出电压模式"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="SCOpe DC"
+            ></Command>
+				</Group>
+				<Command Description="STEP2.1:目标示波器状态准备：系统配置:关闭数字触发、关闭DSP"
+					InstrumentationName="GHz_MSO7000X"
+					CommandType="scpi"
+					SCPICmd=":FACT:CALI:SPEC:DATA DebugVariant,bEnable_DigitTrigger:false,bEnable_Dsp:false"
+				></Command>	
+				<ForeachLoop StartIndex="0" Count="2">
+					<VarintDefine name="SourceIMPedanceName"  valuelist="50欧姆,高阻"></VarintDefine>
+					<VarintDefine name="SourceIMPedanceSetting"  valuelist="50,1E6"></VarintDefine>
+					<VarintDefine name="BatchTaskIMPedanceSetting"  valuelist="LOW,HIGH"></VarintDefine>
+					<VarintDefine name="DsoIMPedanceOfALLSourceAPPLySetting"  valuelist="2,0"></VarintDefine>
+					<VarintDefine name="YScaleStart"  valuelist="0,3"></VarintDefine>
+					<VarintDefine name="YScaleCount"  valuelist="3,4"></VarintDefine>
+					<Command Description="源OUTPut1:@SourceIMPedanceName@"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="ROUT:SIGN:IMP @SourceIMPedanceSetting@"
+            ></Command>
+					<!--==挡位循环循环==-->
+					<ForeachLoop StartIndex="@YScaleStart@" Count="@YScaleCount@">
+						<VarintDefine name="SourceAmpVoltByV" valuelist="2	,2	,5		,2 	,20	,40		,80	"></VarintDefine>
+						<VarintDefine name="inputLevelBymV"   valuelist="20	,100,1000	,50	,500,1000	,10000 	"></VarintDefine>
+
+						<Group Description="示波器通道设置">
+							<Command Description="所有通道,@inputLevelBymV@mV档,@SourceIMPedanceName@,20MHz带宽限制"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":FACTory:ALLSource:APPLy 1,@inputLevelBymV@,0,@DsoIMPedanceOfALLSourceAPPLySetting@,3,0,0,9,0,0"
+                ></Command>
+							<Command Description="通道调整偏执"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":CHANnel@OpenChannel@:BIAS @SourceAmpVoltByV@"
+                ></Command>
+							<Command Description="通道1 20MHz 带宽限制"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":CHAN1:BWL 20MHz"
+                ></Command>
+							<Command Description="通道2 20MHz 带宽限制"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":CHAN2:BWL 20MHz"
+                ></Command>
+							<Command Description="通道3 20MHz 带宽限制"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":CHAN3:BWL 20MHz"
+                ></Command>
+							<Command Description="通道4 20MHz 带宽限制"
+							  InstrumentationName="GHz_MSO7000X"
+							  CommandType="scpi"
+							  SCPICmd=":CHAN4:BWL 20MHz"
+                ></Command>
+						</Group>
+						<Command Description="源直流输出"
+						  InstrumentationName="信号源9500B"
+						  CommandType="scpi"
+						  SCPICmd="VOLTage @SourceAmpVoltByV@"
+              ></Command>
+						<Command Description="源输出打开"
+						  InstrumentationName="信号源9500B"
+						  CommandType="scpi"
+						  SCPICmd="OUTPut ON"
+              ></Command>
+						<Command Description="通道@OpenChannel@、@inputLevelBymV@mV档、@SourceIMPedanceName@:偏执校准"
+						  InstrumentationName="GHz_MSO7000X"
+						  IsProgramFunc="true"
+						  ProgramFuncName="BatchTaskPart_CaliOffset @OpenChannel@,@BatchTaskIMPedanceSetting@,@inputLevelBymV@,@SourceAmpVoltByV@,40"
+						  ProgramFuncOverSec="50"
+              ></Command>
+						<Command Description="通道恢复偏执"
+						  InstrumentationName="GHz_MSO7000X"
+						  CommandType="scpi"
+						  SCPICmd=":CHANnel@OpenChannel@:BIAS 0"
+              ></Command>
+					</ForeachLoop>
+				</ForeachLoop>
+				<Group Description="偏置校准后续: 保存校准结果">
+				<Command Description="STEP2.1:目标示波器状态准备：系统配置:关闭数字触发、关闭DSP"
+					InstrumentationName="GHz_MSO7000X"
+					CommandType="scpi"
+					SCPICmd=":FACT:CALI:SPEC:DATA DebugVariant,bEnable_DigitTrigger:true,bEnable_Dsp:true"
+				></Command>	
+					<Command Description="源电压置为0"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="VOLTage 0"
+            ></Command>
+					<Command Description="源输出关闭"
+					  InstrumentationName="信号源9500B"
+					  CommandType="scpi"
+					  SCPICmd="OUTPut OFF"
+            ></Command>
+					<Command Description="源复位"
+						  InstrumentationName="信号源9500B"
+						  CommandType="scpi"
+						  SCPICmd="*RST"
+          ></Command>
+					<Command Description="保存校准数据"
+						  InstrumentationName="GHz_MSO7000X"
+						  IsProgramFunc="true"
+						  ProgramFuncName="BatchTaskPart_SaveCaliDataToFile PhyChannel"
+          ></Command>
+				</Group>
+
+
+
+			</ForeachLoop>
+		</Task>
+	</Tasks>
+</InstrumentationAutoControlSolution>

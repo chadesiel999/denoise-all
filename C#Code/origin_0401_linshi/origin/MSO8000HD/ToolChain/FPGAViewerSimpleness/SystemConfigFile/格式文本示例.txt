@@ -1,0 +1,1200 @@
+//@project:partial_postfix_name AcqBd
+
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company:
+// Engineer:
+//
+// Create Date: 2019/10/14 19:13:11
+// Design Name:
+// Module Name: cpu_interface
+// Project Name:
+// Target Devices:
+// Tool Versions:
+// Description:
+//
+//////////////////////////////////////////////////////////////////////////////////
+
+module cpu_interface
+(
+  input adsp_clk ,
+  input dsp_iowr_en ,
+  input dsp_iord_en ,
+  input [7:0] ADSP_ADDR ,
+  input trans_finish_ddr,
+  //..........  
+);
+
+//@apireg:total:image ./doc/采集板原理图.png
+
+//@apireg:group:begin
+//@apireg:group:title  ADC配置
+//@apireg:group:software:name  AdcConfig
+//@apireg:group:end
+
+//@apireg:group:begin
+//@apireg:group:title 数字触发
+//@apireg:group:software:name  DGT
+//@apireg:group:end
+
+//@apireg:group:begin
+//@apireg:group:title  PLL
+//@apireg:group:software:name  PLL
+//@apireg:group:end
+
+//@apireg:group:begin
+//@apireg:group:title  抽取模块
+//@apireg:group:software:name  Extract
+//@apireg:group:end
+
+//@apireg:group:begin
+//@apireg:group:title  TIADC
+//@apireg:group:software:name  TiAdc
+//@apireg:group:end
+
+//@apireg:group:begin
+//@apireg:group:title  插值模块
+//@apireg:group:software:name  Interp
+//@apireg:group:end
+
+//@apireg:group:begin
+//@apireg:group:title  频域补偿
+//@apireg:group:software:name  FreComp
+//@apireg:group:end
+
+//@apireg:group:begin
+//@apireg:group:title  采样同步
+//@apireg:group:software:name  AcqSync
+//@apireg:group:end
+
+always @( posedge adsp_clk)
+begin
+  if  ( ( dsp_iowr_en == 1 ' b1 ))// 写有效，pulse
+  begin
+    //@apireg:write_read_attribute:attribute write
+    case(ADSP_ADDR[7:0])
+        //--------------------ADC5200相关------------------------------
+      //@apireg:group:title  ADC配置
+      //@apireg:title ADC5200掉电模式
+      //@apireg:0xaddr 0x8000|(0x03<<2)
+      //@apireg:software:name  PowerCtrl
+      //@apireg:value:appoint 同时控制两片ADC，每片占1位，1=掉电，0=上电
+      8'h03: //ADCM_PDWN = 0x0000800C
+        ADCM_ADCS_PDWN <= adsp_databus_wr[1:0];
+
+      //@apireg:title ad5200_tmstp
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x45<<2)
+      8'h45: //0x8114 5200时间戳 现在没用
+        ad5200_tmstp <= adsp_databus_wr[0];
+
+      //@apireg:title jesd204b数据接收核复位
+      //@apireg:0xaddr 0x8000|(0x06<<2)
+      //@apireg:software:name  Jesd204bReset
+      //@apireg:value:appoint 同时控制两片ADC，每片占1位，上升沿生效
+      8'h06: //0x00008018
+        begin
+          jesd204b_core_reset[1:0] <= adsp_databus_wr[7:0];
+        end
+        //SPI配置总线 注：锁相环LMX2595和ADC目前公用一套SPI读写模块
+
+      //@apireg:title ADC 片选
+      //@apireg:0xaddr 0x8000|(0x3c<<2)
+      //@apireg:software:name  CS
+      //@apireg:value:appoint 同时控制两片ADC，状态有效,1选中，0不选中。bit1=ADC1,0=ADC0
+        //[todo...这里用到了4位，实际上只用到了2位]
+      8'h3c: //0x80F0 ADC片选，选择读写哪片ADC（最先写，一系列读写完成后该寄存器清零） 4BIT独热码 ，bit0高：ADC1 bit1高：ADC2
+        begin
+          ADC_SPI_CS_PC <= adsp_databus_wr[3:0];
+        end
+
+      //@apireg:group:title  ADC配置
+      //@apireg:title 配置ADC的测试模式(TestMode)、Flash(FlashMode)模式及信号输入模式(0x109,0x10A)
+      //@apireg:0xaddr 0x8000|(0x00<<2)
+      //@apireg:software:name  DataCmdL16
+      //@apireg:value:appoint 8位有效。现有代码中传入的Commmand_16bit的低8位.由((0x001 << 23) | (addr << 16) | cmd);格式构成
+      8'h00: //ADC_CONFIG_L = 0x00008000; SPI写数据（共24bit，分高低位） 低8bit（ADC寄存器数据）
+        ADC_SPI_data[7:0] <= adsp_databus_wr[7:0];//AD9689的寄存器数据
+
+      //@apireg:title ADC配置数据之低8位
+      //@apireg:0xaddr 0x8000|(0x01<<2)
+      //@apireg:software:name  DataCmdH16
+      //@apireg:value:appoint 16位。其中高7位为地址，低8位为现有代码中传入的Commmand_16bit的高8位
+      8'h01: //ADC_CONFIG_H = 0x00008004; SPI写数据（共24bit，分高低位） 高16bit（ADC寄存器地址）
+        ADC_SPI_data[23:8] <= adsp_databus_wr[15:0];// ADC 配置R/W'(1bits)+寄存器地址(15bits)
+
+      //@apireg:title ADC配置数据之生效
+      //@apireg:0xaddr 0x8000|(0x02<<2)
+      //@apireg:software:name  ConfigEnable
+      //@apireg:value:appoint 同时控制两片ADC。先发送数据，然后对应位拉高。见原有代码SendCmdToLMX2595
+      8'h02: //ADC_CONFIG_EN = 0x00008008;//spi配置总线的写使能，发完数据后，上升沿触发一次SPI读写，8bit
+        //bit7：锁相环LMX2595B 上升沿触发一次SPI读写 写0再写1，平时总是1
+        //BIT6：锁相环LMX2595A 上升沿触发一次SPI读写 写0再写1，平时总是1
+        //BIT5: ADC5200 上升沿触发一次SPI读写 写0再写1，平时总是1
+        begin
+          ADC_Data_RX_CTRL[7:0] <= adsp_databus_wr[7:0];
+        end
+      //@apireg:group:end
+        //--------------------ADC5200相关end------------------------------
+
+        //--------------------时钟产生相关------------------------------
+      //@apireg:group:title  PLL
+        // 7044-控制 & spi总线
+      //@apireg:title 7044sync同步
+      //@apireg:0xaddr 0x8000|(0x0e<<2)
+      //@apireg:software:name  7044Sync
+      //@apireg:value:appoint 7044 sync同步引脚 写0-1-0触发一次锁相环同步
+      8'h0e: //0x8038
+        pll_sync <= adsp_databus_wr[0];
+
+      //@apireg:title 7044复位
+      //@apireg:0xaddr 0x8000|(0x0f<<2)
+      //@apireg:software:name  7044Reset
+      //@apireg:value:appoint 044复位 写0-1-0 进行一次复位，初始化前复位一次
+      8'h0f: //0x803C  7044复位 写0-1-0 进行一次复位，初始化前复位一次
+        pll_RESET_7044 <= adsp_databus_wr[0];
+
+      //@apireg:title 7044Data低16位
+      //@apireg:0xaddr 0x8000|(0x08<<2)
+      //@apireg:software:name  7044Data_L16
+      //@apireg:value:appoint
+      8'h08: //0x00008020  SPI写数据（共24bit，分高低位） 低
+        pll_data_7044[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:title 7044Data高8位
+      //@apireg:0xaddr 0x8000|(0x09<<2)
+      //@apireg:software:name  7044Data_H8
+      //@apireg:value:appoint
+      8'h09: //0x8024     SPI写数据（共24bit，分高低位）  高
+        pll_data_7044[23:16] <= adsp_databus_wr[7:0];
+
+      //@apireg:title 7044 Data数据有效
+      //@apireg:0xaddr 0x8000|(0x0a<<2)
+      //@apireg:software:name  7044Data_Effect
+      //@apireg:value:appoint 7044写使能，写0-1触发一次读写
+      8'h0a: //0x8028  7044写使能，写0-1触发一次读写
+        pll_send_7044 <= adsp_databus_wr[0];
+
+        // 时钟一驱多lmk00304
+      //@apireg:title 时钟一驱多lmk00304_1
+      //@apireg:0xaddr 0x8000|(0x43<<2)
+      //@apireg:software:name  LMK00304Config1
+      //@apireg:value:appoint lmk00304配置（电路中U21）只写一次 。写9
+      8'h43:
+        begin
+          //0X810C  lmk00304配置（电路中U21）只写一次.写9
+          LMK00304_1_config <= adsp_databus_wr[15:0];
+        end
+
+      //@apireg:title 时钟一驱多lmk00304_2
+      //@apireg:0xaddr 0x8000|(0x44<<2)
+      //@apireg:software:name  LMK00304Config2
+      //@apireg:value:appoint lmk00304配置（电路中U21）只写一次 。写1
+      8'h44:
+        begin
+          //0X8110  lmk00304配置（电路中U35）
+          LMK00304_2_config <= adsp_databus_wr[15:0];
+        end
+      //@apireg:group:end
+
+        //---------------------抽取模块pre_div - 21/05/10 -------------------
+      //@apireg:group:title  抽取模块
+      //@apireg:title 抽取数模式
+      //@apireg:0xaddr 0x8000|(0x5e<<2)
+      //@apireg:software:name Num_Mode
+      //@apireg:value:appoint 写0~6分别代表1倍、2、5、10、20、50、other（50以上）
+      10'h5E: //8178   抽取模式 共4bit，写0~6分别代表1倍、2、5、10、20、50、other（50以上）
+        acq_pick_mode <= adsp_databus_wr[2:0];
+
+      //@apireg:title 抽取数之低16位
+      //@apireg:0xaddr 0x8000|(0x5c<<2)
+      //@apireg:software:name Num_L16
+      //@apireg:value:appoint other档位计数值低，共27bit，计算方法：num_extract=需要抽取倍数/40-1 (特殊档：100抽写1，500抽写11)
+      10'h5C:
+        num_extract[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:0xaddr 0x8000|(0x5d<<2)
+      //@apireg:software:name Num_H11
+      10'h5D: //8174  other档位计数值高
+        num_extract[26:16] <= adsp_databus_wr[10:0];
+
+      //@apireg:title 峰值检测模块使能
+      //@apireg:0xaddr 0x8000|(0x5f<<2)
+      //@apireg:software:name PickEnable
+      //@apireg:value:appoint 状态。1=Enable，0=disable
+      10'h5F: //817c
+        peak_en <= adsp_databus_wr[0];
+      //@apireg:group:end
+
+        // 高分辨率相关，还没有用到
+      //@apireg:title HR_en
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x60<<2)
+      10'h60: //8180
+        HR_en <= adsp_databus_wr[0];
+
+      //@apireg:title HR_mode
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x61<<2)
+      10'h61: //8184
+        HR_mode <= adsp_databus_wr[1:0];
+
+      //@apireg:title set_num_high
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x62<<2)
+      10'h62: //8188
+        set_num_high <= adsp_databus_wr[8:0];
+
+      //@apireg:title set_num_low16
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x63<<2)
+      10'h63: //818c
+        set_num_low16 <= adsp_databus_wr[15:0];
+
+        //---------------------新TIADC校正模块- 21/04/13 -------------------
+        //新TIADC校正模块-滤波器系数写入
+      //@apireg:group:title  TIADC
+      //@apireg:title 滤波器系数写入使能
+      //@apireg:0xaddr 0x8000|(0x31<<2)
+      //@apireg:software:name FirCoef_WrEn
+      //@apireg:value:appoint 数写入-总开关，写系数期间时为1，开启校正前要写0
+      8'h31: //0x80C4
+        write_flg <= adsp_databus_wr[0];
+
+      //@apireg:title TiAdcAutoCali  使能
+      //@apireg:0xaddr 0x8000|(0x32<<2)
+      //@apireg:software:name CaliEnable
+      //@apireg:value:appoint 写1校正开启
+      8'h32: //0x80C8
+        TIADC_cali_en <= adsp_databus_wr[0];
+
+      //@apireg:title 滤波器系数之实部、虚部
+      //@apireg:0xaddr 0x8000|(0x33<<2)
+      //@apireg:software:name FirCoef_Real
+      //@apireg:value:appoint 系数实部数据，16bit补码
+      8'h33: //0x80CC
+        Qn_r_from_pc <= adsp_databus_wr[15:0];//这里定为16bit，calibration_module端口处取低位
+
+      //@apireg:0xaddr 0x8000|(0x34<<2)
+      //@apireg:software:name FirCoef_Imag
+      8'h34: //0x80D0  -系数写入-系数虚部数据，16bit补码
+        Qn_i_from_pc <= adsp_databus_wr[15:0];
+
+      //@apireg:title 滤波器系数之写入地址
+      //@apireg:0xaddr 0x8000|(0x35<<2)
+      //@apireg:software:name FirCoef_WrAddr
+      //@apireg:value:appoint 10bit,最多1024个数据
+      8'h35: //0x80D4  -系数写入-系数对应地址，10bit
+        TIADC_wr_addr <= adsp_databus_wr[9:0];
+
+      //@apireg:title 滤波器系数之RAM选择
+      //@apireg:0xaddr 0x8000|(0x36<<2)
+      //@apireg:software:name FirCoef_RAMSel
+      //@apireg:value:appoint 共10位，由两部分组成：{ch_mode(2bit),ram_sel(8bit)}.
+      //@apireg:value:appoint ch_mode 选择写入哪一组系数,00: GROUP A(double ch  10G),10: GROUP B(single ch1 20G,20G可能从2个通道输入),11: GROUP C(single ch2 20G) ;
+      //@apireg:value:appoint 其中 ram_sel 为独热码，第x位高则当前写第x个ram（只1bit高）
+      8'h36: //0x80D8
+        TIADC_ram_sel <= adsp_databus_wr[9:0];
+
+      //@apireg:title 滤波器系数单个数据写入生效
+      //@apireg:0xaddr 0x8000|(0x37<<2)
+      //@apireg:software:name FirCoef_WrEffect
+      //@apireg:value:appoint 系数写入-发送过系数、地址、RAM选择后，最后将该寄存器写0再写1，上升沿触发一次系数写入
+      8'h37: //0x80DC
+        TIADC_wen <= adsp_databus_wr[0];
+
+        //--------TIADC校正模块用的测试RAM，上位机直接灌数测试模块功能------------
+      //@apireg:title 发送测试滤波器正确性的模拟ADC数据
+      //@apireg:0xaddr 0x8000|(0x38<<2)
+      //@apireg:software:name Fir_TestAdcData
+      //@apireg:value:appoint 测试数据 12bit 偏移码 ,最大12bit
+      8'h38:
+        begin
+          //0x80E0
+          TIADC_test_in <= adsp_databus_wr[11:0];
+
+      //@apireg:title 发送测试滤波器正确性的模拟ADC数据之地址
+      //@apireg:0xaddr 0x8000|(0x39<<2)
+      //@apireg:software:name Fir_TestAdcData_Addr
+      //@apireg:value:appoint 测试数据之地址,14位，最多16,384个数据。
+        8'h39: //0x80E4
+          TIADC_test_addr <= adsp_databus_wr[13:0];
+
+      //@apireg:title 发送测试滤波器正确性的模拟ADC数据写入生效
+      //@apireg:0xaddr 0x8000|(0x3a<<2)
+      //@apireg:software:name Fir_TestAdcData_Effect
+      //@apireg:value:appoint //写使能，写0再写1，上升沿触发 .一个数据一个地发送。过程是一个一个地传入数据、地址，然后生效
+        8'h3a: //0x80E8
+          TIADC_test_in_en <= adsp_databus_wr[0];
+
+      //@apireg:title 滤波器使用数据源选择
+      //@apireg:0xaddr 0x8000|(0x3b<<2)
+      //@apireg:software:name Fir_DataSource
+      //@apireg:value:appoint  1:使用下发的测试数据，0:使用adc数据
+        8'h3b: //0x80EC
+          TIADC_test_mode_en <= adsp_databus_wr[0];
+      //@apireg:group:end
+          //---------------------新TIADC校正模块END-------------------
+
+          //-----------------新增送显插值 20200609---------------------
+      //@apireg:group:title  插值模块
+      //@apireg:title 插值模式设置
+      //@apireg:0xaddr 0x8000|(0x4d<<2)
+      //@apireg:software:name Mode
+      //@apireg:value:appoint 4bit,取值与插值倍数关系为：0=2(倍插值),1=4,2=5,3=10,4=25,5=50,6=100,8=关闭抽取(？？？？）
+        10'h4d:
+          sample_mode[3:0] <= adsp_databus_wr[3:0];
+
+      //@apireg:title 插值滤波器系数写入地址
+      //@apireg:0xaddr 0x8000|(0x4e<<2)
+      //@apireg:software:name CoefWrAddr
+      //@apireg:value:appoint 10bit,连续整数0~1023
+        10'h4e:
+          mult_factor_wa[9:0] <= adsp_databus_wr[9:0];
+
+      //@apireg:title 插值滤波器系数之低16位
+      //@apireg:0xaddr 0x8000|(0x4f<<2)
+      //@apireg:software:name CoefData_L16
+      //@apireg:value:appoint 系数数据最大17位。分低16位和高1位两部分发送
+        10'h4f:
+          mult_factor_wd[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:0xaddr 0x8000|(0x50<<2)
+      //@apireg:software:name CoefData_H1
+        10'h50:
+          mult_factor_wd[16] <= adsp_databus_wr[0];
+
+      //@apireg:title 插值滤波器系数表复位
+      //@apireg:0xaddr 0x8000|(0x51<<2)
+      //@apireg:software:name CoefData_Reset
+      //@apireg:value:appoint [todo...需要精确延时吗？,上升沿有效吗？]
+        10'h51:
+          factor_w_rst <= adsp_databus_wr[0];
+
+      //@apireg:title 插值滤波器系数写生效
+      //@apireg:0xaddr 0x8000|(0x52<<2)
+      //@apireg:software:name CoefDataWrEffect
+      //@apireg:value:appoint
+        10'h52:
+          mult_factor_wen <= adsp_databus_wr[0];
+
+      //@apireg:title int_choose
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x53<<2)
+        10'h53: //没用
+          int_choose <= adsp_databus_wr[0];
+
+      //@apireg:title test_valid
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x54<<2)
+        10'h54:
+          test_valid <= adsp_databus_wr[0];//没用
+
+      //@apireg:title HRdata_PRO_test_en
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x55<<2)
+        10'h55:
+          HRdata_PRO_test_en <= adsp_databus_wr[0];//没用
+      //@apireg:group:end
+          //-----------------新增送显插值 20200609  end---------------------
+
+          ////////////////////频补   100101x00  //从12bit工程复制来，还没用过
+      //@apireg:group:title  频域补偿
+
+      //@apireg:title 写频域补偿系数之地址
+      //@apireg:desc 写系数的流程为：先复位系数，然后一个一个系数地写入。每个系数先写地址、然后高低位数据，然后写生效
+      //@apireg:0xaddr 0x8000|(0x56<<2)
+      //@apireg:software:name Coef_Addr
+      //@apireg:value:appoint 10位，从0开始的连续整数
+        10'h56:
+          fir_factor_wa[9:0] <= adsp_databus_wr[9:0];
+
+      //@apireg:title 写频域补偿系数之低16位
+      //@apireg:0xaddr 0x8000|(0x57<<2)
+      //@apireg:software:name Coef_Data_L16
+      //@apireg:value:appoint
+        10'h57:
+          fir_factor_wd[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:0xaddr 0x8000|(0x58<<2)
+      //@apireg:software:name Coef_Data_H2
+        10'h58:
+          fir_factor_wd[17:16] <= adsp_databus_wr[1:0];
+
+      //@apireg:title 频域补偿系数 复位
+      //@apireg:0xaddr 0x8000|(0x59<<2)
+      //@apireg:software:name Coef_Reset
+      //@apireg:value:appoint 拉高复位
+        10'h59:
+          fir_factor_rst <= adsp_databus_wr[0];
+
+      //@apireg:title 写频域补偿系数 生效
+      //@apireg:0xaddr 0x8000|(0x5a<<2)
+      //@apireg:software:name Coef_WrEffect
+      //@apireg:value:appoint 拉高生效。
+        10'h5A:
+          fir_factor_wen <= adsp_databus_wr[0];
+
+      //@apireg:title 频域补偿 使能
+      //@apireg:0xaddr 0x8000|(0x5b<<2)
+      //@apireg:software:name Enable
+      //@apireg:value:appoint 状态1位，1=使能，0=关闭。
+        10'h5B:
+          Fre_Comp_en <= adsp_databus_wr[0];
+      //@apireg:group:end
+
+          //--------------------往处理板传输------------------------------
+          // SDR模块
+      //@apireg:title 往处理板传输模块之时钟复位
+      //@apireg:0xaddr 0x8000|(0x21<<2)
+      //@apireg:software:name TxReset_Clk
+      //@apireg:value:appoint 初始化时写1-0
+        8'h21: //0x8084
+          Data_Tx_CLK_RESET <= adsp_databus_wr[0];
+
+      //@apireg:title 往处理板传输模块之IO复位
+      //@apireg:0xaddr 0x8000|(0x22<<2)
+      //@apireg:software:name TxReset_IO
+      //@apireg:value:appoint 初始化时写1-0
+        8'h22: //0x8088
+          Data_Tx_IO_RESET <= adsp_databus_wr[0];
+          //--------------------往处理板传输end------------------------------
+
+          // 工作模式控制
+      //@apireg:title 采样模式设置
+      //@apireg:0xaddr 0x8000|(0x30<<2)
+      //@apireg:software:name AcqMode
+      //@apireg:value:appoint 10g、20g模式选择,2bit.
+      //@apireg:value:appoint 00: GROUP A(double ch  10G),10: GROUP B(single ch1 20G),11: GROUP C(single ch2 20G)
+        8'h30: //0x80C0
+          ch_mode <= adsp_databus_wr[1:0];
+
+      //@apireg:title Fifo复位
+      //@apireg:0xaddr 0x8000|(0x71<<2)
+      //@apireg:software:name FifoReset
+      //@apireg:value:appoint 上升沿有效
+        8'h71: //0x81C4
+          rst_rfifo <= adsp_databus_wr[0];
+
+          // 一般信号
+      //@apireg:group:title  采样同步
+      //@apireg:title Serdes复位
+      //@apireg:0xaddr 0x8000|(0x04<<2)
+      //@apireg:software:name SerdesReset
+      //@apireg:value:appoint 先发2，在发0
+        8'h04: // 0x00008010
+          ADCM_GPIO <= adsp_databus_wr[7:0];
+
+          //[todo....不知干什么用的]
+      //@apireg:title ADCS_GPIO
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x05<<2)
+        8'h05: // 0x00008014
+          ADCS_GPIO <= adsp_databus_wr[7:0];
+
+      //@apireg:title 同步Fifo复位
+      //@apireg:0xaddr 0x8000|(0x07<<2)
+      //@apireg:software:name FifoReset
+      //@apireg:value:appoint 先发1再发0
+        8'h07: //0x0000801C
+          pll_send_7043 <= adsp_databus_wr[0];
+
+          //[todo.....乱乱，与 8'h21，8'h22有什么差别]
+      //@apireg:title pll_data_7043[15:0]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x0b<<2)
+        8'h0b: //0x802c
+          pll_data_7043[15:0] <= adsp_databus_wr[15:0];
+
+          //[todo.....乱乱，与 8'h21，8'h22有什么差别]
+      //@apireg:title pll_data_7043[23:16]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x0c<<2)
+        8'h0c: //0x8030
+          pll_data_7043[23:16] <= adsp_databus_wr[7:0];
+
+      //@apireg:title fifo_ren_scan
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x0d<<2)
+        8'h0d: //0x8034
+          fifo_ren_scan <= adsp_databus_wr[0];
+
+      //@apireg:title cali_en
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x10<<2)
+        8'h10: //0x8040
+          cali_en <= adsp_databus_wr[0];
+
+      //@apireg:title cali_num_A
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x11<<2)
+        8'h11: //0x8044
+          cali_num_A <= adsp_databus_wr[14:0];
+
+      //@apireg:title cali_num_B
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x12<<2)
+        8'h12: ////0x8048
+          cali_num_B <= adsp_databus_wr[14:0];
+
+      //@apireg:title cali_num_C
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x13<<2)
+        8'h13: //0x804C
+          cali_num_C <= adsp_databus_wr[14:0];
+
+      //@apireg:title cali_num_D
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x14<<2)
+        8'h14: //0x8050
+          cali_num_D <= adsp_databus_wr[14:0];
+
+      //@apireg:title fifo_depth_from_PC
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x15<<2)
+        8'h15: //0x8054
+          fifo_depth_from_PC <= adsp_databus_wr[11:0];
+
+      //@apireg:title scan
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x16<<2)
+        8'h16: //0x8058
+          scan <= adsp_databus_wr[0];
+
+      //@apireg:title ddr_en_from_PRO
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x17<<2)
+        8'h17: //0x805C
+          ddr_en_from_PRO <= adsp_databus_wr[0];
+
+      //@apireg:title Data_valid_length[15:0]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x18<<2)
+        8'h18: //0x8060
+          Data_valid_length[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:title Data_valid_length[20:16]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x19<<2)
+        8'h19: //0x8064
+          Data_valid_length[20:16] <= adsp_databus_wr[4:0];
+
+      //@apireg:title Data_valid_test
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x20<<2)
+        8'h20: //0x8080
+          Data_valid_test <= adsp_databus_wr[0];
+
+      //@apireg:title IO_RESET
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x23<<2)
+        8'h23: //0x808C
+          IO_RESET <= adsp_databus_wr[0];
+
+      //@apireg:title DCM_IDELAY_RST
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x24<<2)
+        8'h24: //0x8090
+          DCM_IDELAY_RST <= adsp_databus_wr[0];
+
+      //@apireg:title ACQ_IDELAY_CTRL_RST
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x25<<2)
+        8'h25: //0x8094
+          ACQ_IDELAY_CTRL_RST <= adsp_databus_wr[0];
+
+      //@apireg:title in_delay_ce
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x26<<2)
+        8'h26: //0x8098
+          in_delay_ce <= adsp_databus_wr[2:0];
+
+      //@apireg:title in_delay_inc
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x27<<2)
+        8'h27: //0x809C
+          in_delay_inc <= adsp_databus_wr[2:0];
+
+      //@apireg:title EN_VTC
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x28<<2)
+        8'h28: //0x80A0
+          EN_VTC <= adsp_databus_wr[2:0];
+          ///////////////////////////////////////////////////////////////////
+          ////     WOLA  该项目没用
+          ///////////////////////////////////////////////////////////////////
+          //控制信号
+      //@apireg:title mem_rst
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x29<<2)
+        8'h29: //0x80A4
+          mem_rst <= adsp_databus_wr[0];
+
+      //@apireg:title wola_rst_all
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x2a<<2)
+        8'h2a: //0x80A8
+          wola_rst_all <= adsp_databus_wr[0];
+
+      //@apireg:title wola_RAM512k_wr
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x2b<<2)
+        8'h2b: //0x80AC
+          wola_RAM512k_wr <= adsp_databus_wr[0];
+
+      //@apireg:title wola_start
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x2c<<2)
+        8'h2c: //0x80B0
+          wola_start <= adsp_databus_wr[0];
+
+      //@apireg:title wola_stop
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x2d<<2)
+        8'h2d: //0x80B4
+          wola_stop <= adsp_databus_wr[0];
+
+          //滤波器初始化
+      //@apireg:title ram_sel
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x2e<<2)
+        8'h2e: //0x80B8
+          ram_sel <= adsp_databus_wr[5:0];
+
+      //@apireg:title init_addr
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x2f<<2)
+        8'h2f: //0x80BC
+          init_addr <= adsp_databus_wr[7:0];
+
+      //@apireg:title PLL_RESET_7043
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x3d<<2)
+        8'h3d: //0x80F4
+          PLL_RESET_7043 <= adsp_databus_wr[0];
+
+      //@apireg:title ddr_data_tb_num_wire
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x3e<<2)
+        8'h3e: //0X80F8
+          ddr_data_tb_num_wire <= adsp_databus_wr[13:0];
+
+      //@apireg:title ddr_test_data_en
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x3f<<2)
+        8'h3f: //0X80FC
+          ddr_test_data_en <= adsp_databus_wr[0];
+
+      //@apireg:title ddr_test_flg
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x40<<2)
+        8'h40: //0X8100
+          ddr_test_flg <= adsp_databus_wr[0];
+
+      //@apireg:title DATA_AMOUNT_L
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x41<<2)
+        8'h41: //0X8104
+          DATA_AMOUNT_L <= adsp_databus_wr[15:0];
+
+      //@apireg:title DATA_AMOUNT_H
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x42<<2)
+        8'h42: // 0X8108
+          DATA_AMOUNT_H <= adsp_databus_wr[15:0];
+
+      //@apireg:title data_select
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x46<<2)
+        8'h46: // 0X8118
+          data_select <= adsp_databus_wr[0];
+
+          ///////DDR 读取的地址
+      //@apireg:title rst_rx_ddr3
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x70<<2)
+        8'h70: //0x81C0
+          rst_rx_ddr3 <= adsp_databus_wr[0];
+
+      //@apireg:title depth_ctrl[15:0]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x72<<2)
+        8'h72: //0x81C8
+          depth_ctrl[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:title depth_ctrl[27:16]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x73<<2)
+        8'h73: //0x81CC
+          depth_ctrl[27:16] <= adsp_databus_wr[12:0];
+
+      //@apireg:title predepth_ddr_r1[15:0]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x74<<2)
+        8'h74: //0x81D0
+          predepth_ddr_r1[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:title predepth_ddr_r1[31:16]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x75<<2)
+        8'h75: //0x81D4
+          predepth_ddr_r1[31:16] <= adsp_databus_wr[15:0];
+
+      //@apireg:title wen_ddr3
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x76<<2)
+        8'h76: //0x81D8
+          wen_ddr3 <= adsp_databus_wr[0];
+
+      //@apireg:title ren_ddr3
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x77<<2)
+        8'h77: //0x81DC
+          ren_ddr3 <= adsp_databus_wr[0];
+
+      //@apireg:title addr_section_rd[15:0]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x78<<2)
+        8'h78: //0x81E0
+          addr_section_rd[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:title addr_section_rd[28:16]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x79<<2)
+        8'h79: //0x81E4
+          addr_section_rd[28:16] <= adsp_databus_wr[12:0];
+
+      //@apireg:title addr_init_rd[15:0]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x7a<<2)
+        8'h7A: //0x81E8
+          addr_init_rd[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:title addr_init_rd[28:16]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x7b<<2)
+        8'h7B: //0x81EC
+          addr_init_rd[28:16] <= adsp_databus_wr[12:0];
+
+      //@apireg:title num_rd_ddr3[15:0]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x7c<<2)
+        8'h7C: //0x82F0
+          num_rd_ddr3[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:title num_rd_ddr3[27:16]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x7d<<2)
+        8'h7D: //0x82F4
+          num_rd_ddr3[27:16] <= adsp_databus_wr[11:0];
+
+      //@apireg:title addr_wr_init[15:0]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x7e<<2)
+        8'h7E: //0x82F8
+          addr_wr_init[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:title addr_wr_init[28:16]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x7f<<2)
+        8'h7F: //0x82FC
+          addr_wr_init[28:16] <= adsp_databus_wr[12:0];
+
+      //@apireg:title sys_rst
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x80<<2)
+        8'h80: //0x8200
+          sys_rst <= adsp_databus_wr[0];
+
+      //@apireg:title tx_rd_en
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x81<<2)
+        8'h81: //0x8204
+          tx_rd_en <= adsp_databus_wr[0];
+
+      //@apireg:title test_mode_sel
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0xe0<<2)
+        8'hE0:
+          test_mode_sel <= adsp_databus_wr[0];
+
+      //@apireg:title half_period
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0xe1<<2)
+        8'hE1:
+          half_period <= adsp_databus_wr[13:0];
+
+      //@apireg:title count_clr
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0xe2<<2)
+        8'hE2:
+          count_clr <= adsp_databus_wr[0];
+
+      //@apireg:title Data_cnt_ddr[15:0]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0xe3<<2)
+        8'hE3:
+          Data_cnt_ddr[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:title Data_cnt_wola[15:0]
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0xe4<<2)
+        8'hE4:
+          Data_cnt_wola[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:group:title 数字触发
+
+      //@apireg:title 触发源
+      //@apireg:0xaddr 0x8000|(0xef<<2)
+      //@apireg:software:name Source
+      //@apireg:value:appoint [todo....]
+        10'hEF:
+          TRIG_SOURCE <= adsp_databus_wr[1:0];
+
+      //@apireg:title 自动触发计数
+      //@apireg:0xaddr 0x8000|(0xf0<<2)
+      //@apireg:software:name AutoTrigNum
+      //@apireg:value:appoint [todo....]
+        10'hF0:
+          auto_trig_num <= adsp_databus_wr[15:0];
+
+      //@apireg:title 预触发深度低中高16位
+      //@apireg:0xaddr 0x8000|(0xf1<<2)
+      //@apireg:software:name PreNum_L16
+      //@apireg:value:appoint [todo....]
+        10'hF1:
+          pre_trig_num[15:0] <= adsp_databus_wr[15:0];
+
+      //@apireg:0xaddr 0x8000|(0xf2<<2)
+      //@apireg:software:name PreNum_M16
+        10'hF2:
+          pre_trig_num[31:16] <= adsp_databus_wr[15:0];
+
+      //@apireg:0xaddr 0x8000|(0xf3<<2)
+      //@apireg:software:name PreNum_H16
+        10'hF3:
+          pre_trig_num[47:32] <= adsp_databus_wr[15:0];
+
+      //@apireg:title 边沿选择
+      //@apireg:0xaddr 0x8000|(0xf4<<2)
+      //@apireg:software:name Edge
+      //@apireg:value:appoint [todo....]
+        10'hF4:
+          edge_trig_sel <= adsp_databus_wr[0];
+
+      //@apireg:title 数字触发使能。打开或关闭
+      //@apireg:0xaddr 0x8000|(0xf5<<2)
+      //@apireg:software:name Enable
+      //@apireg:value:appoint [todo....]
+        10'hF5:
+          DigitalTrigEn <= adsp_databus_wr[0];
+
+      //@apireg:title 触发电平-高
+      //@apireg:0xaddr 0x8000|(0xf6<<2)
+      //@apireg:software:name Level_L
+      //@apireg:value:appoint [todo....]
+        10'hF6:
+          trig_data_l <= adsp_databus_wr[11:0];
+
+      //@apireg:title 触发电平-高
+      //@apireg:0xaddr 0x8000|(0xF7<<2)
+      //@apireg:software:name Level_H
+      //@apireg:value:appoint [todo....]
+        10'hF7:
+          trig_data_h <= adsp_databus_wr[11:0];
+
+      //@apireg:title 数字触发同步使能
+      //@apireg:0xaddr 0x8000|(0xf8<<2)
+      //@apireg:software:name SyncEnable
+      //@apireg:value:appoint 状态型，1=Enable,0=disable
+        10'hF8:
+          DigitalTrigSyncEn <= adsp_databus_wr[0];
+      //@apireg:group:end
+
+      //@apireg:title inter_fifo_thresh
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0xf9<<2)
+        10'hF9:
+          inter_fifo_thresh <= adsp_databus_wr[11:0];
+
+        default:
+          begin
+
+          end
+      endcase
+    end
+  end
+  //always
+  //读：h0F未用
+  always@( posedge adsp_clk)
+  begin
+    if  ( dsp_iord_en == 1 ' b1)// 读有效
+      //@apireg:write_read_attribute:attribute read
+    case(ADSP_ADDR[7:0])
+        // 一般信号
+      //@apireg:title {8'd0,ADC_miso_data[7:0]}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x02<<2)
+      8'h02: //ADC读回数据8bit
+        adsp_databus_rd[15:0] <= {8'd0, ADC_miso_data[7:0] };
+
+      //@apireg:title {8'd0,read_7044_data}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x05<<2)
+      8'h05: //锁相环HMC7044读回数据8bit
+        adsp_databus_rd[15:0] <= {8'd0, read_7044_data};
+
+      //@apireg:title {LMX2595A_SPI_read}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x15<<2)
+      8'h15: //0x8054
+        begin
+          //锁相环LMX2595A读回数据8bit
+          adsp_databus_rd[15:0] <= {LMX2595A_SPI_read};
+        end
+
+      //@apireg:title {LMX2595B_SPI_read}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x16<<2)
+      8'h16: //0x8058
+        begin
+          //锁相环LMX2595B读回数据8bit
+          adsp_databus_rd[15:0] <= {LMX2595B_SPI_read};
+        end
+        //////////////////////////读寄存器 end
+
+      //@apireg:title {8'd0,ADCM_GPIO_rd}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x03<<2)
+      8'h03:
+        begin
+          adsp_databus_rd[15:0] <= {8'd0, ADCM_GPIO_rd};
+        end
+
+      //@apireg:title {8'd0,ADCS_GPIO_rd}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x04<<2)
+      8'h04:
+        begin
+          adsp_databus_rd[15:0] <= {8'd0, ADCS_GPIO_rd};
+        end
+
+      //@apireg:title {2'd0,avgA_out}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x06<<2)
+      8'h06:
+        begin
+          adsp_databus_rd[15:0] <= {2'd0, avgA_out};
+        end
+
+      //@apireg:title {2'd0,avgB_out}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x07<<2)
+      8'h07:
+        begin
+          adsp_databus_rd[15:0] <= {2'd0, avgB_out};
+        end
+
+      //@apireg:title {2'd0,avgC_out}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x08<<2)
+      8'h08:
+        begin
+          adsp_databus_rd[15:0] <= {2'd0, avgC_out};
+        end
+
+      //@apireg:title {2'd0,avgD_out}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x09<<2)
+      8'h09:
+        begin
+          adsp_databus_rd[15:0] <= {2'd0, avgD_out};
+        end
+
+      //@apireg:title {15'd0,1'b0}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x0a<<2)
+      8'h0a:
+        begin
+          adsp_databus_rd[15:0] <= {15'd0,1' b0};
+        end
+
+      //@apireg:title {15'd0,FIFO_rd_start_normal}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x0b<<2)
+      8'h0b:
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, FIFO_rd_start_normal};
+        end
+
+      //@apireg:title {15'd0,fifo_block_empty}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x0c<<2)
+      8'h0c:
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, fifo_block_empty};
+        end
+
+      //@apireg:title {4'd0,data_count_scan}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x0d<<2)
+      8'h0d:
+        begin
+          adsp_databus_rd[15:0] <= {4'd0, data_count_scan};
+        end
+
+      //@apireg:title {15'd0,FIFO_SYNC_DELAY_LOCKED}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x0e<<2)
+      8'h0e:
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, FIFO_SYNC_DELAY_LOCKED};
+        end
+
+      //@apireg:title {6'd0,DCM_CNTVALUEOUT}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x0f<<2)
+      8'h0f:
+        begin
+          adsp_databus_rd[15:0] <= {6'd0, DCM_CNTVALUEOUT};
+        end
+
+      //@apireg:title {6'd0,READ_CNTVALUEOUT}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x10<<2)
+      8'h10:
+        begin
+          adsp_databus_rd[15:0] <= {6'd0, READ_CNTVALUEOUT};
+        end
+
+      //@apireg:title {6'd0,START_CNTVALUEOUT}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x11<<2)
+      8'h11:
+        begin
+          adsp_databus_rd[15:0] <= {6'd0, START_CNTVALUEOUT};
+        end
+
+      //@apireg:title {15'd0,fifo_full_flg}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x12<<2)
+      8'h12: //0x8048
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, fifo_full_flg};
+        end
+
+      //@apireg:title {15'd0,mem_full}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x13<<2)
+      8'h13: //0x804C
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, mem_full};
+        end
+
+      //@apireg:title {8'd0,read_7043_data}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x14<<2)
+      8'h14: //0x8050
+        begin
+          adsp_databus_rd[15:0] <= {8'd0, read_7043_data};
+        end
+
+        ///ddr
+      //@apireg:title {14'd0,full_rfifo}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x80<<2)
+      8'h60: //0x8048
+        begin
+          adsp_databus_rd[15:0] <= {14'd0, full_rfifo};
+        end
+
+      //@apireg:title {11'd0,DDR3_state}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x61<<2)
+      8'h61: //0x8048
+        begin
+          adsp_databus_rd[15:0] <= {11'd0, DDR3_state};
+        end
+
+      //@apireg:title {15'd0,write_stop_ddr3}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x62<<2)
+      8'h62: //0x8048
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, write_stop_ddr3};
+        end
+
+      //@apireg:title {15'd0,read_stop_ddr3}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x63<<2)
+      8'h63: //0x8048
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, read_stop_ddr3};
+        end
+
+      //@apireg:title {depth_ctrl_out[15:0]}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x64<<2)
+      8'h64: //0x8048
+        begin
+          adsp_databus_rd[15:0] <= {depth_ctrl_out[15:0] };
+        end
+
+      //@apireg:title {4'd0,depth_ctrl_out[27:16]}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x65<<2)
+      8'h65: //0x8048
+        begin
+          adsp_databus_rd[15:0] <= {4'd0, depth_ctrl_out[27:16] };
+        end
+
+      //@apireg:title {11'd0,init_calib_complete,DDR3_state[3:0]}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x66<<2)
+      8'h66: //0x8048
+        begin
+          adsp_databus_rd[15:0] <= {11'd0, init_calib_complete, DDR3_state[3:0] };
+        end
+
+      //@apireg:title {15'd0,shift_over}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x67<<2)
+      8'h67:
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, shift_over};
+        end
+
+      //@apireg:title {15'd0,wola_pro_over}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x68<<2)
+      8'h68:
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, wola_pro_over};
+        end
+
+      //@apireg:title {15'd0,trans_finish_ddr}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x69<<2)
+      8'h69:
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, trans_finish_ddr};
+        end
+
+      //@apireg:title {15'd0,trans_finish_wola}
+      //@apireg:notused
+      //@apireg:0xaddr 0x8000|(0x6a<<2)
+      8'h6a:
+        begin
+          adsp_databus_rd[15:0] <= {15'd0, trans_finish_wola};
+        end
+
+      default:
+        begin
+          adsp_databus_rd[15:0] <=16'h0000;
+        end
+    endcase
+  end
+  //always
+
+  endmodule
+

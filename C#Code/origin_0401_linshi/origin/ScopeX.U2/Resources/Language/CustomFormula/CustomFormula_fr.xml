@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomStringTable language="简体中文">
+  <SourceItems>
+    <Item id="0" name="C1" symbol="C1" expression="C1" image="" info="Canal Analogique C1" />
+    <Item id="1" name="C2" symbol="C2" expression="C2" image="" info="Canal Analogique C2" />
+    <Item id="2" name="C3" symbol="C3" expression="C3" image="" info="Canal Analogique C3" />
+    <Item id="3" name="C4" symbol="C4" expression="C4" image="" info="Canal Analogique C4" />
+    <Item id="4" name="C5" symbol="C5" expression="C5" image="" info="Canal Analogique C5" />
+    <Item id="5" name="C6" symbol="C6" expression="C6" image="" info="Canal Analogique C6" />
+    <Item id="6" name="C7" symbol="C7" expression="C7" image="" info="Canal Analogique C7" />
+    <Item id="7" name="C8" symbol="C8" expression="C8" image="" info="Canal Analogique C8" />
+    <Item id="200" name="R1" symbol="R1" expression="R1" image="" info="Canal de Référence R1" />
+    <Item id="201" name="R2" symbol="R2" expression="R2" image="" info="Canal de Référence R2" />
+    <Item id="202" name="R3" symbol="R3" expression="R3" image="" info="Canal de Référence R3" />
+    <Item id="203" name="R4" symbol="R4" expression="R4" image="" info="Canal de Référence R4" />
+    <Item id="204" name="R5" symbol="R5" expression="R5" image="" info="Canal de Référence R5" />
+    <Item id="205" name="R6" symbol="R6" expression="R6" image="" info="Canal de Référence R6" />
+    <Item id="206" name="R7" symbol="R7" expression="R7" image="" info="Canal de Référence R7" />
+    <Item id="207" name="R8" symbol="R8" expression="R8" image="" info="Canal de Référence R8" />
+    <Item id="400" name="D1" symbol="D0" expression="D.TakeBitAt(0)" image="" info="Canal Logique D0" />
+    <Item id="401" name="D2" symbol="D1" expression="D.TakeBitAt(1)" image="" info="Canal Logique D1" />
+    <Item id="402" name="D3" symbol="D2" expression="D.TakeBitAt(2)" image="" info="Canal Logique D2" />
+    <Item id="403" name="D4" symbol="D3" expression="D.TakeBitAt(3)" image="" info="Canal Logique D3" />
+    <Item id="404" name="D5" symbol="D4" expression="D.TakeBitAt(4)" image="" info="Canal Logique D4" />
+    <Item id="405" name="D6" symbol="D5" expression="D.TakeBitAt(5)" image="" info="Canal Logique D5" />
+    <Item id="406" name="D7" symbol="D6" expression="D.TakeBitAt(6)" image="" info="Canal Logique D6" />
+    <Item id="407" name="D8" symbol="D7" expression="D.TakeBitAt(7)" image="" info="Canal Logique D7" />
+    <Item id="408" name="D9" symbol="D8" expression="D.TakeBitAt(8)" image="" info="Canal Logique D8" />
+    <Item id="409" name="D10" symbol="D9" expression="D.TakeBitAt(9)" image="" info="Canal Logique D9" />
+    <Item id="410" name="D11" symbol="D10" expression="D.TakeBitAt(10)" image="" info="Canal Logique D10" />
+    <Item id="411" name="D12" symbol="D11" expression="D.TakeBitAt(11)" image="" info="Canal Logique D11" />
+    <Item id="412" name="D13" symbol="D12" expression="D.TakeBitAt(12)" image="" info="Canal Logique D12" />
+    <Item id="413" name="D14" symbol="D13" expression="D.TakeBitAt(13)" image="" info="Canal Logique D13" />
+    <Item id="414" name="D15" symbol="D14" expression="D.TakeBitAt(14)" image="" info="Canal Logique D14" />
+    <Item id="415" name="D16" symbol="D15" expression="D.TakeBitAt(15)" image="" info="Canal Logique D15" />
+    <Item id="416" name="D17" symbol="D16" expression="D.TakeBitAt(16)" image="" info="Canal Logique D16" />
+    <Item id="417" name="D18" symbol="D17" expression="D.TakeBitAt(17)" image="" info="Canal Logique D17" />
+    <Item id="418" name="D19" symbol="D18" expression="D.TakeBitAt(18)" image="" info="Canal Logique D18" />
+    <Item id="419" name="D20" symbol="D19" expression="D.TakeBitAt(19)" image="" info="Canal Logique D19" />
+    <Item id="420" name="D21" symbol="D20" expression="D.TakeBitAt(20)" image="" info="Canal Logique D20" />
+    <Item id="421" name="D22" symbol="D21" expression="D.TakeBitAt(21)" image="" info="Canal Logique D21" />
+    <Item id="422" name="D23" symbol="D22" expression="D.TakeBitAt(22)" image="" info="Canal Logique D22" />
+    <Item id="423" name="D24" symbol="D23" expression="D.TakeBitAt(23)" image="" info="Canal Logique D23" />
+    <Item id="424" name="D25" symbol="D24" expression="D.TakeBitAt(24)" image="" info="Canal Logique D24" />
+    <Item id="425" name="D26" symbol="D25" expression="D.TakeBitAt(25)" image="" info="Canal Logique D25" />
+    <Item id="426" name="D27" symbol="D26" expression="D.TakeBitAt(26)" image="" info="Canal Logique D26" />
+    <Item id="427" name="D28" symbol="D27" expression="D.TakeBitAt(27)" image="" info="Canal Logique D27" />
+    <Item id="428" name="D29" symbol="D28" expression="D.TakeBitAt(28)" image="" info="Canal Logique D28" />
+    <Item id="429" name="D30" symbol="D29" expression="D.TakeBitAt(29)" image="" info="Canal Logique D29" />
+    <Item id="430" name="D31" symbol="D30" expression="D.TakeBitAt(30)" image="" info="Canal Logique D30" />
+    <Item id="431" name="D32" symbol="D31" expression="D.TakeBitAt(31)" image="" info="Canal Logique D31" />
+    <Item id="432" name="D33" symbol="D32" expression="D.TakeBitAt(32)" image="" info="Canal Logique D32" />
+    <Item id="433" name="D34" symbol="D33" expression="D.TakeBitAt(33)" image="" info="Canal Logique D33" />
+    <Item id="434" name="D35" symbol="D34" expression="D.TakeBitAt(34)" image="" info="Canal Logique D34" />
+    <Item id="435" name="D36" symbol="D35" expression="D.TakeBitAt(35)" image="" info="Canal Logique D35" />
+    <Item id="436" name="D37" symbol="D36" expression="D.TakeBitAt(36)" image="" info="Canal Logique D36" />
+    <Item id="437" name="D38" symbol="D37" expression="D.TakeBitAt(37)" image="" info="Canal Logique D37" />
+    <Item id="438" name="D39" symbol="D38" expression="D.TakeBitAt(38)" image="" info="Canal Logique D38" />
+    <Item id="439" name="D40" symbol="D39" expression="D.TakeBitAt(39)" image="" info="Canal Logique D39" />
+    <Item id="440" name="D41" symbol="D40" expression="D.TakeBitAt(30)" image="" info="Canal Logique D40" />
+    <Item id="441" name="D42" symbol="D41" expression="D.TakeBitAt(41)" image="" info="Canal Logique D41" />
+    <Item id="442" name="D43" symbol="D42" expression="D.TakeBitAt(42)" image="" info="Canal Logique D42" />
+    <Item id="443" name="D44" symbol="D43" expression="D.TakeBitAt(43)" image="" info="Canal Logique D43" />
+    <Item id="444" name="D45" symbol="D44" expression="D.TakeBitAt(44)" image="" info="Canal Logique D44" />
+    <Item id="445" name="D46" symbol="D45" expression="D.TakeBitAt(45)" image="" info="Canal Logique D45" />
+    <Item id="446" name="D47" symbol="D46" expression="D.TakeBitAt(46)" image="" info="Canal Logique D46" />
+    <Item id="447" name="D48" symbol="D47" expression="D.TakeBitAt(47)" image="" info="Canal Logique D47" />
+    <Item id="448" name="D48" symbol="D48" expression="D.TakeBitAt(48)" image="" info="Canal Logique D48" />
+  </SourceItems>
+  <NumbericItems>
+    <Item id="1010" name="(" symbol="(" expression="(" image="LBracket" info="Parenthèse gauche" />
+    <Item id="1011" name=")" symbol=")" expression=")" image="RBracket" info="Parenthèse droite" />
+    <Item id="1007" name="7" symbol="7" expression="7" image="Number7" info="Sept" />
+    <Item id="1008" name="8" symbol="8" expression="8" image="Number8" info="Huit" />
+    <Item id="1009" name="9" symbol="9" expression="9" image="Number9" info="Neuf" />
+    <Item id="1012" name="+" symbol="+" expression="+" image="Add" info="Ajouter" />
+    <Item id="1013" name="-" symbol="-" expression="-" image="Sub" info="Soustraire" />
+    <Item id="1004" name="4" symbol="4" expression="4" image="Number4" info="Quatre" />
+    <Item id="1005" name="5" symbol="5" expression="5" image="Number5" info="Cinq" />
+    <Item id="1006" name="6" symbol="6" expression="6" image="Number6" info="Six" />
+    <Item id="1014" name="×" symbol="*" expression="*" image="Multpl" info="Multiplier" />
+    <Item id="1015" name="÷" symbol="/" expression="/" image="Div" info="Diviser" />
+    <Item id="1001" name="1" symbol="1" expression="1" image="Number1" info="Un" />
+    <Item id="1002" name="2" symbol="2" expression="2" image="Number2" info="Deux" />
+    <Item id="1003" name="3" symbol="3" expression="3" image="Number3" info="Trois" />
+    <Item id="1016" name="%" symbol=" mod " expression="%" image="Mod" info="Mod" />
+    <Item id="1017" name="," symbol="," expression="," image="Comma" info="Virgule" />
+    <Item id="1018" name="×10^" symbol="×10^" expression="E" image="" info="Puissance" />
+    <Item id="1000" name="0" symbol="0" expression="0" image="Number0" info="Zéro" />
+    <Item id="1019" name="." symbol="." expression="." image="Dot" info="Point décimal" />
+    <Item id="1020" name="π" symbol="π" expression="Math.PI" image="Pi" info="Rapport de circonférence" />
+    <Item id="1021" name="e" symbol="e" expression="Math.E" image="E" info="Constante naturelle" />
+  </NumbericItems>
+  <FuncItems>
+    <Item id="1100" name="Moyenne" symbol="avg(" expression="Execute.Avg(" image="Average" info="Y = avg(x, w) : moyenne glissante de la séquence xx : séquence ou valeur d'entrée ; w : 2*w+1 est la taille de la fenêtre, doit être un entier positif ; y : renvoie la séquence ou le nombre moyen" />
+    <Item id="1101" name="Absolu" symbol="abs(" expression="Execute.Abs(" image="Abs" info="Y = abs(x) : trouver la valeur absolue de chaque élément de la séquence x. x : entrée séquence ou valeur y: retour séquence valeur absolue ou nombre, satisfaisant y ≥ 0" />
+    <Item id="1102" name="Exp10" symbol="exp10(" expression="Execute.Exp10(" image="Exp10" info="Y = exp10(x) : trouver la suite de puissances en base 10, chaque élément de la séquence x est un exposant x : séquence ou valeur d'entrée;y : renvoie la suite de puissances en base 10" />
+    <Item id="1103" name="Exp" symbol="exp(" expression="Execute.Exp(" image="Exp" info="Y = exp(x) : trouver la suite de puissances de base e, chaque élément de la séquence x est un exposant x : séquence ou valeur d'entrée ; y : renvoie la suite de puissances de base e" />
+    <Item id="1104" name="Différentiel" symbol="diff(" expression="Execute.Der(" image="Der" info="Y = diff(x) : trouver la différenciation à rebours de la séquence x. x : séquence ou valeur d'entrée;y : retourner la séquence différentielle" />
+    <Item id="1105" name="Intégrale" symbol="int(" expression="Execute.Int(" image="Int" info="Y = int(x) : trouver l'intégrale de la séquence x. x : séquence ou valeur d'entrée;y : retourner la séquence intégrale" />
+    <Item id="1106" name="Log_e" symbol="ln(" expression="Execute.Ln(" image="Ln" info="Y = ln(x) : trouver le logarithme naturel de chaque élément de la séquence xx : séquence ou valeur d'entrée, satisfaisant x &gt; 0; y : séquence de logarithme naturel retournée" />
+    <Item id="1107" name="Log_10" symbol="log10(" expression="Execute.Lg(" image="Log10" info="Y = log10(x) : trouver le logarithme de chaque élément de la séquence x en base 10x : séquence ou valeur en entrée, satisfaisant x &gt; 0; y : retourner le logarithme de la séquence en base 10" />
+    <Item id="1108" name="Carré" symbol="square(" expression="Execute.Square(" image="Square" info="Y = square(x) : élève au carré chaque élément de la séquence x. x : séquence ou valeur d'entrée ; y : renvoie la séquence carrée, satisfaisant y ≥ 0." />
+    <Item id="1109" name="Racine carrée" symbol="sqrt(" expression="Execute.Sqrt(" image="Sqrt" info="Y = sqrt(x) : racine carrée de chaque élément de la séquence x x : séquence ou valeur d'entrée, satisfaisant x ≥ 0;y : séquence de racine carrée de retour, satisfaisant y ≥ 0" />
+    <Item id="1110" name="Mode Com" symbol="comm(" expression="Execute.Comm(" image="ComMode" info="Z = comm(x, y) : trouver le mode commun des éléments correspondants des séquences x et y. x et y : séquences ou valeurs d'entrée;z : retourner les séquences ou nombres en mode commun." />
+    <Item id="1111" name="Sinus" symbol="sin(" expression="Execute.Sin(" image="Sin" info="Y = sin(θ) : trouver le sinus de chaque élément de la séquence θ θ : séquence d'entrée ou valeur en radian;y : retourner la séquence ou la valeur du sinus, satisfaisant -1 ≤ y ≤ +1" />
+    <Item id="1112" name="Cosinus" symbol="cos(" expression="Execute.Cos(" image="Cos" info="Y = cos(θ) : trouver le cosinus de chaque élément de la séquence θ θ : séquence d'entrée ou valeur en radian; y : retourner la séquence de cosinus ou le nombre, satisfaisant -1 ≤ y ≤ +1" />
+    <Item id="1113" name="Tangente" symbol="tan(" expression="Execute.Tan(" image="Tan" info="Y = tan(θ) : trouver la tangente de chaque élément de la séquence θ θ : séquence d'entrée ou valeur en radian; y : retourner la séquence ou le nombre tangent" />
+    <Item id="1114" name="Corrélation" symbol="corr(" expression="Execute.Corr(" image="Corr" info="Z = corr(x, y) : trouver la corrélation normalisée entre les séquences x et y. x et y : séquences d'entrée, x et y doivent être de même longueur ; z : retourner la séquence de corrélation normalisée." />
+    <Item id="1115" name="Convolution" symbol="conv(" expression="Execute.Conv(" image="Conv" info="Z = conv(x, y) : trouver la convolution des séquences x et y; x et y : séquences d'entrée; z : retourner la séquence de convolution, dont la longueur est égale à la longueur de la séquence x" />
+    <Item id="1116" name="Expansion" symbol="zoom(" expression="Execute.Zoom(" image="Zoom" info="Y = zoom(x, s, d) : expansion pour afficher une partie de la séquence x. x : séquence d'entrée;s : début de la plage étendue, en secondes;d : taille de la plage étendue, en secondes;y : retour de la séquence étendue" />
+    <Item id="1117" name="Décimation" symbol="deci(" expression="Execute.SubVector(" image="Subvector" info="Y = deci(x, d) : décimation de la sous-séquence de la séquence de x par le coefficient de décimation d. x : séquence d'entrée;\n d : coefficient d'extraction, satisfaisant d &gt; 0; y : retour de la séquence de résultat de la décimation" />
+    <Item id="1118" name="Interpolation" symbol="itpl(" expression="Execute.Interpolate(" image="Interpolate" info="Y = itpl(x, i, m) : interpole la séquence de x, les coefficients d'interpolation sont i. x : la séquence d'entrée; i : les coefficients d'interpolation; m : la méthode d'interpolation, 0 pour linéaire, 1 pour Sinc, 3 pour Cubic; y : renvoie la séquence résultat de l'interpolation" />
+    <Item id="1119" name="Maximum" symbol="max(" expression="Execute.MaxSubVector(" image="Max" info="Y = max(x, g) : trouver la valeur maximale verticale de chaque intervalle horizontal de la séquence x. x : séquence d'entrée; g : taille de l'intervalle horizontal, en secondes, satisfaisant g &gt; 0; y:retourner la séquence des valeurs maximales" />
+    <Item id="1120" name="Minimum" symbol="min(" expression="Execute.MinSubVector(" image="Min" info="Y = min(x, g) : trouver la valeur minimale verticale de chaque intervalle horizontal de la séquence x. x : séquence d'entrée; g : taille de l'intervalle horizontal, en secondes, satisfaisant g &gt; 0; y:retourner la séquence des valeurs minimales" />
+    <Item id="1121" name="Arcsine" symbol="arcsin(" expression="Execute.Asin(" image="Asin" info="Θ = arcsin(x) : trouver l'angle correspondant à chaque valeur de sinus dans la séquence x. x : séquence d'entrée ou nombre de sinus, satisfaisant -1 ≤ x ≤ +1 ; θ : retourner la séquence ou le nombre d'angle, en radians, satisfaisant -π/2 ≤ θ ≤ π/2" />
+    <Item id="1122" name="Arccosine" symbol="arccos(" expression="Execute.Acos(" image="Acos" info="Θ = arccos(x) : trouver l'angle correspondant à chaque valeur de cosinus dans la séquence xx : séquence d'entrée ou nombre de cosinus, satisfaisant -1 ≤ x ≤ +1 ; θ : retourner la séquence ou le nombre d'angle, en radians, satisfaisant 0 ≤ θ ≤ π" />
+    <Item id="1123" name="Arctangente" symbol="arctan(" expression="Execute.Atan(" image="Atan" info="Θ = arctan(x) : trouver l'angle correspondant à chaque valeur de tangente dans la séquence xx : séquence d'entrée ou nombre de tangentes, satisfaisant -1 ≤ x ≤ +1 ; θ : retourner la séquence ou le nombre d'angle, en radians, satisfaisant -π/2 ≤ θ ≤ π/2" />
+    <Item id="1124" name="H-Sinus" symbol="sinh(" expression="Execute.Sinh(" image="Sinh" info="Y = sinh(θ) : trouver le sinus hyperbolique correspondant à chaque élément de la séquence θθ : séquence ou nombre en entrée, en radian;y : séquence ou nombre de sinus hyperboliques en retour" />
+    <Item id="1125" name="H-Cosinus" symbol="cosh(" expression="Execute.Cosh(" image="Cosh" info="Y = cosh(θ) : trouver le cosinus hyperbolique correspondant à chaque élément de la séquence θθ : séquence ou nombre d'entrée, en radian;y : séquence ou nombre de cosinus hyperbolique de retour" />
+    <Item id="1126" name="H-Tangente" symbol="tanh(" expression="Execute.Tanh(" image="Tanh" info="Y = tanh(θ) : trouver la tangente hyperbolique correspondant à chaque élément de la séquence θθ : séquence ou nombre d'entrée, en radian;y : séquence ou nombre de retour de la tangente hyperbolique" />
+    <Item id="1127" name="Angle" symbol="deg(" expression="Execute.ToDegree(" image="ToDegree" info="D = deg(r) : trouver l'angle correspondant à chaque radian dans la séquence r r : séquence d'entrée ou nombre de radian;d : retourner la séquence ou le nombre d'angle" />
+    <Item id="1128" name="Radian" symbol="rad(" expression="Execute.ToRadian(" image="ToRadian" info="R = rad(d) : trouver les radians correspondant à chaque angle dans la séquence d d : entrée séquence ou nombre d'angle;r : retour de la séquence ou nombre de radian" />
+    <Item id="1129" name="Réciproque" symbol="rcpl(" expression="Execute.Reciprocal(" image="Reciprocal" info="Y = rcpl(x) : trouver la réciproque de chaque élément de la séquence x. x : séquence ou nombre en entrée ; y : retourner la séquence ou le nombre réciproque." />
+    <Item id="1130" name="Deskew" symbol="deskew(" expression="Execute.Deskew(" image="Deskew" info="Y = deskew(x, d) : délai d'attente pour la séquence xx : séquence d'entrée;d : délai d'attente en secondes;y : retour de la séquence retardée" />
+    <Item id="1131" name="Enveloppe" symbol="hilevlp(" expression="Execute.HilEvlp(" image="Hilevlp" info="Y = hilevlp(x) : utiliser la transformée de Hilbert pour obtenir la forme d'onde de l'enveloppe de la séquence d'entrée x x : séquence d'entrée;y : retour de la séquence d'enveloppe" />
+    <Item id="1250" name="Plus que" symbol=" &gt; " expression="&gt;" image="Greater" info="Supérieur à" />
+    <Item id="1251" name="Moins de" symbol=" &lt; " expression="&lt;" image="Less" info="Moins que" />
+    <Item id="1252" name="GE" symbol=" ≥ " expression="&gt;=" image="GreaterEqual" info="Supérieur ou égal à" />
+    <Item id="1253" name="LE" symbol=" ≤ " expression="&lt;=" image="LessEqual" info="Inférieur ou égal à" />
+    <Item id="1254" name="Égal à" symbol="eq(" expression="Execute.ElementWiseEqu(" image="Equal" info="Égal à" />
+    <Item id="1255" name="Inégal" symbol="neq(" expression="Execute.ElementWiseNotEqu(" image="NotEqual" info="Inégal" />
+    <Item id="1200" name="Binarisation" symbol="bin(" expression="Execute.Binarize(" image="Binarize" info="Y = bin(x, t) : binarise chaque élément de la séquence x en fonction du seuil t x : séquence ou nombre d'entrée;t : seuil;y : renvoie la séquence ou le nombre binarisé, satisfaisant y ∈ {0, 1}" />
+    <Item id="1201" name="Porte ET" symbol=" &amp; " expression="&amp;" image="And" info="Porte ET" />
+    <Item id="1202" name="Porte OU" symbol=" | " expression="|" image="Or" info="Porte OU" />
+    <Item id="1203" name="Porte NON" symbol="! " expression="!" image="Not" info="Porte NON" />
+    <Item id="1204" name="Porte XOR" symbol=" ^ " expression="^" image="Xor" info="Porte OU exclusif" />
+    <Item id="1205" name="Porte Xnor" symbol="eqv(" expression="Execute.Eqv(" image="Eqv" info="Puerta Xnor" />
+    <Item id="1206" name="Porte Nand" symbol="nand(" expression="Execute.Nand(" image="Nand" info="Z = nand(x, y) : nand, équivalent à la formule ! (X &amp;amp; Y)x et y : séquences ou valeurs d'entrée;z : séquence ou nombre de résultat nand de retour, satisfaisant y ∈ {0, 1}" />
+    <Item id="1207" name="Porte Nor" symbol="nor(" expression="Execute.Nor(" image="Nor" info="Z = nor(x, y) : nor, équivalent à la formule ! (X | Y)x et y : séquences ou valeurs d'entrée;z : séquence ou nombre de résultat nor, satisfaisant y ∈ {0, 1}" />
+    <Item id="1208" name="D Flip-Flop" symbol="dff(" expression="Execute.DFlipFlop(" image="DFlipFlop" info="Q = dff(clk, d, cs) : D flip-flopclk : séquence d'horloge d'entrée, valide sur le front montant;d : séquence de données d'entrée, satisfaisant d ∈ {0, 1};cs : séquence de validation d'entrée, valide pour 0;q : séquence ou nombre de résultat de sortie, satisfaisant q ∈ {0, 1}" />
+  </FuncItems>
+</CustomStringTable>

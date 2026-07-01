@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--=======region 重要说明=====-->
+<!--DriverType 目前只支持 VISA; 我们自己的只支持UU_ETHERNET(GHz_MSO7000X), UU_USB374(示波表)-->
+<!--CommandType 有2两种:check和scpi，check用于弹出准备就绪与否的对话框;scpi为SCPI命令，需要指定仪器-->
+<!--AfterWaitSec 表示执行一条scpi命令后，需要等待的时间(以秒为单位)-->
+<!--QueryOvertimeSec 表示执行查询命令时的超时时间(以秒为单位)。对有些操作，仪器端可能需要花费较长的时间后才能查询，比如校准。在此期间如果有比较等待操作，就需要多次执行，直到超时-->
+<!--基本概念：一个文件称为一个解决方案，一个方案中包含多个任务，一个任务包含一系列的命令-->
+<!--一个方案中使用的所有仪器在Instrumentations 段定义，在后续的命令中的InstrumentationName 必须使用该段中Name字段 中的内容==-->
+<!--如果使用厂家自用的校准工具，对待校准的仪器（示波器），请在仪器段中对该仪器使用IsOurTargetDso="1"来标识，其地址可以为空。==-->
+<!--==对使用新的厂家提供的校准工具进行校准时，在Command 段，可以使用程序自定义的函数来校准==-->
+<!--==此时，包括3个标签：IsProgramFunc（指示是否该命令是程序函数来完成），ProgramFuncName(程序函数的名称，有程序员提供)，ProgramFuncOverSec（程序函数超时时间，秒）==-->
+<!--=======endregion 重要说明=====-->
+
+<!--
+	参数定义
+	1：channel list
+	2: 阻抗 HIGH LOW
+	3：幅度挡 inputLevelBymV
+	4：输入信号（单位mV）SourceAmpVoltBymV
+	5：校准时限(单位S)
+-->
+<InstrumentationAutoControlSolution SolutionDescription="GHz_MSO8000X程控校准方案" version="1.0.0.0" creator="pengbo" LastModifier="pengbo">
+  <Instrumentations Description="endregion 方案中使用到的仪器的定义">
+    <!--== 待校准的目标仪器，使用此标识，并可不标识Address标签==-->
+    <Instrumentation
+				Name="GHz_MSO8000HD"
+				Description="GHz_MSO8000HD示波器"
+				DriverType="VISA"
+				Address="TCPIP0::127.0.0.1::inst0::INSTR"
+				IsOurTargetDso="true"
+				Timeout="0"
+			></Instrumentation>
+  </Instrumentations>
+
+  <!--=======region 方案中任务列表=====-->
+  <Tasks>
+	<Task Description="TiADC系数生成" ImportanceTipMessage="该任务是通过程控来校准示波器的ADC平坦度校准。">
+		<ForeachLoop StartIndex="0" Count="1">
+			<VarintDefine name="OpenChannel"  		valuelist="1 ,	2,	3,	4"></VarintDefine>
+			<VarintDefine name="InterleaveName"  	valuelist="All-20G	,All-20G,	All-20G,	All-20G"></VarintDefine>
+			<!--==TIADC的路数-->
+			<VarintDefine name="TiPath"  valuelist="2,2,2,2"></VarintDefine>
+			<!--==系统采样率,单位Hz-->
+			<VarintDefine name="SamplingRate"  valuelist="20e9,20e9,20e9,20e9"></VarintDefine>
+			<!--==补偿滤波器的长度-->
+			<VarintDefine name="CompLength"  valuelist="2048,2048,2048,2048"></VarintDefine>
+			<!--==FPGA中系数的量化精度-->
+			<VarintDefine name="CoeQuantiWidth"  valuelist="12,12,12,12"></VarintDefine>
+			<!--==阻抗循环==-->
+			<ForeachLoop StartIndex="0" Count="1">
+				<VarintDefine name="SourceIMPedanceSetting"  valuelist="50,1E6"></VarintDefine>
+				<VarintDefine name="BatchTaskIMPedanceSetting"  valuelist="LOW,HIGH"></VarintDefine>
+				<VarintDefine name="DsoIMPedanceOfALLSourceAPPLySetting"  valuelist="2,0"></VarintDefine>
+				<VarintDefine name="YScaleStart"  valuelist="0,4"></VarintDefine>
+				<VarintDefine name="YScaleCount"  valuelist="7,4"></VarintDefine>
+				<!--==挡位循环循环==-->
+				<ForeachLoop StartIndex="@YScaleStart@" Count="@YScaleCount@">
+					<VarintDefine name="inputLevelBymV"   valuelist="10,20,50,100,200,500,1000"></VarintDefine>
+					<Command Description="通道@OpenChannel@，阻抗@BatchTaskIMPedanceSetting@，档位@inputLevelBymV@，生成TiAdc校准数据"
+						InstrumentationName="GHz_MSO8000HD"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_GenerateCoefficientByCommonMatlabDLL MatLabDLLName=.\JiHe_MSO8000X\MatlabDLL\MatlabGenerateCoefficientsTable_TIADC.dll,
+						CoefficientType=TI,
+						Channel=CH@OpenChannel@,
+						SaveCoefficientFileName=TiAdc_TiadcQuantied_@CoeQuantiWidth@bit.txt,
+						SourceFiles_Path=AFCData\@BatchTaskIMPedanceSetting@\@InterleaveName@_CH@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv,
+						SourceFilesFilterPrefixName=Data_,
+						DebugSaveFilePath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@,
+						DebugSaveFilePrefixName=TI_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_,
+						@InterleaveName@,
+						OtherParameter=@SamplingRate@ @TiPath@ @CompLength@ @CoeQuantiWidth@ 50">
+					</Command>
+					<Command Description="通道@OpenChannel@ 阻抗：@BatchTaskIMPedanceSetting@ 档位：@inputLevelBymV@mv 发送TiAdc校准数据"
+						InstrumentationName="GHz_MSO8000HD"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SendCoefficientParams 
+						CoefficientType=TI,
+						CoeQuantiBit=0,
+						CoefficientKey=TI_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@,
+						SaveCoefficientPath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@,
+						SaveCoefficientPathAndFileName=TiadcCoeFreqDomain.txt,
+						MagCompOrder=0,"
+				    ></Command>		
+					<Command Description="通道@OpenChannel@ 阻抗：@BatchTaskIMPedanceSetting@ 档位：@inputLevelBymV@mv 发送TiAdc校准数据"
+						InstrumentationName="GHz_MSO8000HD"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SendCoefficientParams
+						CoefficientType=TI,
+						CoeQuantiBit=@CoeQuantiBit@,
+						CoefficientKey=TI_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@,
+						SaveCoefficientPath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@,
+						SaveCoefficientPathAndFileName=_TiadcQuantied_@CoeQuantiBit@Bit.txt,
+						MagCompOrder=0,"
+				    ></Command>	
+				</ForeachLoop>
+			</ForeachLoop>
+		</ForeachLoop>
+    </Task>
+	<Task Description="AFC系数生成" ImportanceTipMessage="该任务是通过程控来校准示波器的ADC平坦度校准。">
+		<ForeachLoop StartIndex="0" Count="1">
+			<VarintDefine name="OpenChannel"  		valuelist="1			,2			,3			,4		"></VarintDefine>
+			<VarintDefine name="InterleaveName"  	valuelist="All-20G	,All-20G,	All-20G	,All-20G"></VarintDefine>
+			<!--==是采样率（单位Hz)-->
+			<VarintDefine name="SamplingRate"  valuelist="20e9,20e9,20e9,20e9"></VarintDefine>
+			<!--==幅频补偿滤波器的阶数阶数越大，补偿精度越高-->
+			<VarintDefine name="MagCompOrder"  valuelist="81,81,81,81"></VarintDefine>
+			<!--==阻带频率（Hz）-->
+			<VarintDefine name="StopBandFreq"  valuelist="9.0e9,9.0e9,9.0e9,9.0e9"></VarintDefine>
+			<!--==通带频率（Hz）-->
+			<VarintDefine name="PassBandFreq"  valuelist="0,0,0,0"></VarintDefine>
+			<!--==频域补偿结构中的FFT点数-->
+			<VarintDefine name="FFTCompLen"  valuelist="2048,2048,2048,2048"></VarintDefine>
+			
+			<!--==FPGA中的系数量化位宽 -->
+			<ConstVariantDefine name="CoeQuantiBit" value="12"></ConstVariantDefine>
+			
+			<!--==目标频响的曲线-->
+			<ConstVariantDefine name="GoalResponseFileName"  value=".\Resources\MergedResponse8G_@InterleaveName@.txt"></ConstVariantDefine>
+			<!--==FFT估计的长度-->
+			<VarintDefine name="FFTEstimationLen"  valuelist="10e3,10e3,10e3,10e3"></VarintDefine>
+			
+			<!--==目标频响的频率间隔-->
+			<ConstVariantDefine name="FreqGap"  value="100MHz"></ConstVariantDefine>
+			<!--==幅度拟合精度-->
+			<ConstVariantDefine name="FitSmoothingParam_Mag"  value="0.99999999"></ConstVariantDefine>
+			<!--==迭代的步长-->
+			<ConstVariantDefine name="StepLen"  value="0.001"></ConstVariantDefine>
+			<!--==迭代的次数-->
+			<ConstVariantDefine name="TraingTimes"  value="1000"></ConstVariantDefine>
+			
+			<!--==阻抗循环==-->
+			<ForeachLoop StartIndex="0" Count="1">
+				<VarintDefine name="SourceIMPedanceSetting"  valuelist="50,1E6"></VarintDefine>
+				<VarintDefine name="BatchTaskIMPedanceSetting"  valuelist="LOW,HIGH"></VarintDefine>
+				<VarintDefine name="DsoIMPedanceOfALLSourceAPPLySetting"  valuelist="2,0"></VarintDefine>
+				<VarintDefine name="YScaleStart"  valuelist="0,3"></VarintDefine>
+				<VarintDefine name="YScaleCount"  valuelist="7,4"></VarintDefine>
+
+				<!--==挡位循环循环==-->
+				<ForeachLoop StartIndex="@YScaleStart@" Count="@YScaleCount@">
+					<VarintDefine name="SourceAmpVoltByMv" valuelist="21.21,42.43,106.1,212.1,424.3,1061,1061"></VarintDefine>
+					<VarintDefine name="inputLevelBymV"   valuelist="10,20,50,100,200,500,1000"></VarintDefine>
+					<Command Description="通道@OpenChannel@，阻抗@BatchTaskIMPedanceSetting@，档位@inputLevelBymV@，生成AFC校准数据"
+						InstrumentationName="GHz_MSO8000HD"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_GenerateCoefficientByCommonMatlabDLL MatLabDLLName=.\JiHe_MSO8000X\MatlabDLL\MatlabGenerateCoefficientsTable_AFC.dll,
+						CoefficientType=AFC,
+						Channel=CH@OpenChannel@,
+						SaveCoefficientFileName=FreqDomainAFCCoe_@CoeQuantiBit@Bit.txt,
+						SourceFiles_Path=AFCData\@BatchTaskIMPedanceSetting@\@InterleaveName@_CH@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv,
+						SourceFilesFilterPrefixName=Data_,
+						DebugSaveFilePath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@,
+						DebugSaveFilePrefixName=AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv,
+						@InterleaveName@,
+						OtherParameter=@SamplingRate@ @MagCompOrder@ .\Resources\MergedResponse8G_@InterleaveName@.txt @PassBandFreq@ @StopBandFreq@ @FFTEstimationLen@ @CoeQuantiBit@ @FFTCompLen@ 10e6 - - - - - - - - ON"
+				    ></Command>
+					<Command Description="通道@OpenChannel@ 阻抗：@BatchTaskIMPedanceSetting@ 档位：@inputLevelBymV@mv 发送AFC校准数据"
+						InstrumentationName="GHz_MSO8000HD"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SendCoefficientParams 
+						CoefficientType=AFC,
+						CoeQuantiBit=0,
+						CoefficientKey=AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv,
+						SaveCoefficientPath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@,
+						SaveCoefficientPathAndFileName=TimeDomainAFCCoe.txt,
+						MagCompOrder=0"
+				    ></Command>		
+					<Command Description="通道@OpenChannel@ 阻抗：@BatchTaskIMPedanceSetting@ 档位：@inputLevelBymV@mv 发送AFC校准数据"
+						InstrumentationName="GHz_MSO8000HD"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SendCoefficientParams
+						CoefficientType=AFC,
+						CoeQuantiBit=@CoeQuantiBit@,
+						CoefficientKey=AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv,
+						SaveCoefficientPath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@,
+						SaveCoefficientPathAndFileName=FreqDomainAFCCoe_@CoeQuantiBit@Bit.txt,
+						MagCompOrder=@MagCompOrder@,"
+				    ></Command>						
+				</ForeachLoop>
+			</ForeachLoop>
+		</ForeachLoop>	  
+    </Task>
+	<Task Description="IFC系数生成" ImportanceTipMessage="该任务是通过程控来校准示波器的TiAdc和AFC">
+		<ForeachLoop StartIndex="0" Count="1">
+			<VarintDefine name="OpenChannel"  		valuelist="1,2,3,4"></VarintDefine>
+			<VarintDefine name="InterleaveName"  	valuelist="ALl-20G	,All-20G,All-20G,All-20G"></VarintDefine>
+			<!--==FPGA中的系数量化位宽-->
+			<VarintDefine name="QuantiBitFPGA"  valuelist="12,12,12,12"></VarintDefine>
+			<!--==合并的模式-->
+			<VarintDefine name="MergingMode"  valuelist="TI_AFC,TI_AFC,TI_AFC,TI_AFC"></VarintDefine>
+			<!--==频域补偿结构中的FFT点数-->
+			<VarintDefine name="FFTCompLen"  valuelist="2048,2048,2048,2048"></VarintDefine>
+			
+			<!--==AFC时域滤波器系数-->
+			<ConstVariantDefine name="AFCTimeCoeFileName" value="-"></ConstVariantDefine>
+			<!--==PFC时域滤波器系数-->
+			<ConstVariantDefine name="PFCTimeCoeFileName" value="-"></ConstVariantDefine>
+			<!--==TIADC频域系数的绝对地址 -->
+			<ConstVariantDefine name="TIADCFreqCoeFileName" value="-"></ConstVariantDefine>		
+			<!--==绘图标致 -->
+			<ConstVariantDefine name="FigureIllustrationSw" value="OFF"></ConstVariantDefine>
+			
+			<!--==阻抗循环==-->
+			<ForeachLoop StartIndex="0" Count="1">
+				<VarintDefine name="SourceIMPedanceSetting"  valuelist="50,1E6"></VarintDefine>
+				<VarintDefine name="BatchTaskIMPedanceSetting"  valuelist="LOW,HIGH"></VarintDefine>
+				<VarintDefine name="DsoIMPedanceOfALLSourceAPPLySetting"  valuelist="2,0"></VarintDefine>
+				<VarintDefine name="YScaleStart"  valuelist="0,3"></VarintDefine>
+				<VarintDefine name="YScaleCount"  valuelist="7,4"></VarintDefine>
+
+				<!--==挡位循环循环==-->
+				<ForeachLoop StartIndex="@YScaleStart@" Count="@YScaleCount@">
+					<VarintDefine name="SourceAmpVoltByMv" valuelist="21.21,42.43,106.1,212.1,424.3,1061,1061"></VarintDefine>
+					<VarintDefine name="inputLevelBymV"   valuelist="10,20,50,100,200,500,1000"></VarintDefine>				
+					<Command Description="通道@OpenChannel@，阻抗@BatchTaskIMPedanceSetting@，档位@inputLevelBymV@，生成IFC校准数据"
+						InstrumentationName="GHz_MSO8000HD"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_GenerateCoefficientByCommonMatlabDLL MatLabDLLName=.\JiHe_MSO8000X\MatlabDLL\MatlabGenerateCoefficientsTable_CoeMerging.dll,
+						CoefficientType=IFC,
+						Channel=CH@OpenChannel@,
+						SaveCoefficientFileName=MergedCompCoeSpectrum_TI_AFC_@QuantiBitFPGA@Bit.txt,
+						SourceFiles_Path=AFCData\Coefficient_@InterleaveName@_CH@OpenChannel@,
+						SourceFilesFilterPrefixName=AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv,
+						DebugSaveFilePath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@,
+						DebugSaveFilePrefixName=IFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv,
+						@InterleaveName@,
+						OtherParameter=@QuantiBitFPGA@ @MergingMode@ @FFTCompLen@ CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@\AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv_TimeDomainAFCCoe.txt - CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@\TI_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_TiadcCoeFreqDomain.txt off"
+				    ></Command>
+					<Command Description="通道@OpenChannel@ 阻抗：@BatchTaskIMPedanceSetting@ 档位：@inputLevelBymV@mv 发送IFC校准数据"
+						InstrumentationName="GHz_MSO8000HD"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SendCoefficientParams
+						CoefficientType=IFC,
+						CoeQuantiBit=0,
+						CoefficientKey=IFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv,
+						SaveCoefficientPath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@,
+						SaveCoefficientPathAndFileName=MergedCompCoeSpectrum_TI_AFC_@QuantiBitFPGA@Bit.txt,
+						MagCompOrder=0,"
+				    ></Command>	
+				</ForeachLoop>
+			</ForeachLoop>
+		</ForeachLoop>	  
+    </Task>
+  </Tasks>
+</InstrumentationAutoControlSolution>

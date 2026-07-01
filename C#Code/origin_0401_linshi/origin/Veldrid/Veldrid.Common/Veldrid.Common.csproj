@@ -1,0 +1,218 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <Configurations>Debug;Release;</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Interface\ICompute.cs" />
+    <Compile Remove="VeldridRender\LineRender\InfiniteAfterglowRender.cs" />
+    <Compile Remove="VeldridRender\LineRender\LinesRenderer{float}.cs" />
+    <Compile Remove="VeldridRender\ZoomRender\ZoomRectRender.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="VeldridCompute\Test\AddTestCompute.comp" />
+    <None Remove="VeldridRender\BarRender\BarRender.frag" />
+    <None Remove="VeldridRender\BarRender\BarRender.vert" />
+    <None Remove="VeldridRender\BarRender\BarRenderLines.Geometry.hlsl" />
+    <None Remove="VeldridRender\BarRender\BarRenderTriangle.Geometry.hlsl" />
+    <None Remove="VeldridRender\ColorPicker\ColorPickerRender.frag" />
+    <None Remove="VeldridRender\ColorPicker\ColorPickerRender.vert" />
+    <None Remove="VeldridRender\Decode\DecodeLineRender.frag" />
+    <None Remove="VeldridRender\Decode\DecodeLineRender.Geometry.hlsl" />
+    <None Remove="VeldridRender\Decode\DecodeLineRender.vert" />
+    <None Remove="VeldridRender\DigitalSingle.frag" />
+    <None Remove="VeldridRender\DigitalSingle.vert" />
+    <None Remove="VeldridRender\EyeRender\EyeRender.frag" />
+    <None Remove="VeldridRender\EyeRender\EyeRender.vert" />
+    <None Remove="VeldridRender\ImageRender\ImageRender.frag" />
+    <None Remove="VeldridRender\ImageRender\ImageRender.vert" />
+    <None Remove="VeldridRender\ImageRender\TextRender.frag" />
+    <None Remove="VeldridRender\ImageRender\TextRender.vert" />
+    <None Remove="VeldridRender\LineRender\AnalogPointToCross.geometry.hlsl" />
+    <None Remove="VeldridRender\LineRender\AnalogRender.frag" />
+    <None Remove="VeldridRender\LineRender\AnalogRender.vert" />
+    <None Remove="VeldridRender\LineRender\DataRender.frag" />
+    <None Remove="VeldridRender\LineRender\DataRender.vert" />
+    <None Remove="VeldridRender\LineRender\DecodeRender.vert" />
+    <None Remove="VeldridRender\LineRender\DecodeRenderLine.Geometry.hlsl" />
+    <None Remove="VeldridRender\LineRender\DecodeRenderStrip.Geometry.hlsl" />
+    <None Remove="VeldridRender\LineRender\DecoderRender.frag" />
+    <None Remove="VeldridRender\LineRender\DigitalRender.frag" />
+    <None Remove="VeldridRender\LineRender\DigitalRender.vert" />
+    <None Remove="VeldridRender\LineRender\DigitalRenderLine.geom" />
+    <None Remove="VeldridRender\LineRender\DigitalRenderLine.geometry.hlsl" />
+    <None Remove="VeldridRender\LineRender\DigitalRenderPoint.geom" />
+    <None Remove="VeldridRender\LineRender\DigitalRenderPoint.geometry.hlsl" />
+    <None Remove="VeldridRender\LineRender\FFTRender.frag" />
+    <None Remove="VeldridRender\LineRender\FFTRender.vert" />
+    <None Remove="VeldridRender\LineRender\InfiniteAfterglow.frag" />
+    <None Remove="VeldridRender\LineRender\InfiniteAfterglow.vert" />
+    <None Remove="VeldridRender\LineRender\RuntimeRender.frag" />
+    <None Remove="VeldridRender\LineRender\RuntimeRender.vert" />
+    <None Remove="VeldridRender\LineRender\MathPlotRender.frag" />
+    <None Remove="VeldridRender\LineRender\MathPlotRender.vert" />
+    <None Remove="VeldridRender\LineRender\ThreeDimensionsRender.frag" />
+    <None Remove="VeldridRender\LineRender\ThreeDimensionsRender.vert" />
+    <None Remove="VeldridRender\LineRender\ThreeDimensionsRenderLine.geometry.hlsl" />
+    <None Remove="VeldridRender\LineRender\ThreeDimLineRender.frag" />
+    <None Remove="VeldridRender\LineRender\ThreeDimLineRender.vert" />
+    <None Remove="VeldridRender\LineRender\WaterfallRender.frag" />
+    <None Remove="VeldridRender\LineRender\WaterfallRender.vert" />
+    <None Remove="VeldridRender\TextRender\TextRenderBackColor.frag" />
+    <None Remove="VeldridRender\TextRender\TextRenderBackColor.vert" />
+    <None Remove="VeldridRender\TextRender\ThreeDimMutiText.frag" />
+    <None Remove="VeldridRender\TextRender\ThreeDimMutiText.vert" />
+    <None Remove="VeldridRender\TriangleRender\TriangleRender.frag" />
+    <None Remove="VeldridRender\TriangleRender\TriangleRender.Geometry.hlsl" />
+    <None Remove="VeldridRender\TriangleRender\TriangleRender.vert" />
+    <None Remove="VeldridRender\UPORender\UPORender.comp" />
+    <None Remove="VeldridRender\UPORender\UPORender.frag" />
+    <None Remove="VeldridRender\UPORender\UPORender.vert" />
+    <None Remove="VeldridRender\ZoomRender\ZoomRecRender.frag" />
+    <None Remove="VeldridRender\ZoomRender\ZoomRecRender.vert" />
+    <None Remove="VeldridRender\ZoomRender\ZoomRecRenderLine.Geometry.hlsl" />
+    <None Remove="VeldridRender\ZoomRender\ZoomRecRenderPoint.Geometry.hlsl" />
+    <None Remove="VeldridRender\ZoomRender\ZoomRectRender.frag" />
+    <None Remove="VeldridRender\ZoomRender\ZoomRectRender.vert" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="VeldridCompute\Test\AddTestCompute.comp" />
+    <EmbeddedResource Include="VeldridRender\BarRender\BarRender.frag" />
+    <EmbeddedResource Include="VeldridRender\BarRender\BarRender.vert" />
+    <EmbeddedResource Include="VeldridRender\BarRender\BarRenderLines.Geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\BarRender\BarRenderTriangle.Geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\ColorPicker\ColorPickerRender.frag" />
+    <EmbeddedResource Include="VeldridRender\ColorPicker\ColorPickerRender.vert" />
+    <EmbeddedResource Include="VeldridRender\Decode\DecodeLineRender.frag" />
+    <EmbeddedResource Include="VeldridRender\Decode\DecodeLineRender.vert" />
+    <EmbeddedResource Include="VeldridRender\Decode\DecodeLineRender.Geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\EyeRender\EyeRender.frag" />
+    <EmbeddedResource Include="VeldridRender\EyeRender\EyeRender.vert" />
+    <EmbeddedResource Include="VeldridRender\ImageRender\ImageRender.frag" />
+    <EmbeddedResource Include="VeldridRender\ImageRender\ImageRender.vert">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeldridRender\LineRender\AnalogPointToCross.geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\LineRender\RuntimeRender.frag" />
+    <EmbeddedResource Include="VeldridRender\LineRender\RuntimeRender.vert" />
+    <EmbeddedResource Include="VeldridRender\LineRender\MathPlotRender.frag" />
+    <EmbeddedResource Include="VeldridRender\LineRender\MathPlotRender.vert" />
+    <EmbeddedResource Include="VeldridRender\LineRender\AnalogRender.frag" />
+    <EmbeddedResource Include="VeldridRender\LineRender\AnalogRender.vert" />
+    <EmbeddedResource Include="VeldridRender\Decode\DecodeRenderStrip.Geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\Decode\DecodeRender.frag" />
+    <EmbeddedResource Include="VeldridRender\Decode\DecodeRenderLine.Geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\Decode\DecodeRender.vert" />
+    <EmbeddedResource Include="VeldridRender\LineRender\DigitalRender.frag" />
+    <EmbeddedResource Include="VeldridRender\LineRender\DigitalRender.vert" />
+    <EmbeddedResource Include="VeldridRender\LineRender\DataRender.frag" />
+    <EmbeddedResource Include="VeldridRender\LineRender\DataRender.vert" />
+    <EmbeddedResource Include="VeldridRender\LineRender\ThreeDimensionsRenderLine.geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\LineRender\DigitalRenderPoint.geom" />
+    <EmbeddedResource Include="VeldridRender\LineRender\DigitalRenderLine.geom" />
+    <EmbeddedResource Include="VeldridRender\LineRender\DigitalRenderPoint.geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\LineRender\DigitalRenderLine.geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\LineRender\InfiniteAfterglow.frag" />
+    <EmbeddedResource Include="VeldridRender\LineRender\InfiniteAfterglow.vert" />
+    <EmbeddedResource Include="VeldridRender\LineRender\WaterfallRender.frag" />
+    <EmbeddedResource Include="VeldridRender\LineRender\WaterfallRender.vert" />
+    <EmbeddedResource Include="VeldridRender\LineRender\ThreeDimensionsRender.frag" />
+    <EmbeddedResource Include="VeldridRender\LineRender\ThreeDimensionsRender.vert" />
+    <EmbeddedResource Include="VeldridRender\LineRender\ThreeDimLineRender.frag" />
+    <EmbeddedResource Include="VeldridRender\LineRender\ThreeDimLineRender.vert" />
+    <EmbeddedResource Include="VeldridRender\TextRender\ThreeDimMutiText.frag" />
+    <EmbeddedResource Include="VeldridRender\TextRender\ThreeDimMutiText.vert" />
+    <EmbeddedResource Include="VeldridRender\TextRender\TextRender.frag" />
+    <EmbeddedResource Include="VeldridRender\TextRender\TextRender.vert" />
+    <EmbeddedResource Include="VeldridRender\TextRender\TextRenderBackColor.frag" />
+    <EmbeddedResource Include="VeldridRender\TextRender\TextRenderBackColor.vert" />
+    <EmbeddedResource Include="VeldridRender\TriangleRender\TriangleRender.Geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\TriangleRender\TriangleRender.frag" />
+    <EmbeddedResource Include="VeldridRender\TriangleRender\TriangleRender.vert" />
+    <EmbeddedResource Include="VeldridRender\UPORender\UPORender.comp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeldridRender\UPORender\UPORender.frag">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeldridRender\UPORender\UPORender.vert">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeldridRender\ZoomRender\ZoomRecRender.frag" />
+    <EmbeddedResource Include="VeldridRender\ZoomRender\ZoomRecRenderPoint.Geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\ZoomRender\ZoomRecRenderLine.Geometry.hlsl" />
+    <EmbeddedResource Include="VeldridRender\ZoomRender\ZoomRecRender.vert" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FontStashSharp\Veldrid.FontStashSharp.csproj" />
+    <ProjectReference Include="..\NativeLibraryLoader\NativeLibraryLoader.csproj" />
+    <ProjectReference Include="..\Veldrid.MetalBindings\Veldrid.MetalBindings.csproj" />
+    <ProjectReference Include="..\Veldrid.OpenGLBindings\Veldrid.OpenGLBindings.csproj" />
+    <ProjectReference Include="..\Veldrid.SDL2\Veldrid.SDL2.csproj" />
+    <ProjectReference Include="..\Veldrid.SPIRV\Veldrid.SPIRV.csproj" />
+    <ProjectReference Include="..\Veldrid\Veldrid.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EventBroker">
+      <HintPath>..\..\ShareDlls\EventBroker.dll</HintPath>
+    </Reference>
+    <Reference Include="IEventBroker">
+      <HintPath>..\..\ShareDlls\IEventBroker.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Controls.Common">
+      <HintPath>..\..\ShareDlls\ScopeX.Controls.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Fonts\MiSans-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\MiSans-Demibold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\MiSans-ExtraLight.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\MiSans-Heavy.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\MiSans-Light.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\MiSans-Medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\MiSans-Normal.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\MiSans-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\MiSans-Semibold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\MiSans-Thin.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /s /e /Y $(TargetPath)  $(SolutionDir)ShareDlls\Gpu\$(TargetName)$(TargetExt)&#xD;&#xA;&#xD;&#xA;xcopy /s /y $(TargetDir)$(TargetName).pdb  $(SolutionDir)pdbs\&#xD;&#xA;xcopy /s /y $(TargetPath) $(SolutionDir)pdbs\" />
+  </Target>
+
+</Project>

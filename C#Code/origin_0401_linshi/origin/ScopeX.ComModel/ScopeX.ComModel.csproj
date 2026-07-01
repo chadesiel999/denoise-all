@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>2.1.9</Version>
+    <Authors>ScopeX</Authors>
+    <Configurations>Debug;Release;</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DefineConstants>$(DefineConstants);</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants);</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DefineConstants>$(DefineConstants);</DefineConstants>
+  </PropertyGroup> 
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath)  $(SolutionDir)ShareDlls\$(TargetName)$(TargetExt)&#xD;&#xA;copy $(TargetPath)  $(SolutionDir)ToolChain\FPGA_Updater\$(TargetName)$(TargetExt)&#xD;&#xA;copy $(TargetPath)  $(SolutionDir)ToolChain\CalibrationTool\$(TargetName)$(TargetExt)&#xD;&#xA;copy $(TargetPath)  $(SolutionDir)MSO8000HD\ToolChain\CalibrationTool\$(TargetName)$(TargetExt)&#xD;&#xA;xcopy /s /y $(TargetDir)$(TargetName).pdb  $(SolutionDir)pdbs\&#xD;&#xA;xcopy /s /y $(TargetPath) $(SolutionDir)pdbs\" />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\ShareDlls\OtherShareDlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

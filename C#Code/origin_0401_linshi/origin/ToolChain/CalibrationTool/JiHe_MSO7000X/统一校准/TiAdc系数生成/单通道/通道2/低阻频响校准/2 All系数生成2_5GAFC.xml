@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--=======region 重要说明=====-->
+<!--DriverType 目前只支持 VISA; 我们自己的只支持UU_ETHERNET(GHz_MSO7000X), UU_USB374(示波表)-->
+<!--CommandType 有2两种:check和scpi，check用于弹出准备就绪与否的对话框;scpi为SCPI命令，需要指定仪器-->
+<!--AfterWaitSec 表示执行一条scpi命令后，需要等待的时间(以秒为单位)-->
+<!--QueryOvertimeSec 表示执行查询命令时的超时时间(以秒为单位)。对有些操作，仪器端可能需要花费较长的时间后才能查询，比如校准。在此期间如果有比较等待操作，就需要多次执行，直到超时-->
+<!--基本概念：一个文件称为一个解决方案，一个方案中包含多个任务，一个任务包含一系列的命令-->
+<!--一个方案中使用的所有仪器在Instrumentations 段定义，在后续的命令中的InstrumentationName 必须使用该段中Name字段 中的内容==-->
+<!--如果使用厂家自用的校准工具，对待校准的仪器（示波器），请在仪器段中对该仪器使用IsOurTargetDso="1"来标识，其地址可以为空。==-->
+<!--==对使用新的厂家提供的校准工具进行校准时，在Command 段，可以使用程序自定义的函数来校准==-->
+<!--==此时，包括3个标签：IsProgramFunc（指示是否该命令是程序函数来完成），ProgramFuncName(程序函数的名称，有程序员提供)，ProgramFuncOverSec（程序函数超时时间，秒）==-->
+<!--=======endregion 重要说明=====-->
+
+<!--
+	参数定义
+	1：channel list
+	2: 阻抗 HIGH LOW
+	3：幅度挡 inputLevelBymV
+	4：输入信号（单位mV）SourceAmpVoltBymV
+	5：校准时限(单位S)
+-->
+<InstrumentationAutoControlSolution SolutionDescription="GHz_MSO8000X程控校准方案" version="1.0.0.0" creator="pengbo" LastModifier="pengbo">
+  <Instrumentations Description="endregion 方案中使用到的仪器的定义">
+    <!--== 待校准的目标仪器，使用此标识，并可不标识Address标签==-->
+    <Instrumentation
+				Name="GHz_MSO7000X"
+				Description="GHz_MSO7000X示波器"
+				DriverType="VISA"
+				Address="TCPIP0::DESKTOP-1853::inst0::INSTR"
+				IsOurTargetDso="true"
+				Timeout="0"
+			></Instrumentation>
+  </Instrumentations>
+
+  <!--=======region 方案中任务列表=====-->
+  <Tasks>
+	<Task Description="AFC满带宽系数生成" ImportanceTipMessage="该任务是通过程控来校准示波器的ADC平坦度校准。">
+		<ForeachLoop StartIndex="1" Count="1">
+			<VarintDefine name="OpenChannel"  		valuelist="1,2,3,4"></VarintDefine>
+			<VarintDefine name="InterleaveName"  	valuelist="C1_10G,C2_10G,C3_10G,C4_10G"></VarintDefine>
+			<!--==是采样率（单位Hz)-->
+			<VarintDefine name="SamplingRate"  valuelist="10e9,10e9,10e9,10e9"></VarintDefine>
+			<!--==幅频补偿滤波器的阶数阶数越大，补偿精度越高-->
+			<VarintDefine name="MagCompOrder"  valuelist="41,41,41,41"></VarintDefine>
+			<!--==FFT估计的长度-->
+			<ConstVariantDefine name="FFTEstimationLen"  value="5e3"></ConstVariantDefine>
+			<!--==FPGA中的系数量化位宽 -->
+			<ConstVariantDefine name="CoeQuantiBit" value="15"></ConstVariantDefine>
+			<!--==频域补偿结构中的FFT点数-->
+			<ConstVariantDefine name="FFTCompLen"  value="2048"></ConstVariantDefine>
+			
+			<!--==目标频响的频率间隔-->
+			<ConstVariantDefine name="FreqGap"  value="50e6"></ConstVariantDefine>
+			<!--==幅度拟合精度-->
+			<ConstVariantDefine name="FitSmoothingParam_Mag"  value="-"></ConstVariantDefine>
+			<!--==迭代的步长-->
+			<ConstVariantDefine name="StepLen"  value="-"></ConstVariantDefine>
+			<!--==迭代的次数-->
+			<ConstVariantDefine name="TraingTimes"  value="-"></ConstVariantDefine>
+			
+			<!--==第一个标识符-->
+			<ConstVariantDefine name="identifier_1st"  value="-"></ConstVariantDefine>
+			<!--==第二个标识符-->
+			<ConstVariantDefine name="identifier_2nd"  value="-"></ConstVariantDefine>
+			<!--==第一个标识符的索引-->
+			<ConstVariantDefine name="identifier_1st_index"  value="-"></ConstVariantDefine>
+			<!--==第二个标识符的索引-->
+			<ConstVariantDefine name="identifier_2nd_index"  value="-"></ConstVariantDefine>
+			<!--==补偿后幅频响应波动的最大阈值-->
+			<ConstVariantDefine name="CompChekThres"  value="0.5"></ConstVariantDefine>
+			<!--==补偿前100MHz以内频响波动的最大阈值-->
+			<ConstVariantDefine name="InputChekThres"  value="4"></ConstVariantDefine>
+			<!--==绘图标致-->
+			<ConstVariantDefine name="FigureIllustrationSw"  value="OFF"></ConstVariantDefine>
+
+			<!--==阻抗循环==-->
+			<ForeachLoop StartIndex="0" Count="1">
+				<VarintDefine name="SourceIMPedanceSetting"  valuelist="50,1E6"></VarintDefine>
+				<VarintDefine name="BatchTaskIMPedanceSetting"  valuelist="LOW,HIGH"></VarintDefine>
+				<VarintDefine name="DsoIMPedanceOfALLSourceAPPLySetting"  valuelist="2,0"></VarintDefine>
+				<VarintDefine name="YScaleStart"  valuelist="0,3"></VarintDefine>
+				<VarintDefine name="YScaleCount"  valuelist="3,3"></VarintDefine>
+				<VarintDefine name="BWLStart"  valuelist="0,2"></VarintDefine>
+				<VarintDefine name="BWLCount"  valuelist="1,1"></VarintDefine>
+				<!--==带宽限制循环循环循环==-->	
+				<ForeachLoop StartIndex="@BWLStart@" Count="@BWLCount@">
+					<VarintDefine name="Bandwidth"  valuelist="FULL,1GHz,FULL,"></VarintDefine>
+
+					<!--==目标频响的曲线-->
+					<VarintDefine name="GoalResponseFileName"  valuelist="Response2_5G,Response1G,Response1G"></VarintDefine>
+					<!--==挡位循环循环==-->
+					<ForeachLoop StartIndex="@YScaleStart@" Count="@YScaleCount@">
+					<VarintDefine name="SourceAmpVoltByMv" valuelist="100,200,300,1100,200,800,1100,1100"></VarintDefine>
+					<VarintDefine name="inputLevelBymV"   valuelist="20,100,1000,50,500,1000,10000"></VarintDefine>
+					<!--==阻带频率（Hz）-->
+					<VarintDefine name="StopBandFreq"  valuelist="2.5e9,2.5e9,2.5e9,1.0e9,1.0e9,1.0e9,1.0e9"></VarintDefine>
+					<!--==通带频率（Hz）-->
+					<VarintDefine name="PassBandFreq"  valuelist="2.0e9,2.0e9,2.0e9,5e8,5e8,5e8,5e8"></VarintDefine>
+					<Command Description="通道@OpenChannel@ 交织模式：@InterleaveName@ 阻抗：@BatchTaskIMPedanceSetting@ 带宽限制：@Bandwidth@ 档位：@inputLevelBymV@生成AFC校准数据"
+						InstrumentationName="GHz_MSO7000X"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_GenerateCoefficientsParamsByCommonMatlabDLL MatLabDLLName=.\JiHe_MSO7000X\MatlabDLL\MatlabGenerateCoefficientsTable_AFC.dll,
+						CoefficientType=AFC,
+						Channel=CH@OpenChannel@,
+						SaveCoefficientFileName=TimeDomainAFCCoe_@CoeQuantiBit@Bit.txt,
+						SourceFiles_Path=AFCData\@BatchTaskIMPedanceSetting@_@Bandwidth@\@InterleaveName@_CH@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv,
+						SourceFilesFilterPrefixName=Data_,
+						DebugSaveFilePath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@_@Bandwidth@,
+						DebugSaveFilePrefixName=AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@Bandwidth@_@inputLevelBymV@Mv,
+						@InterleaveName@,
+						OtherParameter=@SamplingRate@ @MagCompOrder@ .\Resources\Merged@BatchTaskIMPedanceSetting@_@GoalResponseFileName@.txt @PassBandFreq@ @StopBandFreq@ @FFTEstimationLen@ @CoeQuantiBit@ @FFTCompLen@ @FreqGap@ @FitSmoothingParam_Mag@ @StepLen@ @TraingTimes@ @identifier_1st@ @identifier_2nd@ @identifier_1st_index@ @identifier_2nd_index@ @CompChekThres@ @InputChekThres@ @FigureIllustrationSw@"
+				    ></Command>
+					<Command Description="通道@OpenChannel@ 阻抗：@BatchTaskIMPedanceSetting@ 带宽限制：@Bandwidth@ 档位：@inputLevelBymV@ 发送AFC校准数据"
+						InstrumentationName="GHz_MSO7000X"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SendCoefficientParams 
+						CoefficientType=AFC,
+						CoeQuantiBit=0,
+						CoefficientKey=AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@Bandwidth@_@inputLevelBymV@Mv,
+						SaveCoefficientPath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@_@Bandwidth@,
+						SaveCoefficientPathAndFileName=TimeDomainAFCCoe.txt,
+						MagCompOrder=@MagCompOrder@,"
+				    ></Command>
+					<Command Description="通道@OpenChannel@ 阻抗：@BatchTaskIMPedanceSetting@ 带宽限制：@Bandwidth@ 档位：@inputLevelBymV@ 发送AFC校准数据"
+						InstrumentationName="GHz_MSO7000X"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SendCoefficientParams 
+						CoefficientType=AFC,
+						CoeQuantiBit=@CoeQuantiBit@,
+						CoefficientKey=AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@Bandwidth@_@inputLevelBymV@Mv,
+						SaveCoefficientPath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@_@Bandwidth@,
+						SaveCoefficientPathAndFileName=TimeDomainAFCCoe_@CoeQuantiBit@Bit.txt,
+						MagCompOrder=@MagCompOrder@,"
+				    ></Command>			
+				</ForeachLoop>
+				</ForeachLoop>
+			</ForeachLoop>
+		</ForeachLoop>	  
+    </Task>
+  	<Task Description="AFC1G系数生成" ImportanceTipMessage="该任务是通过程控来校准示波器的ADC平坦度校准。">
+		<ForeachLoop StartIndex="3" Count="3">
+			<VarintDefine name="OpenChannel"  		valuelist="1,1,1,2,2,2,3,3,3,4,4,4"></VarintDefine>
+			<VarintDefine name="InterleaveName"  	valuelist="C1_10G,C1C2_5G,All,C2_10G,C1C2_5G,All,C3_10G,C3C4_5G,All,C4_10G,C3C4_5G,All"></VarintDefine>
+			<!--==是采样率（单位Hz)-->
+			<VarintDefine name="SamplingRate"  valuelist="10e9,5e9,2.5e9,10e9,5e9,25e8,10e9,5e9,25e8,10e9,5e9,25e8"></VarintDefine>
+			<!--==幅频补偿滤波器的阶数阶数越大，补偿精度越高-->
+			<VarintDefine name="MagCompOrder"  valuelist="41,31,15,41,31,15,41,31,15,41,31,15"></VarintDefine>
+			<VarintDefine name="StopBandFreq"  valuelist="1.5e9,1.5e9,1.20e9,1.5e9,1.5e9,1.20e9,1.5e9,1.5e9,1.20e9,1.5e9,1.5e9,1.20e9"></VarintDefine>
+			<VarintDefine name="PassBandFreq"  valuelist="1.1e9,1.1e9,1.1e9,1.1e9,1.1e9,1.1e9,1.1e9,1.1e9,1.1e9,1.1e9,1.1e9,1.1e9"></VarintDefine>
+			<!--==补偿后幅频响应波动的最大阈值-->
+			<VarintDefine name="CompChekThres"  valuelist="0.5,0.5,0.6,0.5,0.5,0.6,0.5,0.5,0.6,0.5,0.5,0.6,"></VarintDefine>
+			<!--==目标频响的曲线-->
+			<VarintDefine name="GoalResponseFileName"  valuelist="Response1G,Response1G,ResponseEx1G,Response1G,Response1G,ResponseEx1G,Response1G,Response1G,ResponseEx1G,Response1G,Response1G,ResponseEx1G,"></VarintDefine>
+			<!--==频域补偿结构中的FFT点数-->
+			<ConstVariantDefine name="FFTCompLen"  value="2048"></ConstVariantDefine>
+			
+			<!--==FPGA中的系数量化位宽 -->
+			<ConstVariantDefine name="CoeQuantiBit" value="15"></ConstVariantDefine>
+			
+
+			<!--==FFT估计的长度-->
+			<ConstVariantDefine name="FFTEstimationLen"  value="5e3"></ConstVariantDefine>
+			
+			<!--==目标频响的频率间隔-->
+			<ConstVariantDefine name="FreqGap"  value="50e6"></ConstVariantDefine>
+			<!--==幅度拟合精度-->
+			<ConstVariantDefine name="FitSmoothingParam_Mag"  value="-"></ConstVariantDefine>
+			<!--==迭代的步长-->
+			<ConstVariantDefine name="StepLen"  value="-"></ConstVariantDefine>
+			<!--==迭代的次数-->
+			<ConstVariantDefine name="TraingTimes"  value="-"></ConstVariantDefine>
+			
+			<!--==第一个标识符-->
+			<ConstVariantDefine name="identifier_1st"  value="-"></ConstVariantDefine>
+			<!--==第二个标识符-->
+			<ConstVariantDefine name="identifier_2nd"  value="-"></ConstVariantDefine>
+			<!--==第一个标识符的索引-->
+			<ConstVariantDefine name="identifier_1st_index"  value="-"></ConstVariantDefine>
+			<!--==第二个标识符的索引-->
+			<ConstVariantDefine name="identifier_2nd_index"  value="-"></ConstVariantDefine>
+			<!--==补偿后幅频响应波动的最大阈值-->
+			<ConstVariantDefine name="CompChekThres"  value="0.5"></ConstVariantDefine>
+			<!--==补偿前100MHz以内频响波动的最大阈值-->
+			<ConstVariantDefine name="InputChekThres"  value="4"></ConstVariantDefine>
+			<!--==绘图标致-->
+			<ConstVariantDefine name="FigureIllustrationSw"  value="OFF"></ConstVariantDefine>
+			<!--==阻抗循环==-->
+			<ForeachLoop StartIndex="0" Count="1">
+				<VarintDefine name="SourceIMPedanceSetting"  valuelist="50,1E6"></VarintDefine>
+				<VarintDefine name="BatchTaskIMPedanceSetting"  valuelist="LOW,HIGH"></VarintDefine>
+				<VarintDefine name="DsoIMPedanceOfALLSourceAPPLySetting"  valuelist="2,0"></VarintDefine>
+				<VarintDefine name="YScaleStart"  valuelist="0,3"></VarintDefine>
+				<VarintDefine name="YScaleCount"  valuelist="3,3"></VarintDefine>
+				<VarintDefine name="BWLStart"  valuelist="1,2"></VarintDefine>
+				<VarintDefine name="BWLCount"  valuelist="1,1"></VarintDefine>
+				<!--==带宽限制循环循环循环==-->	
+				<ForeachLoop StartIndex="@BWLStart@" Count="@BWLCount@">
+					<VarintDefine name="Bandwidth"  valuelist="FULL,1GHz,FULL,"></VarintDefine>
+
+
+					<!--==挡位循环循环==-->
+					<ForeachLoop StartIndex="@YScaleStart@" Count="@YScaleCount@">
+					<VarintDefine name="SourceAmpVoltByMv" valuelist="100,200,300,1100,200,800,1100,1100"></VarintDefine>
+					<VarintDefine name="inputLevelBymV"   valuelist="20,100,1000,50,500,1000,10000"></VarintDefine>
+
+					<Command Description="通道@OpenChannel@ 交织模式：@InterleaveName@ 阻抗：@BatchTaskIMPedanceSetting@ 带宽限制：@Bandwidth@ 档位：@inputLevelBymV@生成AFC校准数据"
+						InstrumentationName="GHz_MSO7000X"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_GenerateCoefficientsParamsByCommonMatlabDLL MatLabDLLName=.\JiHe_MSO7000X\MatlabDLL\MatlabGenerateCoefficientsTable_AFC.dll,
+						CoefficientType=AFC,
+						Channel=CH@OpenChannel@,
+						SaveCoefficientFileName=TimeDomainAFCCoe_@CoeQuantiBit@Bit.txt,
+						SourceFiles_Path=AFCData\@BatchTaskIMPedanceSetting@_@Bandwidth@\@InterleaveName@_CH@OpenChannel@_@BatchTaskIMPedanceSetting@_@inputLevelBymV@Mv,
+						SourceFilesFilterPrefixName=Data_,
+						DebugSaveFilePath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@_@Bandwidth@,
+						DebugSaveFilePrefixName=AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@Bandwidth@_@inputLevelBymV@Mv,
+						@InterleaveName@,
+						OtherParameter=@SamplingRate@ @MagCompOrder@ .\Resources\Merged@BatchTaskIMPedanceSetting@_@GoalResponseFileName@.txt @PassBandFreq@ @StopBandFreq@ @FFTEstimationLen@ @CoeQuantiBit@ @FFTCompLen@ @FreqGap@ @FitSmoothingParam_Mag@ @StepLen@ @TraingTimes@ @identifier_1st@ @identifier_2nd@ @identifier_1st_index@ @identifier_2nd_index@ @CompChekThres@ @InputChekThres@ @FigureIllustrationSw@"
+				    ></Command>
+					<Command Description="通道@OpenChannel@ 阻抗：@BatchTaskIMPedanceSetting@ 带宽限制：@Bandwidth@ 档位：@inputLevelBymV@ 发送AFC校准数据"
+						InstrumentationName="GHz_MSO7000X"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SendCoefficientParams 
+						CoefficientType=AFC,
+						CoeQuantiBit=0,
+						CoefficientKey=AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@Bandwidth@_@inputLevelBymV@Mv,
+						SaveCoefficientPath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@_@Bandwidth@,
+						SaveCoefficientPathAndFileName=TimeDomainAFCCoe.txt,
+						MagCompOrder=@MagCompOrder@,"
+				    ></Command>		
+					<Command Description="通道@OpenChannel@ 阻抗：@BatchTaskIMPedanceSetting@ 带宽限制：@Bandwidth@ 档位：@inputLevelBymV@ 发送AFC校准数据"
+						InstrumentationName="GHz_MSO7000X"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SendCoefficientParams 
+						CoefficientType=AFC,
+						CoeQuantiBit=@CoeQuantiBit@,
+						CoefficientKey=AFC_@InterleaveName@_C@OpenChannel@_@BatchTaskIMPedanceSetting@_@Bandwidth@_@inputLevelBymV@Mv,
+						SaveCoefficientPath=CoefficientResult\Coefficient_@InterleaveName@_CH@OpenChannel@_@Bandwidth@,
+						SaveCoefficientPathAndFileName=TimeDomainAFCCoe_@CoeQuantiBit@Bit.txt,
+						MagCompOrder=@MagCompOrder@,"
+				    ></Command>						
+				</ForeachLoop>
+				</ForeachLoop>
+			</ForeachLoop>
+		</ForeachLoop>	  
+    </Task>
+	<Task Description="存储AFC频响系数" ImportanceTipMessage="该任务是通过程控来存储AFC频响系数">
+		<Command Description="保存校准数据" 
+			InstrumentationName="GHz_MSO7000X"
+			IsProgramFunc="true"
+			ProgramFuncName="BatchTaskPart_SaveCaliDataToFile CoefficientsParams"
+		></Command>
+	</Task>
+  </Tasks>
+</InstrumentationAutoControlSolution>

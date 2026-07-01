@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile Condition="'$(ProduceDocumentation)' == 'true' Or '$(Configuration)' == 'Release'">$(BinDir)\$(AssemblyName).xml</DocumentationFile>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <Configurations>Debug;Release;</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="build\**" />
+    <EmbeddedResource Remove="build\**" />
+    <None Remove="build\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NativeLibraryLoader\NativeLibraryLoader.csproj" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Resource Include="runtimes\win-x86\SDL2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="runtimes\osx-x64\libsdl2.dylib">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="runtimes\win-x64\SDL2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="runtimes\win-x86\SDL2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <Description>Raw SDL2 bindings for .NET. Used by Veldrid for window and input management.</Description>
+    <PackageTags>Core Standard Game SDL2 Window Input</PackageTags>
+  </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath)  $(SolutionDir)ShareDlls\Gpu\$(TargetName)$(TargetExt)" />
+  </Target>
+</Project>

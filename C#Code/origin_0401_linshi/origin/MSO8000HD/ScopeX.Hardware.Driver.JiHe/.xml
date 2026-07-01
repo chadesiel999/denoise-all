@@ -1,0 +1,1554 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ScopeX.Hardware</name>
+    </assembly>
+    <members>
+        <member name="T:ScopeX.Hardware.Cymometer">
+            <summary>
+            频率计
+            </summary>
+        </member>
+        <member name="T:ScopeX.Hardware.Cymometer.GateTime">
+            <summary>
+            闸门时间可选列表
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Cymometer.Reset(ScopeX.Hardware.Cymometer.GateTime)">
+            <summary>
+            复位
+            </summary>
+            <param name="gate"></param>
+        </member>
+        <member name="M:ScopeX.Hardware.Cymometer.GetFrequencyByHz(System.Int32)">
+            <summary>
+             读取以Hz为单位的频率数。
+            </summary>
+            <param name="whichChannel">如果存在多个频率计，则读取指定通道的频率计。-1表示触发通道</param>
+            <returns>如果读取失败，返回Double.NaN。以Hz为单位</returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Helper.FindTriggerVolt(System.Int32,System.Int32)">
+            <summary>
+            自动查找触发电平校准值。
+            </summary>
+            <param name="minTrigValue">开始扫描最小值。按16位表示的DAC数字</param>
+            <param name="maxTrigValue">结束扫描最大值。按16位表示的DAC数字</param>
+            <returns>按16位表示的DAC数字。为提高速度，低4位无用。</returns>
+        </member>
+        <member name="T:ScopeX.Hardware.Misc">
+            <summary>
+            杂项。
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Misc.SwitchDigitTrigger(System.Boolean)">
+            <summary>
+            切换数字触发
+            </summary>
+            <param name="bOpen"></param>
+        </member>
+        <member name="M:ScopeX.Hardware.Temperaturer.ReadByCentigrade(System.Int32)">
+            <summary>
+             读取以摄氏度为单位的温度传感器数据。
+            </summary>
+            <param name="whichSensor">第几个传感器，目前只有一个。</param>
+            <returns></returns>
+        </member>
+        <member name="T:ScopeX.Hardware.Hd">
+            <summary>
+            1、开机调用顺序为：Open，Initialize，AutoCaliPowerOn。程序退出时，要调用Close.
+            2、硬件响应及要数，必须在同一个线程中。
+            3、本DLL是基于 非独立PCIE模式。整个工程FPGA分为Acquire FPGA,Process FPGA[K7],PCIE[K7] FPGA 。共3个FPGA工程块。
+            4、本DLL适用于XXXX 型号工程。
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Hd.Open(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            打开硬件
+            </summary>
+            <param name="deviceInfo">PCIE通信没有用到，为Usb等通信预留。目前没有使用，可填任意值</param>
+            <param name="attachHardware">使用真实硬件还是模拟硬件。模拟硬件只能产生模拟波形，其他的读入数皆为0.缺省为true</param>
+            <param name="isPrintDebugInformation">目前没有使用，缺省为false</param>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Hd.Close">
+            <summary>
+            退出程序前，必须调用。
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Hd.Initialize">
+            <summary>
+            硬件系统基本初始化。执行此操作后，硬件处于缺省的正确的工作状态。系统上电时执行一次
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Hd.AutoCaliPowerOn(ScopeX.Interaction.DataModel.HdMessage)">
+            <summary>
+            执行上电后的自动校准。是否执行由调用者决定。
+            </summary>
+            <param name="hdMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Hd.Execute(System.UInt64,ScopeX.Interaction.DataModel.HdMessage)">
+            <summary>
+            硬件响应。
+            </summary>
+            <param name="commands">通过占位表达的需要执行的命令表</param>
+            <param name="hdMessage">系统参数</param>
+            <returns>是否执行过新的硬件命令</returns>
+        </member>
+        <member name="F:ScopeX.Hardware.Hd.Cymometer">
+            <summary>`
+            频率计
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Hd.WaveSource">
+            <summary>
+            波形获取器
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Hd.Temperaturer">
+            <summary>
+            温度传感器
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Hd.Decoder">
+            <summary>
+            解码器
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Hd.TestFunc">
+            <summary>
+            测试用的函数，在正式代码中应该删除，同时，测试通过后需要正式使用的，要移除此函数，并写入正式代码。因为该函数可能不被调用。
+            </summary>
+        </member>
+        <member name="T:ScopeX.Hardware.Module.Decoder">
+            <summary>
+            解码
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Module.DigitTrigger.ConfigFifoStageDepth">
+            <summary>
+            采集Fifo阶段的深度
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Module.DigitTrigger.ConfigDgtParameter">
+            <summary>
+            配置数字触发相关参数。如丢点数，搜索宽度等。
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Module.DigitTrigger.SwitchDgtStatus(System.Boolean)">
+            <summary>
+            开关数字触发
+            </summary>
+            <param name="bOpen"></param>
+        </member>
+        <member name="T:ScopeX.Hardware.Module.SimulationChannel">
+            <summary>
+            模拟通道
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Module.SimulationChannel.SimulationChannelBitControl">
+            <summary>
+            模拟通道位控
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Module.SimulationChannel.SendDataTo5668(System.Int16,System.UInt32,System.UInt32)">
+            <summary>
+            Offset,Bias,Trigger Volt等DAC控制
+            </summary>
+            <param name="DAC_Select"></param>
+            <param name="Port"></param>
+            <param name="Data"></param>
+        </member>
+        <member name="M:ScopeX.Hardware.Module.SimulationChannel.SendCmdTo43703(System.Int16,System.UInt32)">
+            <summary>
+            //增益粗调
+            </summary>
+            <param name="iChannel"></param>
+            <param name="Gain"></param>
+        </member>
+        <member name="T:ScopeX.Hardware.Module.SimulationTrigger">
+            <summary>
+            模拟触发
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.ModuleBasics.Dpx_Init">
+            <summary>
+            初始化模块,完成颜色表的下发,手动校准数据的发送.
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.ModuleBasics.Dpx_AdjustDrawMode">
+            <summary>
+            改变矢量还是点显示方式
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.ModuleBasics.Dpx_Enable">
+            <summary>
+            Dpx开关
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.ModuleBasics.Dpx_AdjustIntensity">
+            <summary>
+            调整波形亮度
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.AcqBd.Init">
+            <summary>
+            完成基本配置
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.AcqBd.Test">
+            <summary>
+            板内测试
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.PcieBd.Init">
+            <summary>
+            完成基本配置
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.PcieBd.Test">
+            <summary>
+            板内测试
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.ProcBd.Init">
+            <summary>
+            完成基本配置
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.ProcBd.Test">
+            <summary>
+            板内测试
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.AdcConfig_CS">
+            <summary>
+            ADC配置SPI片选[write]
+            同时控制两片ADC，状态有效,1选中，0不选中。bit1=ADC1,0=ADC0
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:ScopeX.Hardware.AcqBdReg.AdcConfig_DataCmdL8" -->
+        <!-- Badly formed XML comment ignored for member "F:ScopeX.Hardware.AcqBdReg.AdcConfig_DataCmdH16" -->
+        <member name="F:ScopeX.Hardware.AcqBdReg.AdcConfig_ConfigEnable">
+            <summary>
+            ADC配置SPI使能[write]
+            同时控制两片ADC。先发送数据，然后对应位拉高。见原有代码SendCmdToLMX2595
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.AdcConfig_PowerCtrl">
+            <summary>
+            ADC5200掉电模式[write]
+            同时控制两片ADC，每片占1位，1=掉电，0=上电
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.AdcConfig_Jesd204bReset">
+            <summary>
+            jesd204b数据接收核复位[write]
+            同时控制所有jesd核复位，1有效
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.AdcConfig_ReadBackData">
+            <summary>
+            ADC_SPI_回读数据[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_7044Data_L16">
+            <summary>
+            7044_SPI_Data低16位[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_7044Data_H8">
+            <summary>
+            7044_SPI_Data高8位[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_7044Data_Effect">
+            <summary>
+            7044_SPI_写使能[write]
+            7044写使能，写0-1触发一次读写
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_7044Sync">
+            <summary>
+            7044_控制_同步[write]
+            7044 sync同步引脚 写0-1-0触发一次锁相环同步
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_7044Reset">
+            <summary>
+            7044_控制_复位[write]
+            044复位 写0-1-0 进行一次复位，初始化前复位一次
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_LMK00304Config1">
+            <summary>
+            时钟一驱多lmk00304_1[write]
+            lmk00304配置（电路中U21）只写一次	。写9
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_LMK00304Config2">
+            <summary>
+            时钟一驱多lmk00304_2[write]
+            lmk00304配置（电路中U21）只写一次	。写1
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_HMC7044_SpiReadBackData">
+            <summary>
+            锁相环HMC7044回读数据[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_LMX2595A_SpiReadBackData">
+            <summary>
+            {LMX2595A_SPI_read}[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_LMX2595B_SpiReadBackData">
+            <summary>
+            {LMX2595B_SPI_read}[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.PLL_AllPllLockFlag">
+            <summary>
+            fpga_pll_locked[read]
+            1:表示fpga主时钟锁定
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.AcqSync_IDelayLockFlag">
+            <summary>
+            idelay_locked[read]
+            bit0=锁定
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.AcqSync_IDelayResetCount">
+            <summary>
+            idelay_RST_CNTVALUEOUT[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.AcqSync_IDelayReadEnableCount">
+            <summary>
+            idelay_REN_CNTVALUEOUT[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.AcqSync_IDelayWriteEnableCount">
+            <summary>
+            idelay_WEN_CNTVALUEOUT[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.FifoCtrl_FifoCountReadEnable">
+            <summary>
+            fifo_cnt回读使能[write]
+            写0-1触发一次回读
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.FifoCtrl_FifoFullFlag">
+            <summary>
+            fifo编程满标志[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.FifoCtrl_FifoDataCnt">
+            <summary>
+            fifo_block数据量回读数据[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.AcqMode">
+            <summary>
+            采样模式设置[write]
+            00: GROUP A(double ch  10G),10: GROUP B(single ch1 20G),11: GROUP C(single ch2 20G)
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.DataTxProcBd_CLK_RESET">
+            <summary>
+            传输处理板模块复位CLK_RESET[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.AcqBdReg.DataTxProcBd_IO_RESET">
+            <summary>
+            传输处理板模块复位Data_Tx_IO_RESET[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PLL_7044WriteData_L16">
+            <summary>
+            PLL 7044 设置数据[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PLL_7044WriteDataEnable">
+            <summary>
+            PLL 7044设置数据使能[write]
+            先设置0，传输数据，然后拉高
+            拉高，数据生效。[todo....需要多长的时间]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PLL_7043WriteData_L16">
+            <summary>
+            PLL 7043 设置数据[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PLL_7043WriteDataEnable">
+            <summary>
+            PLL 7043设置数据使能[write]
+            先设置0，传输数据，然后拉高
+            拉高，数据生效。[todo....需要多长的时间]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PLL_Sync">
+            <summary>
+            PLL 同步[write]
+            上升沿有效
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PLL_7044Reset">
+            <summary>
+            PLL 7044 复位[write]
+            上升沿有效
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PLL_7043Reset">
+            <summary>
+            PLL 7043 复位[write]
+            上升沿有效
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PLL_ReservedCtrl">
+            <summary>
+            PLL 保留控制[write]
+            3位，位控。[todo....值怎么设置]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.DMA_ReadTotalBytes">
+            <summary>
+            DMA读数长度。[write]
+            在每次DMA读之前，先发送，因为其他地方可能修改了此值。
+            字节数，需为XXX的整数倍。需要根据业务情况而设置。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.DMA_WriteTotalBytes">
+            <summary>
+            DMA写数长度[write]
+            在每次DMA写之前，先发送，因为其他地方可能修改了此值。
+            字节数，需为XXX的整数倍。需要根据业务情况而设置。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.DMA_ReadFrom">
+            <summary>
+            DMA读数据的来源控制。[write]
+            在每次DMA读之前，先发送，因为其他地方可能修改了此值。
+            需要根据业务情况而设置。目前只有0和1选择，其中0表示读采集板的数据，1表示读DPO的数据
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.AnalogCh_4094_TransStart">
+            <summary>
+            4094传输开始[write]
+            使能后将传给4094的40位数据传递给通道板的单片机
+            延时要满足通过SPI将40位的数据传输完毕，与传输该数据的SPI的Clock有关。
+            先发送40位的数据给FPGA，然后拉高，延时足够的时间，然后拉低。为上升沿有效。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.AnalogCh_4094Data_L32">
+            <summary>
+            4094数据低32位[write]
+            使能后将传给4094的44位数据 之低32位
+            位控，请参照通道相关文档。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.AnalogCh_4094Data_H12">
+            <summary>
+            4094数据高12位[write]
+            使能后将传给4094的40位数据 之高12位
+            位控，请参照通道相关文档。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.AnalogCh_DAC_Sel">
+            <summary>
+            DAC选择[write]
+            不同DAC的选择,同时还需要配置不同的端口，参见原SendDataTo5668函数
+            偏值电压、基线移动、参考电平、等模拟触发电平需要选择不同的DAC。
+            0:
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.AnalogCh_DAC_TransStart">
+            <summary>
+            DAC数据传输开始[write]
+            启动从FPGA到通道单片机的DAC数据传输。使用SPI传输。
+            上升沿开始传输。然后根据SPI的传输速度传输32位数据等待狙狗的时间，然后拉低。需要与DAC_Enable_CS一起联动。
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:ScopeX.Hardware.PcieReg.AnalogCh_DAC_ConfigData" -->
+        <member name="F:ScopeX.Hardware.PcieReg.AnalogCh_DAC_Enable_CS">
+            <summary>
+            DAC片选[write]
+            DAC片选。由于有多片DAC，故传输数据时，需要片选，该控制是确定片选使能。
+            在启动FPGA端数据传输到通道单片机之前，片选使能拉高。传输完成后拉低。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.AnalogCh_VAG_Sel">
+            <summary>
+            粗调控制字通道选择[write]
+            粗调增益控制字发送的控制。按位表示哪个通道。0表示没有通道。
+            先发送粗调增益控制字的值（VGA_Data）,然后通过该寄存器发送哪个通道。延时。最后置0.
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.AnalogCh_VAG_Data">
+            <summary>
+            粗调控制字值[write]
+            粗调增益控制字发送的控制。按位表示哪个通道。0表示没有通道。
+            先发送粗调增益控制字的值（VGA_Data）,然后通过该寄存器发送哪个通道。延时。最后置0.
+            0=无通道，1=通道1,2=通道2,4=通道3,8=通道4.以0开始的通道0,1左移。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.Temperature_Reset">
+            <summary>
+            温度传感器读数复位[write]
+            目前看起来是温度传感器复位用 。
+            上升沿有效。在读取温度数据前，先做复位处理。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.Temperature_Data">
+            <summary>
+            温度传感器读数[read]
+            右移8位后的值表示十分之一摄氏为单位的个数。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.Pcie_DPX_ActiveChannel">
+            <summary>
+            DPO的顶层通道和激活通道设置
+            高3位表示显示在最上层的通道,001 CH1 010 CH2 011 CH3 100 CH4 000:显示优先级CH1-CH4依次降低 低4位表示激活的通道 0001:CH1 0010:CH2 0100 CH3 1000 CH4
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.Pcie_DPX_Enable">
+            <summary>
+            DPX使能[write]
+            只有1位的状态控制。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.Pcie_DPX_TestWave">
+            <summary>
+            是否使用DPX测试波形[write]
+            只有1位的状态控制。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PcieFifo_RD_Num">
+            <summary>
+            FIFO读数据量[write]
+            软件读处理板每个FIFO的数据量
+            需要根据不同的FIFO深度配置，其含义应该为。。。。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PcieFifo_ProgDepth">
+            <summary>
+            PRO FIFO可编程满(发送至处理板)[write]
+            [todo....什么用途，该如何取值]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PcieFifo_FifoReset">
+            <summary>
+            Reset[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PcieFifo_Full">
+            <summary>
+            DMA FIFO是否满[read]
+            只有1位的状态。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.ProcBoard_Power">
+            <summary>
+            处理板上电[write]
+            处理板上电
+            上电后可能需要一定的时间。所以，可以读取处理板上的一个固定寄存器，上电后返回固定的值。据此判断已经上电，就不需要再等待时间了。
+            0x55上电。上电后可能需要一定的时间。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PCIE_DataSource">
+            <summary>
+            PCIE数据源选择[write]
+            PCIE数据源选择，测试用。
+            0=正常数据，1：PCIE测试数据
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.SysResetFromPcie">
+            <summary>
+            系统复位[write]
+            从PCIE板发出的系统复位
+            上升沿有效
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.PcieReg.PCIE_Channel_Mode">
+            <summary>
+            PCIE_Channel_Mode[write]
+            [todo....什么用途，该如何取值]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_SetupHold_Edge">
+            <summary>
+            建立抑或保持和边沿设置[write]
+            3bit,位控.bit2bit1=edge,01=Rise,00=fall;bit0=setup_hold,Setup=0,hold=1
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_SetupHold_WidthL16">
+            <summary>
+            建立保持触发_宽度设置低16位[write]
+            以3.2ns为单位的时间数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_PluseWidth_PWCount_L16">
+            <summary>
+            脉宽数低16位[write]
+            以3.2ns为单位的脉宽时间数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_PluseWidth_PWCount_M16">
+            <summary>
+            脉宽数中16位[write]
+            以3.2ns为单位的脉宽时间数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_PluseWidth_PWCount_H1">
+            <summary>
+            脉宽数高1位[write]
+            以3.2ns为单位的脉宽时间数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_PluseWidth_Polarity">
+            <summary>
+            极性[write]
+            0=Positive,1=Negative
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_PluseWidth_Condition">
+            <summary>
+            脉宽触发_比较运算[write]
+            2bit,枚举值:0=GreaterThan,1=LessThan,2=Equal,3=NotEqual,
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Code_Condition">
+            <summary>
+            码型触发_条件[write]
+            [todo...见PutTSysPattern函数，感觉有问题]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Code_TimeCondition">
+            <summary>
+            码型触发_时间条件[write]
+            3bit,枚举值:Begin=End=0,InsideRange=1,OutsideRange=2,Continue=3,NotEqual=4
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Code_TimeWidth_L16">
+            <summary>
+            码型触发_时间宽度之低16位[write]
+            以3.2ns为单位的脉宽时间数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Code_TimeWidth_H16">
+            <summary>
+            码型触发_时间宽度之高16位[write]
+            以3.2ns为单位的脉宽时间数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Interval_Condition">
+            <summary>
+            间隔触发_条件[write]
+            0=GreaterThan,1=LessThan,2=Equal,3=NotEqual
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Interval_Width_L16">
+            <summary>
+            间隔触发_时间宽度低16位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Interval_Width_M16">
+            <summary>
+            间隔触发_时间宽度中16位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Interval_Width_H1">
+            <summary>
+            间隔触发_时间宽度高1位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Interval_Polarity">
+            <summary>
+            极性设置[write]
+            0=Rise,1=Fall
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Dropout_Edge">
+            <summary>
+            跌落触发_边沿设置[write]
+            fall=0,Rise=1,
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Dropout_Polarity">
+            <summary>
+            跌落触发_极性设置[write]
+            fall=0,Rise=1[todo...从现有的软件来看，与0x88F8 Dropout_Edge 一致，为什么还需要?]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Dropout_Dropout_Width_L15">
+            <summary>
+            跌落触发_时间宽度低16位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Dropout_Width_M15">
+            <summary>
+            跌落触发_时间宽度中16位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Dropout_Width_H1">
+            <summary>
+            跌落触发_时间宽度高1位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Runt_PolarityAndCondition">
+            <summary>
+            欠幅触发_极性及条件[write]
+            共3位,其中bit2=极性,1=Positive,0=Negative;bit1bit0=条件,0=NotEqual,1=LessThan,2=GreaterThan,3=Equal
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Runt_Width_L16">
+            <summary>
+            欠幅触发_时间宽度设置低16位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Runt_Width_M16">
+            <summary>
+            欠幅触发_时间宽度设置中16位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Runt_Width_H1">
+            <summary>
+            欠幅触发_时间宽度设置高1位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Slope_DirAndCondition">
+            <summary>
+            斜率触发_斜率方向和比较运算[write]
+            3位,bit2=斜率方向,0=Rise,1=Fall;bit1bit0=比较运算,0=GreaterThan,1=LessThan,2=Equal,3=NotEqual,
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Slope_Width_L16">
+            <summary>
+            斜率触发_时间宽度设置低16位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Slope_Width_M16">
+            <summary>
+            斜率触发_时间宽度设置中16位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Slope_Width_H1">
+            <summary>
+            斜率触发_时间宽度设置高1位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Glitch_Condition">
+            <summary>
+            毛刺触发_比较运算[write]
+            1位,LessThan=0,Equal=1
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Glitch_Width_L16">
+            <summary>
+            毛刺触发_时间宽度设置低16位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Glitch_Width_M16">
+            <summary>
+            毛刺触发_时间宽度设置中16位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Glitch_Width_H1">
+            <summary>
+            毛刺触发_时间宽度设置高1位[write]
+            时间宽度以3.2ns为单位的数值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Glitch_Polarity">
+            <summary>
+            极性设置[write]
+            0=Rise,1=Fall
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Timeout_Edge">
+            <summary>
+            超时触发_Edge设置[write]
+            2bit,枚举，0=Fall,1=Rise
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Timeout_WidthL16">
+            <summary>
+            超时触发_宽度设置低16位[write]
+            以3.2ns为单位的时间数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_MultiStage_EdgeA">
+            <summary>
+            级联触发_边沿A[write]
+            Rise=0,Fall=1
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_MultiStage_EdgeB">
+            <summary>
+            级联触发_边沿B[write]
+            Rise=0,Fall=1
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_MultiStage_TimeL16">
+            <summary>
+            级联触发_时间L16[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_MultiStage_EventL16">
+            <summary>
+            级联触发_EventL16[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_MultiStage_Type">
+            <summary>
+            级联触发_DelayType[write]
+            0=Time,1=Event
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_Level_L">
+            <summary>
+            数字触发电平之低电平[write]
+            触发电平折算为ADC量化值减去触发灵敏度(也是以ADC的量化数为基准的)
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_Level_H">
+            <summary>
+            数字触发电平之高电平[write]
+            触发电平折算为ADC量化值减去触发灵敏度(也是以ADC的量化数为基准的)
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_AutoNum">
+            <summary>
+            AutoNum[write]
+            [todo...什么含义，值如何取？]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_PosDepth_L16">
+            <summary>
+            后触发深度之低16位[write]
+            后触发时间以3.2ns为单位的个数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_PosDepth_M16">
+            <summary>
+            后触发深度之中16位[write]
+            后触发时间以3.2ns为单位的个数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_PosDepth_H16">
+            <summary>
+            后触发深度之高16位[write]
+            后触发时间以3.2ns为单位的个数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_DGT_LATrigSel">
+            <summary>
+            LA触发选中_数字触发源[write]
+            0=触发源是物理通道，1=触发源不是物理通道.数字数字触发源时设置
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_Source">
+            <summary>
+            数字触发_触发源选择[write]
+            4个模拟通道，分别为0,1,2,3
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_PreDepthL16">
+            <summary>
+            数字触发_预触发深度低16位[write]
+            理论上位预触发位置(屏幕位置) * 软件抽点数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_Enable">
+            <summary>
+            数字触发_使能[write]
+            1位状态值。1=enable,0=disable
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_Edge">
+            <summary>
+            数字触发之边沿选择[write]
+            0=Riase,1=Fall [todo...与0x8ab4 有什么差别]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_DGT_TrigedPositon">
+            <summary>
+            数字触发位置[read]
+            [todo...数值的含义是什么？？]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Ctrl">
+            <summary>
+            触发控制[write]
+            [todo....值含义]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Mode">
+            <summary>
+            触发模式设置[write]
+            设置 自动、正常、单次触发
+            1=Auto,0=normal,2=oneShot
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_PreDepth_1_16">
+            <summary>
+            预触发深度设置低16位[write]
+            最大44位表示的数。
+            其值得含义为
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_PreDepth_2_16">
+            <summary>
+            预触发深度设置中16位[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_PreDepth_3_12">
+            <summary>
+            预触发深度设置高剩余位[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Force">
+            <summary>
+            强制触发[write]
+            置1强制触发一次。之后应该置0
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Holdoff_L16">
+            <summary>
+            触发释抑的低16位数[write]
+            参见现有的代码，并补齐说明
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Type">
+            <summary>
+            触发类型控制[write]
+            参见现有的代码，并补齐说明
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_FreqDivideSet">
+            <summary>
+            触发分频控制[write]
+            1=分频，0=不分频
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_ClockSource">
+            <summary>
+            触发时钟源选择[write]
+            参照12bit源代码中的AdjSource()函数，看起来还不完整
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Trig_State_CtrlWord">
+            <summary>
+            状态触发控制字[write]
+            [toto......具体什么含义，其值怎么设置，需进一步明确]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_XPosCorrectNum">
+            <summary>
+            触发位置修正数[write]
+            [todo...该寄存器似乎是不理想设计的。是否有存在的必要。]
+            其值如何确定
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_XPosCorrect_Enable">
+            <summary>
+            触发位置修正_使能[write]
+            [todo...该寄存器似乎是不理想设计的。是否有存在的必要。]
+            什么情况下使能。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Holdoff_H16">
+            <summary>
+            触发释抑的高16位数[write]
+            参见现有的代码，并补齐说明
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_Edge">
+            <summary>
+            边沿[write]
+            Rise=1,Fall=0
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Trig_AutoCaliCompareResult">
+            <summary>
+            自动触发电平校准时的FPGA端比较结果[read]
+            2bit,[todo...值的含义???]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.DPX_ExtractNum">
+            <summary>
+            DPX软件抽点数[write]
+            构造DPX数据库时，从FIFO数据中的抽点数，与软件抽点数一致。
+            从0开始计数，也就是实际抽点数-1
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.DPX_DiscardNum">
+            <summary>
+            DPX丢点数[write]
+            构造DPX数据库时，从FIFO数据中的丢点数
+            需要根据屏幕显示确定，其计算方式需要说明
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.DPX_Enable">
+            <summary>
+            DPX_Enable[write]
+            是否打开DPX功能
+            目前的逻辑不清楚[todo...]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.DPX_Pause">
+            <summary>
+            DPX_暂停映射[write]
+            软件端读取DPX数据时，需要先暂停映射
+            1位状态型，1=暂停映射，0=持续映射
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.DPX_DotVoctorMode">
+            <summary>
+            DPX_DrawDotorVectorMode[write]
+            DPX 点线模式
+            1位，0=点，1=矢量[todo...下面一行，代表了同时用于其他用途]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.DPX_InitAddress_L">
+            <summary>
+            DPX_Init Address 低16位[write]
+            调整DPX 图形的位置。与FPGA的编译和算法有关，为一个固定值，只能手动调整。
+            [todo...描述如何根据屏幕波形的显示计算出该值]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.DPX_InitAddress_H">
+            <summary>
+            DPX_Init Address 高2位[write]
+            [todo...描述如何根据屏幕波形的显示计算出该值]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.DCM_ResetFirst">
+            <summary>
+            DCM第一级复位[write]
+            0 -> 0x04 时复位
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.DCM_ResetOther">
+            <summary>
+            DCM其他复位[write]
+            0 ->0xFB 时复位
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_Ave_ARM_StartAddr">
+            <summary>
+            平均处理_RAM初始地址[write]
+            目前设置的是0
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_Ave_DiacardNum">
+            <summary>
+            平均处理_读时丢点数[write]
+            目前设置的是0
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_Ave_RAM_EndAddr">
+            <summary>
+            平均处理_RAM结束地址[write]
+            [todo....值的含义是什么，怎么计算]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_Ave_Mode">
+            <summary>
+            平均处理_Mode[write]
+            [todo....含义是什么，怎么设置]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_Ave_Reset">
+            <summary>
+            平均处理_复位[write]
+            拉高复位。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_Scan_DataCount">
+            <summary>
+            可读数据个数[read]
+            最大数为？？？
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_Scan_Ch1Data">
+            <summary>
+            每个通道一次读取1个数据[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_ChannelMode">
+            <summary>
+            拼合模式[write]
+            4为表示的值模式。[todo...值怎么约定的]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_FifoReadCountL16">
+            <summary>
+            处理板读FIFO数据量低16位[write]
+            [todo...值的含义是什么，怎么确定值的多少]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_FifoReadCountH4">
+            <summary>
+            处理板读FIFO数据量高4位[write]
+            [todo...值的含义是什么，怎么确定值的多少]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_RXIO_Reset">
+            <summary>
+            源同步数据接收IO复位[write]
+            [todo...从现有的代码来看，只在上电时做一次，有意义吗？]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_FifoDepth">
+            <summary>
+            处理板Fifo深度[write]
+            [todo...值的含义是什么，怎么确定值的多少]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_ScanEnable">
+            <summary>
+            处理板Scan使能[write]
+            状态型1=Enable,0=关闭。在Scan初始化中打开。在其他初始化中需要关闭。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_TxIO_Reset">
+            <summary>
+            PRO 发送数据IO复位[write]
+            [todo...该寄存器的用途是什么？]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_TxLength_L16">
+            <summary>
+            PRO数据传输长度低16位[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_Extact5_Enable">
+            <summary>
+            处理板5倍抽取使能[write]
+            拉高复位
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_ExtractNum">
+            <summary>
+            采集板抽点数[write]
+            时机抽取数-1[todo....目前还需要吗？处理板的抽取设计是怎么样的？？？与Extract5是什么关系，与采集板的抽取关系是什么？]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProAcq_TrigState">
+            <summary>
+            读取触发状态[read]
+            bit3,bit0=ready,bit1=trigged,bit2=auto
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Interp_SampleMode">
+            <summary>
+            插值模式[write]
+            [todo...值怎么约定的]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Interp_FactorDataReset">
+            <summary>
+            插值系数传输地址复位[write]
+            插值数据传输给FPGA的处理。首先进行复位，然后传输每个系数（先传索引号，高低位数据，然后让数据生效。
+            拉高复位
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Interp_FactorDataEffect">
+            <summary>
+            插值系数传输数据生效[write]
+            拉高
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Interp_FactorDataAddress">
+            <summary>
+            插值系数索性号[write]
+            从0开始的连续整数
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Interp_FactorData_L16">
+            <summary>
+            插值系数值（共17位，分两个寄存器)[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Interp_TrigSource">
+            <summary>
+            插值模式下的触发源设置[write]
+            0=ch1,1=ch2，2=ch3,3=ch4 [todo...为什么要单独列出，与模拟触发源有什么不同吗？]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Interp_TrigEdgeType">
+            <summary>
+            插值模式下的触发边沿设置[write]
+            0=上升沿，1=下降沿 [todo...为什么要单独列出，与模拟触发有什么不同吗？]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Interp_TrigSerachPosStart">
+            <summary>
+            插值模式下的触发搜索开始位置[write]
+            [todo...值的含义是什么，怎么确定值的多少]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Interp_TrigSerachPosEnd">
+            <summary>
+            插值模式下的触发搜索结束位置[write]
+            [todo...值的含义是什么，怎么确定值的多少]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.FreComp_Enable">
+            <summary>
+            频域补偿使能[write]
+            0=关闭，1=打开
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.FreComp_Ch1FilterCoeff_Reset">
+            <summary>
+            Ch1系数表复位[write]
+            从电脑端传输频域补偿系数到FPGA端。其流程为：复位系数表，依次传输每个数据[关使能，传输系数，开写使能]。
+            边沿有效，拉高复位[todo...该控制方式似乎需改进，第一速度慢，第二写需延时未知]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.FreComp_Ch1FilterCoeff_WtiteEnable">
+            <summary>
+            Ch1系数表写使能[write]
+            1位拉高写
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.FreComp_Ch1FactorIndex">
+            <summary>
+            Ch1系数表索引号[write]
+            从0开始的连续整数。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.FreComp_Ch1FilterCoeffL16">
+            <summary>
+            Ch1系数表系数L16[write]
+            对应索性处系数的低16位
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.FreComp_Ch1FilterCoeffH1">
+            <summary>
+            Ch1系数表系数H1[write]
+            对应索性处系数的高1位
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_ProtocolType">
+            <summary>
+            解码_类型[write]
+            5位,枚举值:0=Close,1=RS232,2=I2C,3=SPI,4=USB,5=CAN,6=LIN,7=FlexRay,8=MIL,9=I2S,10=NRZ,11=Manchester,12=ARINC429,13=SENT,14=DigRF_3G,15=DigRF_V4,16=D_PHY,18=MDIO,20=PCIe[与枚举定义不一样],21=Sata[与枚举定义不一样],
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_RAMReadChannelSelect">
+            <summary>
+            读取数据通道选择[write]
+            [todo...需要说明。目前好像没有什么用处]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_CtrlWordPurpose">
+            <summary>
+            解码_控制字用途[write]
+            1位,1=trigger,0=decode,当decode选择close时，发送1，否则发送0
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_Bus1">
+            <summary>
+            解码_解码通道[write]
+            与Bus2一起配置.第一个解码通道时,Bus2=0,Bus1=1,sleep(1),Bus1=0;第二个解码通道时,Bus1=0,Bus2=1,sleep(1),Bus2=0
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_Bus2">
+            <summary>
+            解码_解码通道[write]
+            与Bus1一起配置.第一个解码通道时,Bus2=0,Bus1=1,sleep(1),Bus1=0;第二个解码通道时,Bus1=0,Bus2=1,sleep(1),Bus2=0
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_Source_L16">
+            <summary>
+            解码_数据源选择低16位[write]
+            两个源各占5位。模拟通道从1开始，逻辑通道从6开始。第二个源占高5位
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_Source_H14">
+            <summary>
+            解码_数据源选择低高14位[write]
+            两个源各占5位。模拟通道从1开始，逻辑通道从6开始。第二个源占高5位。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_ResetRAM">
+            <summary>
+            解码_读完数据后复位[write]
+            执行一次read ram后，需要对RAM复位，上升沿复位。延迟1ms
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_ResetAfterConfig">
+            <summary>
+            解码_配置完解码数据后进行复位[write]
+            配置完解码数据后进行复位，上升沿复位。延迟1ms
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_RAM_WriteEnable">
+            <summary>
+            解码_设置RAM写使能[write]
+            读取RAM数据前，关闭写使能（置为0），读完之后，打开写使能（置为1）
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_RAM_ReadEnable">
+            <summary>
+            解码_设置RAM读使能[write]
+            读取RAM数据前，打开读使能（置为1），读完之后，关闭读使能（置为0），在Decode DMA数据读取时操作
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_RAM_ReadStartAddress">
+            <summary>
+            解码_设置RAM读开始地址[write]
+            目前看起来，是在DecodeInit中设置为0的。从这个角度看，似乎没有意义。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_RAM_PreTrigDepth">
+            <summary>
+            解码_设置RAM预触发深度[write]
+            当前预触发位置对应RAM大小中的位置。DecodePackageQueueBase.DECODE_BUF_SIZE * Acquire.Default.XPhySys.Position / GRID_WIDTH
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_SetTrigCondition1">
+            <summary>
+            解码_设置触发条件等[write]
+            设置触发条件。不同的协议值约定不一样。需要与具体的每个协议对接。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_SetTrigCondition2">
+            <summary>
+            解码_设置触发条件等[write]
+            设置触发条件。不同的协议值约定不一样。需要与具体的每个协议对接。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_SetTrigCondition3">
+            <summary>
+            解码_设置触发条件等[write]
+            设置触发条件。不同的协议值约定不一样。需要与具体的每个协议对接。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_SetSpecialData1L16">
+            <summary>
+            解码_设置解码特殊数据[write]
+            不同的协议值约定不一样。需要与具体的每个协议对接。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_SetSpecialData1H16">
+            <summary>
+            解码_设置解码特殊数据[write]
+            不同的协议值约定不一样。需要与具体的每个协议对接。
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_RAM_Sel">
+            <summary>
+            解码_RAM选择[write]
+            [todo....从现有代码中看不出有何意义]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_ChannelSelect">
+            <summary>
+            通道选择[write]
+            从目前的代码来看,Sata和PCIE 应该是指为0，其他设置为1.[todo....有什么讲究，或者改寄存器的含义还需要准确定义]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_Fifo_RAM_Select">
+            <summary>
+            FIFO RAM 选择[write]
+            从目前的代码来看,其设置有些混乱.[todo....有什么讲究，或者改寄存器的含义还需要准确定义]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_IsPcieOrStat">
+            <summary>
+            是否是Pcie或Stat协议[write]
+            [todo....有什么讲究，或者改寄存器的含义还需要准确定义]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_TrigAddr_D1">
+            <summary>
+            解码器1的触发地址[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_D1_RD_StartAddr">
+            <summary>
+            解码器1的读首地址[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_D1_RD_EndAddr">
+            <summary>
+            解码器1的读末地址[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Decode_D1_DataIsReady">
+            <summary>
+            解码器1读数据已经准备好[read]
+            1=OK
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Cymometer_Reset">
+            <summary>
+            频率计复位[write]
+            设置闸门时间后需复位，拉高复位
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Cymometer_Gate">
+            <summary>
+            闸门时间[write]
+            枚举值. Time_50ms=0,Time_100ms=1,Time_1s=2,Time_10s=3
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Cymometer_Period_L16">
+            <summary>
+            测周周期数之L16[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Cymometer_Period_H12">
+            <summary>
+            测周周期数之H12[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Cymometer_Frequency_L16">
+            <summary>
+            测频之频率数之L16[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Cymometer_Frequency_H16">
+            <summary>
+            测频之频率数之H16[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Cymometer_StdFreq_L16">
+            <summary>
+            测频之基准频率数之低16[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Cymometer_StdFreq_H16">
+            <summary>
+            测频之基准频率数之高16位[read]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Cymometer_Status">
+            <summary>
+            频率计之测量状态[read]
+            bit3,bit0=1=测试完成,bit1=1=测频完成,bit2=1=测周超时
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.PLL_10MClockSelect">
+            <summary>
+            10M时钟选择[write]
+            [todo...值如何确定]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.PLL_WriteDataEnable">
+            <summary>
+            PLL设置数据使能[write]
+            先设置0，传输数据，然后拉高
+            拉高，数据生效。[todo....需要多长的时间]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.PLL_WriteDataL16">
+            <summary>
+            PLL设置数据之低16位[write]
+            [todo...值怎么取]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.PLL_Source_Select">
+            <summary>
+            PLL源选择[write]
+            [todo....值怎么确定]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.PLL_PLL_RXDelaySet_Effect">
+            <summary>
+            数据接收延迟数设置生效[write]
+            拉高生效.先设置数据，然后拉高生效。[todo...需要多少时间？]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.PLL_RXDelaySet1">
+            <summary>
+            数据接收延迟数设置数1[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.PLL_RXDelayCnt1">
+            <summary>
+            数据接收延迟数设置CNT数1[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Test_Acq_Num">
+            <summary>
+            测试设置AcquireNum[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.AcqBoardPowerCtrl">
+            <summary>
+            采集板上电[write]
+            "00" 断电, 0xFF 上电
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.FifoReset">
+            <summary>
+            FIFO复位[write]
+            0->1 上升沿 复位
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.BeeperEnable">
+            <summary>
+            嗡鸣器使能[write]
+            最低位为控 1使能
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProcFifoReset">
+            <summary>
+            处理板FIFO复位[write]
+            0 ->0x1 时复位
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ProtocolType">
+            <summary>
+            协议触发类型[write]
+            5位,枚举值:0=Close,1=RS232,2=I2C,3=SPI,4=USB,5=CAN,6=LIN,7=FlexRay,8=MIL,9=I2S,10=NRZ,11=Manchester,12=ARINC429,13=SENT,14=DigRF_3G,15=DigRF_V4,16=D_PHY,18=MDIO,20=PCIe[与枚举定义不一样],21=Sata[与枚举定义不一样],
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.Aver_FifoCtrl">
+            <summary>
+            FifoCtrlSelect[write]
+            [todo....含义是什么，怎么设置]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.AdcDiscardNumAdc1">
+            <summary>
+            5G数据拼合时的丢点数-ADC1[write]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.ValidDelayClockCount">
+            <summary>
+            5G数据拼合时有效的打拍数[write]
+            [todo....什么意思，值如何确定]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.ProcBdReg.IDDR_Reset">
+            <summary>
+            IDDR复位[write]
+            拉高复位
+            </summary>
+        </member>
+    </members>
+</doc>

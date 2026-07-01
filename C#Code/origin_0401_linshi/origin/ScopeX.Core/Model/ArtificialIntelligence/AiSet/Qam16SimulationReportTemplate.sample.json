@@ -1,0 +1,28 @@
+{
+  "status": true,
+  "signalType": "16QAM",
+  "generatedAt": "2026-03-25 11:47:19",
+  "context": {
+    "vectorAnalysis": {
+      "graphType": "Constellation",
+      "format": "QAM",
+      "symbolRateBaud": 10000000.0,
+      "rollOffFactor": 0.35,
+      "measureFilter": "RRC",
+      "refFilter": "RRC",
+      "filterPara": 0.35,
+      "carryFreqHz": 2400000000.0,
+      "carryFreqErrorHz": 137.0,
+      "frequencyDetect": true,
+      "equalizerEnabled": true,
+      "sampleRateHz": 1000000000.0,
+      "verticalScale": 0.5,
+      "verticalOffset": 0.0,
+      "metrics": {
+        "EVMRms": { "value": 2.03, "mean": 1.97, "max": 2.36, "min": 1.74 },
+        "SNR": { "value": 30.84, "mean": 30.65, "max": 31.22, "min": 30.11 },
+        "FreqErrorHz": { "value": 137.0, "mean": 129.0, "max": 151.0, "min": 106.0 }
+      }
+    }
+  }
+}

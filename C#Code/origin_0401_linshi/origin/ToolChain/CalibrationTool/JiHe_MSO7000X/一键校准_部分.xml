@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MultiXmlBatchExecuteSolution SolutionDescription="JPO6000程控校准方案" version="1.0.0.0" creator="zhaoyong" LastModifier="zhaoyong">
+  <!--=======region 方案中使用到的仪器的定义=====-->
+  <FileRootPath Value="@ToolRootPath@"></FileRootPath>
+  <XmlFile Value=".\JiHe_MSO7000X\装载所有校准数据的缺省数据.xml"></XmlFile>
+  <XmlFile Value=".\JiHe_MSO7000X\BatchTask_TiAdc校准_fluck9500b.xml"></XmlFile>
+  <XmlFile Value=".\JiHe_MSO7000X\幅度校准_fluck9500b.xml"></XmlFile>
+  <XmlFile Value=".\JiHe_MSO7000X\基线校准.xml"></XmlFile>
+  <XmlFile Value=".\JiHe_MSO7000X\偏执校准_fluck9500B.xml"></XmlFile>
+  <XmlFile Value=".\JiHe_MSO7000X\LA触发电平校准_9500T.xml"></XmlFile>
+</MultiXmlBatchExecuteSolution>

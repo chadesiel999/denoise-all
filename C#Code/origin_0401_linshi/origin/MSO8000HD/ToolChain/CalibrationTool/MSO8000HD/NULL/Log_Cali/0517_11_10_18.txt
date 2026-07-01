@@ -1,0 +1,8 @@
+[11:59:36] : [***BatchTaskStart***]:D:\2U_origin_20250821_20G\2U_origin_20250820_after\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\38Institute\2025_DBI20G_TiAdc_扫频及生成系数.xml
+[11:59:36] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[12:30:12] : [***BatchTaskStart***]:D:\2U_origin_20250821_20G\2U_origin_20250820_after\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\38Institute\2025_DBI20G_TiAdc_扫频及生成系数.xml
+[12:30:12] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[12:30:35] : [***BatchTaskStart***]:D:\2U_origin_20250821_20G\2U_origin_20250820_after\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\38Institute\2025_DBI20G_TiAdc_扫频及生成系数.xml
+[12:30:35] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[12:56:56] : [***BatchTaskStart***]:D:\2U_origin_20250821_20G\2U_origin_20250820_after\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\38Institute\2025_DBI20G_TiAdc_扫频及生成系数.xml
+[12:56:56] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000

@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--=======region 重要说明=====-->
+<!--DriverType 目前只支持 VISA; 我们自己的只支持UU_ETHERNET(OurDso), UU_USB374(示波表)-->
+<!--CommandType 有2两种:check和scpi，check用于弹出准备就绪与否的对话框;scpi为SCPI命令，需要指定仪器-->
+<!--AfterWaitSec 表示执行一条scpi命令后，需要等待的时间(以秒为单位)-->
+<!--QueryOvertimeSec 表示执行查询命令时的超时时间(以秒为单位)。对有些操作，仪器端可能需要花费较长的时间后才能查询，比如校准。在此期间如果有比较等待操作，就需要多次执行，直到超时-->
+<!--基本概念：一个文件称为一个解决方案，一个方案中包含多个任务，一个任务包含一系列的命令-->
+<!--一个方案中使用的所有仪器在Instrumentations 段定义，在后续的命令中的InstrumentationName 必须使用该段中Name字段 中的内容==-->
+<!--如果使用厂家自用的校准工具，对待校准的仪器（示波器），请在仪器段中对该仪器使用IsOurTargetDso="1"来标识，其地址可以为空。==-->
+<!--==对使用新的厂家提供的校准工具进行校准时，在Command 段，可以使用程序自定义的函数来校准==-->
+<!--==此时，包括3个标签：IsProgramFunc（指示是否该命令是程序函数来完成），ProgramFuncName(程序函数的名称，有程序员提供)，ProgramFuncOverSec（程序函数超时时间，秒）==-->
+
+<!--=======endregion 重要说明=====-->
+
+<InstrumentationAutoControlSolution SolutionDescription="OurDso程控校准方案">
+	<!--=======region 方案中使用到的仪器的定义=====-->
+	<Instrumentations>
+		<!--== 待校准的目标仪器，使用此标识，并可不标识Address标签==-->
+		<!--==		==-->	
+		<Instrumentation 
+			Name="RS"
+			Description="RS射频源"
+			DriverType="VISA"
+			Address="USB0::0x0AAD::0x0054::175875::INSTR"			
+			IsOurTargetDso="false"
+			Timeout="0"
+			></Instrumentation>		
+
+		<Instrumentation 
+			Name="OurDso"
+			Description="10G示波器"
+			DriverType="VISA"
+			IsOurTargetDso="true"
+			Timeout="0"
+			></Instrumentation>
+	</Instrumentations>
+	<!--=======endregion 方案中使用到的仪器的定义=====-->
+	
+	<!--=======region 方案中任务列表=====-->
+	<!--==			
+	==-->		
+	<Tasks>
+
+		<Task Description="4G8G两种组合通道之Afc系数生成" ImportanceTipMessage="该任务是通过程控信号源及示波器来完成Afc系数生成">
+			<!--=Step1:全局准备工作==-->			
+				
+
+			<Command Description="设置参数测量-第一个参数的项目设置" 
+				InstrumentationName="OurDso"
+				CommandType="scpi"
+				SCPICmd=":MEASure:ITEM1:TYPe AMPL"
+			></Command>	
+			<!--=Step2.1:所有4G通道扫描==-->
+			<ForeachLoop StartIndex="0" Count="4" Description="生成所有4G通道的频点-幅度数据扫描文件">	
+				<VarintDefine name="ChannelID" valuelist="1,2,3,4"></VarintDefine>						
+				<Command Description="请将信号源输出接入到4G通道@ChannelID@上，确保示波器的相关设置正确，设置相关的数字处理开关模式" 
+					InstrumentationName="OurDso"
+					CommandType="check"
+					SCPICmd=""
+				></Command>	
+				<Command Description="删除保存目录下全部旧的文件" 
+						InstrumentationName="OurDso"
+						CommandType="scpi"
+						SCPICmd=""
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SystemCommand del @ToolRootPath@.\ScanFrequencyResultData\*.* /Q;"
+			></Command>	
+				<Command Description="设置参数测量-第一个参数的源设置" 
+					InstrumentationName="OurDso"
+					CommandType="scpi"
+					SCPICmd=":MEASure:ITEM1:SOURce CHAN@ChannelID@"
+				></Command>	
+				
+				<ForeachLoop StartIndex="6" Count="1" Description="幅度档">								
+					<VarintDefine name="YScaleBymV" valuelist="1,2,5,10,20,50,100,200,500,1000"></VarintDefine>		
+					<VarintDefine name="YScaleByV"  valuelist="0.001,0.002,0.005,0.01,0.02,0.05,0.1,0.2,0.5,1"></VarintDefine>							
+					<VarintDefine name="YScaleTheoryAmpByV" valuelist="0.006,0.012,0.03,0.06,0.12,0.3,0.6,1.2,3.0,6"></VarintDefine>	
+					<VarintDefine name="SourceOutputAmp"  valuelist="2.14mV,4.285mV,10.71mV,21.428mV,42.857mV,107.14mV,214.285mV,428.57mV,1071.428mV,2142.857mV"></VarintDefine>							
+					<!--==Step1==-->
+					<Command Description="设置源输出信号幅度有效值为@SourceOutputAmp@" 
+						InstrumentationName="RS"
+						CommandType="scpi"
+						SCPICmd=":LEVEL @SourceOutputAmp@"
+					></Command>	
+					
+					<Command Description="设置示波器幅度档为@YScaleByV@V" 
+						InstrumentationName="OurDso"
+						CommandType="scpi"
+						SCPICmd=":CHAN@ChannelID@:SCAL @YScaleByV@"
+					></Command>	
+
+					<Command Description="创建记录文件" 
+									InstrumentationName="OurDso"
+									CommandType="scpi"
+									SCPICmd=""
+									IsProgramFunc="true"
+									ProgramFuncName="BatchTaskPart_TxtFileStream InputFileName=.\ScanFrequencyResultData\C@ChannelID@_4G_Used4Afc_@YScaleBymV@mV_MeasureData.txt,CurrOperation=Create"
+					></Command>	
+					<Command Description="保存理论幅度值到第一行" 
+								InstrumentationName="OurDso"
+								CommandType="scpi"
+								SCPICmd=""
+								IsProgramFunc="true"
+								ProgramFuncName="BatchTaskPart_TxtFileStream FileName=.\ScanFrequencyResultData\C@ChannelID@_4G_Used4Afc_@YScaleBymV@mV_MeasureData.txt,CurrOperation=Write,WriteLineContent=0.01MHz@char_comma@@YScaleTheoryAmpByV@"
+					></Command>							
+					
+					<!--==Step2:扫频，并获取每个频点对用的幅度数据，并记录在文件中==-->
+					<ForeachByFileLine Description="扫频，并保存幅度测量数据" FileID="扫频频点表" FileName=".\各型号校准及检测用例\FreqTable_Afc_4G通道_扫频频点表.txt">
+						<Command Description="信号源输出@FID扫频频点表:Column1@" 
+								InstrumentationName="RS"
+								CommandType="scpi"
+								SCPICmd=":FREQ @FID扫频频点表:Column1@"
+								AfterWaitSec="0.5"								
+						></Command>		
+						<Command Description="设置示波器时基档@FID扫频频点表:Column2@" 
+								InstrumentationName="OurDso"
+								CommandType="scpi"
+								SCPICmd=":TIM:SCAL @FID扫频频点表:Column2@"
+								AfterWaitSec="0.5"								
+						></Command>		
+						<Command Description="保存该频点下的幅度" 
+								InstrumentationName="OurDso"
+								CommandType="scpi"
+								SCPICmd=""
+								IsProgramFunc="true"
+								ProgramFuncName="BatchTaskPart_TxtFileStream FileName=.\ScanFrequencyResultData\C@ChannelID@_4G_Used4Afc_@YScaleBymV@mV_MeasureData.txt,CurrOperation=Write,WriteLineContent=@FID扫频频点表:Column1@@char_comma@@MeasureItem1@"
+						></Command>						
+					</ForeachByFileLine>
+
+					<Command Description="关闭记录文件" 
+							InstrumentationName="OurDso"
+							CommandType="scpi"
+							SCPICmd=""
+							IsProgramFunc="true"
+							ProgramFuncName="BatchTaskPart_TxtFileStream FileName=.\ScanFrequencyResultData\C@ChannelID@_4G_Used4Afc_@YScaleBymV@mV_MeasureData.txt,CurrOperation=Close"
+					></Command>	
+						
+				</ForeachLoop>        
+			</ForeachLoop>				
+			<!--=Step2.2:所有8G通道扫描==-->			
+			<ForeachLoop StartIndex="0" Count="4" Description="生成所有8G通道的频点-幅度数据扫描文件">	
+				<VarintDefine name="ChannelID" valuelist="1,2,3,4"></VarintDefine>						
+				<Command Description="请将信号源输出接入到8G通道@ChannelID@上，确保示波器的相关设置正确，设置相关的数字处理开关模式" 
+					InstrumentationName="OurDso"
+					CommandType="check"
+					SCPICmd=""
+				></Command>	
+
+				<Command Description="设置参数测量-第一个参数的源设置" 
+					InstrumentationName="OurDso"
+					CommandType="scpi"
+					SCPICmd=":MEASure:ITEM1:SOURce CHAN@ChannelID@"
+				></Command>	
+				
+				<ForeachLoop StartIndex="3" Count="7" Description="幅度档">								
+					<VarintDefine name="YScaleBymV" valuelist="1,2,5,10,20,50,100,200,500,1000"></VarintDefine>		
+					<VarintDefine name="YScaleByV"  valuelist="0.001,0.002,0.005,0.01,0.02,0.05,0.1,0.2,0.5,1"></VarintDefine>							
+					<VarintDefine name="YScaleTheoryAmpByV" valuelist="0.006,0.012,0.03,0.06,0.12,0.3,0.6,1.2,3.0,6"></VarintDefine>	
+					
+					<VarintDefine name="SourceOutputAmp"  valuelist="2.14mV,4.285mV,10.71mV,21.428mV,42.857mV,107.14mV,214.285mV,428.57mV,1071.428mV,2142.857mV"></VarintDefine>							
+					<!--==Step1==-->
+					<Command Description="设置源输出信号幅度有效值为@SourceOutputAmp@" 
+						InstrumentationName="RS"
+						CommandType="scpi"
+						SCPICmd=":LEV @SourceOutputAmp@"
+					></Command>	
+					
+					<Command Description="设置示波器幅度档为@YScaleByV@V" 
+						InstrumentationName="OurDso"
+						CommandType="scpi"
+						SCPICmd=":CHAN@ChannelID@:SCAL @YScaleByV@"
+					></Command>	
+
+					<Command Description="创建记录文件" 
+									InstrumentationName="OurDso"
+									CommandType="scpi"
+									SCPICmd=""
+									IsProgramFunc="true"
+									ProgramFuncName="BatchTaskPart_TxtFileStream InputFileName=.\ScanFrequencyResultData\C@ChannelID@_8G_Used4Afc_@YScaleBymV@mV_MeasureData.txt,CurrOperation=Create"
+					></Command>	
+					<Command Description="保存理论幅度值到第一行" 
+								InstrumentationName="OurDso"
+								CommandType="scpi"
+								SCPICmd=""
+								IsProgramFunc="true"
+								ProgramFuncName="BatchTaskPart_TxtFileStream FileName=.\ScanFrequencyResultData\C@ChannelID@_8G_Used4Afc_@YScaleBymV@mV_MeasureData.txt,CurrOperation=Write,WriteLineContent=0.01MHz@char_comma@@YScaleTheoryAmpByV@"
+					></Command>							
+					
+					<!--==Step2:扫频，并获取每个频点对用的幅度数据，并记录在文件中==-->
+					<ForeachByFileLine Description="扫频，并保存幅度测量数据" FileID="扫频频点表" FileName=".\各型号校准及检测用例\FreqTable_Afc_8G通道_扫频频点表.txt">
+						<Command Description="信号源输出@FID扫频频点表:Column1@" 
+								InstrumentationName="RS"
+								CommandType="scpi"
+								SCPICmd=":FREQ @FID扫频频点表:Column1@"
+								AfterWaitSec="0.5"								
+						></Command>
+						<Command Description="设置示波器时基档@FID扫频频点表:Column2@" 
+								InstrumentationName="OurDso"
+								CommandType="scpi"
+								SCPICmd=":TIM:SCAL @FID扫频频点表:Column2@"
+								AfterWaitSec="0.5"								
+						></Command>		
+						<Command Description="保存该频点下的幅度" 
+								InstrumentationName="OurDso"
+								CommandType="scpi"
+								SCPICmd=""
+								IsProgramFunc="true"
+								ProgramFuncName="BatchTaskPart_TxtFileStream FileName=.\ScanFrequencyResultData\C@ChannelID@_8G_Used4Afc_@YScaleBymV@mV_MeasureData.txt,CurrOperation=Write,WriteLineContent=@FID扫频频点表:Column1@@char_comma@@MeasureItem1@"
+						></Command>						
+					</ForeachByFileLine>
+
+					<Command Description="关闭记录文件" 
+									InstrumentationName="OurDso"
+									CommandType="scpi"
+									SCPICmd=""
+									IsProgramFunc="true"
+									ProgramFuncName="BatchTaskPart_TxtFileStream FileName=.\ScanFrequencyResultData\C@ChannelID@_8G_Used4Afc_@YScaleBymV@mV_MeasureData.txt,CurrOperation=Close"
+					></Command>	
+					
+					<!--==Step3:生成该通道、该幅度档下的AFC系数文件=
+					<Command Description="生成 C@ChannelID@ @YScaleBymV@mV的Afc系数" 
+							InstrumentationName="OurDso"
+							CommandType="scpi"
+							SCPICmd=""
+							IsProgramFunc="true"
+							ProgramFuncName="BatchTaskPart_GenerateCoefficientByCommonMatlabDLL MatLabDLLName=.\MatlabDLL\MatlabGenerateCoefficientsTable_Afc.dll,CoefficientType=Coefficients3,Channel=CH@ChannelID@,SaveCoefficientPathAndFileName=.\CoefficientsFiles\Afc_C@ChannelID@_@YScaleBymV@mV.txt,SourceFiles_Path=.\ScanFrequencyResultData,SourceFilesFilterPrefixName=C@ChannelID@_8G_Used4Afc_@YScaleBymV@mV_MeasureData,DebugSaveFilePath=.\AfcDebug,DebugSaveFilePrefixName=Afc_C@ChannelID@_@YScaleBymV@_,OtherTransparencyParameter=20 8200 200 16"
+					></Command>		=-->				
+				
+				</ForeachLoop>        
+			</ForeachLoop>		
+			
+			<!--==Step3:生成所有通道、所有指定的幅度档下的AFC系数文件==-->
+			<ForeachLoop StartIndex="0" Count="4" Description="生成所有4-8G通道AFC系数">				
+				<VarintDefine name="ChannelID" valuelist="1,2,3,4"></VarintDefine>	
+				<ForeachLoop StartIndex="6" Count="1" Description="所有指定的幅度档">												
+					<VarintDefine name="YScaleBymV" valuelist="1,2,5,10,20,50,100,200,500,1000"></VarintDefine>		
+				
+					<Command Description="生成 C@ChannelID@ @YScaleBymV@mV的Afc系数" 
+							InstrumentationName="OurDso"
+							CommandType="scpi"
+							SCPICmd=""
+							IsProgramFunc="true"
+							ProgramFuncName="BatchTaskPart_GenerateCoefficientByCommonMatlabDLL MatLabDLLName=.\MatlabDLL\MatlabGenerateCoefficientsTable_Afc.dll,CoefficientType=Coefficients3,Channel=CH@ChannelID@,SaveCoefficientPathAndFileName=.\CoefficientsFiles\Afc_C@ChannelID@_@YScaleBymV@mV.txt,SourceFiles_Path=.\ScanFrequencyResultData|.\ScanFrequencyResultData,SourceFilesFilterPrefixName=C@ChannelID@_4G_Used4Afc|C@ChannelID@_8G_Used4Afc_@YScaleBymV@mV_MeasureData,DebugSaveFilePath=.\AfcDebug|.\AfcDebug,DebugSaveFilePrefixName=Afc_C@ChannelID@_4G_@YScaleBymV@|Afc_C@ChannelID@_8G_@YScaleBymV@,OtherTransparencyParameter=10 4200 80 16|20 8200 200 16"
+					></Command>						
+				</ForeachLoop>        
+			</ForeachLoop>		
+						
+		</Task>	
+	</Tasks>		
+</InstrumentationAutoControlSolution>

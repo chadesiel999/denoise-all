@@ -1,0 +1,66 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ScopeX.Updater.PackageGenerator/2.02.0000-Q4": {
+        "dependencies": {
+          "ScopeX.Updater.Base": "0.7.0.605",
+          "ScopeX.ComModel.Reference": "2.1.9.0"
+        },
+        "runtime": {
+          "ScopeX.Updater.PackageGenerator.dll": {}
+        }
+      },
+      "ScopeX.Updater.Base/0.7.0.605": {
+        "dependencies": {
+          "ScopeX.ComModel": "2.1.9"
+        },
+        "runtime": {
+          "ScopeX.Updater.Base.dll": {}
+        }
+      },
+      "ScopeX.ComModel.Reference/2.1.9.0": {
+        "runtime": {
+          "ScopeX.ComModel.dll": {
+            "assemblyVersion": "2.1.9.0",
+            "fileVersion": "2.1.9.0"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ScopeX.Updater.PackageGenerator/2.02.0000-Q4": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.Updater.Base/0.7.0.605": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.ComModel.Reference/2.1.9.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

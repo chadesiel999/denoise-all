@@ -1,0 +1,158 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <Version>2.1.13</Version>
+    <Authors>ScopeX</Authors>
+    <Configurations>Debug;Release;</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <DefineConstants>TRACE;ScopeX_DIST</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DefineConstants>TRACE;ScopeX_DIST</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Presenter\ProbeCaliPrsnt.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AutoTimebase_Selector">
+      <HintPath>..\ShareDlls\OtherShareDlls\AutoTimebase_Selector.dll</HintPath>
+    </Reference>
+    <Reference Include="EventBroker">
+      <HintPath>..\ShareDlls\EventBroker.dll</HintPath>
+    </Reference>
+    <Reference Include="IEventBroker">
+      <HintPath>..\ShareDlls\IEventBroker.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\ShareDlls\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream">
+      <HintPath>..\ShareDlls\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML">
+      <HintPath>..\ShareDlls\Microsoft.ML.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.Core">
+      <HintPath>..\ShareDlls\Microsoft.ML.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.Data">
+      <HintPath>..\ShareDlls\Microsoft.ML.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.DataView">
+      <HintPath>..\ShareDlls\Microsoft.ML.DataView.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.KMeansClustering">
+      <HintPath>..\ShareDlls\Microsoft.ML.KMeansClustering.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.OnnxRuntime">
+      <HintPath>..\ShareDlls\Microsoft.ML.OnnxRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.OnnxTransformer">
+      <HintPath>..\ShareDlls\Microsoft.ML.OnnxTransformer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.PCA">
+      <HintPath>..\ShareDlls\Microsoft.ML.PCA.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.StandardTrainers">
+      <HintPath>..\ShareDlls\Microsoft.ML.StandardTrainers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.Transforms">
+      <HintPath>..\ShareDlls\Microsoft.ML.Transforms.dll</HintPath>
+    </Reference>
+    <Reference Include="MWArray">
+      <HintPath>..\ShareDlls\OtherShareDlls\MWArray.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\ShareDlls\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML">
+      <HintPath>..\ShareDlls\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net">
+      <HintPath>..\ShareDlls\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats">
+      <HintPath>..\ShareDlls\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PreProcess">
+      <HintPath>..\ShareDlls\OtherShareDlls\PreProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Controls.Common">
+      <HintPath>..\ShareDlls\ScopeX.Controls.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Hardware.Driver">
+      <HintPath>..\ShareDlls\ScopeX.Hardware.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.MathExt">
+      <HintPath>..\ShareDlls\ScopeX.MathExt.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.MathExtGPU">
+      <HintPath>..\ShareDlls\ScopeX.MathExtGPU.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Measure">
+      <HintPath>..\ShareDlls\ScopeX.Measure.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.ScpiAdapter">
+      <HintPath>..\ShareDlls\ScopeX.ScpiAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Updater.Base">
+      <HintPath>..\ShareDlls\ScopeX.Updater.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.Fonts">
+      <HintPath>..\ShareDlls\SixLabors.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.ImageSharp">
+      <HintPath>..\ShareDlls\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="STFT">
+      <HintPath>..\ScopeX.U2\bin\Debug\net6.0-windows\STFT.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>..\ShareDlls\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management">
+      <HintPath>..\ShareDlls\System.Management.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\Jitter\Jitter\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Tools\NetworkAdapter\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScopeX.ComModel\ScopeX.ComModel.csproj" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath)  $(SolutionDir)ShareDlls\$(TargetName)$(TargetExt)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;xcopy /s /y $(TargetDir)$(TargetName).pdb  $(SolutionDir)pdbs\&#xD;&#xA;xcopy /s /y $(TargetPath) $(SolutionDir)pdbs\" />
+  </Target>
+
+</Project>

@@ -1,0 +1,361 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ScopeX.Hardware.Calibration.Tool/0.17.0000": {
+        "dependencies": {
+          "ScopeX.ComModel": "2.1.9",
+          "ScopeX.Hardware.Calibration.Data.Base": "0.7.0.605",
+          "ScopeX.Hardware.Calibration.Tool.Base": "0.7.0.605",
+          "System.Data.SQLite.Core": "1.0.118",
+          "CSScriptLib": "4.1.0.0",
+          "Interop.MLApp": "1.0.0.0",
+          "Ivi.Visa": "5.8.0.0",
+          "Microsoft.CodeAnalysis.CSharp": "3.6.0.0",
+          "Microsoft.CodeAnalysis.CSharp.Scripting": "3.6.0.0",
+          "Microsoft.CodeAnalysis": "3.6.0.0",
+          "Microsoft.CodeAnalysis.Scripting": "3.6.0.0",
+          "Microsoft.Extensions.DependencyModel": "3.1.6.0",
+          "Microsoft.Office.Interop.Excel": "14.0.0.0",
+          "MWArray": "2.23.1.0",
+          "NationalInstruments.Visa": "17.5.0.49152",
+          "Newtonsoft.Json": "13.0.0.0",
+          "Office": "14.0.0.0",
+          "U9193x": "1.0.6179.18300",
+          "WinUsbDevice": "1.0.6179.18300",
+          "WinUsbDeviceInterface": "1.0.6179.18300"
+        },
+        "runtime": {
+          "ScopeX.Hardware.Calibration.Tool.dll": {}
+        }
+      },
+      "Stub.System.Data.SQLite.Core.NetStandard/1.0.118": {
+        "runtime": {
+          "lib/netstandard2.1/System.Data.SQLite.dll": {
+            "assemblyVersion": "1.0.118.0",
+            "fileVersion": "1.0.118.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/SQLite.Interop.dll": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/SQLite.Interop.dll": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/SQLite.Interop.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "1.0.118.0"
+          },
+          "runtimes/win-x86/native/SQLite.Interop.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "1.0.118.0"
+          }
+        }
+      },
+      "System.Data.SQLite.Core/1.0.118": {
+        "dependencies": {
+          "Stub.System.Data.SQLite.Core.NetStandard": "1.0.118"
+        }
+      },
+      "ScopeX.ComModel/2.1.9": {
+        "runtime": {
+          "ScopeX.ComModel.dll": {}
+        }
+      },
+      "ScopeX.Hardware.Calibration.Data.Base/0.7.0.605": {
+        "runtime": {
+          "ScopeX.Hardware.Calibration.Data.Base.dll": {}
+        }
+      },
+      "ScopeX.Hardware.Calibration.Tool.Base/0.7.0.605": {
+        "dependencies": {
+          "ScopeX.Hardware.Calibration.Data.Base": "0.7.0.605"
+        },
+        "runtime": {
+          "ScopeX.Hardware.Calibration.Tool.Base.dll": {}
+        }
+      },
+      "CSScriptLib/4.1.0.0": {
+        "runtime": {
+          "CSScriptLib.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        }
+      },
+      "Interop.MLApp/1.0.0.0": {
+        "runtime": {
+          "Interop.MLApp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Ivi.Visa/5.8.0.0": {
+        "runtime": {
+          "Ivi.Visa.dll": {
+            "assemblyVersion": "5.8.0.0",
+            "fileVersion": "5.8.908.0"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.CSharp/3.6.0.0": {
+        "runtime": {
+          "Microsoft.CodeAnalysis.CSharp.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.600.20.26904"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.CSharp.Scripting/3.6.0.0": {
+        "runtime": {
+          "Microsoft.CodeAnalysis.CSharp.Scripting.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.600.20.26904"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis/3.6.0.0": {
+        "runtime": {
+          "Microsoft.CodeAnalysis.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.600.20.26904"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.Scripting/3.6.0.0": {
+        "runtime": {
+          "Microsoft.CodeAnalysis.Scripting.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.600.20.26904"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyModel/3.1.6.0": {
+        "runtime": {
+          "Microsoft.Extensions.DependencyModel.dll": {
+            "assemblyVersion": "3.1.6.0",
+            "fileVersion": "3.100.620.31604"
+          }
+        }
+      },
+      "Microsoft.Office.Interop.Excel/14.0.0.0": {
+        "runtime": {
+          "Microsoft.Office.Interop.Excel.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.4733.1000"
+          }
+        }
+      },
+      "MWArray/2.23.1.0": {
+        "runtime": {
+          "MWArray.dll": {
+            "assemblyVersion": "2.23.1.0",
+            "fileVersion": "2.23.1.0"
+          }
+        }
+      },
+      "NationalInstruments.Visa/17.5.0.49152": {
+        "runtime": {
+          "NationalInstruments.Visa.dll": {
+            "assemblyVersion": "17.5.0.49152",
+            "fileVersion": "17.5.0.49152"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "Office/14.0.0.0": {
+        "runtime": {
+          "Office.dll": {
+            "assemblyVersion": "14.0.0.0",
+            "fileVersion": "14.0.4733.1000"
+          }
+        }
+      },
+      "U9193x/1.0.6179.18300": {
+        "runtime": {
+          "U9193x.dll": {
+            "assemblyVersion": "1.0.6179.18300",
+            "fileVersion": "1.0.6179.18300"
+          }
+        }
+      },
+      "WinUsbDevice/1.0.6179.18300": {
+        "runtime": {
+          "WinUsbDevice.dll": {
+            "assemblyVersion": "1.0.6179.18300",
+            "fileVersion": "1.0.6179.18300"
+          }
+        }
+      },
+      "WinUsbDeviceInterface/1.0.6179.18300": {
+        "runtime": {
+          "WinUsbDeviceInterface.dll": {
+            "assemblyVersion": "1.0.6179.18300",
+            "fileVersion": "1.0.6179.18300"
+          }
+        }
+      },
+      "InstrumentEx/1.0.0.0": {
+        "runtime": {
+          "InstrumentEx.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Ivi.Visa.Interop/7.2.0.0": {
+        "runtime": {
+          "Ivi.Visa.Interop.dll": {
+            "assemblyVersion": "7.2.0.0",
+            "fileVersion": "7.2.7619.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ScopeX.Hardware.Calibration.Tool/0.17.0000": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Stub.System.Data.SQLite.Core.NetStandard/1.0.118": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4TS8IZvDj0ud6utxfXI6zv9Ditk4U9Kt9KqLyAIQGcU3GXp5oGBHgGZifq+APcqRCayuN/MSE8t9ZZmygtU28A==",
+      "path": "stub.system.data.sqlite.core.netstandard/1.0.118",
+      "hashPath": "stub.system.data.sqlite.core.netstandard.1.0.118.nupkg.sha512"
+    },
+    "System.Data.SQLite.Core/1.0.118": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2V1PsfBeqWlZxF/VtB8lQKPfDBayCU8zD5Xc3Mq7cILOa2ZqpPDSwMP0fTfk1gtGSStSk//DxKiGy6zwCQs7Uw==",
+      "path": "system.data.sqlite.core/1.0.118",
+      "hashPath": "system.data.sqlite.core.1.0.118.nupkg.sha512"
+    },
+    "ScopeX.ComModel/2.1.9": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.Hardware.Calibration.Data.Base/0.7.0.605": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.Hardware.Calibration.Tool.Base/0.7.0.605": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CSScriptLib/4.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Interop.MLApp/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ivi.Visa/5.8.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.CodeAnalysis.CSharp/3.6.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.CodeAnalysis.CSharp.Scripting/3.6.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.CodeAnalysis/3.6.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.CodeAnalysis.Scripting/3.6.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.DependencyModel/3.1.6.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Office.Interop.Excel/14.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MWArray/2.23.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NationalInstruments.Visa/17.5.0.49152": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Office/14.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "U9193x/1.0.6179.18300": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WinUsbDevice/1.0.6179.18300": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WinUsbDeviceInterface/1.0.6179.18300": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InstrumentEx/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ivi.Visa.Interop/7.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+< !--请使用条件编译来控制没有使用的寄存器。在Register 中键入 CompileCondition 字段。目前有DBI-->
+< !--例如：Register name = "DBI_AcqFactorSelect" CompileCondition = "DBI" 表示只有DBI项目使用-->
+<AllWriteRegisters Total="24">
+<Register name="CoefficientsTable_Reset"/>
+<Register name="CoefficientsTable_ActionCode"/>
+<Register name="CoefficientsTable_ActionStart"/>
+<Register name="DCM_CTRL_s6_dcm_rst"/>
+<Register name="FlashOperator_ActionReset"/>
+<Register name="FlashOperator_WhichFlash"/>
+<Register name="FlashOperator_StartAddress_L16"/>
+<Register name="FlashOperator_StartAddress_H16"/>
+<Register name="FlashOperator_EndAddress_L16"/>
+<Register name="FlashOperator_EndAddress_H16"/>
+<Register name="FlashOperator_ActionCode"/>
+<Register name="FlashOperator_ActionStart"/>
+<Register name="PllConfig_7043Reset"/>
+<Register name="PllConfig_7043WriteData_H8"/>
+<Register name="PllConfig_7043WriteData_L16"/>
+<Register name="PllConfig_7043WriteDataEffect"/>
+<Register name="PllConfig_7044Reset"/>
+<Register name="PllConfig_7044Sync"/>
+<Register name="PllConfig_7044WriteData_H8"/>
+<Register name="PllConfig_7044WriteData_L16"/>
+<Register name="PllConfig_7044WriteDataEffect"/>
+<Register name="RegManager_WriteToAllAcqBoardEnable"/>
+<Register name="RegMonitor_RegAddress"/>
+<Register name="SysInfo_WorkOKTest"/>
+</AllWriteRegisters>
+<AllReadRegisters Total="31">
+<Register name="FlashOperator_ActionStatus"/>
+<Register name="FlashOperator_FlashID_L16"/>
+<Register name="FlashOperator_FlashID_H16"/>
+<Register name="PllConfig_HMC7044_SpiReadBackData"/>
+<Register name="PllConfig_HMC7043_SpiReadBackData"/>
+<Register name="RegMonitor_ReadbackValue"/>
+<Register name="SysInfo_WorkOKTest"/>
+<Register name="VersionInfo_CommentWord0"/>
+<Register name="VersionInfo_CommentWord1"/>
+<Register name="VersionInfo_CommentWord10"/>
+<Register name="VersionInfo_CommentWord11"/>
+<Register name="VersionInfo_CommentWord12"/>
+<Register name="VersionInfo_CommentWord13"/>
+<Register name="VersionInfo_CommentWord2"/>
+<Register name="VersionInfo_CommentWord3"/>
+<Register name="VersionInfo_CommentWord4"/>
+<Register name="VersionInfo_CommentWord5"/>
+<Register name="VersionInfo_CommentWord6"/>
+<Register name="VersionInfo_CommentWord7"/>
+<Register name="VersionInfo_CommentWord8"/>
+<Register name="VersionInfo_CommentWord9"/>
+<Register name="VersionInfo_DesignerWord0"/>
+<Register name="VersionInfo_DesignerWord1"/>
+<Register name="VersionInfo_DesignerWord2"/>
+<Register name="VersionInfo_DesignerWord3"/>
+<Register name="VersionInfo_VersionWord0"/>
+<Register name="VersionInfo_VersionWord1"/>
+<Register name="VersionInfo1_CommentWord14"/>
+<Register name="VersionInfo1_CommentWord15"/>
+<Register name="VersionInfo1_CompileTimeWord0"/>
+<Register name="VersionInfo1_CompileTimeWord1"/>
+</AllWriteRegisters>

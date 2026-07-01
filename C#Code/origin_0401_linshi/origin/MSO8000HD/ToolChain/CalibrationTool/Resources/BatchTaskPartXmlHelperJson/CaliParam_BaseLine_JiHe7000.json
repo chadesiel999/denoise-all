@@ -1,0 +1,10 @@
+/*
+  BaseLineParam
+
+*/
+{
+  "SettingParam": {
+    "OscilloType": "JiHe_MSO7000X",
+    "FilePath": "自动校准xml生成\\JiHe7000\\基线校准.xml"
+  }
+}

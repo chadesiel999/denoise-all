@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GlobalStringResource>
+	<CustomStringTable language="简体中文">
+		<Measure>
+			<Item name = "Max"          scpi="MAX"      level="1"   text="最大值" description ="波形的最大值是采样点的最大值，指波形显示的最高值。" format="0.000"  catalog="Vertical" bImplementedInDll="true"  bIsBase="false" bmpfilename = "btnVMax" />
+			<Item name = "Min"          scpi="MIN"      level="1"   text="最小值" description ="波形的最小值是采样点的最小值，指波形显示的最低值。" format="0.000" catalog="Vertical" bImplementedInDll="true"  bIsBase="false"  bmpfilename = "btnVMin" />
+			<Item name = "Pk2Pk"        scpi="PKPK"     level="1"   text="峰峰值" description ="波形的最大值与最小值之间的差值。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false"  bmpfilename = "btnVPk2Pk" />
+			<Item name = "Top"          scpi="TOP"      level="1"   text="顶值" description ="波形的中间位置以上出现频率最高的电平值，如果出现频率最高的电平值定义不正确，则将顶值视为与最大值相同。" format="0.000"  catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnVTop" />
+			<Item name = "Base"         scpi="BASE"     level="1"   text="底值" description ="波形的中间位置以下出现频率最高的电平值，如果出现频率最高的电平值定义不正确，则将底值视为与最小值相同。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnVBase" />
+			<Item name = "Mid"          scpi="MID"      level="1"   text="中值" description ="波形的顶端值与底端值之间的中间位置的电平值。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnVMedian" />
+			<Item name = "Amplitude"    scpi="AMPL"     level="1"   text="幅度" description ="波形的顶端值与底端值之间的差值。" format="0.000"  catalog="Vertical"  bImplementedInDll="true" bIsBase="false" bmpfilename = "btnVAmp" />
+			<Item name = "Average"      scpi="AVE"      level="1"   text="平均值" description = "波形区域内所有采样点数值的算术平均值。" format="0.000"  catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnVMean" />
+			<Item name = "RMS"          scpi="RMS"      level="1"   text="有效值" description ="波形区域内所有波形数据电压值的均方根值。" format="0.000"  catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnVRms" />
+			<Item name = "Stddev"       scpi="STDD"     level="1"   text="标准差" description ="波形区域内所有波形数据移除直流分量后的电压值均方根值。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnVSigma" />
+			<Item name = "POverShoot"   scpi="POST"     level="1"   text="正过冲" description ="波形的上升沿跃迁后的失真，用跃迁后最大值和顶端值之间的差值和幅度百分比表示。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnPOvershoot" />
+			<Item name = "NOverShoot"   scpi="NOST"     level="1"   text="负过冲" description ="波形的下降沿跃迁后的失真，用跃迁后最小值和底端值之间的差值和幅度百分比表示。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnNOvershoot" />
+			<Item name = "Area"         scpi="AREA"     level="1"   text="面积" description ="测量波形和接地电平之间的面积，即接地电平上方的面积中加上接地电平下方的面积。" format="0.000" catalog="Other" bImplementedInDll="true" bIsBase="false"  bmpfilename = "btnArea" />
+			<Item name = "Period"       scpi="PRD"      level="1"   text="周期" description ="信号在时间轴上重复自身所需的时间间隔。一般使用相邻两次波形同向穿越中间参考电平（RM）的时间差表示。RM是幅值的50%位置。" format="0.000"  catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnPeriod" />
+			<Item name = "Freq"         scpi="FREQ"     level="1"   text="频率" description ="周期性信号每秒钟重复次数的一个物理量，与周期互为倒数。一般使用相邻两次波形同向穿越中间参考电平（RM）的时间差的倒数表示。RM是幅值的50%位置。" format="0.000" catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnFreq" />
+			<Item name = "Rise"         scpi="RISE"     level="1"   text="上升时间" description ="边沿从低参考电平（RB）开始上升，穿过中间参考电平（RM）到达高参考电平（RT）所需的时间。RB是幅值的10%，RM是幅值的50%，RT是幅值的90%。" format="0.000" catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnRise" />
+			<Item name = "Fall"         scpi="FALL"     level="1"   text="下降时间" description ="边沿从高参考电平（RT）开始下降，穿过中间参考电平（RM）到达低参考电平（RB）所需的时间。RB是幅值的10%，RM是幅值的50%，RT是幅值的90%。" format="0.000" catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnFall" />
+			<Item name = "PWidth"       scpi="PWID"     level="1"   text="正脉宽" description ="正脉冲宽度为从上升沿的中间参考电平（RM）穿过高参考电平（RT）到达下一个下降沿的中间参考电平（RM）的时间。RM是幅值的50%，RT是幅值的90%。" format="0.000" catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnPWidth" />
+			<Item name = "NWidth"       scpi="NWID"     level="1"   text="负脉宽" description ="负脉冲宽度为从下降沿的中间参考电平（RM）穿过低参考电平（RB）到达下一个上升沿的中间参考电平（RM）的时间。RB是幅值的10%，RM是幅值的50%。" format="0.000" catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnNWidth" />
+			<Item name = "Duty"         scpi="DUTY"     level="1"   text="正占空比" description ="波形的正脉冲宽度占周期的比率，以百分比表示。" format="f3" catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnDuty" />
+			<Item name = "NDuty"        scpi="NDTY"     level="1"   text="负占空比" description ="波形的负脉冲宽度占周期的比率，以百分比表示。" format="f3" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnNDuty"  />
+			<Item name = "T@max"        scpi="TMAX"     level="1"   text="时间@Max" description ="从波形区域的左侧开始第一次出现波形最大值时的水平轴值（通常为时间）。对于周期信号，最大值的位置在整个波形内可能会变动。" format="0.000"  catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnTmax" />
+			<Item name = "T@min"        scpi="TMIN"     level="1"   text="时间@Min" description ="从波形区域的左侧开始第一次出现波形最小值时的水平轴值（通常为时间）。对于周期信号，最小值的位置在整个波形内可能会变动。" format="0.000" catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnTmin" />
+			<Item name = "CycMax"       scpi="CMAX"     level="1"   text="周期最大值" description ="波形在一个周期内的最大值。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnCycMax" />
+			<Item name = "CycMin"       scpi="CMIN"     level="1"   text="周期最小值" description ="波形在一个周期内的最小值。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnCycMin" />
+			<Item name = "CycRMS"       scpi="CRMS"     level="1"   text="周期有效值" description ="波形在一个周期内的均方根值。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnCycRMS" />
+			<Item name = "CycAverage"   scpi="CAVE"     level="1"   text="周期平均值" description ="波形在一个周期内的平均值。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnCycAverage" />
+			<Item name = "CycPeak"      scpi="CPK"      level="1"   text="周期峰峰值" description ="波形在一个周期内的峰峰值。" format="0.000" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnCycPeak" />
+			<Item name = "CycArea"      scpi="CAR"      level="1"   text="周期面积" description ="波形在一个周期内的面积。" format="0.000" catalog="Other" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnCycArea" />
+			<Item name = "CycMid"       scpi="CMID"     level="1"   text="周期中值" description ="波形在一个周期内中间值。" format="0.000" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnCycMid"  />
+
+			<Item name = "Rise@lv"      scpi="LRIS"     level="1"   text="上升时间@Lv" description ="边沿从低参考电平（RB）开始上升，穿过中间参考电平（RM）到达高参考电平（RT）所需的时间。RB、RM、RT在阈值设置中可指定。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnRiseL"  />
+			<Item name = "Fall@lv"      scpi="LFAL"     level="1"   text="下降时间@Lv" description ="边沿从高参考电平（RT）开始下降穿过中间参考电平（RM）到达低参考电平（RB）所需的时间。RT、RM、RB在阈值设置中可指定。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnFallL"  />
+			<Item name = "Period@lv"    scpi="LPRD"     level="1"   text="周期@Lv" description ="信号在时间轴上重复自身所需的时间间隔。一般使用相邻两次波形同向穿越中间参考电平（RM）的时间差表示。RT、RM、RB在阈值设置中可指定。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnPeriodL"  />
+			<Item name = "Freq@lv"      scpi="LFRQ"     level="1"   text="频率@Lv" description ="周期性信号每秒钟重复次数的一个物理量，与周期互为倒数。一般使用相邻两次波形同向穿越中间参考电平（RM）的时间差的倒数表示。RT、RM、RB在阈值设置中可指定。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnFreqL"  />
+			<Item name = "Width@lv"     scpi="LWID"     level="1"   text="脉宽@Lv" description ="脉冲宽度为波形从上一次穿过中间参考电平(RM)穿过端值位置到达下一个中间参考电平（RM）的时间。RT、RM、RB在阈值设置中可指定。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnWidthL"  />
+			<Item name = "Duty@lv"      scpi="LDUT"     level="1"   text="占空比@Lv" description ="波形的脉冲宽度占周期的比率，以百分比表示。RT、RM、RB在阈值设置中可指定。" format="f3" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnDutyL"  />
+			<Item name = "Phase@lv"     scpi="LPHA"     level="2"   text="相位差@Lv" description ="两个波形在各自周期（360°）内，第一个上升沿通过中间参考电平时的相位差值。RT、RM、RB在阈值设置中可指定。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnPhaseL"  />
+			<Item name = "RRDelay@lv"       scpi="LRRD"     level="2"   text="RRD@Lv" description ="第一个波形的上升沿（Rise）通过中间参考电平（RM）的时间与第二个波形的上升沿（Rise）通过中间参考电平（RM）的时间差值。RT、RM、RB在阈值设置中可指定。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnRRDelay"  />
+			<Item name = "FFDelay@lv"       scpi="LFFD"     level="2"   text="FFD@Lv" description ="第一个波形的下降沿（Fall）通过中间参考电平（RM）的时间与第二个波形的下降沿（Fall）通过中间参考电平（RM）的时间差值。RT、RM、RB在阈值设置中可指定。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnFFDelay"  />
+			<Item name = "RFDelay@lv"       scpi="LRFD"     level="2"   text="RFD@Lv" description ="第一个波形的上升沿（Rise）通过中间参考电平（RM）的时间与第二个波形的下降沿（Fall）通过中间参考电平（RM）的时间差值。RT、RM、RB在阈值设置中可指定。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnRFDelay"  />
+			<Item name = "FRDelay@lv"       scpi="LFRD"     level="2"   text="FRD@Lv" description ="第一个波形的下降沿（Fall）通过中间参考电平（RM）的时间与第二个波形的上升沿（Rise）通过中间参考电平（RM）的时间差值。." format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnFRDelay"  />
+			<Item name = "Skew"         scpi="SKEW"     level="2"   text="偏移" description ="第一个波形的上升沿通过中间参考电平（RM）的时间与第二个波形的上升沿通过中间参考电平（RM）的时间差值。RM是幅值的50%。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnSkew"  />
+
+			<Item name = "WfmLength"    scpi="WLEN"     level="1"   text="数据点数" description ="参与测量的波形采样点的样本数目。" format="G"  catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnWfmLength"  />
+
+			<Item name = "DataRate"     scpi="DTRT"     level="1"   text="数据速率" description ="单位间隔的倒数。" format="0.000"  catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnDataRate"  />
+			<Item name = "UI"           scpi="UI"       level="1"   text="单位间隔" description ="两个连续位之间的时间差。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnUnitInterval"  />
+
+			<Item name = "RSlewRate"    scpi="RSR"      level="1"   text="上升速率" description ="上升速率为边沿从最低参考电平（RB）跳变到最高参考电平（RT）时的幅度变化率。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnRiseSlewRate"  />
+			<Item name = "FSlewRate"    scpi="FSR"      level="1"   text="下降速率" description ="下降速率为边沿从最高参考电平（RT）跳变到最低参考电平（RB）时的幅度变化率。" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnFallSlewRate"  />
+
+			<Item name = "Cycles"           scpi="CYCL"     level="1"   text="周期数" description ="周期波形在波形区域内的循环次数。" format="G" catalog="Horizontal" bImplementedInDll="true"  bIsBase="false" bmpfilename = "btnCycles" />
+			<Item name = "RiseEdges"     scpi="RISES"     level="1"   text="上升沿数" description ="波形区域内的上升沿数量。" format="G" catalog="Horizontal" bImplementedInDll="true"  bIsBase="false" bmpfilename = "btnRaises" />
+			<Item name = "FallEdges"     scpi="FALLS"     level="1"   text="下降沿数" description ="波形区域内的下降沿数量。" format="G" catalog="Horizontal" bImplementedInDll="true"  bIsBase="false" bmpfilename = "btnFalls" />
+			<Item name = "PosPulses"     scpi="POSPULSES"     level="1"   text="正脉冲数" description ="波形区域内的正脉冲数量。" format="G" catalog="Horizontal" bImplementedInDll="true"  bIsBase="false" bmpfilename = "btnPosPulses" />
+			<Item name = "NegPulses"     scpi="NEGPULSES"     level="1"   text="负脉冲数" description ="波形区域内的负脉冲数量。" format="G" catalog="Horizontal" bImplementedInDll="true"  bIsBase="false" bmpfilename = "btnNegPulses" />
+			<Item name = "BurstLen"         scpi="BURL"     level="1"   text="猝发长度" description ="连续猝发事件中波形第一个沿的50%到最后一个沿的50%的时间差" format="0.000" catalog="Horizontal" bImplementedInDll="true" bIsBase="false"  bmpfilename = "btnBurstLen" />
+			<Item name = "BurstCycle"       scpi="BURC"     level="1"   text="猝发周期数" description ="满足猝发宽度和猝发间隔时的周期" format="G" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnBurstCycle"  />
+			<!--<Item name = "BurstWidth"       scpi="BURW"     level="1"   text="猝发宽度" description ="计算连续多次超过中间参考电平的时长" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnBurstCycle"  />-->
+			<Item name = "BurstInterval"    scpi="BURI"     level="1"   text="猝发间隔" description ="两次猝发事件的间隔" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnBurstCycle"  />
+			<Item name = "BurstPeriod"      scpi="BURP"     level="1"   text="猝发周期" description ="满足猝发宽度和猝发间隔时的猝发周期" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnBurstCycle"  />
+			<Item name = "NPeriods"         scpi="NPER"     level="1"   text="多周期时间" description ="波形的多个周期占用的时间" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnNPeriods"  />
+
+			<Item name = "OutsideTime"  scpi="OUTT"     level="1"   text="电平外时间" description ="波形电平保持在高低参考电平范围外的时间" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnOutsideTime"  />
+			<Item name = "HighTime"     scpi="HIT"      level="1"   text="高时间" description ="波形电平保持大于高参考电平的时间" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnHighTime"  />
+			<Item name = "LowTime"      scpi="LOT"      level="1"   text="低时间" description ="波形电平保持小于低参考电平的时间" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnLowTime"  />
+
+			<Item name = "SetupTime"    scpi="STPT"     level="2"   text="建立时间" description ="从超过数据源上指定中间参考电平到最近一次超过时钟源上的指定中间参考电平的时间" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnSetupTime"  />
+			<Item name = "HoldTime"     scpi="HLDT"     level="2"   text="保持时间" description ="从超过时钟源上的指定中间参考电平到最近一次超过数据源上的指定中间参考电平的时间" format="0.000" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnHoldTime"  />
+
+
+			<Item name = "PPreShoot"    scpi="PPST"     level="1"   text="正预冲" description ="波形的正预冲是指上升沿跃迁前的失真，用跃迁前最小值和底端值之间的差值和幅度百分比表示。" format="0.000" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnPPreShoot"  />
+			<Item name = "NPreShoot"    scpi="NPST"     level="1"   text="负预冲" description ="波形的负预冲是指下降沿跃迁前的失真，用跃迁前最大值和顶端值之间的差值和幅度百分比表示。" format="0.000" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnNPreShoot"  />
+
+			<!--<Item name = "Upper"        scpi="UPR"      level="1"   text="上部" description ="90%幅度的值" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnUpper"  />
+        <Item name = "Lower"        scpi="LWR"      level="1"   text="下部" description ="10%幅度的值" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnLower"  />
+        
+		<Item name = "Crossing"     scpi="XNG"      level="2"   text="交叉点电压" description ="两个信号在同一时刻电平相同时的电平值。" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnVCrossing"  />-->
+
+			<Item name = "HistMu1Sigma"     scpi="MU1S"     level="1"   text="μ±1σ" description ="直方图样本的均值+1标准差范围"  format="0.000" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnU1Sigma"  />
+			<Item name = "HistMu2Sigma"     scpi="MU2S"     level="1"   text="μ±2σ" description ="直方图样本的均值+2标准差范围" format="0.000" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnU2Sigma"  />
+			<Item name = "HistMu3Sigma"     scpi="MU3S"     level="1"   text="μ±3σ" description ="直方图样本的均值+3标准差范围" format="0.000" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnU3Sigma"  />
+			<Item name = "HistMode"         scpi="MODE"     level="1"   text="众数" description ="直方图中最高的峰的位置" format="0.000" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnMode"  />
+			<Item name = "HistMean"         scpi="HAVE"     level="1"   text="均值" description ="直方图中的样本均值" format="0.000" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnHistMean"  />
+			<Item name = "HistSigma"        scpi="HSIG"     level="1"   text="标准差" description ="直方图中的样本标准差" format="0.000" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnSigma"  />
+			<Item name = "HistMax"          scpi="HMAX"     level="1"   text="最大值" description ="直方图中的样本最大值" format="0.000" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnHistMax"  />
+			<Item name = "HistMin"          scpi="HMIN"     level="1"   text="最小值" description ="直方图中的样本最小值" format="0.000" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnHistMin"  />
+			<Item name = "HistMid"          scpi="HMID"     level="1"   text="中间值" description ="直方图中的样本中间值" format="0.000" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnHistMid"  />
+			<Item name = "HistRange"        scpi="HRNG"     level="1"   text="峰峰值" description ="直方图中的样本峰峰值" format="0.000" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnHistRange"  />
+			<Item name = "HistMaxPop"       scpi="HMP"      level="1"   text="峰值点数" description ="直方图中的峰值点数" format="G" catalog="Other"  bImplementedInDll="false" bIsBase="false" bmpfilename = "btnPeaks"  />
+			<Item name = "HistTotalPop"     scpi="HTP"      level="1"   text="总样本数" description ="直方图中的总样本数" format="G" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnTotalPop"  />
+			<Item name = "HistWfmCnt"       scpi="HWC"      level="1"   text="总波形数" description ="直方图中的总波形数" format="G" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnHistWfmCnt"  />
+			<!--
+		<Item name = "Level@x"      scpi="LVL"      level="1"   text="电平@X" description ="指定位置处的电平" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnNarrowBandPhase"  />
+		<Item name = "NbPhase@frq"  scpi="NBPH"     level="1"   text="窄带相位@Frq" description ="指定频率上的窄带相位" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnNarrowBandPhase"  />
+        <Item name = "NbPower@frq"  scpi="NBPW"     level="1"   text="窄带功率@Frq" description ="指定频率上的窄带功率" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnNarrowBandPower"  />
+        
+		<Item name = "Middle" scpi="MID"  level="2" text="中部" description ="。" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnMiddle"  />
+		<Item name = "Skew" scpi="SKEW"  level="2" text="偏度" description ="超过一个沿的中间参考电平到随后超过另一个源的中间参考电平的时间。此测量在每个周期上进行。" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnSkew"  />
+		<Item name = "PulseTop" scpi="PTOP"  level="1" text="脉冲顶部" description ="。" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnPulseTop"  />
+		<Item name = "PulseBase" scpi="PBAS"  level="1" text="脉冲底部" description ="。" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnPulseBase"  />
+		<Item name = "PulseAmplitude" scpi="PAMP"  level="1" text="脉冲幅度" description ="脉冲的幅度。" catalog="Vertical" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnPulseAmplitude"  />
+		<Item name = "HistSigma"        scpi="SIG"      level="1"   text="标准差" description ="直方图数据的标准偏差" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnSigma"  />
+		<Item name = "HistTotalPop"     scpi="TPOP"     level="1"   text="样本个数" description ="直方图中的样本数量" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnWaveNumber"  />
+		<Item name = "HistPeaks"        scpi="PEKS"     level="1"   text="峰值个数" description ="直方图中峰的数量" catalog="Other" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnPeaks"  />
+		-->
+
+		</Measure>
+	</CustomStringTable>
+</GlobalStringResource>
+
+<!-- 
+      <Item name = "Setup" level="2" text="建立时间" description ="时钟沿到来之前数据不稳定到稳定的时间" catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnSetup.bmp"  />
+      <Item name = "Hold" level="2" text="保持时间" description ="时钟沿到来之后数据保持稳定的时间 " catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnSetup.bmp"  />
+      
+      <Item name = "Rate" level="1"  text="斜率" description ="波形上升沿的斜率(按照10%-90%计算)" catalog="Other" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnRate.bmp" />
+      
+      <Item name = "PulseCount"  level="1" text="计数脉冲" description ="在指定门限之间的脉冲个数" catalog="Horizontal" bImplementedInDll="true" bIsBase="false"  bmpfilename = "btnPulseCount.bmp" />
+      
+      <Item name = "Rise80" level="1"  text="上升20-80%" description ="上升沿从80-20%的时间" catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnRiseTm80L.bmp" />
+      <Item name = "Fall80"  level="1" text="下降20-80%" description ="下降沿从80-20%的时间" catalog="Horizontal" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnFallTm80L.bmp" />
+      <Item name = "PPreShoot" level="1"  text="前冲" description ="上升沿的前冲：（底值-上升沿最小值）/（顶值-基值）" catalog="Vertical" bImplementedInDll="true" bIsBase="false"  bmpfilename = "btnPreShoot.bmp" />
+      <Item name = "NPreShoot" level="1"  text="后冲" description ="下降沿的前冲：（下降沿最大值-顶值）/（顶值-基值）" catalog="Vertical" bImplementedInDll="true" bIsBase="false" bmpfilename = "btnDelayShoot.bmp" />
+      
+      <Item name = "RiseMax"  level="1" text="上升沿最大值" description ="返回上升沿的最高值" catalog="Horizontal" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "RiseMin" level="1"  text="上升沿最小值" description ="返回上升沿的最低值" catalog="Horizontal" bImplementedInDll="true" bIsBase="true"  bmpfilename = "" />
+      <Item name = "FallMax"  level="1" text="下降沿最大值" description ="返回下降沿的最高值   " bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FallMin"  level="1" text="下降沿最小值" description ="返回下降沿的最低值   " bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FirstRiseTop90"  level="1" text="初次上升沿90%" description ="返回第一个上升沿90%幅度的值 " bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FirstRiseTop80"  level="1" text="初次上升沿80%" description ="返回第一个上升沿80%幅度的值"  bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FirstFallTop90"  level="1" text="初次下降沿90%" description ="返回第一个下降沿90%幅度的值" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FirstFallTop80"   level="1" text="初次下降沿80%" description ="返回第一个下降沿80%幅度的值" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FirstRiseBase10"  level="1"  text="初次上升沿10%" description ="返回第一个上升沿10%幅度的值" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FirstRiseBase20"  level="1"  text="初次上升沿20%" description ="返回第一个上升沿20%幅度的值" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FirstFallBase10"  level="1"  text="初次下降沿10%" description ="返回第一个下降沿10%幅度的值" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FirstFallBase20"  level="1"  text="初次下降沿20%" description ="返回第一个下降沿20%幅度的值" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FirstOrient"  level="1" text="判断初次沿的的类型" description ="返回0代表第一个沿为上升沿，返回1代表第一个沿为下降沿，返回-1代表未找到上升或下降沿" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "PWidthSum"  level="1" text="正脉宽的和" description ="返回数据中所有正脉宽宽度的和" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "PWidthCnt" level="1"  text="正脉宽个数" description ="返回数据中正脉宽的个数" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "NWidthSum" level="1"  text="负脉宽的和" description ="返回数据中所有负脉宽宽度的和" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "NWidthCnt" level="1"  text="负脉宽个数" description ="返回数据中负脉宽的个数" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "FirstMid" level="1" text="初次上升沿中间值" description ="返回第一个上升沿的中间值" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "TotalCount" level="1" text="总点数" description ="参与计算的点数总和" bImplementedInDll="true" bIsBase="true" bmpfilename = "" />
+      <Item name = "Edge@lv" level="2" text="边沿数" description ="在指定门限之间波形的上升沿个数 " catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnEdge@L.bmp"  />
+      <Item name = "DTime@lv" level="2" text="交叉时间@Lv" description ="两个波形指定电平位置第一次交叉的时间 " catalog="Horizontal" bImplementedInDll="false" bIsBase="false" bmpfilename = "btnDeltatime@L.bmp"  />
+      -->
+
+

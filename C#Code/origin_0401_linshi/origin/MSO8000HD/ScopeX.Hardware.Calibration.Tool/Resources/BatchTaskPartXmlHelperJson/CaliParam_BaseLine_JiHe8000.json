@@ -1,0 +1,11 @@
+/*
+  BaseLineParam
+
+*/
+{
+  "SettingParam": {
+    "OscilloType": "JiHe_MSO8000X",
+    "FilePath": "自动校准xml生成\\JiHe8000\\基线校准.xml",
+    "BaselineErrorByLsb": "30 , 30, 30, 20, 20, 20, 20, 20  , 20  , 20, 20  , 20  , 20  , 20"
+  }
+}

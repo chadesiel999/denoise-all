@@ -1,0 +1,2592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomStringTable language="简体中文">
+	<!--需要多语言翻译的资源文件：Resources\CustomFormula.xml、Resources\Measure.xml-->
+	<Tip>
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDStandard.Standard" text="标准" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDStandard.Standard" text="标准" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDStandard.Extended" text="扩展" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDStandard.Extended" text="扩展" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Read" text="读" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Write" text="写" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Both" text="读写" />
+		<Item name="FDKuoZhan" text="FD扩展" />
+		<Item name="FDBiaoZhun" text="FD标准" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDStandard.FDStandard" text="FD标准" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDStandard.FDExtended" text="FD扩展" />
+		<Item name="PianYiLiang" text="偏移量" />
+		<Item name="SheZhiPianYiLiang" text="设置偏移量" />
+		<Item name="PianYiLiangShiNeng" text="偏移使能" />
+		<Item name="ZhongCaiYuCaiYangDian" text="仲裁域采样点" />
+		<Item name="ShuJuYuCaiYangDian" text="数据域采样点" />
+		<Item name="SheZhiZhongCaiYuCaiYangDian" text="设置仲裁域采样点" />
+		<Item name="SheZhiShuJuYuCaiYangDian" text="设置数据域采样点" />
+		<Item name="DsoFormTextInfo" text="数字存储示波器" />
+		<Item name="DanDuan" text="单端" />
+		<Item name="ChaFen" text="差分" />
+		<Item name="SheZhiYuZhi" text="设置阈值" />
+		<Item name="SheZhiShiZhongZhouQi" text="设置时钟周期" />
+		<Item name="SheZhiShiZhongRongCha" text="设置时钟容差" />
+		<Item name="SheZhiXinHaoSuLv" text="设置信号速率" />
+		<Item name="SheZhiFDXinHaoSuLv" text="设置FD信号速率" />
+		<Item name="SheZhiSDXinHaoSuLv" text="设置SD信号速率" />
+		<Item name="ZiDongXinHaoSuLv" text="自动信号速率" />
+		<Item name="ChaFenXinHao" text="差分信号" />
+		<Item name="ZiDingYiSuLv" text="自定义速率" />
+		<Item name="XinHaoSuLv" text="信号速率" />
+		<Item name="ShiZhongZhouQi" text="时钟周期" />
+		<Item name="ShiZhongRongCha" text="时钟容差" />
+		<Item name="ShuJuGeShi" text="数据格式" />
+		<Item name="DiZhuangTaiYuZhi" text="低阈值" />
+		<Item name="XinHaoShuRu" text="信号输入" />
+		<Item name="XinHaoShuRuL" text="信号输入L" />
+		<Item name="XinHaoLeiXing" text="信号类型" />
+                <Item name="ShanChu" text="删除" />
+                <Item name="RuKu" text="入库" />
+		<Item name="GaoZhuangTaiYuZhi" text="高阈值" />
+		<Item name="SheZhiData" text="设置数据" />
+		<Item name="ShuJuXianDingFu" text="数据限定符" />
+		<Item name="SheZhiShuJu" text="设置数据" />
+		<Item name="SheZhiBiaoQian" text="设置标签" />
+		<Item name="SheZhiShengDaoShu" text="设置通道数" />
+		<Item name="SheZhiMeiShengDaoShiZhongShu" text="设置每个通道的时钟位数" />
+		<Item name="SheZhiMeiShengDaoShuJuWeiShu" text="设置每个通道的数据位数" />
+		<Item name="SheZhiWeiYanShi" text="设置位延时" />
+		<Item name="WeiYanShi" text="位延时" />
+		<Item name="MeiShengDaoShuJuWeiShu" text="每个通道的数据位数" />
+		<Item name="MeiShengDaoShiZhongShu" text="每个通道的时钟位数" />
+		<Item name="ShengDaoShu" text="每个帧的通道数" />
+		<Item name="ShengDaoLeiXing" text="通道类型" />
+		<Item name="WeiXu" text="位序" />
+		<Item name="ShuJuJiXing" text="数据极性" />
+		<Item name="YouXiaoShiZhongYan" text="时钟边沿" />
+		<Item name="TongBuJiXing" text="字选择极性" />
+		<Item name="XieYiLeiXing" text="协议类型" />
+		<Item name="ShiZhongYuZhi" text="时钟阈值" />
+		<Item name="ShiZhongShuRu" text="时钟" />
+		<Item name="PianXuanYuZhi" text="字选择阈值" />
+		<Item name="PianXuanShuRu" text="字选择" />
+		<Item name="ShuJuYuZhi" text="数据阈值" />
+		<Item name="ShuJuShuRu" text="数据" />
+		<Item name="ZiJieShu" text="字节数" />
+		<Item name="ZiJieHao" text="字节号" />
+		<Item name="ShuJuHex" text="数据Hex" />
+		<Item name="ShuJuXianDing" text="数据限定" />
+		<Item name="SheZhiZiJieShu" text="设置字节数" />
+		<Item name="SheZhiZiJieHao" text="设置字节号" />
+		<Item name="CuoWuBaoLeiXing" text="错误包类型" />
+		<Item name="ZhengLeiXing" text="帧类型" />
+		<Item name="ShuJuZheng" text="数据帧" />
+		<Item name="ZhengFangXiang" text="帧方向" />
+		<Item name="LingDianPingGeShu" text="零电平个数" />
+		<Item name="IDBiaoZhun" text="ID标准" />
+		<Item name="BiaoZhunID" text="标准ID" />
+		<Item name="KuoZhanID" text="扩展ID" />
+		<Item name="SheZhiBiaoZhunID" text="设置标准ID" />
+		<Item name="SheZhiKuoZhanID" text="设置扩展ID" />
+		<Item name="SheZhiCaiYangDian" text="设置采样点" />
+		<Item name="SheZhiZiDingYiXinHaoSuLv" text="设置自定义信号速率" />
+		<Item name="SheZhiShuJuTongDaoYuZhi" text="设置数据通道阈值" />
+		<Item name="XinHaoShuRu1" text="信号输入" />
+		<Item name="CaiYangDian" text="采样点" />
+		<Item name="YuZhi" text="阈值" />
+		<Item name="FuWei" text="复位" />
+		<Item name="XinHaoShuRu2" text="信号输入2" />
+		<Item name="YuanChengZheng" text="远程帧" />
+		<Item name="SDXinHaoSuLv" text="SD信号速率" />
+		<Item name="FDXinHaoSuLv" text="FD信号速率" />
+		<Item name="D_ShuRuPositive" text="D+输入" />
+		<Item name="Yuan" text="源" />
+		<Item name="ZiDongDingBiao" text="自动定标" />
+		<Item name="CeLiangYuan" text="测量源" />
+		<Item name="Wu" text="无" />
+		<Item name="You" text="有" />
+		<Item name="MenXian" text="门限" />
+		<Item name="GaoMenXian" text="高门限" />
+		<Item name="DiMenXian" text="低门限" />
+		<Item name="D_ShuRuNegative" text="D-输入" />
+		<Item name="SuDu" text="速度" />
+		<Item name="XieYiBanBen" text="协议版本" />
+		<Item name="QBiaoZhi" text="Q标志" />
+		<Item name="ShuJu" text="数据" />
+		<Item name="ShuJuGaoWei" text="数据(高位)" />
+		<Item name="ShuJuDiWei" text="数据(低位)" />
+		<Item name="PianZhi" text="偏置" />
+		<Item name="ZiJiePianZhi" text="字节偏置" />
+		<Item name="DiZhi" text="地址" />
+		<Item name="DiZhiChangDu" text="地址长度" />
+		<Item name="MuBiaoDiZhi" text="MAC目的地址" />
+		<Item name="YuanDiZhi" text="MAC源地址" />
+		<Item name="MACChangduleixing" text="MAC长度/类型" />
+		<Item name="QTagKongZhiXinXi" text="QTag控制信息" />
+		<Item name="BiJiaoFangShi" text="比较方式" />
+		<Item name="SheZhiMACDiZhi" text="设置MAC地址" />
+		<Item name="SheZhiLingDianPingGeShu" text="设置零电平个数" />
+        <Item name="ZiJieChangDu" text="字节长度" />
+        <Item name="ShuJuPianYi" text="数据偏移" />
+        <Item name="YuanChengZhongduanDiZhi" text="远程终端地址" />
+        <Item name="JiaoYanFangShi" text="校验方式" />
+        <Item name="CuoWuLeiXing" text="错误类型" />
+        <Item name="YuanHeMuDiBiaoZhiFu" text="SDI" />
+        <Item name="ZhuanTaiHeBiaoZhiWei" text="SSM" />
+		<Item name="XunHuanData" text="循环Data" />
+		<Item name="XunHuanXianDingFu" text="循环限定符" />
+		<Item name="SheZhiChuFaShuJuChangDu" text="设置触发数据长度" />
+		<Item name="ChuFaShuJuChangDu" text="触发数据长度" />
+		<Item name="CuoWu" text="错误" />
+		<Item name="ZhuangTai" text="状态" />
+		<Item name="XiaoXiLeiXing" text="消息类型" />
+		<Item name="ZengQiangLeiXing" text="增强类型" />
+		<Item name="JieWeiZhengLeiXing" text="结尾帧类型" />
+		<Item name="SheZhiID" text="设置ID" />
+		<Item name="SheZhiCRC" text="设置CRC" />
+		<Item name="IDXianDingFu" text="ID限定符" />
+		<Item name="ZhiShiFu" text="指示符" />
+		<Item name="SheZhiMenXian" text="设置门限" />
+		<Item name="SheZhiZiJiePianZhi" text="设置字节偏置" />
+		<Item name="SheZhiJingHeChang" text="设置净荷长" />
+		<Item name="YuanLeiXing" text="源类型" />
+		<Item name="Yuan1" text="源1" />
+		<Item name="Yuan2" text="源2" />
+		<Item name="IDBaoKuoJiOuWei" text="ID包括奇偶位"/>
+		<Item name="ZiJiePianZhi" text="字节偏置" />
+		<Item name="TongDaoLeiXing" text="通道类型" />
+		<Item name="JingHeShu" text="静载荷长度" />
+		<Item name="DiZhiZhi" text="地址值" />
+		<Item name="ShuJuFangXiang" text="数据方向" />
+		<Item name="SheZhiDiZhi" text="设置地址" />
+		<Item name="SheZhiWeiKuan" text="设置位宽" />
+		<Item name="DiZhiWeiKuan" text="地址位宽" />
+		<Item name="SheZhiBoTeLv" text="设置波特率" />
+		<Item name="TCKShuRu" text="TCK输入" />
+		<Item name="TCKYuZhi" text="TCK阈值" />
+		<Item name="TMSShuRu" text="TMS输入" />
+		<Item name="TMSYuZhi" text="TMS阈值" />
+		<Item name="TDIShuRu" text="TDI输入" />
+		<Item name="TDIYuZhi" text="TDI阈值" />
+		<Item name="TDOShuRu" text="TDO输入" />
+		<Item name="TDOYuZhi" text="TDO阈值" />
+		<Item name="BiaoZhun_125k" text="标准(125kbps)" />
+		<Item name="KuaiSu_189k" text="快速(189kbps)" />
+		<Item name="JieMaTongDao" text="解码通道" />
+		<Item name="BoTeLv" text="波特率" />
+		<Item name="JiXing" text="极性" />
+        <Item name="ZiDingYi" text="自定义" />
+        <Item name="ZhiXing" text="执行" />
+		<Item name="XinHaoBiaoZhun" text="信号标准" />
+		<Item name="JianChaPIDJiaoYan" text="检查PID校验" />
+		<Item name="JiaoYan" text="校验" />
+		<Item name="GaoYuZhi" text="高阈值" />
+		<Item name="DiYuZhi" text="低阈值" />
+		<Item name="Zhi" text="值" />
+		<Item name="SheZhiKongXianYuZhi" text="设置空闲阈值" />
+		<Item name="WeiShunXu" text="位顺序" />
+		<Item name="KongXianDianPing" text="空闲电平" />
+		<Item name="MoShi" text="模式" />
+		<Item name="ZhenKongZhi" text="帧控制" />
+		<Item name="ShuJuA" text="数据域A" />
+		<Item name="ShuJuB" text="数据域B" />
+		<Item name="ChuanXingXiaoXi" text="串行消息" />
+		<Item name="ZhuangTaiWei" text="状态位" />
+		<Item name="FuZaiDaXiao" text="负载大小" />
+		<Item name="KongXianDianPingShuLiang" text="空闲电平数量" />
+		<Item name="SheZhiAddress" text="设置Address" />
+		<Item name="SheZhiAT" text="设置AT" />
+		<Item name="SheZhiShuJuChangDu" text="设置数据长度" />
+		<Item name="SheZhiMsgCode" text="设置MsgCode" />
+		<Item name="SheZhiSeqID" text="设置SeqID" />
+		<Item name="SheZhiTC" text="设置TC" />
+		<Item name="TLPLeiXing" text="TLP类型" />
+		<Item name="SheZhiZongXianHao" text="设置总线号" />
+		<Item name="SheZhiSheBeiHao" text="设置设备号" />
+		<Item name="SheZhiTag" text="设置Tag" />
+		<Item name="SheZhiGongNengHao" text="设置功能号" />
+		<Item name="WeiKuan" text="位宽" />
+		<Item name="TingZhiWei" text="停止位" />
+		<Item name="QiOuXiaoYan" text="奇偶校验" />
+		<Item name="XinYuan" text="信源" />
+		<Item name="LeiXing" text="类型" />
+		<Item name="XinYuanL" text="信源L" />
+		<Item name="SheZhiEOP" text="设置EOP" />
+		<Item name="JieShuBiaoZhi" text="结束标志" />
+		<Item name="ShuJu_Hex_" text="数据(Hex)" />
+		<Item name="ZanTingWei" text="暂停位" />
+		<Item name="ShuJuDuanGeShi" text="数据段格式" />
+		<Item name="ShuJuChangDu" text="数据长度" />
+		<Item name="ShuJuWeiKuan" text="数据位宽" />
+		<Item name="ShiZhongYan" text="时钟沿" />
+		<Item name="PianXuanYan" text="字选择极性" />
+		<Item name="SheZhiChaoShiShiJian" text="设置超时时间" />
+		<Item name="ChengZhengFangShi" text="成帧方式" />
+		
+		<Item name="ChaoShiShiJian" text="超时时间" />
+		<Item name="MISOShuRu" text="MISO输入" />
+		<Item name="MISOJiXing" text="MISO极性" />
+		<Item name="MISOYuZhi" text="MISO阈值" />
+		<Item name="MOSIShuRu" text="MOSI输入" />
+		<Item name="MOSIJiXing" text="MOSI极性" />
+		<Item name="MOSIYuZhi" text="MOSI阈值" />
+		<Item name="ShuJuTongDao" text="数据通道" />
+		<Item name="ZhengShu" text="帧数" />
+		<Item name="Decode_ZhengChang" text="帧长" />
+		<Item name="SheZhiZhengShu" text="设置帧数" />
+		<Item name="XiaoYanLeiXing" text="校验类型" />
+		<Item name="BanBen" text="版本" />
+		<Item name="DataXinYuan" text="Data信源" />
+		<Item name="SCKXinYuan" text="SCK信源" />
+		<Item name="TeShuBao" text="特殊包" />
+		<Item name="ShuJuBao" text="数据包" />
+		<Item name="CuoWuBao" text="错误包" />
+		<Item name="WoShouBao" text="握手包" />
+		<Item name="SheZhiShuJuZiJieShu" text="设置数据字节数" />
+		<Item name="ShuJuZiJieShu" text="数据字节数" />
+    <Item name="ShuJuZiJie" text="数据字节" />
+		<Item name="LingPaiBao" text="令牌包" />
+		<Item name="ZiXiaoZhengZhongQingDengDai_DangQianJinDu_" text="自校正中请等待，当前进度：" />
+		<Item name="MoNiTongDao" text="模拟通道" />
+		<Item name="ZiDingYiChuangKou" text="自定义" />
+		<Item name="XiangChaXiaoZheng" text="相差校正" />
+		<Item name="FuTu_" text="副图：" />
+		<Item name="ZhiFangTu" text="直方图" />
+		<Item name="DuoZhouQi" text="多周期" />
+		<Item name="DuiChengXing" text="对称性" />
+		<Item name="CaiYangLv" text="采样率" />
+		<Item name="GuanBi" text="关闭" />
+		<Item name="DaKai" text="打开" />
+		<Item name="ZhuDianShuChu" text="逐点输出" />
+		<Item name="XiaJiangShiJian" text="下降时间" />
+		<Item name="ShangShengShiJian" text="上升时间" />
+		<Item name="LianXuBo" text="连续波" />
+		<Item name="DiaoZhiBo" text="调制波" />
+		<Item name="SaoPin" text="扫频" />
+		<Item name="RenYiBo" text="任意波" />
+		<Item name="ZhanKongBi" text="占空比" />
+		<Item name="DiDianPing" text="低电平" />
+		<Item name="PianZhi" text="偏置" />
+		<Item name="ZhouQi" text="周期" />
+		<Item name="GaoDianPing" text="高电平" />
+		<Item name="FuDu" text="幅度" />
+		<Item name="FuDuXiTiao" text="幅度细调" />
+		<Item name="ZhiDingTiShi" text="截止频率处的衰减固定为3dB&#x000D;(通带功率的一半)" />
+		<Item name="PinLv" text="频率" />
+		<Item name="ZengYi" text="增益" />
+		<Item name="XiangWei" text="相位" />
+		<Item name="BoXingLeiXing" text="波形类型" />
+		<Item name="ZhengXianBo" text="正弦波" />
+		<Item name="ShuChu" text="输出" />
+		<Item name="ShuRu" text="输入" />
+		<Item name="FuJiaZaoSheng" text="附加噪声" />
+		<Item name="QiShiXiangWei" text="起始相位" />
+		<Item name="FanXiang" text="反相" />
+		<Item name="Kai" text="开" />
+		<Item name="Guan" text="关" />
+		<Item name="FuZaiZuKang" text="负载阻抗" />
+		<Item name="ShangSheng" text="上升" />
+		<Item name="Rise" text="上升沿" />
+		<Item name="XiaJiang" text="下降" />
+		<Item name="Fall" text="下降沿" />
+		<Item name="Both" text="任意沿" />
+		<Item name="XieBoLeiXing" text="谐波类型" />
+		<Item name="DiaoZhiLeiXing" text="调制类型" />
+		<Item name="DiaoZhiBoXing" text="调制波形" />
+		<Item name="PinPian_DiaoZhiShenDu_XiangPian" text="频偏#调制深度#相偏" />
+		<Item name="PinPian" text="频偏" />
+		<Item name="DiaoZhiPinLv_TiaoYuePinLv" text="调制频率#跳跃频率" />
+		<Item name="DiaoZhiPinLv" text="调制频率" />
+		<Item name="NeiBu" text="内部" />
+		<Item name="ShouDongChuFa" text="触发" />
+		<Item name="ChuFaYuan" text="触发源" />
+		<Item name="KaiQi" text="开启" />
+		<Item name="ChuFaShuChu" text="触发输出" />
+		<Item name="SaoPinLeiXing" text="扫频类型" />
+		<Item name="XianXing" text="线性" />
+		<Item name="SaoPinShiJian" text="扫频时间" />
+		<Item name="JieShuPinLv" text="结束频率" />
+		<Item name="QiShiPinLv" text="起始频率" />
+		<Item name="WeiRuanYaHei" text="微软雅黑" />
+		<Item name="ShiYuGuangBiao" text="时域光标" />
+		<Item name="GuangBiao" text="光标" />
+		<Item name="GuangBiaoCeLiang" text="光标测量" />
+		<Item name="TongBuYiDong" text="同步移动" />
+		<Item name="XianShi" text="显示" />
+		<Item name="BiaoJIXianShi" text="标记显示" />
+		<Item name="ShuiPing" text="水平" />
+		<Item name="ChuiZhi" text="垂直" />
+		<Item name="ShuiPing_ChuiZhi" text="水平＆垂直" />
+		<Item name="ShuJuXianShi" text="数据显示" />
+		<Item name="ShuJuLeiXing" text="数据类型" />
+		<Item name="WeiZhiXianShi" text="位置显示" />
+		<Item name="JueDuiXianShi" text="绝对值" />
+		<Item name="XiangDuiXianShi" text="相对值" />
+		<Item name="XuanFu" text="悬浮" />
+		<Item name="GuDing" text="固定" />
+		<Item name="BiaoJi" text="标记" />
+		<Item name="BiaoJiLeiXing" text="标记类型" />
+		<Item name="JuXing" text="矩形" />
+		<Item name="JiXing" text="极性" />
+		<Item name="FengZhiYiDaoZhongXin" text="峰值设为中心" />
+		<Item name="B_WeiZhi" text="B 位置" />
+		<Item name="A_WeiZhi" text="A 位置" />
+		<Item name="JueDuiZhi" text="绝对值" />
+		<Item name="ZengLiang" text="增量" />
+		<Item name="DuShu" text="读数" />
+		<Item name="ZhenFu" text="振幅" />
+		<Item name="BiaoJiShuLiang" text="标记数量" />
+		<Item name="ZiDongBiaoJi" text="自动标记" />
+		<Item name="PaiXuMoShi" text="排序模式" />
+		<Item name="ShouDongBiaoJi" text="手动标记" />
+		<Item name="Ji" text="基" />
+		<Item name="BaiFenBi" text="百分比" />
+		<Item name="Miao" text="秒" />
+		<Item name="Du" text="度" />
+		<Item name="JiangDangQianShuiPingWeiZhiSheWeiCanKao" text="将水平位置设为参考" />
+		<Item name="ShuiPingB_WeiZhi" text="水平B 位置" />
+		<Item name="ShuiPingA_WeiZhi" text="水平A 位置" />
+		<Item name="JiangDangQianChuiZhiWeiZhiSheWeiCanKao" text="将垂直位置设为参考" />
+		<Item name="ChuiZhiB_WeiZhi" text="垂直B 位置" />
+		<Item name="ChuiZhiA_WeiZhi" text="垂直A 位置" />
+		<Item name="ShuiPingDanWei" text="水平单位" />
+		<Item name="ChuiZhiDanWei" text="垂直单位" />
+		<Item name="JiangDangQianWeiZhiSheWeiCanKao" text="将当前位置设为参考" />
+		<Item name="DanWei" text="单位" />
+		<Item name="PinLvJi" text="频率计" />
+		<Item name="ShiJianLieBiao" text="事件列表" />
+		<Item name="SheZhiWeiZhi" text="设置位置" />
+		<Item name="XieYiXuanZe" text="协议选择" />
+		<Item name="XianShiGeShi" text="显示格式" />
+		<Item name="ZongXianXianShi" text="总线显示" />
+		<Item name="BiaoQian" text="标签" />
+		<Item name="SheWei0" text="设为0" />
+		<Item name="WeiYi" text="位移" />
+		<Item name="DuLiChuangKou" text="独立窗口" />
+		<Item name="ZongXian" text="总线" />
+		<Item name="XianShiSheZhi" text="显示设置" />
+		<Item name="DianPingSheZhi" text="电平设置" />
+		<Item name="_LuoJiTongDao" text=" 逻辑通道" />
+		<Item name="GaoDu" text="高度" />
+		<Item name="Di" text="低" />
+		<Item name="Zhong" text="中" />
+		<Item name="Gao" text="高" />
+		<Item name="QuanXuan" text="全选" />
+		<Item name="QingChu" text="清除" />
+		<Item name="XuanXiang" text="选项" />
+		<Item name="TongDao" text="通道" />
+		<Item name="WeiZhi" text="位置" />
+		<Item name="ChaZhi" text="差值" />
+		<Item name="ZiDongPaiXu" text="自动排序" />
+		<Item name="YuZhiDianPing" text="阈值电平" />
+		<Item name="XiLie" text="系列" />
+		<Item name="DianPingZu" text="电平组" />
+		<Item name="ChiZhi" text="迟滞" />
+		<Item name="LiShaYuTuXing" text="李沙育图形" />
+		<Item name="TianJia" text="添加" />
+		<Item name="ShiLiang" text="矢量" />
+		<Item name="Dian" text="点" />
+		<Item name="Shang" text="上" />
+		<Item name="Xia" text="下" />
+		<Item name="Zuo" text="左" />
+		<Item name="You_Right" text="右" />
+		<Item name="WangGeLiangDu" text="网格亮度" />
+		<Item name="WangGe" text="网格" />
+		<Item name="WangGeYangShi" text="网格样式" />
+		<Item name="BoXingLiangDu" text="波形亮度" />
+		<Item name="BoXingYangShi" text="波形样式" />
+		<Item name="ChuiZhiBiaoJiWeiZhi" text="垂直标记位置" />
+		<Item name="ShuiPingBiaoJiWeiZhi" text="水平标记位置" />
+		<Item name="XianShiBiaoJi" text="显示标记" />
+		<Item name="YuHui" text="余辉" />
+		<Item name="BaoCunHuiTu" text="保存绘图" />
+		<Item name="BaoCunHuiTuShuJu" text="保存绘图数据" />
+		<Item name="Yuan_X" text="源 X" />
+		<Item name="Yuan_Y" text="源 Y" />
+		<Item name="Z_Zhou" text="Z 轴" />
+		<Item name="BoXingSheZhi" text="波形设置" />
+		<Item name="YuanSheZhi" text="源设置" />
+		<Item name="ShuiPingKuoZhan" text="水平扩展" />
+		<Item name="_2_000x_SuoFang_" text="(2.000x 缩放)" />
+		<Item name="ChuiZhiKuoZhan" text="垂直扩展" />
+		<Item name="SheZhi" text="设置" />
+		<Item name="BoXing" text="波形" />
+		<Item name="JiePing" text="截屏" />
+		<Item name="ShenCunChuShuJuDaoChu" text="深存储数据导出" />
+		<Item name="XiTongSheZhi" text="系统设置" />
+		<Item name="AiShuJuDaoChu" text="AI 数据导出" />
+		<Item name="XuanZeTongDao" text="选择通道:" />
+		<Item name="WenJianQianZhui" text="文件前缀:" />
+		<Item name="CaiJiRenYuan" text="采集人员:" />
+		<Item name="CaiJiZhenShu" text="采集帧数:" />
+		<Item name="CaiJiJianGe" text="采集间隔:" />
+		<Item name="YangBenBiaoQian" text="样本标签:" />
+		<Item name="ShuJuYongTu" text="数据用途:" />
+		<Item name="ShiYanBeiZhu" text="实验备注:" />
+		<Item name="KaiShiCaiJiDaoChu" text="开始采集导出" />
+		<Item name="XunLianJi" text="Train (训练集)" />
+		<Item name="CeShiJi" text="Test (测试集)" />
+		<Item name="YanZhengJi" text="Val (验证集)" />
+		<Item name="WenJianGeShi" text="文件格式:" />
+        <Item name="GeShiBin" text="Binary (.bin + .json)" />
+        <Item name="GeShiTxt" text="Text (.txt)" />
+		<Item name="CunChu" text="存储" />
+		<Item name="MingCheng" text="名称" />
+		<Item name="RiQiHouZhui" text="日期后缀" />
+		<Item name="QuYu" text="区域" />
+		<Item name="PingMu" text="屏幕" />
+		<Item name="ZhaGe" text="栅格" />
+		<Item name="BaoCun" text="保存" />
+		<Item name="KaiShi" text="开始" />
+		<Item name="BaoCun_TiaoZhuan" text="保存＆跳转" />
+		<Item name="BiaoZhun" text="标准" />
+		<Item name="HeiBai" text="黑白" />
+		<Item name="FanSe" text="反色" />
+		<Item name="YanSe" text="颜色" />
+		<Item name="DaKaiWenJianSuoZaiWeiZhi" text="打开文件所在位置" />
+		<Item name="CheXiaoMoRenSheZhi" text="撤销默认设置" />
+		<Item name="MoRenSheZhi" text="默认设置" />
+		<Item name="DuQu" text="读取" />
+		<Item name="BoXingGeShi" text="波形格式" />
+		<Item name="WenJianGeShi" text="文件格式" />
+		<Item name="BaoCunShenCunChuShuJu" text="保存深存储数据" />
+		<Item name="BaoCunShuJuZhong_QingDengDai" text="保存数据中，请勿进行其他操作！！！当前进度：" />
+		<Item name="BaoCunJieQuShuJu" text="保存截取数据"/>
+		<Item name="BaoCun_HuiDiao" text="保存＆回调" />
+		<Item name="WenBenGeShi" text="文本格式" />
+		<Item name="SheJi" text="设计" />
+		<Item name="GuiYiHuaPinLv" text="归一化频率" />
+		<Item name="ZhiDing" text="指定" />
+		<Item name="ZuiXiao" text="最小" />
+		<Item name="SheJiFangFa" text="设计方法" />
+		<Item name="XiangYingLeiXing" text="响应类型" />
+		<Item name="DiTong" text="低通" />
+		<Item name="MoBan" text="模板" />
+		<Item name="FuPin" text="幅频" />
+		<Item name="XiangPin" text="相频" />
+		<Item name="ChongJiXiangYing" text="冲激响应" />
+		<Item name="LingJiDianTu" text="零极点图" />
+		<Item name="WindowType_Rectangle" text="矩形窗" />
+		<Item name="JieShu" text="阶数" />
+		<Item name="QueDing" text="确定" />
+		<Item name="JiaZai" text="加载" />
+		<Item name="QuXiao" text="取消" />
+		<Item name="JianPan" text="键盘" />
+		<Item name="LvBoQiSheJi" text="滤波器设计" />
+		<Item name="TongDaoC1" text="通道C1" />
+		<Item name="KuoZhanTongDaoZ1" text="扩展通道Z1" />
+		<Item name="TongDaoC2" text="通道C2" />
+		<Item name="KuoZhanTongDaoZ2" text="扩展通道Z2" />
+		<Item name="CeLiang" text="测量" />
+		<Item name="TongDaoC3" text="通道C3" />
+		<Item name="KuoZhanTongDaoZ3" text="扩展通道Z3" />
+		<Item name="TongDaoC4" text="通道C4" />
+		<Item name="KuoZhanTongDaoZ4" text="扩展通道Z4" />
+		<Item name="BangZhu" text="帮助" />
+		<Item name="ShuXueTongDao" text="数学通道" />
+		<Item name="CanKaoTongDaoR1" text="参考通道R1" />
+		<Item name="FangZhenBoXing" text="仿真波形" />
+		<Item name="CanKaoTongDao" text="参考通道" />
+		<Item name="CanKaoTongDaoR2" text="参考通道R2" />
+		<Item name="LuoJiTongDao" text="逻辑通道" />
+		<Item name="CanKaoTongDaoR3" text="参考通道R3" />
+		<Item name="TuiChu" text="退出" />
+		<Item name="CanKaoTongDaoR4" text="参考通道R4" />
+		<Item name="GuanJi" text="关机" />
+		<Item name="XinHaoYuanAWG1" text="信号源AWG1" />
+		<Item name="XinHaoYuanAWG2" text="信号源AWG2" />
+		<Item name="CaiJi" text="采集" />
+		<Item name="ShiJi" text="时基" />
+		<Item name="ChuFa" text="触发" />
+		<Item name="ZuiXiaoHua" text="最小化" />
+		<Item name="JianXiaoWuLiDangWei" text="减小物理档位" />
+		<Item name="ZengDaWuLiDangWei" text="增大物理档位" />
+		<Item name="DaYin" text="打印" />
+		<Item name="JianXiaoPianZhi" text="减小偏置" />
+		<Item name="ZengDaPianZhi" text="增大偏置" />
+		<Item name="BaoCunSheZhi" text="保存设置" />
+		<Item name="JianXiaoShiJi" text="减小时基" />
+		<Item name="ZengDaShiJi" text="增大时基" />
+		<Item name="DuQuSheZhi" text="读取设置" />
+		<Item name="JianXiaoChuFaShenDu" text="减小触发深度" />
+		<Item name="ZengDaChuFaShenDu" text="增大触发深度" />
+		<Item name="BaoCunPingMu" text="保存屏幕" />
+		<Item name="JianXiaoChuFaDianPing" text="减小触发电平" />
+		<Item name="ZengDaChuFaDianPing" text="增大触发电平" />
+		<Item name="JianXiaoSpin" text="减小Spin" />
+		<Item name="ZengDaSpin" text="增大Spin" />
+		<Item name="HuiFuChuChangSheZhi" text="恢复出厂设置" />
+		<Item name="QieHuanXianShiChuang" text="切换显示窗" />
+		<Item name="ZiDongSheZhi" text="自动设置" />
+		<Item name="CanShuKuaiZhao" text="参数快照" />
+		<Item name="DianYaBiao" text="电压表" />
+		<Item name="JianZhi" text="键值" />
+		<Item name="KuaiJieJianShuoMing" text="快捷键说明" />
+		<Item name="YanChi" text="延迟" />
+		<Item name="CeLiangXiang" text="测量项" />
+		<Item name="DangQianZhi" text="当前值" />
+		<Item name="KuaiSuYanTu" text="快速眼图" />
+		<Item name="YanTuCanShu" text="眼图参数" />
+		<Item name="XinDaoFangZhen" text="信道仿真" />
+		<Item name="JieShouDuanJunHeng" text="接收端均衡" />
+		<Item name="XuanZeWenJian" text="选择文件" />
+		<Item name="Jitter_YanTu" text="Jitter：眼图" />
+		<Item name="JitterTrend()" text="  TIE趋势图" />
+		<Item name="JitterSpectrum()" text="  TIE频谱图" />
+		<Item name="JitterHist()" text="   TIE直方图" />
+		<Item name="JitterEye()" text="  眼图" />
+		<Item name="JitterBathWave()" text="  浴盆曲线" />
+		<Item name="JitterQWave()" text="  Q因子曲线" />
+		<Item name="XunZhaoBiTeLv" text="寻找比特率" />
+		<Item name="BiTeLv" text="比特率" />
+		<Item name="ChangPinShiZhong" text="常频时钟" />
+		<Item name="ShiZhongHuiFuFangFa" text="时钟恢复方法" />
+		<Item name="ShuJuMoShiChangDu" text="数据模式长度" />
+		<Item name="BiJiaoYuZhi" text="比较阈值" />
+		<Item name="TuXingShiNeng" text="图形使能" />
+		<Item name="DouDongCanShu" text="抖动参数" />
+		<Item name="PinPuTuPanJueMenXian" text="频谱图判决门限" />
+		<Item name="ZhiFangTuZhuTiShu" text="直方图柱体数" />
+		<Item name="TuXingXuanZe" text="图形选择" />
+		<Item name="QuShiTu" text="趋势图" />
+		<Item name="YanTuBaoHeDu" text="眼图饱和度" />
+		<Item name="BeiZhu" text="备注" />
+		<Item name="DouDongFenXiCanShu" text="抖动分析参数" />
+		<Item name="LeiXing_1" text="类型I" />
+		<Item name="LeiXing_2" text="类型II" />
+		<Item name="PLLMoShi" text="PLL模式" />
+		<Item name="ZiRanPinLv" text="自然频率" />
+		<Item name="ZuNiYinZi" text="阻尼因子" />
+		<Item name="JieZhiXiShu" text="截止系数" />
+		<Item name="JieZhiPinLv" text="截止频率" />
+		<Item name="DouDongFenXi" text="抖动分析" />
+		<Item name="JianPanBanWeiZhaoDao" text="键盘板未找到" />
+		<Item name="ChuangTiMingChengBuNengWeiKong" text="窗体名称不能为空" />
+		<Item name="GongNengJieGuoMianBan" text="结果" />
+		<Item name="CanShu" text="参数" />
+		<Item name="JieZhiPinLv1" text="截止频率1" />
+		<Item name="ZiDingYiLvBoQi" text="自定义滤波器" />
+		<Item name="JieZhiPinLv2" text="截至频率2" />
+		<Item name="DangQianShuJuCaiYangLv" text="当前数据采样率" />
+		<Item name="ZhuTiShu" text="柱体数" />
+		<Item name="ZhiFangTuCanShu" text="直方图参数" />
+		<Item name="ZiDong" text="自动" />
+		<Item name="ShouDong" text="手动" />
+		<Item name="CanKaoDianPingSheZhi" text="参考电平设置" />
+		<Item name="DiCanKaoZhi" text="低参考值" />
+		<Item name="DiZhi___DingZhi" text="底值 - 顶值" />
+		<Item name="ZuiXiaoZhi___ZuiDaZhi" text="最小值 - 最大值" />
+		<Item name="Ling___ZuiXiaoZhi" text="零 - 最小值" />
+		<Item name="DiZhi___DingZhi" text="底值---顶值" />
+		<Item name="XunDingFangShi" text="寻顶方式" />
+		<Item name="CanKaoDanWei" text="参考单位" />
+		<Item name="GaoCanKaoZhi" text="高参考值" />
+		<Item name="ZhongCanKaoZhi" text="中参考值" />
+		<Item name="QiTa" text="其他" />
+		<Item name="Wu" text="无" />
+		<Item name="XuanZe" text="选择" />
+		<Item name="XuanZeCeLiangCanShu" text="选择测量参数" />
+		<Item name="PingJunZhi" text="平均值" />
+		<Item name="ZuiDaZhi" text="最大值" />
+		<Item name="ZuiXiaoZhi" text="最小值" />
+		<Item name="BiaoZhunCha" text="标准差" />
+		<Item name="CiShu" text="次数" />
+		<Item name="CanShuCeLiang" text="参数测量" />
+		<Item name="CaoZuo" text="操作" />
+		<Item name="CanShuSheZhi" text="参数设置" />
+		<Item name="YunSuanSheZhi" text="运算设置" />
+		<Item name="TongJi" text="统计" />
+		<Item name="ZhiShiQi" text="指示器" />
+		<Item name="TongGuoShiBaiCeShi" text="通过失败测试" />
+		<Item name="MeiDuanMingZhongShu_" text="每段命中数：" />
+		<Item name="P_FZhuangTai" text="P/F状态" />
+		<Item name="LabelVisiblity" text="打开标签" />
+		<Item name="XianShiCeShiMoBan" text="显示测试模板" />
+		<Item name="YunXing" text="运行" />
+		<Item name="BiaoZhunCeShiMoBan" text="标准测试模板" />
+		<Item name="SuoDingMoBan" text="锁定模板" />
+		<Item name="ChuangJian" text="创建" />
+		<Item name="ShuiPingRongXian" text="水平容限" />
+		<Item name="CanKaoYuan" text="参考源" />
+		<Item name="ChuiZhiRongXian" text="垂直容限" />
+		<Item name="JiXianCeShiMoBan" text="极限测试模板" />
+		<Item name="JiXianCeShi" text="极限测试" />
+		<Item name="BiaoZhunCeShi" text="标准测试" />
+		<Item name="CeShi" text="测试" />
+		<Item name="BoXingZongShu" text="波形总数" />
+		<Item name="ZongShiJian" text="总时间" />
+		<Item name="ZongWeiLiCiShu" text="总违例次数" />
+		<Item name="CeShiJieShuTiaoJian" text="测试结束条件" />
+		<Item name="YingKaoBei" text="硬拷贝" />
+		<Item name="MaiChong" text="脉冲" />
+		<Item name="BaoJing" text="报警" />
+		<Item name="CeShiShiBaiCaoZuo" text="测试失败操作" />
+		<Item name="DianLiuYuan" text="电流源" />
+		<Item name="DianYaYuan" text="电压源" />
+		<Item name="DianYuanZhiLiang" text="电源质量" />
+		<Item name="DianYuanFenXi" text="电源分析" />
+		<Item name="BoXingWeiFenFenXi_CeLiangKaiGuanJingTiGuanZaiKaiGuanGuoChengZhongDianYaHuoDianLiuBoXingDeBianHuaLv__n_nCeLiangBuZou__n1_JiangChaFenTanZhen_DuanYuJingTiGuanDeLouJiXiangLian__n2_ChaFenTanZhen_DuanLianJieDaoJingTiGuanDeYuanJi__n3_" text="波形微分分析：测量开关晶体管在开关过程中电压或电流波形的变化率。&#10;&#10;测量步骤：&#10;1.将差分探针+端与晶体管的漏极相连。&#10;2.差分探针-端连接到晶体管的源极。&#10;3." />
+		<Item name="JiangDianLiuTanTouYuJingTiGuanDeYuanJiXiangLian" text="将电流探头与晶体管的源极相连" />
+		<Item name="BoXingWeiFenLianJieShiYi" text="波形微分连接示意" />
+		<Item name="BoXingWeiFen" text="波形微分" />
+		<Item name="WeiFenYuan" text="微分源" />
+		<Item name="XianShiWeiFenBoXing" text="显示微分波形" />
+		<Item name="DianYuanXiaoLvFenXiMiaoShu" text="电源效率分析：电源效率分析衡量的是电源的输入功率和输出功率，然后根据输出功率和输入功率的比值来计算电源的效率。&#10;&#10;测量步骤：将电流探头和电压探头按图示连接。" />
+		<Item name="DianYuanXiaoLvLianJieShiYi" text="电源效率连接示意" />
+		<Item name="ShuRuDuan" text="输入端" />
+		<Item name="ShuChuDuan" text="输出端" />
+		<Item name="DianYuanXiaoLv" text="电源效率" />
+		<Item name="ShuRuDuanDianYaYuan" text="输入端电压源" />
+		<Item name="ShuRuDuanDianLiuYuan" text="输入端电流源" />
+		<Item name="ShuChuDuanDianYaYuan" text="输出端电压源" />
+		<Item name="ShuChuDuanDianLiuYuan" text="输出端电流源" />
+		<Item name="ShuRuLeiXing" text="输入类型" />
+		<Item name="ShuChuLeiXing" text="输出类型" />
+		<Item name="ZhuanHuanLeiXing" text="转换类型" />
+		<Item name="CeShiLeiXing" text="测试类型" />
+		<Item name="CaiJiShiJian" text="采集时间" />
+		<Item name="TurnOn" text="开启时间" />
+		<Item name="TurnOnOffTurnOnTime" text="开启时间" />
+		<Item name="TurnOff" text="关闭时间" />
+		<Item name="TurnOnOffTurnOffTime" text="关闭时间" />
+		<Item name="LangYongDianLiuCeLiang_LangYongDianLiuShiZhiSheBeiDiYiCiKaiJiShiXiShouDeZuiDaShunShiShuRuDianLiu__n_nCeLiangBuZou_JiangDianLiuTanTouAnZuoCeDianLuTuJinXingLianJie" text="浪涌电流：开关电源在接通瞬间，流入电源设备的远高于稳定电流的峰值电流。&#10;&#10;测量步骤：将电流探头按图示连接。" />
+		<Item name="LangYongDianLiuLianJieShiYi" text="浪涌电流连接示意" />
+		<Item name="LangYongDianLiu" text="浪涌电流" />
+		<Item name="XianShiDianLiuFengZhiZhuiZongBoXing" text="显示电流峰值追踪波形" />
+		<Item name="DiaoZhiFenXi_DiaoZhiFenXiTongChangYongYuBiaoZhengCongZhiLiuShuChuDaoKaiGuanJingTiGuanZhaJiZhongDuanDeMaiKuanDiaoZhiFanKui__n_nCeLiangBuZou_JiangDianYaTanTouHeDianLiuTanTouAnZuoCeDeCeLiangYuanLiTuLianJieHao_" text="调制分析：调制分析通常用于表征从直流输出到开关晶体管栅极终端的脉宽调制反馈。&#10;&#10;测量步骤：将电压探头和电流探头按左侧的测量原理图连接。" />
+		<Item name="DiaoZhiFenXiLianJieShiYi" text="调制分析连接示意" />
+		<Item name="ZhengMaiKuan" text="正脉宽" />
+		<Item name="Positive" text="正" />
+		<Item name="FuMaiKuan" text="负脉宽" />
+		<Item name="Negative" text="负" />
+		<Item name="CeLiangCanShu" text="测量参数" />
+		<Item name="DiaoZhiFenXi" text="调制分析" />
+		<Item name="DiaoZhiYuan" text="调制源" />
+		<Item name="XianShiCanShuZhuiZongBoXing" text="显示参数追踪波形" />
+		<Item name="ShunTaiFenXiCeLiang_ShunTaiFenXiZhuYaoShiCeLiangLeZhiLiuShuChuDeFuZaiShunTaiXiangYing_JiZaiFuZaiBianHuaQiJianZhiLiuShuChuWenDingSuoXuDeShiJian__n_nCeLiangBuZou_JiangDianLiuTanTouHeDianYaTanTouCanKaoZuoBianLianJieTuShi" text="瞬态分析测量：瞬态分析主要是测量了直流输出的负载瞬态响应，即在负载变化期间直流输出稳定所需的时间。&#10;&#10;测量步骤：将电流探头和电压探头参考左边连接图示" />
+		<Item name="ShunTaiFenXiLianJieShiYi" text="瞬态分析连接示意" />
+		<Item name="ShunTaiXiangYing" text="瞬态响应" />
+		<Item name="WenDingShuChuDianYa" text="稳定输出电压" />
+		<Item name="DianYaGuoChong" text="电压过冲" />
+		<Item name="Power1_XieBoFenXi_" text="Power1(谐波分析)" />
+		<Item name="XieBoFenXi_XieBoCeShiZhuYaoShiCeLiangDianYuanShuRuDuanDeDianLiu_DianYaDeXieBoQingKuang_TongGuoCeChuShuRuDianYuanXianShangDeDianYaYuDianLiuDeChuQiXieBoZhiLaiFenXiDianYuanZaiShuRuGuoChengSuoShouDeYingXiang__n_nCeLiangBuZou_JiangDianYaTanTouHeDianLiuTanTouAnZuoCeDeCeLiangYuanLiTuLianJieHao_" text="谐波分析：谐波测试主要是测量电源输入端的电流/电压的谐波情况，通过测出输入电源线上的电压与电流得出其谐波值来分析电源在输入过程所受的影响。&#10;&#10;测量步骤：将电压探头和电流探头按原理图连接。" />
+		<Item name="XieBoFenXiLianJieShiYi" text="谐波分析连接示意" />
+		<Item name="XieBoFenXi" text="谐波分析" />
+		<Item name="PinLv_Hz_" text="频率(Hz)" />
+		<Item name="LiangZhi___" text="量值(%)" />
+		<Item name="LiangZhiJunFangGen" text="均方根" />
+		<Item name="XiangWei_°_" text="相位(°)" />
+		<Item name="JieGuoBiao" text="结果表" />
+		<Item name="zhuizongtu" text="追踪图" />
+		<Item name="QiCi" text="奇次" />
+		<Item name="OuCi" text="偶次" />
+		<Item name="QuanBu" text="全部" />
+		<Item name="XieBoYuan" text="谐波源" />
+		<Item name="XieBoLeiXing" text="谐波类型" />
+		<Item name="XinHaoLianJieShiYi" text="信号连接示意图" />
+		<Item name="XieBoGeShu" text="谐波个数" />
+		<Item name="PinLvCanKao" text="频率参考" />
+		<Item name="FuDuSheZhi" text="幅度设置" />
+		<Item name="KeBianFuDuSheZhi" text="设置" />
+		<Item name="Power1_HuanLuFenXi_" text="Power1(环路分析)" />
+		<Item name="HuanLuFenXi_GeiKaiGuanDianYuanDianLuZhuRuYiGePinLvBuDuanBianHuaDeZhengXianBoXinHaoZuoWeiGanRaoXinHao_GenJuQiShuChuQingKuangLaiPanDuanGaiDianLuXiTongDuiGeGePinLvGanRaoXinHaoDeDiaoZhengNengLi__n_nCeLiangBuZou_JiangDianYaTanTou1_2HeAWGShuChuAnYuanLiTuLianJie_" text="环路分析：给开关电源电路注入一个频率不断变化的正弦波信号作为干扰信号，根据其输出情况来判断该电路系统对各个频率干扰信号的调整能力。&#10;&#10;测量步骤：将电压探头1、2和AWG输出按原理图连接。" />
+		<Item name="HuanLuFenXiLianJieShiYi" text="环路分析连接示意" />
+		<Item name="HuanLuFenXi" text="环路分析" />
+		<Item name="ShuJuLieBiao" text="数据列表" />
+		<Item name="BoTeTu" text="波特图" />
+		<Item name="LianXu" text="连续" />
+		<Item name="DanCi" text="单次" />
+		<Item name="SaoMiaoMoShi" text="Roll模式" />
+		<Item name="ShuChuYuan" text="输出源" />
+		<Item name="ShuRuYuan" text="输入源" />
+		<Item name="ShuChuDianYaYuan" text="输出电压源" />
+		<Item name="ShuChuDianLiuYuan" text="输出电流源" />
+		<Item name="ShuRuDianYaYuan" text="输入电压源" />
+		<Item name="ShuRuDianLiuYuan" text="输入电流源" />
+		<Item name="KaiShiPinLv" text="开始频率" />
+		<Item name="GaoZu" text="高阻" />
+		<Item name="ZuKang" text="阻抗" />
+		<Item name="TingZhiPinLv" text="停止频率" />
+		<Item name="SaoMiaoDian" text="扫描点" />
+		<Item name="HengDing" text="恒定" />
+		<Item name="KeBian" text="可变" />
+		<Item name="FuDuMoShi" text="幅度模式" />
+		<Item name="ChuFaZhuangTaiJianCha" text="触发状态检查" />
+		<Item name="YunXingFenXi" text="运行分析" />
+		<Item name="Power1_DianYuanZhiLiang_" text="Power1(电源质量)" />
+		<Item name="DianYuanZhiLiangFenXi_CeLiangShuRuDianYaHeDianLiuYiJiChanShengDeGongLv_CeShiJieGuoFanYingLeShuRuJiaoLiuXianLuDeZhiLiang__n_nCeLiangBuZou_JiangDianYaTanTouHeDianLiuTanTouAnTuShiLianJie_" text="电源质量分析：测量输入电压和电流以及产生的功率，测试结果反应了输入交流线路的质量。&#10;&#10;测量步骤：将电压探头和电流探头按图示连接。" />
+		<Item name="GongLvTu" text="功率图" />
+		<Item name="ShuRuGongLvTu" text="输入功率图" />
+		<Item name="ShuChuGongLvTu" text="输出功率图" />
+		<Item name="DianYaZhuanHuanSuLvTu" text="dv/dt图" />
+		<Item name="DianLiuZhuanHuanSuLvTu" text="di/dt图" />
+		<Item name="DianYuanZhiLiangLianJieShiYi" text="电源质量连接示意" />
+		<Item name="Power1_KaiGuanSunHao_" text="Power1(开关损耗)" />
+		<Item name="KaiGuanSunHao_KaiGuanSunHaoFenXiCeLiangKaiGuanQiJianZaiJingTiGuanDeKaiGuanJieDuanHeChuanDaoJieDuanDeGongLvHeNengLiangSunShi__n_nCeLiangBuZou_JiangDianYaTanTouHuoDianLiuTanTouAnTuShiJinXingLianJie_" text="开关损耗：开关损耗分析测量开关器件在晶体管的开关阶段和传导阶段的功率和能量损失。&#10;&#10;测量步骤：将电压探头或电流探头按图示进行连接。" />
+		<Item name="KaiGuanSunHaoCeShiLianJieShiYi" text="开关损耗测试连接示意" />
+		<Item name="KaiGuanSunHao" text="开关损耗" />
+		<Item name="Power1_WenBoFenXi_" text="Power1(纹波分析)" />
+		<Item name="WenBoFenXi_CeLiangDianYuanShuChuZhiLiuXinHaoDeFengDaoFengJiZhi_KeHengLiangDianYuanDeDianYaDiaoJieNengLiHeLvBoDeZhiLiang__n_nCeLiangBuZou_JiangDianYaTanTouHuoDianLiuTanTouAnTuShiJinXingLianJie_" text="纹波分析：测量电源输出直流信号的峰到峰极值，可衡量电源的电压调节能力和滤波的质量。&#10;&#10;测量步骤：将电压探头按图示进行连接。" />
+		<Item name="WenBoFenXiLianJieShiYi" text="纹波分析连接示意" />
+		<Item name="WenBoFenXi" text="纹波分析" />
+		<Item name="WenBoYuan" text="纹波源" />
+		<Item name="Power1_AnQuanGongZuoQu_" text="Power1(安全工作区)" />
+		<Item name="AnQuanGongZuoQu_CeLiangShuRuDianYaHeDianLiuYiJiChanShengDeGongLv_CeShiJieGuoFanYingLeShuRuJiaoLiuXianLuDeZhiLiang__n_nCeLiangBuZou_JiangDianYaTanTouHeDianLiuTanTouAnTuShiLianJie_" text="安全工作区：测量开关装置的电压和电流的X-Y图形。精准调控的SOA模版提供组件规格测试通过/失败的结果。&#10;&#10;测量步骤：将电压探头和电流探头按图示连接。" />
+		<Item name="AnQuanGongZuoQu" text="安全工作区" />
+		<Item name="Rdson_RdsonFenXiCeLiang" text="Rds(on)：Rds(on)分析测量开关器件在晶体管的导通稳态的等效电阻阻值。&#10;&#10;测量步骤：将电压探头或电流探头按图示连接。" />
+		<Item name="RdsonCeShiLianJieShiYi" text="Rds(on)测试连接示意" />
+		<Item name="KaiQiGuanBiShiJian" text="开启/关闭时间" />
+		<Item name="KaiQiGuanBiShiJian_FenXiCeLiang" text="开启时间：开启时间分析测量功率器件在打开电源输入电压到达峰值电压10%到输出电压到达输出峰值电压90%的响应时间。&#10;&#10;关闭时间：关闭时间分析测量功率器件在关闭电源后输入电压到达峰值电压10%到输出电压到达输出峰值电压10%的响应时间。&#10;&#10;测量步骤：将电压探头按图示进行连接。" />
+		<Item name="KaiQiGuanBiShiJianCeShiLianJieShiYi" text="开启/关闭时间测试连接示意" />
+		<Item name="ShuRuFengZhiDianYa" text="输入峰值电压" />
+		<Item name="ShuChuFengZhiDianYa" text="输出峰值电压" />
+		<Item name="SheZhiShuChuFengZhiDianYa" text="设置输入峰值电压" />
+		<Item name="SheZhiShuRuFengZhiDianYa" text="设置输出峰值电压" />
+		<Item name="SheZhiCaiJiShiJian" text="设置采集时间" />
+		<Item name="ZhuanHuanSuLv" text="转换速率" />
+		<Item name="ZhuanHuanSuLvMiaoShu" text="转换速率：测量电源的电流转换速率(di/dt)和电压转换速率(dv/dt)。&#10;&#10;di/dt：表示电流随时间的变化率，即单位时间内电流的变化量。&#10;&#10;dv/dt：表示电压随时间的变化率，即单位时间内电压的变化量。&#10;&#10;测量步骤：将电压探头和电流探头按图示连接。" />
+		<Item name="ZhuanHuanSuLvLianJieShiYi" text="转换速率连接示意" />
+		<Item name="SlewRateVoltageRaiseRateMax" text="dv/dt(上升沿)最大值" />
+		<Item name="SlewRateVoltageRaiseRateMin" text="                   最小值" />
+		<Item name="SlewRateVoltageRaiseRatePk2Pk" text="                   峰峰值" />
+		<Item name="SlewRateVoltageFallRateMax" text="dv/dt(下降沿)最大值" />
+		<Item name="SlewRateVoltageFallRateMin" text="                   最小值" />
+		<Item name="SlewRateVoltageFallRatePk2Pk" text="                   峰峰值" />
+		<Item name="SlewRateCurrentRaiseRateMax" text="di/dt(上升沿)最大值" />
+		<Item name="SlewRateCurrentRaiseRateMin" text="                   最小值" />
+		<Item name="SlewRateCurrentRaiseRatePk2Pk" text="                   峰峰值" />
+		<Item name="SlewRateCurrentFallRateMax" text="di/dt(下降沿)最大值" />
+		<Item name="SlewRateCurrentFallRateMin" text="                   最小值" />
+		<Item name="SlewRateCurrentFallRatePk2Pk" text="                   峰峰值" />
+		<Item name="DuiShu" text="对数" />
+		<Item name="ZuiDaDianLiu" text="最大电流" />
+		<Item name="ZuiDaGongLv" text="最大功率" />
+		<Item name="ZuiDaDianYa" text="最大电压" />
+		<Item name="ZuoBiaoLeiXing" text="坐标类型" />
+		<Item name="WeiLiShiTingZhi" text="违例时停止" />
+		<Item name="XZhouZuiDaZhi" text="X轴最大值" />
+		<Item name="XZhouZuiXiaoZhi" text="X轴最小值" />
+		<Item name="YZhouZuiXiaoZhi" text="Y轴最小值" />
+		<Item name="YZhouZuiDaZhi" text="Y轴最大值" />
+		<Item name="BtnSOAText" text="SOA 波形图" />
+		<Item name="BtnEditMaskText" text="编辑模板" />
+		<Item name="BtnLoadMaskText" text="导入模板" />
+		<Item name="BtnSaveMaskText" text="保存模板" />
+		<Item name="DefineMask" text="定义模板" />
+		<Item name="BtnAddText" text="添加点" />
+		<Item name="BtnDeleteText" text="删除点" />
+		<Item name="BtnSaveText" text="保存" />
+		<Item name="PSRRDescription" text="PSRR：衡量电路对电源电压变化的抑制能力的一个重要参数。它描述了电路在电源电压波动时，能够抑制这种波动并保持输出稳定的程度。&#10;&#10;测量步骤：将电压探头1、2和AWG输出按原理图连接。" />
+		<Item name="PSRRLianJieShiYi" text="PSRR连接示意" />
+		<Item name="TiaoZhiFenXi" text="调制分析" />
+		<Item name="ModulationAnalysisDescription" text="调制分析：通过测量和分析调制信号的频率、周期、占空比和脉冲宽度等参数，提高系统的效率、稳定性和可靠性。&#10;&#10;测量步骤：将电压探头和电流探头按图示连接。" />
+		<Item name="TiaoZhiFenXiLianJieShiYi" text="调制分析连接示意" />
+		<Item name="ModulationPeriod" text="周期" />
+		<Item name="ModulationFrequency" text="频率" />
+		<Item name="ModulationPDuty" text="正占空比" />
+		<Item name="ModulationNDuty" text="负占空比" />
+		<Item name="ModulationPWidth" text="正脉宽" />
+		<Item name="ModulationNWidth" text="负脉宽" />
+		<Item name="ShiJianChuo" text="时间戳" />
+		<Item name="ModulationRiseTime" text="上升时间" />
+		<Item name="ModulationFallTime" text="下降时间" />
+
+		<Item name="QuanPing" text="全屏" />
+		<Item name="FangXiang" text="方向" />
+		<Item name="HengXiang" text="横向" />
+		<Item name="ZongXiang" text="纵向" />
+		<Item name="XuanZeDaYinJi" text="选择打印机" />
+		<Item name="FuDuDuiShiJian" text="幅度对时间" />
+		<Item name="FuDuDangWei" text="幅度档位" />
+		<Item name="GongLv_Linear_" text="功率（Linear）" />
+		<Item name="STFTBuJin" text="STFT步进" />
+		<Item name="STFTFenXiChangDu" text="STFT分析长度" />
+		<Item name="PinLvDuiShiJian" text="频率对时间" />
+		<Item name="PinLvDangWei" text="频率档位" />
+		<Item name="ShuiPingDangWei" text="水平档位" />
+		<Item name="KuaDu" text="跨度" />
+		<Item name="ShuiPingZhongXin" text="水平中心" />
+		<Item name="ZhongXinPinLv" text="中心频率" />
+		<Item name="ZhongZhiPinLv" text="终止频率" />
+		<Item name="FFTChangDu" text="FFT长度" />
+		<Item name="XiangWeiDuiShiJian" text="相位对时间" />
+		<Item name="XiangWeiPu" text="相位谱" />
+		<Item name="PuBuTu" text="瀑布图" />
+		<Item name="XiangWeiDuiPinLv" text="相位对频率" />
+		<Item name="ChuiZhiDangWei" text="垂直档位" />
+		<Item name="TongDaoSheZhi" text="通道设置" />
+		<Item name="ShuiPingSheZhi" text="水平设置" />
+		<Item name="GuiJiSheZhi" text="轨迹设置" />
+		<Item name="STFTSheZhi" text="STFT设置" />
+		<Item name="_ShePinTongDao" text=" 射频通道" />
+		<Item name="PinLvPuXian" text="频率谱线" />
+		<Item name="CaiYang" text="采样" />
+		<Item name="PingJun" text="平均" />
+		<Item name="ZuiXiaoZhiBaoChi" text="最小值保持" />
+		<Item name="ZuiDaZhiBaoChi" text="最大值保持" />
+		<Item name="ZhengChang" text="正常" />
+		<Item name="CanKaoDianPing" text="参考电平" />
+		<Item name="ChuangHanShu" text="窗函数" />
+		<Item name="ZhongXinFuZhi" text="中心幅值" />
+		<Item name="Chuang" text="窗" />
+		<Item name="BianYan" text="边沿" />
+		<Item name="Edge" text="边沿" />
+		<Item name="Pulse" text="脉宽" />
+		<Item name="Timeout" text="超时" />
+		<Item name="Runt" text="欠幅" />
+		<Item name="Window" text="窗" />
+		<Item name="Transition" text="斜率" />
+		<Item name="Pattern" text="码型" />
+		<Item name="SetupHold" text="建立保持" />
+		<Item name="Auto" text="自动" />
+		<Item name="ShangShengYan" text="上升沿" />
+		<Item name="XiaJiangYan" text="下降沿" />
+		<Item name="OuHe" text="耦合" />
+		<Item name="TriggerOuHe" text="触发耦合" />
+		<Item name="DianPing" text="电平" />
+		<Item name="ShuRuZuKang" text="输入阻抗" />
+		<Item name="YaoCaiQuDeCaoZuo" text="要采取的操作" />
+		<Item name="BaoCunPeiZhi" text="保存配置" />
+		<Item name="ShiJianCaoZuo" text="事件操作" />
+		<Item name="RuanJianSouSuo" text="软件搜索" />
+		<Item name="SouSuo" text="搜索" />
+		<Item name="BoXingSouSuo" text="波形搜索" />
+		<Item name="SouSuoLeiXing_" text="搜索类型：" />
+		<Item name="JieGuoShuLiang_" text="结果数量：" />
+		<Item name="BianHao" text="编号" />
+		<Item name="MiaoShu" text="描述" />
+		<Item name="SouSuoShiJianLieBiao" text="事件列表" />
+		<Item name="FuZhiDaoSouSuo" text="触发复制到搜索" />
+		<Item name="SheZhiDaoChuFa" text="搜索复制到触发" />
+		<Item name="GuanBiDangQianXiang" text="关闭当前项" />
+		<Item name="GuanBiQuanBuXiang" text="关闭全部项" />
+		<Item name="SouSuoLeiXing" text="搜索类型" />
+		<Item name="ChiXuShiJianShangXian" text="持续时间上限" />
+		<Item name="ChiXuShiJianXiaXian" text="持续时间下限" />
+		<Item name="DingYiShuRu" text="定义输入" />
+		<Item name="LuoJiZiGeQueRen" text="逻辑资格确认" />
+		<Item name="DaYu" text="大于" />
+		<Item name="XiaoYu" text="小于" />
+		<Item name="FanWeiNei" text="范围内" />
+		<Item name="Yu" text="与" />
+		<Item name="Huo" text="或" />
+		<Item name="YuFei" text="与非" />
+		<Item name="TiaoJian" text="条件" />
+		<Item name="BaoCunJiePing" text="保存截屏" />
+		<Item name="BaoCunBoXing" text="保存波形" />
+		<Item name="TingZhiCaiJi" text="停止采集" />
+		<Item name="ChuFaShiJian" text="触发事件" />
+		<Item name="CeLiangXianZhiShiBai" text="测量限制失败" />
+		<Item name="ZhaoDaoSouSuoShiJian" text="找到搜索事件" />
+		<Item name="MoBanCeShiMingZhong" text="模板测试命中" />
+		<Item name="MoBanCeShiShiBai" text="模板测试失败" />
+		<Item name="MoBanCeShiTongGuo" text="模板测试通过" />
+		<Item name="CeShiJieGuo" text="测试结果" />
+		<Item name="BuShiHe" text="不适合" />
+		<Item name="BaoCunShu" text="保存数" />
+		<Item name="Zheng" text="正" />
+		<Item name="Fu" text="负" />
+		<Item name="MaiChongKuanDuShangXian" text="脉冲宽度上限" />
+		<Item name="MaiChongKuanDu" text="脉冲宽度" />
+		<Item name="JiePingGeShi" text="截屏格式" />
+		<Item name="WenJianMing" text="文件名" />
+		<Item name="BaoChiShiJian" text="保持时间" />
+		<Item name="ShiZhongDianPing" text="时钟电平" />
+		<Item name="JianLi" text="建立" />
+		<Item name="BaoChi" text="保持" />
+		<Item name="JianLi_BaoChi" text="建立/保持" />
+		<Item name="ShuJuXiaXianDianPing" text="数据下限电平" />
+		<Item name="ShuJuShangXianDianPing" text="数据上限电平" />
+		<Item name="ShiZhongYuan" text="时钟源" />
+		<Item name="JianLiShiJian" text="建立时间" />
+		<Item name="ShiZhongBianYan" text="时钟边沿" />
+		<Item name="ShuJuYuan" text="数据源" />
+		<Item name="ChiXuShiJian" text="持续时间" />
+		<Item name="DianPingZhuangTai" text="电平状态" />
+		<Item name="XieLv" text="斜率" />
+		<Item name="JinRu" text="进入" />
+		<Item name="WaiBu" text="外部" />
+		<Item name="ChuangKouFanWei" text="窗口范围" />
+		<Item name="ShiJianTiaoJian" text="时间条件" />
+		<Item name="ChuangKouDianPingXiaXian" text="窗口电平下限" />
+		<Item name="ChuangKouDianPingShangXian" text="窗口电平上限" />
+		<Item name="XuanZeZhengXu" text="选择帧序" />
+		<Item name="ShunXuMoShi" text="顺序模式" />
+		<Item name="DuiDie" text="堆叠" />
+		<Item name="DieJia" text="叠加" />
+		<Item name="XianShiLeiXing" text="显示类型" />
+		<Item name="ZhengXuanZe" text="帧选择" />
+		<Item name="JieShuZheng" text="结束帧" />
+		<Item name="QiShiZheng" text="起始帧" />
+		<Item name="XuanDingZheng" text="选定帧" />
+		<Item name="CanKaoZheng" text="参考帧" />
+		<Item name="XianShiCanKaoZheng" text="显示参考帧" />
+		<Item name="XuanJianMing" text="选件名" />
+		<Item name="ZhuangTai" text="状态" />
+		<Item name="YiJiHuo" text="已激活" />
+		<Item name="WeiJiHuo" text="未激活" />
+		<Item name="QingXuanZeXuKeWenJian" text="请选择许可文件" />
+		<Item name="XuKeWenJian___lic" text="许可文件|*.lic" />
+		<Item name="YiAnZhuangDeXuanJian_" text="已安装的选件：" />
+		<Item name="XingHao_" text="型号:" />
+		<Item name="RuanJianBanBen_" text="软件版本" />
+		<Item name="GuJianBanBen_" text="固件版本" />
+		<Item name="YingJianBanBen_" text="硬件版本" />
+		<Item name="ChanPinXuHao_" text="产品序号" />
+		<Item name="ShengChanRiQi_" text="生产日期" />
+		<Item name="XiangXiXinXi" text="详细信息" />
+		<Item name="YiChuXuKeZhengShu" text="移除许可证书" />
+		<Item name="AnZhuangXuKeZhengShu" text="安装许可证书" />
+		<Item name="XiTongXinXi" text="系统信息" />
+		<Item name="TiShi_QingZhengQueJieRuWaiChuFaXinHao_FouZeAWGWuXinHaoShuChu_" text="提示：请正确接入外触发信号，否则AWG无信号输出！" />
+		<Item name="ChuiZhiSheZhi" text="垂直设置" />
+		<Item name="CaiJiSheZhi" text="采集设置" />
+		<Item name="ChuFaSheZhi" text="触发设置" />
+		<Item name="ZiDongXiaoZheng" text="自动校正" />
+		<Item name="XiaoZheng" text="校正" />
+		<Item name="ShuRuShuChu" text="输入输出" />
+		<Item name="TongBu" text="同步" />
+		<Item name="FuZhuShuRuXinHao" text="辅助输入信号" />
+		<Item name="TongGuoCeShi" text="通过测试" />
+		<Item name="FuZhuShuChuXinHao" text="辅助输出信号" />
+		<Item name="WaiBuShiZhongSuoDingZhuangTai" text="外部时钟锁定状态" />
+		<Item name="ShuaXin" text="刷新" />
+		<Item name="MoKuaiMing" text="模块名" />
+		<Item name="BanBenHao" text="版本号" />
+		<Item name="GuJianXinXi_" text="固件信息：" />
+		<Item name="YiJiaZaiMoKuai_" text="已加载模块：" />
+		<Item name="XiangXiXinXi_" text="详细信息 " />
+		<Item name="JianTiZhongWen" text="简体中文" />
+		<Item name="FanTiZhongWen" text="繁體中文" />
+		<Item name="ShiJian_MuBiaoWenDu_TongDaoFengShanZhuanSu_CH1_CH2_CH3_CH4_Pcie_Fpga_Pcie_Board1_Pcie_Board2_Pro_Fpfa_Acq_Fpga_Acq_Board" text="时间,目标温度,通道风扇转速,CH1,CH2,CH3,CH4,Pcie_Fpga,Pcie_Board1,Pcie_Board2,Pro_Fpfa,Acq_Fpga,Acq_Board" />
+		<Item name="YouCeFengShan_" text="右侧风扇：" />
+		<Item name="ZuoCeFengShan_" text="左侧风扇：" />
+		<Item name="YingPanDangQianWenDu" text="硬盘当前温度" />
+		<Item name="YingPanMuBiaoWenDu" text="硬盘目标温度" />
+		<Item name="CpuFengShanZhuanSu" text="Cpu风扇转速" />
+		<Item name="PcieFengShanZhuanSu" text="Pcie风扇转速" />
+		<Item name="ChnlFengShanZhuanSu" text="Chnl风扇转速" />
+		<Item name="TongDaoMuBiaoWenDu" text="通道目标温度" />
+		<Item name="WeiFenCanShu_D_" text="微分参数(D)" />
+		<Item name="JiFenCanShu_I_" text="积分参数(I)" />
+		<Item name="BiLiCanShu_P_" text="比例参数(P)" />
+		<Item name="WenDuQuXian" text="温度曲线" />
+		<Item name="IPDiZhiGeShiBuDui" text="IP地址格式不对" />
+		<Item name="ZiWangYanMaGeShiBuDui" text="子网掩码格式不对" />
+		<Item name="WangGuanDiZhiGeShiBuDui" text="网关地址格式不对" />
+		<Item name="ZhuDNSDiZhiGeShiBuDui" text="主DNS地址格式不对" />
+		<Item name="BeiYongDNSDiZhiGeShiBuDui" text="备用DNS地址格式不对" />
+		<Item name="MeiYouKeYongShiPeiQi" text="没有可用适配器" />
+		<Item name="ShiPeiQiZongShu__" text="适配器总数: " />
+		<Item name="_____________________Di" text="---------------------第" />
+		<Item name="GeShiPeiQiXinXi_____________________" text="个适配器信息---------------------" />
+		<Item name="MiaoShuXinXi_____" text="描述信息:    " />
+		<Item name="JieKouLeiXing_____" text="接口类型:    " />
+		<Item name="SuDu_________" text="速度:        " />
+		<Item name="HuoQuIPFangShi___" text="获取IP方式:  " />
+		<Item name="IPDiZhi_______" text="IP地址:      " />
+		<Item name="ZiWangYanMa_____" text="子网掩码:    " />
+		<Item name="WangGuan_________" text="网关:        " />
+		<Item name="ZhuDNSDiZhi____" text="主DNS地址:   " />
+		<Item name="BeiYongDNSDiZhi__" text="备用DNS地址: " />
+		<Item name="DHCPFuWuQi___" text="DHCP服务器:  " />
+		<Item name="MACDiZhi______" text="MAC地址:     " />
+		<Item name="DiaoShiShuJuYuan" text="调试数据源" />
+		<Item name="CaiJiBan" text="采集板" />
+		<Item name="DiaoShi" text="调试" />
+		<Item name="WenDuJianCe" text="温度检测" />
+		<Item name="SanWeiTu" text="三维图" />
+		<Item name="YanTu" text="眼图" />
+		<Item name="GuanBiFuTu" text="关闭副图" />
+		<Item name="LiShaYu" text="李沙育" />
+		<Item name="P_F_CeShi" text="P/F 测试" />
+		<Item name="HuiFuChuChang" text="恢复出厂" />
+		<Item name="GuanBiTuCeng" text="关闭图层" />
+		<Item name="KuoZhan" text="扩展" />
+		<Item name="ShiLiangFenXi" text="矢量分析" />
+		<Item name="XinHaoYuan1" text="信号源1" />
+		<Item name="XinHaoYuan2" text="信号源2" />
+		<Item name="ZhuXiao" text="注销" />
+		<Item name="ZhongQi" text="重启" />
+		<Item name="ZhengJiWenDu" text="整机温度" />
+		<Item name="DangQianZhi_" text="当前值：" />
+		<Item name="WenDuYuan_" text="温度源：" />
+		<Item name="FengShanKongZhi" text="风扇控制" />
+		<Item name="FengShanZhuanShu" text="风扇转数" />
+		<Item name="ZhuanShuSheZhi" text="转数设置" />
+		<Item name="Kai_Guan" text="开/关" />
+		<Item name="_WenDuJianCe" text=" 温度检测" />
+		<Item name="YiSuoDing" text="已锁定" />
+		<Item name="WeiSuoDing" text="未锁定" />
+		<Item name="CaiJiMoShi" text="采集模式" />
+		<Item name="ChaZhiFangShi" text="插值方式" />
+		<Item name="10MHzShiZhongShuRu" text="10MHz时钟输入" />
+		<Item name="ChangCunChuShenDu" text="存储深度" />
+		<Item name="ZhengXian" text="正弦" />
+		<Item name="CunChuMoShi" text="存储模式" />
+		<Item name="PuTong" text="普通" />
+		<Item name="KuaiCai" text="快采" />
+		<Item name="BaoLuoXian" text="包络线" />
+		<Item name="DingBu" text="顶部" />
+		<Item name="DengXiaoCaiYang" text="等效采样" />
+		<Item name="Hui__Fang" text="回放" />
+		<Item name="Ting__Zhi" text="停止" />
+		<Item name="ZhengChangDu" text="帧长度" />
+		<Item name="ZongZhengShu" text="总帧数" />
+		<Item name="DanZheng" text="单帧" />
+		<Item name="LianXuZheng" text="连续帧" />
+		<Item name="XianShiMoShi" text="显示模式" />
+		<Item name="ZhengChuFaJianGeShiJian" text="帧触发间隔时间" />
+		<Item name="Zhong__Cai" text="重  采" />
+		<Item name="ShiJiSheZhi" text="时基设置" />
+		<Item name="YanChiGuiLing" text="延迟归零" />
+		<Item name="ShuiPingKeDu" text="水平刻度" />
+		<Item name="TiShi" text="提示" />
+		<!--<Item name="__GuJianBanBen_" text="  固件版本：" />-->
+		<!--<Item name="RuanJianBanBen_" text="软件版本：" />-->
+		<Item name="LuoJi_" text="逻辑+" />
+		<Item name="ShuXue_" text="数学+" />
+		<Item name="CanKao_" text="参考+" />
+		<Item name="ZongXian_" text="总线+" />
+		<Item name="ShePin_" text="射频+" />
+		<Item name="MaiKuan" text="脉宽" />
+		<Item name="JianGe" text="间隔" />
+		<Item name="ShiPin" text="视频" />
+		<Item name="MaXing" text="码型" />
+		<Item name="ChaoShi" text="超时" />
+		<Item name="JianLiBaoChi" text="建立保持" />
+		<Item name="NBianYan" text="N边沿" />
+		<Item name="QianFu" text="欠幅" />
+		<Item name="MaoCi" text="毛刺" />
+		<Item name="ChuangKou" text="窗口" />
+		<Item name="DuoJi" text="多级" />
+		<Item name="ChuanXing" text="串行" />
+		<Item name="BaoLuo" text="包络" />
+		<Item name="FengZhiJianCe" text="峰值检测" />
+		<Item name="GaoFenBianLv" text="高分辨率" />
+		<Item name="Ci" text="次" />
+		<Item name="PuTongCunChu" text="普通存储" />
+		<Item name="Wei" text="位" />
+		<Item name="YingYong" text="应用" />
+		<Item name="yyyyNianMMYueddRi" text="yyyy年MM月dd日" />
+		<Item name="ShiJian" text="事件" />
+		<Item name="PeiZhi" text="配置" />
+		<Item name="DecodingParameter" text="解码参数" />
+		<Item name="RenYi" text="任意" />
+		<Item name="RenYiYan" text="任意沿" />
+		<Item name="QuanBuSheZhi" text="全部设置" />
+		<Item name="QuanBuTuXing" text="全部" />
+		<Item name="TongDaoFenZuXuanZe" text="通道分组选择" />
+		<Item name="LuoJiShuRuDingYi" text="逻辑输入定义" />
+		<Item name="ShiJian" text="时间" />
+		<Item name="YanChiShiJian" text="延迟时间" />
+		<Item name="ShiJianJiShu" text="事件计数" />
+		<Item name="ShiJian_A" text="事件 A" />
+		<Item name="ShiJian_B" text="事件 B" />
+		<Item name="ShiJian_C" text="事件 C" />
+		<Item name="ShiJian_D" text="事件 D" />
+		<Item name="XinYuan1DianPing" text="信源1电平" />
+		<Item name="XinYuan2DianPing" text="信源2电平" />
+		<Item name="XinYuan1BianYan" text="信源1边沿" />
+		<Item name="XinYuan1" text="信源1" />
+		<Item name="ShiJianXiaXian" text="时间下限" />
+		<Item name="XinYuan2" text="信源2" />
+		<Item name="XinYuan2BianYan" text="信源2边沿" />
+		<Item name="ShiJianShangXian" text="时间上限" />
+		<Item name="WaiChuFaShuaiJian" text="外触发衰减" />
+		<Item name="BuYong" text="不用" />
+		<Item name="QiangZhi" text="强制" />
+		<Item name="FuZhuChuFa" text="辅助触发" />
+		<Item name="KeShiChuFa" text="区域触发" />
+		<Item name="CeLiangChuFa" text="测量触发" />
+		<Item name="ShiYi" text="释抑" />
+		<Item name="MaoCiKuanDu" text="毛刺宽度" />
+		<Item name="JianGeShiJian" text="间隔时间" />
+		<Item name="JianGeShiJianShangXian" text="间隔时间上限" />
+		<Item name="BianYanLeiXing" text="边沿类型" />
+		<Item name="KongXianShiJian" text="空闲时间" />
+		<Item name="BianYanShu" text="边沿数" />
+		<Item name="ChuFaFangShi" text="触发方式" />
+		<Item name="ZongXianLeiXing" text="总线类型" />
+		<Item name="ShuJuDianPing" text="数据电平" />
+		<Item name="JianLi__BaoChi" text="建立&amp;&amp;保持" />
+		<Item name="MaXingSheZhi" text="码型设置" />
+		<Item name="ShiZhong" text="时钟" />
+		<Item name="DangTiaoJianManZuShi" text="当条件满足时" />
+		<Item name="XinYuanXuanZeJiDianPingSheZhi" text="信源选择及电平设置" />
+		<Item name="XingShu" text="行数" />
+		<Item name="ChangShu" text="场数" />
+		<Item name="RenYiXingChuFa" text="任意行触发" />
+		<Item name="MaiChongKuanDuXiaXian" text="脉冲宽度下限" />
+		<Item name="XiaXian" text="下限" />
+		<Item name="ShangXian" text="上限" />
+		<Item name="FuZhuDingWei" text="辅助定位" />
+		<Item name="QuYuNei" text="相交" />
+		<Item name="QuYuWai" text="不相交" />
+		<Item name="SanJiaoXing" text="三角形" />
+		<Item name="WindowType_Rectangle" text="矩形" />
+		<Item name="XingZhuang" text="形状" />
+		<Item name="BianShu" text="边数" />
+		<Item name="Zhong__Zhi" text="重  置" />
+		<Item name="ZiDongLiangCheng" text="自动量程" />
+		<Item name="WuCaoZuo" text="无操作" />
+		<Item name="HunPin" text="混频" />
+		<Item name="LvBo" text="滤波" />
+		<Item name="JunHeng" text="均衡" />
+		<Item name="GeZhi" text="隔直" />
+		<Item name="ZaiBoGuJi" text="载波估计" />
+		<Item name="XiangWeiGuJi" text="相位估计" />
+		<Item name="MoNi" text="模拟" />
+		<Item name="ShuZi" text="数字" />
+		<Item name="GeZhiSheZhi" text="隔直设置" />
+		<Item name="ShouLianYuZhi" text="收敛阈值" />
+		<Item name="FuHaoGeShu" text="符号个数" />
+		<Item name="ChouTouShu" text="抽头数" />
+		<Item name="JunHengSheZhi" text="均衡设置" />
+		<Item name="DaiKuan" text="带宽" />
+		<Item name="GunJiangYinZi" text="滚降因子" />
+		<Item name="LvBoSheZhi" text="滤波设置" />
+		<Item name="GeShi" text="格式" />
+		<Item name="FuHaoLv" text="符号率" />
+		<Item name="DingShiTongBu" text="定时同步" />
+		<Item name="ChaZhiFangFa" text="插值方法" />
+		<Item name="DingShiGuJi" text="定时估计" />
+		<Item name="ShiNeng" text="使能" />
+		<Item name="ZaiBoPinLv" text="载波频率" />
+		<Item name="HunPinSheZhi" text="混频设置" />
+		<Item name="FuHaoShu" text="符号数" />
+		<Item name="XiangWeiGuJiSheZhi" text="相位估计设置" />
+		<Item name="I_LuShiYuTu" text="I 路时域图" />
+		<Item name="Q_LuShiYuTu" text="Q 路时域图" />
+		<Item name="XingZuoTu" text="星座图" />
+		<Item name="I_LuYanTu" text="I 路眼图" />
+		<Item name="Q_LuYanTu" text="Q 路眼图" />
+		<Item name="ShiLiangTu" text="矢量图" />
+		<Item name="XiangWeiWuChaShiJianTu" text="相位误差时间图" />
+		<Item name="FuDuWuChaShiJianTu" text="幅度误差时间图" />
+		<Item name="MuBiaoShuXueTongDao" text="目标数学通道" />
+		<Item name="JieDiaoTuXing" text="解调图形" />
+		<Item name="ILuYanTu" text="I路眼图" />
+		<Item name="QLuYanTu" text="Q路眼图" />
+		<Item name="FuHaoBiao" text="符号表" />
+		<Item name="FuHaoWuChaBiao" text="符号误差表" />
+		<Item name="TongYongShuZiJieDiao" text="通用数字解调" />
+		<Item name="LanYaXinHao" text="蓝牙信号" />
+		<Item name="IQShiYuTu" text="IQ时域图" />
+		<Item name="DiaoZhiCanShu" text="调制参数" />
+		<Item name="PinLvHeDaiKuanCanShu" text="频率和带宽参数" />
+		<Item name="SuanFaXuanZe" text="算法选择" />
+		<Item name="LvBoQiCanShu" text="滤波器参数" />
+		<Item name="ShengYuXianLvBoQi" text="升余弦滤波器" />
+		<Item name="GaoSiLvBoQi" text="高斯滤波器" />
+		<Item name="YongHuZiDingYi" text="用户自定义" />
+		<Item name="CanKaoLvBoQi" text="参考滤波器" />
+		<Item name="GenShengYuXianLvBoQi" text="根升余弦滤波器" />
+		<Item name="CeLiangLvBoQi" text="测量滤波器" />
+		<Item name="ZaiBoPinLvWuCha" text="载波频率误差" />
+		<Item name="PinLvJianCe" text="频率检测" />
+		<Item name="CeLiangDaiKuan" text="测量带宽" />
+		<Item name="ZaiBoTongBu" text="载波同步" />
+		<Item name="JunHengFuWei" text="均衡复位" />
+		<Item name="FuHaoChangDu" text="符号长度" />
+		<Item name="JunHengShiNeng" text="均衡使能" />
+		<Item name="LvBoQiXiShuGeShu" text="滤波器系数个数" />
+		<Item name="GuoCaiYangLv" text="过采样率" />
+		<Item name="ShouLianXiShu" text="收敛系数" />
+		<Item name="XunLian" text="训练" />
+		<Item name="JunHengMoShi" text="均衡模式" />
+		<Item name="LiangZhe" text="两者" />
+		<Item name="Man" text="满" />
+		<Item name="JianDan" text="简单" />
+		<Item name="GaoTong" text="高通" />
+		<Item name="DaiTong" text="带通" />
+		<Item name="DaiZu" text="带阻" />
+		<Item name="PinPuTu" text="频谱图" />
+		<Item name="YuPenQuXian" text="浴盆曲线" />
+		<Item name="Q_FactorQuXian" text="Q-Factor曲线" />
+		<Item name="GaoTong" text="高通" />
+		<Item name="DaiTong" text="带通" />
+		<Item name="DaiZu" text="带阻" />
+		<Item name="Zero-Max" text="零 - 最大值" />
+		<Item name="TestStatus" text="测试状态" />
+		<Item name="ViolationNumber" text="违例数" />
+		<Item name="TestingTime" text="测试时间" />
+		<Item name="MingZhongGeShu" text="命中个数" />
+		<Item name="GongLv_Logarithm_" text="功率（Logarithm）" />
+		<Item name="WindowType_Gaussian" text="高斯窗" />
+		<Item name="FanWeiWai" text="范围外" />
+		<Item name="HuoFei" text="或非" />
+		<Item name="PinJie" text="拼接" />
+		<Item name="PinJie" text="拼接" />
+		<Item name="FangZhen" text="仿真" />
+		<Item name="WenDuQuXianHuiZhi" text="温度曲线绘制" />
+		<Item name="DiBu" text="底部" />
+		<Item name="PinJie" text="拼接" />
+		<Item name="HuoFei" text="或非" />
+		<Item name="WuGuan" text="无关" />
+		<Item name="ERes" text="ERes"/>
+		<Item name="YiQiYong" text="已启用"/>
+		<Item name="YiJinYong" text="已禁用"/>
+		<Item name="TemperatureDiffWarning" text="系统内部温差过大，将进行自动校正，请确认已移除所有输入信号"/>
+		<Item name="BoXingZhuiZong" text="波形追踪"/>
+    <Item name="CallBackInterval" text="回放间隔"/>
+    <Item name="YanShi" text="演示"/>
+    <Item name="SCLKXinYuan" text="SCLK信源"/>
+    <Item name="SDAXinYuan" text="SDA信源"/>
+    <Item name="PECByteQiYong" text="启用PEC字节"/>
+	</Tip>
+	<!--2024年1月25日新增部分-->
+	<Tip>
+		<Item name="XunHuanShuJu" text="循环数据" />
+		<Item name="IDShuJu" text="ID" />
+		<Item name="MoNiTongDao1_" text="模拟通道1、" />
+		<Item name="MoNiTongDao2_" text="模拟通道2、" />
+		<Item name="MoNiTongDao3_" text="模拟通道3、" />
+		<Item name="MoNiTongDao4_" text="模拟通道4、" />
+		<Item name="WaiChuFa" text="外触发" />
+		<Item name="TongDaoYanChi" text="通道延迟" />
+		<Item name="TongDaoKuanDu" text="通道宽度" />
+		<Item name="TongDaoJianGe" text="通道间隔" />
+		<Item name="TongDaoShuLiang" text="通道数量" />
+		<Item name="TongDaoKuanDu" text="通道宽度" />
+		<Item name="XiangLinXinDaoGongLvBi" text="相邻信道功率比" />
+		<Item name="ZhanYongDaiKuan" text="占用带宽" />
+		<Item name="TongDaoGongLv" text="通道功率" />
+		<Item name="ZongXieBoShiZhen" text="总谐波失真" />
+		<Item name="DangQianPinYuCeLiangLeiXing" text="当前频域测量类型" />
+		<Item name="PinPuSheZhi" text="频谱设置" />
+		<Item name="PinPuSheZhi" text="频谱设置" />
+		<Item name="TongDaoKuanDu" text="通道宽度" />
+		<Item name="GongLvBaiFenBi" text="功率百分比" />
+		<Item name="GongLvXiaJiang" text="功率下降" />
+		<Item name="dBXiaJiang" text="dB下降" />
+		<Item name="FenXiLeiXing" text="分析类型" />
+		<Item name="TongDaoShuLiang" text="通道数量" />
+		<Item name="TongDaoJianGe" text="通道间隔" />
+		<Item name="TongDaoKuanDu" text="通道宽度" />
+		<Item name="DianYa" text="电压" />
+		<Item name="DianLiu" text="电流" />
+		<Item name="ZiDingYiPinLv" text="自定义频率" />
+		<Item name="AWGYuan" text="AWG源" />
+		<Item name="ShiYongShiJianShengYu" text="试用时间剩余" />
+		<Item name="XiaoShi" text="小时" />
+		<Item name="FuZhuShuChu" text="辅助输出" />
+		<Item name="FuZhuShuRu" text="辅助输入" />
+		<Item name="TongDaoYanSe" text="通道颜色" />
+		<Item name="WenDuJianKong" text="温度监控" />
+		<Item name="YunXingShiChang" text="运行时长" />
+		<Item name="ZhongZhiShiYong" text="重置试用" />
+		<Item name="JieShuShiYong" text="结束试用" />
+		<Item name="ShiYongShiJian" text="试用时间" />
+		<Item name="ShiYiShiJian" text="释抑时间" />
+		<Item name="LFReject" text="低频抑制" />
+		<Item name="HFReject" text="高频抑制" />
+		<Item name="NoiseReject" text="噪声抑制" />
+		<Item name="SCLKXinYuan" text="SCLK信源" />
+		<Item name="DataCount" text="数据总数" />
+		<Item name="HarmonicTHDF" text="THD-F" />
+		<Item name="HarmonicTHDR" text="THD-R" />
+		<Item name="HighVoltageWaningStr" text="输入了高压，可能损害器件，软件已自动切换为高阻，请断开输入" />
+		<Item name="AudioBusBitDelay" text="位延迟" />
+		<Item name="AudioBusClockBit" text="每个通道的时钟位数" />
+		<Item name="AudioBusChannelNumberPerFream" text="每个帧的通道个数" />
+		<Item name="DataExportHeader" text="数据导出" />
+		<Item name="ChooiceRectangleUsage" text="请选择矩形用途" />
+		<Item name="AreaTriggerIntersect" text="区域触发-相交" />
+		<Item name="AreaTriggerNotIntersect" text="区域触发-不相交" />
+		<Item name="AreaZoom" text="缩放" />
+		<Item name="ShuJuA" text="数据域A" />
+		<Item name="ShuJuB" text="数据域B" />
+		<Item name="ZhuangTaiWei" text="状态位" />
+		<Item name="ZhenKongZhi" text="帧控制" />
+		<Item name="ChuanXingXiaoXi" text="串行消息" />
+		<Item name="FuZaiDaXiao" text="负载长度" />
+	</Tip>
+	<Tip>
+		<!--手动编写部分，大部分来自于：ScopeX.U2.Properties.Resources.resx和ScopeX.U2.Properties.ToolTips.resx文件中-->
+		<Item name="FastFourierTransform" text="快速傅里叶变换" />
+		<Item name="AboutPrinter" text="打印" />
+		<Item name="AboutClear" text="清除" />
+		<Item name="AboutSetting" text="设置" />
+		<Item name="AboutAllApps" text="全部应用" />
+		<Item name="AboutTimebase" text="“水平”系统参数" />
+		<Item name="AboutAcquire" text="“采集”系统参数" />
+		<Item name="AboutTrigger" text="“触发”系统参数" />
+		<Item name="AboutCursor" text="光标测量" />
+		<Item name="AWGInfo_Frequency" text="频率" />
+		<Item name="AWGInfo_Amplitude" text="幅度" />
+		<Item name="AWGInfo_Offset" text="偏置" />
+		<Item name="ZoomScaleFormat" text="({0:F3}x缩放)" />
+		<Item name="FilterDesign_FreqSampling" text="采样率" />
+		<Item name="FilterDesign_Window" text="窗函数" />
+		<Item name="FilterDesign_Remez" text="列梅兹" />
+		<Item name="FilterDesign_Butterworth" text="巴特沃斯" />
+		<Item name="FilterDesign_ChebyshevI" text="切比雪夫I型" />
+		<Item name="FilterDesign_ChebyshevII" text="切比雪夫II型" />
+		<Item name="FilterDesign_Elliptic" text="椭圆" />
+		<Item name="EyeParams_ZeroLevel" text="0电平" />
+		<Item name="EyeParams_OneLevel" text="1电平" />
+		<Item name="EyeParams_EyeAmplitude" text="眼幅度" />
+		<Item name="EyeParams_EyeHeight" text="眼高" />
+		<Item name="EyeParams_EyeWidth" text="眼宽" />
+		<Item name="EyeParams_ExtinctionRatio" text="消光比" />
+		<Item name="EyeParams_EyeCrossRatio" text="眼交叉比" />
+		<Item name="EyeParams_QFactor" text="Q因子" />
+		<Item name="JitterParams_TIE" text="时间间隔误差" />
+		<Item name="JitterParams_TjBER" text="特定误码率下的总体抖动" />
+		<Item name="JitterParams_Rj" text="随机抖动" />
+		<Item name="JitterParams_Dj" text="确定性抖动" />
+		<Item name="JitterParams_PjPeak" text="周期性抖动" />
+		<Item name="JitterParams_DDJ" text="数据相关性抖动" />
+		<Item name="JitterParams_DCD" text="占空比失真" />
+		<Item name="JitterParams_ISI" text="码间干扰" />
+		<Item name="JitterParams_CC" text="周期-周期抖动" />
+		<Item name="MainFigText" text="主窗口" />
+		<Item name="MathCalcType_Custom" text="自定义" />
+		<Item name="MathCalcType_UserProgram" text="高级运算" />
+		<Item name="PassFail_Stop" text="停止" />
+		<Item name="PassFail_Run" text="运行" />
+		<Item name="AboutAnalogBadge" text="“模拟”通道参数" />
+		<Item name="Statistic_VAL" text="当前值" />
+		<Item name="Statistic_MAX" text="最大值" />
+		<Item name="Statistic_MIN" text="最小值" />
+		<Item name="Statistic_AVG" text="平均值" />
+		<Item name="Statistic_DEV" text="标准差" />
+		<Item name="Statistic_POP" text="计数" />
+		<Item name="AboutWindowState" text="窗口状态" />
+		<Item name="AboutZoom" text="窗口状态" />
+		<Item name="AboutNormalMani" text="区域直方图" />
+		<Item name="AboutClose" text="关闭" />
+		<Item name="AboutMark" text="标记" />
+		<Item name="AboutForm_OptionType_MD2G" text="将示波器最大存储深度扩展至1Gpts/CH（全通道）2Gpts/CH（半通道）" />
+		<Item name="AboutForm_OptionType_BW-10T20" text="1GHz升级2GHz带宽，MSO7104X升级到MSO7204X" />
+		<Item name="AboutForm_OptionType_AWG" text="双通道60 MHz任意波发生器" />
+		<Item name="AboutForm_OptionType_LA" text="16通道数字探头（UT-M15）及分析" />
+		<Item name="AboutForm_OptionType_JITTER" text="高级抖动和眼图分析" />
+		<Item name="AboutForm_OptionType_PWR" text="电源分析" />
+		<Item name="AboutForm_OptionType_CAN-FD" text="汽车串行触发和解码（CAN-FD）" />
+		<Item name="AboutForm_OptionType_FLEX" text="汽车串行触发和解码（FlexRay）" />
+		<Item name="AboutForm_OptionType_SENT" text="汽车传感器串行触发和解码（SENT）" />
+		<Item name="AboutForm_OptionType_AUDIO" text="音频串行触发和解码（I2S、LJ、RJ、TDM）" />
+		<Item name="AboutForm_OptionType_AERO" text="航空航天串行触发和解码（MIL-STD-1553，ARINC 429）" />
+		<Item name="AboutForm_OptionType_SMBUS" text="嵌入式串行总线触发和分析选件（SMBus）" />
+		<Item name="AboutForm_OptionType_SPMI" text="电源管理串行总线触发和分析选件（SPMI）" />
+		<Item name="AboutForm_OptionType_I3C" text="MIPI-I3C总线触发和分析选件（I3C）" />
+		<Item name="AboutForm_OptionType_PSI5" text="汽车串行总线分析选件（PSI5）" />
+		<Item name="AboutForm_OptionType_USB2" text="USB总线触发和分析选件（USB2.0）" />
+		<Item name="AboutForm_OptionType_PCIe2" text="PCIe总线触发和分析选件（PCIe1.0，2.0）" />
+		<Item name="AboutForm_OptionType_NET" text="以太网总线分析选件（10BASE-T、100BASE-TX）" />
+		<Item name="AboutForm_OptionType_NRZ" text="NRZ信号分析选件（NRZ）" />
+		<Item name="AboutForm_OptionType_MANCH" text="曼彻斯特信号分析选件（Manchester）" />
+		<Item name="AboutForm_OptionType_8B10B" text="8b/10b信号分析选件（8B/10B）" />
+		<Item name="AboutForm_OptionType_FILTER" text="高级滤波设计器选件" />
+		<Item name="AboutForm_OptionType_MAT" text="Matlab嵌入式编程选件，允许用户创建Matlab代码以自定义数学函数" />
+		<Item name="AboutForm_OptionType_BND" text="升级套装（JITTER，PWR，CAN-FD，FLEX，SENT，AUDIO，AERO）" />
+		<Item name="ProgramCS_StartingBaseService" text="正在初始化基础服务......" />
+		<Item name="ProgramCS_StartError" text="启动异常，请查看错误日志！错误码：" />
+		<Item name="ProgramCS_S00072_S00073_Error" text="启动异常，请重启软件！错误码：" />
+		<Item name="NormalViewSettingPage_WuXian" text="无限" />
+		<Item name="AcqMode_Normal" text="正常" />
+		<Item name="AcqMode_Peak" text="峰值检测" />
+		<Item name="AcqMode_HighRes" text="高分辨率" />
+		<Item name="AcqMode_Average" text="平均" />
+		<Item name="AcqMode_Envelope" text="包络" />
+		<Item name="polygon" text="多边形" />
+		<Item name="ZuiDa" text="最大" />
+		<Item name="MaximumAllowable" text="允许输入值的范围为:" />
+		<Item name="BuNengWeiKong_" text="不能为空!" />
+		<Item name="XiaoShuWeiShuErrorMsg" text="超过最大小数位数范围！"/>
+		<Item name="ZiFuShuErrorMsg" text="超过最大字符数量范围！"/>
+		<Item name="YouXiaoFanWei_" text="有效范围:" />
+		<Item name="GeShiCuoWu_" text="格式错误!" />
+		<Item name="ProgramCS_ACQError" text="采集错误，请重启软件！" />
+		<Item name="ABRegionalRelationship" text="AB区域关系" />
+		<Item name="ABRegionalDescription" text="A&amp;&amp;B 同时满足时触发" />
+		<Item name="ExportData" text="导出数据" />
+		<Item name="ChannelNotOpenErrorMsg" text="通道&#123;0&#125;没有打开，会导致触发结果不正确" />
+		<Item name="AnanogChannelDelayStep" text="步进" />
+		<Item name="VisualTrigger" text="区域触发" />
+		<Item name="VideoTrigger_Line" text="行" />
+		<Item name="FuWeiDao50Percent" text="复位到50%" />
+		<Item name="FuWeiDaoZero" text="复位到0" />
+		<Item name="Rds(on)BoXingTu" text="Rds(on)波形图" />
+	</Tip>
+	<Tip>
+		<!--通用消息，通用消息请勿删除-->
+		<Item name="Yes" text="是" />
+		<Item name="No" text="否" />
+
+		<!--枚举：ProbeKeyType-->
+		<Item name="前灯" text="前灯" />
+		<Item name="运行/停止" text="运行/停止" />
+		<Item name="清除显示" text="清除显示" />
+		<Item name="强制触发" text="强制触发" />
+		<Item name="无操作" text="无操作" />
+		<!--枚举：ProbeKeyType-->
+
+		<!--枚举：AnaChnlProbe-->
+		<Item name="1X" text="1X" />
+		<Item name="10X" text="10X" />
+		<Item name="100X" text="100X" />
+		<Item name="自定义" text="自定义" />
+		<!--枚举：AnaChnlProbe-->
+
+		<!--枚举：AnaChnlProbeBymVA-->
+		<Item name="100mV/A" text="100 mV/A" />
+		<Item name="200mV/A" text="200 mV/A" />
+		<Item name="500mV/A" text="500 mV/A" />
+		<Item name="自定义" text="自定义" />
+		<!--枚举：AnaChnlProbeBymVA-->
+
+		<!--枚举：AttenuationType-->
+		<Item name="分贝" text="分贝" />
+		<Item name="比率" text="比率" />
+		<!--枚举：AttenuationType-->
+
+		<!--枚举：MathType-->
+		<Item name="MathType_Binary" text="基本运算" />
+		<Item name="MathType_FFT" text="FFT" />
+		<Item name="MathType_ERes" text="ERes" />
+		<Item name="MathType_Custom" text="自定义" />
+		<Item name="MathType_UserProgram" text="高级运算" />
+		<!--枚举：MathType-->
+
+		<!--枚举：FFTResultOpt-->
+		<Item name="FFTResultOpt_Ampltd" text="幅度谱" />
+		<Item name="FFTResultOpt_Power" text="功率谱" />
+		<Item name="FFTResultOpt_Psd" text="Psd" />
+		<Item name="FFTResultOpt_Real" text="实部" />
+		<Item name="FFTResultOpt_Imaginary" text="虚部" />
+		<Item name="FFTResultOpt_Phase" text="相位谱" />
+		<!--枚举：FFTResultOpt-->
+
+		<!--枚举：WindowType-->
+		<Item name="WindowType_Rectangle" text="矩形窗" />
+		<Item name="WindowType_Hann" text="汉宁窗" />
+		<Item name="WindowType_Hamming" text="汉明窗" />
+		<Item name="WindowType_Blackman" text="布莱克曼窗" />
+		<Item name="WindowType_Flattop" text="平顶窗" />
+		<Item name="WindowType_Kaiser" text="凯塞窗" />
+		<!--<Item name="WindowType_Kaiser" text="相位谱" />
+		<Item name="WindowType_Gaussian" text="相位谱" />-->
+		<!--枚举：WindowType-->
+
+		<!--枚举：ArbWfmType-->
+		<Item name="Enum_ArbWfmType_Sinusoid" text="正弦波" />
+		<Item name="Enum_ArbWfmType_Square" text="方波" />
+		<Item name="Enum_ArbWfmType_Pulse" text="脉冲波" />
+		<Item name="Enum_ArbWfmType_Ramp" text="斜波" />
+		<Item name="Enum_ArbWfmType_Noise" text="噪声" />
+		<Item name="Enum_ArbWfmType_DC" text="直流" />
+		<Item name="Enum_ArbWfmType_Sinc" text="Sinc" />
+		<Item name="Enum_ArbWfmType_ExpRise" text="指数上升" />
+		<Item name="Enum_ArbWfmType_ExpFall" text="指数下降" />
+		<Item name="Enum_ArbWfmType_Lorentz" text="洛伦兹" />
+		<Item name="Enum_ArbWfmType_Haversine" text="半正矢" />
+		<Item name="Enum_ArbWfmType_Gaussian" text="高斯" />
+		<Item name="Enum_ArbWfmType_ECG" text="心电图" />
+		<Item name="Enum_ArbWfmType_Arbitrary" text="任意波" />
+		<!--枚举：ArbWfmType-->
+
+		<!--枚举：ChannelType-->
+		<Item name="Enum_ChannelType_Analog" text="模拟" />
+		<Item name="Enum_ChannelType_Logic" text="逻辑" />
+		<Item name="Enum_ChannelType_LogicGroup" text="逻辑" />
+		<Item name="Enum_ChannelType_Decode" text="解码" />
+		<Item name="Enum_ChannelType_RadioFrequency" text="射频" />
+		<Item name="Enum_ChannelType_Math" text="数学" />
+		<Item name="Enum_ChannelType_File" text="文件" />
+		<Item name="Enum_ChannelType_Parameter" text="参数" />
+		<Item name="Enum_ChannelType_SigGen" text="信号源" />
+		<Item name="Enum_ChannelType_Voltmeter" text="电压表" />
+		<Item name="Enum_ChannelType_Cymometer" text="频率计" />
+		<!--枚举：ChannelType-->
+
+		<!--枚举：PowerAnalysisOpt-->
+		<Item name="Enum_PowerAnalysisOpt_PowerQuality" text="电源质量" />
+		<Item name="Enum_PowerAnalysisOpt_Harmonic" text="谐波分析" />
+		<Item name="Enum_PowerAnalysisOpt_Ripple" text="纹波分析" />
+		<Item name="Enum_PowerAnalysisOpt_SwitchingLoss" text="开关损耗" />
+		<Item name="Enum_PowerAnalysisOpt_SafeOperationArea" text="安全工作区" />
+		<Item name="Enum_PowerAnalysisOpt_LoopAnalysis" text="环路分析" />
+		<Item name="Enum_PowerAnalysisOpt_Modulation" text="调制分析" />
+		<Item name="Enum_PowerAnalysisOpt_InrushCurrent" text="浪涌电流" />
+		<Item name="Enum_PowerAnalysisOpt_PowerEfficency" text="电源效率" />
+		<Item name="Enum_PowerAnalysisOpt_Differ" text="波形微分" />
+		<Item name="Enum_PowerAnalysisOpt_Transient" text="瞬态分析" />
+		<Item name="Enum_PowerAnalysisOpt_RDSon" text="Rds(on)" />
+		<Item name="Enum_PowerAnalysisOpt_TurnOnOff" text="开启/关闭时间" />
+		<Item name="Enum_PowerAnalysisOpt_PSRR" text="PSRR" />
+		<Item name="Enum_PowerAnalysisOpt_SlewRate" text="转换速率" />
+		<!--枚举：PowerAnalysisOpt-->
+
+		<!--枚举：VideoSync-->
+		<Item name="Enum_VideoSync_Odd" text="偶数场" />
+		<Item name="Enum_VideoSync_Even" text="奇数场" />
+		<Item name="Enum_VideoSync_All" text="所有行" />
+		<Item name="Enum_VideoSync_Specified" text="指定行" />
+		<!--枚举：VideoSync-->
+
+		<!--枚举：TriggerType-->
+		<Item name="Enum_TriggerType_Edge" text="边沿" />
+		<Item name="Enum_TriggerType_PulseWidth" text="脉宽" />
+		<Item name="Enum_TriggerType_Video" text="视频" />
+		<Item name="Enum_TriggerType_Transition" text="斜率" />
+		<Item name="Enum_TriggerType_Runt" text="欠幅" />
+		<Item name="Enum_TriggerType_BeyondVol" text="超幅" />
+		<Item name="Enum_TriggerType_Delay" text="延迟" />
+		<Item name="Enum_TriggerType_TimeOut" text="超时" />
+		<Item name="Enum_TriggerType_SustainTime" text="持续时间" />
+		<Item name="Enum_TriggerType_SetupHold" text="建立保持" />
+		<Item name="Enum_TriggerType_NEdge" text="N边沿" />
+		<Item name="Enum_TriggerType_Pattern" text="码型" />
+		<Item name="Enum_TriggerType_Serial" text="总线" />
+		<Item name="Enum_TriggerType_State" text="状态" />
+		<Item name="Enum_TriggerType_Glitch" text="毛刺" />
+		<Item name="Enum_TriggerType_Window" text="窗口" />
+		<Item name="Enum_TriggerType_Interval" text="间隔" />
+		<Item name="Enum_TriggerType_MultiQulified" text="级联" />
+		<!--枚举：TriggerType-->
+
+		<!--枚举：TriggerType-->
+		<Item name="Enum_JitterSignalType_Custom" text="数据信号" />
+		<Item name="Enum_JitterSignalType_Clock" text="时钟信号" />
+		<!--枚举：TriggerType-->
+
+		<!--枚举：VisualTriggerRelation-->
+		<Item name="Enum_VisualTriggerRelation_And" text="与" />
+		<Item name="Enum_VisualTriggerRelation_Or" text="或" />
+		<!--枚举：VisualTriggerRelation-->
+	</Tip>
+	<Tip>
+		<!--消息-->
+		<Item name="MsgTipId.None" text="" />
+		<Item name="MsgTipId.GreatethanMax" text="已达最大值" />
+		<Item name="MsgTipId.LessthanMin" text="已达最小值" />
+		<Item name="MsgTipId.Unused1" text="不支持该功能" />
+		<Item name="MsgTipId.Unused2" text="波形显示数已达最大" />
+		<Item name="MsgTipId.SearchItemsMaximum" text="搜索项添加已达最大" />
+		<Item name="MsgTipId.DeleteMeasureItems" text="是否清除所有测量项?" />
+		<Item name="MsgTipId.InvalidData" text="数据非法！" />
+		<Item name="MsgTipId.Undefined" text="功能未定义" />
+		<Item name="MsgTipId.NoPermissionToAccessThisPath" text="此路径访问受限,请选择其它路径" />
+		<Item name="MsgTipId.UnSupportedFormat" text="暂不支持该格式" />
+		<Item name="MsgTipId.SavingFailed" text="                   保存失败                   " />
+		<Item name="MsgTipId.ReadingFailed" text="                    读取失败                   " />
+		<Item name="MsgTipId.SDABitRateFault" text="信号波特率检测失败" />
+		<Item name="MsgTipId.ThisItemDisabled" text="该项不可选" />
+		<Item name="MsgTipId.FormulaEndlessLoopDef" text="公式不合法:\t公式为死循环" />
+		<Item name="MsgTipId.FormulaUndef" text="公式不合法:\t'Mx'公式未定义" />
+		<Item name="MsgTipId.SavingSuccess" text="                   保存成功                    " />
+		<Item name="MsgTipId.ReadingSuccess" text="                   读取成功                   " />
+		<Item name="MsgTipId.SetFreqFail" text="频率阈值设置越界" />
+		<Item name="MsgTipId.CreateMaskFail" text="模板创建失败" />
+		<Item name="MsgTipId.InputFormatError" text="输入格式错误" />
+		<Item name="MsgTipId.OnlyOneAnalysis" text="注意：通过失败测试、功率测量和串行数据分析功能不能同时打开" />
+		<Item name="MsgTipId.SDAPrepare" text="正在采集串行分析数据,请等待..." />
+		<Item name="MsgTipId.SDAAnalysis" text="开始分析串行数据,请等待..." />
+		<Item name="MsgTipId.Unused3" text="数学通道数已达系统最大" />
+		<Item name="MsgTipId.USBDeviceOpened" text="USB通信已打开" />
+		<Item name="MsgTipId.USBDeviceClosed" text="USB通信已关闭" />
+		<Item name="MsgTipId.NetCommunicateOpened" text="网络通信连接成功" />
+		<Item name="MsgTipId.NetCommunicateClosed" text="网络通信断开连接" />
+		<Item name="MsgTipId.SdaInputError" text="输入信号幅度过小" />
+		<Item name="MsgTipId.ErrorHappenedCheckIt" text="分析出现问题,请检查设置与输入信号" />
+		<Item name="MsgTipId.OutPutTenMLockSuccess" text="10M外部输入锁定成功" />
+		<Item name="MsgTipId.OutPutTenMLockFail" text="10M外部输入锁定失败" />
+		<Item name="MsgTipId.OpenMeasureFuction" text="请打开参数测量" />
+		<Item name="MsgTipId.InputError" text="输入信号有误" />
+		<Item name="MsgTipId.FeatureUnsupported" text="不支持该功能" />
+		<Item name="MsgTipId.NoMoreChannels" text="该类型通道数已达系统最大，或该通道已经打开" />
+		<Item name="MsgTipId.NoMoreMeasuerLabel" text="已达添加上限，请移除或修改测量参数" />
+		<Item name="MsgTipId.MeasuerLabelExisted" text="该参数已存在，请勿重复配置或添加" />
+		<Item name="MsgTipId.NoMoreRefChannels" text="回调窗口已达系统最大" />
+		<Item name="MsgTipId.CalibrationFault" text="                   校准失败                   " />
+		<Item name="MsgTipId.CalibrationSuccess" text="                   校准成功                   " />
+		<Item name="MsgTipId.CalibrationCancel" text="                   校准取消                   " />
+		<Item name="MsgTipId.NotInstallExcel" text="未安装Microsoft Excel,不能保存！" />
+		<Item name="MsgTipId.ChannelHadOpened" text="通道已经打开" />
+		<Item name="MsgTipId.IllegalName" text="命名不合法！" />
+		<Item name="MsgTipId.Information" text="信息" />
+		<Item name="MsgTipId.Asking" text="提示" />
+		<Item name="MsgTipId.Warning" text="警告" />
+		<Item name="MsgTipId.Error" text="错误" />
+		<Item name="MsgTipId.ResolutionMismatch" text="不适配当前屏幕分辨率！" />
+		<Item name="MsgTipId.FileExisted" text="文件已存在，是否覆盖?" />
+		<Item name="MsgTipId.FileOccupied" text="保存失败！文件在其他应用中打开，请关闭该文件并重试" />
+
+
+		<Item name="MsgTipId.CheckDiskSpaceError" text="检查磁盘空间时发生异常，保存失败" />
+		<Item name="MsgTipId.NoMoreDiskSpace" text="磁盘剩余空间不足，保存失败" />
+		<Item name="MsgTipId.UnknownErrorSaveData" text="发生未知错误，可能是磁盘空间不足或文件异常" />
+		<Item name="MsgTipId.TimeOutSaveData" text="保存深存储数据超时" />
+
+		<Item name="MsgTipId.RestoreFactoryDefault" text="是否恢复出厂设置?" />
+		<Item name="MsgTipId.UndoFactoryDefault" text="是否撤销恢复出厂设置?" />
+		<Item name="MsgTipId.UndoFactoryDefaultErr" text="撤销恢复出厂设置失败！" />
+		<Item name="MsgTipId.SwitchSettingFile" text="是否切换系统设置文件？" />
+		<Item name="MsgTipId.AppClose" text="是否退出程序?" />
+		<Item name="MsgTipId.ComputerShutDown" text="是否关闭设备?" />
+		<Item name="MsgTipId.ComputerRestart" text="是否重启设备?" />
+		<Item name="MsgTipId.UserLogOut" text="是否注销当前用户?" />
+		<Item name="MsgTipId.AnotherRFChannelExisted" text="已存在其他射频通道！" />
+		<Item name="MsgTipId.AutoGetIPFail" text="自动获取IP失败"/>
+		<Item name="MsgTipId.AutoGetIPSuccess" text="自动获取IP成功"/>
+		<Item name="MsgTipId.SetIPAddressFail" text="IP地址和子网掩码设置失败"/>
+		<Item name="MsgTipId.SetGatewayFail" text="网关地址设置失败"/>
+		<Item name="MsgTipId.SetDNSFail" text="DNS设置失败"/>
+		<Item name="MsgTipId.SetIPSuccess" text="IP设置成功"/>
+
+		<Item name="MsgTipId.GetBrigtnessFail" text="屏幕亮度获取失败"/>
+		<Item name="MsgTipId.SetBrigtnessFail" text="屏幕亮度设置失败"/>
+		<Item name="MsgTipId.GetContrastFail" text="屏幕对比度获取失败"/>
+		<Item name="MsgTipId.SetContrastFail" text="屏幕对比度设置失败"/>
+
+		<Item name="MsgTipId.RemovableStorageDiscovered" text="检测到可移动存储设备，是否将此设备设置为保存路径？"/>
+		<Item name="MsgTipId.RemovableStorageRemoved" text="可移动存储设备已移除"/>
+		<Item name="MsgTipId.UnknownRemovableStorage" text="未知设备类型"/>
+		<Item name="MsgTipId.AdministrtorAuthorityRequired" text="需要管理员权限进行设置!"/>
+
+		<Item name="MsgTipId.PrintPageSucceeded" text="打印已完成!"/>
+		<Item name="MsgTipId.PrintPageFailed" text="打印失败!"/>
+		<Item name="MsgTipId.SDADataDeficient" text="SDA数据不足!"/>
+		<Item name="MsgTipId.FunctionUnused" text="此功能未开放" />
+		<Item name="MsgTipId.SDADataAmplitudeDiffTooSmall" text="SDA数据振幅差过小，无法恢复UI!"/>
+		<Item name="MsgTipId.FewUINumber" text="UI数或单个UI点数过少，无法叠加眼图!"/>
+		<Item name="MsgTipId.SDADataCyclesTooFew" text="SDA数据周期过少，无法测量TIE!"/>
+		<Item name="MsgTipId.CheckVersion" text="版本检查异常！错误码:{0} {1}"/>
+		<Item name="MsgTipId.ClearingSuccess" text="                   清除成功                  "/>
+		<Item name="MsgTipId.AccessToFolderFailed" text="该路径无访问权限，已恢复默认存储路径！"/>
+		<Item name="MsgTipId.DefaultingFailed" text="恢复出厂设置失败！"/>
+		<Item name="MsgTipId.AuxInTriggerTip" text="提示：请从AUX IN接口输入信号，否则示波器无法触发！"/>
+		<Item name="MsgTipId.AuxInSyncAWGTip" text="提示：请从AUX IN接口输入信号，否则AWG无信号输出！"/>
+		<Item name="MsgTipId.Ext10MHzLocked" text="已锁定"/>
+		<Item name="MsgTipId.Ext10MHzUnlocked" text="未锁定"/>
+		<Item name="MsgTipId.NoSignal" text="通道无信号！"/>
+		<Item name="MsgTipId.AutoSetFail" text="                    自动设置失败！                    "/>
+		<Item name="MsgTipId.SOASaveError" text="保存失败，请检查数据！"/>
+		<Item name="MsgTipId.SOALoadMaskError" text="模板导入失败，请检查数据！"/>
+		<Item name="MsgTipId.SOALoadMaskSuccess" text="模板导入成功！"/>
+		<Item name="MsgTipId.TIEResultError" text="TIE结果错误！"/>
+		<Item name="MsgTipId.CreateEyeError" text="眼图绘制错误，建议修改存储深度或修改时基档位！"/>
+		<Item name="MsgTipId.FilePathNotExist" text="该存储位置不存在，已恢复默认存储位置！"/>
+		<Item name="MsgTipId.AutoCalibration" text="请确认是否移除所有输入信号"/>
+		<Item name="MsgTipId.DataLengthIsInsufficient" text="数据长度不足，请增加存储深度"/>
+		<Item name="MsgTipId.DataLengthIsTooLarge" text="数据长度过大，已进行裁剪"/>
+		<Item name="MsgTipId.AUXOutIsRequired" text="请将线缆接机背AUX OUT接口"/>
+		<Item name="MsgTipId.AUXInIsRequired" text="请将信号接机背AUX IN接口"/>
+		<Item name="MsgTipId.AWGProtected1" text="AWG通道1已触发硬件保护，请拔出AWG通道1端口线缆"/>
+		<Item name="MsgTipId.AWGProtected2" text="AWG通道2已触发硬件保护，请拔出AWG通道2端口线缆"/>
+		<Item name="MsgTipId.AWGProtected3" text="AWG通道3已触发硬件保护，请拔出AWG通道3端口线缆"/>
+		<Item name="MsgTipId.AWGProtected4" text="AWG通道4已触发硬件保护，请拔出AWG通道4端口线缆"/>
+		<Item name="MsgTipId.AWGModeModulation" text="调制模式：载波只能为正弦波、方波、脉冲波、斜波和任意波"/>
+		<Item name="MsgTipId.AWGModeSweep" text="扫频模式：载波只能为正弦波、方波、斜波和任意波"/>
+		<Item name="MsgTipId.DigitalOccupyAnalog" text="数字通道处于打开状态，模拟通道C3、C4被占用"/>
+		<Item name="MsgTipId.StopBanDigital" text="停止状态禁止操作数字通道"/>
+		<Item name="MsgTipId.FunctionBanDigital" text="功能互斥！禁止操作数字通道"/>
+		<Item name="MsgTipId.DigitalMutex" text="功能互斥，是否关闭数字通道？"/>
+		<Item name="MsgTipId.ChannelUITooLess" text="当前通道周期数过少，建议增加存储深度或重设时基档"/>
+
+		<Item name="MsgTipId.FastIsNotSupportedInScan" text="UltraAcq下不支持Roll模式" />
+    <Item name="MsgTipId.ScanIsNotSupportedInFast" text="Roll模式下不支持UltraAcq" />
+    <Item name="MsgTipId.DemoIsNotSupportedInFast" text="演示模式下不支持UltraAcq" />
+		<Item name="MsgTipId.MathIsNotSupportedInScan" text="Math运算下不支持Roll模式"/>
+		<Item name="MsgTipId.PowerAnalysisIsNotSupportedInScan" text="电源分析不支持Roll模式"/>
+		<Item name="MsgTipId.JitterIsNotSupportedInScan" text="抖动分析不支持Roll模式"/>
+		<Item name="MsgTipId.PassFailIsNotSupportedInScan" text="R/F测试不支持Roll模式"/>
+		<Item name="MsgTipId.DecodeIsNotSupportedInScan" text="总线不支持Roll模式"/>
+		<Item name="MsgTipId.DecodeIsSupportedMinTimebase" text="已达总线最低时基档位"/>
+    <Item name="MsgTipId.DecodeNotSupportedMoreThan250MStorageDepth" text="总线不支持250M以上的存储深度"/>
+		<Item name="MsgTipId.JitterIsSupportedMinTimebase" text="已达抖动或眼图最低时基档位"/>
+		<Item name="MsgTipId.SegementIsNotSupportedInScan" text="顺序模式不支持Roll模式"/>
+		<Item name="MsgTipId.SegementIsNotSupportedInPowerAnalysis" text="顺序模式与电源分析不兼容，是否关闭电源分析？"/>
+		<Item name="MsgTipId.SegementIsNotSupportedInJitter" text="顺序模式与抖动分析不兼容，是否关闭抖动分析？"/>
+		<Item name="MsgTipId.SegementIsNotSupportedInPassFail" text="顺序模式与R/F测试不兼容，是否关闭R/F测试？"/>
+		<Item name="MsgTipId.SegementIsNotSupportedInDecode" text="顺序模式与总线不兼容，是否关闭总线？"/>
+		<Item name="MsgTipId.SegementIsNotSupportedInThisAcqMode" text="当前采样模式下不支持顺序模式，请切换采样模式"/>
+		<Item name="MsgTipId.SegementIsNotSupportedInThisTriggerMode" text="当前触发模式下不支持顺序模式，请切换触发模式"/>
+		<Item name="MsgTipId.SingleTriggerIsNotSupportedInSegement" text="顺序模式下不支持单次触发，请关闭顺序模式后再尝试"/>
+
+		<Item name="MsgTipId.PowerAnalysisIsNotSupportedInJitter" text="电源分析与抖动分析不兼容，是否关闭抖动分析？"/>
+		<Item name="MsgTipId.PowerAnalysisIsNotSupportedInPassFail" text="电源分析与P/F测试不兼容，是否关闭P/F测试？"/>
+		<Item name="MsgTipId.PowerAnalysisIsNotSupportedInDecode" text="电源分析与总线不兼容，是否关闭总线？"/>
+		<Item name="MsgTipId.PowerAnalysisIsNotSupportedInSegment" text="电源分析与顺序模式不兼容，是否关闭顺序模式？"/>
+		<Item name="MsgTipId.PwrAnalysisIsNotSupportedInLA" text="电源分析与逻辑不兼容，是否关闭逻辑？"/>
+
+		<Item name="MsgTipId.JitterIsNotSupportedInPowerAnalysis" text="抖动分析与电源分析不兼容，是否关闭电源分析？"/>
+		<Item name="MsgTipId.JitterIsNotSupportedInPassFail" text="抖动分析与R/F测试不兼容，是否关闭R/F测试？"/>
+		<Item name="MsgTipId.JitterIsNotSupportedInDecode" text="抖动分析与总线不兼容，是否关闭总线？"/>
+		<Item name="MsgTipId.JitterIsNotSupportedInSegment" text="抖动分析与顺序模式不兼容，是否关闭顺序模式？"/>
+		<Item name="MsgTipId.JitterIsNotSupportedInFFT" text="抖动分析与FFT不兼容，是否关闭FFT？"/>
+		<Item name="MsgTipId.FFTIsNotSupportedInJitter" text="FFT与抖动分析不兼容，是否关闭抖动分析？"/>
+		<Item name="MsgTipId.JitterIsNotSupportedInLA" text="抖动分析与逻辑不兼容，是否关闭逻辑？"/>
+
+		<Item name="MsgTipId.PassFailIsNotSupportedInPowerAnalysis" text="R/F测试与电源分析不兼容，是否关闭电源分析？"/>
+		<Item name="MsgTipId.PassFailIsNotSupportedInJitter" text="R/F测试与抖动分析不兼容，是否关闭抖动分析？"/>
+		<Item name="MsgTipId.PassFailIsNotSupportedInDecode" text="R/F测试与总线不兼容，是否关闭总线？"/>
+		<Item name="MsgTipId.PassFailIsNotSupportedInSegment" text="R/F测试与顺序模式不兼容，是否关闭顺序模式？"/>
+
+		<Item name="MsgTipId.DecodeIsNotSupportedInPowerAnalysis" text="总线与电源分析不兼容，是否关闭电源分析？"/>
+		<Item name="MsgTipId.DecodeIsNotSupportedInJitter" text="总线与抖动分析不兼容，是否关闭抖动分析？"/>
+		<Item name="MsgTipId.DecodeIsNotSupportedInPassFail" text="总线与R/F测试不兼容，是否关闭R/F测试？"/>
+		<Item name="MsgTipId.DecodeIsNotSupportedInSegment" text="总线与顺序模式不兼容，是否关闭顺序模式？"/>
+		<Item name="MsgTipId.DecodeIsNotSupportedInLA" text="总线与逻辑不兼容，是否关闭逻辑？"/>
+		<Item name="MsgTipId.MathIsNotSupportedInLA" text="数学与逻辑不兼容，是否关闭逻辑？"/>
+
+		<Item name="MsgTipId.DigitalIsNotSupportedInDecode" text="逻辑与总线不兼容，是否关闭总线？"/>
+		<Item name="MsgTipId.DigitalIsNotSupportedInMath" text="逻辑与数学不兼容，是否关闭数学？"/>
+		<Item name="MsgTipId.DigitalIsNotSupportedInPowerAnalysis" text="逻辑与电源分析不兼容，是否关闭电源分析？"/>
+		<Item name="MsgTipId.DigitalIsNotSupportedInJitter" text="逻辑与抖动分析不兼容，是否关闭抖动分析？"/>
+		<Item name="MsgTipId.DigitalIsNotSupportedInLissajous" text="逻辑与李沙育不兼容，是否关闭李沙育？"/>
+
+
+		<Item name="MsgTipId.LissajousIsNotSupportedInDigital" text="李沙育与逻辑不兼容，是否关闭逻辑？"/>
+
+
+		<Item name="MsgTipId.TimeMinScaleBy2_5G" text="此交织模式最小支持500ps/div,已自动切换！"/>
+		<Item name="MsgTipId.TimeMinScaleBy5G" text="此交织模式最小支持200ps/div,已自动切换！"/>
+
+		<Item name="MsgTipId.PurchaseOptions" text="此功能不可用，请联系供应商或厂家购买选件！"/>
+		<Item name="MsgTipId.OptionActiveSuccess" text="选件激活成功，请大胆使用吧！！！"/>
+		<Item name="MsgTipId.OptionActiveFail" text="选件激活失败，请联系供应商或厂家重新获取许可证书"/>
+		<Item name="MsgTipId.OptionActived" text="选件已激活，请勿重复激活！"/>
+		<Item name="MsgTipId.LicenseFileFormatError" text="许可证书格式错误，无法识别"/>
+		<Item name="MsgTipId.LicenseRemoveYesOrNo" text="请确认是否要移除许可证书"/>
+		<Item name="MsgTipId.LicenseRemoveSuccess" text="许可证书已移除"/>
+		<Item name="MsgTipId.CurrentChannelAmpTooLow" text="抖动中，信号幅度过小"/>
+		<Item name="MsgTipId.ChannelClosed" text="通道已关闭，创建失败！"/>
+		<Item name="MsgTipId.CurrentChannelNoData" text="抖动中，无法获取当前信源通道数据"/>
+		<Item name="MsgTipId.PassFailChannelClosed" text="通道已关闭，运行失败！"/>
+		<Item name="MsgTipId.RunningLoopAnalysisTip" text="环路分析正在运行中，请尽量避免其他操作影响其运行！"/>
+		<Item name="MsgTipId.CompletedLoopAnalysisTip" text="环路分析运行完成，请查看结果！"/>
+		<Item name="MsgTipId.RunningPSRRTip" text="电源抑制比（PSRR）正在运行中，请尽量避免其他操作影响其运行！"/>
+		<Item name="MsgTipId.CompletedPSRRTip" text="电源抑制比（PSRR）运行完成，请查看结果！"/>
+		<Item name="MsgTipId.FileSaveCheck" text="存储源选择不正确，请重新选择存储源！"/>
+		<Item name="MsgTipId.HistBinNumberTooFew" text="抖动直方图柱体数量过少！"/>
+		<Item name="MsgTipId.BathWaveFitError" text="抖动浴盆曲线拟合出错！"/>
+
+		<Item name="MsgTipId.ProbeConnected" text="探头已接入"/>
+		<Item name="MsgTipId.ProbeRemoved" text="探头已移除"/>
+		<Item name="MsgTipId.ProbeUnavailable" text="无法使用高阻无源探头，请移除或更换探头！"/>
+
+		<Item name="MsgTipId.RefFileError1" text="异常波形文件读取，文件格式错误或不兼容!" />
+		<Item name="MsgTipId.RefFileError2" text="波形文件太大，暂不支持1M以上的文件!" />
+    <Item name="MsgTipId.PassFaileStop" text="已停止，请重新创建模板!" />
+    <Item name="MsgTipId.AuxOutputSetPassFail" text="辅助输出已自动设置为通过测试!" />
+		<Item name="MsgTipId.RestartingProgram" text="重启示波器软件生效" />
+		<Item name="MsgTipId.FunctionDisabled" text="该功能已被禁用，如需启用请在“系统设置 - 功能组件”中启用" />
+		<Item name="MsgTipId.EnableTouch" text="打开触屏功能!" />
+		<Item name="MsgTipId.DisableTouch" text="关闭触屏功能!" />
+		<Item name="MsgTipId.TempUse" text="UPO暂未开放!" />
+		<Item name="MsgTipId.FinetuningofamplitudeON" text="打开幅度细调" />
+		<Item name="MsgTipId.FinetuningofamplitudeOFF" text="关闭幅度细调" />
+		<Item name="MsgTipId.Drag2DrawRectangle" text="拖拽绘制矩形" />
+		<Item name="MsgTipId.NoActivedChannel" text="请开启模拟通道" />
+		<Item name="MsgTipId.OnlyEnableTwoVisualTrigger" text="两个区域已开启" />
+		<Item name="MsgTipId.ProbeCaliRefSigUnInput" text="未检测到探针已连接示波器方波端子，请将探针连接到示波器方波端子点击“是”，如需中止校准流程请点击“否”。" />
+		<Item name="MsgTipId.ProbeCaliCannotInput" text="检测到探针非悬空状态，请移动探头前端使探针保持悬空状态后点击“是”，如需中止校准流程请点击“否”。" />
+		<Item name="MsgTipId.ProbeCaliRefSigRemove" text="进行偏置校准之前，请将探头前端探针保持悬空状态。" />
+		<Item name="MsgTipId.ProbeCaliNoiseChecked" text="检测到噪声过大，请将探头前端探针短接。" />
+		<Item name="MsgTipId.AcqModeCannotSet" text="快采模式下采集模式不能为平均或者包络!" />
+		<Item name="MsgTipId.JitterSourceClose" text="关闭该通道将关闭抖动分析的使用!" />
+		<Item name="MsgTipId.VerticalLvNotSupportThisSetBandwidth" text="垂直档位不支持所设带宽!" />
+	</Tip>
+	<Tip>
+		<Item name="DsoForm.TlpMain.DsoInfoStrip.TlpLv1.BtnDigital" text="逻辑+" />
+		<Item name="DsoForm.TlpMain.DsoInfoStrip.TlpLv1.BtnMath" text="数学+" />
+		<Item name="DsoForm.TlpMain.DsoInfoStrip.TlpLv1.BtnReference" text="参考+" />
+		<Item name="DsoForm.TlpMain.DsoInfoStrip.TlpLv1.BtnBus" text="总线+" />
+		<Item name="DsoForm.TlpMain.DsoInfoStrip.TlpLv1.BtnRadio" text="射频+" />
+		<Item name="DsoForm.TlpMain.WindowDockPanel.WaveformFigure.tableLayoutPanel1.ZoomSettingPage.LabVScale" text="(2.000x 缩放)" />
+		<Item name="DsoForm.TlpMain.WindowDockPanel.WaveformFigure.tableLayoutPanel1.ZoomSettingPage.label3" text="垂直扩展" />
+		<Item name="DsoForm.TlpMain.WindowDockPanel.WaveformFigure.tableLayoutPanel1.ZoomSettingPage.LabHScale" text="(2.000x 缩放)" />
+		<Item name="DsoForm.TlpMain.WindowDockPanel.WaveformFigure.tableLayoutPanel1.ZoomSettingPage.label1" text="水平扩展" />
+		<Item name="StartExtentForm.SystemPage.TlpBody.LblLogout" text="注销" />
+		<Item name="StartExtentForm.SystemPage.TlpBody.LblRestart" text="重启" />
+		<Item name="StartExtentForm.SystemPage.TlpBody.LblShutDown" text="关机" />
+		<Item name="StartExtentForm.SystemPage.TlpBody.LblClose" text="退出" />
+		<Item name="StartExtentForm.SystemPage.TlpBody.LblMinimize" text="最小化" />
+		<Item name="StartExtentForm.TlpBody.LblTempCheck" text="温度检测" />
+		<Item name="StartExtentForm.TlpBody.LblException" text="异常捕获" />
+		<Item name="StartExtentForm.TlpBody.LblSearch" text="搜索" />
+		<Item name="StartExtentForm.TlpBody.LblBegin" text="开始" />
+		<Item name="StartExtentForm.TlpBody.LblThreeD" text="三维图" />
+		<Item name="StartExtentForm.TlpBody.LblEyePattern" text="眼图" />
+		<Item name="StartExtentForm.TlpBody.LblLayerOff" text="关闭副图" />
+		<Item name="StartExtentForm.TlpBody.LblLissajous" text="李沙育" />
+		<Item name="StartExtentForm.TlpBody.LblFailTest" text="P/F 测试" />
+		<Item name="StartExtentForm.TlpBody.LblJitterAnalysis" text="抖动分析" />
+		<Item name="StartExtentForm.TlpBody.LblPwrAnalysis" text="电源分析" />
+		<Item name="StartExtentForm.TlpBody.LblReset" text="复位" />
+		<Item name="StartExtentForm.TlpBody.LblAbout" text="系统信息" />
+		<Item name="StartExtentForm.TlpBody.LblRecover" text="恢复出厂" />
+		<Item name="StartExtentForm.TlpBody.LblPrinter" text="打印" />
+		<Item name="StartExtentForm.TlpBody.LblSave" text="存储" />
+		<Item name="StartExtentForm.TlpBody.LblStart" text="开始" />
+		<Item name="StartExtentForm.TlpBody.LblClear" text="清除" />
+		<Item name="StartExtentForm.TlpBody.LblCursor" text="光标测量" />
+		<Item name="StartExtentForm.TlpBody.LblSetting" text="设置" />
+		<Item name="StartExtentForm.TlpBody.LblScreenShot" text="截屏" />
+		<Item name="StartExtentForm.TlpBody.LblDebug" text="调试" />
+    <Item name="StartExtentForm.TlpBody.LblDemo" text="演示" />
+    <Item name="StartExtentForm.TlpBody.LblUserSetting" text="自定义" />
+  </Tip>
+	<Tip>
+		<!--设置界面-->
+		<Item name="SettingForm" text="设置" Title = "设置"/>
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group0" text="显示" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.DisplaySettingPage.BtnContrastDefultValue" text="默认值" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.DisplaySettingPage.BtnBrigtnessDefultValue" text="默认值" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.DisplaySettingPage.LblContrast" text="屏幕对比度：" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.DisplaySettingPage.LblBrightnessControl" text="屏幕亮度：" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group1" text="自动设置与校正" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkChannelSetting" text="通道设置" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkCouplingHold" text="耦合保持" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkOverlapView" text="堆叠显示" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.BtnAutoCorrection" text="自动校正" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.LblAutoCorrection" text="自动校正" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkTriggerSetting" text="触发设置" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkAcquisitionSetting" text="采集设置" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkHorizontalSetting" text="水平设置" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.LblAutoSettingItems" text="自动设置项" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkVerticalSetting" text="垂直设置" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkAmpCalibration" text="是否幅度自校正" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group2" text="通信" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork" text="网络" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.RdoNetWork.panel1.Btn_0" text="已连接" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.RdoNetWork.panel1.Btn_1" text="所有" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.RdoGetIpMethod.panel1.Btn_0" text="自动" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.RdoGetIpMethod.panel1.Btn_1" text="手动" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblNetWorkStatus" text="网络选择" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.BtnSetIpAuto" text="自动获取" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblNetWorkCardName" text="网络名称" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.BtnSettingIP" text="设置  IP" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblGetIPAddressMethod" text="IP获取方式" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblIPAdress" text="IP地址" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblIPMask" text="子网掩码" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblDNSBackup" text="备用DNS" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblGateway" text="网关" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblDNSMain" text="主DNS" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblMAC" text="MAC地址" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgWebServer.ChkWebStatus" text="关" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgWebServer.LblServer" text="服务器" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgWebServer.LblStatus" text="状态" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgWebServer.LblPort" text="端口号" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group3" text="辅助输入与输出" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.LblAuxInTip" text="提示：请正确接入外触发信号，否则AWG无信号输出！" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.LblAuxInPolarity" text="输入极性" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxInput.panel1.Btn_0" text="关闭" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxInput.panel1.Btn_1" text="触发同步" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxInput.panel1.Btn_2" text="AWG外触发" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.LblAuxInput" text="辅助输入信号" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.LblAuxOutPolarity" text="输出极性" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxOutput.panel1.Btn_0" text="关闭" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxOutput.panel1.Btn_1" text="触发同步" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxOutput.panel1.Btn_2" text="AWG触发" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxOutput.panel1.Btn_3" text="通过测试" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.LblAuxOutput" text="辅助输出信号" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group6" text="其他" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblTouch" text="触摸锁" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.ChkTouch" text="关" CheckedText="开"/>
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblStopMeasure" text="Stop测量" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.ChkStopMeasure" text="关" CheckedText="开"/>
+		<!--<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblLanguage" text="多语言" />-->
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.BtnRestoreFactory" text="恢复出厂" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblChannel" text="通道颜色" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.BtnSettingTime" text="设置" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblDefault" text="默认设置" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblTime" text="系统时间" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.scopexLabel1" text="运行时长" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblSysRunTime" text="运行时长" />
+		<Item name="SettingForm.BaseTopStrip1.TableLayoutPanel.TitleLabel" text="设置" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group7" text="功能组件" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group4" text="指令适配器" />
+		<Item name="KeXuanZuJian" text="可选组件" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group5" text="自检" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.LblScreen" text="屏幕检测" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.BtnScreenDetection" text="开始测试" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.LblTouch" text="触摸检测" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.BtnTouchDetection" text="开始测试" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.LblKeyboard" text="键盘检测" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.BtnKeyboardDetection" text="开始测试" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.LblLed" text="LED检测" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.BtnLEDDetection" text="开始测试" />
+	    <Item name="KeyboardDetectionForm.LblHintOneText" text="连续按3下RUN/STOP退出自检模式!!!" />
+	    <Item name="KeyboardDetectionForm.LblHintTwoText" text="请按下按键板上的按钮进行测试。" />
+		<Item name="KeyboardDetectionForm.LblHint_2" text="退出屏幕自测模式!!!" />
+		<Item name="KeyboardDetectionForm.LblHint_3" text="任意按下旋钮版更改屏幕颜色!!!" />
+		<Item name="TouchTestForm.TouchColor_4_7" text="请点击屏幕" />
+		<Item name="TouchTestForm.TouchColor_4_8" text="测试触摸屏" />
+		<Item name="TouchTestForm.TouchColor_4_9" text="是否正常!" />
+		<Item name="TouchTestForm.TouchColor_5_7" text="连续按3下" />
+		<Item name="TouchTestForm.TouchColor_5_8" text="run/stop" />
+		<Item name="TouchTestForm.TouchColor_5_9" text="退出该测试!" />
+	</Tip>
+	<Tip>
+		<!--探头相关界面-->
+		<Item name="ProbeUserCaliForm.Title" text="探头校准" />
+		<Item name="ProbeUserCaliForm.Text" text="探头校准" />
+		<Item name="ProbeUserCaliForm.Ok" text="校准" />
+		<Item name="ProbeUserCaliForm.Read" text="读取校准数据" />
+		<Item name="ProbeUserCaliForm.Clear" text="清除校准数据" />
+		<Item name="ProbeUserCaliForm.Cancel" text="取消" />
+		<Item name="ProbeUserCaliForm.CloseRef" text="关闭方波" />
+		<Item name="ProbeUserCaliForm.OpenRef" text="打开方波" />
+		<Item name="ProbeUserCaliForm.Note" text="开始校准前请按照下图所示，将探针连接到方波端子。" />
+		<Item name="ProbeUserCaliForm.Item.Step" text="步骤" />
+		<Item name="ProbeUserCaliForm.Item.Status" text="状态" />
+
+		<Item name="ProbeUserCaliForm.Item.Status.Todo" text="未开始" />
+		<Item name="ProbeUserCaliForm.Item.Status.Doing" text="执行中..." />
+		<Item name="ProbeUserCaliForm.Item.Status.Cancel" text="已取消" />
+		<Item name="ProbeUserCaliForm.Item.Status.Succ" text="成功" />
+		<Item name="ProbeUserCaliForm.Item.Status.Fail" text="失败" />
+		<Item name="ProbeUserCaliForm.Item.Status.ChkFail" text="未通过" />
+		<Item name="ProbeUserCaliForm.Item.Status.ChkSucc" text="通过" />
+		<Item name="ProbeUserCaliForm.Item.Status.AllComplete" text="全部完成" />
+
+		<Item name="ProbeUserCaliForm.Item.Step.MeanEnable" text="开启示波器测量功能" />
+		<Item name="ProbeUserCaliForm.Item.Step.GainCaliInit" text="增益校准初始化" />
+		<Item name="ProbeUserCaliForm.Item.Step.GainCaliCheck" text="增益校准设置检查" />
+		<Item name="ProbeUserCaliForm.Item.Step.GainCalib" text="增益校准" />
+		
+		<Item name="ProbeUserCaliForm.Item.Step.OffsetCaliInit" text="偏置校准初始化" />
+		<Item name="ProbeUserCaliForm.Item.Step.OffsetCaliCheck" text="偏置校准设置检查" />
+		<Item name="ProbeUserCaliForm.Item.Step.OffsetCalib" text="偏移校准" />
+
+		<Item name="ProbeUserCaliForm.Item.Step.SaveCaliData" text="保存校准数据" />
+	</Tip>
+	<Tip>
+		<!--模拟通道界面-->
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.Group0" text="垂直" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.ChkIndependentWindow" text="关" CheckedText="开" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblIndependentWindow" text="独立窗口" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblUnitSelection" text="单位" />
+		
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblActive" text="显示" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblInvert" text="反相" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblbandLimit" text="带宽限制" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblCoupling" text="耦合" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblScale" text="垂直刻度" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblLabel" text="标签" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.BtnResetPos" text="设为0" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblPosition" text="位置" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.BtnResetBias" text="设为0" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblBias" text="偏置电压" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.ChkActive" text="关" CheckedText="开" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.ChkInvert" text="关" CheckedText="开" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.FuDuXiTiao" text="细调" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.CopyTo" text="复制到" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.Group1" text="输入" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblCustomGain" text="自定义倍率" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.BtnResetDeskew" text="设为0" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblDeskew" text="通道偏斜" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.PnlInfo.tableLayoutPanel1.ScopeXLabel2" text="倍率" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.PnlInfo.tableLayoutPanel1.ScopeXLabel1" text="厂商" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.PnlInfo.tableLayoutPanel1.ScopeXLabel4" text="型号" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.PnlInfo.tableLayoutPanel1.ScopeXLabel5" text="序列号" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.PnlInfo.tableLayoutPanel1.ScopeXLabel6" text="其它" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblInfo" text="探头信息" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.AutoCalib" text="自动校准" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.FactCalib" text="基础校准" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.ProbeDefault" text="恢复默认" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.BtnSelectAll" text="校准" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.CbxAttenuation" text="分贝" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.labAttenuation" text="衰减" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.CbxProbeBtnType" text="前灯" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblProbeBtn" text="探头按钮" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblInputSource" text="输入选择" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblProbeMag" text="探头倍率" />
+		<Item name="BeiYongDanWei" text="备用单位" />
+		<Item name="DanWeiBiLv" text="单位比率" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblDCBiasSetting" text="直流偏设置" />
+	</Tip>
+	<Tip>
+		<!--Math 数学相关界面-->
+		<Item name="MathForm.MathPage.TlpMath.PnlVertical.BtnResetVPos" text="复位" />
+		<Item name="MathForm.MathPage.TlpMath.PnlVertical.LblVScale" text="垂直刻度" />
+		<Item name="MathForm.MathPage.TlpMath.PnlVertical.LblVPos" text="垂直位置" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.ChkIndependentWindow" text="关" CheckedText="开" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.LblIndependentWindow" text="独立窗口" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.ChkActive" text="关" CheckedText="开" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.CbxCalcType" text="基本运算" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.LblCalcType" text="运算类型" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.LblActive" text="显示" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHorizon.BtnResetHPos" text="复位" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHorizon.LblHPos" text="水平位置" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHorizon.LblHScale" text="水平刻度" />
+		<Item name="MathForm.MathPage.TlpMath.PnlTail.ChkUnit" text="自定义单位" />
+		<Item name="MathForm.MathPage.TlpMath.PnlTail.LblLabel" text="标签" />
+
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.GrpFrequncy" text="频率范围" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.GrpFrequncy.LblSpan" text="跨度" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.GrpFrequncy.LblCenter" text="中心频率" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.ChkPeakMarks" text="关" CheckedText="开" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblPeakMarks" text="峰值标记" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblUnit" text="单位" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.CbxResultType" text="幅度谱" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblResultType" text="输出类型" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblNumber" text="点数" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.CbxWindowType" text="矩形窗" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblWindowType" text="窗函数" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblSource" text="源" />
+
+		<Item name="MathForm.MathPage.TlpMath.MathBinarySubPage.LblLeftSource" text="源1" />
+		<Item name="MathForm.MathPage.TlpMath.MathBinarySubPage.LblRightSource" text="源2" />
+		<Item name="MathForm.MathPage.TlpMath.MathBinarySubPage.LblOperator" text="运算" />
+
+		<Item name="MathForm.MathPage.TlpMath.MathEResSubPage.LblSource" text="源" />
+		<Item name="MathForm.MathPage.TlpMath.MathEResSubPage.LblBits" text="增强位数" />
+
+		<Item name="MathForm.MathPage.TlpMath.MathCustomSubPage.LblFormula" text="公式编辑" />
+		<Item name="MathForm.MathPage.TlpMath.MathCustomSubPage.BtnFormula" text="请输入..." />
+
+		<Item name="MathForm.MathPage.TlpMath.MathUserProgramSubPage.LblEngineType" text="引擎库类型" />
+		<Item name="MathForm.MathPage.TlpMath.MathUserProgramSubPage.BtnEditCode" text="代码编辑" />
+		<Item name="MathForm.MathPage.TlpMath.MathUserProgramSubPage.LblSource" text="源" />
+
+		<!--UserCodeForm-->
+		<Item name="UserCodeForm.BtnExceteOneTime" text="运行一次" />
+		<Item name="UserCodeForm.BtnSaveToFile" text="保存代码" />
+		<Item name="UserCodeForm.BtnImport" text="导入代码" />
+		<Item name="UserCodeForm.BtnSetWorkFolder" text="设置工作目录" />
+		<Item name="UserCodeForm.GpxResult" text="运行结果" />
+		<Item name="UserCodeForm.GpxCodeEdit" text="代码" />
+		<Item name="UserCodeForm.BtnCancel" text="停止运行" />
+		<Item name="UserCodeForm.BtnExceteRepeat" text="循环运行" />
+		<!--<Item name="UserCodeForm.BaseTopStrip1.TableLayoutPanel.TitleLabel" text="Matlab 代码编辑器" />-->
+		<Item name="UserCodeForm" text="代码编辑器" Title="代码编辑器" />
+
+		<!--CustomFormulaForm-->
+		<Item name="CustomFormulaForm.TlpEditor.LblDescription" text="选择所需操作符和操作数构造公式，自带左括号的操作符需自行补全右括号。" />
+		<Item name="CustomFormulaForm.TlpEditor.RdoSource.panel1.Btn_0" text="所有通道" />
+		<Item name="CustomFormulaForm.TlpEditor.RdoSource.panel1.Btn_1" text="模拟通道" />
+		<Item name="CustomFormulaForm.TlpEditor.RdoSource.panel1.Btn_2" text="数字通道" />
+		<Item name="CustomFormulaForm.TlpEditor.RdoSource.panel1.Btn_3" text="参考通道" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnClear" text="清除" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnBackSpace" text="删除" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnLoadFormula" text="加载" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnSaveFormula" text="保存" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnCancel" text="取消" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnAccept" text="确定" />
+		<Item name="CustomFormulaForm.TlpEditor.ScFunctions.LvFunctions" text="平均" />
+		<Item name="CustomFormulaForm.BaseTopStrip1.TableLayoutPanel.TitleLabel" text="公式编辑器" />
+		<Item name="CustomFormulaForm" text="公式编辑器" Title="公式编辑器" />
+	</Tip>
+	<Tip>
+		<!--ReferenceForm 引用相关界面-->
+		<Item name="ReferenceForm.ReferencePage.ChkIndependentWindow" text="关" CheckedText="开" />
+		<Item name="ReferenceForm.ReferencePage.LblIndependentWindow" text="独立窗口" />
+		<Item name="ReferenceForm.ReferencePage.BtnResetHPos" text="复位" />
+		<Item name="ReferenceForm.ReferencePage.BtnResetVPos" text="复位" />
+		<Item name="ReferenceForm.ReferencePage.ChkActive" text="关" CheckedText="开" />
+		<Item name="ReferenceForm.ReferencePage.LblLabel" text="标签" />
+		<Item name="ReferenceForm.ReferencePage.LblHPos" text="水平位移" />
+		<Item name="ReferenceForm.ReferencePage.LblHScale" text="水平档位" />
+		<Item name="ReferenceForm.ReferencePage.LblVPos" text="垂直位移" />
+		<Item name="ReferenceForm.ReferencePage.LblVScale" text="垂直档位" />
+		<Item name="ReferenceForm.ReferencePage.LblPath" text="选择文件" />
+		<Item name="ReferenceForm.ReferencePage.LblUnit" text="单位" />
+		<Item name="ReferenceForm.ReferencePage.LblActive" text="显示" />
+	</Tip>
+	<Tip>
+		<!--测量菜单界面-->
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnResetStatistic.Tlp.BtnMain" text="复位测量统计" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnCloseAllMeasure.Tlp.BtnMain" text="删除所有测量" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnMeasureOperation.Tlp.BtnMain" text="测量运算" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnMeasure.Tlp.BtnMain" text="参数测量" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnStatistic.Tlp.BtnMain" text="测量统计" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnMeasureGateCursor.Tlp.BtnMain" text="测量门限 - 光标" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnMeasureGateScreen.Tlp.BtnMain" text="测量门限 - 屏幕" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnSnapShot.Tlp.BtnMain" text="参数快照" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnCymometer.Tlp.BtnMain" text="频率计" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnVoltmeter.Tlp.BtnMain" text="电压表" />
+
+		<!--参数测量配置界面-->
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.RdoFigure.panel1.Btn_0" text="关闭" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.RdoFigure.panel1.Btn_1" text="直方图" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.RdoFigure.panel1.Btn_2" text="趋势图" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.RdoFigure.panel1.Btn_3" text="追踪图" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.ChkIndicator" text="关" CheckedText="开" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblFigure" text="副图" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblIndicator" text="指示器" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.ChkActive" text="关" CheckedText="开" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblSource2nd" text="到" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.BtnResetStat" text="统计复位" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.BtnThrold" text="阈值定义" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.BtnName" text="峰峰值" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblThrold" text="参考" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblSource" text="信源" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblName" text="参数" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblActive" text="显示" />
+		<Item name="MeasItemCfgForm" text="参数配置" Title="参数配置" />
+	</Tip>
+	<Tip>
+		<!--插件资源文件中的字符-->
+		<Item name="ScopeX.ComModel.ProtocolCommon.Polarity.Negative" text="负极性" />
+		<Item name="ScopeX.ComModel.ProtocolCommon.Polarity.Positive" text="正极性" />
+
+		<Item name="ScopeX.ComModel.ProtocolCommon.Edge.Fall" text="下降沿" />
+		<Item name="ScopeX.ComModel.ProtocolCommon.Edge.Rise" text="上升沿" />
+
+        <Item name="ScopeX.ComModel.ProtocolARINC429.Condition.FrameHead" text="帧起始" />
+        <Item name="ScopeX.ComModel.ProtocolARINC429.Condition.Label" text="标签" />
+        <Item name="ScopeX.ComModel.ProtocolARINC429.Condition.SDI" text="SDI" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.Condition.SSM" text="SSM" />
+        <Item name="ScopeX.ComModel.ProtocolARINC429.Condition.Data" text="数据" />
+        <Item name="ScopeX.ComModel.ProtocolARINC429.Condition.LabelAndData" text="标签和数据" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.Condition.Error" text="错误" />
+        <Item name="ScopeX.ComModel.ProtocolARINC429.Condition.FrameTail" text="帧结尾" />
+        <Item name="ScopeX.ComModel.ProtocolARINC429.ErrorType.AnyError" text="任意错误" />
+        <Item name="ScopeX.ComModel.ProtocolARINC429.ErrorType.CRCError" text="校验位错误" />
+        <Item name="ScopeX.ComModel.ProtocolARINC429.ErrorType.WordError" text="字错误" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.ErrorType.GapError" text="帧间隙错误" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.Condition.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.Condition.Sync" text="同步位" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.Condition4TDM.Sync" text="同步位" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.Condition4TDM.ChannelAndData" text="通道+数据" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.Condition4TDM.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.SoundChannel.Left" text="左声道" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.SoundChannel.LeftOrRight" text="左/右" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.SoundChannel.Right" text="右声道" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.Error" text="错误" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.FrameEnd" text="帧结尾" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.FrameStart" text="帧起始" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.FrameType" text="帧类型" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.IDandData" text="ID和数据" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.LostConfirmation" text="丢失确认" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.ErrorPacketType.AckLose" text="丢失确认" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.ErrorPacketType.BitFillError" text="位填充错误" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.ErrorPacketType.CRCError" text="CRC错误" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.ErrorPacketType.AllError" text="所有错误" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.FrameType.Data" text="数据帧" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.FrameType.Error" text="错误帧" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.FrameType.Overload" text="超载帧" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.FrameType.Remote" text="远程帧" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Both" text="任意" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Read" text="读" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Write" text="写" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.Condition.FrameStart" text="帧起始" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.Condition.FrameType" text="帧类型" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.Condition.ID" text="ID" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.Condition.Data" text="数据" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.Condition.IDandData" text="ID和数据" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.Condition.FrameEnd" text="帧结尾" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.Condition.Error" text="错误" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.ErrorType.AnyError" text="任意错误" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.ErrorType.LostError" text="丢失确认" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.ErrorType.BitFillError" text="位填充错误" />
+    <Item name="ScopeX.ComModel.ProtocolCANFD.ErrorType.CRCError" text="CRC错误" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.FrameType.Data" text="数据帧" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.FrameType.Error" text="错误帧" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.FrameType.Overload" text="超载帧" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.FrameType.Remote" text="远程帧" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.FrameType.VarFrame" text="变速帧" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDFrameDirection.Both" text="任意" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDFrameDirection.Read" text="读" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDFrameDirection.Write" text="写" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.FrameHead" text="帧起始" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.MACAddress" text="MAC地址" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.MACLenghtOrType" text="MAC长度/类型" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.QTagInfo" text="Q标记控制信息" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.ClientData" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.DataEndPos" text="数据包的结尾" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.Idle" text="空闲" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.CRCError" text="CRC错误" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.SignalType.Difference" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.SignalType.Single" text="单端" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.Circulate" text="循环数" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.Header" text="标头字段" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.Error" text="错误" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.FrameHead" text="帧头" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.FrameTail" text="帧结尾" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.IDAndData" text="ID和数据" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.Indicator" text="指示位" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.PkgHead" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Indicator.EmptyFrame" text="空帧" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Indicator.NormalFrame" text="正常帧" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Indicator.PayloadFrame" text="净荷帧" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Indicator.StartFrame" text="启动帧" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Indicator.SyncFrame" text="同步帧" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.DynamicEmptyFrame" text="空帧，动态" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.PkgHeadCRC" text="标头CRC" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.PkgTail" text="帧尾" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.StartFrame" text="启动帧(无同步)" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.StaticEmptyFrame" text="空帧，静态" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.SyncFrame" text="同步帧" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameTail.Any" text="全部" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameTail.Dynamic" text="动态" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameTail.Static" text="静态" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.Start" text="起始位" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.ReStart" text="重启" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.Stop" text="停止" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.Lost" text="响应失败" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.Address" text="地址" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.AddressAndData" text="地址和数据" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.DataDirection.Read" text="读" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.DataDirection.Write" text="写" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.DataDirection.Both" text="任意" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.Start" text="帧起始" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.IDCRCError" text="ID校验错" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.SUMCRCError" text="校验和错" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Condition.CmdOrStatus" text="命令/状态字" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Condition.Error" text="错误" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Condition.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Condition.Sync" text="同步" />
+        <Item name="ScopeX.ComModel.ProtocolMIL.ErrorType.Oddevent" text="奇偶校验" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.ErrorType.Sync" text="同步" />
+        <Item name="ScopeX.ComModel.ProtocolMIL.ErrorType.Manchester" text="曼彻斯特" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.ErrorType.Notcontinue" text="非连续数据" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Parity.Parity_0" text="0" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Parity.Parity_1" text="1" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Parity.Parity_X" text="X" />
+		<Item name="ScopeX.ComModel.ProtocolNRZ.IdleLevel.High" text="高电平" />
+		<Item name="ScopeX.ComModel.ProtocolNRZ.IdleLevel.Low" text="低电平" />
+		<Item name="ScopeX.ComModel.ProtocolNRZ.SignalType.Difference" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolNRZ.SignalType.Single" text="单端" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.Command" text="初始化K码" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.STP" text="事务层帧起始" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.SDP" text="链路层帧起始" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.SeqID" text="序列ID" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.TLPType" text="事务层包类型" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.TC" text="流量类别" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.AT" text="属性" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.TransID" text="事务ID" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.MsgCode" text="消息" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.Address" text="地址" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.Decode_Error" text="解码错误" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.EP" text="数据出错标志" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.FormatError" text="事务层包类型错误" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.ECRCError" text="事务层CRC校验错" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.LCRCError" text="链路层CRC校验错" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.End" text="链路层帧结束" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.EDB" text="链路层帧结束损坏标志" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.MRD" text="内存读请求" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.MRDLK" text="内存读请求锁定" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.MWr" text="内存写请求" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.IORd" text="IO读请求" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.IOWr" text="IO写请求" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CfgRd0" text="配置读取类型 0" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CfgWr0" text="配置写入类型 0" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CfgRd1" text="配置读取类型 1" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CfgWr1" text="配置写入类型 1" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.TCfgRd" text="读取信任配置" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.TCfgWr" text="写入信任配置" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.Msg" text="消息请求" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.MsgD" text="数据消息请求" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.Cpl" text="无数据完成" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CplD" text="有数据完成" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CplLK" text="完成无数据读取锁定内存" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CplDLK" text="完成有数据读取锁定内存" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.SignalType.Difference" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.SignalType.Single" text="单端" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.Conditions.FrameStart" text="起始位" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.Conditions.CheckError" text="校验错" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.Conditions.SpecialData" text="数据位" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.Conditions.PackageEnd" text="停止位" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.SignalType.Difference" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.SignalType.Single" text="单端" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.OddEvenCheck.None" text="无校验" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.OddEvenCheck.Even" text="偶校验" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.OddEvenCheck.Odd" text="奇校验" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.ALIGN" text="物理层控制" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.SYNC" text="同步" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.X_RDY" text="数据准备" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.SOF" text="帧起始" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.FIS_TYPE" text="帧类型" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.DATA" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.Hold" text="保持" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.EOF" text="帧结束" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.WTRM" text="帧结束等待" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.SignalType.Single" text="单端" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.SignalType.Difference" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.CONTp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.DMATp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.HOLDp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.HOLDAp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.PMACKp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.PMNACKp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.PMREQ_Pp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.PMREQ_Sp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.R_ERRp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.R_IPp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.R_OKp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.R_RDYp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.SYNCp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.WTRMp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.X_RDp" text="差分" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.R_H2D" text="FIS-主发从收" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.R_D2H" text="FIS-从发主收" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.DMA_Act" text="FIS-DMA_从发主收" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.DMA_Set" text="FIS_双向DMA" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.Data" text="FIS_双向数据" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.BIST" text="FIS_双向BIST" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.PIO" text="FIS_PIO_从发主收" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.SDB" text="FIS_bit设置_从发主收" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.R_SATA" text="保留ATA" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.V_S" text="供应商细节" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.Sync" text="同步" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.Status" text="状态" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.CRC" text="CRC" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.StatusData" text="状态+数据" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.StatusDataCRC" text="状态+数据+CRC" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.Error" text="错误" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastError.CRCError" text="快速CRC错误" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastError.ConPulsError" text="连续脉冲错误" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.Sync" text="同步" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.ID" text="ID" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.IDData" text="ID+数据" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.CRC" text="CRC" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.CRCError" text="慢速通道CRC错误" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowMessageCondition.EnhancedMessage" text="增强型" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowMessageCondition.ShortMessage" text="简短型" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowEnhancedMessageType.Enhanced4BitID" text="增强4位ID" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowEnhancedMessageType.Enhanced8BitID" text="增强8位ID" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.ChannelMode.FastChannel" text="快速通道" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.ChannelMode.SlowChannel" text="慢速通道" />		
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastChannelMode.Nibbles" text="半字节" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastChannelMode.FastChannel" text="快速通道" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.PauseBit.No" text="无" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.PauseBit.Yes" text="有" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.Condition.CS" text="起始" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.Condition.Data" text="数据" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.LevelState.Low" text="低电平" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.LevelState.Hight" text="高电平" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.FramingMode.Slave" text="片选" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.FramingMode.Idle" text="超时" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.WriteExRegister" text="扩展寄存器写" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.ReadExRegister" text="扩展寄存器读" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.WriteExRegisterLong" text="扩展寄存器写(长)" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.ReadExRegisterLong" text="扩展寄存器读(长)" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.WriteRegister" text="寄存器写" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.ReadRegister" text="寄存器读" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.MasterWrite" text="主机写" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.MasterRead" text="主机读" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.MasterWriteDD" text="DD块主机读" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.MasterReadDD" text="DD块从机读" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.WriteRegister0" text="寄存器0写" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Reset" text="复位" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Dormancy" text="休眠" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Stop" text="停止" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Wakeup" text="唤醒" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Identify" text="身份识别" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.BusRightTransfer" text="总线权移交" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Parity_Error" text="校验错" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.CheckType.Odd" text="奇校验" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.CheckType.Even" text="偶校验" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Sync" text="同步" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Reset" text="复位" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Pause" text="暂停" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Resume" text="恢复" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.PackageEnd" text="包尾" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.TokenPackage" text="令牌包" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.HandshakePackage" text="握手包" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.DataPackage" text="数据包" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Special" text="特殊" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Error" text="错误" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.TokenPackageType.Out" text="输出通知" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.TokenPackageType.SOF" text="帧起始包" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.TokenPackageType.IN" text="输入通知" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.TokenPackageType.SETUP" text="控制传输" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.SpecialPacketType.Err" text="前导码/错误" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.SpecialPacketType.Split" text="分裂事务" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.SpecialPacketType.Ping" text="PING测试" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.SpecialPacketType.Remain" text="保留" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.HandshakePackageType.ACK" text="响应" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.HandshakePackageType.NAK" text="无响应" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.HandshakePackageType.STALL" text="挂起" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.HandshakePackageType.Nyet" text="未准备好" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.DataPackageType.Data0" text="数据0" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.DataPackageType.Data1" text="数据1" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.DataPackageType.Data2" text="数据2" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.DataPackageType.MData" text="数据M" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.ErrorPackageType.PIDCRC" text="PIDCRC校验错误" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.ErrorPackageType.CRC5" text="CRC5校验错误" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.ErrorPackageType.CRC16" text="CRC16校验错误" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.ErrorPackageType.BitFill" text="位填充错误" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.SyncError" text="同步错误" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.ID_DATA" text="ID和数据" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.SLEEP" text="休眠帧" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.WAKE_UP" text="唤醒帧" />
+
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.A" text="A通道输入" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.B" text="B通道输入" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.C" text="C通道输入" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.AB" text="AB差分输入" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.BC" text="BC差分输入" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.CA" text="CA差分输入" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.ABThreshold" text="AB阈值" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.BCThreshold" text="BC阈值" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.CAThreshold" text="CA阈值" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.LPAThreshold" text="LP A通道阈值" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.LPCThreshold" text="LP C通道阈值" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.SheZhiBoTeLv" text="设置波特率" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.SheZhiYuZhi" text="设置阈值" />
+		<Item name="ScopeX.ComModel.ProtocolPSI5.Condition.Start" text="帧起始" />
+		<Item name="ScopeX.ComModel.ProtocolPSI5.Condition.DataA" text="数据域A" />
+		<Item name="ScopeX.ComModel.ProtocolPSI5.Condition.DataB" text="数据域B" />
+		<Item name="ScopeX.ComModel.ProtocolPSI5.Condition.Crc" text="Crc校验" />
+		<Item name="ScopeX.ComModel.ProtocolPSI5.Condition.Parity" text="奇偶校验" />
+		<Item name="ScopeX.ComModel.ProtocolPSI5.Condition.Block_ID" text="ID块" />
+		<Item name="ScopeX.ComModel.ProtocolPSI5.Condition.Sensor_Status" text="传感器状态" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.PECByte.Open"  text="是" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.PECByte.Close" text="否" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.QuickCommand" text="快速命令" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.SendByte" text="发送字节命令" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.ReceiveByte" text="接收字节命令" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.WriteByte" text="写字节命令" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.WriteWord" text="写字命令" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.Write32" text="写32命令" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.Write64" text="写64命令" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.BlockWrite" text="块写命令" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.ReadByteCommand" text="读字节命令码" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.ReadByteResponse" text="读字节命令响应" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.ReadWordCommand" text="读字命令码" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.ReadWordResponse" text="读字命令响应" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.Read32Command" text="读32命令码" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.Read32Response" text="读32命令响应" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.Read64Command" text="读64命令码" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.Read64Response" text="读64命令响应" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.BlockReadCommand" text="块读命令码" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.BlockReadResponse" text="块读命令响应" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.ProcessCallCommand" text="进程调用命令码" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.ProcessCallResponse" text="进程调用响应" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.BlockWriteBlockReadProcessCallCommand" text="块写块读进程调用命令码" />
+        <Item name="ScopeX.ComModel.ProtocolSMBus.Condition.BlockWriteBlockReadProcessCallResponse" text="块写" />
+		<Item name="ScopeX.ComModel.ProtocolManchester.Condition.Condition_NONE" text="无" />
+		<Item name="ScopeX.ComModel.ProtocolCXPI.Condition.Condition_NONE" text="无" />
+		<Item name="ScopeX.ComModel.ProtocolMlt3.Condition.Condition_NONE" text="无" />
+		<Item name="ScopeX.ComModel.Protocol8B10B.Condition.Condition_NONE" text="无" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Condition.Condition_NONE" text="无" />
+		<Item name="LianXuLingDianPingGeShu" text="连续零电平个数" />
+		<Item name="ScopeX.ComModel.ProtocolManchester.Polarity.Rising" text="上升沿" />
+		<Item name="ScopeX.ComModel.ProtocolManchester.Polarity.Falling" text="下降沿" />
+		<Item name="ScopeX.ComModel.ProtocolManchester.OddEvenCheck.None" text="无" />
+		<Item name="ScopeX.ComModel.ProtocolManchester.OddEvenCheck.Odd" text="奇" />
+		<Item name="ScopeX.ComModel.ProtocolManchester.OddEvenCheck.Even" text="偶" />
+		<Item name="ScopeX.ComModel.ProtocolManchester.DataView.Open" text="是" />
+		<Item name="ScopeX.ComModel.ProtocolManchester.DataView.Close" text="否" />
+
+		<Item name="BianYanXuanZhe" text="边沿选择" />
+		<Item name="RongXian" text="容限" />
+		<Item name="KaiShiSuoYin" text="开始索引" />
+		<Item name="KongXianWei" text="空闲位" />
+		<Item name="TongBuWei" text="同步位" />
+		<Item name="JiOuXing" text="奇偶性" />
+		<Item name="ZiShu" text="字数" />
+		<Item name="ZiDaXiao" text="字大小" />
+		<Item name="ZhenWei" text="帧尾" />
+		<Item name="BiaoTou" text="标头" />
+		<Item name="ShuJuBaoShiTu" text="数据包视图" />
+		<Item name="SheZhiKaiShiSuoYin" text="设置开始索引" />
+		<Item name="SheZhiRongXian" text="设置容限" />
+		<Item name="SheZhiKongXianWei" text="设置空闲位" />
+		<Item name="SheZhiTongBuWei" text="设置同步位" />
+		<Item name="SheZhiZiShu" text="设置字数" />
+		<Item name="SheZhiZiDaXiao" text="设置字大小" />
+		<Item name="SheZhiBiaoTou" text="设置标头" />
+		<Item name="SheZhiZhenWei" text="设置帧尾" />
+
+		<!--PowerAnalysis.resx-->
+		<Item name="DifferSlewRate" text="摆率" />
+		<Item name="EfficiencyCurrent" text="电流" />
+		<Item name="EfficiencyPower" text="功率" />
+		<Item name="EfficiencyVoltage" text="电压" />
+		<Item name="HarmonicTHDrms" text="均方根" />
+		<Item name="LoopAnalysisInputSource" text="输入源" />
+		<Item name="LoopAnalysisOutputSource" text="输出源" />
+		<Item name="ModulationDuty" text="占空比" />
+		<Item name="ModulationFreq" text="频率" />
+		<Item name="ModulationNegPulse" text="负脉宽" />
+		<Item name="ModulationPeriod" text="周期" />
+		<Item name="ModulationPosPulse" text="正脉宽" />
+		<Item name="PwrCurrentSource" text="电流源" />
+		<Item name="PwrHarmonicNum" text="谐波数" />
+		<Item name="PwrSourceType" text="源类型" />
+		<Item name="PwrVoltageSource" text="电压源" />
+		<Item name="PwrInVoltageSource" text="输入电压源" />
+		<Item name="PwrOutVoltageSource" text="输出电压源" />
+		<Item name="QualityApparantPower" text="视在功率" />
+		<Item name="QualityFrequency" text="频率" />
+		<Item name="QualityICrestFactor" text="电流波峰因素" />
+		<Item name="QualityIrms" text="电流均方根" />
+		<Item name="QualityPhase" text="相角" />
+		<Item name="QualityPwrFactor" text="功率因素" />
+		<Item name="QualityReactivePower" text="无效功率" />
+		<Item name="QualityTruePower" text="有效功率" />
+		<Item name="QualityVCrestFactor" text="电压波峰因素" />
+		<Item name="QualityVrms" text="电压均方根" />
+		<Item name="RippleMax" text="最大值" />
+		<Item name="RippleMin" text="最小值" />
+		<Item name="RipplePk2Pk" text="峰峰值" />
+		<Item name="RippleAverage" text="平均值" />
+		<Item name="RippleStddev" text="标准差" />
+		<Item name="SOAAcqWfms" text="已采集波形" />
+		<Item name="SOAFailWfms" text="失败波形数" />
+		<Item name="SOATestSucceed" text="SOA模板测试" />
+		<Item name="SwitchLossCycleCount" text="周期数" />
+		<Item name="SwitchLossEnergyTConduct" text="导通能量损耗" />
+		<Item name="SwitchLossEnergyTNonConduct" text="非导通能量损耗" />
+		<Item name="SwitchLossEnergyTOff" text="关断能量损耗" />
+		<Item name="SwitchLossEnergyTOn" text="开通能量损耗" />
+		<Item name="SwitchLossEnergyTotal" text="能量损耗总计" />
+		<Item name="SwitchLossPowerTConduct" text="导通功率损耗" />
+		<Item name="SwitchLossPowerTNonConduct" text="非导通功率损耗" />
+		<Item name="SwitchLossPowerTOff" text="关断功率损耗" />
+		<Item name="SwitchLossPowerTOn" text="开通功率损耗" />
+		<Item name="SwitchLossPowerTotal" text="功率损耗总计" />
+		<Item name="InrushCurrentMax" text="最大值" />
+		<Item name="InrushCurrentMin" text="最小值" />
+		<Item name="InrushCurrentPk2Pk" text="峰峰值" />
+		<Item name="Transient" text="瞬态时间" />
+		<Item name="ProbeUnit" text="探头单位" />
+		<Item name="EfficiencyInTruePower" text="输入有功功率" />
+		<Item name="EfficiencyOutTruePower" text="输出有功功率" />
+		<Item name="EfficiencyEfficiency" text="效率" />
+		<Item name="TurnOnOffTurnOnTime" text="开启时间" />
+		<Item name="TurnOnOffTurnOffTime" text="关闭时间" />
+		<Item name="CeShiMoShi" text="测试模式" />
+		<Item name="DanCiCeShi" text="单次" />
+		<Item name="ShiShiCeShi" text="实时" />
+		<Item name="FengZhiDianLiu" text="峰值电流" />
+		<Item name="SheZhiFengZhiDianLiu" text="峰值电流" />
+		<Item name="XiaYiBu" text="下一步" />
+		<Item name="MsgTipId.PowerAnalysisInrushCurrent" text="浪涌电流" />
+		<Item name="MsgTipId.PowerAnalysisTurnOnTime" text="开启时间" />
+		<Item name="MsgTipId.PowerAnalysisTurnOffTime" text="关闭时间" />
+		<Item name="MsgTipId.PowerAnalysisCloseSourceAndClickNext" text="请关闭电源，然后点击下一步" />
+		<Item name="MsgTipId.PowerAnalysisOpenSourceAndClickNext" text="请打开电源，然后点击下一步" />
+		<Item name="MsgTipId.PowerAnalysisNoSignal" text="未检测到满足条件的信号！" />
+		<Item name="MsgTipId.PowerAnalysisWaitForTriggerReady" text="电源分析：触发准备中，请勿操作！" />
+		<Item name="MsgTipId.PowerAnalysisWaitForTriggerCompleted" text="电源分析：触发完成中，请勿操作！" />
+		<Item name="MsgTipId.AC2DCTurnOnCompleted" text="AC-DC开启时间测试完成，请查看结果" />
+		<Item name="MsgTipId.AC2DCTurnOffCompleted" text="AC-DC关闭时间测试完成，请查看结果" />
+		<Item name="MsgTipId.DC2DCTurnOnCompleted" text="DC-DC开启时间测试完成，请查看结果" />
+		<Item name="MsgTipId.DC2DCTurnOffCompleted" text="DC-DC关闭时间测试完成，请查看结果" />
+
+		<Item name="MsgTipId.FilterTip1" text="奇数阶对称 FIR 滤波器在奈奎斯特频率下必须具有零增益，阶数自动增加1。" />
+		<Item name="MsgTipId.FilterTip2" text="雷米兹滤波器最低阶数4阶，阶数自动增加2。" />
+		<Item name="MsgTipId.MatlabUninstalled" text="未检测到已安装的Matlab软件，请自行安装。" />
+		<Item name="PageControlSum" text="共 " />
+		<Item name="PageControlCurrent" text="当前 " />
+		<Item name="PageControlCurrentPageNum" text="当前页码" />
+		<Item name="SelectScpiAdapter" text="适配器选择" />
+
+		<Item name="ChannelNotOpen" text="通道未打开" />
+		<Item name="ScopeX.ComModel.Clipping.Pos" text="正向削波波形" />
+		<Item name="ScopeX.ComModel.Clipping.Neg" text="负向削波波形" />
+    <Item name="ScopeX.ComModel.Clipping.Both" text="正向/负向削波波形" />
+
+	</Tip>
+	<Tip>
+		<!--搜索相关的字符-->
+		<Item name="Search.Edge.Rise" text="上升沿" />
+		<Item name="Search.Edge.Fall" text="下降沿" />
+		<Item name="Search.Edge.Bath" text="任意沿" />
+
+		<Item name="Search.Pulse.Positive" text="正脉冲" />
+		<Item name="Search.Pulse.Negative" text="负脉冲" />
+	</Tip>
+</CustomStringTable>

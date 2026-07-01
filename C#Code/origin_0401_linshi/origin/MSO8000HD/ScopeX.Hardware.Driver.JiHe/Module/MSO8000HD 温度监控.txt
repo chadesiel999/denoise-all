@@ -1,0 +1,144 @@
+//MSO8000HD 温度监控
+
+#region PCIE FPGA系统监视器片上温度
+
+            UInt32 data = 0;
+            double temprature = 0.0;
+
+            data = HdIO.ReadReg(PcieBdReg.R.SysMon_Sysmon_Temperature);
+            temprature = (data * 501.3743 / 1024) - 273.15;
+            stringBuilder.AppendLine($"{boardName}SysMon_pcie_fpga_temp={temprature.ToString("0.00")}℃");
+#endregion
+
+#region PRO FPGA系统监视器片上温度
+
+            data = HdIO.ReadReg(ProcBdReg.R.SysMon_Sysmon_Temperature);
+            data &= 0xfff;
+            temprature = (int)data;
+            temprature = (temprature * 503.975 / 1024) - 273.15;
+            stringBuilder.AppendLine($"{boardName}SysMon_pro_fpga_temp={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ1 FPGA系统监视器片上温度
+
+            data = Hd.CurrProduct!.AcqBd.ReadReg(AcqBdReg.R.SysMon_acq_fpga_temp, AcqBdNo.B0);
+            data &= 0x3ff;
+            temprature = (int)data;
+            temprature = (temprature * 501.3743 / 1024) - 273.6777;
+            stringBuilder.AppendLine($"{boardName}SysMon_acq_fpga_temp={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ2 FPGA系统监视器片上温度
+
+            data = Hd.CurrProduct!.AcqBd.ReadReg(AcqBdReg.R.SysMon_acq_fpga_temp, AcqBdNo.B1);
+            data &= 0x3ff;
+            temprature = (int)data;
+            temprature = (temprature * 501.3743 / 1024) - 273.6777;
+            stringBuilder.AppendLine($"{boardName}SysMon_acq_fpga_temp={temprature.ToString("0.00")}℃");
+#endregion
+
+#region PCIE CT1820温度传感器板上温度
+
+            data = HdIO.ReadReg(PcieBdReg.R.SysMon_Ct_1820_Driver_Temp_Data);
+            temprature = data * 0.0625;
+            stringBuilder.AppendLine($"{boardName}SysMon_Ct_1820_Driver_Temp_Data={temprature.ToString("0.00")}℃");
+#endregion
+
+#region PRO CT1820温度传感器板上温度
+
+            data = HdIO.ReadReg(PcieBdReg.R.SysMon_Ct_1820_Driver_Temp_Data_pro);
+            temprature = data * 0.0625;
+            stringBuilder.AppendLine($"{boardName}SysMon_Ct_1820_Driver_Temp_Data_pro={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ1 CT1820温度传感器板上温度
+
+            data = HdIO.ReadReg(PcieBdReg.R.SysMon_Ct_1820_Driver_Temp_Data_acq1);
+            temprature = data * 0.0625;
+            stringBuilder.AppendLine($"{boardName}SysMon_Ct_1820_Driver_Temp_Data_acq1={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ2 CT1820温度传感器板上温度
+
+            data = HdIO.ReadReg(PcieBdReg.R.SysMon_Ct_1820_Driver_Temp_Data_acq2);
+            temprature = data * 0.0625;
+            stringBuilder.AppendLine($"{boardName}SysMon_Ct_1820_Driver_Temp_Data_acq2={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ADC R CT1820温度传感器板上温度
+
+            data = HdIO.ReadReg(PcieBdReg.R.SysMon_Ct_1820_Driver_Temp_Data_adc_r);
+            temprature = data * 0.0625;
+            stringBuilder.AppendLine($"{boardName}SysMon_Ct_1820_Driver_Temp_Data_adc_r={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ADC M CT1820温度传感器板上温度
+
+            data = HdIO.ReadReg(PcieBdReg.R.SysMon_Ct_1820_Driver_Temp_Data_adc_m);
+            temprature = data * 0.0625;
+            stringBuilder.AppendLine($"{boardName}SysMon_Ct_1820_Driver_Temp_Data_adc_m={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ1 LM95233温度传感器ADC1片上温度
+
+            data = Hd.CurrProduct!.AcqBd.ReadReg(AcqBdReg.R.SysMon_acq_temp_adc1, AcqBdNo.B0);
+            data &= 0x7FF;
+            temprature = (int)data * 0.125;
+            stringBuilder.AppendLine($"{boardName}SysMon_acq_adc1_temperature={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ1 LM95233温度传感器ADC2片上温度
+
+            data = Hd.CurrProduct!.AcqBd.ReadReg(AcqBdReg.R.SysMon_acq_temp_adc2, AcqBdNo.B0);
+            data &= 0x7FF;
+            temprature = (int)data * 0.125;
+            stringBuilder.AppendLine($"{boardName}SysMon_acq_adc2_temperature={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ1 LM95233温度传感器ADC1板上温度
+
+            data = Hd.CurrProduct!.AcqBd.ReadReg(AcqBdReg.R.SysMon_acq_temp_pcb1, AcqBdNo.B0);
+            data &= 0x7FF;
+            temprature = (int)data * 0.125;
+            stringBuilder.AppendLine($"{boardName}SysMon_acq_pcb1_temperature={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ1 LM95233温度传感器ADC2板上温度
+
+            data = Hd.CurrProduct!.AcqBd.ReadReg(AcqBdReg.R.SysMon_acq_temp_pcb2, AcqBdNo.B0);
+            data &= 0x7FF;
+            temprature = (int)data * 0.125;
+            stringBuilder.AppendLine($"{boardName}SysMon_acq_pcb2_temperature={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ2 LM95233温度传感器ADC3片上温度
+
+            data = Hd.CurrProduct!.AcqBd.ReadReg(AcqBdReg.R.SysMon_acq_temp_adc1, AcqBdNo.B1);
+            data &= 0x7FF;
+            temprature = (int)data * 0.125;
+            stringBuilder.AppendLine($"{boardName}SysMon_acq_adc1_temperature={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ2 LM95233温度传感器ADC4片上温度
+
+            data = Hd.CurrProduct!.AcqBd.ReadReg(AcqBdReg.R.SysMon_acq_temp_adc2, AcqBdNo.B1);
+            data &= 0x7FF;
+            temprature = (int)data * 0.125;
+            stringBuilder.AppendLine($"{boardName}SysMon_acq_adc2_temperature={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ2 LM95233温度传感器ADC3板上温度
+
+            data = Hd.CurrProduct!.AcqBd.ReadReg(AcqBdReg.R.SysMon_acq_temp_pcb1, AcqBdNo.B1);
+            data &= 0x7FF;
+            temprature = (int)data * 0.125;
+            stringBuilder.AppendLine($"{boardName}SysMon_acq_pcb1_temperature={temprature.ToString("0.00")}℃");
+#endregion
+
+#region ACQ2 LM95233温度传感器ADC4板上温度
+
+            data = Hd.CurrProduct!.AcqBd.ReadReg(AcqBdReg.R.SysMon_acq_temp_pcb2, AcqBdNo.B1);
+            data &= 0x7FF;
+            temprature = (int)data * 0.125;
+            stringBuilder.AppendLine($"{boardName}SysMon_acq_pcb2_temperature={temprature.ToString("0.00")}℃");
+#endregion

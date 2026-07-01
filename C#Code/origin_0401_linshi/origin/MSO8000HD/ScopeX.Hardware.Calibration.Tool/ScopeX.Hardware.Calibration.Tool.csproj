@@ -1,0 +1,162 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>ScopeX.Hardware.Calibration.Tool</AssemblyName>
+    <RootNamespace>ScopeX.Hardware.Calibration.Tool</RootNamespace>
+    <Configurations>Debug;Release</Configurations>
+    <Nullable>enable</Nullable>
+    <Version>0.17.0000</Version>
+    <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+    <FileVersion>$(VersionPrefix)</FileVersion>
+    <ApplicationIcon>2301511602301601352331621523.ico</ApplicationIcon>
+    <Platforms>AnyCPU;x86</Platforms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HardwareWithMatLab|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HardwareWithMatLab|x86'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy $(TargetDir)$(TargetName).dll $(ProjectDir)..\ToolChain\CalibrationTool\ /Y&#xD;&#xA;xcopy $(TargetDir)$(TargetName).exe $(ProjectDir)..\ToolChain\CalibrationTool\ /Y&#xD;&#xA;xcopy $(ProjectDir)$(TargetName).runtimeconfig.json $(ProjectDir)..\ToolChain\CalibrationTool\ /Y&#xD;&#xA;xcopy $(ProjectDir)$(TargetName).PrivateScpiCmd.config $(ProjectDir)..\ToolChain\CalibrationTool\ /Y&#xD;&#xA;xcopy $(ProjectDir)$(TargetName).BatchTaskProcessor.config $(ProjectDir)..\ToolChain\CalibrationTool\ /Y" />
+  </Target>
+
+  <ItemGroup>
+    <Content Include="2301511602301601352331621523.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScopeX.Hardware.Calibration.Data.Base\ScopeX.Hardware.Calibration.Data.Base.csproj" />
+    <ProjectReference Include="..\ScopeX.Hardware.Calibration.Tool.Base\ScopeX.Hardware.Calibration.Tool.Base.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CSScriptLib">
+      <HintPath>..\..\ShareDlls\CSScriptLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MLApp">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\Interop.MLApp.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivi.Visa">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\Ivi.Visa.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>..\..\ShareDlls\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>..\..\ShareDlls\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting">
+      <HintPath>..\..\ShareDlls\Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Scripting">
+      <HintPath>..\..\ShareDlls\Microsoft.CodeAnalysis.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel">
+      <HintPath>..\..\ShareDlls\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MWArray">
+      <HintPath>..\ToolChain\CalibrationTool\MWArray.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.Visa">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\NationalInstruments.Visa.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\ShareDlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="office">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.ComModel">
+      <HintPath>..\..\ShareDlls\ScopeX.ComModel.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.MathExt">
+      <HintPath>..\..\ShareDlls\ScopeX.MathExt.dll</HintPath>
+    </Reference>
+    <Reference Include="U9193x">
+      <HintPath>..\ToolChain\CalibrationTool\U9193x.dll</HintPath>
+    </Reference>
+    <Reference Include="WinUsbDevice">
+      <HintPath>..\ToolChain\CalibrationTool\WinUsbDevice.dll</HintPath>
+    </Reference>
+    <Reference Include="WinUsbDeviceInterface">
+      <HintPath>..\ToolChain\CalibrationTool\WinUsbDeviceInterface.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\CaliParam_AllType_JiHe7000.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\CaliParam_Common.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\CaliParam_Offset_JiHe7000.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\CaliParam_BaseLine_JiHe7000.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\CaliParam_BaseLine_JiHe8000.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\CaliParam_TiAdc_JiHe7000 - 复制.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\CaliParam_TiAdc_JiHe7000.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\CaliParam_Gain_JiHe7000.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\CaliParam_Gain_JiHe8000.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\GeneratorConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\ScpiCommand_Common.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\Oscilloscope_JiHe.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\Signal_Fluck9500b.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BatchTaskPartXmlHelperJson\Signal_RigolDG4162.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

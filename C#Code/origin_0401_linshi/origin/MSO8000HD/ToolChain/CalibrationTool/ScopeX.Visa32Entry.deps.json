@@ -1,0 +1,53 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ScopeX.Visa32Entry/1.0.0": {
+        "dependencies": {
+          "Ivi.Visa": "5.8.0.0",
+          "NationalInstruments.Visa": "17.5.0.49152"
+        },
+        "runtime": {
+          "ScopeX.Visa32Entry.dll": {}
+        }
+      },
+      "Ivi.Visa/5.8.0.0": {
+        "runtime": {
+          "Ivi.Visa.dll": {
+            "assemblyVersion": "5.8.0.0",
+            "fileVersion": "5.8.908.0"
+          }
+        }
+      },
+      "NationalInstruments.Visa/17.5.0.49152": {
+        "runtime": {
+          "NationalInstruments.Visa.dll": {
+            "assemblyVersion": "17.5.0.49152",
+            "fileVersion": "17.5.0.49152"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ScopeX.Visa32Entry/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ivi.Visa/5.8.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NationalInstruments.Visa/17.5.0.49152": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

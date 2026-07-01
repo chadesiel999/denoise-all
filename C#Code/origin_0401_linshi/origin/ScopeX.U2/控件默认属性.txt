@@ -1,0 +1,113 @@
+type:ScopeX.UserControls.ScopeXTextBox
+    Filed:SelectedColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+    Filed:BorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:BorderThickness;     Value:0  DesignerValue:0
+    Filed:Height;     Value:30  DesignerValue:30
+    Filed:BackColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:ForeColor;     Value:Color [A=255, R=185, G=192, B=199]  DesignerValue:185,192,199
+    Filed:Font;     Value:[Font: Name=Arial, Size=9, Units=3, GdiCharSet=1, GdiVerticalFont=False]  DesignerValue:Arial, 9pt
+
+type:ScopeX.UserControls.UIRadioButtonGroup
+    Filed:BorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:BorderThickness;     Value:0  DesignerValue:0
+    Filed:ButtonBackColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:ButtonOffset;     Value:10  DesignerValue:10
+    Filed:Height;     Value:30  DesignerValue:30
+    Filed:ButtonTextColor;     Value:Color [A=255, R=185, G=192, B=199]  DesignerValue:185,192,199
+    Filed:ChoosedButtonColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+    Filed:ChoosedButtonTextColor;     Value:Color [A=255, R=0, G=0, B=0]  DesignerValue:0,0,0
+    Filed:ContentBackColor;     Value:Color [A=255, R=41, G=42, B=45]  DesignerValue:41,42,45
+    Filed:ContentPadding;     Value:{Left=0,Top=0,Right=0,Bottom=0}  DesignerValue:0,0,0,0
+    Filed:FocusBorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:ButtonFont;     Value:[Font: Name=Arial, Size=9, Units=3, GdiCharSet=1, GdiVerticalFont=False]  DesignerValue:Arial, 9pt
+
+type:ScopeX.UserControls.ScopeXSwitchButton
+    Filed:BackColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:BorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:BorderThickness;     Value:0  DesignerValue:0
+    Filed:Height;     Value:30  DesignerValue:30
+    Filed:SliderButtonWidth;     Value:30  DesignerValue:30
+    Filed:Checked;     Value:False  DesignerValue:False
+    Filed:CheckedBackColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+    Filed:CheckedForeColor;     Value:Color [A=255, R=0, G=0, B=0]  DesignerValue:0,0,0
+    Filed:CheckedSliderColor;     Value:Color [A=255, R=232, G=234, B=237]  DesignerValue:232,234,237
+    Filed:FocusBorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:ForeColor;     Value:Color [A=255, R=185, G=192, B=199]  DesignerValue:185,192,199
+    Filed:SliderColor;     Value:Color [A=255, R=232, G=234, B=237]  DesignerValue:232,234,237
+    Filed:UseAnimation;     Value:True  DesignerValue:True
+    Filed:Font;     Value:[Font: Name=Arial, Size=9, Units=3, GdiCharSet=1, GdiVerticalFont=False]  DesignerValue:Arial, 9pt
+
+type:ScopeX.UserControls.ComboBoxEx
+    Filed:BackColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:BorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:BorderThickness;     Value:0  DesignerValue:0
+    Filed:DropDownHeight;     Value:200  DesignerValue:200
+    Filed:DropDownWidth;     Value:95  DesignerValue:95
+    Filed:FocusColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:ForeColor;     Value:Color [A=255, R=185, G=192, B=199]  DesignerValue:185,192,199
+    Filed:Font;     Value:[Font: Name=Arial, Size=9, Units=3, GdiCharSet=1, GdiVerticalFont=False]  DesignerValue:Arial, 9pt
+    Filed:Height;     Value:30  DesignerValue:30
+    Filed:ItemHeight;     Value:28  DesignerValue:28
+    Filed:RectBtnWidth;     Value:20  DesignerValue:20
+    Filed:SelectedBackColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+
+type:ScopeX.UserControls.ScopeXNumericEditBox
+    Filed:BackColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:BorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:BorderThickness;     Value:0  DesignerValue:0
+    Filed:Height;     Value:30  DesignerValue:30
+    Filed:FocusBoederColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:FocusForeColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+    Filed:ForeColor;     Value:Color [A=255, R=185, G=192, B=199]  DesignerValue:185,192,199
+    Filed:Font;     Value:[Font: Name=Arial, Size=9, Units=3, GdiCharSet=1, GdiVerticalFont=False]  DesignerValue:Arial, 9pt
+    Filed:AddButtonStyle.NomalStyle.BackColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+    Filed:AddButtonStyle.MouseInStyle.BackColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+    Filed:AddButtonStyle.MouseClickStyle.BackColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+    Filed:SubButtonStyle.NomalStyle.BackColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+    Filed:SubButtonStyle.MouseInStyle.BackColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+    Filed:SubButtonStyle.MouseClickStyle.BackColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+
+type:ScopeX.UserControls.ScopeXIconButton
+    Filed:BackColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:BorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:SVGForeColor;     Value:Color [A=255, R=185, G=192, B=199]  DesignerValue:185,192,199
+    Filed:BorderThickness;     Value:0  DesignerValue:0
+    Filed:Font;     Value:[Font: Name=Arial, Size=9, Units=3, GdiCharSet=1, GdiVerticalFont=False]  DesignerValue:Arial, 9pt
+    Filed:ForeColor;     Value:Color [A=255, R=185, G=192, B=199]  DesignerValue:185,192,199
+    Filed:MouseinBackColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:MouseinBorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:MouseInBorderThickness;     Value:0  DesignerValue:0
+    Filed:MouseinForeColor;     Value:Color [A=255, R=185, G=192, B=199]  DesignerValue:185,192,199
+    Filed:MouseinSvgForeColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+    Filed:PressedBackColor;     Value:Color [Gray]  DesignerValue:Gray
+    Filed:PressedBorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:PressedBorderThickness;     Value:0  DesignerValue:0
+    Filed:Height;     Value:30  DesignerValue:30
+    Filed:PressedForeColor;     Value:Color [A=255, R=185, G=192, B=199]  DesignerValue:185,192,199
+    Filed:PressedSvgForeColor;     Value:Color [A=255, R=0, G=157, B=255]  DesignerValue:0,157,255
+
+type:ScopeX.UserControls.ScopeXLabel
+    Filed:BackColor;     Value:Color [A=255, R=41, G=42, B=45]  DesignerValue:41,42,45
+    Filed:BorderColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:BorderThickness;     Value:0  DesignerValue:0
+    Filed:ForeColor;     Value:Color [A=255, R=232, G=234, B=237]  DesignerValue:232,234,237
+    Filed:Font;     Value:[Font: Name=Arial, Size=11, Units=3, GdiCharSet=1, GdiVerticalFont=False]  DesignerValue:Arial, 11.25pt
+    Filed:TextAlign;     Value:MiddleLeft  DesignerValue:MiddleLeft
+
+type:ScopeX.UserControls.NavBarGroup
+    Filed:NavBarColor;     Value:Color [A=255, R=53, G=54, B=58]  DesignerValue:53,54,58
+    Filed:NavGroupColor;     Value:Color [A=255, R=41, G=42, B=45]  DesignerValue:41,42,45
+    Filed:NavForeColor;     Value:Color [A=255, R=232, G=234, B=237]  DesignerValue:232,234,237
+    Filed:NavBarHeight;     Value:40  DesignerValue:40
+    Filed:Font;     Value:[Font: Name=Arial, Size=11, Units=3, GdiCharSet=1, GdiVerticalFont=False]  DesignerValue:Arial, 11.25pt
+
+type:ScopeX.UserControls.FloatForm
+    Filed:ContentBackColor;     Value:Color [A=255, R=41, G=42, B=45]  DesignerValue:41,42,45
+    Filed:HeadBackColor;     Value:Color [A=255, R=41, G=42, B=45]  DesignerValue:41,42,45
+    Filed:IconColor;     Value:Color [A=255, R=232, G=234, B=237]  DesignerValue:232,234,237
+    Filed:IconInterval;     Value:21  DesignerValue:21
+    Filed:IconWidth;     Value:28  DesignerValue:28
+    Filed:HeadHeight;     Value:45  DesignerValue:45
+    Filed:TitleColor;     Value:Color [A=255, R=232, G=234, B=237]  DesignerValue:232,234,237
+    Filed:TitleFont;     Value:[Font: Name=Arial, Size=11, Units=3, GdiCharSet=1, GdiVerticalFont=False]  DesignerValue:Arial, 11.25pt
+

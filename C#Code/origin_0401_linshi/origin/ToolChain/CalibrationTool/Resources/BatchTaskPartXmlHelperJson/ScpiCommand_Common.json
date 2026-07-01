@@ -1,0 +1,10 @@
+/*
+  Common Scpi Command
+
+*/
+{
+  //Scpi指令
+  "Scpi": {
+    "Reset": "*RST" //仪器Reset
+  }
+}

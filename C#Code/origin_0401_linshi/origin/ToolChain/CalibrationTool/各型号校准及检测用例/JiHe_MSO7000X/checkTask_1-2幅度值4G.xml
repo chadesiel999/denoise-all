@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--=======region 重要说明=====-->
+<!--DriverType 目前只支持 VISA; 我们自己的只支持UU_ETHERNET(JPO6000), UU_USB374(示波表)-->
+<!--CommandType 有2两种:check和scpi，check用于弹出准备就绪与否的对话框;scpi为SCPI命令，需要指定仪器-->
+<!--AfterWaitSec 表示执行一条scpi命令后，需要等待的时间(以秒为单位)-->
+<!--QueryOvertimeSec 表示执行查询命令时的超时时间(以秒为单位)。对有些操作，仪器端可能需要花费较长的时间后才能查询，比如校准。在此期间如果有比较等待操作，就需要多次执行，直到超时-->
+<!--基本概念：一个文件称为一个解决方案，一个方案中包含多个任务，一个任务包含一系列的命令-->
+<!--一个方案中使用的所有仪器在Instrumentations 段定义，在后续的命令中的InstrumentationName 必须使用该段中Name字段 中的内容==-->
+<!--如果使用厂家自用的校准工具，对待校准的仪器（示波器），请在仪器段中对该仪器使用IsOurTargetDso="1"来标识，其地址可以为空。==-->
+<!--==对使用新的厂家提供的校准工具进行校准时，在Command 段，可以使用程序自定义的函数来校准==-->
+<!--==此时，包括3个标签：IsProgramFunc（指示是否该命令是程序函数来完成），ProgramFuncName(程序函数的名称，有程序员提供)，ProgramFuncOverSec（程序函数超时时间，秒）==-->
+
+<!--=======endregion 重要说明=====-->
+
+<InstrumentationAutoControlSolution SolutionDescription="JPO6000程控校准方案">
+	<!--=======region 方案中使用到的仪器的定义=====-->
+	<Instrumentations>
+		<Instrumentation 
+			Name="普源信号源A"
+			Description="普源信号源A"
+			DriverType="VISA"
+			Address="USB0::0x1AB1::0x0641::DG4C140300034::INSTR"
+			Timeout="0"
+			></Instrumentation>
+			<!--== 待校准的目标仪器，使用此标识，并可不标识Address标签==-->
+		<Instrumentation 
+			Name="JPO6000"
+			Description="10G示波器"
+			DriverType="VISA"
+			IsOurTargetDso="true"
+			Timeout="0"
+			></Instrumentation>
+	</Instrumentations>
+	<!--=======endregion 方案中使用到的仪器的定义=====-->
+	
+	<!--=======region 方案中任务列表=====-->
+	<Tasks>
+		<Task Description="记录高低阻幅度值" ImportanceTipMessage="相关仪器、连接线等准备好了吗？"
+			ExcelFile=".\Excel_4通道4G.xlsx">
+			
+			<Command Description="源输出关闭" 
+				InstrumentationName="普源信号源A"
+				CommandType="scpi"
+				SCPICmd=":OUTPut1:STATe OFF"
+				></Command>
+			<Command Description="源输出关闭" 
+				InstrumentationName="普源信号源A"
+				CommandType="scpi"
+				SCPICmd=":OUTPut2:STATe OFF"
+				></Command>	
+				
+			<Command Description="参数测量源" 
+				InstrumentationName="JPO6000"
+				CommandType="scpi"
+				SCPICmd=":MEAS:ITEM1:SOUR CHAN1"
+				></Command>	
+			<Command Description="参数测量源" 
+				InstrumentationName="JPO6000"
+				CommandType="scpi"
+				SCPICmd=":MEAS:ITEM2:SOUR CHAN2"
+				></Command>	
+				
+				<Command Description="请将信号源的两个输入接入到2个通道上。" 
+					InstrumentationName="普源信号源A"
+					CommandType="check"
+					SCPICmd=""
+					></Command>
+		
+				<Command Description="参数1测量为幅度值" 
+					InstrumentationName="JPO6000"
+					CommandType="scpi"
+					SCPICmd=":MEAS:ITEM1:TYP AMPL"
+					></Command>		
+				<Command Description="参数2测量为幅度值" 
+					InstrumentationName="JPO6000"
+					CommandType="scpi"
+					SCPICmd=":MEAS:ITEM2:TYP AMPL"
+					></Command>		
+					
+				<Command Description="打开源1输出，用于幅度检查" 
+					InstrumentationName="普源信号源A"
+					CommandType="scpi"
+					SCPICmd="OUTPut1:STATe ON"
+					></Command>
+				<Command Description="打开源2输出，用于幅度检查" 
+					InstrumentationName="普源信号源A"
+					CommandType="scpi"
+					SCPICmd=":OUTPut2:STATe ON"
+					></Command>
+				<Command Description="时基档500us" 
+				InstrumentationName="JPO6000"
+				CommandType="scpi"
+				SCPICmd=":TIM:SCAL 0.0005"
+				></Command>	
+				<Group Description="幅度检查-高阻">
+					<Command Description="源OUTPut1:高阻欧姆" 
+						InstrumentationName="普源信号源A"
+						CommandType="scpi"
+						SCPICmd=":OUTPut1:IMPedance INFINITY"
+						></Command>
+					<Command Description="源OUTPut2:高阻欧姆" 
+						InstrumentationName="普源信号源A"
+						CommandType="scpi"
+						SCPICmd=":OUTPut2:IMPedance INFINITY"
+						></Command>		
+					<Command Description="所有通道,高阻10V档" 
+						InstrumentationName="JPO6000"
+						CommandType="scpi"
+						SCPICmd=":FACTory:ALLSource:APPLy 1,10000,0,0,0,0,0,0,0,0"
+						AfterWaitSec="2"
+					    ></Command>
+					<ForeachLoop StartIndex="0" Count="13">
+						<VarintDefine name="DsoYScale"     valuelist="10000,5000,2000,1000,500, 200,100,  50,  20,   10,   5,    2,   1"></VarintDefine>
+						<VarintDefine name="AmpByV"       valuelist="20,20  ,  12,  6,    3, 1.2, 0.6,0.3,0.12,0.06,0.03,0.012,0.006"></VarintDefine>
+						<VarintDefine name="Excel_Channel1" valuelist="   E16,  E15 , E14, E13, E12, E11, E10, E9,  E8,  E7,  E6,   E5, E4"></VarintDefine>
+						<VarintDefine name="Excel_Channel2" valuelist="   F16,  F15 , F14, F13, F12, F11, F10, F9,  F8,  F7,  F6,   F5, F4"></VarintDefine>
+						<Command Description="源输出1:1K,@AmpByV@V" 
+						InstrumentationName="普源信号源A"
+						CommandType="scpi"
+						SCPICmd=":SOURce1:APPLy:SQUare 1000,@AmpByV@,0.0,0"
+						></Command>
+						<Command Description="源输出2:1K,@AmpByV@V" 
+						InstrumentationName="普源信号源A"
+						CommandType="scpi"
+						SCPICmd=":SOURce2:APPLy:SQUare 1000,@AmpByV@,0.0,0"
+						></Command>
+						
+						<Command Description="所有通道,高阻@DsoYScale@mV档" 
+							InstrumentationName="JPO6000"
+							CommandType="scpi"
+							SCPICmd=":FACTory:ALLSource:APPLy 1,@DsoYScale@,0,0,0,0,0,0,0,0"
+							AfterWaitSec="2"
+							></Command>			
+						<Command Description="幅度检查-CH1-@DsoYScale@mV" 
+							InstrumentationName="JPO6000"
+							CommandType="scpi"
+							SCPICmd=":MEAS:ITEM1:VAL ?"
+							ReadBackResultWriteAtExcelCell="幅度值!@Excel_Channel1@"
+						></Command>	
+						<Command Description="幅度检查-CH2-@DsoYScale@mV" 
+							InstrumentationName="JPO6000"
+							CommandType="scpi"
+							SCPICmd=":MEAS:ITEM2:VAL ?"
+							ReadBackResultWriteAtExcelCell="幅度值!@Excel_Channel2@"
+						></Command>	
+					</ForeachLoop>						
+				</Group>
+				
+				<Group Description="幅度检查-低阻">
+					<Command Description="源OUTPut1:50欧姆" 
+						InstrumentationName="普源信号源A"
+						CommandType="scpi"
+						SCPICmd=":OUTPut1:IMPedance 50"
+						></Command>
+					<Command Description="源OUTPut2:50欧姆" 
+						InstrumentationName="普源信号源A"
+						CommandType="scpi"
+						SCPICmd=":OUTPut2:IMPedance 50"
+						></Command>	
+					<Command Description="所有通道,低阻1V档" 
+						InstrumentationName="JPO6000"
+						CommandType="scpi"
+						SCPICmd=":FACTory:ALLSource:APPLy 1,1000,0,2,0,0,0,0,0,0"
+						AfterWaitSec="1"
+						></Command>	
+					<ForeachLoop StartIndex="3" Count="10">
+						<VarintDefine name="DsoYScale"     valuelist="10000,5000,2000,1000,500, 200,100, 50,  20,  10,   5,    2,   1"></VarintDefine>
+						<VarintDefine name="AmpByV"       valuelist="20   , 20  ,  12,  6,   3, 1.2,0.6,0.3,0.12,0.06,0.03,0.012,0.006"></VarintDefine>
+						<VarintDefine name="Excel_Channel1" valuelist=" E32 , E31, E30,E29, E28, E27, E26,E25,E24,E23, E22, E21, E20"></VarintDefine>
+						<VarintDefine name="Excel_Channel2" valuelist=" F32 , F31, F30,F29, F28, F27, F26,F25,F24,F23, F22, F21, F20"></VarintDefine>
+					<Command Description="源输出1:1K,@AmpByV@V" 
+						InstrumentationName="普源信号源A"
+						CommandType="scpi"
+						SCPICmd=":SOURce1:APPLy:SQUare 1000,@AmpByV@,0.0,0"
+						></Command>
+						<Command Description="源输出2:1K,@AmpByV@V" 
+						InstrumentationName="普源信号源A"
+						CommandType="scpi"
+						SCPICmd=":SOURce2:APPLy:SQUare 1000,@AmpByV@,0.0,0"
+						></Command>
+						
+						<Command Description="所有通道,低阻@DsoYScale@mV档" 
+						InstrumentationName="JPO6000"
+						CommandType="scpi"
+						SCPICmd=":FACTory:ALLSource:APPLy 1,@DsoYScale@,0,2,0,0,0,0,0,0"
+						AfterWaitSec="2"
+						></Command>			
+						<Command Description="幅度检查-CH1-@DsoYScale@mV" 
+							InstrumentationName="JPO6000"
+							CommandType="scpi"
+							SCPICmd=":MEAS:ITEM1:VAL ?"
+							ReadBackResultWriteAtExcelCell="幅度值!@Excel_Channel1@"
+						></Command>	
+						<Command Description="幅度检查-CH2-@DsoYScale@mV" 
+							InstrumentationName="JPO6000"
+							CommandType="scpi"
+							SCPICmd=":MEAS:ITEM2:VAL ?"
+							ReadBackResultWriteAtExcelCell="幅度值!@Excel_Channel2@"
+						></Command>	
+					</ForeachLoop>
+                   					
+			    </Group>
+		
+		</Task>	
+	</Tasks>		
+</InstrumentationAutoControlSolution>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--=======region 重要说明=====-->
+<!--DriverType 目前只支持 VISA; 我们自己的只支持UU_ETHERNET(GHz_MSO7000X), UU_USB374(示波表)-->
+<!--CommandType 有2两种:check和scpi，check用于弹出准备就绪与否的对话框;scpi为SCPI命令，需要指定仪器-->
+<!--AfterWaitSec 表示执行一条scpi命令后，需要等待的时间(以秒为单位)-->
+<!--QueryOvertimeSec 表示执行查询命令时的超时时间(以秒为单位)。对有些操作，仪器端可能需要花费较长的时间后才能查询，比如校准。在此期间如果有比较等待操作，就需要多次执行，直到超时-->
+<!--基本概念：一个文件称为一个解决方案，一个方案中包含多个任务，一个任务包含一系列的命令-->
+<!--一个方案中使用的所有仪器在Instrumentations 段定义，在后续的命令中的InstrumentationName 必须使用该段中Name字段 中的内容==-->
+<!--如果使用厂家自用的校准工具，对待校准的仪器（示波器），请在仪器段中对该仪器使用IsOurTargetDso="1"来标识，其地址可以为空。==-->
+<!--==对使用新的厂家提供的校准工具进行校准时，在Command 段，可以使用程序自定义的函数来校准==-->
+<!--==此时，包括3个标签：IsProgramFunc（指示是否该命令是程序函数来完成），ProgramFuncName(程序函数的名称，有程序员提供)，ProgramFuncOverSec（程序函数超时时间，秒）==-->
+
+<!--=======endregion 重要说明=====-->
+<!--
+	参数定义
+	1：channel list
+	2: 阻抗 HIGH LOW
+	3：幅度挡 inputLevelBymV
+	4：输入信号（mV）SourceAmpVoltBymV
+	5：阶段Stage    Dsa_Adc_Fpga
+	6：每次DSA阶段采集前延时时间，用ms表示  1000 3000
+	7：每次ADC阶段采集前延时时间，用ms表示  1500 3000
+	8：每次FPGA阶段采集前延时时间，用ms表示  100
+	9：DSA每个控制字幅度改变百分比DSAStage_PerStepChangedPercent 4 0.01
+	10：ADC每个控制字幅度改变百分比ADCStage_PerStepChangedPercent 0.005 0.005
+	11：总体误差判据TotalErrorByPercent  0.1 0.2
+	12: 通道最小粗调值MinCoarseCtrlWord 0 0
+	13: 通道最大粗调值MaxCoarseCtrlWord 128 65533
+	14: ADC最小粗调值MinAdcCtrolword  4500 4500
+	15: ADC最大粗调值MaxAdcCtrolword  22000 22000
+	16: FPGA最小值MinFpgaCtrlWord  100 100
+	17: FPGA最大值MaxFpgaCtrlWord 3000 3000
+	18: 最小粗调步进值MinCoarseStep 1 50
+	19: 最小ADC步进值MinAdcStep 10 10 
+	20: 统计阶段基线调节步进值OffsetStep 100( > Lv500m) 和 < Lv50m： 50) 100( > Lv500m) 和 < Lv50m： 50)
+	21: 统计阶段粗调调节步进值CoarseStep 3 300
+	22：是否调节基线bIncludeBaseLine true true
+	23: 统计次数 2 5
+	24: 数字调节档位yLevelID_FPGA 2mv
+	25: DSA阶段可调精度范围
+-->
+<InstrumentationAutoControlSolution SolutionDescription="GHz_MSO7000X程控校准方案" version="1.0.0.0" creator="王昌杰" LastModifier="zhaoyong">
+	<!--=======region 方案中使用到的仪器的定义=====-->
+	<Instrumentations>
+			<!--== 待校准的目标仪器，使用此标识，并可不标识Address标签==-->
+		<Instrumentation 
+			Name="GHz_MSO7000X"
+			Description="GHz_MSO7000X示波器"
+			DriverType="VISA"
+			IsOurTargetDso="true"
+			Timeout="0"
+			></Instrumentation>
+	</Instrumentations>
+	<!--=======endregion 方案中使用到的仪器的定义=====-->
+	
+	<!--=======region 方案中任务列表=====-->
+	<Tasks>
+		<Task Description="校准通道的高阻、低阻全档位增益" ImportanceTipMessage="该任务是通过程控来校准示波器的通道增益。">
+			<Command Description="检查信号普源源与示波器的连接情况" 
+				InstrumentationName="普源信号源A"
+				CommandType="check"
+				SCPICmd=""
+				></Command>
+			<Command Description="所有通道,2mV档,低阻"
+				InstrumentationName="GHz_MSO7000X"
+				CommandType="scpi"
+				SCPICmd=":FACTory:ALLSource:APPLy 1,2,0,2,1,0,0,9,0,0"
+			></Command>
+			<!--=======参数：1.通道号 2.基线最大值 3.基线最小值=====-->
+			<Command Description="检测基线否居中"
+					InstrumentationName="GHz_MSO7000X"
+					IsProgramFunc="true"
+					ProgramFuncName="BatchTaskPart_CheckChannelWave 1,138,118"
+					ProgramFuncOverSec="20"
+			></Command>
+		</Task>	
+	</Tasks>		
+</InstrumentationAutoControlSolution>

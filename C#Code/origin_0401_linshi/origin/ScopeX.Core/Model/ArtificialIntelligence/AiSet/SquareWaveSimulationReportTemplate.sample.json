@@ -1,0 +1,51 @@
+{
+  "status": true,
+  "requestId": 582901,
+  "executedRequestId": 582902,
+  "signalType": "方波",
+  "generatedAt": "2026-03-25 11:43:08",
+  "context": {
+    "requestId": 582901,
+    "executedId": 582902,
+    "signalType": "方波",
+    "aiSet": {
+      "enable": true,
+      "signalRecognitionEnable": true,
+      "windowsEnable": true,
+      "paramsEnable": true,
+      "tips": [
+        "仿真提示1：当前参数为写死测试数据",
+        "仿真提示2：后续可切换为实时测量值"
+      ],
+      "aiSetInfos": [
+        "仿真信息：当前信号类型为方波"
+      ]
+    },
+    "waveformAnalysis": {
+      "enable": true,
+      "source": "C2",
+      "template": "方波",
+      "sampleRateHz": 1000000000.0,
+      "timeScaleS": 0.0000008,
+      "verticalScaleV": 1.0,
+      "verticalOffsetV": 0.01,
+      "measurementStatus": "已获取：来自参数测量快照结果。",
+      "metrics": {
+        "FrequencyHz": { "value": 2499780.44, "sourceKey": "Freq" },
+        "PeriodS": { "value": 0.0000004000, "sourceKey": "Period" },
+        "AmplitudeV": { "value": 2.412, "sourceKey": "Amplitude" },
+        "PeakToPeakV": { "value": 4.805, "sourceKey": "Pk2Pk" },
+        "DutyCyclePercent": { "value": 48.7, "sourceKey": "Duty" },
+        "PositivePulseWidthS": { "value": 0.0000001949, "sourceKey": "PWidth" },
+        "NegativePulseWidthS": { "value": 0.0000002051, "sourceKey": "NWidth" },
+        "RiseTimeS": { "value": 0.0000000068, "sourceKey": "Rise" },
+        "FallTimeS": { "value": 0.0000000074, "sourceKey": "Fall" }
+      },
+      "metricNotes": [
+        "备注：系统可扩展测量参数包括 频率、周期、幅值、峰峰值、最大值、最小值、均值、均方根、占空比、上升时间、下降时间、过冲、脉宽、延迟、相位、抖动 等。"
+      ]
+    }
+  },
+  "prompt": "请基于上下文生成方波测试报告。",
+  "report": "【模拟报告】方波占空比接近50%，上升/下降沿对称性较好，建议补充过冲与振铃项验证。"
+}

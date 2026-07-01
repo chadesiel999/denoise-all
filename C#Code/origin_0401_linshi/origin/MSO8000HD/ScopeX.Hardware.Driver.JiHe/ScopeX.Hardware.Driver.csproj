@@ -1,0 +1,95 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <PackageId>HardwareDLL</PackageId>
+    <AssemblyName>ScopeX.Hardware.Driver</AssemblyName>
+    <Configurations>Debug;Release;HardwareWithMatlab</Configurations>
+    <Nullable>enable</Nullable>
+    <Product>ScopeX.Hardware</Product>
+    <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+    <Version>0.7.1.130</Version>
+    <FileVersion>$(VersionPrefix)</FileVersion>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>ScopeX.Hardware.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591;1570;1587;0649</NoWarn>
+    <OutputPath>$(TargetDir)</OutputPath>
+    <DefineConstants>TRACE;FrequencyDomain;DBI;IncludeFpgaFlashUpdater;FpgaRegisterFor_JiHe_MSO7000X;JiHe_MSO8000X;</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DocumentationFile>ScopeX.Hardware.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591;1570;1587;0649</NoWarn>
+    <OutputPath>$(TargetDir)</OutputPath>
+    <DefineConstants>TRACE;FrequencyDomain;DBI;IncludeFpgaFlashUpdater;FpgaRegisterFor_JiHe_MSO7000X;JiHe_MSO8000X;</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Registers\B24_MSO8G\**" />
+    <EmbeddedResource Remove="Registers\B24_MSO8G\**" />
+    <None Remove="Registers\B24_MSO8G\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="auto_peak_filter">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\auto_peak_filter.dll</HintPath>
+    </Reference>
+    <Reference Include="CyUSB">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\CyUSB.dll</HintPath>
+    </Reference>
+    <Reference Include="function_ai_trig">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\function_ai_trig.dll</HintPath>
+    </Reference>
+    <Reference Include="func_20Gsps_8GHz_Interp">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\func_20Gsps_8GHz_Interp.dll</HintPath>
+    </Reference>
+    <Reference Include="func_20Gsps_8GHz_TI_Mag_Phase">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\func_20Gsps_8GHz_TI_Mag_Phase.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivi.Visa">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\Ivi.Visa.dll</HintPath>
+    </Reference>
+    <Reference Include="MWArray">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\MWArray.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PCIeControl">
+      <HintPath>..\..\ShareDlls\PCIeControl.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.ComModel">
+      <HintPath>..\..\ShareDlls\ScopeX.ComModel.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.MathExt">
+      <HintPath>..\..\ShareDlls\ScopeX.MathExt.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Measure">
+      <HintPath>..\..\ShareDlls\ScopeX.Measure.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.USBBridge">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\ScopeX.USBBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.USBTMC">
+      <HintPath>..\..\ShareDlls\OtherShareDlls\other\ScopeX.USBTMC.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>..\..\ShareDlls\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Ports">
+      <HintPath>..\..\ShareDlls\System.IO.Ports.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScopeX.Hardware.Calibration.Data.Base\ScopeX.Hardware.Calibration.Data.Base.csproj" />
+    <ProjectReference Include="..\ScopeX.Updater.Base\ScopeX.Updater.Base.csproj" />
+  </ItemGroup>
+  
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath)  $(SolutionDir)ShareDlls\$(TargetName)$(TargetExt)&#xD;&#xA;copy $(TargetPath)  $(SolutionDir)ToolChain\FPGA_Updater\$(TargetName)$(TargetExt)&#xD;&#xA;copy $(SolutionDir)ShareDlls\ScopeX.MathExt.dll  $(SolutionDir)ToolChain\FPGA_Updater\ScopeX.MathExt.dll&#xD;&#xA;&#xD;&#xA;xcopy /s /y $(TargetDir)$(TargetName).pdb  $(SolutionDir)pdbs\&#xD;&#xA;xcopy /s /y $(TargetPath) $(SolutionDir)pdbs\" />
+  </Target>
+</Project>

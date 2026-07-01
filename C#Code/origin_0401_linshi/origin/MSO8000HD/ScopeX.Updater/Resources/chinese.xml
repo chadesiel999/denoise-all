@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomStringTable language="简体中文">
+	<Tip>
+		<Item name="TheInitialPowerOnFailed" text="初始化上电失败！" />
+		<Item name="InstallUpdFailed" text="安装：{0}失败" />
+		<Item name="UpdateFailedFormat" text="[{0}]更新出错" />
+		<Item name="UpdateSuccessFormat" text="[{0}]更新成功" />
+		<Item name="Channel" text="通道" />
+		<Item name="KeyBoard" text="键盘板" />
+	</Tip>
+</CustomStringTable>

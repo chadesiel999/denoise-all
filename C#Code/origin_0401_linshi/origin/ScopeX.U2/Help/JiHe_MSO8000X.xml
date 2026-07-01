@@ -1,0 +1,107 @@
+<XMLDocument Title="JiHe_MSO7000X">
+	<Items>
+		<!--Name = 窗口类型 Index = PDF文档中的章节编号-->
+		<Form Name="DsoForm" Index="" />
+		<Form Name="AnalogForm" Index="13" />
+		<Form Name="AWGForm" Index="30" />
+		<Form Name="CursorForm" Index="19" />
+		<Form Name="XYCursorForm" Index="28" />
+		<Form Name="CymometerForm" Index="24" />
+		<Form Name="DecodeForm" Index="17" />
+		<Form Name="DigitalForm" Index="23" />
+		<Form Name="LissajousForm" Index="28" />
+		<Form Name="NormalViewSettingForm" Index="32" />
+		<Form Name="FileForm" Index="33" />
+		<Form Name="FilterDesignForm" Index="20" />
+		<Form Name="PrintForm" Index="33" />
+		<Form Name="ReferenceForm" Index="21" />
+		<Form Name="SegmentChooseForm" Index="" />
+		<Form Name="AboutForm" Index="" />
+		<Form Name="SettingForm" Index="34" />
+		<Form Name="AcquireForm" Index="15" />
+		<Form Name="TimebaseForm" Index="14" />
+		<Form Name="VoltmeterForm" Index="24" />
+
+		<!--抖动分析-->
+		<Form Name="SerialAnalysisForm" Index="26" />
+		<Form Name="EyePatternParameterForm" Index="26" />
+		<Form Name="JitterEyePatternForm" Index="26" />
+		<Form Name="MeasureResultForm" Index="26" />
+
+		<!--数学-->
+		<Form Name="MathForm" Index="20" />
+		<Form Name="CustomFormulaForm" Index="20" />
+		<Form Name="FrequencyConfigureForm" Index="20" />
+		<Form Name="HistParametersForm" Index="29" />
+		<Form Name="UserCodeForm" Index="20" />
+
+		<!--参数测量-->
+		<Form Name="MeasItemCfgForm" Index="18" />
+		<Form Name="MeasRefLevelForm" Index="18" />
+		<Form Name="MeasSelectionForm" Index="18" />
+		<Form Name="MeasSnapShotForm" Index="18" />
+		<Form Name="MeasStatisticForm" Index="18" />
+		<Form Name="MeasureForm" Index="18" />
+		<Form Name="MeasureMenuForm" Index="18" />
+		<Form Name="MeasureOpForm" Index="18" />
+
+		<!--PassFail-->
+		<Form Name="PassFailForm" Index="22" />
+		<Form Name="PassFailInfoForm" Index="22" />
+
+		<!--电源分析-->
+		<Form Name="PwrHarmonicForm" Index="25" />
+		<Form Name="PwrHarmonicGuideForm" Index="25" />
+		<Form Name="PwrHarmonicInfoForm" Index="25" />
+		<Form Name="AmplitudeSettingForm" Index="25" />
+		<Form Name="PwrLoopAnalysisForm" Index="25" />
+		<Form Name="PwrLoopAnalysisGuideForm" Index="25" />
+		<Form Name="PwrLoopAnalysisInfoForm" Index="25" />
+		<Form Name="PowerQualityForm" Index="25" />
+		<Form Name="PwrQualityGuideForm" Index="25" />
+		<Form Name="PwrQualityInfoForm" Index="25" />
+		<Form Name="PwrSwitchingLossForm" Index="25" />
+		<Form Name="PwrSwitchingLossGuideForm" Index="25" />
+		<Form Name="PwrSwitchingLossInfoForm" Index="25" />
+		<Form Name="PwrRippleForm" Index="25" />
+		<Form Name="PwrRippleGuideForm" Index="25" />
+		<Form Name="PwrRippleInfoForm" Index="25" />
+		<Form Name="DefineMaskForm" Index="25" />
+		<Form Name="PwrSOAForm" Index="25" />
+		<Form Name="PwrSOAGuideForm" Index="25" />
+		<Form Name="PwrModulationForm" Index="25" />
+		<Form Name="PwrInrushCurrentForm" Index="25" />
+		<Form Name="PwrEfficiencyForm" Index="25" />
+		<Form Name="PwrRDSonForm" Index="25" />
+		<Form Name="PwrOnOffTimeForm" Index="25" />
+		<Form Name="PwrPSRRForm" Index="25" />
+		<Form Name="PwrSlewRateForm" Index="25" />
+		<Form Name="PowerAnalysisForm" Index="25" />
+		<Form Name="PwrDifferGuideForm" Index="12" />
+		<Form Name="PwrDifferInfoForm" Index="13" />
+		<Form Name="PwrEfficiencyGuideForm" Index="12" />
+		<Form Name="PwrEfficiencyInfoForm" Index="13" />
+		<Form Name="PwrInrushCurrentGuideForm" Index="12" />
+		<Form Name="PwrInrushCurrentInfoForm" Index="13" />
+		<Form Name="PwrModulationGuideForm" Index="12" />
+		<Form Name="PwrModulationInfoForm" Index="13" />
+		<Form Name="PwrTransientGuideForm" Index="12" />
+		<Form Name="PwrTransientInfoForm" Index="13" />
+
+		<!--搜索-->
+		<Form Name="SearchForm" Index="31" />
+		<Form Name="SearchEventOperateForm" Index="31" />
+		<Form Name="SearchInfoForm" Index="31" />
+		<Form Name="SearchItemForm" Index="31" />
+
+		<!--触发-->
+		<Form Name="TriggerForm" Index="16" />
+		<Form Name="CascadeSettingForm" Index="16" />
+		<Form Name="CustomDecodeForm" Index="16" />
+		<Form Name="PatSettingForm" Index="16" />
+		<Form Name="StateSettingForm" Index="16" />
+		<Form Name="SustainTimeSettingForm" Index="16" />
+		<Form Name="LocAssistedSettingForm" Index="16" />
+		<Form Name="VisualTriggerSettingForm" Index="16" />
+	</Items>
+</XMLDocument>

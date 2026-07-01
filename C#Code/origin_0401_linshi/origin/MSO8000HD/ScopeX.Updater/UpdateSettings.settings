@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Uestc.Auto6.Dso.Updater" GeneratedClassName="UpdateSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="USBDefaultImgFileName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CyBootProgrammer3.0.img</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

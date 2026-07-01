@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomStringTable language="english">
+	<Tip>
+		<Item name="TheInitialPowerOnFailed" text="The initial power-on failed!" />
+		<Item name="InstallUpdFailed" text="Install file：{0} failed" />
+		<Item name="UpdateFailedFormat" text="[{0}] update failed" />
+		<Item name="UpdateSuccessFormat" text="[{0}] update successd" />
+		<Item name="Channel" text="Channel" />
+		<Item name="KeyBoard" text="KeyBoard" />
+	</Tip>
+</CustomStringTable>

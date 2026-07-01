@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--=======region 重要说明=====-->
+<!--DriverType 目前只支持 VISA; 我们自己的只支持UU_ETHERNET(JPO6000), UU_USB374(示波表)-->
+<!--CommandType 有2两种:check和scpi，check用于弹出准备就绪与否的对话框;scpi为SCPI命令，需要指定仪器-->
+<!--AfterWaitSec 表示执行一条scpi命令后，需要等待的时间(以秒为单位)-->
+<!--QueryOvertimeSec 表示执行查询命令时的超时时间(以秒为单位)。对有些操作，仪器端可能需要花费较长的时间后才能查询，比如校准。在此期间如果有比较等待操作，就需要多次执行，直到超时-->
+<!--基本概念：一个文件称为一个解决方案，一个方案中包含多个任务，一个任务包含一系列的命令-->
+<!--一个方案中使用的所有仪器在Instrumentations 段定义，在后续的命令中的InstrumentationName 必须使用该段中Name字段 中的内容==-->
+<!--如果使用厂家自用的校准工具，对待校准的仪器（示波器），请在仪器段中对该仪器使用IsOurTargetDso="1"来标识，其地址可以为空。==-->
+<!--==对使用新的厂家提供的校准工具进行校准时，在Command 段，可以使用程序自定义的函数来校准==-->
+<!--==此时，包括3个标签：IsProgramFunc（指示是否该命令是程序函数来完成），ProgramFuncName(程序函数的名称，有程序员提供)，ProgramFuncOverSec（程序函数超时时间，秒）==-->
+
+<!--=======endregion 重要说明=====-->
+
+<InstrumentationAutoControlSolution SolutionDescription="Afc扫频方案">
+	<Instrumentations>
+		<Instrumentation 
+			Name="信号源RS"
+			Description="信号源RS"
+			DriverType="VISA"
+			Address="USB0::0x0AAD::0x0054::182860::INSTR"
+			Timeout="0"
+		></Instrumentation>
+		<!--== 待校准的目标仪器，使用此标识，并可不标识Address标签==-->
+		<Instrumentation 
+			Name="KeySight PXA Signal Analyer N9030B"
+			Description="KeySight频谱仪"
+			DriverType="VISA"
+			Address="USB0::0x2A8D::0x1D0B::MY60071256::INSTR"
+			Timeout="0"
+			></Instrumentation>
+	</Instrumentations>
+	<!--=======region 方案中任务列表=====-->
+	<Tasks>
+		<Task Description="对射频源及线损进行计算。" ImportanceTipMessage="该任务是通过程控来对射频源及线损进行计算。">
+			<Command Description="现在即将对 “通道 (@OpenChannel@) ” 进行扫频，请确保将信号源的输出接入到相应的通道！" 
+				InstrumentationName="信号源RS"
+				CommandType="check"
+				SCPICmd=""
+			></Command>
+			<Command Description="设置信号源复位" 
+				InstrumentationName="信号源RS"
+				CommandType="scpi"
+				SCPICmd="*RST"
+			></Command>
+			<Command Description="设置信号源输出频率为100MHz" 
+				InstrumentationName="信号源RS"
+				CommandType="scpi"
+				SCPICmd="FREQ:FIXed 100MHz"
+			></Command>
+			<Command Description="设置信号源输出幅度0dBm" 
+				InstrumentationName="信号源RS"
+				CommandType="scpi"
+				SCPICmd="SOURce:POWer:LEVel:IMMediate:AMPLitude 0 dBm"
+			></Command>
+			<Command Description="打开信号源输出" 
+				InstrumentationName="信号源RS"
+				CommandType="scpi"
+				SCPICmd="OUTPut1:STATe ON"
+			></Command>
+			<Command Description="生成校准数据"
+				InstrumentationName="GHz_MSO7000X"
+				IsProgramFunc="true"
+				ProgramFuncName="BatchTask_SignallossMeasurement false,SignalAnalyer,TestSignalAnalyer.csv,扫频频率点表\TestSignalLoss.txt,USB0::0x0AAD::0x0054::182860::INSTR,USB0::0x2A8D::0x1D0B::MY60071256::INSTR"
+			></Command>
+			<Command Description="关闭信号源输出" 
+				InstrumentationName="信号源RS"
+				CommandType="scpi"
+				SCPICmd="OUTPut1:STATe OFF"
+			></Command>
+		</Task>	
+	</Tasks>		
+</InstrumentationAutoControlSolution>

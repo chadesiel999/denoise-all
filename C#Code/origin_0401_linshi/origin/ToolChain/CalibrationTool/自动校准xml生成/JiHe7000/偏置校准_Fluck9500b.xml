@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=======region 重要说明=====
+[1]DriverType 目前只支持 VISA; 我们自己的只支持UU_ETHERNET(JiHe_MSO7000X，JiHe_MSO8000X), UU_USB374(示波表);
+[2]CommandType 有2两种:check和scpi，check用于弹出准备就绪与否的对话框;scpi为SCPI命令，需要指定仪器;
+[3]AfterWaitSec 表示执行一条scpi命令后，需要等待的时间(以秒为单位);
+[4]QueryOvertimeSec 表示执行查询命令时的超时时间(以秒为单位)。对有些操作，仪器端可能需要花费较长的时间后才能查询，比如校准。在此期间如果有比较等待操作，就需要多次执行，直到超时;
+[5]基本概念：一个文件称为一个解决方案，一个方案中包含多个任务，一个任务包含一系列的命令;
+[6]一个方案中使用的所有仪器在Instrumentations 段定义，在后续的命令中的InstrumentationName 必须使用该段中Name字段 中的内容;
+[7]如果使用厂家自用的校准工具，对待校准的仪器（示波器），请在仪器段中对该仪器使用IsOurTargetDso="1"来标识，其地址可以为空;
+[8]对使用新的厂家提供的校准工具进行校准时，在Command 段，可以使用程序自定义的函数来校准;
+[9]此时，包括3个标签：IsProgramFunc（指示是否该命令是程序函数来完成），ProgramFuncName(程序函数的名称，有程序员提供)，ProgramFuncOverSec(程序函数超时时间，秒);
+-->
+<!--=======BatchTaskPart_CaliOffset 参数说明===== 
+第1个参数：表示通道，其中1|2 编号从1开始;
+第2个参数，表示高阻还是低阻;LOW表示低阻(50欧姆);HIGH表示高阻;
+第3个参数：以mV为单位的档位值，浮点数;
+第4个参数，偏移输入的理论电压值，用V为单位;
+第5个参数，最大等待时间,单位mS;
+-->
+<InstrumentationAutoControlSolution SolutionDescription="JiHe_MSO7000X程控偏置校准方案." version="1.0.9.2">
+  <Instrumentations Description="使用的仪器">
+    <Instrumentation Name="Fluck9500b" Description="Fluck9500b" DriverType="VISA" Address="GPIB4::19::INSTR" Timeout="0" />
+    <Instrumentation Name="JiHe_MSO7000X" Description="示波器" DriverType="VISA" IsOurTargetDso="true" Timeout="0" />
+  </Instrumentations>
+  <Tasks Description="任务列表">
+    <Task Description="校准通道的偏置." ImportanceTipMessage="该任务是通过程控来校准示波器的偏执.">
+      <ForeachLoop Description="通道循环:" StartIndex="0" Count="4">
+        <VarintDefine name="Channels" valuelist="1,2,3,4" />
+        <Command Description="现在即将对“通道@Channels@” 进行校准，请确保将信号源的输出接入到通道！" CommandType="check" />
+        <Group Description="示波器及信号源初始化">
+          <Command Description="时基档0.0002s" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":TIM:SCAL 0.0002" AfterWaitSec="0" />
+          <Command Description="采集模式为：HIGHres" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":ACQ:TYP HIGHres" AfterWaitSec="0" />
+          <Command Description="存储深度：25K" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":FACT:STOR Of25KDots" AfterWaitSec="0" />
+          <Command Description="源复位" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="*RST" AfterWaitSec="0" />
+          <Command Description="源DC" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="SCOpe DC" AfterWaitSec="0" />
+        </Group>
+        <ForeachLoop Description="阻抗循环: 低阻-》高阻" StartIndex="0" Count="2">
+          <VarintDefine name="SourceIMPedanceName" valuelist="50欧姆,高阻" />
+          <VarintDefine name="Rigol_SourceIMPedanceSetting" valuelist="50,INFinity" />
+          <VarintDefine name="Fluck_SourceIMPedanceSetting" valuelist="50,1E6" />
+          <VarintDefine name="BatchTaskIMPedanceSetting" valuelist="LOW,HIGH" />
+          <VarintDefine name="IMPedanceOfALLSourceAPPLySetting" valuelist="2,0" />
+          <VarintDefine name="OffsetChnlYScaleStart" valuelist="0,3" />
+          <VarintDefine name="OffsetChnlYScaleCount" valuelist="3,4" />
+          <Command Description="源OUTPut1:@SourceIMPedanceName@" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="ROUT:SIGN:IMP @Fluck_SourceIMPedanceSetting@" AfterWaitSec="0" />
+          <ForeachLoop Description="垂直档位循环:" StartIndex="@OffsetChnlYScaleStart@" Count="@OffsetChnlYScaleCount@">
+            <VarintDefine name="OffsetSourceAmpVoltByV" valuelist="2,5,5,2,20,40,80" />
+            <VarintDefine name="OffsetInputLevelBymV" valuelist="20,100,1000,50,500,1000,10000" />
+            <Group Description="示波器通道设置">
+              <Command Description="所有通道,@OffsetInputLevelBymV@mV档,@SourceIMPedanceName@,偏置@OffsetSourceAmpVoltByV@V,20MHz带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":FACTory:ALLSource:APPLy 1,@OffsetInputLevelBymV@,0,@IMPedanceOfALLSourceAPPLySetting@,3,0,0,9,0,0" AfterWaitSec="2" />
+              <Command Description="通道1 调整偏执" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHANnel1:BIAS @OffsetSourceAmpVoltByV@" AfterWaitSec="0" />
+              <Command Description="通道2 调整偏执" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHANnel2:BIAS @OffsetSourceAmpVoltByV@" AfterWaitSec="0" />
+              <Command Description="通道3 调整偏执" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHANnel3:BIAS @OffsetSourceAmpVoltByV@" AfterWaitSec="0" />
+              <Command Description="通道4 调整偏执" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHANnel4:BIAS @OffsetSourceAmpVoltByV@" AfterWaitSec="0" />
+              <Command Description="通道1 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN1:BWL 20MHz" AfterWaitSec="0" />
+              <Command Description="通道2 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN2:BWL 20MHz" AfterWaitSec="0" />
+              <Command Description="通道3 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN3:BWL 20MHz" AfterWaitSec="0" />
+              <Command Description="通道4 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN4:BWL 20MHz" AfterWaitSec="0" />
+            </Group>
+            <Command Description="源输出电压@OffsetSourceAmpVoltByV@V" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="VOLTage @OffsetSourceAmpVoltByV@" AfterWaitSec="0" />
+            <Command Description="源输出打开" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="OUTPut ON" AfterWaitSec="0" />
+            <Command Description="通道(@Channels@),垂直档(@OffsetInputLevelBymV@V),阻抗(@SourceIMPedanceName@):偏置校准" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_CaliOffset @Channels@,@BatchTaskIMPedanceSetting@,@OffsetInputLevelBymV@,@OffsetSourceAmpVoltByV@,@MaxWaitMilliseconds@" ProgramFuncOverSec="40" />
+          </ForeachLoop>
+        </ForeachLoop>
+        <Group Description="偏置校准常量设置">
+          <ConstVariantDefine name="MaxWaitMilliseconds" value="40" />
+        </Group>
+        <Command Description="保存通道校准数据" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_SaveCaliDataToFile PhyChannel" ProgramFuncOverSec="0" />
+      </ForeachLoop>
+    </Task>
+  </Tasks>
+</InstrumentationAutoControlSolution>

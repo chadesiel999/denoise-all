@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--=======region 重要说明=====-->
+<!--DriverType 目前只支持 VISA; 我们自己的只支持UU_ETHERNET(GHz_MSO8000HD), UU_USB374(示波表)-->
+<!--CommandType 有2两种:check和scpi，check用于弹出准备就绪与否的对话框;scpi为SCPI命令，需要指定仪器-->
+<!--AfterWaitSec 表示执行一条scpi命令后，需要等待的时间(以秒为单位)-->
+<!--QueryOvertimeSec 表示执行查询命令时的超时时间(以秒为单位)。对有些操作，仪器端可能需要花费较长的时间后才能查询，比如校准。在此期间如果有比较等待操作，就需要多次执行，直到超时-->
+<!--基本概念：一个文件称为一个解决方案，一个方案中包含多个任务，一个任务包含一系列的命令-->
+<!--一个方案中使用的所有仪器在Instrumentations 段定义，在后续的命令中的InstrumentationName 必须使用该段中Name字段 中的内容==-->
+<!--如果使用厂家自用的校准工具，对待校准的仪器（示波器），请在仪器段中对该仪器使用IsOurTargetDso="1"来标识，其地址可以为空。==-->
+<!--==对使用新的厂家提供的校准工具进行校准时，在Command 段，可以使用程序自定义的函数来校准==-->
+<!--==此时，包括3个标签：IsProgramFunc（指示是否该命令是程序函数来完成），ProgramFuncName(程序函数的名称，有程序员提供)，ProgramFuncOverSec（程序函数超时时间，秒）==-->
+<!--=======endregion 重要说明=====-->
+
+<!--
+	参数定义
+	1：要校准的通道，从0开始(表示D0通道),可以多通道校准(1|2)
+	2: 校准信号的幅度值，用mv为单位
+-->
+<InstrumentationAutoControlSolution SolutionDescription="GHz_MSO8000HD程控校准方案" version="1.0.0.0" creator="王昌杰" LastModifier="zhaoyong">
+	<Instrumentations Description="方案中使用到的仪器的定义">
+		<Instrumentation 
+			Name="信号源9000T"
+			Description="信号源9000T"
+			DriverType="VISA"
+			Address="USB0::0x6656::0x0834::AWG9223410008::INSTR"
+			Timeout="0"
+			></Instrumentation>
+		<!--== 待校准的目标仪器，使用此标识，并可不标识Address标签==-->
+		<Instrumentation
+			Name="GHz_MSO8000HD"
+			Description="GHz_MSO8000HD示波器"
+			DriverType="VISA"
+			IsOurTargetDso="true"
+			Timeout="0"
+			></Instrumentation>
+	</Instrumentations>
+
+	<!--=======region 方案中任务列表=====-->
+	<Tasks>
+		<Task Description="LA比较电平校准，使用正弦波(8000mv，0偏置)作为校准信号" ImportanceTipMessage="该任务是通过程控来校准示波器的LA比较电平校准。">
+			<Group Description="示波器及信号源初始化">
+				<Command Description="示波器:打开通道1"
+					InstrumentationName="GHz_MSO8000HD"
+					CommandType="scpi"
+					SCPICmd=":CHAN1:DISP ON"
+					></Command>
+				<Command Description="示波器:打开通道2"
+					InstrumentationName="GHz_MSO8000HD"
+					CommandType="scpi"
+					SCPICmd=":CHAN2:DISP ON"
+					></Command>
+				<Command Description="示波器:时基档100us"
+					InstrumentationName="GHz_MSO8000HD"
+					CommandType="scpi"
+					SCPICmd=":TIM:SCAL 1E-4"
+					AfterWaitSec="3"
+					></Command>
+				<Command Description="信号源:复位" 
+					InstrumentationName="信号源9000T"
+					CommandType="scpi"
+					SCPICmd="*RST"
+					AfterWaitSec="1"
+					></Command>
+				<Command Description="信号源:输出正弦波 " 
+					InstrumentationName="信号源9000T"
+					CommandType="scpi"
+					SCPICmd=":CHANnel1:BASE:WAVe SINe"
+					></Command>	
+				<Command Description="信号源:设置为高阻 " 
+					InstrumentationName="信号源9000T"
+					CommandType="scpi"
+					SCPICmd=":CHANnel1:LOAD 1000000"
+					></Command>	
+				<Command Description="信号源:设置电平类型为VPP " 
+					InstrumentationName="信号源9000T"
+					CommandType="scpi"
+					SCPICmd=":CHANnel1:AMPLitude:UNIT VPP"
+					></Command>		
+				<Command Description="信号源:输出电平8V " 
+					InstrumentationName="信号源9000T"
+					CommandType="scpi"
+					SCPICmd=":CHANnel1:BASE:AMPLitude 8"
+					></Command>	
+				<Command Description="信号源:输出5KHz " 
+					InstrumentationName="信号源9000T"
+					CommandType="scpi"
+					SCPICmd=":CHANnel1:BASE:FREQuency 5000"
+					AfterWaitSec="1"
+					></Command>	
+			</Group>
+				<Command Description="现在即将对数字通道触发电平校准，请确保将信号源通道1接入！"
+				InstrumentationName="信号源9000T"
+				CommandType="check"
+				SCPICmd="" />
+				<Command Description="示波器:打开所有通道"
+					InstrumentationName="GHz_MSO8000HD"
+					CommandType="scpi"
+					SCPICmd=":FACT:LA:ACT ON"
+					></Command>
+				<ForeachLoop StartIndex="0" Count="4">
+				<VarintDefine name="Channel"  valuelist="0,4,8,12"></VarintDefine>
+				<ConstVariantDefine name="SignalAmpMv" value="8000"></ConstVariantDefine>
+				<Command Description="源输出打开" 
+					InstrumentationName="信号源9000T"
+					CommandType="scpi"
+					SCPICmd=":CHANnel1:OUTPut ON"
+					></Command>
+				<Command Description="示波器:打开通道"
+					InstrumentationName="GHz_MSO8000HD"
+					CommandType="scpi"
+					SCPICmd=":LA:ITEM@Channel@:DISP ON"
+				></Command>
+				<Command Description="示波器:设置通道触发电平"
+					InstrumentationName="GHz_MSO8000HD"
+					CommandType="scpi"
+					SCPICmd=":LA:ITEM@Channel@:LEV 0"
+				></Command>
+				<Command Description="通道@Channel@, @SignalAmpMv@Mv:LA触发电平校准"
+					InstrumentationName="GHz_MSO8000HD"
+					IsProgramFunc="true"
+					ProgramFuncName="BatchTaskPart_CaliLACompareLevel @Channel@,@SignalAmpMv@,32000,7500"
+					ProgramFuncOverSec="60"
+					></Command>
+				<Command Description="源输出关闭" 
+					InstrumentationName="信号源9000T"
+					CommandType="scpi"
+					SCPICmd=":CHANnel1:OUTPut OFF"
+					></Command>
+			</ForeachLoop>
+			<Command Description="示波器:关闭所有通道"
+				InstrumentationName="GHz_MSO8000HD"
+				CommandType="scpi"
+				SCPICmd=":FACT:LA:ACT OFF"
+				></Command>
+			<Command Description="源复位" 
+				InstrumentationName="信号源9000T"
+				CommandType="scpi"
+				SCPICmd="*RST"
+			></Command>
+			<Command Description="保存校准数据"
+						InstrumentationName="GHz_MSO8000HD"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_SaveCaliDataToFile Misc"
+			></Command>
+		</Task>
+	</Tasks>
+</InstrumentationAutoControlSolution>

@@ -1,0 +1,18 @@
+/*
+  BaseLineParam
+
+*/
+{
+  "SettingParam": {
+    "OscilloType": "JiHe_MSO7000X",
+    "FilePath": "自动校准xml生成\\JiHe7000\\偏置校准.xml",
+
+    //阻抗循环
+    "OffsetChnlYScaleStart": "0,3", //偏置校准中，通道垂直档位循环起点
+    "OffsetChnlYScaleCount": "3,4", //偏置校准中，通道垂直档位循环个数
+
+    //垂直档位循环
+    "OffsetSourceAmpVoltByV": "2,5,5,2,20,40,80", //偏置校准中，各个垂直档位对应的信号源幅度，单位V
+    "OffsetInputLevelBymV": "20,100,1000,50,500,1000,10000" //偏置校准中，//各个垂直档位刻度，单位Mv
+  }
+}

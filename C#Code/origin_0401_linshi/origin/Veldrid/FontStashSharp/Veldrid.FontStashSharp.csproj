@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageId>FontStashSharp</PackageId>
+    <AssemblyName>FontStashSharp</AssemblyName>
+    <Description>Platform-Agnostic Version of FontStashSharp</Description>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DefineConstants>$(DefineConstants);PLATFORM_AGNOSTIC</DefineConstants>
+    <Configurations>Debug;Release;</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath)  $(SolutionDir)ShareDlls\Gpu\$(TargetName)$(TargetExt)&#xD;&#xA;&#xD;&#xA;xcopy /s /y $(TargetDir)$(TargetName).pdb  $(SolutionDir)pdbs\&#xD;&#xA;xcopy /s /y $(TargetPath) $(SolutionDir)pdbs\" />
+  </Target>
+    <ItemGroup>
+      <Compile Remove="FontStashSharp\**" />
+      <Compile Remove="runtimes\**" />
+      <Compile Remove="StbImageSharp\**" />
+      <EmbeddedResource Remove="FontStashSharp\**" />
+      <EmbeddedResource Remove="runtimes\**" />
+      <EmbeddedResource Remove="StbImageSharp\**" />
+      <None Remove="FontStashSharp\**" />
+      <None Remove="runtimes\**" />
+      <None Remove="StbImageSharp\**" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Remove="FontGlyphSquad.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Hebron.Runtime\" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Agg\agg\Agg.csproj" />
+      <ProjectReference Include="..\Veldrid\Veldrid.csproj" />
+    </ItemGroup>
+</Project>

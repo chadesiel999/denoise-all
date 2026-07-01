@@ -1,0 +1,99 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<Version>0.7.6.1012</Version>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+		<ApplicationIcon>app.ico</ApplicationIcon>
+		<Configurations>Debug;Release;</Configurations>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<PlatformTarget>AnyCPU</PlatformTarget>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+	  <PlatformTarget>AnyCPU</PlatformTarget>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="app.manifest" />
+		<None Remove="Resources\chinese.xml" />
+		<None Remove="Resources\english.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include="app.manifest" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="app.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\chinese.xml" />
+	  <EmbeddedResource Include="Resources\english.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\ScopeX.ComModel\ScopeX.ComModel.csproj" />
+		<ProjectReference Include="..\ScopeX.Hardware.Driver.JiHe\ScopeX.Hardware.Driver.csproj" />
+		<ProjectReference Include="..\ScopeX.Updater.Base\ScopeX.Updater.Base.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="PCIeControl">
+		  <HintPath>..\..\ShareDlls\PCIeControl.dll</HintPath>
+		</Reference>
+		<Reference Include="ScopeX.Controls.Language">
+		  <HintPath>..\..\ShareDlls\ScopeX.Controls.Language.dll</HintPath>
+		</Reference>
+		<Reference Include="ScopeX.Controls.LanguageDefinition">
+		  <HintPath>..\..\ShareDlls\ScopeX.Controls.LanguageDefinition.dll</HintPath>
+		</Reference>
+		<Reference Include="ScopeX.USBBridge">
+		  <HintPath>..\..\ShareDlls\OtherShareDlls\other\ScopeX.USBBridge.dll</HintPath>
+		</Reference>
+		<Reference Include="System.IO.Ports">
+		  <HintPath>..\..\ShareDlls\System.IO.Ports.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Resource.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resource.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="UpdateSettings.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>UpdateSettings.settings</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resource.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="CyBootProgrammer3.0.img">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="UpdateSettings.settings">
+		  <Generator>SettingsSingleFileGenerator</Generator>
+		  <LastGenOutput>UpdateSettings.Designer.cs</LastGenOutput>
+		</None>
+	</ItemGroup>
+
+</Project>

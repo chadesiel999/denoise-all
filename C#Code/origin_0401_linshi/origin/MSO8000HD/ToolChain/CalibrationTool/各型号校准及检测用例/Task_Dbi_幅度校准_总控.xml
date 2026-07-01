@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MultiXmlBatchExecuteSolution SolutionDescription="JPO6000程控校准方案">
+	<!--=======region 方案中使用到的仪器的定义=====-->
+	<FileRootPath Value="@ToolRootPath@"></FileRootPath>
+	<XmlFile Value=".\各型号校准及检测用例\Task_Dbi_幅度校准_普源信号源校准子带1.xml"></XmlFile>
+	<XmlFile Value=".\各型号校准及检测用例\Task_Dbi_幅度校准_射频信号源校准子带234.xml"></XmlFile>
+</MultiXmlBatchExecuteSolution>

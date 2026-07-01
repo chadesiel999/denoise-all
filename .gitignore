@@ -1,0 +1,61 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.so
+.pytest_cache/
+
+# Data files
+*.pkl
+*.h5
+*.npy
+*.npz
+*.csv
+*.bin
+
+# Archives
+*.7z
+*.zip
+*.rar
+*.tar.gz
+
+# C# build artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.resources
+pdbs/
+
+# Trained models / results
+saved_model/
+saved_models/
+results/
+dataset/
+data/
+data0401/
+generated_data/
+
+# Figures (generated, not source code)
+figures/
+figures_new/
+splitfigures/
+figure/
+figureMiddle100/
+figureMiddle20/
+figure100Middle/
+figure100Middle0202*/
+figure100Middle0202_ENOB/
+
+# OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Fonts
+*.ttf
+*.otf
+
+# Cursor local data
+cursor/

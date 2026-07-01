@@ -1,0 +1,4 @@
+[22:49:07] : [***BatchTaskStart***]:D:\2U_origin_20250821_20G\2U_origin_20250820_after\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\2U可用xml\8000\脚本\1 BatchTask_Afc_ScanFrequency8G_RS源.xml
+[22:49:07] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[22:52:08] : [***BatchTaskStart***]:D:\2U_origin_20250821_20G\2U_origin_20250820_after\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\2U可用xml\8000\脚本\1 BatchTask_Afc_ScanFrequency8G_RS源.xml
+[22:52:08] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000

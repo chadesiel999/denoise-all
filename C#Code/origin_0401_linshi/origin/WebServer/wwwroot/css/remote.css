@@ -1,0 +1,146 @@
+﻿.desktopimg {
+    outline: none;
+    /*  max-height: 576px;
+    max-width: 1024px;*/
+    max-height: 100%;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+.monitor-touch {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    background-color: red;
+    border-radius: 25px;
+}
+
+.desktopfloating {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    max-height: 100%;
+    background: #000033;
+    color: white;
+}
+
+.panel-full-screen {
+    outline: none;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: black;
+    visibility: visible;
+    filter: Alpha(Opacity=90);
+}
+
+.panel-nofull-screen {
+    outline: none;
+    position: relative;
+    /* width: 1600px;
+    height: 900px;*/
+    max-width: 1024px;
+    max-height: 576px;
+    background: black;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.desktop_name {
+    margin-left: 100px;
+    margin-top: 36px;
+    font-size: 18px;
+    float: left;
+    display: block;
+}
+
+.desktop_login {
+    padding: 3px 20px 3px 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+    float: left;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+}
+
+.tip {
+    margin-top: 120px;
+    margin-left: 50px;
+    font-size: 22px;
+    display: block;
+}
+
+.time {
+    /*position: fixed;bottom: 250px;*/
+    margin-top: 220px;
+    margin-left: -350px;
+    /*  top: 600px;
+            left: 250px;*/
+    width: 100%;
+    height: 50px;
+    z-index: 9999;
+    font-size: 80px;
+    font-weight: normal;
+    display: block;
+}
+
+.day {
+    /*position: fixed;bottom: 80px;*/
+    margin-top: 50px;
+    margin-left: -310px;
+    /* top: 500px;
+            left: 250px;*/
+    width: 100%;
+    height: 50px;
+    z-index: 9998;
+    font-size: 30px;
+    font-weight: normal;
+    display: block;
+}
+
+
+.tip-mobile {
+    margin-top: 120px;
+    margin-left: 0px;
+    font-size: 16px;
+    display: block;
+}
+
+.time-mobile {
+    /*position: fixed;bottom: 250px;*/
+    margin-top: 220px;
+    margin-left: 0px;
+    /*  top: 600px;
+            left: 250px;*/
+    width: 100%;
+    height: 50px;
+    z-index: 9999;
+    font-size: 50px;
+    font-weight: normal;
+    display: block;
+}
+
+.day-mobile {
+    /*position: fixed;bottom: 80px;*/
+    margin-top: 50px;
+    margin-left: 0px;
+    /* top: 500px;
+            left: 250px;*/
+    width: 100%;
+    height: 50px;
+    z-index: 9998;
+    font-size: 20px;
+    font-weight: normal;
+    display: block;
+}
+
+ 

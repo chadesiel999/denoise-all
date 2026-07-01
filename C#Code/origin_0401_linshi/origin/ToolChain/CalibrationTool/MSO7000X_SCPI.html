@@ -1,0 +1,2090 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+</head>	
+<title>MSO7000X系列示波器编程手册</title>
+<style>
+<!--
+ table.OurNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif"}
+-->
+</style>
+<body>
+	<font face="宋体" size="2">
+	<div>
+		<div>
+			<p>MSO7000X系列示波器编程手册</>
+		  <p>2022.02.22 19:33:25</>
+		  <hr>
+		</div>
+		<div>
+<p id='top'>目录</p>
+<a href='#gid_0'>IEEE 488.2公用命令</a><br>
+<a href='#gid_1'>系统命令</a><br>
+<a href='#gid_2'>采集</a><br>
+<a href='#gid_3'>通道</a><br>
+<a href='#gid_4'>时基</a><br>
+<a href='#gid_5'>触发</a><br>
+<a href='#gid_6'>触发-边沿</a><br>
+<a href='#gid_7'>触发-毛刺</a><br>
+<a href='#gid_8'>触发-保持</a><br>
+<a href='#gid_9'>触发-码型</a><br>
+<a href='#gid_10'>触发-脉宽</a><br>
+<a href='#gid_11'>触发-欠幅</a><br>
+<a href='#gid_12'>触发-斜率</a><br>
+<a href='#gid_13'>触发-状态</a><br>
+<a href='#gid_14'>触发-超时</a><br>
+<a href='#gid_15'>触发-视频</a><br>
+<a href='#gid_16'>触发-窗口</a><br>
+<a href='#gid_17'>波形数据</a><br>
+<a href='#gid_18'>测量</a><br>
+<a href='#gid_19'>数学</a><br>
+</div>
+<hr>
+<p id='gid_0'>IEEE 488.2公用命令</p>
+<a href='#top'>返回总目录</a><br>
+<a href='#cid_0_0'>*CLS</a><br>
+<a href='#cid_0_1'>*ESE</a><br>
+<a href='#cid_0_2'>*ESR</a><br>
+<a href='#cid_0_3'>*OPC</a><br>
+<a href='#cid_0_4'>*IDN</a><br>
+<a href='#cid_0_5'>*RST</a><br>
+<a href='#cid_0_6'>*SRE</a><br>
+<a href='#cid_0_7'>*SAV</a><br>
+<a href='#cid_0_8'>*RCL</a><br>
+<a href='#cid_0_9'>*STB</a><br>
+<a href='#cid_0_10'>*TST</a><br>
+<a href='#cid_0_11'>*WAI</a><br>
+<hr>
+<p id='cid_0_0'>*CLS</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>将所有寄存器组中的事件寄存器清零，同时清除错误队列</p>
+<hr>
+<p id='cid_0_1'>*ESE value</p>
+<p>*ESE?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询标准事件状态寄存器组的使能寄存器位</p>
+<b><p>参数</p></b>
+<p>value:整型,0 至 255</p>
+<hr>
+<p id='cid_0_2'>*ESR?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>查询并清除标准事件状态寄存器组的事件寄存器值</p>
+<hr>
+<p id='cid_0_3'>*OPC?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>查询当前操作是否完成设置时，在当前操作完成后，将标准事件状态寄存器的“Operation Complete”位（位0）置1</p>
+<hr>
+<p id='cid_0_4'>*IDN?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>获取仪器信息</p>
+<hr>
+<p id='cid_0_5'>*RST</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>将仪器复恢复到出厂默认值</p>
+<hr>
+<p id='cid_0_6'>*SRE value</p>
+<p>*SRE ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>为状态字节寄存器组设置使能寄存器</p>
+<b><p>参数</p></b>
+<p>value:整型,0 至 255</p>
+<hr>
+<p id='cid_0_7'>*SAV value</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>保存当前仪器状态到所选寄存器</p>
+<b><p>参数</p></b>
+<p>value:整型,0 至 49</p>
+<hr>
+<p id='cid_0_8'>*RCL</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>从指定单元中恢复*SAV 命令保存的设定值</p>
+<hr>
+<p id='cid_0_9'>*STB ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>为状态字节寄存器组查询条件寄存器</p>
+<b><p>返回格式</p></b>
+<p>查询返回一个整数</p>
+<hr>
+<p id='cid_0_10'>*TST ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>执行一次自检并返回自检结果</p>
+<b><p>返回格式</p></b>
+<p>查询返回一个十进制整数</p>
+<hr>
+<p id='cid_0_11'>*WAI</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_0'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>等待操作完成</p>
+<hr><p id='gid_1'>系统命令</p>
+<a href='#top'>返回总目录</a><br>
+<a href='#cid_1_0'>:AUToscale</a><br>
+<a href='#cid_1_1'>:RUN</a><br>
+<a href='#cid_1_2'>:STOP</a><br>
+<a href='#cid_1_3'>:SINGle</a><br>
+<a href='#cid_1_4'>:CLEAr</a><br>
+<hr>
+<p id='cid_1_0'>:AUToscale</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_1'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>自动设置示波器将根据输入信号自动调整垂直档位、水平时基以及触发方式，使波形显示达到最佳状态注意，应用自动设置要求被测信号的频率不小于50 Hz，占空比大于1%，且幅度至少为20 mVpp</p>
+<b><p>说明</p></b>
+<p>通过/失败功能当前状态为“允许测试”时，该命令不可用</p>
+<hr>
+<p id='cid_1_1'>:RUN</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_1'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>使示波器开始运行</p>
+<b><p>说明</p></b>
+<p>您可以使用:STOP命令将示波器设为“停止”状态</p>
+<hr>
+<p id='cid_1_2'>:STOP</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_1'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>使示波器停止采集</p>
+<b><p>说明</p></b>
+<p>您可以使用:RUN命令将示波器设为采集状态</p>
+<hr>
+<p id='cid_1_3'>:SINGle</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_1'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>将示波器设置为单次触发方式</p>
+<b><p>说明</p></b>
+<p>单次触发时，使用:TFORce命令强制产生一个触发信号<br>您可以使用:RUN或:STOP命令将示波器分别设为“自动”触发方式或“停止”状态</p>
+<hr>
+<p id='cid_1_4'>:CLEAr</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_1'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>清除示波器测量结果等</p>
+<hr><p id='gid_2'>采集</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>采集子系统</p><br>
+<a href='#cid_2_0'>:ACQuire:TYPe</a><br>
+<a href='#cid_2_1'>:ACQuire:AVERages</a><br>
+<a href='#cid_2_2'>:ACQuire:ENVelope</a><br>
+<a href='#cid_2_3'>:ACQuire:INTERpltype</a><br>
+<a href='#cid_2_4'>:ACQuire:CLKsrc</a><br>
+<hr>
+<p id='cid_2_0'>:ACQuire:TYPe type</p>
+<p>:ACQuire:TYPe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_2'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询采样模式</p>
+<b><p>参数</p></b>
+<p>type:离散型{NORMal|SEQUence|PEAK|HIGHres|AVERages|ENVelope}</p>
+<p>NORMal：普通<br>AVERages：平均<br>PEAK：峰值检测<br>HRESolution：高分辨率<br>ENVelope：包络</p>
+<b><p>返回格式</p></b>
+<p>查询返回“NORM”、“SEQU”、“PEAK”、“HIGH”、“AVER”或“ENV”。</p>
+<hr>
+<p id='cid_2_1'>:ACQuire:AVERages averageTimes</p>
+<p>:ACQuire:AVERages ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_2'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询平均采样模式下的平均次数</p>
+<b><p>参数</p></b>
+<p>averageTimes:整数，所设置的值范围1--1000000</p>
+<b><p>返回格式</p></b>
+<p>查询返回一个表示平均次数的整数</p>
+<hr>
+<p id='cid_2_2'>:ACQuire:ENVelope envelopeTimes</p>
+<p>:ACQuire:ENVelope ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_2'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询包络采样模式下的包络次数</p>
+<b><p>参数</p></b>
+<p>envelopeTimes:为1~4294967295的整数</p>
+<b><p>返回格式</p></b>
+<p>查询返回包络采样模式下的包络次数的整数</p>
+<hr>
+<p id='cid_2_3'>:ACQuire:INTERpltype interpltype</p>
+<p>:ACQuire:INTERpltype ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_2'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询插值方式</p>
+<b><p>参数</p></b>
+<p>interpltype:离散型{Line|Sinx}</p>
+<p>Line：线性<br>Sinx：正弦</p>
+<b><p>返回格式</p></b>
+<p>查询返回“L”或“S”。</p>
+<hr>
+<p id='cid_2_4'>:ACQuire:CLKsrc clksrc</p>
+<p>:ACQuire:CLKsrc ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_2'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询10M信源来源</p>
+<b><p>参数</p></b>
+<p>clksrc:离散型{Inner|Outter}</p>
+<p>Inner：内部<br>Outter：外部</p>
+<b><p>返回格式</p></b>
+<p>查询返回“I”或“O”。</p>
+<hr><p id='gid_3'>通道</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>:CHANnel&lt;n&gt;命令子系统</p><br>
+<a href='#cid_3_0'>:CHANnel&lt;n&gt;:BWLimit</a><br>
+<a href='#cid_3_1'>:CHANnel&lt;n&gt;:COUPling</a><br>
+<a href='#cid_3_2'>:CHANnel&lt;n&gt;:DISPlay</a><br>
+<a href='#cid_3_3'>:CHANnel&lt;n&gt;:INVert</a><br>
+<a href='#cid_3_4'>:CHANnel&lt;n&gt;:OFFSet</a><br>
+<a href='#cid_3_5'>:CHANnel&lt;n&gt;:PROBe</a><br>
+<a href='#cid_3_6'>:CHANnel&lt;n&gt;:SCALe</a><br>
+<a href='#cid_3_7'>:CHANnel&lt;n&gt;:UNIT</a><br>
+<a href='#cid_3_8'>:CHANnel&lt;n&gt;:BIAS</a><br>
+<a href='#cid_3_9'>:CHANnel&lt;n&gt;:LABel</a><br>
+<hr>
+<p id='cid_3_0'>:CHANnel&lt;n&gt;:BWLimit bwlimit</p>
+<p>:CHANnel&lt;n&gt;:BWLimit ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_3'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置通道的带宽限制</p>
+<b><p>参数</p></b>
+<p>bwlimit:离散型{OFF|500M|20M}</p>
+<p>OFF:关闭带宽限制<br>20M:带宽限制为20M<br>500M:带宽限制为500M</p>
+<b><p>返回格式</p></b>
+<p>查询返回“OFF”、“500M”或“20M”。</p>
+<b><p>示例</p></b>
+<hr>
+<p id='cid_3_1'>:CHANnel&lt;n&gt;:COUPling coupling</p>
+<p>:CHANnel&lt;n&gt;:COUPling ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_3'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置通道输入的耦合方式为“AC”、“DC”或“DC50”</p>
+<b><p>参数</p></b>
+<p>coupling:离散型{DC|AC|DC50}</p>
+<p>DC:耦合方式为直流<br>AC:耦合方式为交流<br>DC50:耦合方式为直流50 Ω<br></p>
+<b><p>返回格式</p></b>
+<p>查询返回“DC”、“AC”或“DC50”。</p>
+<hr>
+<p id='cid_3_2'>:CHANnel&lt;n&gt;:DISPlay display</p>
+<p>:CHANnel&lt;n&gt;:DISPlay ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_3'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>关闭或打开通道的显示</p>
+<b><p>参数</p></b>
+<p>display:布尔型{OFF|ON}</p>
+<p>OFF:关闭通道显示<br>ON:打开通道显示</p>
+<b><p>返回格式</p></b>
+<p>查询返回“OFF”或“ON”。</p>
+<hr>
+<p id='cid_3_3'>:CHANnel&lt;n&gt;:INVert invert</p>
+<p>:CHANnel&lt;n&gt;:INVert ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_3'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>关闭或打开通道的反相显示</p>
+<b><p>参数</p></b>
+<p>invert:布尔型{OFF|ON}</p>
+<p>OFF:关闭通道的反相显示<br>ON:打开通道的反相显示</p>
+<b><p>返回格式</p></b>
+<p>查询返回“OFF”或“ON”。</p>
+<hr>
+<p id='cid_3_4'>:CHANnel&lt;n&gt;:OFFSet offset</p>
+<p>:CHANnel&lt;n&gt;:OFFSet ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_3'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置指定通道波形显示的垂直偏移</p>
+<b><p>参数</p></b>
+<p>offset:实数型 -5.5~5.5，居中为0，单位div</p>
+<hr>
+<p id='cid_3_5'>:CHANnel&lt;n&gt;:PROBe probe</p>
+<p>:CHANnel&lt;n&gt;:PROBe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_3'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置探头的衰减比</p>
+<b><p>参数</p></b>
+<p>probe:离散型{1|10|100}</p>
+<p>1:探头衰减比为1<br>10:探头增益比为10<br></p>
+<b><p>返回格式</p></b>
+<p>查询返回“1”、“10”、“100”</p>
+<hr>
+<p id='cid_3_6'>:CHANnel&lt;n&gt;:SCALe scale</p>
+<p>:CHANnel&lt;n&gt;:SCALe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_3'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置指定通道波形显示的垂直档位默认单位V或A</p>
+<b><p>说明</p></b>
+<p>当输入阻抗为1M Ω时，可调范围在1mV - 5V<br>当输入阻抗为50 Ω时，可调范围在1mV - 1V</p>
+<b><p>参数</p></b>
+<p>scale:实数型</p>
+<b><p>返回格式</p></b>
+<p>查询以科学计数形式返回垂直档位值以V/A为单位</p>
+<hr>
+<p id='cid_3_7'>:CHANnel&lt;n&gt;:UNIT unit</p>
+<p>:CHANnel&lt;n&gt;:UNIT ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_3'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置通道的幅度显示单位</p>
+<b><p>参数</p></b>
+<p>unit:离散型{VOLTage|AMPere}</p>
+<p>VOLTage:伏<br>AMPere:安</p>
+<b><p>返回格式</p></b>
+<p>VOLTage或AMPere或UNKNown</p>
+<hr>
+<p id='cid_3_8'>:CHANnel&lt;n&gt;:BIAS bias</p>
+<p>:CHANnel&lt;n&gt;:BIAS ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_3'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询偏置电压</p>
+<b><p>参数</p></b>
+<p>bias:以V为单位的实数</p>
+<b><p>返回格式</p></b>
+<p>以V为单位的科学计数形式数</p>
+<hr>
+<p id='cid_3_9'>:CHANnel&lt;n&gt;:LABel label</p>
+<p>:CHANnel&lt;n&gt;:LABel ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_3'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询通道标签</p>
+<b><p>参数</p></b>
+<p>label:通道名称符串</p>
+<b><p>返回格式</p></b>
+<p>通道名称符串</p>
+<hr><p id='gid_4'>时基</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>时基子系统</p><br>
+<a href='#cid_4_0'>:TIMebase:SCALe</a><br>
+<a href='#cid_4_1'>:TIMebase:DELAy</a><br>
+<hr>
+<p id='cid_4_0'>:TIMebase:SCALe scale</p>
+<p>:TIMebase:SCALe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_4'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询主时基档位单位为s/div</p>
+<b><p>说明</p></b>
+<p>请参考本示波器的技术手册，以获取本示波器可以设置的时基档</p>
+<b><p>参数</p></b>
+<p>scale:以秒为单位的实数</p>
+<b><p>返回格式</p></b>
+<p>查询以科学计数形式返回水平档位值</p>
+<hr>
+<p id='cid_4_1'>:TIMebase:DELAy delay</p>
+<p>:TIMebase:DELAy ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_4'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询延迟扫描单位为s</p>
+<b><p>说明</p></b>
+<p>请参考本示波器的技术手册，以获取本示波器可以设置的延迟扫描</p>
+<b><p>参数</p></b>
+<p>delay:以秒为单位的实数</p>
+<b><p>返回格式</p></b>
+<p>查询以科学计数形式返回延迟扫描</p>
+<hr><p id='gid_5'>触发</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发子系统</p><br>
+<a href='#cid_5_0'>:TRIGger:MODe</a><br>
+<a href='#cid_5_1'>:TRIGger:TYPe</a><br>
+<a href='#cid_5_2'>:TRIGger:HOLDoff</a><br>
+<a href='#cid_5_3'>:TRIGger:MODE</a><br>
+<hr>
+<p id='cid_5_0'>:TRIGger:MODe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_5'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>查询触发模式状态</p>
+<b><p>参数</p></b>
+<p>type:离散型{STOP|ARMED|READY|TRIGER|AUTO|SCAN|RESET}</p>
+<p>STOP:停止<br>ARMED:已配备<br>READy:就绪<br>TRIGer:触发<br>AUTO:自动<br>SCAN:扫描<br>RESET:重置</p>
+<b><p>返回格式</p></b>
+<p>查询返回“STOP”、“ARMED”、“READY”、“TRIGER”、“AUTO”、“SCAN”或“RESET”。</p>
+<hr>
+<p id='cid_5_1'>:TRIGger:TYPe type</p>
+<p>:TRIGger:TYPe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_5'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询触发类型</p>
+<b><p>参数</p></b>
+<p>type:离散型{EDGe|PWIDth|VIDeo|PATTern|STATe|TIMEout|SETUphold|UNDerthrow|TRANsition|GLITch|WINDow|MULIiQulified|SERial}</p>
+<p>EDGe:边沿<br>PWIDth:脉宽<br>VIDeo:视频<br>PATTern:码型<br>STATe:状态<br>TIMEout:超时<br>SETUphold:建立保持<br>UNDerthrow:欠幅脉冲<br>TRANsition:斜率<br>GLITch:毛刺<br>WINDow:窗口<br>MULIiQulified:多级<br>SERial:串行</p>
+<b><p>返回格式</p></b>
+<p>查询返回“EDG”、“PWID”、“VID”、“PATT”、“STAT”、“TIME”、“SETU”、“UND”、“TRAN”、“GLIT”、“WIND”、“MULIQ”或“SER”。</p>
+<hr>
+<p id='cid_5_2'>:TRIGger:HOLDoff holdoff</p>
+<p>:TRIGger:HOLDoff ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_5'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询触发释抑</p>
+<b><p>参数</p></b>
+<p>holdoff:以秒为单位的实数</p>
+<b><p>返回格式</p></b>
+<p>查询返回以秒为单位、以科学计数法表示的浮点数</p>
+<hr>
+<p id='cid_5_3'>:TRIGger:MODE mode</p>
+<p>:TRIGger:MODE ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_5'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查触发模式</p>
+<b><p>参数</p></b>
+<p>mode:离散型{AUTO|NORMal|SINGle}</p>
+<p>AUTO:自动<br>NORMal:正常<br>SINGle:单次</p>
+<b><p>返回格式</p></b>
+<p>查询返回“AUTO”、“NORM”或“SING”。</p>
+<hr><p id='gid_6'>触发-边沿</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-边沿</p><br>
+<a href='#cid_6_0'>:TRIGger:EDGe:COUPling</a><br>
+<a href='#cid_6_1'>:TRIGger:EDGe:SOURce</a><br>
+<a href='#cid_6_2'>:TRIGger:EDGe:SLOPe</a><br>
+<a href='#cid_6_3'>:TRIGger:EDGe:LEVel</a><br>
+<hr>
+<p id='cid_6_0'>:TRIGger:EDGe:COUPling coupling</p>
+<p>:TRIGger:EDGe:COUPling ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_6'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询除触发耦合</p>
+<b><p>参数</p></b>
+<p>coupling:离散型{DC|AC|LFReject|HFReject}</p>
+<p>DC:直流<br>AC:交流<br>LFReject:低频抑制<br>HFReject:高频抑制</p>
+<b><p>返回格式</p></b>
+<p>查询返回“DC”、“AC”、“LFR”或“HFR”。</p>
+<hr>
+<p id='cid_6_1'>:TRIGger:EDGe:SOURce source</p>
+<p>:TRIGger:EDGe:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_6'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询边沿触发源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_6_2'>:TRIGger:EDGe:SLOPe slpoe</p>
+<p>:TRIGger:EDGe:SLOPe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_6'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询边沿触发边沿类型</p>
+<b><p>参数</p></b>
+<p>slope:离散型{RISE|FALL|RFALl}</p>
+<p>RISE:上升沿<br>FALL:下降沿<br>RFALl:上升下降沿</p>
+<b><p>返回格式</p></b>
+<p>查询返回“RISE”、“FALL”或“RFAL”。</p>
+<hr>
+<p id='cid_6_3'>:TRIGger:EDGe:LEVel level</p>
+<p>:TRIGger:EDGe:LEVel ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_6'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询边沿触发的触发电平</p>
+<b><p>参数</p></b>
+<p>level:单位为V的实数</p>
+<b><p>返回格式</p></b>
+<p>查询以科学计数形式返回触发电平单位为V</p>
+<hr><p id='gid_7'>触发-毛刺</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-毛刺</p><br>
+<a href='#cid_7_0'>:TRIGger:GLITch:CONDition</a><br>
+<a href='#cid_7_1'>:TRIGger:GLITch:TWIDth</a><br>
+<a href='#cid_7_2'>:TRIGger:GLITch:TWReset</a><br>
+<a href='#cid_7_3'>:TRIGger:GLITch:POLarity</a><br>
+<a href='#cid_7_4'>:TRIGger:GLITch:SOURce</a><br>
+<hr>
+<p id='cid_7_0'>:TRIGger:GLITch:CONDition condition</p>
+<p>:TRIGger:GLITch:CONDition ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_7'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询毛刺触发的触发条件</p>
+<b><p>参数</p></b>
+<p>condition:离散型{GT|LT|EQ|NEQ}</p>
+<p>LT:小于<br>GT:大于<br>EQ:等于<br>NEQ:不等于</p>
+<b><p>返回格式</p></b>
+<p>查询返回“GT”、“LT”、“EQ”或“NEQ”。</p>
+<hr>
+<p id='cid_7_1'>:TRIGger:GLITch:TWIDth width</p>
+<p>:TRIGger:GLITch:TWIDth ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_7'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询毛刺触发的脉宽</p>
+<b><p>参数</p></b>
+<p>width:以秒为单位的实数</p>
+<b><p>返回格式</p></b>
+<p>查询返回以秒为单位、以科学计数法表示的脉宽值</p>
+<hr>
+<p id='cid_7_2'>:TRIGger:GLITch:TWReset</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_7'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>设置复位毛刺触发的脉宽</p>
+<hr>
+<p id='cid_7_3'>:TRIGger:GLITch:POLarity polarity</p>
+<p>:TRIGger:GLITch:POLarity ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_7'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询毛刺触发的毛刺极性</p>
+<b><p>参数</p></b>
+<p>polarity:离散型{POSitive|NEGative}</p>
+<p>POSitive:正毛刺<br>NEGative:负毛刺</p>
+<b><p>返回格式</p></b>
+<p>查询返回“POS”或“NEG”。</p>
+<hr>
+<p id='cid_7_4'>:TRIGger:GLITch:SOURce source</p>
+<p>:TRIGger:GLITch:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_7'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询毛刺触发的触发条件</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr><p id='gid_8'>触发-保持</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-保持</p><br>
+<a href='#cid_8_0'>:TRIGger:SETUpHold:DSOUrce</a><br>
+<a href='#cid_8_1'>:TRIGger:SETUpHold:CSOUrce</a><br>
+<a href='#cid_8_2'>:TRIGger:SETUpHold:TTYPe</a><br>
+<a href='#cid_8_3'>:TRIGger:SETUpHold:LEVel</a><br>
+<a href='#cid_8_4'>:TRIGger:SETUpHold:UPPer</a><br>
+<a href='#cid_8_5'>:TRIGger:SETUpHold:LOWer</a><br>
+<a href='#cid_8_6'>:TRIGger:SETUpHold:VIOLation</a><br>
+<a href='#cid_8_7'>:TRIGger:SETUpHold:SETTime</a><br>
+<a href='#cid_8_8'>:TRIGger:SETUpHold:HOLDTime</a><br>
+<hr>
+<p id='cid_8_0'>:TRIGger:SETUpHold:DSOUrce source</p>
+<p>:TRIGger:SETUpHold:DSOUrce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_8'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询保持数据源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_8_1'>:TRIGger:SETUpHold:CSOUrce source</p>
+<p>:TRIGger:SETUpHold:CSOUrce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_8'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询保持时钟源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_8_2'>:TRIGger:SETUpHold:TTYPe type</p>
+<p>:TRIGger:SETUpHold:TTYPe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_8'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询保持触发的时钟边沿</p>
+<b><p>参数</p></b>
+<p>type:离散型{RISe|FALL}</p>
+<p>RISe:上升<br>FALL:下降</p>
+<b><p>返回格式</p></b>
+<p>查询返回“RIS”或“FALL”。</p>
+<hr>
+<p id='cid_8_3'>:TRIGger:SETUpHold:LEVel value</p>
+<p>:TRIGger:SETUpHold:LEVel ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_8'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询保持触发的时钟电平</p>
+<b><p>参数</p></b>
+<p>value:实数型,单位V</p>
+<hr>
+<p id='cid_8_4'>:TRIGger:SETUpHold:UPPer value</p>
+<p>:TRIGger:SETUpHold:UPPer ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_8'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询保持触发的电平上限</p>
+<b><p>参数</p></b>
+<p>value:实数型</p>
+<hr>
+<p id='cid_8_5'>:TRIGger:SETUpHold:LOWer value</p>
+<p>:TRIGger:SETUpHold:LOWer ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_8'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询保持触发的电平下限</p>
+<b><p>参数</p></b>
+<p>value:实数型</p>
+<hr>
+<p id='cid_8_6'>:TRIGger:SETUpHold:VIOLation type</p>
+<p>:TRIGger:SETUpHold:VIOLation ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_8'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询保持触发的触发时机</p>
+<b><p>参数</p></b>
+<p>type:离散型{SETup|HOLD|SETHold}</p>
+<p>SETup:建立<br>HOLD:保持<br>SETHold:建立保持</p>
+<b><p>返回格式</p></b>
+<p>查询返回“SET”、“HOLD”或“SETH”。</p>
+<hr>
+<p id='cid_8_7'>:TRIGger:SETUpHold:SETTime value</p>
+<p>:TRIGger:SETUpHold:SETTime ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_8'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询保持触发的建立时间</p>
+<b><p>参数</p></b>
+<p>value:实数型,单位S</p>
+<hr>
+<p id='cid_8_8'>:TRIGger:SETUpHold:HOLDTime value</p>
+<p>:TRIGger:SETUpHold:HOLDTime ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_8'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询保持触发的保持时间</p>
+<b><p>参数</p></b>
+<p>value:实数型,单位S</p>
+<hr><p id='gid_9'>触发-码型</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-码型</p><br>
+<a href='#cid_9_0'>:TRIGger:PATTern:OPERator</a><br>
+<a href='#cid_9_1'>:TRIGger:PATTern:TCONdition</a><br>
+<a href='#cid_9_2'>:TRIGger:PATTern:DURAtionps</a><br>
+<a href='#cid_9_3'>:TRIGger:PATTern:LOGic:ALLCondition</a><br>
+<a href='#cid_9_4'>:TRIGger:PATTern:LOGic:CONDition:C&lt;n&gt;</a><br>
+<a href='#cid_9_5'>:TRIGger:PATTern:LOGic:CONDition:D&lt;n&gt;</a><br>
+<a href='#cid_9_6'>:TRIGger:PATTern:LOGic:CONDition:EXT</a><br>
+<a href='#cid_9_7'>:TRIGger:PATTern:LOGic:GATe:C&lt;n&gt;</a><br>
+<a href='#cid_9_8'>:TRIGger:PATTern:LOGic:GATe:D&lt;n&gt;</a><br>
+<a href='#cid_9_9'>:TRIGger:PATTern:LOGic:GATe:EXT</a><br>
+<hr>
+<p id='cid_9_0'>:TRIGger:PATTern:OPERator type</p>
+<p>:TRIGger:PATTern:OPERator ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_9'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询码型触发的触发条件</p>
+<b><p>参数</p></b>
+<p>type:离散型{AND|NAND|OR|NOR}</p>
+<p>AND:与<br>NAND:与非<br>OR:或<br>NOR:或非</p>
+<b><p>返回格式</p></b>
+<p>查询返回“AND”、“NAND”、“OR”或“NOR”。</p>
+<hr>
+<p id='cid_9_1'>:TRIGger:PATTern:TCONdition type</p>
+<p>:TRIGger:PATTern:TCONdition ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_9'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询码型触发的触发时机</p>
+<b><p>参数</p></b>
+<p>type:离散型{BEGin|END|CONTinue|INSide|OUTSide|NOTEqual}</p>
+<p>BEGin:开始时<br>END:结束时<br>CONTinue:持续<br>OUTSide:范围外<br>INSide:范围内<br>NOTEqual:不等</p>
+<b><p>返回格式</p></b>
+<p>查询返回“BEG”、“END”、“CONT”、“INS”、“OUTS”或“NOTE”。</p>
+<hr>
+<p id='cid_9_2'>:TRIGger:PATTern:DURAtionps time</p>
+<p>:TRIGger:PATTern:DURAtionps ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_9'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询码型触发的码型极性</p>
+<b><p>参数</p></b>
+<p>time:实数型，单位为S</p>
+<hr>
+<p id='cid_9_3'>:TRIGger:PATTern:LOGic:ALLCondition type</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_9'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询码型触发逻辑资格的所有通道触发条件</p>
+<b><p>参数</p></b>
+<p>type:离散型{HIGH|LOW|ANY}</p>
+<p>HIGH:高<br>LOW:低<br>ANY:任意</p>
+<b><p>返回格式</p></b>
+<p>查询返回“HIGH”、“LOW”或“ANY”。</p>
+<hr>
+<p id='cid_9_4'>:TRIGger:PATTern:LOGic:CONDition:C&lt;n&gt; type</p>
+<p>:TRIGger:PATTern:LOGic:CONDition:C&lt;n&gt; ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_9'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询码型触发逻辑资格的单个模拟通道触发条件</p>
+<b><p>参数</p></b>
+<p>type:离散型{HIGH|LOW|ANY}</p>
+<p>HIGH:高<br>LOW:低<br>ANY:任意</p>
+<b><p>返回格式</p></b>
+<p>查询返回“HIGH”、“LOW”或“ANY”。</p>
+<hr>
+<p id='cid_9_5'>:TRIGger:PATTern:LOGic:CONDition:D&lt;n&gt; type</p>
+<p>:TRIGger:PATTern:LOGic:CONDition:D&lt;n&gt; ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_9'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询码型触发逻辑资格的单个数字通道触发条件</p>
+<b><p>参数</p></b>
+<p>type:离散型{HIGH|LOW|ANY}</p>
+<p>HIGH:高<br>LOW:低<br>ANY:任意</p>
+<b><p>返回格式</p></b>
+<p>查询返回“HIGH”、“LOW”或“ANY”。</p>
+<hr>
+<p id='cid_9_6'>:TRIGger:PATTern:LOGic:CONDition:EXT type</p>
+<p>:TRIGger:PATTern:LOGic:CONDition:EXT ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_9'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询码型触发逻辑资格的单个数字通道触发条件</p>
+<b><p>参数</p></b>
+<p>type:离散型{HIGH|LOW|ANY}</p>
+<p>HIGH:高<br>LOW:低<br>ANY:任意</p>
+<b><p>返回格式</p></b>
+<p>查询返回“HIGH”、“LOW”或“ANY”。</p>
+<hr>
+<p id='cid_9_7'>:TRIGger:PATTern:LOGic:GATe:C&lt;n&gt; value</p>
+<p>:TRIGger:PATTern:LOGic:GATe:C&lt;n&gt; ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_9'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询码型触发逻辑资格的单个模拟通道门限</p>
+<b><p>参数</p></b>
+<p>value:实数型，单位V</p>
+<hr>
+<p id='cid_9_8'>:TRIGger:PATTern:LOGic:GATe:D&lt;n&gt; value</p>
+<p>:TRIGger:PATTern:LOGic:GATe:D&lt;n&gt; ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_9'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询码型触发逻辑资格的单个数字通道门限</p>
+<b><p>参数</p></b>
+<p>value:实数型，单位V</p>
+<hr>
+<p id='cid_9_9'>:TRIGger:PATTern:LOGic:GATe:EXT value</p>
+<p>:TRIGger:PATTern:LOGic:GATe:EXT ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_9'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询码型触发逻辑资格的单个数字通道门限</p>
+<b><p>参数</p></b>
+<p>value:实数型，单位V</p>
+<hr><p id='gid_10'>触发-脉宽</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-脉宽</p><br>
+<a href='#cid_10_0'>:TRIGger:PWIDth:CONDition</a><br>
+<a href='#cid_10_1'>:TRIGger:PWIDth:TWIDth</a><br>
+<a href='#cid_10_2'>:TRIGger:PWIDth:POLarity</a><br>
+<a href='#cid_10_3'>:TRIGger:PWIDth:SOURce</a><br>
+<a href='#cid_10_4'>:TRIGger:PWIDth:LEVel</a><br>
+<hr>
+<p id='cid_10_0'>:TRIGger:PWIDth:CONDition condition</p>
+<p>:TRIGger:PWIDth:CONDition ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_10'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询脉宽触发的触发条件</p>
+<b><p>参数</p></b>
+<p>condition:离散型{GT|LT|EQ|NEQ}</p>
+<p>LT:小于<br>GT:大于<br>EQ:等于<br>NEQ:不等于</p>
+<b><p>返回格式</p></b>
+<p>查询返回“GT”、“LT”、“EQ”或“NEQ”。</p>
+<hr>
+<p id='cid_10_1'>:TRIGger:PWIDth:TWIDth width</p>
+<p>:TRIGger:PWIDth:TWIDth ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_10'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询脉宽触发的脉宽</p>
+<b><p>参数</p></b>
+<p>width:以秒为单位的实数</p>
+<b><p>返回格式</p></b>
+<p>查询返回以秒为单位、以科学计数法表示的脉宽值</p>
+<hr>
+<p id='cid_10_2'>:TRIGger:PWIDth:POLarity polarity</p>
+<p>:TRIGger:PWIDth:POLarity ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_10'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询脉宽触发的脉宽极性</p>
+<b><p>参数</p></b>
+<p>polarity:离散型{POSitive|NEGative}</p>
+<p>POSitive:正脉宽<br>NEGative:负脉宽</p>
+<b><p>返回格式</p></b>
+<p>查询返回“POS”或“NEG”。</p>
+<hr>
+<p id='cid_10_3'>:TRIGger:PWIDth:SOURce source</p>
+<p>:TRIGger:PWIDth:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_10'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询脉宽触发的触发条件</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_10_4'>:TRIGger:PWIDth:LEVel value</p>
+<p>:TRIGger:PWIDth:LEVel ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_10'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询脉宽触发的时钟电平</p>
+<b><p>参数</p></b>
+<p>value:实数型,单位V</p>
+<hr><p id='gid_11'>触发-欠幅</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-欠幅</p><br>
+<a href='#cid_11_0'>:TRIGger:RUNT:SOURce</a><br>
+<a href='#cid_11_1'>:TRIGger:RUNT:CONDition</a><br>
+<a href='#cid_11_2'>:TRIGger:RUNT:UPPer</a><br>
+<a href='#cid_11_3'>:TRIGger:RUNT:LOWer</a><br>
+<a href='#cid_11_4'>:TRIGger:RUNT:POLArity</a><br>
+<a href='#cid_11_5'>:TRIGger:RUNT:TIMe</a><br>
+<hr>
+<p id='cid_11_0'>:TRIGger:RUNT:SOURce source</p>
+<p>:TRIGger:RUNT:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_11'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询欠幅触发源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_11_1'>:TRIGger:RUNT:CONDition type</p>
+<p>:TRIGger:RUNT:CONDition ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_11'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询欠幅边沿类型</p>
+<b><p>参数</p></b>
+<p>type:离散型{GREaterthan|LESSthan|EQUal|NOTEqual}</p>
+<p>GREaterthan:大于<br>LESSthan:小于<br>EQUal:等于<br>NOTEqual:不等于</p>
+<b><p>返回格式</p></b>
+<p>查询返回“GRE”、“LESS”、“EQU”或“NOTE”。</p>
+<hr>
+<p id='cid_11_2'>:TRIGger:RUNT:UPPer value</p>
+<p>:TRIGger:RUNT:UPPer ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_11'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询欠幅触发的电平上限</p>
+<b><p>参数</p></b>
+<p>value:实数型</p>
+<hr>
+<p id='cid_11_3'>:TRIGger:RUNT:LOWer value</p>
+<p>:TRIGger:RUNT:LOWer ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_11'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询欠幅触发的电平下限</p>
+<b><p>参数</p></b>
+<p>value:实数型</p>
+<hr>
+<p id='cid_11_4'>:TRIGger:RUNT:POLArity polarity</p>
+<p>:TRIGger:RUNT:POLArity ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_11'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询欠幅触发的极性</p>
+<b><p>参数</p></b>
+<p>polarity:离散型{POSitive|NEGative}</p>
+<p>POSitive:正极<br>NEGative:负极</p>
+<b><p>返回格式</p></b>
+<p>查询返回“POS”或“NEG”。</p>
+<hr>
+<p id='cid_11_5'>:TRIGger:RUNT:TIMe time</p>
+<p>:TRIGger:RUNT:TIMe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_11'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询欠幅触发的欠幅时间</p>
+<b><p>参数</p></b>
+<p>time:实数型，单位S</p>
+<hr><p id='gid_12'>触发-斜率</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-斜率</p><br>
+<a href='#cid_12_0'>:TRIGger:SLOPe:SOURce</a><br>
+<a href='#cid_12_1'>:TRIGger:SLOPe:SLOPe</a><br>
+<a href='#cid_12_2'>:TRIGger:SLOPe:UPPer</a><br>
+<a href='#cid_12_3'>:TRIGger:SLOPe:LOWer</a><br>
+<a href='#cid_12_4'>:TRIGger:SLOPe:TYPe</a><br>
+<a href='#cid_12_5'>:TRIGger:SLOPe:TIMe</a><br>
+<hr>
+<p id='cid_12_0'>:TRIGger:SLOPe:SOURce source</p>
+<p>:TRIGger:SLOPe:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_12'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询斜率触发源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_12_1'>:TRIGger:SLOPe:CONDition type</p>
+<p>:TRIGger:SLOPe:CONDition ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_12'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询斜率触发时机</p>
+<b><p>参数</p></b>
+<p>type:离散型{GREaterthan|LESSthan|EQUal|NOTEqual}</p>
+<p>GREaterthan:大于<br>LESSthan:小于<br>EQUal:等于<br>NOTEqual:不等于</p>
+<b><p>返回格式</p></b>
+<p>查询返回“GRE”、“LESS”、“EQU”或“NOTE”。</p>
+<hr>
+<p id='cid_12_2'>:TRIGger:SLOPe:UPPer value</p>
+<p>:TRIGger:SLOPe:UPPer ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_12'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询斜率触发的电平上限</p>
+<b><p>参数</p></b>
+<p>value:实数型</p>
+<hr>
+<p id='cid_12_3'>:TRIGger:SLOPe:LOWer value</p>
+<p>:TRIGger:SLOPe:LOWer ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_12'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询斜率触发的电平下限</p>
+<b><p>参数</p></b>
+<p>value:实数型</p>
+<hr>
+<p id='cid_12_4'>:TRIGger:SLOPe:TYPe type</p>
+<p>:TRIGger:SLOPe:TYPe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_12'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询斜率触发的斜率类型</p>
+<b><p>参数</p></b>
+<p>type:离散型{RISe|FALL}</p>
+<p>RISe:上升<br>FALL:下降</p>
+<b><p>返回格式</p></b>
+<p>查询返回“RIS”或“FALL”。</p>
+<hr>
+<p id='cid_12_5'>:TRIGger:SLOPe:TIMe time</p>
+<p>:TRIGger:SLOPe:TIMe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_12'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询斜率触发的斜率时间</p>
+<b><p>参数</p></b>
+<p>time:实数型，单位S</p>
+<hr><p id='gid_13'>触发-状态</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-状态</p><br>
+<a href='#cid_13_0'>:TRIGger:STAte:SOURce</a><br>
+<a href='#cid_13_1'>:TRIGger:STAte:CPOLarity</a><br>
+<hr>
+<p id='cid_13_0'>:TRIGger:STAte:SOURce source</p>
+<p>:TRIGger:STAte:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_13'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询状态时钟源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_13_1'>:TRIGger:STAte:CPOLarity type</p>
+<p>:TRIGger:STAte:CPOLarity ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_13'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询状态触发的状态范围</p>
+<b><p>参数</p></b>
+<p>type:离散型{POSitive|NEGative}</p>
+<p>POSitive:正极<br>NEGative:负极</p>
+<b><p>返回格式</p></b>
+<p>查询返回“POS”或“NEG”。</p>
+<hr><p id='gid_14'>触发-超时</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-超时</p><br>
+<a href='#cid_14_0'>:TRIGger:OVERtime:SOURce</a><br>
+<a href='#cid_14_1'>:TRIGger:OVERtime:SLOPe</a><br>
+<a href='#cid_14_2'>:TRIGger:OVERtime:LEVel</a><br>
+<a href='#cid_14_3'>:TRIGger:OVERtime:TIMe</a><br>
+<hr>
+<p id='cid_14_0'>:TRIGger:OVERtime:SOURce source</p>
+<p>:TRIGger:OVERtime:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_14'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询超时触发源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_14_1'>:TRIGger:OVERtime:SLOPe type</p>
+<p>:TRIGger:OVERtime:SLOPe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_14'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询超时边沿类型</p>
+<b><p>参数</p></b>
+<p>type:离散型{POSitive|NEGative|ANY}</p>
+<p>POSitive:上升沿<br>NEGative:下降沿<br>ANY:任意</p>
+<b><p>返回格式</p></b>
+<p>查询返回“POS”、“NEG”或“ANY”。</p>
+<hr>
+<p id='cid_14_2'>:TRIGger:OVERtime:LEVel level</p>
+<p>:TRIGger:OVERtime:LEVel ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_14'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询超时触发的触发电平</p>
+<b><p>参数</p></b>
+<p>level:实数型，单位V</p>
+<hr>
+<p id='cid_14_3'>:TRIGger:OVERtime:TIMe time</p>
+<p>:TRIGger:OVERtime:TIMe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_14'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询超时触发的超时时间</p>
+<b><p>参数</p></b>
+<p>time:实数型，单位S</p>
+<hr><p id='gid_15'>触发-视频</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-视频</p><br>
+<a href='#cid_15_0'>:TRIGger:VIDeo:SOURce</a><br>
+<a href='#cid_15_1'>:TRIGger:VIDeo:STANdard</a><br>
+<a href='#cid_15_2'>:TRIGger:VIDeo:FIELd</a><br>
+<a href='#cid_15_3'>:TRIGger:VIDeo:LINe</a><br>
+<a href='#cid_15_4'>:TRIGger:VIDeo:SYNC</a><br>
+<a href='#cid_15_5'>:TRIGger:VIDeo:POLArity</a><br>
+<hr>
+<p id='cid_15_0'>:TRIGger:VIDeo:SOURce source</p>
+<p>:TRIGger:VIDeo:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_15'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询视频触发源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_15_1'>:TRIGger:VIDeo:STANdard standard</p>
+<p>:TRIGger:VIDeo:STANdard ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_15'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询视频标准类型</p>
+<b><p>参数</p></b>
+<p>standard:离散型{NTSC|PAL|EDTV480I60|EDTV576I50|HDTV480P60|HDTV576P50|HDTV720P60|HDTV1080P60|HDTV1080I60}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“NTSC”、“PAL”、“EDTV480I60”、“EDTV576I50”、“HDTV480P60”、“HDTV576P50”、“HDTV720P60”、“HDTV1080P60”或“HDTV1080I60”。</p>
+<hr>
+<p id='cid_15_2'>:TRIGger:VIDeo:FIELd field</p>
+<p>:TRIGger:VIDeo:FIELd ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_15'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询视频触发的视频场数</p>
+<b><p>参数</p></b>
+<p>field:视频场数</p>
+<hr>
+<p id='cid_15_3'>:TRIGger:VIDeo:LINe line</p>
+<p>:TRIGger:VIDeo:LINe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_15'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询视频触发的视频行数</p>
+<b><p>参数</p></b>
+<p>line:视频行数</p>
+<hr>
+<p id='cid_15_4'>:TRIGger:VIDeo:SYNC sync</p>
+<p>:TRIGger:VIDeo:SYNC ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_15'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询视频触发的同步方式</p>
+<b><p>参数</p></b>
+<p>sync:同步方式</p>
+<hr>
+<p id='cid_15_5'>:TRIGger:VIDeo:POLArity polarity</p>
+<p>:TRIGger:VIDeo:POLArity ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_15'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询视频触发的视频极性</p>
+<b><p>参数</p></b>
+<p>polarity:视频极性</p>
+<hr><p id='gid_16'>触发-窗口</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>触发-窗口</p><br>
+<a href='#cid_16_0'>:TRIGger:WINDow:SOURce</a><br>
+<a href='#cid_16_1'>:TRIGger:WINDow:UPPer</a><br>
+<a href='#cid_16_2'>:TRIGger:WINDow:LOWer</a><br>
+<a href='#cid_16_3'>:TRIGger:WINDow:RANGe</a><br>
+<a href='#cid_16_4'>:TRIGger:WINDow:WHEn</a><br>
+<hr>
+<p id='cid_16_0'>:TRIGger:WINDow:SOURce source</p>
+<p>:TRIGger:WINDow:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_16'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询窗口触发源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_16_1'>:TRIGger:WINDow:UPPer value</p>
+<p>:TRIGger:WINDow:UPPer ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_16'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询窗口触发的电平上限</p>
+<b><p>参数</p></b>
+<p>value:实数型</p>
+<hr>
+<p id='cid_16_2'>:TRIGger:WINDow:LOWer value</p>
+<p>:TRIGger:WINDow:LOWer ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_16'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询窗口触发的电平下限</p>
+<b><p>参数</p></b>
+<p>value:实数型</p>
+<hr>
+<p id='cid_16_3'>:TRIGger:WINDow:RANGe type</p>
+<p>:TRIGger:WINDow:RANGe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_16'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询窗口触发的窗口范围</p>
+<b><p>参数</p></b>
+<p>type:离散型{INSide|OUTside}</p>
+<p>INSide:范围内<br>OUTSide:范围外</p>
+<b><p>返回格式</p></b>
+<p>查询返回“INS”或“OUT”。</p>
+<hr>
+<p id='cid_16_4'>:TRIGger:WINDow:WHEn time</p>
+<p>:TRIGger:WINDow:WHEn ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_16'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询窗口触发的条件</p>
+<b><p>参数</p></b>
+<p>time:离散型{ONENter|GREaterThan|LESSThan}</p>
+<p>ONENter:进入<br>GREaterThan:大于<br>LESSThan:小于</p>
+<b><p>返回格式</p></b>
+<p>查询返回“ONEN”、“GRET”或“LESST”。</p>
+<hr><p id='gid_17'>波形数据</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>波形数据</p><br>
+<a href='#cid_17_0'>:WAVeform:SOURce</a><br>
+<a href='#cid_17_1'>:WAVeform:FORMat</a><br>
+<a href='#cid_17_2'>:WAVeform:POINts</a><br>
+<a href='#cid_17_3'>:WAVeform:DATA</a><br>
+<hr>
+<p id='cid_17_0'>:WAVeform:SOURce source</p>
+<p>:WAVeform:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_17'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询波形数据读取的通道源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”或“M8”。</p>
+<hr>
+<p id='cid_17_1'>:WAVeform:FORMat format</p>
+<p>:WAVeform:FORMat ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_17'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询设置或查询波形数据的返回格式</p>
+<b><p>参数</p></b>
+<p>source:format{BYTE|ASCII}</p>
+<p>BYTE: 一个波形点占一个字节（即 8 位）<br>ASCII:以科学计数形式返回各波形点的实际电压值， 各电压值之间以逗号分隔。</p>
+<b><p>返回格式</p></b>
+<p>查询返回“BYTE”或“ASCII”。</p>
+<hr>
+<p id='cid_17_2'>:WAVeform:POINts point</p>
+<p>:WAVeform:POINts ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_17'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询欲读取的波形点数</p>
+<b><p>参数</p></b>
+<p>source:整型</p>
+<hr>
+<p id='cid_17_3'>:WAVeform:DATA ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_17'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>读取波形数据<br>返回格式与当前选择的波形数据返回格式有关<br><br> BYTE 格式： 读取的数据格式为 头+采样率+开始时间(s)+波形数据点。 头为#NXXXXXX 的形式， #为规定的头标志符， N 表示后面含有 N 个字节，以 ASCII 字符的形式描述波形数据点的长度，结束符用于表示通讯的终止。例如，一次读取的数据为#9000001000XXXX 表示 9 个字节描述数据的长度， 000001000 表示波形数据的长度，即1000 字节。 <br><br>ASCii 格式：采样率+开始时间(s)+点数(整型)+直接以科学计数形式返回波形中每一点的实际电压值， 各值之间以“,”        隔开</p>
+<hr><p id='gid_18'>测量</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>参数测量</p><br>
+<a href='#cid_18_0'>:MEASure:SOURce</a><br>
+<a href='#cid_18_1'>:MEASure:INDicator</a><br>
+<a href='#cid_18_2'>:MEASure:ALLActive</a><br>
+<a href='#cid_18_3'>:MEASure:ULTRaacq</a><br>
+<a href='#cid_18_4'>:MEASure:GATe</a><br>
+<a href='#cid_18_5'>:MEASure:ITEM&lt;n&gt;:DISPlay</a><br>
+<a href='#cid_18_6'>:MEASure:ITEM&lt;n&gt;:TYPe</a><br>
+<a href='#cid_18_7'>:MEASure:ITEM&lt;n&gt;:SOURce<ch></a><br>
+<a href='#cid_18_8'>:MEASure:ITEM&lt;n&gt;:THRold:TYPe</a><br>
+<a href='#cid_18_9'>:MEASure:ITEM&lt;n&gt;:THRold:TOP</a><br>
+<a href='#cid_18_10'>:MEASure:ITEM&lt;n&gt;:THRold:MIDDle</a><br>
+<a href='#cid_18_11'>:MEASure:ITEM&lt;n&gt;:THRold:BOTTom</a><br>
+<a href='#cid_18_12'>:MEASure:ITEM&lt;n&gt;:THRold:UNIT</a><br>
+<a href='#cid_18_13'>:MEASure:ITEM&lt;n&gt;:VALue</a><br>
+<a href='#cid_18_14'>:MEASure:ITEM&lt;n&gt;:COUNter:MAX</a><br>
+<a href='#cid_18_15'>:MEASure:ITEM&lt;n&gt;:COUNter:MIN</a><br>
+<a href='#cid_18_16'>:MEASure:ITEM&lt;n&gt;:COUNter:AVG</a><br>
+<a href='#cid_18_17'>:MEASure:ITEM&lt;n&gt;:COUNter:DEV</a><br>
+<a href='#cid_18_18'>:MEASure:ITEM&lt;n&gt;:COUNter:POP</a><br>
+<hr>
+<p id='cid_18_0'>:MEASure:SOURce source</p>
+<p>:MEASure:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询边沿测量源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_18_1'>:MEASure:INDicator indicator</p>
+<p>:MEASure:INDicator ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询指示器</p>
+<b><p>参数</p></b>
+<p>indicator:离散型{OFF|P1|P2|P3|P4|P5|P6|P7|P8}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“OFF”、“P1”、“P2”、“P3”、“P4”、“P5”、“P6”、“P7”或“P8”。</p>
+<hr>
+<p id='cid_18_2'>:MEASure:ALLActive active</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>设置所有测量项是否激活</p>
+<b><p>参数</p></b>
+<p>active:离散型{OFF|ON}</p>
+<p>OFF：关<br>ON：开</p>
+<b><p>返回格式</p></b>
+<p>查询返回“OFF”或“ON”。</p>
+<hr>
+<p id='cid_18_3'>:MEASure:ULTRaacq mode</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>设置快速采集类型</p>
+<b><p>参数</p></b>
+<p>mode:离散型{VERTical|HORIzontal}</p>
+<p>VERTical：垂直<br>HORIzontal：水平</p>
+<b><p>返回格式</p></b>
+<p>查询返回“VERT”或“HORI”。</p>
+<hr>
+<p id='cid_18_4'>:MEASure:GATe type</p>
+<p>:MEASure:GATe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询测量门限</p>
+<b><p>参数</p></b>
+<p>type:离散型{SCReen|CURSor}</p>
+<p>SCReen：屏幕<br>CURSor：光标</p>
+<b><p>返回格式</p></b>
+<p>查询返回“SCR”或“CURS”。</p>
+<hr>
+<p id='cid_18_5'>:MEASure:ITEM&lt;n&gt;:DISPlay type</p>
+<p>:MEASure:ITEM&lt;n&gt;:DISPlay ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询测量项是否激活</p>
+<b><p>参数</p></b>
+<p>type:离散型{OFF|ON}</p>
+<p>OFF：关<br>ON：开</p>
+<b><p>返回格式</p></b>
+<p>查询返回“OFF”或“ON”。</p>
+<hr>
+<p id='cid_18_6'>:MEASure:ITEM&lt;n&gt;:TYPe type</p>
+<p>:MEASure:ITEM&lt;n&gt;:TYPe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询测量项类型</p>
+<b><p>参数</p></b>
+<p>type:离散型{MAX|MIN|PKPK|TOP|BASE|MID|AMPL|AVER|RMS|STDD|POV|NOV|AREA|PER|FREQ|RIS|FALL|PWID|NWID|DUTY|CYCL|BURS|TMAX|TMIN|CMax|CMin|CRMS|CAV|CPE|CAR|LRIS|LFAL|LPER|LFR|LWID|LDUT|LPHA|LRRD|LFFD}</p>
+<p>MAX:最大值<br>MIN:最小值<br>PKPK:峰峰值<br>TOP:顶值<br>BASE:底值<br>MID:中值<br>AMPL:幅度<br>AVER:平均值<br>RMS:有效值<br>STDD:标准差<br>POV:过冲<br>NOV:下冲<br>AREA:面积<br>PER:周期<br>FREQ:频率<br>RIS:上升时间<br>FALL:下降时间<br>PWID:正脉宽<br>NWID:负脉宽<br>DUTY:正占空比<br>CYCL:周期数<br>BURS:猝发宽度<br>TMAX:时间@Max<br>TMIN:时间@Min<br>CMax:周期最大值<br>CMin:周期最小值<br>CRMS:周期均方根值<br>CAV:周期平均值<br>CPE:周期峰峰值<br>CAR:周期面积<br>LRIS:上升时间@Lv<br>LFAL:下降时间@Lv<br>LPER:周期@Lv<br>LFR:频率@Lv<br>LWID:脉宽@Lv<br>LDUT:占空比@Lv<br>LPHA:相位差@Lv<br>LRRD:上升沿延迟@Lv<br>LFFD:下降沿延迟@Lv</p>
+<b><p>返回格式</p></b>
+<p>查询返回“MAX”、“MIN”、“PKPK”、“TOP”、“BASE”、“MID”、“AMPL”、“AVER”、“RMS”、“STDD”、“POV”、“NOV”、“AREA”、“PER”、“FREQ”、“RIS”、“FALL”、“PWID”、“NWID”、“DUTY”、“CYCL”、“BURS”、“TMAX”、“TMIN”、“CM”、“CM”、“CRMS”、“CAV”、“CPE”、“CAR”、“LRIS”、“LFAL”、“LPER”、“LFR”、“LWID”、“LDUT”、“LPHA”、“LRRD”或“LFFD”。</p>
+<hr>
+<p id='cid_18_7'>:MEASure:ITEM&lt;n&gt;:SOURce<ch> source</p>
+<p>:MEASure:ITEM&lt;n&gt;:SOURce<ch> ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询测量位测量源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|M1|M2|M3|M4|M5|M6|M7|M8|R1|R2|R3|R4|B1|B2|D1|D2|D3|D4|D5|D6|D7|D8|D9|D10|D11|D12|D13|D14|D15|D16|AWG1|AWG2|DVM|Ext|Ext5|AC}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“M1”、“M2”、“M3”、“M4”、“M5”、“M6”、“M7”、“M8”、“R1”、“R2”、“R3”、“R4”、“B1”、“B2”、“D1”、“D2”、“D3”、“D4”、“D5”、“D6”、“D7”、“D8”、“D9”、“D10”、“D11”、“D12”、“D13”、“D14”、“D15”、“D16”、“AWG1”、“AWG2”、“DVM”、“E”、“E5”或“AC”。</p>
+<hr>
+<p id='cid_18_8'>:MEASure:ITEM&lt;n&gt;:THRold:TYPe type</p>
+<p>:MEASure:ITEM&lt;n&gt;:THRold:TYPe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询测量位参考阈值-寻顶方式</p>
+<b><p>参数</p></b>
+<p>type:寻顶方式{BaseTop|MinMax|ZeroMin|ZeroMax}</p>
+<p>BaseTop：顶底值<br>MinMax：最大最小值<br>ZeroMin：零最小值<br>ZeroMax：零最大值</p>
+<b><p>返回格式</p></b>
+<p>查询返回“BT”、“MM”、“ZM”或“ZM”。</p>
+<hr>
+<p id='cid_18_9'>:MEASure:ITEM&lt;n&gt;:THRold:TOP top</p>
+<p>:MEASure:ITEM&lt;n&gt;:THRold:TOP ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询测量位阈值-顶,测量项阈值类型为百分比时,有效值0-100%</p>
+<b><p>参数</p></b>
+<p>top:设置值</p>
+<hr>
+<p id='cid_18_10'>:MEASure:ITEM&lt;n&gt;:THRold:MIDDle middle</p>
+<p>:MEASure:ITEM&lt;n&gt;:THRold:MIDDle ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询测量位阈值-中,测量项阈值类型为百分比时,有效值0-100%</p>
+<b><p>参数</p></b>
+<p>middle:设置值</p>
+<hr>
+<p id='cid_18_11'>:MEASure:ITEM&lt;n&gt;:THRold:BOTTom bottom</p>
+<p>:MEASure:ITEM&lt;n&gt;:THRold:BOTTom ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询测量位阈值-底,测量项阈值类型为百分比时,有效值0-100%</p>
+<b><p>参数</p></b>
+<p>bottom:设置值</p>
+<hr>
+<p id='cid_18_12'>:MEASure:ITEM&lt;n&gt;:THRold:UNIT unit</p>
+<p>:MEASure:ITEM&lt;n&gt;:THRold:UNIT ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询测量位测量阈值类型,百分比有效范围0-100%</p>
+<b><p>参数</p></b>
+<p>type:测量项类型{Percent|Absolute}</p>
+<p> Percent：百分比<br>Absolute：绝对值</p>
+<b><p>返回格式</p></b>
+<p>查询返回“P”或“A”。</p>
+<hr>
+<p id='cid_18_13'>:MEASure:ITEM&lt;n&gt;:VALue ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>查询测量项测量值</p>
+<b><p>参数</p></b>
+<p>bottom:设置值</p>
+<hr>
+<p id='cid_18_14'>:MEASure:ITEM&lt;n&gt;:COUNter:MAX ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>查询测量项统计值-最大</p>
+<hr>
+<p id='cid_18_15'>:MEASure:ITEM&lt;n&gt;:COUNter:MIN ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>查询测量项统计值-最小值</p>
+<hr>
+<p id='cid_18_16'>:MEASure:ITEM&lt;n&gt;:COUNter:AVG ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>查询测量项统计值-平均值</p>
+<hr>
+<p id='cid_18_17'>:MEASure:ITEM&lt;n&gt;:COUNter:DEV ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>查询测量项统计值-标准差</p>
+<hr>
+<p id='cid_18_18'>:MEASure:ITEM&lt;n&gt;:COUNter:POP ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_18'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>查询测量项统计值-计数器</p>
+<hr><p id='gid_19'>数学</p>
+<a href='#top'>返回总目录</a><br>
+<br>
+<p>数学</p><br>
+<a href='#cid_19_0'>:MATH:ADDNew</a><br>
+<a href='#cid_19_1'>:MATH:LIST</a><br>
+<a href='#cid_19_2'>:MATH:MATH&lt;n&gt;:DELete</a><br>
+<a href='#cid_19_3'>:MATH:MATH&lt;n&gt;:LABel</a><br>
+<a href='#cid_19_4'>:MATH:MATH&lt;n&gt;:UNIT</a><br>
+<a href='#cid_19_5'>:MATH:MATH&lt;n&gt;:TYPe</a><br>
+<a href='#cid_19_6'>:MATH:MATH&lt;n&gt;:OFFSet</a><br>
+<a href='#cid_19_7'>:MATH:MATH&lt;n&gt;:SCALe</a><br>
+<a href='#cid_19_8'>:MATH:MATH&lt;n&gt;:FUNCtion</a><br>
+<a href='#cid_19_9'>:MATH:MATH&lt;n&gt;:SOURce<ch></a><br>
+<a href='#cid_19_10'>:MATH:MATH&lt;n&gt;:ZOOM:SOURce</a><br>
+<a href='#cid_19_11'>:MATH:MATH&lt;n&gt;:FFT:SOURce</a><br>
+<a href='#cid_19_12'>:MATH:MATH&lt;n&gt;:FFT:WINDow</a><br>
+<a href='#cid_19_13'>:MATH:MATH&lt;n&gt;:FFT:OUTType</a><br>
+<a href='#cid_19_14'>:MATH:MATH&lt;n&gt;:FFT:UNIT</a><br>
+<a href='#cid_19_15'>:MATH:MATH&lt;n&gt;:FFT:POINt</a><br>
+<a href='#cid_19_16'>:MATH:MATH&lt;n&gt;:DEFine</a><br>
+<hr>
+<p id='cid_19_0'>:MATH:ADDNew</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>设置增加新的数学通道(最大8个)</p>
+<hr>
+<p id='cid_19_1'>:MATH:LIST ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[查询]</p>
+<b><p>功能描述</p></b>
+<p>查询所有数学通道</p>
+<hr>
+<p id='cid_19_2'>:MATH:MATH&lt;n&gt;:DELete</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]</p>
+<b><p>功能描述</p></b>
+<p>设置删除指定数学通道</p>
+<hr>
+<p id='cid_19_3'>:MATH:MATH&lt;n&gt;:LABel label</p>
+<p>:MATH:MATH&lt;n&gt;:LABel ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询所有数学通道标题</p>
+<b><p>参数</p></b>
+<p>label:通道名称字符串</p>
+<b><p>返回格式</p></b>
+<p>通道名称字符串</p>
+<hr>
+<p id='cid_19_4'>:MATH:MATH&lt;n&gt;:UNIT unit</p>
+<p>:MATH:MATH&lt;n&gt;:UNIT ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询数学通道显示单位</p>
+<b><p>参数</p></b>
+<p>unit:单位字符串</p>
+<b><p>返回格式</p></b>
+<p>单位字符串</p>
+<hr>
+<p id='cid_19_5'>:MATH:MATH&lt;n&gt;:TYPe type</p>
+<p>:MATH:MATH&lt;n&gt;:TYPe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询数学通道数学运算类型</p>
+<b><p>参数</p></b>
+<p>type:离散型{BINary|FFT|ZOOM|FILTer|HISTgram|TRACk|CUSTom|MATLab}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“BIN”、“FFT”、“ZOOM”、“FILT”、“HIST”、“TRAC”、“CUST”或“MATL”。</p>
+<hr>
+<p id='cid_19_6'>:MATH:MATH&lt;n&gt;:OFFSet offSet</p>
+<p>:MATH:MATH&lt;n&gt;:OFFSet ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询数学通道垂直位移</p>
+<b><p>参数</p></b>
+<p>offSet:浮点型,单位为v/div</p>
+<hr>
+<p id='cid_19_7'>:MATH:MATH&lt;n&gt;:SCALe scale</p>
+<p>:MATH:MATH&lt;n&gt;:SCALe ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询数学通道垂直档位</p>
+<b><p>参数</p></b>
+<p>scale:浮点型,单位为v</p>
+<hr>
+<p id='cid_19_8'>:MATH:MATH&lt;n&gt;:FUNCtion type</p>
+<p>:MATH:MATH&lt;n&gt;:FUNCtion ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询数学通道基础运算类型</p>
+<b><p>参数</p></b>
+<p>type:离散型{ADD|SUBTract|MULTiply|DIVide}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“ADD”、“SUBT”、“MULT”或“DIV”。</p>
+<hr>
+<p id='cid_19_9'>:MATH:MATH&lt;n&gt;:SOURce<ch> source</p>
+<p>:MATH:MATH&lt;n&gt;:SOURce<ch> ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询数学通道运算源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|R1|R2|R3|R4}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“R1”、“R2”、“R3”或“R4”。</p>
+<hr>
+<p id='cid_19_10'>:MATH:MATH&lt;n&gt;:ZOOM:SOURce source</p>
+<p>:MATH:MATH&lt;n&gt;:ZOOM:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>运算类型为扩展(Zoom)时，设置或查询数学通道运算源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|R1|R2|R3|R4}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“R1”、“R2”、“R3”或“R4”。</p>
+<hr>
+<p id='cid_19_11'>:MATH:MATH&lt;n&gt;:FFT:SOURce source</p>
+<p>:MATH:MATH&lt;n&gt;:FFT:SOURce ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>运算类型为快速傅里叶变换(FFT)时，设置或查询数学通道运算源</p>
+<b><p>参数</p></b>
+<p>source:离散型{CHANnel1|CHANnel2|CHANnel3|CHANnel4|R1|R2|R3|R4}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“CHAN1”、“CHAN2”、“CHAN3”、“CHAN4”、“R1”、“R2”、“R3”或“R4”。</p>
+<hr>
+<p id='cid_19_12'>:MATH:MATH&lt;n&gt;:FFT:WINDow type</p>
+<p>:MATH:MATH&lt;n&gt;:FFT:WINDow ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>运算类型为快速傅里叶变换(FFT)时，设置或查询数学通道窗函数</p>
+<b><p>参数</p></b>
+<p>type:离散型{RECTangle|HANN|HAMMing|BLACkman|FLATtop|KAISer|GAUSsian}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“RECT”、“HANN”、“HAMM”、“BLAC”、“FLAT”、“KAIS”或“GAUS”。</p>
+<hr>
+<p id='cid_19_13'>:MATH:MATH&lt;n&gt;:FFT:OUTType type</p>
+<p>:MATH:MATH&lt;n&gt;:FFT:OUTType ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>运算类型为快速傅里叶变换(FFT)时，设置或查询数学通道输出类型</p>
+<b><p>参数</p></b>
+<p>type:离散型{AMPLtd|POWer|PSD|REAL|IMAGinary|PHASe}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“AMPL”、“POW”、“PSD”、“REAL”、“IMAG”或“PHAS”。</p>
+<hr>
+<p id='cid_19_14'>:MATH:MATH&lt;n&gt;:FFT:UNIT type</p>
+<p>:MATH:MATH&lt;n&gt;:FFT:UNIT ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>运算类型为快速傅里叶变换(FFT)时，设置或查询数学通道FFT单位</p>
+<b><p>参数</p></b>
+<p>type:离散型{VRMS|DBVRms}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“VRMS”或“DBVR”。</p>
+<hr>
+<p id='cid_19_15'>:MATH:MATH&lt;n&gt;:FFT:POINt type</p>
+<p>:MATH:MATH&lt;n&gt;:FFT:POINt ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>运算类型为快速傅里叶变换(FFT)时，设置或查询数学通道扫描点数</p>
+<b><p>参数</p></b>
+<p>type:离散型{Num1K|Num2K|Num4K|Num8K}</p>
+<b><p>返回格式</p></b>
+<p>查询返回“N1K”、“N2K”、“N4K”或“N8K”。</p>
+<hr>
+<p id='cid_19_16'>:MATH:MATH&lt;n&gt;:DEFine function</p>
+<p>:MATH:MATH&lt;n&gt;:DEFine ?</p>
+<p><table border='0' width='300'><tr><td width='50%'><a href='#gid_19'>返回模块目录</a></td>
+<td><a href='#top'>返回总目录</a></td>
+</tr></table></p>
+<b><p>可做操作</p></b>
+<p>[设置]、[查询]</p>
+<b><p>功能描述</p></b>
+<p>设置或查询数学通道自定义运算</p>
+<b><p>参数</p></b>
+<p>function:自定义运算字符串</p>
+
+	</div>
+	</font>
+</body>
+</html>

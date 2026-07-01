@@ -1,0 +1,559 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>ScopeX.U2.Program</StartupObject>
+    <Version>3.00.0000</Version>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>GHzScopeX</AssemblyName>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <Configurations>Debug;Release;</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+	<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants);SaveLanguage</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DefineConstants>$(DefineConstants);SaveLanguage</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <Compile Remove="Resources\Help\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="Resources\Help\**" />
+    <None Remove="bin\**" />
+    <None Remove="Resources\Help\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Setting\Form1.cs" />
+    <Compile Remove="Setting\Form1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Help\JiHe_MSO7000X.xml" />
+    <None Remove="Help\JiHe_UPO7000L.xml" />
+    <None Remove="Log\Log4net.xml" />
+    <None Remove="Math\CustomFormula.xml" />
+    <None Remove="Measurement\Measure.xml" />
+    <None Remove="Resources\AboutInfo.xml" />
+    <None Remove="Resources\CustomFormula_en.xml" />
+    <None Remove="Resources\DemoWaves\PWQUASCREENC1.bin" />
+    <None Remove="Resources\DemoWaves\PWQUASCREENC2.bin" />
+    <None Remove="Resources\DemoWaves\RIPPERC1.bin" />
+    <None Remove="Resources\english.xml" />
+    <None Remove="Resources\english_UPO7000L.xml" />
+    <None Remove="Resources\Language\tip_MSO8000X\english_MSO8000X.xml" />
+    <None Remove="Resources\Language\tip_MSO8000X\French_MSO8000X.xml" />
+    <None Remove="Resources\Language\tip_MSO8000X\German_MSO8000X.xml" />
+    <None Remove="Resources\Language\tip_MSO8000X\Italian_MSO8000X.xml" />
+    <None Remove="Resources\Language\tip_MSO8000X\Spanish_MSO8000X.xml" />
+    <None Remove="Resources\Language\tip_MSO8000X\Tip_MSO8000X.xml" />
+    <None Remove="Resources\Marker\ArrowAutoMarker.bmp" />
+    <None Remove="Resources\Marker\ArrowMainMarker.bmp" />
+    <None Remove="Resources\Measure_en.xml" />
+    <None Remove="Resources\ProbeCalib\DiffCalib1.png" />
+    <None Remove="Resources\ProbeCalib\DiffCalib2.png" />
+    <None Remove="Resources\ProbeCalib\SingleCalib1.png" />
+    <None Remove="Resources\ProbeCalib\SingleCalib2.png" />
+    <None Remove="Resources\Tip_UPO7000L.xml" />
+    <None Remove="Resources\TopInfoBar\AcqModeAverage.png" />
+    <None Remove="Resources\TopInfoBar\AcqModeEnvelope.png" />
+    <None Remove="Resources\TopInfoBar\AcqModeHighRes.png" />
+    <None Remove="Resources\TopInfoBar\AcqModeNormal.png" />
+    <None Remove="Resources\TopInfoBar\AcqModePeak.png" />
+    <None Remove="Resources\TopInfoBar\AcqModeSequence.png" />
+    <None Remove="Resources\TopInfoBar\BothSlope.png" />
+    <None Remove="Resources\TopInfoBar\NegPulse.png" />
+    <None Remove="Resources\TopInfoBar\NegRunt.png" />
+    <None Remove="Resources\TopInfoBar\NegSlope.png" />
+    <None Remove="Resources\TopInfoBar\PosPulse.png" />
+    <None Remove="Resources\TopInfoBar\PosRunt.png" />
+    <None Remove="Resources\TopInfoBar\PosSlope.png" />
+    <None Remove="Resources\VersionInfo.xml" />
+    <None Remove="Resources\WaveIndicator\ArrowLeftSmall.png" />
+    <None Remove="Resources\WaveIndicator\CusorSync.png" />
+    <None Remove="Resources\WaveIndicator\T.png" />
+    <None Remove="Resources\WaveIndicator\TLeft.png" />
+    <None Remove="Resources\WaveIndicator\Triangle.png" />
+    <None Remove="Resources\WaveIndicator\TriangleFull.png" />
+    <None Remove="Resources\WaveIndicator\TRight.png" />
+    <None Remove="TipMsg\Tip.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <EmbeddedResource Include="Help\JiHe_MSO8000X.xml" />
+    <EmbeddedResource Include="Help\JiHe_MSO7000X.xml" />
+    <EmbeddedResource Include="Help\JiHe_UPO7000L.xml" />
+    <EmbeddedResource Include="Log\Log4net.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DemoWaves\PWQUASCREENC1.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DemoWaves\PWQUASCREENC2.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DemoWaves\RIPPERC1.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Language\tip_MSO8000X\english_MSO8000X.xml" />
+    <EmbeddedResource Include="Resources\Language\tip_MSO8000X\French_MSO8000X.xml" />
+    <EmbeddedResource Include="Resources\Language\tip_MSO8000X\German_MSO8000X.xml" />
+    <EmbeddedResource Include="Resources\Language\tip_MSO8000X\Italian_MSO8000X.xml" />
+    <EmbeddedResource Include="Resources\Language\tip_MSO8000X\Spanish_MSO8000X.xml" />
+    <EmbeddedResource Include="Resources\Language\tip_MSO8000X\Tip_MSO8000X.xml" />
+    <EmbeddedResource Include="Resources\Tip_UPO7000L.xml">
+		<CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\english_UPO7000L.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Marker\ArrowAutoMarker.bmp" />
+    <EmbeddedResource Include="Resources\Marker\ArrowMainMarker.bmp" />
+    <EmbeddedResource Include="Resources\english.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\TopInfoBar\BothSlope.png" />
+    <EmbeddedResource Include="Resources\VersionInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WaveIndicator\ArrowDown.png" />
+    <EmbeddedResource Include="Resources\WaveIndicator\ArrowLeft.png" />
+    <EmbeddedResource Include="Resources\WaveIndicator\ArrowLeftSmall.png" />
+    <EmbeddedResource Include="Resources\WaveIndicator\ArrowRight.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AboutInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Language\CustomFormula\CustomFormula.xml" />
+    <EmbeddedResource Include="Resources\Language\Measure\Measure.xml" />
+	<EmbeddedResource Include="Resources\Language\CustomFormula\CustomFormula_en.xml" />
+	<EmbeddedResource Include="Resources\Language\CustomFormula\CustomFormula_ge.xml" />
+	<EmbeddedResource Include="Resources\Language\CustomFormula\CustomFormula_fr.xml" />
+	<EmbeddedResource Include="Resources\Language\CustomFormula\CustomFormula_it.xml" />
+	<EmbeddedResource Include="Resources\Language\CustomFormula\CustomFormula_sp.xml" />
+	<EmbeddedResource Include="Resources\Language\Measure\Measure_en.xml" />
+	<EmbeddedResource Include="Resources\Language\Measure\Measure_ge.xml" />
+	<EmbeddedResource Include="Resources\Language\Measure\Measure_fr.xml" />
+	<EmbeddedResource Include="Resources\Language\Measure\Measure_it.xml" />
+	<EmbeddedResource Include="Resources\Language\Measure\Measure_sp.xml" />
+    <EmbeddedResource Include="Resources\Tip.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+	  <EmbeddedResource Include="Resources\Language\tip\French.xml">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="Resources\Language\tip\German.xml">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="Resources\Language\tip\Italian.xml">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="Resources\Language\tip\Spanish.xml">
+		  <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </EmbeddedResource>
+	  <EmbeddedResource Include="Resources\TopInfoBar\AcqModeAverage.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\AcqModeEnvelope.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\AcqModeHighRes.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\AcqModeNormal.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\AcqModePeak.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\AcqModeSequence.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\NegPulse.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\NegRunt.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\NegSlope.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\PosPulse.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\PosRunt.png" />
+    <EmbeddedResource Include="Resources\TopInfoBar\PosSlope.png" />
+    <EmbeddedResource Include="Resources\WaveIndicator\CusorSync.png" />
+    <EmbeddedResource Include="Resources\WaveIndicator\T.png" />
+    <EmbeddedResource Include="Resources\WaveIndicator\Triangle.png" />
+    <EmbeddedResource Include="Resources\WaveIndicator\TriangleFull.png" />
+    <EmbeddedResource Include="Resources\WaveIndicator\TLeft.png" />
+    <EmbeddedResource Include="Resources\WaveIndicator\TRight.png" />
+    <EmbeddedResource Include="Resources\OFF.png" />  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScopeX.ComModel\ScopeX.ComModel.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="Agg">
+      <HintPath>..\ShareDlls\Gpu\Agg.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoTimebase_Selector">
+      <HintPath>..\ShareDlls\OtherShareDlls\AutoTimebase_Selector.dll</HintPath>
+    </Reference>
+    <Reference Include="auto_peak_filter">
+      <HintPath>..\ShareDlls\OtherShareDlls\auto_peak_filter.dll</HintPath>
+    </Reference>
+    <Reference Include="CyUSB">
+      <HintPath>..\ShareDlls\OtherShareDlls\CyUSB.dll</HintPath>
+    </Reference>
+    <Reference Include="EventBroker">
+      <HintPath>..\ShareDlls\EventBroker.dll</HintPath>
+    </Reference>
+    <Reference Include="FontStashSharp">
+      <HintPath>..\ShareDlls\Gpu\FontStashSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="function_ai_trig">
+      <HintPath>..\ShareDlls\OtherShareDlls\function_ai_trig.dll</HintPath>
+    </Reference>
+    <Reference Include="IEventBroker">
+      <HintPath>..\ShareDlls\IEventBroker.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\ShareDlls\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NativeLibraryLoader">
+      <HintPath>..\ShareDlls\Gpu\NativeLibraryLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\ShareDlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PCIeControl">
+      <HintPath>..\ShareDlls\PCIeControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharpCore">
+      <HintPath>..\ShareDlls\PdfSharpCore.dll</HintPath>
+    </Reference>
+    <Reference Include="PreProcess">
+      <HintPath>..\ShareDlls\OtherShareDlls\PreProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Controls.Common">
+      <HintPath>..\ShareDlls\ScopeX.Controls.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Controls.Language">
+      <HintPath>..\ShareDlls\ScopeX.Controls.Language.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Controls.LanguageDefinition">
+      <HintPath>..\ShareDlls\ScopeX.Controls.LanguageDefinition.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Core">
+      <HintPath>..\ShareDlls\ScopeX.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Scpi">
+      <HintPath>..\ShareDlls\ScopeX.Scpi.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.ScpiAdapter">
+      <HintPath>..\ShareDlls\ScopeX.ScpiAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.SCPIManager">
+      <HintPath>..\ShareDlls\ScopeX.SCPIManager.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Touch">
+      <HintPath>..\ShareDlls\ScopeX.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Updater.Base">
+      <HintPath>..\ShareDlls\ScopeX.Updater.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.USBBridge">
+      <HintPath>..\ShareDlls\OtherShareDlls\ScopeX.USBBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.UserControls">
+      <HintPath>..\ShareDlls\ScopeX.UserControls.dll</HintPath>
+    </Reference>
+    <Reference Include="ScottPlot">
+      <HintPath>..\ShareDlls\ScottPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="ScottPlot.WinForms">
+      <HintPath>..\ShareDlls\ScottPlot.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGen.Runtime">
+      <HintPath>..\ShareDlls\Gpu\SharpGen.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGen.Runtime.COM">
+      <HintPath>..\ShareDlls\Gpu\SharpGen.Runtime.COM.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL">
+      <HintPath>..\ShareDlls\Gpu\SharpGL.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpGL.WinForms">
+      <HintPath>..\ShareDlls\Gpu\SharpGL.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="STFT">
+      <HintPath>bin\Debug\net6.0-windows\STFT.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg">
+      <HintPath>..\ShareDlls\Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Ports">
+      <HintPath>..\ShareDlls\System.IO.Ports.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management">
+      <HintPath>..\ShareDlls\System.Management.dll</HintPath>
+    </Reference>
+	  <Reference Include="ScopeX.MathExt">
+		  <HintPath>..\ShareDlls\ScopeX.MathExt.dll</HintPath>
+	  </Reference>
+    <Reference Include="ScopeX.Measure">
+      <HintPath>..\ShareDlls\ScopeX.Measure.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Protocol">
+      <HintPath>..\ShareDlls\ScopeX.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="MWArray">
+      <HintPath>..\ShareDlls\OtherShareDlls\MWArray.dll</HintPath>
+    </Reference>
+    <Reference Include="Veldrid">
+      <HintPath>..\ShareDlls\Gpu\Veldrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Veldrid.Common">
+      <HintPath>..\ShareDlls\Gpu\Veldrid.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Veldrid.MetalBindings">
+      <HintPath>..\ShareDlls\Gpu\Veldrid.MetalBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Veldrid.OpenGLBindings">
+      <HintPath>..\ShareDlls\Gpu\Veldrid.OpenGLBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Veldrid.SDL2">
+      <HintPath>..\ShareDlls\Gpu\Veldrid.SDL2.dll</HintPath>
+    </Reference>
+    <Reference Include="Veldrid.SPIRV">
+      <HintPath>..\ShareDlls\Gpu\Veldrid.SPIRV.dll</HintPath>
+    </Reference>
+    <Reference Include="Veldrid.Windows.Winform">
+      <HintPath>..\ShareDlls\Gpu\Veldrid.Windows.Winform.dll</HintPath>
+    </Reference>
+    <Reference Include="vk">
+      <HintPath>..\ShareDlls\Gpu\vk.dll</HintPath>
+    </Reference>
+    <Reference Include="Vortice.D3DCompiler">
+      <HintPath>..\ShareDlls\Gpu\Vortice.D3DCompiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Vortice.Direct3D11">
+      <HintPath>..\ShareDlls\Gpu\Vortice.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="Vortice.DirectX">
+      <HintPath>..\ShareDlls\Gpu\Vortice.DirectX.dll</HintPath>
+    </Reference>
+    <Reference Include="Vortice.DXGI">
+      <HintPath>..\ShareDlls\Gpu\Vortice.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="Vortice.Mathematics">
+      <HintPath>..\ShareDlls\Gpu\Vortice.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="WebSocketSharp.NetCore">
+      <HintPath>..\ShareDlls\WebSocketSharp.NetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\ShareDlls\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2003">
+      <HintPath>..\ShareDlls\WeifenLuo.WinFormsUI.Docking.ThemeVS2003.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2005">
+      <HintPath>..\ShareDlls\WeifenLuo.WinFormsUI.Docking.ThemeVS2005.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2005Multithreading">
+      <HintPath>..\ShareDlls\WeifenLuo.WinFormsUI.Docking.ThemeVS2005Multithreading.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2012">
+      <HintPath>..\ShareDlls\WeifenLuo.WinFormsUI.Docking.ThemeVS2012.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2013">
+      <HintPath>..\ShareDlls\WeifenLuo.WinFormsUI.Docking.ThemeVS2013.dll</HintPath>
+    </Reference>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking.ThemeVS2015">
+      <HintPath>..\ShareDlls\WeifenLuo.WinFormsUI.Docking.ThemeVS2015.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Demo\DemoSetForm.cs" />
+    <Compile Update="Draw\DrawRectangleConfirmDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Jitter\JitterInfo.cs" />
+    <Compile Update="PassFail\PassFailSavePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\Harmonic\PwrHarmonicGuidePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\Harmonic\PwrHarmonicInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\Harmonic\PwrHarmonicForm.cs" />
+    <Compile Update="PowerAnalysis\Harmonic\PwrHarmonicInfoForm.cs" />
+    <Compile Update="PowerAnalysis\Harmonic\PwrHarmonicPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\LoopAnalysis\PwrLoopAnalysisForm.cs" />
+    <Compile Update="PowerAnalysis\LoopAnalysis\PwrLoopAnalysisInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\LoopAnalysis\PwrLoopAnalysisPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\LoopAnalysis\PwrLoopAnalysisInfoForm.cs" />
+    <Compile Update="PowerAnalysis\PowerQuality\PwrQualityGuideForm.cs" />
+    <Compile Update="PowerAnalysis\PSRR\PwrPSRRForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\PSRR\PwrPSRRGuideForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\PSRR\PwrPSRRGuidePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\PSRR\PwrPSRRInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\PSRR\PwrPSRRInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\PSRR\PwrPSRRPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\PwrSwitchingLoss\PwrSwitchingLossGuidePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\PwrSwitchingLoss\PwrSwitchingLossForm.cs" />
+    <Compile Update="PowerAnalysis\PwrSwitchingLoss\PwrSwitchingLossPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\PwrSwitchingLoss\PwrSwitchingLossInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\PwrSwitchingLoss\PwrSwitchingLossInfoForm.cs" />
+    <Compile Update="PowerAnalysis\Ripple\PwrRippleForm.cs" />
+    <Compile Update="PowerAnalysis\Ripple\PwrRipplePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\Ripple\PwrRippleInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\Ripple\PwrRippleGuidePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\SOA\PwrSOAPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\SOA\PwrSOAInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\SOA\PwrSOAGuidePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PowerAnalysis\SOA\PwrSOAForm.cs" />
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\ToolTips.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ToolTips.resx</DependentUpon>
+    </Compile>
+    <Compile Update="TipMsg\MsgBox.cs" />
+    <Compile Update="TipMsg\ControlableWeakTipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="PowerAnalysis\PowerAnalysis.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\ToolTips.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ToolTips.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Resources\BaseWaves\ECG.bsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BaseWaves\ExpFall.bsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BaseWaves\ExpRise.bsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BaseWaves\Gaussian.bsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BaseWaves\Haversine.bsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BaseWaves\Lorentz.bsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BaseWaves\Noisewhite.bsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\BaseWaves\Sinc.bsv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Response1G.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Response2_5G.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Response500M.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\StartMenu\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+	<None Update="Resources\splash.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</None>
+	  <None Update="Resources\splash_uestc.png">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\ProbeCalib\" />
+  </ItemGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="cmd /k taskkill /IM Web_Core.exe" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy &quot;$(SolutionDir)HelpExe\help.exe&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;copy &quot;$(SolutionDir)HelpExe\ScopeXSysMonitor.exe&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;copy &quot;$(SolutionDir)ShareDlls\OtherShareDlls\OpenHardwareMonitorLib.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)ShareDlls\C++\ScopeMath.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)ShareDlls\OtherShareDlls\CryptWrapper.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)ShareDlls\OtherShareDlls\UA6DSOVXI.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)ShareDlls\MatlabDll\MatlabGenerateCoefficientsTable_CoeMerging.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)ShareDlls\MatlabDll\MatlabGenerateCoefficientsTable_CoeMerging_CPlusWrapper.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)ShareDlls\MatlabDll\MatlabGenerateCoefficientsTable_ProbeCompDesign.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;xcopy /Y &quot;$(SolutionDir)ShareDlls\MatlabDll\MatlabGenerateCoefficientsTable_ProbeCompDesign_CPlusWrapper.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;&#xD;&#xA;::拷贝最新的库文件&#xD;&#xA;::xcopy /s /e /Y $(SolutionDir)pdbs\*.dll $(TargetDir)&#xD;&#xA;xcopy /s /e /Y $(SolutionDir)pdbs\ $(TargetDir)&#xD;&#xA;::拷贝解码插件&#xD;&#xA;xcopy /s /e /Y $(SolutionDir)ShareDlls\Decode\ $(TargetDir)Decode\&#xD;&#xA;::拷贝工程DLL到独立文件夹，方便发布时使用&#xD;&#xA;xcopy /Y $(TargetDir)GHzScopeX.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)GHzScopeX.deps.json $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)GHzScopeX.exe $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScopeX.ComModel.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScopeX.Core.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScopeX.Hardware.Driver.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScopeX.Scpi.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScopeX.SCPIManager.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScopeX.Updater.Base.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)Veldrid.Common.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)Veldrid.Windows.Winform.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScopeX.Touch.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScopeX.Hardware.Calibration.Data.Base.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)WeifenLuo.WinFormsUI.Docking.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)Agg.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)Veldrid.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)FontStashSharp.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)Veldrid.MetalBindings.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)Veldrid.OpenGLBindings.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)Veldrid.SDL2.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)Veldrid.SPIRV.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)Veldrid.Windows.Winform.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScopeX.Touch.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScopeX.Touch.ManupulationHelper.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScottPlot.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)ScottPlot.WinForms.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)EventBroker.dll $(SolutionDir)ghdll\&#xD;&#xA;xcopy /Y $(TargetDir)PCIeControl.dll $(SolutionDir)ghdll\" />
+  </Target>
+  
+</Project>

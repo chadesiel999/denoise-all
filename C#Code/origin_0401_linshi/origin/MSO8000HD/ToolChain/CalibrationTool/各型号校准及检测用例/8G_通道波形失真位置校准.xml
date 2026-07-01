@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<InstrumentationAutoControlSolution SolutionDescription="JPO6000程控校准方案">
+	<!--=======region 方案中使用到的仪器的定义=====-->
+	<Instrumentations>
+		<Instrumentation 
+			Name="射频信号源"
+			Description="射频信号源"
+			DriverType="VISA"
+			Address="USB0::0x1AB1::0x0641::DG4E183302250::INSTR"
+			Timeout="0"
+			></Instrumentation>
+			<!--== 待校准的目标仪器，使用此标识，并可不标识Address标签==-->
+		<Instrumentation 
+			Name="JPO6000"
+			Description="10G示波器"
+			DriverType="VISA"
+			IsOurTargetDso="true"
+			Timeout="0"
+			></Instrumentation>
+	</Instrumentations>
+	<!--=======endregion 方案中使用到的仪器的定义=====-->
+	
+	<!--=======region 方案中任务列表=====-->
+	<Tasks>
+		<Task Description="校准8G通道谐波失真" ImportanceTipMessage="该任务是通过程控来校准示波器的谐波失真。">
+			<Command Description="检查信号普源源与示波器的连接情况" 
+				InstrumentationName="射频信号源"
+				CommandType="check"
+				SCPICmd=""
+				></Command>				
+			<Command Description="时基档10ns" 
+				InstrumentationName="JPO6000"
+				CommandType="scpi"
+				SCPICmd=":TIM:SCAL 0.00000001"
+				></Command>
+			<Command Description="设置通道1为SMA通道模式"
+			    InstrumentationName="JPO6000"
+			    CommandType="scpi"
+			    SCPICmd=":FACT:CHAN1:INP SMA"
+				></Command>
+		    <Command Description="设置通道2为SMA通道模式"
+				InstrumentationName="JPO6000"
+				CommandType="scpi"
+				SCPICmd=":FACT:CHAN2:INP SMA"
+				></Command>
+			<Command Description="设置通道3为SMA通道模式"
+			    InstrumentationName="JPO6000"
+			    CommandType="scpi"
+			    SCPICmd=":FACT:CHAN3:INP SMA"
+				></Command>
+		    	<Command Description="设置通道4为SMA通道模式"
+				InstrumentationName="JPO6000"
+				CommandType="scpi"
+				SCPICmd=":FACT:CHAN4:INP SMA"
+				></Command>	
+			<Command Description="源输出关闭" 
+				InstrumentationName="射频信号源"
+				CommandType="scpi"
+				SCPICmd="OUTP OFF"
+				></Command>
+			<Command Description="信号源输出100MHz@" 
+				InstrumentationName="射频信号源"
+				CommandType="scpi"
+				SCPICmd=":FREQ 100MHz"									
+				></Command>
+			<Command Description="源输出1:60mV" 
+				InstrumentationName="射频信号源"
+				CommandType="scpi"
+				SCPICmd="LEV 21.428mV"
+				></Command>	
+			<Command Description="源输出打开" 
+				InstrumentationName="射频信号源"
+				CommandType="scpi"
+				SCPICmd="OUTP ON"
+				AfterWaitSec="2"
+				></Command>	
+			<ForeachLoop StartIndex="0" Count="4">	
+			<VarintDefine name="Channel"     valuelist="1,2,3,4"></VarintDefine>
+				<Command Description="请将射频源的输入接入到@Channel@上" 
+						InstrumentationName="射频信号源"
+						CommandType="check"
+						SCPICmd=""
+						></Command>
+				<ForeachLoop StartIndex="0" Count="7">
+				<VarintDefine name="DsoYScale"   valuelist="10,   20,  50, 100, 200, 500,1000"></VarintDefine>
+				<VarintDefine name="AmpBymV"     valuelist="60,  120, 300, 600, 1200,3000, 3000"></VarintDefine>
+				<VarintDefine name="TrueYValue"  valuelist=" 21.428 , 42.857, 107.14, 214.285,428.57,1071.428,1071.428"></VarintDefine>
+				<VarintDefine name="delta"       valuelist="2000,2000,3000,3000,3000,2000,2000"></VarintDefine>
+					<Command Description="所有通道,@DsoYScale@mV档,低阻" 
+						InstrumentationName="JPO6000"
+						CommandType="scpi"
+						SCPICmd=":FACTory:ALLSource:APPLy 1,@DsoYScale@,0,2,1,0,0,9,0,0"
+						></Command>
+					<Command Description="源输出1:@AmpBymV@mV" 
+						InstrumentationName="射频信号源"
+						CommandType="scpi"
+						SCPICmd="LEV @TrueYValue@mV"
+						></Command>			
+					<Command Description="通道@Channel@、@DsoYScale@档" 
+						InstrumentationName="JPO6000"
+						IsProgramFunc="true"
+						ProgramFuncName="BatchTaskPart_Cali8GHzChannelOffset @Channel@,@DsoYScale@,@delta@"		
+						ProgramFuncOverSec="60"		
+						></Command>
+				</ForeachLoop>
+			</ForeachLoop>
+			<Command Description="保存校准数据" 
+				InstrumentationName="JPO6000"
+				IsProgramFunc="true"
+				ProgramFuncName="BatchTaskPart_SaveCaliDataToFile PhyChannelModel2"
+				></Command>	
+		</Task>	
+	</Tasks>		
+</InstrumentationAutoControlSolution>

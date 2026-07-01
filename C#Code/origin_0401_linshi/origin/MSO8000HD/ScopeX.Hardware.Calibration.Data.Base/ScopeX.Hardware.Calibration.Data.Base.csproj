@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release;HardwareWithMatlab</Configurations>
+    <Nullable>enable</Nullable>
+    <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+    <FileVersion>$(VersionPrefix)</FileVersion>
+    <Version>0.7.0.605</Version>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>ScopeX.Hardware.Calibration.Data.Base.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591;1570;1587;</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DocumentationFile>ScopeX.Hardware.Calibration.Data.Base.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591;1570;1587;</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <DocumentationFile>ScopeX.Hardware.Calibration.Data.Base.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591;1570;1587;</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HardwareWithMatlab|AnyCPU'">
+    <DocumentationFile>ScopeX.Hardware.Calibration.Data.Base.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591;1570;1587;</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HardwareWithMatlab|x64'">
+    <DocumentationFile>ScopeX.Hardware.Calibration.Data.Base.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591;1570;1587;</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='HardwareWithMatlab|x86'">
+    <DocumentationFile>ScopeX.Hardware.Calibration.Data.Base.xml</DocumentationFile>
+    <NoWarn>1701;1702;1591;1570;1587;</NoWarn>
+  </PropertyGroup>
+  
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath)  $(SolutionDir)ShareDlls\$(TargetName)$(TargetExt)&#xD;&#xA;copy $(TargetPath)  $(SolutionDir)MSO8000HD\ToolChain\CalibrationTool\$(TargetName)$(TargetExt)" />
+  </Target>
+  
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\ShareDlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.ComModel">
+      <HintPath>..\..\ShareDlls\ScopeX.ComModel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

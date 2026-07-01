@@ -1,0 +1,630 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ScopeX.Hardware.Calibration.Data.Base</name>
+    </assembly>
+    <members>
+        <member name="T:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParams">
+            <summary>
+            自校正数据读取、保存流程
+            1、查看是否有AutoCalibration.bin文件，有直接读取，否则从Tool校准数据中拷贝一份
+            2、Tool端校准数据有更新时，由于不知道是哪个参数更新，所以直接把AutoCalibration.bin文件删除，重新从Tool校准数据中拷贝一份
+            3.1、Tool工具保存时（表示Tool端校准数据有更新），直接把AutoCalibration.bin文件删除，重新从Tool校准数据中拷贝一份，再保存
+            3.2、自校正完成时，直接保存
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParams.TemperatureAtCaliBaseline_mCelsius">
+            <summary>
+            校准时的温度，以毫摄氏度为单位，也就是摄氏度*1000
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParams.CopyFromChannelParamsToAutoCaliParams">
+            <summary>
+            没有自校正bin文件时，就全部从Tool端校准数据拷贝至内存中
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParams.SaveCaliDataToFile">
+            <summary>
+            与Hardware同进程的函数中使用
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParams.SaveToFile">
+            <summary>
+            Tool端调用接口
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParamsPerChannel.OffsetPreceding_3Div">
+            <summary>
+            前级偏正3格
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParamsPerChannel.OffsetPreceding_N3Div">
+            <summary>
+            前级偏负3格
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParamsPerChannel.OffsetPosterior">
+            <summary>
+            后级偏正3格
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParamsPerChannel.OffsetPosterior_3Div">
+            <summary>
+            后级偏负3格
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParamsPerChannel.Gain_FineByAdc">
+            <summary>
+            以10000为基数，表示100%
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AutoCaliParamsPerChannel.Gain_FineByFpgaThousand">
+            <summary>
+            以1000为基数，表示100%。精度为千分之一
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.ChannelParams.TemperatureAtCaliBaseline_mCelsius">
+            <summary>
+            校准时的温度，以毫摄氏度为单位，也就是摄氏度*1000
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.ChannelPerScaleItem.Gain_FineByAdc">
+            <summary>
+            以10000为基数，表示100%
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.ChannelPerScaleItem.Gain_FineByFpgaThousand">
+            <summary>
+            以1000为基数，表示100%。精度为千分之一
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.AWGCaliData.ArbWfmDcCailAmpTable.ArbWfmCailAmpData.MaxVpp">
+            <summary>
+            最大幅度 
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.AWGCaliData.ArbWfmDcCailAmpTable.ArbWfmCailAmpData.AttLV">
+            <summary>
+            衰减档
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.AWGCaliData.ArbWfmDcCailAmpTable.ArbWfmCailAmpData.RefAttEnable">
+            <summary>
+            开启参考通道
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.AWGCaliData.ArbWfmDcCailAmpTable.ArbWfmCailAmpData.RefAttLV">
+            <summary>
+            衰减档2
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.AWGCaliData.ArbWfmDcCailAmpTable.ArbWfmCailAmpData.MaxFreq">
+            <summary>
+            最大频率
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.AWGCaliData.ArbWfmDcCailAmpTable.ArbWfmCailAmpData.MaxDC">
+            <summary>
+            最大直流
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.CalibrationData.Calibrator">
+            <summary>
+            校准人员
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.CalibrationData.Type">
+            <summary>
+            校准类型
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.CalibrationData.ProductModel">
+            <summary>
+            产品型号
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.CalibrationData.Verion">
+            <summary>
+            版本号
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.CalibrationData.Timestamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.CalibrationData.Data">
+            <summary>
+            校准数据
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.CaliConstants.Fixed_AcqBoardMaxCount">
+            <summary>
+            目前，最多10张采集卡。该参数，只与ADC有关。
+            包括一片之内的压稳态问题，和多片的TiAdc问题。严格意义上与通道没有关系。
+            使用该参数的 数据包括TiAdc_SyncSampleClock 和 TiAdc_PhaseOffsetGain
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.CoefficientsTables.Item(ScopeX.Hardware.Calibration.Data.Base.CoefficientsTableType,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="coefficientsTableType"></param>
+            <param name="channelIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.CoefficientsTables.Item(ScopeX.Hardware.Calibration.Data.Base.CoefficientsTableType,System.Int32,System.Int32)">
+            <summary>
+            [CoefficientsTableType coefficientsTableType,int channelIndex,int index]
+            </summary>
+            <param name="coefficientsTableType"></param>
+            <param name="channelIndex"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.DbiAnalogChannelSubbandItem.IntDiscardDots">
+            <summary>
+            整数延迟
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.DbiAnalogChannelSubbandItem.AnalogChannelGain">
+            <summary>
+            最前级的衰减控制字，也就是金老师的那个通道
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.DbiAnalogChannelSubbandItem.SubbandGain">
+            <summary>
+            子带摸摸你通道，也就是邱老师的模拟通道
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.DbiAnalogChannelSubbandItem.BiasPreceding">
+            <summary>
+            前级偏，也就是Bias，控制的是邱老师的通道
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.DbiAnalogChannelSubbandItem.OffsetPosterior">
+            <summary>
+            后级偏，也就是Offset，控制的是邱老师的
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.DbiAnalogChannelSubbandItem.Gain_FineByAdc1ByTenThousand">
+            <summary>
+            每个子带，也就是每块FPGA 中的ADC1,万分之几，10000位100%，不调整
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.DbiAnalogChannelSubbandItem.Gain_FineByAdc2ByTenThousand">
+            <summary>
+            每个子带，也就是每块FPGA 中的ADC2,万分之几，10000位100%，不调整
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.DbiAnalogChannelSubbandItem.Gain_FineByFpgaThousand">
+            <summary>
+            通过数字调整。千分之几，1000表示100%，不调整
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.InterpolationCoefficients_2fold">
+            <summary>
+            acqboard [/*0.625G/1.25G/2.5G=2*/,/*低通=2*/,/*Data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.Level1_InterpolationCoefficients">
+            <summary>
+            acqboard [/*低通、带通=2*/,/*Data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.Level1_LocalOscillatorCoefficients">
+            <summary>
+            acqboard [,/*channel*/,/*subBand*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.Level1_AntiImageCoefficients">
+            <summary>
+            acqboard [/*20G/16G*/,/*channel*/,/*subBand*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.Level2_InterpolationCoefficients">
+            <summary>
+            acqboard [/*低通、带通=2*/,/*Data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.Level2_LocalOscillatorCoefficients">
+            <summary>
+            acqboard [,/*channel*/,/*subBand*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.Level2_AntiImageCoefficients">
+            <summary>
+            acqboard [/*20G/16G*/,/*channel*/,/*subBand*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.Sub_AmpCoefficientFile">
+            <summary>
+            acqboard [/*20G/16G*/,/*channel*/,/*subBand*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.InterpolationCoefficients">
+            <summary>
+            acqboard [/*20G/16G=2*/,/*低通、带通=2*/,/*Data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.LocalOscillatorCoefficients">
+            <summary>
+            acqboard [/*20G/16G*/,/*channel*/,/*subBand*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.AntiImageCoefficients">
+            <summary>
+            acqboard [/*20G/16G*/,/*channel*/,/*subBand*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.FractionaryDelayCoefficients">
+            <summary>
+            acqboard [/*20G/16G*/,/*channel*/,/*subBand*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.OverlapPhaseFreqDelayCoefficients">
+            <summary>
+            [/*20G/16G*/,/*channel*/,/*subBand*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.TiAdc">
+            <summary>
+            acqboard [/*20G/16G*/,/*channel*/,/*subBand*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.AmpFreqCoefficients">
+            <summary>
+            proc board [/*20G/16G=2*/,/*通道=4*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.PhaseFreqCoefficients">
+            <summary>
+            proc board [/*20G/16G=2*/,/*通道=4*/,/*data*/]
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.DbiCoefficientsTablesType.MultiRadioInterpolationCoefficients">
+            <summary>
+            proc board [/*20G/16G=2*/,/*data*/]
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelParams.SaveToFile">
+            <summary>
+            Tool端调用接口
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelParams._GodParamsMapDefine">
+            <summary>
+            GodParams的结构体名字映射表
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelParams._ItemParamsMapDefine">
+            <summary>
+            ItemParams的结构体名字映射表
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelItem_Base.Bias">
+            <summary>
+            偏置DAC零点值
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelItem_Base.Bias_Pos3Div">
+            <summary>
+            偏置DAC 正斜率值
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelItem_Base.Bias_Neg3Div">
+            <summary>
+            偏置DAC 负斜率值
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelItem_Base.Offset">
+            <summary>
+            偏移DAC零点值
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelItem_Base.Offset_Pos3Div">
+            <summary>
+            偏移DAC 正斜率值
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelItem_Base.Offset_Neg3Div">
+            <summary>
+            偏移DAC 负斜率值
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelItem_Base.Gain">
+            <summary>
+            增益粗调（DVGA）值
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelItem_Base.Gain_FineByFpgaThousand">
+            <summary>
+            Fpga的数字细调值
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.AnalogChannelItem_Base.Gain_FineByTenThousandByAdc1">
+            <summary>
+            Adc1的细调值
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.CoefficientsParams.DeserializeDouble(System.Byte[])">
+            <summary>
+            反序列化Double类型的数据
+            </summary>
+            <param name="content"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.CoefficientsParams.DeserializeInt(System.Byte[])">
+            <summary>
+            反序列化之前版本的数据
+            </summary>
+            <param name="content"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.CoefficientsParams.DeserializeTheOne(System.Byte[])">
+            <summary>
+            单条数据
+            </summary>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.CoefficientsParams.RemoveCoefficientsParam(System.String)">
+            <summary>
+            移除系数
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ScopeX.Hardware.Calibration.Data.Base.DictionaryParams">
+            <summary>
+            构造函数中的itemType参数必须是值类型
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.DictionaryParams.#ctor(System.Int32,System.Type,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="keyStrLen"></param>
+            <param name="itemType">必须是值类型</param>
+        </member>
+        <member name="T:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X">
+            <summary>
+            产品校准数据转化
+            </summary>
+        </member>
+        <member name="T:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.TiadcParamsKeyMap">
+            <summary>
+            TiadcPhaseOffsetGainParams的访问key所对应的类
+            </summary>
+            <param name="interleaveName"></param>
+            <param name="chnlId"></param>
+            <param name="adcId"></param>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.TiadcParamsKeyMap.#ctor(System.String,ScopeX.ComModel.ChannelId,System.UInt32)">
+            <summary>
+            TiadcPhaseOffsetGainParams的访问key所对应的类
+            </summary>
+            <param name="interleaveName"></param>
+            <param name="chnlId"></param>
+            <param name="adcId"></param>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.TiadcParamsKeyMap.interleaveName">
+            <summary></summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.TiadcParamsKeyMap.chnlId">
+            <summary></summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.TiadcParamsKeyMap.adcId">
+            <summary></summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.GenerateTiadcParamsKey(ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.TiadcParamsKeyMap)">
+            <summary>
+            通过TiadcParamsKeyMap获取TiadcPhaseOffsetGainParams的访问key
+            </summary>
+            <param name="tiadcMap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.GetTiadcParamsItem(ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.TiadcParamsKeyMap)">
+            <summary>
+            通过TiadcParamsKeyMap获取对应的TiadcPhaseOffsetGainItem_Base
+            </summary>
+            <param name="tiadcMap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.SetTiadcParamsItem(ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.TiadcParamsKeyMap,ScopeX.Hardware.Calibration.Data.Base.TiadcPhaseOffsetGainItem_Base)">
+            <summary>
+            通过TiadcParamsKeyMap设置对应的TiadcPhaseOffsetGainItem_Base
+            </summary>
+            <param name="tiadcMap"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.ChnlParamsKeyMap">
+            <summary>
+            AnalogChannelParams的访问key所对应的类
+            </summary>
+            <param name="chnlId"></param>
+            <param name="isHighImp"></param>
+            <param name="scaleValueByMv"></param>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.ChnlParamsKeyMap.#ctor(ScopeX.ComModel.ChannelId,System.Boolean,System.UInt32)">
+            <summary>
+            AnalogChannelParams的访问key所对应的类
+            </summary>
+            <param name="chnlId"></param>
+            <param name="isHighImp"></param>
+            <param name="scaleValueByMv"></param>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.ChnlParamsKeyMap.chnlId">
+            <summary></summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.ChnlParamsKeyMap.isHighImp">
+            <summary></summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.ChnlParamsKeyMap.scaleValueByMv">
+            <summary></summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.GenerateChnlParamsKey(ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.ChnlParamsKeyMap)">
+            <summary>
+            通过ChnlParamsKeyMap获取AnalogChannelParams的访问key
+            </summary>
+            <param name="chnlMap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.GetAllChnlParamsKeys">
+            <summary>
+            获取当前项目所有的AnalogChannelParams的访问key
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.GetChnlParamsItem(ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.ChnlParamsKeyMap)">
+            <summary>
+            通过ChnlParamsKeyMap获取对应的AnalogChannelItem_Base
+            </summary>
+            <param name="chnlMap"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.SetChnlParamsItem(ScopeX.Hardware.Calibration.Data.Base.ProductDataTranslate_MSO8000X.ChnlParamsKeyMap,ScopeX.Hardware.Calibration.Data.Base.AnalogChannelItem_Base)">
+            <summary>
+            通过ChnlParamsKeyMap设置对应的AnalogChannelItem_Base
+            </summary>
+            <param name="chnlMap"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.TiadcPhaseOffsetGainParams._GodParamsMapDefine">
+            <summary>
+            GodParams的结构体名字映射表
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.TiadcPhaseOffsetGainParams._ItemParamsMapDefine">
+            <summary>
+            ItemParams的结构体名字映射表
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.TiadcPhaseOffsetGainItem_Base.Gain">
+            <summary>
+            Gain寄存器配置值
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.TiadcPhaseOffsetGainItem_Base.Phase_FPGA">
+            <summary>
+            Fpga调整Phase配置值
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.TiadcPhaseOffsetGainItem_Base.AdcDelay_FPGA">
+            <summary>
+            相关采集单元Fpga丢点数
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.VersionParams`2.CopyGodParams(ScopeX.Hardware.Calibration.Data.Base.MapInfo{`0},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            相同类型的属性进行拷贝，属性名使用映射表，若表中没有，则使用原名拷贝
+            </summary>
+            <param name="mapInfo"></param>
+            <param name="nameMapTable"></param>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.VersionParams`2.CopyGodParams(`0,`0,System.Object,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            将原表中的结构体拷贝到新结构体中，属性类型必须相同，属性名使用映射表
+            </summary>
+            <param name="sourceVersion"></param>
+            <param name="destinationVersion"></param>
+            <param name="destinationParams"></param>
+            <param name="nameMapTable"></param>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.VersionParams`2.CopyItemParams(ScopeX.Hardware.Calibration.Data.Base.MapInfo{`1},System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            相同类型的属性进行拷贝，属性名使用映射表，若表中没有，则使用原名拷贝
+            </summary>
+            <param name="mapInfo"></param>
+            <param name="nameMapTable"></param>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.VersionParams`2.CopyItemParams(`1,`1,System.Type,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            todo，这个函数是否有存在的必要
+            </summary>
+            <param name="sourceVersion"></param>
+            <param name="destinationVersion"></param>
+            <param name="destinationItemType"></param>
+            <param name="nameMapTable"></param>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.VersionParams`2.CopyPropertyValue(System.Object,System.Object,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            属性拷贝，类型必须相同，名字进行映射，若映射表中没有，则尝试使用原名字进行拷贝；
+            static的原因是该函数与具体的实例没有关系，只需要在内存中保留一份即可
+            </summary>
+            <param name="source"></param>
+            <param name="destination"></param>
+            <param name="nameMapTable">属性名字映射表，key：源结构体的属性名字，value：目标结构体的属性名字</param>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ICaliData.SaveToFile">
+            <summary>
+            该函数只能在与Hardware同进程的函数中使用。
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ICaliData.LoadFromFile">
+            <summary>
+            该函数只能在与Hardware同进程的函数中使用。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ICaliData.SaveToFile(System.String)">
+            <summary>
+            该函数只能在Tools中使用
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ICaliData.LoadFromFile(System.String)">
+            <summary>
+            该函数只能在Tools中使用
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProbeCaliData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProbeCaliData.Save">
+            <summary>
+            保存
+            </summary>
+        </member>
+        <member name="M:ScopeX.Hardware.Calibration.Data.Base.ProbeCaliData.Load">
+            <summary>
+            加载
+            </summary>
+        </member>
+        <member name="T:ScopeX.Hardware.Calibration.Data.Base.ProbeCaliDataItem">
+            <summary>
+            校准数据项
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.ProbeCaliDataItem._GainRatio">
+            <summary>
+            增益校准值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.ProbeCaliDataItem._Offset">
+            <summary>
+            偏置校准值
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.ProbeCaliDataItem._Channel">
+            <summary>
+            校正通道
+            </summary>
+        </member>
+        <member name="F:ScopeX.Hardware.Calibration.Data.Base.ProbeCaliDataItem._ProbeId">
+            <summary>
+            探头ID
+            </summary>
+        </member>
+        <member name="P:ScopeX.Hardware.Calibration.Data.Base.TiAdc_SyncSampleClock.Item(System.Int32)">
+            <summary>
+            以ps为单位的正整数,必须是25ps的整数倍
+            </summary>
+            <param name="acqBoardIndex"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

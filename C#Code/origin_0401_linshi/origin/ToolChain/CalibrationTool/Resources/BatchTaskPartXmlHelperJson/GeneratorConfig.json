@@ -1,0 +1,143 @@
+/*
+  Generator Config
+
+*/
+{
+  "GeneratorConfig": [
+    {
+      //产品类型，即示波器型号
+      "ProductType": "JiHe_MSO7000X",
+      //生成校准项列表
+      "Calis": [
+        //All校准配置
+        {
+          //校准类型
+          "CaliType": "AllType",
+          //校准所用参数配置文件列表
+          "ParamPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_AllType_JiHe7000.json"
+          ],
+          //校准所用示波器配置文件列表
+          "OscilloscopePath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Oscilloscope_JiHe.json"
+          ],
+          //校准所用信号源配置文件列表
+          "SignalPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Signal_Fluck9500b.json"
+          ]
+        },
+        //基线校准配置
+        {
+          "CaliType": "Baseline",
+          "ParamPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_BaseLine_JiHe7000.json"
+          ],
+          "OscilloscopePath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Oscilloscope_JiHe.json"
+          ]
+        },
+        //增益校准配置
+        {
+          "CaliType": "Gain",
+          "ParamPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Gain_JiHe7000.json"
+          ],
+          "OscilloscopePath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Oscilloscope_JiHe.json"
+          ],
+          "SignalPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Signal_RigolDG4162.json"
+          ]
+        },
+        {
+          "CaliType": "Gain",
+          "ParamPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Gain_JiHe7000.json"
+          ],
+          "OscilloscopePath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Oscilloscope_JiHe.json"
+          ],
+          "SignalPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Signal_Fluck9500b.json"
+          ]
+        },
+        //TiAdc校准配置
+        {
+          "CaliType": "TiAdc",
+          "ParamPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_TiAdc_JiHe7000.json"
+          ],
+          "OscilloscopePath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Oscilloscope_JiHe.json"
+          ],
+          "SignalPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Signal_Fluck9500b.json"
+          ]
+        },
+        //偏置校准配置
+        {
+          "CaliType": "Offset",
+          "ParamPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Offset_JiHe7000.json"
+          ],
+          "OscilloscopePath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Oscilloscope_JiHe.json"
+          ],
+          "SignalPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Signal_Fluck9500b.json"
+          ]
+        }
+      ]
+    },
+    {
+      "ProductType": "JiHe_MSO8000X",
+      "Calis": [
+        //基线校准配置
+        {
+          "CaliType": "Baseline",
+          "ParamPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_BaseLine_JiHe8000.json"
+          ],
+          "OscilloscopePath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Oscilloscope_JiHe.json"
+          ]
+        },
+        //增益校准配置
+        {
+          "CaliType": "Gain",
+          "ParamPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\CaliParam_Gain_JiHe8000.json"
+          ],
+          "OscilloscopePath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Oscilloscope_JiHe.json"
+          ],
+          "SignalPath": [
+            "Resources\\BatchTaskPartXmlHelperJson\\ScpiCommand_Common.json",
+            "Resources\\BatchTaskPartXmlHelperJson\\Signal_RigolDG4162.json"
+          ]
+        }
+      ]
+    }
+  ]
+}

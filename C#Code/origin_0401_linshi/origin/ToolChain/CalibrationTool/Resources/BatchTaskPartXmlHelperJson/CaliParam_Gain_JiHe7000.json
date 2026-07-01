@@ -1,0 +1,17 @@
+/*
+  GainParam
+
+*/
+{
+  "SettingParam": {
+    "OscilloType": "JiHe_MSO7000X",
+    "FilePath": "自动校准xml生成\\JiHe7000\\幅度校准.xml"
+  },
+
+  "FuncParam": {
+    "BaseLine": {
+      "GainErrorByLsb": "20", //在增益校准中的，基线校准的精度
+      "GainMaxWaitMilliseconds": 25 //在增益校准中的，基线校准超时时间
+    }
+  }
+}

@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--=======region 重要说明=====
+[1]DriverType 目前只支持 VISA; 我们自己的只支持UU_ETHERNET(JiHe_MSO7000X，JiHe_MSO8000X), UU_USB374(示波表);
+[2]CommandType 有2两种:check和scpi，check用于弹出准备就绪与否的对话框;scpi为SCPI命令，需要指定仪器;
+[3]AfterWaitSec 表示执行一条scpi命令后，需要等待的时间(以秒为单位);
+[4]QueryOvertimeSec 表示执行查询命令时的超时时间(以秒为单位)。对有些操作，仪器端可能需要花费较长的时间后才能查询，比如校准。在此期间如果有比较等待操作，就需要多次执行，直到超时;
+[5]基本概念：一个文件称为一个解决方案，一个方案中包含多个任务，一个任务包含一系列的命令;
+[6]一个方案中使用的所有仪器在Instrumentations 段定义，在后续的命令中的InstrumentationName 必须使用该段中Name字段 中的内容;
+[7]如果使用厂家自用的校准工具，对待校准的仪器（示波器），请在仪器段中对该仪器使用IsOurTargetDso="1"来标识，其地址可以为空;
+[8]对使用新的厂家提供的校准工具进行校准时，在Command 段，可以使用程序自定义的函数来校准;
+[9]此时，包括3个标签：IsProgramFunc（指示是否该命令是程序函数来完成），ProgramFuncName(程序函数的名称，有程序员提供)，ProgramFuncOverSec(程序函数超时时间，秒);
+-->
+<!--=======BatchTaskPart_TiAdc_JiHe_MSO7000X 参数说明===== 
+第1个参数：通道组合构造成的交织方式，请使用Driver端代码中的AnalogAcquireModel.cs 之 AcqModeInterleaveDefines 之InterleaveName
+第2个参数，需要校准的通道，Ch1、Ch2、Ch3、Ch4，可以用|连接两个同时校准的通道，如Ch1|Ch2
+第3个参数，阻抗，low=50欧姆，低阻，higf表示高阻
+第4个参数，以mV为单位的档位值，浮点数
+第5个参数，输入信号频率，用MHz为单位，浮点数
+第6个参数，单路信号的采样率，Msps为单位，浮点数
+第7个参数，Gain误差门限，以百分之为单位，浮点数
+第8个参数，Offset误差门限，以百分之为单位，浮点数
+第9个参数，Phase误差门限，以飞秒(fs)单位，整数
+第10个参数，调整步进(1~50)，整数
+-->
+<!--=======BatchTaskPart_CaliChannelGain 参数说明===== 
+第1个参数: 表示要校准的通道，编号从1开始，可多个通道以'|'分隔；
+第2个参数: 表示高阻还是低阻，LOW表示低阻，HIGH表示高阻；
+第3个参数: 表示垂直档位，以mV为单位，浮点数
+第4个参数: 表示输入信号的幅度值，以V为单位，浮点数
+第5个参数: 表示包含的校准阶段，包括 ：Dsa_Adc_Fpga , Dsa_Adc , Fpga等
+第6个参数: 表示校准值生效时间，用ms表示
+第7个参数: 统计次数
+第8个参数: 表示总体误差判据百分比，浮点数
+第9个参数: 表示DSA每个控制字幅度改变百分比，浮点数
+第10个参数: 表示ADC每个控制字幅度改变百分比，浮点数
+第11个参数: 表示数字调节档位
+第12个参数: 表示DSA控制字的最小值
+第13个参数: 表示DSA控制字的最大值
+第14个参数: 表示ADC控制字最小值
+第15个参数: 表示ADC控制字最大值
+第16个参数: 表示FPGA细调的最小值
+第17个参数: 表示FPGA细调的最大值
+第18个参数: 表示幅度值的获取方式,AMPL / STDD / CACL
+-->
+<!--=======BatchTaskPart_CaliChannelBaseLine 参数说明===== 
+[0]其中1|2 表示通道，编号从1开始；
+[1]表示高阻还是低阻，low=50欧姆，低阻，higf表示高阻
+[2]以mV为单位的档位值，浮点数
+[3]0格或3格
+[4]通道最小粗调值
+[5]通道最大粗调值
+[6]调节步进值
+[7]总体误差判据，LSB表示 
+[8]统计次数 
+[10]校准数据生效时间，用ms表示
+[11]最大超时时间，用s表示
+[12]offset3Div阈值,8G通道专用
+-->
+<!--=======BatchTaskPart_CaliOffset 参数说明===== 
+第1个参数：表示通道，其中1|2 编号从1开始;
+第2个参数，表示高阻还是低阻;LOW表示低阻(50欧姆);HIGH表示高阻;
+第3个参数：以mV为单位的档位值，浮点数;
+第4个参数，偏移输入的理论电压值，用V为单位;
+第5个参数，最大等待时间,单位mS;
+-->
+<InstrumentationAutoControlSolution SolutionDescription="JiHe_MSO7000X程控AllType校准项方案." version="1.0.9.2">
+	<Instrumentations Description="使用的仪器">
+		<Instrumentation Name="Fluck9500b" Description="Fluck9500b" DriverType="VISA" Address="GPIB4::19::INSTR" Timeout="0" />
+		<Instrumentation Name="JiHe_MSO7000X" Description="示波器" DriverType="VISA" IsOurTargetDso="true" Timeout="0" />
+	</Instrumentations>
+	<Tasks Description="任务列表">
+		<Task Description="校准AllType校准项." ImportanceTipMessage="该任务是通过程控来校准示波器的AllType校准项.">
+			<ForeachLoop Description="通道循环:" StartIndex="0" Count="4">
+				<VarintDefine name="Channels" valuelist="1,2,3,4" />
+				<VarintDefine name="ModesStart" valuelist="0,2,4,6" />
+				<Command Description="现在即将对“通道@Channels@” 进行校准，请确保将信号源的输出接入到通道！" CommandType="check" />
+				<Group Description="TiAdc校准">
+					<ForeachLoop Description="模式循环:" StartIndex="@ModesStart@" Count="2">
+						<VarintDefine name="ModeName" valuelist="C1C2_5G, C1_10G, C1C2_5G, C2_10G, C3C4_5G, C3_10G, C3C4_5G, C4_10G" />
+						<Group Description="示波器及信号源初始化">
+							<Command Description="时基档0.000001s" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":TIM:SCAL 0.000001" AfterWaitSec="0" />
+							<Command Description="采集模式为：NORMal" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":ACQ:TYP NORMal" AfterWaitSec="0" />
+							<Command Description="源复位" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="*RST" AfterWaitSec="0" />
+							<Command Description="源设置输出" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="ROUTe:SIGNal CH1" AfterWaitSec="0" />
+							<Command Description="源正弦" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="SCOpe SIN" AfterWaitSec="0" />
+							<Command Description="源频率1E9Hz" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="FREQuency 1E9" AfterWaitSec="0" />
+							<Command Description="源阻抗50欧姆" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="ROUT:SIGN:IMP 50" AfterWaitSec="0" />
+							<Command Description="源电压0.25V" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="VOLTage 0.25" AfterWaitSec="0" />
+						</Group>
+						<Group Description="基线校准常量设置">
+							<ConstVariantDefine name="DACCtrlWord" value="0, 50000" />
+							<ConstVariantDefine name="TiAdcErrorByLsb" value="20" />
+							<ConstVariantDefine name="StaticTimes" value="2" />
+							<ConstVariantDefine name="HardwareValidMs" value="400" />
+							<ConstVariantDefine name="TiAdcMaxWaitMilliseconds" value="25" />
+						</Group>
+						<Group Description="幅度校准常量设置">
+							<ConstVariantDefine name="GainHardwareValidMs" value="200" />
+							<ConstVariantDefine name="StaticTimes" value="2" />
+							<ConstVariantDefine name="TiAdcErrorByPercent" value="20" />
+							<ConstVariantDefine name="DSAStepPercent" value="12.2" />
+							<ConstVariantDefine name="ADCStepPercent" value="0.06" />
+							<ConstVariantDefine name="FPGAYLevelID" value="1" />
+							<ConstVariantDefine name="DSACtrlWord" value="0, 32" />
+							<ConstVariantDefine name="ADCCtrlWord" value="0, 255" />
+							<ConstVariantDefine name="FpgaCtrlWord" value="500, 2000" />
+							<ConstVariantDefine name="TiAdcGainAmpMeasureType" value="AMPL" />
+							<ConstVariantDefine name="TiAdcMaxWaitMilliseconds" value="25" />
+						</Group>
+						<Group Description="TiAdc校准常量设置">
+							<ConstVariantDefine name="SourceFrequencyByMHz" value="1000" />
+							<ConstVariantDefine name="GainErrorByPercent" value="0.15" />
+							<ConstVariantDefine name="OffsetErrorByLSB" value="0.3" />
+							<ConstVariantDefine name="PhaseErrorByPs" value="600" />
+							<ConstVariantDefine name="AdjustStep" value="5" />
+						</Group>
+						<Group Description="示波器校准基线和幅度">
+							<Command Description="所有通道,50mV档,低阻" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":FACTory:ALLSource:APPLy 1,50,0,2,1,0,0,9,0,0" AfterWaitSec="2" />
+							<Command Description="存储深度：25K" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":FACT:STOR Of25KDots" AfterWaitSec="0" />
+							<Command Description="通道1 1GHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN1:BWL 1GHz" AfterWaitSec="0" />
+							<Command Description="通道2 1GHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN2:BWL 1GHz" AfterWaitSec="0" />
+							<Command Description="通道3 1GHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN3:BWL 1GHz" AfterWaitSec="0" />
+							<Command Description="通道4 1GHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN4:BWL 1GHz" AfterWaitSec="1" />
+							<Command Description="源输出关闭" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="OUTPut OFF" AfterWaitSec="0" />
+							<Command Description="通道@Channels@，低阻档，50mv档:基线0Div校准" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @Channels@,Low,50,0,@DACCtrlWord@,100,@TiAdcErrorByLsb@,@StaticTimes@,@HardwareValidMs@,@TiAdcMaxWaitMilliseconds@,true" ProgramFuncOverSec="25" />
+							<Command Description="源输出打开" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="OUTPut ON" AfterWaitSec="0" />
+							<Command Description="通道(@Channels@)，低阻档，50mv档:幅度校准" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_CaliChannelGain @Channels@,Low,50,0.25,Dsa_Adc_Fpga,@GainHardwareValidMs@,@StaticTimes@, @TiAdcErrorByPercent@,@DSAStepPercent@,@ADCStepPercent@,@FPGAYLevelID@,@DSACtrlWord@,@ADCCtrlWord@,@FpgaCtrlWord@,@TiAdcGainAmpMeasureType@" ProgramFuncOverSec="25" />
+						</Group>
+						<Command Description="模式(@ModeName@),通道(@Channels@):Tiadc校准" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_TiAdc_JiHe_MSO7000X @ModeName@,@Channels@,Low,50,@SourceFrequencyByMHz@,2500,@GainErrorByPercent@,@OffsetErrorByLSB@,@PhaseErrorByPs@,@AdjustStep@" ProgramFuncOverSec="40" />
+						<Command Description="源输出关闭" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="OUTPut OFF" AfterWaitSec="0" />
+					</ForeachLoop>
+					<Command Description="保存校准数据" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_SaveCaliDataToFile TiAdc_PhaseOffsetGain_JiHe_MSO7000X" ProgramFuncOverSec="0" />
+				</Group>
+				<Group Description="增益校准">
+					<Group Description="示波器及信号源初始化">
+						<Command Description="时基档0.0002s" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":TIM:SCAL 0.0002" AfterWaitSec="0" />
+						<Command Description="采集模式为：HIGHres" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":ACQ:TYP HIGHres" AfterWaitSec="0" />
+						<Command Description="触发模式为：EDGe" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":TRIG:TYP EDGe" AfterWaitSec="0" />
+						<Command Description="触发源设置为：CH@Channels@" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":TRIG:EDG:SOUR C@Channels@" AfterWaitSec="0" />
+						<Command Description="触发电平设置为：0" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":TRIG:EDG:LEV 0" AfterWaitSec="0" />
+						<Command Description="源复位" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="*RST" AfterWaitSec="0" />
+						<Command Description="源输出1打开" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="ROUTe:SIGNal CH1" AfterWaitSec="1" />
+						<Command Description="源输出方波" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="SCOpe SQU" AfterWaitSec="0" />
+						<Command Description="源输出1000Hz" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="FREQuency 1000" AfterWaitSec="0" />
+						<Command Description="方波设置(SYMM)" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd=":PAR:SQU:POL SYMM" AfterWaitSec="1" />
+					</Group>
+					<ForeachLoop Description="阻抗循环: 低阻-》高阻" StartIndex="0" Count="2">
+						<VarintDefine name="SourceIMPedanceName" valuelist="50欧姆,高阻" />
+						<VarintDefine name="Rigol_SourceIMPedanceSetting" valuelist="50,INFinity" />
+						<VarintDefine name="Fluck_SourceIMPedanceSetting" valuelist="50,1E6" />
+						<VarintDefine name="BatchTaskIMPedanceSetting" valuelist="LOW,HIGH" />
+						<VarintDefine name="IMPedanceOfALLSourceAPPLySetting" valuelist="2,0" />
+						<VarintDefine name="ChnlYScaleStart" valuelist="2,2" />
+						<VarintDefine name="ChnlYScaleCount" valuelist="9,12" />
+						<Command Description="源OUTPut1:@SourceIMPedanceName@" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="ROUT:SIGN:IMP @Fluck_SourceIMPedanceSetting@" AfterWaitSec="1" />
+						<ForeachLoop Description="垂直档位循环:" StartIndex="@ChnlYScaleStart@" Count="@ChnlYScaleCount@">
+							<VarintDefine name="SourceAmpVoltByV" valuelist="0.003,0.006,0.012,0.03,0.06,0.12,0.3,0.6,1.2,3,6,12,20,20" />
+							<VarintDefine name="InputLevelBymV" valuelist="0.5, 1 , 2 , 5 , 10, 20, 50, 100 , 200, 500, 1000, 2000, 5000, 10000" />
+							<VarintDefine name="GainStage" valuelist="Fpga, Dsa_Adc_Fpga ,Dsa_Adc_Fpga,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga   ,Dsa_Adc_Fpga,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga,Dsa_Adc_Fpga" />
+							<Group Description="基线校准常量设置">
+								<ConstVariantDefine name="DACCtrlWord" value="0, 50000" />
+								<ConstVariantDefine name="GainErrorByLsb" value="20" />
+								<ConstVariantDefine name="StaticTimes" value="2" />
+								<ConstVariantDefine name="HardwareValidMs" value="400" />
+								<ConstVariantDefine name="GainMaxWaitMilliseconds" value="25" />
+							</Group>
+							<Group Description="幅度校准常量设置">
+								<ConstVariantDefine name="GainHardwareValidMs" value="200" />
+								<ConstVariantDefine name="StaticTimes" value="2" />
+								<ConstVariantDefine name="ErrorByPercent" value="0.5" />
+								<ConstVariantDefine name="DSAStepPercent" value="12.2" />
+								<ConstVariantDefine name="ADCStepPercent" value="0.06" />
+								<ConstVariantDefine name="FPGAYLevelID" value="1" />
+								<ConstVariantDefine name="DSACtrlWord" value="0, 32" />
+								<ConstVariantDefine name="ADCCtrlWord" value="0, 255" />
+								<ConstVariantDefine name="FpgaCtrlWord" value="500, 2000" />
+								<ConstVariantDefine name="AmpMeasureType" value="STDD" />
+							</Group>
+							<Group Description="示波器通道设置">
+								<Command Description="所有通道,@InputLevelBymV@mV档,@SourceIMPedanceName@,20MHz带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":FACTory:ALLSource:APPLy 1,@InputLevelBymV@,0,@IMPedanceOfALLSourceAPPLySetting@,3,0,0,9,0,0" AfterWaitSec="2" />
+								<Command Description="通道1 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN1:BWL 20MHz" AfterWaitSec="0" />
+								<Command Description="通道2 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN2:BWL 20MHz" AfterWaitSec="0" />
+								<Command Description="通道3 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN3:BWL 20MHz" AfterWaitSec="0" />
+								<Command Description="通道4 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN4:BWL 20MHz" AfterWaitSec="1" />
+							</Group>
+							<Group Description="先校准基线0Div">
+								<Command Description="源输出1关闭" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="OUTPut OFF" AfterWaitSec="1" />
+								<Command Description="@SourceIMPedanceName@基线0Div校准、@InputLevelBymV@mV档" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @Channels@,@BatchTaskIMPedanceSetting@,@InputLevelBymV@,0,@DACCtrlWord@,100,@GainErrorByLsb@,@StaticTimes@,@HardwareValidMs@,@GainMaxWaitMilliseconds@,true" ProgramFuncOverSec="25" />
+								<Command Description="源输出1打开" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="OUTPut ON" AfterWaitSec="1" />
+							</Group>
+							<Group Description="再校准幅度">
+								<Command Description="源输出:@SourceAmpVoltByV@V" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="VOLTage @SourceAmpVoltByV@" AfterWaitSec="1" />
+								<Command Description="通道@Channels@_@InputLevelBymV@mV档_@SourceIMPedanceName@:幅度校准" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_CaliChannelGain @Channels@,@BatchTaskIMPedanceSetting@,@InputLevelBymV@,@SourceAmpVoltByV@,@GainStage@,@GainHardwareValidMs@,@StaticTimes@,@ErrorByPercent@,@DSAStepPercent@,@ADCStepPercent@,@FPGAYLevelID@,@DSACtrlWord@,@ADCCtrlWord@,@FpgaCtrlWord@,@AmpMeasureType@" ProgramFuncOverSec="40" />
+								<Command Description="源输出1关闭" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="OUTPut OFF" AfterWaitSec="1" />
+							</Group>
+						</ForeachLoop>
+					</ForeachLoop>
+					<Command Description="源复位" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="*RST" AfterWaitSec="0" />
+					<Command Description="保存校准时的温度" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_SetAnalogChannelTemperatue Gain" ProgramFuncOverSec="0" />
+					<Command Description="保存校准数据" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_SaveCaliDataToFile PhyChannel" ProgramFuncOverSec="0" />
+				</Group>
+				<Group Description="基线校准">
+					<Group Description="示波器状态初始化设置">
+						<Command Description="时基档1ms" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":TIM:SCAL 0.0002" AfterWaitSec="0" />
+						<Command Description="打开高分辨率模式" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":ACQ:TYP HIGHres" AfterWaitSec="0" />
+						<Command Description="存储深度：25K" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":FACT:STOR Of25KDots" AfterWaitSec="0" />
+					</Group>
+					<ForeachLoop Description="阻抗循环: 低阻-》高阻" StartIndex="0" Count="2">
+						<VarintDefine name="SourceIMPedanceName" valuelist="50欧姆,高阻" />
+						<VarintDefine name="BatchTaskIMPedanceSetting" valuelist="LOW,HIGH" />
+						<VarintDefine name="IMPedanceOfALLSourceAPPLySetting" valuelist="2,0" />
+						<VarintDefine name="ChnlYScaleStart" valuelist="2,2" />
+						<VarintDefine name="ChnlYScaleCount" valuelist="9,12" />
+						<ForeachLoop Description="垂直档位循环: 小-》大" StartIndex="@ChnlYScaleStart@" Count="@ChnlYScaleCount@">
+							<VarintDefine name="inputLevelBymV" valuelist="0.5, 1 , 2 , 5 , 10, 20, 50, 100 , 200, 500, 1000, 2000, 5000, 10000" />
+							<VarintDefine name="BaselineErrorByLsb" valuelist="2 , 2 , 2 , 1 , 1 , 1 ,  1, 1   , 1  , 1  , 1   , 1   , 1   , 1" />
+							<Group Description="示波器通道设置">
+								<Command Description="所有通道,@inputLevelBymV@mV档,@SourceIMPedanceName@,20MHz带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":FACTory:ALLSource:APPLy 1,@inputLevelBymV@,0,@IMPedanceOfALLSourceAPPLySetting@,3,0,0,9,0,0" AfterWaitSec="0" />
+								<Command Description="通道1 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN1:BWL 20MHz" AfterWaitSec="0" />
+								<Command Description="通道2 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN2:BWL 20MHz" AfterWaitSec="0" />
+								<Command Description="通道3 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN3:BWL 20MHz" AfterWaitSec="0" />
+								<Command Description="通道4 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN4:BWL 20MHz" AfterWaitSec="1" />
+							</Group>
+							<Command Description="@inputLevelBymV@mV档、@SourceIMPedanceName@:基线0Div校准" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @Channels@,@BatchTaskIMPedanceSetting@,@inputLevelBymV@,0,0,50000,50,@BaselineErrorByLsb@,2,400,40,false" ProgramFuncOverSec="40" />
+							<Command Description="@inputLevelBymV@mV档、@SourceIMPedanceName@:基线3Div校准" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_CaliChannelBaseLine @Channels@,@BatchTaskIMPedanceSetting@,@inputLevelBymV@,3,0,10000,50,@BaselineErrorByLsb@,2,400,40,false" ProgramFuncOverSec="40" />
+						</ForeachLoop>
+					</ForeachLoop>
+					<Command Description="读取设置基线校准完成后通道温度" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_SetAnalogChannelTemperatue BaseLine" ProgramFuncOverSec="0" />
+					<Command Description="保存校准数据" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_SaveCaliDataToFile PhyChannel" ProgramFuncOverSec="0" />
+				</Group>
+				<Group Description="偏置校准">
+					<Group Description="示波器及信号源初始化">
+						<Command Description="时基档0.0002s" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":TIM:SCAL 0.0002" AfterWaitSec="0" />
+						<Command Description="采集模式为：HIGHres" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":ACQ:TYP HIGHres" AfterWaitSec="0" />
+						<Command Description="存储深度：25K" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":FACT:STOR Of25KDots" AfterWaitSec="0" />
+						<Command Description="源复位" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="*RST" AfterWaitSec="0" />
+						<Command Description="源DC" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="SCOpe DC" AfterWaitSec="0" />
+					</Group>
+					<ForeachLoop Description="阻抗循环: 低阻-》高阻" StartIndex="0" Count="2">
+						<VarintDefine name="SourceIMPedanceName" valuelist="50欧姆,高阻" />
+						<VarintDefine name="Rigol_SourceIMPedanceSetting" valuelist="50,INFinity" />
+						<VarintDefine name="Fluck_SourceIMPedanceSetting" valuelist="50,1E6" />
+						<VarintDefine name="BatchTaskIMPedanceSetting" valuelist="LOW,HIGH" />
+						<VarintDefine name="IMPedanceOfALLSourceAPPLySetting" valuelist="2,0" />
+						<VarintDefine name="OffsetChnlYScaleStart" valuelist="0,3" />
+						<VarintDefine name="OffsetChnlYScaleCount" valuelist="3,4" />
+						<Command Description="源OUTPut1:@SourceIMPedanceName@" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="ROUT:SIGN:IMP @Fluck_SourceIMPedanceSetting@" AfterWaitSec="0" />
+						<ForeachLoop Description="垂直档位循环:" StartIndex="@OffsetChnlYScaleStart@" Count="@OffsetChnlYScaleCount@">
+							<VarintDefine name="OffsetSourceAmpVoltByV" valuelist="2,5,5,2,20,40,80" />
+							<VarintDefine name="OffsetInputLevelBymV" valuelist="20,100,1000,50,500,1000,10000" />
+							<Group Description="示波器通道设置">
+								<Command Description="所有通道,@OffsetInputLevelBymV@mV档,@SourceIMPedanceName@,偏置@OffsetSourceAmpVoltByV@V,20MHz带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":FACTory:ALLSource:APPLy 1,@OffsetInputLevelBymV@,0,@IMPedanceOfALLSourceAPPLySetting@,3,0,0,9,0,0" AfterWaitSec="2" />
+								<Command Description="通道1 调整偏执" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHANnel1:BIAS @OffsetSourceAmpVoltByV@" AfterWaitSec="0" />
+								<Command Description="通道2 调整偏执" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHANnel2:BIAS @OffsetSourceAmpVoltByV@" AfterWaitSec="0" />
+								<Command Description="通道3 调整偏执" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHANnel3:BIAS @OffsetSourceAmpVoltByV@" AfterWaitSec="0" />
+								<Command Description="通道4 调整偏执" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHANnel4:BIAS @OffsetSourceAmpVoltByV@" AfterWaitSec="0" />
+								<Command Description="通道1 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN1:BWL 20MHz" AfterWaitSec="0" />
+								<Command Description="通道2 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN2:BWL 20MHz" AfterWaitSec="0" />
+								<Command Description="通道3 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN3:BWL 20MHz" AfterWaitSec="0" />
+								<Command Description="通道4 20MHz 带宽限制" InstrumentationName="JiHe_MSO7000X" CommandType="scpi" SCPICmd=":CHAN4:BWL 20MHz" AfterWaitSec="0" />
+							</Group>
+							<Command Description="源输出电压@OffsetSourceAmpVoltByV@V" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="VOLTage @OffsetSourceAmpVoltByV@" AfterWaitSec="0" />
+							<Command Description="源输出打开" InstrumentationName="Fluck9500b" CommandType="scpi" SCPICmd="OUTPut ON" AfterWaitSec="0" />
+							<Command Description="通道(@Channels@),垂直档(@OffsetInputLevelBymV@V),阻抗(@SourceIMPedanceName@):偏置校准" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_CaliOffset @Channels@,@BatchTaskIMPedanceSetting@,@OffsetInputLevelBymV@,@OffsetSourceAmpVoltByV@,@MaxWaitMilliseconds@" ProgramFuncOverSec="40" />
+						</ForeachLoop>
+					</ForeachLoop>
+					<Group Description="偏置校准常量设置">
+						<ConstVariantDefine name="MaxWaitMilliseconds" value="40" />
+					</Group>
+					<Command Description="保存通道校准数据" InstrumentationName="JiHe_MSO7000X" IsProgramFunc="true" ProgramFuncName="BatchTaskPart_SaveCaliDataToFile PhyChannel" ProgramFuncOverSec="0" />
+				</Group>
+			</ForeachLoop>
+		</Task>
+	</Tasks>
+</InstrumentationAutoControlSolution>

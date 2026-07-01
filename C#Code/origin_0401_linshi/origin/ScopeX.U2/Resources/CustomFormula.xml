@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CustomStringTable language="简体中文">
+	<SourceItems>
+		<Item id ="0" name="C1"         symbol="C1"   expression="C1"   image=""   info="模拟通道C1" />
+		<Item id ="1" name="C2"         symbol="C2"   expression="C2"   image=""   info="模拟通道C2" />
+		<Item id ="2" name="C3"         symbol="C3"   expression="C3"   image=""   info="模拟通道C3" />
+		<Item id ="3" name="C4"         symbol="C4"   expression="C4"   image=""   info="模拟通道C4" />
+		
+		<Item id ="4" name="C5"         symbol="C5"   expression="C5"   image=""   info="模拟通道C5" />
+		<Item id ="5" name="C6"         symbol="C6"   expression="C6"   image=""   info="模拟通道C6" />
+		<Item id ="6" name="C7"         symbol="C7"   expression="C7"   image=""   info="模拟通道C7" />
+		<Item id ="7" name="C8"         symbol="C8"   expression="C8"   image=""   info="模拟通道C8" />
+			   
+		<Item id ="200" name="R1"         symbol="R1"   expression="R1"   image=""   info="参考通道R1" />
+		<Item id ="201" name="R2"         symbol="R2"   expression="R2"   image=""   info="参考通道R2" />
+		<Item id ="202" name="R3"         symbol="R3"   expression="R3"   image=""   info="参考通道R3" />
+		<Item id ="203" name="R4"         symbol="R4"   expression="R4"   image=""   info="参考通道R4" />
+
+		<Item id ="204" name="R5"         symbol="R5"   expression="R5"   image=""   info="参考通道R5" />
+		<Item id ="205" name="R6"         symbol="R6"   expression="R6"   image=""   info="参考通道R6" />
+		<Item id ="206" name="R7"         symbol="R7"   expression="R7"   image=""   info="参考通道R7" />
+		<Item id ="207" name="R8"         symbol="R8"   expression="R8"   image=""   info="参考通道R8" />
+
+		<Item id ="400" name="D0"         symbol="D0"   expression="D.TakeBitAt(0)"   image=""   info="逻辑通道D0" />
+		<Item id ="401" name="D1"         symbol="D1"   expression="D.TakeBitAt(1)"   image=""   info="逻辑通道D1" />
+		<Item id ="402" name="D2"         symbol="D2"   expression="D.TakeBitAt(2)"   image=""   info="逻辑通道D2" />
+		<Item id ="403" name="D3"         symbol="D3"   expression="D.TakeBitAt(3)"   image=""   info="逻辑通道D3" />
+		<Item id ="404" name="D4"         symbol="D4"   expression="D.TakeBitAt(4)"   image=""   info="逻辑通道D4" />
+			   																			 
+		<Item id ="405" name="D5"         symbol="D5"   expression="D.TakeBitAt(5)"   image=""   info="逻辑通道D5" />
+		<Item id ="406" name="D6"         symbol="D6"   expression="D.TakeBitAt(6)"   image=""   info="逻辑通道D6" />
+		<Item id ="407" name="D7"         symbol="D7"   expression="D.TakeBitAt(7)"   image=""   info="逻辑通道D7" />
+		<Item id ="408" name="D8"         symbol="D8"   expression="D.TakeBitAt(8)"   image=""   info="逻辑通道D8" />
+			   
+		<Item id ="409" name="D9"		   symbol="D9"		expression="D.TakeBitAt(9)"		image=""		info="逻辑通道D9" />
+		<Item id ="410" name="D10"         symbol="D10"		expression="D.TakeBitAt(10)"		image=""		info="逻辑通道D10" />
+		<Item id ="411" name="D11"         symbol="D11"		expression="D.TakeBitAt(11)"	image=""		info="逻辑通道D11" />
+		<Item id ="412" name="D12"         symbol="D12"		expression="D.TakeBitAt(12)"	image=""		info="逻辑通道D12" />
+			   
+		<Item id ="413" name="D13"         symbol="D13"   expression="D.TakeBitAt(13)"		image=""		info="逻辑通道D13" />
+		<Item id ="414" name="D14"         symbol="D14"   expression="D.TakeBitAt(14)"		image=""		info="逻辑通道D14" />
+		<Item id ="415" name="D15"         symbol="D15"   expression="D.TakeBitAt(15)"		image=""		info="逻辑通道D15" />
+		<Item id ="416" name="D16"         symbol="D16"   expression="D.TakeBitAt(16)"		image=""		info="逻辑通道D16" />
+
+		<Item id ="417" name="D17"         symbol="D17"   expression="D.TakeBitAt(17)"		image=""		info="逻辑通道D17" />
+		<Item id ="418" name="D18"         symbol="D18"   expression="D.TakeBitAt(18)"		image=""		info="逻辑通道D18" />
+		<Item id ="419" name="D19"         symbol="D19"   expression="D.TakeBitAt(19)"		image=""		info="逻辑通道D19" />
+		<Item id ="420" name="D20"         symbol="D20"   expression="D.TakeBitAt(20)"		image=""		info="逻辑通道D20" />
+
+		<Item id ="421" name="D21"         symbol="D21"   expression="D.TakeBitAt(21)"		image=""		info="逻辑通道D21" />
+		<Item id ="422" name="D22"         symbol="D22"   expression="D.TakeBitAt(22)"		image=""		info="逻辑通道D22" />
+		<Item id ="423" name="D23"         symbol="D23"   expression="D.TakeBitAt(23)"		image=""		info="逻辑通道D23" />
+		<Item id ="424" name="D24"         symbol="D24"   expression="D.TakeBitAt(24)"		image=""		info="逻辑通道D24" />
+
+		<Item id ="425" name="D25"         symbol="D25"   expression="D.TakeBitAt(25)"		image=""		info="逻辑通道D25" />
+		<Item id ="426" name="D26"         symbol="D26"   expression="D.TakeBitAt(26)"		image=""		info="逻辑通道D26" />
+		<Item id ="427" name="D27"         symbol="D27"   expression="D.TakeBitAt(27)"		image=""		info="逻辑通道D27" />
+		<Item id ="428" name="D28"         symbol="D28"   expression="D.TakeBitAt(28)"		image=""		info="逻辑通道D28" />
+
+		<Item id ="429" name="D29"         symbol="D29"   expression="D.TakeBitAt(29)"		image=""		info="逻辑通道D29" />
+		<Item id ="430" name="D30"         symbol="D30"   expression="D.TakeBitAt(30)"		image=""		info="逻辑通道D30" />
+		<Item id ="431" name="D31"         symbol="D31"   expression="D.TakeBitAt(31)"		image=""		info="逻辑通道D31" />
+		<Item id ="432" name="D32"         symbol="D32"   expression="D.TakeBitAt(32)"		image=""		info="逻辑通道D32" />
+
+		<Item id ="433" name="D33"         symbol="D33"   expression="D.TakeBitAt(33)"		image=""		info="逻辑通道D33" />
+		<Item id ="434" name="D34"         symbol="D34"   expression="D.TakeBitAt(34)"		image=""		info="逻辑通道D34" />
+		<Item id ="435" name="D35"         symbol="D35"   expression="D.TakeBitAt(35)"		image=""		info="逻辑通道D35" />
+		<Item id ="436" name="D36"         symbol="D36"   expression="D.TakeBitAt(36)"		image=""		info="逻辑通道D36" />
+
+		<Item id ="437" name="D37"         symbol="D37"   expression="D.TakeBitAt(37)"		image=""		info="逻辑通道D37" />
+		<Item id ="438" name="D38"         symbol="D38"   expression="D.TakeBitAt(38)"		image=""		info="逻辑通道D38" />
+		<Item id ="439" name="D39"         symbol="D39"   expression="D.TakeBitAt(39)"		image=""		info="逻辑通道D39" />
+		<Item id ="440" name="D40"         symbol="D40"   expression="D.TakeBitAt(30)"		image=""		info="逻辑通道D40" />
+
+		<Item id ="441" name="D41"         symbol="D41"   expression="D.TakeBitAt(41)"		image=""		info="逻辑通道D41" />
+		<Item id ="442" name="D42"         symbol="D42"   expression="D.TakeBitAt(42)"		image=""		info="逻辑通道D42" />
+		<Item id ="443" name="D43"         symbol="D43"   expression="D.TakeBitAt(43)"		image=""		info="逻辑通道D43" />
+		<Item id ="444" name="D44"         symbol="D44"   expression="D.TakeBitAt(44)"		image=""		info="逻辑通道D44" />
+
+		<Item id ="445" name="D45"         symbol="D45"   expression="D.TakeBitAt(45)"		image=""		info="逻辑通道D45" />
+		<Item id ="446" name="D46"         symbol="D46"   expression="D.TakeBitAt(46)"		image=""		info="逻辑通道D46" />
+		<Item id ="447" name="D47"         symbol="D47"   expression="D.TakeBitAt(47)"		image=""		info="逻辑通道D47" />
+		<Item id ="448" name="D48"         symbol="D48"   expression="D.TakeBitAt(48)"		image=""		info="逻辑通道D48" />
+		
+		
+	</SourceItems>
+
+	<NumbericItems>
+		<Item id ="1010" name="("		symbol="("		expression="("  image="LBracket"	info="左括号" />
+		<Item id ="1011" name=")"		symbol=")"		expression=")"  image="RBracket"	info="右括号" />
+		<Item id ="1007" name="7"		symbol="7"		expression="7"  image="Number7"		info="7"/>
+		<Item id ="1008" name="8"		symbol="8"		expression="8"  image="Number8"		info="8"/>
+		<Item id ="1009" name="9"		symbol="9"		expression="9"  image="Number9"		info="9"/>
+
+		<Item id ="1012" name="+"       symbol="+"		expression="+"  image="Add"			info="加" />
+		<Item id ="1013" name="-"       symbol="-"		expression="-"  image="Sub"			info="减" />
+		<Item id ="1004" name="4"       symbol="4"		expression="4"  image="Number4"		info="4"/>
+		<Item id ="1005" name="5"       symbol="5"		expression="5"  image="Number5"		info="5"/>
+		<Item id ="1006" name="6"       symbol="6"		expression="6"  image="Number6"		info="6"/>
+
+		<Item id ="1014" name="×"		symbol="*"		expression="*"	image="Multpl"		info="乘" />
+		<Item id ="1015" name="÷"		symbol="/"		expression="/"	image="Div"			info="除" />
+		<Item id ="1001" name="1"       symbol="1"		expression="1"  image="Number1"		info="1"/>
+		<Item id ="1002" name="2"       symbol="2"		expression="2"  image="Number2"		info="2"/>
+		<Item id ="1003" name="3"       symbol="3"		expression="3"  image="Number3"		info="3"/>
+
+		<Item id ="1016" name="%"		symbol=" mod "  expression="%"  image="Mod"			info="余" />
+		<Item id ="1017" name=","		symbol=","		expression=","	image="Comma"		info="逗号"/>
+		<Item id ="1018" name="×10^"	symbol="×10^"	expression="E"	image=""			info="幂"/>
+		<Item id ="1000" name="0"		symbol="0"		expression="0"	image="Number0"		info="0"/>
+		<Item id ="1019" name="."		symbol="."		expression="."	image="Dot"			info="小数点"/>
+
+
+		<Item id ="1020" name="π"		symbol="π"		expression="Math.PI"	image="Pi"	info="圆周率" />
+		<Item id ="1021" name="e"		symbol="e"		expression="Math.E"		image="E"	info="自然常数" />
+		
+	</NumbericItems>
+
+	<FuncItems>
+		<Item id ="1100" name="平均"     symbol="avg("   expression="Execute.Avg("    image="Average"   info="y = avg(x, w)：对序列 x 的滑动平均\n   x：输入序列或数值;\n   w：2*w+1 是窗口大小，必须是正整数;\n   y：返回平均序列或数" />
+		<Item id ="1101" name="绝对值"     symbol="abs("   expression="Execute.Abs("    image="Abs"       info="y = abs(x)：对序列 x 中每个元素的求绝对值\n   x：输入序列或数值\n   y：返回绝对值序列或数, 满足 y ≥ 0" />
+		<Item id ="1102" name="Exp10"      symbol="exp10("	expression="Execute.Exp10("   image="Exp10"   info="y = exp10(x)：求以 10 为底, 序列 x 中每个元素为指数的幂序列\n   x：输入序列或数值;\n   y：返回 10 为底幂序列" />
+		<Item id ="1103" name="Exp"        symbol="exp("     expression="Execute.Exp("   image="Exp"     info="y = exp(x)：求以 e 为底, 序列 x 中每个元素为指数的幂序列\n   x：输入序列或数值;\n   y：返回 e 为底幂序列" />
+		<Item id ="1104" name="微分"       symbol="diff("		expression="Execute.Der("   image="Der"     info="y = diff(x)：求序列 x 的向后微分\n   x：输入序列或数值;\n   y：返回微分序列" />
+		<Item id ="1105" name="积分"       symbol="int("		expression="Execute.Int("   image="Int"     info="y = int(x)：求序列 x 的积分\n   x：输入序列或数值;\n   y：返回积分序列" />
+		<Item id ="1106" name="Ln"         symbol="ln("      expression="Execute.Ln("   image="Ln"      info="y = ln(x)：对序列 x 中每个元素的求自然对数\n   x：输入序列或数值, 满足 x &gt; 0;\n   y：返回自然对数序列" />
+		<Item id ="1107" name="Lg"         symbol="log10("	expression="Execute.Lg("   image="Log10"   info="y = log10(x)：对序列 x 中每个元素的求以 10 为底的对数\n   x：输入序列或数值, 满足 x &gt; 0;\n   y：返回以 10 为底的对数序列" />
+		<Item id ="1108" name="平方"       symbol="square("	expression="Execute.Square("   image="Square"   info="y = square(x)：对序列 x 中每个元素的求平方\n   x：输入序列或数值;\n   y：返回平方序列, 满足 y ≥ 0" />
+		<Item id ="1109" name="平方根"     symbol="sqrt("		expression="Execute.Sqrt("   image="Sqrt"   info="y = sqrt(x)：对序列 x 中每个元素的求平方根\n   x：输入序列或数值, 满足 x ≥ 0;\n   y：返回平方根序列, 满足 y ≥ 0" />
+		<Item id ="1110" name="共模"       symbol="comm("		expression="Execute.Comm("   image="ComMode"   info="z = comm(x, y)：求序列 x 和 y 中对应元素的共模\n   x 和 y：输入序列或数值;\n   z：返回共模序列或数" />
+		<Item id ="1111" name="正弦"       symbol="sin("		expression="Execute.Sin("   image="Sin"   info="y = sin(θ)：对序列 θ 中每个元素的求正弦\n   θ：输入序列或数值，以弧度为单位;\n   y：返回正弦序列或数, 满足 -1 ≤ y ≤ +1" />
+		<Item id ="1112" name="余弦"       symbol="cos("		expression="Execute.Cos("   image="Cos"   info="y = cos(θ)：对序列 θ 中每个元素的求余弦\n   θ：输入序列或数值，以弧度为单位;\n   y：返回余弦序列或数, 满足 -1 ≤ y ≤ +1" />
+		<Item id ="1113" name="正切"       symbol="tan("		expression="Execute.Tan("   image="Tan"   info="y = tan(θ)：对序列 θ 中每个元素的求正切\n   θ：输入序列或数值，以弧度为单位;\n   y：返回正切序列或数" />
+		<Item id ="1114" name="相关"       symbol="corr("  expression="Execute.Corr("   image="Corr"   info="z = corr(x, y)：求序列 x 和 y 的归一化互相关\n   x 和 y：输入序列, x 和 y 的长度必须相同;\n   z：返回归一化相关序列" />
+		<Item id ="1115" name="卷积"       symbol="conv("  expression="Execute.Conv("   image="Conv"   info="z = conv(x, y)：求序列 x 和 y 的卷积\n   x 和 y：输入序列;\n   z：返回卷积序列, 其长度等于 x 序列的长度" />
+		<Item id ="1116" name="扩展"       symbol="zoom("  expression="Execute.Zoom("  image="Zoom"     info="y = zoom(x, s, d)：扩展显示 x 序列中的一部分\n   x：输入序列;\n   s：扩展范围起始时间, 以秒为单位;\n   d：扩展范围大小，以秒为单位;\n   y：返回扩展序列" />       
+		<Item id ="1117" name="抽取"       symbol="deci("  expression="Execute.SubVector("  image="Subvector"     info="y = deci(x, d)：从 x 序列中按抽取系数 d 提取子序列\n   x：输入序列;\n   d：抽取系数, 满足 d > 0;\n   y：返回抽取结果序列" /> 
+		<Item id ="1118" name="插值"       symbol="itpl("  expression="Execute.Interpolate("  image="Interpolate"     info="y = itpl(x, i, m)：对 x 序列进行插值, 插值系数为 i\n   x：输入序列;\n   i：插值系数;\n   m：插值方法, 0 为线性, 1 为 Sinc, 3为 Cubic;\n   y：返回插值结果序列" />  
+		<Item id ="1119" name="最大值"     symbol="max("  expression="Execute.MaxSubVector("   image="Max"   info=" y = max(x, g)：求序列 x 每个水平区间上的垂直最大值\n   x：输入序列;\n   g：水平区间大小, 以秒为单位, 满足 g &gt; 0;\n   y：返回最大值序列" />  
+		<Item id ="1120" name="最小值"     symbol="min("  expression="Execute.MinSubVector("   image="Min"   info="y = min(x, g)：求序列 x 每个水平区间上的垂直最小值\n   x：输入序列;\n   g：水平区间大小, 以秒为单位, 满足 g &gt; 0;\n   y：返回最小值序列" />  
+		<Item id ="1121" name="反正弦"       symbol="arcsin("		expression="Execute.Asin("   image="Asin"   info="θ = arcsin(x)：求序列 x 中每个正弦值对应的角度\n   x：输入正弦值序列或数, 满足 -1 ≤ x ≤ +1;\n   θ：返回角度序列或数, 以弧度为单位, 满足 -π/2 ≤ θ ≤ π/2" />
+		<Item id ="1122" name="反余弦"       symbol="arccos("		expression="Execute.Acos("   image="Acos"   info="θ = arccos(x)：求序列 x 中每个余弦值对应的角度\n   x：输入余弦值序列或数, 满足 -1 ≤ x ≤ +1;\n   θ：返回角度序列或数, 以弧度为单位, 满足 0 ≤ θ ≤ π" />
+		<Item id ="1123" name="反正切"       symbol="arctan("		expression="Execute.Atan("   image="Atan"   info="θ = arctan(x)：求序列 x 中每个正切值对应的角度\n   x：输入正切值序列或数;\n   θ：返回角度序列或数, 以弧度为单位, 满足 -π/2 ≤ θ ≤ π/2" />
+		<Item id ="1124" name="双曲正弦"     symbol="sinh("			expression="Execute.Sinh("   image="Sinh"   info="y = sinh(θ)：求序列 θ 中每个元素对应的双曲正弦\n   θ：输入序列或数, 以弧度为单位;\n   y：返回双曲正弦序列或数" />
+		<Item id ="1125" name="双曲余弦"     symbol="cosh("			expression="Execute.Cosh("   image="Cosh"   info="y = cosh(θ)：求序列 θ 中每个元素对应的双曲余弦\n   θ：输入序列或数, 以弧度为单位;\n   y：返回双曲余弦序列或数" />
+		<Item id ="1126" name="双曲正切"     symbol="tanh("			expression="Execute.Tanh("   image="Tanh"   info="y = tanh(θ)：求序列 θ 中每个元素对应的双曲正切\n   θ：输入序列或数, 以弧度为单位;\n   y：返回双曲正切序列或数" />
+
+		<Item id ="1127" name="角度"     symbol="deg("			expression="Execute.ToDegree("   image="ToDegree"   info="d = deg(r)：求序列 r 中每个弧度对应的角度\n   r：输入弧度序列或数;\n   d：返回角度序列或数" />
+		<Item id ="1128" name="弧度"     symbol="rad("			expression="Execute.ToRadian("   image="ToRadian"   info="r = rad(d)：求序列 d 中每个角度对应的弧度\n   d：输入角度序列或数;\n   r：返回弧度序列或数" />
+					 
+		<Item id ="1129" name="倒数"		symbol="rcpl("			expression="Execute.Reciprocal("   image="Reciprocal"   info="y = rcpl(x)：求序列 x 中每个元素对应的倒数\n   x：输入序列或数;\n   y：返回倒数序列或数" />
+		<Item id ="1130" name="抗扭斜"	symbol="deskew("			expression="Execute.Deskew("   image="Deskew"   info="y = deskew(x, d)：对序列 x 延迟 d 时间\n   x：输入序列;\n   d：延迟时间，以秒为单位;\n   y：返回延迟序列" />
+		<Item id ="1131" name="包络"		symbol="hilevlp("			expression="Execute.HilEvlp("   image="Hilevlp"   info="y = hilevlp(x)：使用希尔伯特变换来获取输入序列 x 的包络波形\n   x：输入序列;\n   y：返回包络序列" />
+
+		<Item id ="1250" name="大于"		symbol=" &gt; "		expression="&gt;"		image="Greater"							info="大于"/>
+		<Item id ="1251" name="小于"		symbol=" &lt; "		expression="&lt;"		image="Less"							info="小于"/>
+		<Item id ="1252" name="大于等于"	symbol=" ≥ "		expression="&gt;="		image="GreaterEqual"					info="大于等于"/>
+		<Item id ="1253" name="小于等于"	symbol=" ≤ "		expression="&lt;="		image="LessEqual"						info="小于等于"/>
+		<Item id ="1254" name="相等"		symbol="eq("		expression="Execute.ElementWiseEqu("		image="Equal"		info="等于"/>
+		<Item id ="1255" name="不相等"	symbol="neq("		expression="Execute.ElementWiseNotEqu("		image="NotEqual"	info="不等于"/>
+		
+		<Item id ="1200" name="二值化"		symbol="bin("		expression="Execute.Binarize("  image="Binarize"			info="y = bin(x, t)：根据阈值 t 的大小, 将序列 x 中每个元素二值化\n   x：输入序列或数;\n   t：阈值;\n   y：返回二值化序列或数, 满足 y ∈ {0, 1}" />
+		<Item id ="1201" name="与门"			symbol=" &amp; "	expression="&amp;"				image="And"     info="与"/>
+		<Item id ="1202" name="或门"			symbol=" | "		expression="|"					image="Or"      info="或"/>
+		<Item id ="1203" name="非门"			symbol="! "			expression="!"					image="Not"     info="非"/>
+		<Item id ="1204" name="异或门"		symbol=" ^ "		expression="^"					image="Xor"     info="异或"/>
+		<Item id ="1205" name="同或门"		symbol="eqv("       expression="Execute.Eqv("		image="Eqv"			info="同或"/>
+		<Item id ="1206" name="与非门"		symbol="nand("      expression="Execute.Nand("      image="Nand"		info="z = nand(x, y)：与非, 等价于公式 !(X &amp; Y)\n   x 和 y：输入序列或数值;\n   z：返回与非结果序列或数, 满足 y ∈ {0, 1}" />
+		<Item id ="1207" name="或非门"		symbol="nor("       expression="Execute.Nor("		image="Nor"			info="z = nor(x, y)：或非, 等价于公式 !(X | Y)\n   x 和 y：输入序列或数值;\n   z：返回或非结果序列或数, 满足 y ∈ {0, 1}" />
+		<Item id ="1208" name="D触发器"		symbol="dff("       expression="Execute.DFlipFlop(" image="DFlipFlop"	info="q = dff(clk, d, cs)：D 触发器\n   clk：输入时钟序列, 上升沿有效;\n   d：输入数据序列, 满足 d ∈ {0, 1};\n   cs：输入使能序列, 为 0 有效;\n   q：输出结果序列或数, 满足 q ∈ {0, 1}" />
+		
+	</FuncItems>
+
+</CustomStringTable>

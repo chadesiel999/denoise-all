@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <Version>0.7.0.605</Version>
+    <Nullable>enable</Nullable>
+    <Configurations>Debug;Release;</Configurations>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ManufacturerInfo.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ManufacturerInfo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScopeX.ComModel\ScopeX.ComModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ScopeX.Controls.Common">
+      <HintPath>..\ShareDlls\ScopeX.Controls.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.Core">
+      <HintPath>..\ShareDlls\ScopeX.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.MathExt">
+      <HintPath>..\ShareDlls\ScopeX.MathExt.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.ScpiAdapter">
+      <HintPath>..\ShareDlls\ScopeX.ScpiAdapter.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.SCPIManager">
+      <HintPath>..\ShareDlls\ScopeX.SCPIManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Ports">
+      <HintPath>..\ShareDlls\System.IO.Ports.dll</HintPath>
+    </Reference>
+    <Reference Include="ScopeX.ComModel">
+      <HintPath>..\ShareDlls\ScopeX.ComModel.dll</HintPath>
+      <Private>false</Private>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </Reference>
+    <Reference Include="ScopeX.Hardware.Calibration.Data.Base">
+      <HintPath>..\ShareDlls\ScopeX.Hardware.Calibration.Data.Base.dll</HintPath>
+      <Private>false</Private>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy $(TargetPath)  $(SolutionDir)ShareDlls\$(TargetName)$(TargetExt)&#xD;&#xA;&#xD;&#xA;xcopy /s /y $(TargetDir)$(TargetName).pdb  $(SolutionDir)pdbs\&#xD;&#xA;xcopy /s /y $(TargetPath) $(SolutionDir)pdbs\" />
+  </Target>
+
+</Project>

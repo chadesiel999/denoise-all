@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomStringTable language="简体中文">
+	<!--UPO7000L与MSO7000X不同的地方-->
+	<Tip>
+	    <Item name="AboutForm_OptionType_BND" text="升级套装（包含：高级抖动分析和眼图，高级电源分析，协议触发和分析，高级滤波设计器，MATLAB嵌入式编程）" />
+	</Tip>
+</CustomStringTable>

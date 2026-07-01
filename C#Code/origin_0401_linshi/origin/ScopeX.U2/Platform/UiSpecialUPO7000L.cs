@@ -1,0 +1,273 @@
+﻿using ScopeX.ComModel;
+using ScopeX.Controls.Language;
+using ScopeX.Core;
+using ScopeX.Core.Model;
+using ScopeX.Core.Tools;
+using ScottPlot.Plottable;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+using static ScopeX.U2.KeyboardLed;
+
+namespace ScopeX.U2
+{
+    /// <summary>
+    /// 7000L 界面差异定制
+    /// </summary>
+    internal class UiSpecialUPO7000L : IPlatformUI
+    {
+        public ProductType ProductType { get; } = ProductType.JiHe_UPO7000L;
+
+        /// <summary>
+        /// 通道高压报警
+        /// </summary>
+        public void HardwareWarningEventHandler(HardwareWarningEventMessageArgs args)
+        {
+            //从DsoForm的事件处理函数迁移而来，进行不同平台的界面差异化处理
+            void SetChannelCoupling(ChannelId id)
+            {
+                if ((Program.Oscilloscope.View as DsoForm).Presenter.TryGetChannel(id, out var prsnt))
+                {
+                    var anaprsnt = (AnalogPrsnt)prsnt;
+                    if (anaprsnt != null && anaprsnt.Coupling == AnaChnlCoupling.DC50)
+                    {
+                        anaprsnt.IsUpdateCouplingBack = true;
+                        anaprsnt.Coupling = AnaChnlCoupling.DC1M;
+                        anaprsnt.Bandwidth = 0;
+                        anaprsnt.IsUpdateCouplingBack = false;
+                    }
+                }
+            }
+
+            string soucenames = "";
+
+            if (args.Channel1)
+            {
+                soucenames += ScopeX.Controls.Language.LanguageManger.Instance.GetIDMessage("MoNiTongDao1_");
+                SetChannelCoupling(ChannelId.C1);
+            }
+
+            if (args.Channel2)
+            {
+                soucenames += ScopeX.Controls.Language.LanguageManger.Instance.GetIDMessage("MoNiTongDao2_");
+                SetChannelCoupling(ChannelId.C2);
+            }
+
+            if (args.Channel3)
+            {
+                soucenames += ScopeX.Controls.Language.LanguageManger.Instance.GetIDMessage("MoNiTongDao3_");
+                SetChannelCoupling(ChannelId.C3);
+            }
+
+            if (args.Channel4)
+            {
+                soucenames += ScopeX.Controls.Language.LanguageManger.Instance.GetIDMessage("MoNiTongDao4_");
+                SetChannelCoupling(ChannelId.C4);
+            }
+
+            if (args.ExtTrigger)
+            {
+                soucenames += ScopeX.Controls.Language.LanguageManger.Instance.GetIDMessage("WaiChuFa");
+                if ((Program.Oscilloscope.View as DsoForm).Presenter.CurrentTrigger is TrigEdgePrsnt edgePrsnt && (edgePrsnt.Source == ChannelId.Ext || edgePrsnt.Source == ChannelId.Ext5))
+                {
+                    edgePrsnt.Impedance = TriggerImpedance.High1M;
+                }
+            }
+
+            if (args.Channel1 || args.Channel2 || args.Channel3 || args.Channel4 || args.ExtTrigger)
+            {
+                soucenames = soucenames.TrimEnd('、');
+                soucenames += ScopeX.Controls.Language.LanguageManger.Instance.GetIDMessage("HighVoltageWaningStr");
+                WeakTip.Default.Write(null, soucenames, false, null, 5);
+            }
+        }
+
+        /// <summary>
+        /// 用于按键板初始化平台化
+        /// 对datas的补充
+        /// </summary>
+        /// <param name="datas"></param>
+        public void KeyboardInit(List<IKeyData> datas)
+        {
+            //无需补充
+        }
+
+        public IReadOnlyList<ChannelId> GetTriggerSource(Boolean hasDigitalChnl = false, Boolean hasExtChnl = false, Boolean hasAcChnl = false, Boolean hasAuxin = false)
+        {
+            //7000L默认没有数字通道和Auxin
+            hasDigitalChnl = false;
+            hasAuxin = false;
+
+            var sources = ChannelIdExt.GetTriggerSources().ToList();
+
+            if (!hasDigitalChnl)
+            {
+                sources = sources.Where(source => !source.IsDigital()).ToList();
+            }
+
+            if (!hasExtChnl)
+            {
+                sources = sources.Where(source => source != ChannelId.Ext && source != ChannelId.Ext5).ToList();
+            }
+
+            if (!hasAcChnl)
+            {
+                sources = sources.Where(source => source != ChannelId.AC).ToList();
+            }
+
+            if (!hasAuxin)
+            {
+                sources = sources.Where(source => source != ChannelId.AuxIn).ToList();
+            }
+
+            return sources.AsReadOnly();
+        }
+
+        public List<KeyValuePair<OptionType, (String FunctionName, String Description)>> GetOptionInfo()
+        {
+            var options = Enum.GetValues<OptionType>()
+                .Where(o => o.GetProductTypes().Contains($"{ProductType}"))
+                .Select(o => new KeyValuePair<OptionType, (String FunctionName, String Description)>(o, (o.GetDisplay(), o.GetOptionDescription().Description))).ToList();
+
+            if (Program.Oscilloscope.OptionsManager.Is2GHz)
+            {
+                var item = options.FirstOrDefault(o => o.Key == OptionType.BW10T20);
+                options.Remove(item);
+            }
+
+            //AWG
+            var awg = options.FirstOrDefault(o => o.Key == OptionType.AWG);
+            var custom = EnumEx.GetOptionAllDescription(OptionType.AWG).Custom;
+            awg = new KeyValuePair<OptionType, (string ModelName, string Description)>(awg.Key, (awg.Value.FunctionName, $"{custom}"));
+            var index = options.FindIndex(option => option.Key == awg.Key);
+            options[index] = awg;
+
+            //BW10T20
+            var bw10To20 = options.FirstOrDefault(o => o.Key == OptionType.BW10T20);
+            if (bw10To20.Value != (null, null))
+            {
+                custom = EnumEx.GetOptionAllDescription(OptionType.BW10T20).Custom;
+                bw10To20 = new KeyValuePair<OptionType, (string ModelName, string Description)>(bw10To20.Key, (bw10To20.Value.FunctionName, $"{custom}"));
+                index = options.FindIndex(option => option.Key == bw10To20.Key);
+                if (index >= 0)
+                {
+                    options[index] = bw10To20;
+                }
+            }
+
+            return options!;
+        }
+
+        public List<ChannelId> GetEditableColorsChannel()
+        {
+            var channels = Enum.GetValues<ChannelId>().Where(c => (c.IsMath() && c <= ChannelIdExt.MaxMChId) || c.IsReference() || (c.IsDecode() || (c.IsAWG() && c <= ChannelIdExt.MaxBChId) && c <= ChannelIdExt.MaxAwgId)).ToList();
+            return channels;
+        }
+
+        public ILanguage GetLanguage(Language language)
+        {
+            return language switch
+            {
+                Language.English => EnglishLang(),
+                Language.German => GermanLang(),
+                Language.French => FrenchLang(),
+                Language.Spanish => SpanishLang(),
+                Language.Italian => ItalianLang(),
+                _ => ChineseLang()
+            };
+
+            ILanguage ChineseLang()
+            {
+                var xmllanguage = new ScopeX.Controls.Language.XMLLanguage("Tip.xml");
+                xmllanguage.AppendOrUpdate("Tip_UPO7000L.xml");
+                return xmllanguage;
+            }
+
+            ILanguage EnglishLang()
+            {
+                var xmllanguage = new ScopeX.Controls.Language.XMLLanguage("english.xml");
+                xmllanguage.AppendOrUpdate("english_UPO7000L.xml");
+                return xmllanguage;
+            }
+
+            ILanguage GermanLang()
+            {
+                var xmllanguage = new ScopeX.Controls.Language.XMLLanguage("German.xml");
+                xmllanguage.AppendOrUpdate("German_UPO7000L.xml");
+                return xmllanguage;
+            }
+
+            ILanguage FrenchLang()
+            {
+                var xmllanguage = new ScopeX.Controls.Language.XMLLanguage("French.xml");
+                xmllanguage.AppendOrUpdate("French_UPO7000L.xml");
+                return xmllanguage;
+            }
+
+            ILanguage SpanishLang()
+            {
+                var xmllanguage = new ScopeX.Controls.Language.XMLLanguage("Spanish.xml");
+                xmllanguage.AppendOrUpdate("Spanish_UPO7000L.xml");
+                return xmllanguage;
+            }
+
+            ILanguage ItalianLang()
+            {
+                var xmllanguage = new ScopeX.Controls.Language.XMLLanguage("Italian.xml");
+                xmllanguage.AppendOrUpdate("Italian_UPO7000L.xml");
+                return xmllanguage;
+            }
+        }
+
+        public GeneralAttribute Attribute => new GeneralAttribute(false, false, false)
+        {
+            SupportDigital = false,
+            SupportKeyBoard = false,
+            SupportUtilityKey = false,
+            FunctionCropping = true,
+            SupportGetOrSetBrightness = false,
+            SupportAuxIn = false,
+            AutosetWaitingMode = false,
+            SupportHighImpedance = true,
+        };
+
+        public String[] GetAwgTriggerSource()
+        {
+            return new string[]
+                    {
+                        LanguageManger.Instance.GetIDMessage("NeiBu"),
+                        LanguageManger.Instance.GetIDMessage("ShouDong"),
+                    };
+        }
+
+        public IkeyBoardDetetionView KeyboardDetectionView => null;
+
+        public Boolean FFTFunctionLimitWithJitter()
+        {
+            if (Program.Oscilloscope.Jitter?.Active ?? true)
+            {
+                if (StrongTip.Default.Show(MsgTipId.Asking, MsgTipId.FFTIsNotSupportedInJitter, MessageType.Asking))
+                {
+                    Program.Oscilloscope.Jitter.Active = false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public List<FFTNumber> GetFFTNumbers()
+        {
+            return Enum.GetValues<FFTNumber>().Where(f => f < FFTNumber.Num512K).ToList();
+        }
+
+        public (Int32 MaxFanSpeed, Int32 Scale, Int32 MaxTemperature) GetFanControlParams()
+        {
+            return (12000, 1000, 80);
+        }
+    }
+}

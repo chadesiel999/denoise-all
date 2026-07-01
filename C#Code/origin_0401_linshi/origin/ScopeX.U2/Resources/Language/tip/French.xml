@@ -1,0 +1,2465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomStringTable language="简体中文">
+	<!--需要多语言翻译的资源文件：Resources\CustomFormula.xml、Resources\Measure.xml-->
+	<Tip>
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDStandard.Standard" text="Standard" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDStandard.Standard" text="Standard" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDStandard.Extended" text="Prolongé" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDStandard.Extended" text="Prolongé" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Read" text="Lire" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Write" text="Écrire" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Both" text="Les deux" />
+		<Item name="KaiShiSuoYin" text="Commencer l'indexation" />
+		<Item name="RongXian" text="tolérance" />
+		<Item name="KongXianWei" text="peu gratuit" />
+		<Item name="ShuJuBaoShiTu" text="Vue par paquets" />
+		<Item name="TongBuWei" text="bit de synchronisation" />
+		<Item name="JiOuXing" text="Parité" />
+		<Item name="ZiShu" text="nombre de mots" />
+		<Item name="ZiDaXiao" text="Taille de la police" />
+		<Item name="BiaoTou" text="en-tête" />
+		<Item name="ZhenWei" text="fin du cadre" />
+		<Item name="FDKuoZhan" text="Extensions FD" />
+		<Item name="FDBiaoZhun" text="FD Standard" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDStandard.FDStandard" text="FD Standard" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDStandard.FDExtended" text="Extensions FD" />
+		<Item name="PianYiLiang" text="Décalage" />
+		<Item name="SheZhiPianYiLiang" text="Jeu de décalage" />
+		<Item name="PianYiLiangShiNeng" text="Activation du décalage" />
+		<Item name="ZhongCaiYuCaiYangDian" text="Points d'échantillonnage pour l'arbitrage" />
+		<Item name="ShuJuYuCaiYangDian" text="Points d'échantillonnage de données" />
+		<Item name="SheZhiZhongCaiYuCaiYangDian" text="Régler points d'échantillonnage arbitrage" />
+		<Item name="SheZhiShuJuYuCaiYangDian" text="Régler points d'échantillonnage données" />
+		<Item name="DsoFormTextInfo" text="Oscilloscope à mémoire numérique" />
+		<Item name="DanDuan" text="Simple extrémité" />
+		<Item name="ChaFen" text="Différentiel" />
+		<Item name="JiaoYan" text="Vérification" />
+		<Item name="SheZhiFDXinHaoSuLv" text="Définir le taux de signal FD" />
+		<Item name="SheZhiSDXinHaoSuLv" text="Définir le taux de signal SD" />
+		<Item name="SheZhiYuZhi" text="Réglage du seuil" />
+		<Item name="SheZhiShiZhongZhouQi" text="Réglage Du Tick D'Horloge" />
+		<Item name="SheZhiShiZhongRongCha" text="Réglage De La Tolérance De L'Horloge" />
+		<Item name="SheZhiXinHaoSuLv" text="Réglage du taux de signal" />
+		<Item name="ZiDongXinHaoSuLv" text="Taux de signal automatique" />
+		<Item name="ChaFenXinHao" text="Signal différentiel" />
+		<Item name="BaoCunJieQuShuJu" text="Sauvegarder "/>
+		<Item name="ZiDingYiSuLv" text="Taux personnalisé" />
+		<Item name="XinHaoSuLv" text="Taux de signal" />
+		<Item name="ShiZhongZhouQi" text="Impulsion d'horloge" />
+		<Item name="ShiZhongRongCha" text="Tolérance de l'horloge" />
+		<Item name="ShuJuGeShi" text="Mode de décodage" />
+		<Item name="DiZhuangTaiYuZhi" text="Seuil bas" />
+		<Item name="XinHaoShuRu" text="Entrée du signal" />
+		<Item name="XinHaoShuRuL" text="Signal d'entrée L" />
+		<Item name="XinHaoLeiXing" text="Type de signal" />
+		<Item name="GaoZhuangTaiYuZhi" text="Seuil haut" />
+		<Item name="SheZhiData" text="Données de réglage" />
+		<Item name="ShuJuXianDingFu" text="Qualificateur de données" />
+		<Item name="SheZhiShuJu" text="Données de réglage" />
+		<Item name="SheZhiBiaoQian" text="Configurer l'étiquette" />
+		<Item name="SheZhiShengDaoShu" text="Réglage du nombre de canaux" />
+		<Item name="SheZhiMeiShengDaoShiZhongShu" text="Réglage du nombre d'horloges par canal" />
+		<Item name="SheZhiMeiShengDaoShuJuWeiShu" text="Réglage du nombre de bits de données par canal" />
+		<Item name="SheZhiWeiYanShi" text="Réglage du délai des bits" />
+		<Item name="WeiYanShi" text="Retard de bits" />
+		<Item name="MeiShengDaoShuJuWeiShu" text="Bits de données par canal" />
+		<Item name="MeiShengDaoShiZhongShu" text="Horloges par canal" />
+		<Item name="ShengDaoShu" text="Nombre de canaux" />
+		<Item name="LingDianPingGeShu" text="Niveaux zéro" />
+		<Item name="ShengDaoLeiXing" text="Type de canal" />
+		<Item name="WeiXu" text="Séquence de bits" />
+		<Item name="ZhenKongZhi" text="Contrôle de trame" />
+		<Item name="ShuJuA" text="Données A" />
+		<Item name="ShuJuB" text="Données B" />
+		<Item name="ChuanXingXiaoXi" text="Message série" />
+		<Item name="ZhuangTaiWei" text="Bit de statut" />
+		<Item name="FuZaiDaXiao" text="Taille de la charge" />
+		<Item name="BiaoZhun_125k" text="Standard(125kbps)" />
+		<Item name="KuaiSu_189k" text="Fast(189kbps)" />
+		<Item name="ShuJuJiXing" text="Polarité des données" />
+		<Item name="YouXiaoShiZhongYan" text="Front d'horloge effectif" />
+		<Item name="TongBuJiXing" text="Polarité de la synchronisation" />
+		<Item name="XieYiLeiXing" text="Type de protocole" />
+		<Item name="ShiZhongYuZhi" text="Seuil d'horloge" />
+		<Item name="ShiZhongShuRu" text="Entrée d'horloge" />
+		<Item name="PianXuanYuZhi" text="Seuil de la puce" />
+		<Item name="PianXuanShuRu" text="Entrée de la puce" />
+		<Item name="ShuJuYuZhi" text="Seuil de données" />
+		<Item name="ShuJuShuRu" text="Entrée des données" />
+		<Item name="ZiJieShu" text="Nombre d'octets" />
+		<Item name="ZiJieHao" text="Numéro d'octet" />
+		<Item name="ShuJuHex" text="Données Hex" />
+		<Item name="ShuJuXianDing" text="Qualification des données" />
+		<Item name="SheZhiZiJieShu" text="Réglage du nombre d'octets" />
+		<Item name="SheZhiZiJieHao" text="Numéro de l'octet de réglage" />
+		<Item name="CuoWuBaoLeiXing" text="Type de paquet d'erreur" />
+		<Item name="ZhengLeiXing" text="Type de cadre" />
+		<Item name="ShuJuZheng" text="Cadre de données" />
+		<Item name="ZhengFangXiang" text="Direction du cadre" />
+		<Item name="IDBiaoZhun" text="Norme d'identification" />
+		<Item name="BiaoZhunID" text="ID standard" />
+		<Item name="KuoZhanID" text="ID étendu" />
+		<Item name="ShiJianChuo" text="horodatage" />
+		<Item name="SheZhiBiaoZhunID" text="Réglage de l'ID standard" />
+		<Item name="SheZhiKuoZhanID" text="Réglage de l'ID étendu" />
+		<Item name="SheZhiCaiYangDian" text="Régler les points d'échantillonnage" />
+		<Item name="SheZhiZiDingYiXinHaoSuLv" text="Régler le taux de signal personnalisé" />
+		<Item name="SheZhiShuJuTongDaoYuZhi" text="Régler le seuil du canal de données" />
+		<Item name="XinHaoShuRu1" text="Signal d'entrée 1" />
+		<Item name="CaiYangDian" text="Point d'échantillonnage" />
+		<Item name="YuZhi" text="Seuil" />
+		<Item name="FuWei" text="Reset" />
+		<Item name="XinHaoShuRu2" text="Signal d'entrée 2" />
+		<Item name="YuanChengZheng" text="Cadre à distance" />
+		<Item name="SDXinHaoSuLv" text="Taux de signal SD" />
+		<Item name="FDXinHaoSuLv" text="Taux de signal FD" />
+		<Item name="D_ShuRuPositive" text="D+entrée" />
+		<Item name="Yuan" text="Source" />
+		<Item name="ZiDongDingBiao" text="AutoScale" />
+		<Item name="CeLiangYuan" text="Source de la mesure" />
+		<Item name="Wu" text="Aucun" />
+		<Item name="You" text="Avec" />
+		<Item name="MenXian" text="Seuil" />
+		<Item name="GaoMenXian" text="Seuil haut" />
+		<Item name="DiMenXian" text="Seuil bas" />
+		<Item name="D_ShuRuNegative" text="Entrée D" />
+		<Item name="SuDu" text="Vitesse" />
+		<Item name="XieYiBanBen" text="Version du protocole" />
+		<Item name="QBiaoZhi" text="Symbole Q" />
+		<Item name="ShuJu" text="Données" />
+		<Item name="ShuJuGaoWei" text="Données(Élevée)" />
+		<Item name="ShuJuDiWei" text="Données(Basse)" />
+		<Item name="PianZhi" text="Biais" />
+		<Item name="ZiJiePianZhi" text="Byte Bias" />
+		<Item name="DiZhi" text="Adresse" />
+		<Item name="MuBiaoDiZhi" text="Adresse de destination" />
+		<Item name="YuanDiZhi" text="Adresse Src" />
+		<Item name="MACChangduleixing" text="Type de longueur MAC" />
+		<Item name="QTagKongZhiXinXi" text="Informations de contrôle QTag" />
+		<Item name="BiJiaoFangShi" text="Comparaison" />
+		<Item name="SheZhiMACDiZhi" text="Réglage de l'adresse Mac" />
+		<Item name="ZiJieChangDu" text="Longueur d'octet" />
+		<Item name="ShuJuPianYi" text="décalage des données" />
+		<Item name="YuanChengZhongduanDiZhi" text="Adresse du terminal distant" />
+		<Item name="JiaoYanFangShi" text="vérifier" />
+		<Item name="CuoWuLeiXing" text="Type d'erreur" />
+		<Item name="YuanHeMuDiBiaoZhiFu" text="IDS" />
+		<Item name="ZhuanTaiHeBiaoZhiWei" text="SMS" />
+		<Item name="XunHuanData" text="Données sur les boucles" />
+		<Item name="XunHuanXianDingFu" text="Qualificateur de boucle" />
+		<Item name="SheZhiChuFaShuJuChangDu" text="Réglage de la longueur des données de déclenchement" />
+		<Item name="ChuFaShuJuChangDu" text="Longueur des données de déclenchement" />
+		<Item name="CuoWu" text="Erreur" />
+		<Item name="ZhuangTai" text="État" />
+		<Item name="XiaoXiLeiXing" text="Type de message" />
+		<Item name="ZengQiangLeiXing" text="Type amélioré" />
+		<Item name="JieWeiZhengLeiXing" text="Type de cadre d'extrémité" />
+		<Item name="SheZhiID" text="Configurer l'ID" />
+		<Item name="SheZhiCRC" text="Configurer l'CRC" />
+		<Item name="IDXianDingFu" text="Qualificatif d'identification" />
+		<Item name="ZhiShiFu" text="Indicateur" />
+		<Item name="SheZhiMenXian" text="Définir le seuil" />
+		<Item name="SheZhiZiJiePianZhi" text="Réglage de la polarisation de l'octet" />
+		<Item name="SheZhiJingHeChang" text="Réglage de la longueur de la charge utile" />
+		<Item name="YuanLeiXing" text="Type de source" />
+		<Item name="Yuan1" text="Source 1" />
+		<Item name="Yuan2" text="Source 2" />
+		<Item name="ZiJiePianZhi" text="Biais d'octet" />
+		<Item name="TongDaoLeiXing" text="Type de canal" />
+		<Item name="JingHeShu" text="Numéro de la charge utile" />
+		<Item name="DiZhiZhi" text="Valeur de l'adresse" />
+		<Item name="ShuJuFangXiang" text="Orientation des données" />
+		<Item name="SheZhiDiZhi" text="Réglage de l'adresse" />
+		<Item name="SheZhiWeiKuan" text="Régler la largeur de bit" />
+		<Item name="DiZhiWeiKuan" text="Adresse Largeur de bit" />
+		<Item name="SheZhiBoTeLv" text="Réglage de la vitesse de transmission" />
+		<Item name="TCKShuRu" text="Entrée TCK" />
+		<Item name="TCKYuZhi" text="Seuil TCK" />
+		<Item name="TMSShuRu" text="Entrée TMS" />
+		<Item name="TMSYuZhi" text="Seuil TMS" />
+		<Item name="TDIShuRu" text="Entrée TDI" />
+		<Item name="TDIYuZhi" text="Seuil TDI" />
+		<Item name="TDOShuRu" text="Entrée TDO" />
+		<Item name="TDOYuZhi" text="Seuil TDO" />
+		<Item name="JieMaTongDao" text="Canal de décodage" />
+		<Item name="BoTeLv" text="Débit en bauds" />
+		<Item name="JiXing" text="Polarité" />
+		<Item name="ZiDingYi" text="Sur mesure" />
+		<Item name="ZhiXing" text="La mise en œuvre" />
+		<Item name="XinHaoBiaoZhun" text="Norme de signal" />
+		<Item name="JianChaPIDJiaoYan" text="Vérifier la parité du PID" />
+		<Item name="GaoYuZhi" text="Seuil haut" />
+		<Item name="DiYuZhi" text="Seuil bas" />
+		<Item name="Zhi" text="Valeur" />
+		<Item name="SheZhiKongXianYuZhi" text="Régler le seuil d'inactivité" />
+		<Item name="WeiShunXu" text="Ordre des bits" />
+		<Item name="KongXianDianPing" text="Niveau de ralenti" />
+		<Item name="MoShi" text="Mode" />
+		<Item name="KongXianDianPingShuLiang" text="Nombre de niveaux d'inactivité" />
+		<Item name="SheZhiAddress" text="Réglage de l'adresse" />
+		<Item name="SheZhiAT" text="Régler AT" />
+		<Item name="SheZhiShuJuChangDu" text="Régler la longueur des données" />
+		<Item name="SheZhiMsgCode" text="Régler le MsgCode" />
+		<Item name="SheZhiSeqID" text="Régler le Seqid" />
+		<Item name="SheZhiTC" text="Régler le TC" />
+		<Item name="TLPLeiXing" text="Type de Tlp" />
+		<Item name="SheZhiZongXianHao" text="Régler le numéro de bus" />
+		<Item name="SheZhiSheBeiHao" text="Régler le numéro de l'appareil" />
+		<Item name="SheZhiTag" text="Régler l'étiquette" />
+		<Item name="SheZhiGongNengHao" text="Régler le numéro de fonction" />
+		<Item name="WeiKuan" text="Largeur de bit" />
+		<Item name="TingZhiWei" text="Bit d'arrêt" />
+		<Item name="QiOuXiaoYan" text="Contrôle de parité" />
+		<Item name="XinYuan" text="Source" />
+		<Item name="LeiXing" text="Type" />
+		<Item name="XinYuanL" text="Source L" />
+		<Item name="SheZhiEOP" text="Régler EOP" />
+		<Item name="JieShuBiaoZhi" text="Drapeau de fin" />
+		<Item name="ShuJu_Hex_" text="Données (Hex)" />
+		<Item name="ZanTingWei" text="Bit de pause" />
+		<Item name="ShuJuDuanGeShi" text="Format des données" />
+		<Item name="ShuJuChangDu" text="Longueur des données" />
+		<Item name="ShuJuWeiKuan" text="Largeur de bits de données" />
+		<Item name="ShiZhongYan" text="Front d'horloge" />
+		<Item name="PianXuanYan" text="Bord de sélection de puce" />
+		<Item name="SheZhiChaoShiShiJian" text="Réglage du délai d'attente" />
+		<Item name="ChengZhengFangShi" text="Méthode d'encadrement" />
+		<Item name="ChaoShiShiJian" text="Délai d'attente" />
+		<Item name="MISOShuRu" text="Entrée MISO" />
+		<Item name="MISOJiXing" text="Polarité MISO" />
+		<Item name="MISOYuZhi" text="Seuil MISO" />
+		<Item name="MOSIShuRu" text="Entrée MOSI" />
+		<Item name="MOSIJiXing" text="Polarité MOSI" />
+		<Item name="MOSIYuZhi" text="Seuil MOSI" />
+		<Item name="ShuJuTongDao" text="Canal de données" />
+		<Item name="ZhengShu" text="Taux de rafraîchissement" />
+		<Item name="Decode_ZhengChang" text="Longueur de trame" />
+		<Item name="SheZhiZhengShu" text="Réglage de la fréquence d'images" />
+		<Item name="XiaoYanLeiXing" text="Type de parité" />
+		<Item name="BanBen" text="Version" />
+		<Item name="DataXinYuan" text="Source des données" />
+		<Item name="SCKXinYuan" text="Sck Source" />
+		<Item name="TeShuBao" text="Dossier spécial" />
+		<Item name="ShuJuBao" text="Paquet de données" />
+		<Item name="CuoWuBao" text="Paquet d'erreurs" />
+		<Item name="WoShouBao" text="Paquet de la poignée de main" />
+		<Item name="SheZhiShuJuZiJieShu" text="Réglage du nombre d'octets de données" />
+		<Item name="ShuJuZiJieShu" text="Numéro de l'octet de données" />
+		<Item name="LingPaiBao" text="Paquet de jetons" />
+		<Item name="ZiXiaoZhengZhongQingDengDai_DangQianJinDu_" text="Autocorrection, veuillez patienter. Progrès en cours :" />
+		<Item name="MoNiTongDao" text="Canal analogique" />
+		<Item name="ZiDingYiChuangKou" text="Coutume" />
+		<Item name="XiangChaXiaoZheng" text="Correction de la différence de phase" />
+		<Item name="FuTu_" text="Sous-image :" />
+		<Item name="ZhiFangTu" text="Histogramme" />
+		<Item name="DuoZhouQi" text="Multi-cycle" />
+		<Item name="DuiChengXing" text="Symétrie" />
+		<Item name="CaiYangLv" text="Taux d'échantillonnage" />
+		<Item name="GuanBi" text="Fermer" />
+		<Item name="DaKai" text="Ouvrir" />
+		<Item name="ZhuDianShuChu" text="Sortie point par point" />
+		<Item name="XiaJiangShiJian" text="Temps de descente" />
+		<Item name="ShangShengShiJian" text="Temps de montée" />
+		<Item name="LianXuBo" text="Vague" />
+		<Item name="DiaoZhiBo" text="Mode" />
+		<Item name="SaoPin" text="Balayage" />
+		<Item name="RenYiBo" text="Arbitrage" />
+		<Item name="ZhanKongBi" text="Rapport cyclique" />
+		<Item name="DiDianPing" text="Faible" />
+		<Item name="PianZhi" text="Biais" />
+		<Item name="ZhouQi" text="Période" />
+		<Item name="GaoDianPing" text="Haut" />
+		<Item name="FuDu" text="Amplitude" />
+		<Item name="FuDuXiTiao" text="Réglage fin de l'amplitude" />
+		<Item name="ZhiDingTiShi" text="L'atténuation à la fréquence de coupure est fixée à 3 dB(la moitié de la puissance de la bande passante)." />
+		<Item name="PinLv" text="Fréquence" />
+		<Item name="ZengYi" text="Gain" />
+		<Item name="XiangWei" text="Phase" />
+		<Item name="BoXingLeiXing" text="Type de forme d'onde" />
+		<Item name="ZhengXianBo" text="Sine" />
+		<Item name="ShuChu" text="Sortie" />
+		<Item name="ShuRu" text="输入" />
+		<Item name="FuJiaZaoSheng" text="Bruit supplémentaire" />
+		<Item name="QiShiXiangWei" text="Phase" />
+		<Item name="FanXiang" text="Antiphase" />
+		<Item name="Kai" text="Sur" />
+		<Item name="Guan" text="Arrêt" />
+		<Item name="FuZaiZuKang" text="Impédance de charge" />
+		<Item name="ShangSheng" text="S'élever" />
+		<Item name="Rise" text="S'élever" />
+		<Item name="XiaJiang" text="Chute" />
+		<Item name="Fall" text="Chute" />
+		<Item name="Both" text="Tous" />
+		<Item name="XieBoLeiXing" text="Type de rampe" />
+		<Item name="DiaoZhiLeiXing" text="Type de modulation" />
+		<Item name="DiaoZhiBoXing" text="Forme d'onde de modulation" />
+		<Item name="PinPian_DiaoZhiShenDu_XiangPian" text="Décalage de fréquence#Profondeur de modulation#Décalage de phase" />
+		<Item name="PinPian" text="Décalage de fréquence" />
+		<Item name="DiaoZhiPinLv_TiaoYuePinLv" text="Fréquence de modulation#Fréquence de saut" />
+		<Item name="DiaoZhiPinLv" text="Fréquence de modulation" />
+		<Item name="NeiBu" text="Interne" />
+		<Item name="ShouDongChuFa" text="Déclenchement manuel" />
+		<Item name="ChuFaYuan" text="Source de déclenchement" />
+		<Item name="KaiQi" text="Ouvrir" />
+		<Item name="ChuFaShuChu" text="Sortie de déclenchement" />
+		<Item name="SaoPinLeiXing" text="Type de balayage" />
+		<Item name="XianXing" text="Linéaire" />
+		<Item name="SaoPinShiJian" text="Temps de balayage" />
+		<Item name="JieShuPinLv" text="Fréquence d'arrêt" />
+		<Item name="QiShiPinLv" text="Fréquence de départ" />
+		<Item name="WeiRuanYaHei" text="Microsoft Yahei" />
+		<Item name="ShiYuGuangBiao" text="Curseur du domaine temporel" />
+		<Item name="GuangBiao" text="Curseurs" />
+		<Item name="GuangBiaoCeLiang" text="Curseurs" />
+		<Item name="TongBuYiDong" text="SyncMove" />
+		<Item name="XianShi" text="Affichage" />
+		<Item name="BiaoJIXianShi" text="Affichage du marqueur" />
+		<Item name="ShuiPing" text="Horizontal" />
+		<Item name="ChuiZhi" text="Vertical" />
+		<Item name="ShuiPing_ChuiZhi" text="Hori &amp;&amp; Vert" />
+		<Item name="ShuJuXianShi" text="Affichage des données" />
+		<Item name="ShuJuLeiXing" text="Type de données" />
+		<Item name="WeiZhiXianShi" text="Affichage des données Position" />
+		<Item name="JueDuiXianShi" text="Absolue" />
+		<Item name="XiangDuiXianShi" text="Relative" />
+		<Item name="XuanFu" text="Suivre" />
+		<Item name="GuDing" text="Fixe" />
+		<Item name="BiaoJi" text="Marquage" />
+		<Item name="BiaoJiLeiXing" text="Type de marquage" />
+		<Item name="JuXing" text="Rectangle" />
+		<Item name="JiXing" text="Polarité" />
+		<Item name="FengZhiYiDaoZhongXin" text="Définir la fréquence actuelle comme centre" />
+		<Item name="B_WeiZhi" text="B Pos" />
+		<Item name="A_WeiZhi" text="A Pos" />
+		<Item name="JueDuiZhi" text="Valeur absolue" />
+		<Item name="ZengLiang" text="Incrément" />
+		<Item name="DuShu" text="Lecture" />
+		<Item name="ZhenFu" text="Amplitude" />
+		<Item name="BiaoJiShuLiang" text="Nombre de marqueurs" />
+		<Item name="ZiDongBiaoJi" text="Marquage automatique" />
+		<Item name="PaiXuMoShi" text="Mode de tri" />
+		<Item name="ShouDongBiaoJi" text="Marquage manuel" />
+		<Item name="Ji" text="Base" />
+		<Item name="BaiFenBi" text="Pourcentage" />
+		<Item name="Miao" text="Deuxième" />
+		<Item name="Du" text="Diplôme" />
+		<Item name="JiangDangQianShuiPingWeiZhiSheWeiCanKao" text="Définir HoriPos comme Ref" />
+		<Item name="ShuiPingB_WeiZhi" text="Hori B Pos" />
+		<Item name="ShuiPingA_WeiZhi" text="Hori A Pos" />
+		<Item name="JiangDangQianChuiZhiWeiZhiSheWeiCanKao" text="Définir VertPos comme Ref" />
+		<Item name="ChuiZhiB_WeiZhi" text="Vert B Pos" />
+		<Item name="ChuiZhiA_WeiZhi" text="Vert A Pos" />
+		<Item name="ShuiPingDanWei" text="Unité horizontale" />
+		<Item name="ChuiZhiDanWei" text="Unité verticale" />
+		<Item name="JiangDangQianWeiZhiSheWeiCanKao" text="Position act. comme réf" />
+		<Item name="DanWei" text="Unités" />
+		<Item name="PinLvJi" text="Cymètre" />
+		<Item name="ShiJianLieBiao" text="Liste des événements" />
+		<Item name="SheZhiWeiZhi" text="Régler la position" />
+		<Item name="XieYiXuanZe" text="Sélection du protocole" />
+		<Item name="XianShiGeShi" text="Format d'affichage" />
+		<Item name="ZongXianXianShi" text="Affichage du bus" />
+		<Item name="BiaoQian" text="Étiquette" />
+		<Item name="SheWei0" text="À 0" />
+		<Item name="WeiYi" text="Déplacement" />
+		<Item name="DuLiChuangKou" text="Nouvelle vue" />
+		<Item name="ZongXian" text="Bus" />
+		<Item name="XianShiSheZhi" text="Affichage" />
+		<Item name="DianPingSheZhi" text="Niveau" />
+		<Item name="_LuoJiTongDao" text="Canal logique" />
+		<Item name="GaoDu" text="Hauteur" />
+		<Item name="Di" text="Faible" />
+		<Item name="Zhong" text="Moyen" />
+		<Item name="Gao" text="Haut" />
+		<Item name="QuanXuan" text="Sélectionnez tout" />
+		<Item name="QingChu" text="Effacer" />
+		<Item name="XuanXiang" text="Options" />
+		<Item name="TongDao" text="Chaîne" />
+		<Item name="WeiZhi" text="Position" />
+		<Item name="ChaZhi" text="Delta" />
+		<Item name="ZiDongPaiXu" text="AutoSort" />
+		<Item name="YuZhiDianPing" text="Niveau du seuil" />
+		<Item name="XiLie" text="Série" />
+		<Item name="DianPingZu" text="Niveau fixé" />
+		<Item name="ChiZhi" text="Hystérésis" />
+		<Item name="LiShaYuTuXing" text="Figure Lissajou" />
+		<Item name="TianJia" text="Ajouter" />
+		<Item name="ShiLiang" text="Vecteur" />
+		<Item name="Dian" text="Spot" />
+		<Item name="Shang" text="Haut" />
+		<Item name="Xia" text="bas" />
+		<Item name="Zuo" text="Gauche" />
+		<Item name="You_Right" text="Droit" />
+		<Item name="WangGeLiangDu" text="Luminosité de la grille" />
+		<Item name="WangGe" text="Grille" />
+		<Item name="WangGeYangShi" text="Style de grille" />
+		<Item name="BoXingLiangDu" text="Luminosité de la forme d'onde" />
+		<Item name="BoXingYangShi" text="Style de forme d'onde" />
+		<Item name="ChuiZhiBiaoJiWeiZhi" text="Position du marqueur vertical" />
+		<Item name="ShuiPingBiaoJiWeiZhi" text="Position du marqueur horizontal" />
+		<Item name="XianShiBiaoJi" text="Marqueur d'affichage" />
+		<Item name="YuHui" text="Lueur d'espoir" />
+		<Item name="BaoCunHuiTu" text="Sauvegarder le tracé" />
+		<Item name="BaoCunHuiTuShuJu" text="Enregistrer les données de tracé" />
+		<Item name="Yuan_X" text="Source X" />
+		<Item name="Yuan_Y" text="Source Y" />
+		<Item name="Z_Zhou" text="Axe Z" />
+		<Item name="BoXingSheZhi" text="Forme d'onde" />
+		<Item name="YuanSheZhi" text="Source" />
+		<Item name="ShuiPingKuoZhan" text="Expansion horizontale" />
+		<Item name="_2_000x_SuoFang_" text="(Zoom 2.000x)" />
+		<Item name="ChuiZhiKuoZhan" text="Expansion verticale" />
+		<Item name="SheZhi" text="Param." />
+		<Item name="BoXing" text="Forme d'onde" />
+		<Item name="JiePing" text="Écran" />
+		<Item name="ShenCunChuShuJuDaoChu" text="Exportation de données de stockage en profondeur" />
+		<Item name="XiTongSheZhi" text="Système" />
+		<Item name="AiShuJuDaoChu" text="Exportation Données IA" />
+		<Item name="XuanZeTongDao" text="Sélection Canal :" />
+		<Item name="WenJianQianZhui" text="Préfixe Fichier :" />
+		<Item name="CaiJiRenYuan" text="Opérateur :" />
+		<Item name="CaiJiZhenShu" text="Nb de Captures :" />
+		<Item name="CaiJiJianGe" text="Intervalle :" />
+		<Item name="YangBenBiaoQian" text="Étiquette :" />
+		<Item name="ShuJuYongTu" text="Usage Données :" />
+		<Item name="ShiYanBeiZhu" text="Note Exp :" />
+		<Item name="KaiShiCaiJiDaoChu" text="Démarrer Capture et Export" />
+		<Item name="XunLianJi" text="Train (Entraînement)" />
+		<Item name="CeShiJi" text="Test (Test)" />
+		<Item name="YanZhengJi" text="Val (Validation)" />
+		<Item name="WenJianGeShi" text="Format Fichier :" />
+		<Item name="GeShiBin" text="Binaire (.bin + .json)" />
+		<Item name="GeShiTxt" text="Texte (.txt)" />
+		<Item name="CunChu" text="Stockage" />
+		<Item name="MingCheng" text="Nom" />
+		<Item name="RiQiHouZhui" text="Suffix. date" />
+		<Item name="QuYu" text="Région" />
+		<Item name="PingMu" text="Écran" />
+		<Item name="ZhaGe" text="Grille" />
+		<Item name="BaoCun" text="Économiser" />
+		<Item name="KaiShi" text="Démarrage" />
+		<Item name="BaoCun_TiaoZhuan" text="Sauvegarder&amp;&amp;Sauter" />
+		<Item name="BiaoZhun" text="Standard" />
+		<Item name="HeiBai" text="N&amp;&amp;B" />
+		<Item name="FanSe" text="Inversé" />
+		<Item name="YanSe" text="Couleur" />
+		<Item name="DaKaiWenJianSuoZaiWeiZhi" text="Ouvrir emplacement" />
+		<Item name="CheXiaoMoRenSheZhi" text="Annuler par défaut" />
+		<Item name="MoRenSheZhi" text="Param. par déf." />
+		<Item name="DuQu" text="Rappeler" />
+		<Item name="BoXingGeShi" text="Format de la forme d'onde" />
+		<Item name="WenJianGeShi" text="Format du fichier" />
+		<Item name="BaoCunShenCunChuShuJu" text="Sauvegarde des données LongStorage" />
+		<Item name="BaoCunShuJuZhong_QingDengDai" text="Sauvegarde des données, veuillez ne pas effectuer d'autres opérations！！！Current progress：" />
+		<Item name="BaoCun_HuiDiao" text="Sauvegarder&amp;&amp;Rappeler" />
+		<Item name="WenBenGeShi" text="Format du texte" />
+		<Item name="SheJi" text="Conception" />
+		<Item name="GuiYiHuaPinLv" text="Fréquence normalisée" />
+		<Item name="ZhiDing" text="Spécifier" />
+		<Item name="ZuiXiao" text="Min" />
+		<Item name="SheJiFangFa" text="Méthode de conception" />
+		<Item name="XiangYingLeiXing" text="Type de réponse" />
+		<Item name="DiTong" text="Passe-bas" />
+		<Item name="MoBan" text="Modèle" />
+		<Item name="FuPin" text="AFR" />
+		<Item name="XiangPin" text="PFR" />
+		<Item name="ChongJiXiangYing" text="IR" />
+		<Item name="LingJiDianTu" text="Tracé P-Z" />
+		<Item name="WindowType_Rectangle" text="Rectangle" />
+		<Item name="JieShu" text="Commande" />
+		<Item name="QueDing" text="OK" />
+		<Item name="JiaZai" text="Charger" />
+		<Item name="QuXiao" text="Annuler" />
+		<Item name="JianPan" text="Clavier" />
+		<Item name="LvBoQiSheJi" text="Conception du filtre" />
+		<Item name="TongDaoC1" text="Canal C1" />
+		<Item name="KuoZhanTongDaoZ1" text="Canal d'expansion Z1" />
+		<Item name="TongDaoC2" text="Canal C2" />
+		<Item name="KuoZhanTongDaoZ2" text="Canal d'expansion Z2" />
+		<Item name="CeLiang" text="Mesure" />
+		<Item name="TongDaoC3" text="Canal C3" />
+		<Item name="KuoZhanTongDaoZ3" text="Canal d'expansion Z3" />
+		<Item name="TongDaoC4" text="Chaîne C4" />
+		<Item name="KuoZhanTongDaoZ4" text="Canal d'expansion Z4" />
+		<Item name="BangZhu" text="Aide" />
+		<Item name="ShuXueTongDao" text="Chaîne mathématique" />
+		<Item name="CanKaoTongDaoR1" text="Canal de référence R1" />
+		<Item name="FangZhenBoXing" text="Formes d'onde de simulation" />
+		<Item name="CanKaoTongDao" text="Canal de référence" />
+		<Item name="CanKaoTongDaoR2" text="Canal de référence R2" />
+		<Item name="LuoJiTongDao" text="Canal logique" />
+		<Item name="CanKaoTongDaoR3" text="Canal de référence R3" />
+		<Item name="TuiChu" text="Quitter" />
+		<Item name="CanKaoTongDaoR4" text="Canal de référence R4" />
+		<Item name="GuanJi" text="Fermeture" />
+		<Item name="XinHaoYuanAWG1" text="Source du signal Awg1" />
+		<Item name="XinHaoYuanAWG2" text="Source du signal Awg2" />
+		<Item name="CaiJi" text="Acquisition" />
+		<Item name="ShiJi" text="Base de temps" />
+		<Item name="ChuFa" text="Déclenchement manuel" />
+		<Item name="ZuiXiaoHua" text="Minimiser" />
+		<Item name="JianXiaoWuLiDangWei" text="Diminuer le rapport physique" />
+		<Item name="ZengDaWuLiDangWei" text="Augmenter le rapport physique" />
+		<Item name="DaYin" text="Imprimer" />
+		<Item name="JianXiaoPianZhi" text="Réduire le biais" />
+		<Item name="ZengDaPianZhi" text="Augmenter les biais" />
+		<Item name="BaoCunSheZhi" text="Sauvegarder les paramètres" />
+		<Item name="JianXiaoShiJi" text="Diminution de la base de temps" />
+		<Item name="ZengDaShiJi" text="Augmenter la base de temps" />
+		<Item name="DuQuSheZhi" text="Lire les paramètres" />
+		<Item name="JianXiaoChuFaShenDu" text="Diminuer la profondeur de déclenchement" />
+		<Item name="ZengDaChuFaShenDu" text="Augmenter la profondeur de déclenchement" />
+		<Item name="BaoCunPingMu" text="Sauvegarder l'écran" />
+		<Item name="JianXiaoChuFaDianPing" text="Diminuer le niveau de déclenchement" />
+		<Item name="ZengDaChuFaDianPing" text="Augmenter le niveau de déclenchement" />
+		<Item name="JianXiaoSpin" text="Diminuer l'essorage" />
+		<Item name="ZengDaSpin" text="Augmenter la rotation" />
+		<Item name="HuiFuChuChangSheZhi" text="Rétablir les paramètres d'usine" />
+		<Item name="QieHuanXianShiChuang" text="Fenêtre d'affichage basculante" />
+		<Item name="ZiDongSheZhi" text="Réglage automatique" />
+		<Item name="CanShuKuaiZhao" text="Aperçu des paramètres" />
+		<Item name="DianYaBiao" text="DVM" />
+		<Item name="JianZhi" text="Valeur clé" />
+		<Item name="KuaiJieJianShuoMing" text="Description des touches de raccourci" />
+		<Item name="YanChi" text="Délai" />
+		<Item name="CeLiangXiang" text="Articles" />
+		<Item name="DangQianZhi" text="Valeur" />
+		<Item name="KuaiSuYanTu" text="Diagramme de l'œil rapid" />
+		<Item name="YanTuCanShu" text="Paramètres du diagramme de l'œil" />
+		<Item name="XinDaoFangZhen" text="Simulation de canal" />
+		<Item name="JieShouDuanJunHeng" text="Égalisation du récepteur" />
+		<Item name="XuanZeWenJian" text="Sélectionnez un fichier" />
+		<Item name="Jitter_YanTu" text="Jitter : Diagramme de l'œil" />
+		<Item name="JitterTrend()" text="  TIE Tendance" />
+		<Item name="JitterSpectrum()" text="  Spectre TIE" />
+		<Item name="JitterHist()" text="    Histogramme TIE" />
+		<Item name="JitterEye()" text="  Diagramme de l'œil" />
+		<Item name="JitterBathWave()" text="  Courbe de la baignoire" />
+		<Item name="JitterQWave()" text="  Courbe du facteur Q" />
+		<Item name="XunZhaoBiTeLv" text="Trouver le débit binaire" />
+		<Item name="BiTeLv" text="Débit binaire" />
+		<Item name="ChangPinShiZhong" text="Horloge constante" />
+		<Item name="ShiZhongHuiFuFangFa" text="Méthode de récupération de l'horloge" />
+		<Item name="ShuJuMoShiChangDu" text="Longueur du motif de données" />
+		<Item name="BiJiaoYuZhi" text="Seuil de comparaison" />
+		<Item name="TuXingShiNeng" text="Activation des graphiques" />
+		<Item name="DouDongCanShu" text="Paramètres de gigue" />
+		<Item name="PinPuTuPanJueMenXian" text="Seuil de décision du spectre" />
+		<Item name="ZhiFangTuZhuTiShu" text="Histogramme Nombre de barres" />
+		<Item name="TuXingXuanZe" text="Sélection des graphiques" />
+		<Item name="QuShiTu" text="Tendance" />
+		<Item name="YanTuBaoHeDu" text="Saturation de l'eyediagramme" />
+		<Item name="BeiZhu" text="Note" />
+		<Item name="DouDongFenXiCanShu" text="Paramètres d'analyse de gigue" />
+		<Item name="LeiXing_1" text="Type I" />
+		<Item name="LeiXing_2" text="Type II" />
+		<Item name="PLLMoShi" text="Mode PLL" />
+		<Item name="ZiRanPinLv" text="Fréquence naturelle" />
+		<Item name="ZuNiYinZi" text="Facteur d'amortissement" />
+		<Item name="JieZhiXiShu" text="Coefficient de coupure" />
+		<Item name="JieZhiPinLv" text="Fréquence de coupure" />
+		<Item name="DouDongFenXi" text="Analyse de la gigue" />
+		<Item name="JianPanBanWeiZhaoDao" text="Clavier introuvable" />
+		<Item name="ChuangTiMingChengBuNengWeiKong" text="Le nom du formulaire ne peut être vide" />
+		<Item name="GongNengJieGuoMianBan" text="Résultats" />
+		<Item name="CanShu" text="Paramètres" />
+		<Item name="JieZhiPinLv1" text="Fréquence de coupure 1" />
+		<Item name="ZiDingYiLvBoQi" text="Filtre personnalisé" />
+		<Item name="JieZhiPinLv2" text="Fréquence de coupure 2" />
+		<Item name="DangQianShuJuCaiYangLv" text="Échantillon actuel de données" />
+		<Item name="ZhuTiShu" text="Nombre de barres" />
+		<Item name="ZhiFangTuCanShu" text="Paramètres de l'histogramme" />
+		<Item name="ZiDong" text="Automatique" />
+		<Item name="ShouDong" text="Manuel" />
+		<Item name="CanKaoDianPingSheZhi" text="Réglage du niveau de référence" />
+		<Item name="DiCanKaoZhi" text="Faible valeur de référence" />
+		<Item name="DiZhi___DingZhi" text="Base - Dessus" />
+		<Item name="ZuiXiaoZhi___ZuiDaZhi" text="Min - Max" />
+		<Item name="Ling___ZuiXiaoZhi" text="Zéro - Min" />
+		<Item name="DiZhi___DingZhi" text="Base - Dessus" />
+		<Item name="XunDingFangShi" text="Méthode de recherche par le haut" />
+		<Item name="CanKaoDanWei" text="Unité de référence" />
+		<Item name="GaoCanKaoZhi" text="Valeur de référence élevée" />
+		<Item name="ZhongCanKaoZhi" text="Valeur de référence moyenne" />
+		<Item name="QiTa" text="Autre" />
+		<Item name="Wu" text="Aucun" />
+		<Item name="XuanZe" text="OK" />
+		<Item name="LabelVisiblity" text="ÉtiquetteVisible" />
+		<Item name="XuanZeCeLiangCanShu" text="Sélection des paramètres de mesure" />
+		<Item name="PingJunZhi" text="Moyenne" />
+		<Item name="ZuiDaZhi" text="Maximum" />
+		<Item name="ZuiXiaoZhi" text="Minimum" />
+		<Item name="BiaoZhunCha" text="Écart-type" />
+		<Item name="CiShu" text="Temps" />
+		<Item name="CanShuCeLiang" text="Mesure des paramètres" />
+		<Item name="CaoZuo" text="Fonctionnement" />
+		<Item name="CanShuSheZhi" text="Paramètres" />
+		<Item name="YunSuanSheZhi" text="Fonctionnement" />
+		<Item name="TongJi" text="Statistiques" />
+		<Item name="ZhiShiQi" text="Indicateur" />
+		<Item name="TongGuoShiBaiCeShi" text="Test de réussite et d'échec" />
+		<Item name="MeiDuanMingZhongShu_" text="Nombre de visites par segment :" />
+		<Item name="P_FZhuangTai" text="Statut P/F" />
+		<Item name="XianShiCeShiMoBan" text="Modèle de test d'affichage" />
+		<Item name="YunXing" text="Exécuter" />
+		<Item name="BiaoZhunCeShiMoBan" text="Modèle de test standard" />
+		<Item name="SuoDingMoBan" text="Verrouiller les modèles" />
+		<Item name="ChuangJian" text="Établir" />
+		<Item name="ShuiPingRongXian" text="Tolérance horizontale" />
+		<Item name="CanKaoYuan" text="Source de référence" />
+		<Item name="ChuiZhiRongXian" text="Tolérance verticale" />
+		<Item name="JiXianCeShiMoBan" text="Modèles de test de limite" />
+		<Item name="JiXianCeShi" text="Test de limite" />
+		<Item name="BiaoZhunCeShi" text="Test standard" />
+		<Item name="CeShi" text="Test" />
+		<Item name="BoXingZongShu" text="Forme d'onde totale" />
+		<Item name="ZongShiJian" text="Durée totale" />
+		<Item name="ZongWeiLiCiShu" text="Total des infractions" />
+		<Item name="CeShiJieShuTiaoJian" text="Conditions de fin de test" />
+		<Item name="YingKaoBei" text="Copie papier" />
+		<Item name="MaiChong" text="Impulsion" />
+		<Item name="BaoJing" text="Alarme" />
+		<Item name="CeShiShiBaiCaoZuo" text="Échec du test Opération" />
+		<Item name="DianLiuYuan" text="Courant" />
+		<Item name="DianYaYuan" text="Tension" />
+		<Item name="DianYuanZhiLiang" text="Qualité de l'énergie" />
+		<Item name="DianYuanFenXi" text="Analyse de la puissance" />
+		<Item name="BoXingWeiFenFenXi_CeLiangKaiGuanJingTiGuanZaiKaiGuanGuoChengZhongDianYaHuoDianLiuBoXingDeBianHuaLv__n_nCeLiangBuZou__n1_JiangChaFenTanZhen_DuanYuJingTiGuanDeLouJiXiangLian__n2_ChaFenTanZhen_DuanLianJieDaoJingTiGuanDeYuanJi__n3_" text="Analyse de différenciation de forme d'onde: Mesure le taux de changement de la forme d'onde de tension ou de courant d'un transistor de commutation pendant le processus de commutation. / \nÉtapes de mesure: \n1. Connectez l'extrémité + de la sonde différentielle au drain du transistor. \n2. L'extrémité - de la sonde différentielle est connectée à la source du transistor. \n3" />
+		<Item name="JiangDianLiuTanTouYuJingTiGuanDeYuanJiXiangLian" text="Sonde de courant à la source du transistor connecter." />
+		<Item name="BoXingWeiFenLianJieShiYi" text="Schéma de connexion de la différenciation des formes d'onde" />
+		<Item name="BoXingWeiFen" text="Différenciation des formes d'onde" />
+		<Item name="WeiFenYuan" text="Source différentielle" />
+		<Item name="XianShiWeiFenBoXing" text="Affichage de la forme d'onde différentielle" />
+		<Item name="DianYuanXiaoLvFenXiMiaoShu" text="Analyse de l'efficacité de l'alimentation: l'analyse de l'efficacité de l'alimentation mesure la puissance d'entrée et la puissance de sortie de l'alimentation, puis calcule l'efficacité de l'alimentation en fonction du rapport entre la puissance de sortie et la puissance d'entrée.&#xA;&#xA;Étapes de mesure: Connectez les sondes de tension et de courant comme indiqué sur le schéma." />
+		<Item name="DianYuanXiaoLvLianJieShiYi" text="Schéma de connexion de l'efficacité énergétique" />
+		<Item name="ShuRuDuan" text="Port d'entrée" />
+		<Item name="ShuChuDuan" text="Port de sortie" />
+		<Item name="DianYuanXiaoLv" text="Efficacité énergétique" />
+		<Item name="ShuRuDuanDianYaYuan" text="Source de tension d'entrée" />
+		<Item name="ShuRuDuanDianLiuYuan" text="Source de courant d'entrée" />
+		<Item name="ShuChuDuanDianYaYuan" text="Source de tension de sortie" />
+		<Item name="ShuChuDuanDianLiuYuan" text="Source de courant de sortie" />
+		<Item name="ZhuanHuanLeiXing" text="Type de conversion" />
+		<Item name="CeShiLeiXing" text="Type de test" />
+		<Item name="CaiJiShiJian" text="Temps de collecte" />
+		<Item name="TurnOn" text="Heures d'ouverture" />
+		<Item name="TurnOnOffTurnOnTime" text="Heures d'ouverture" />
+		<Item name="TurnOff" text="Heures de fermeture" />
+		<Item name="TurnOnOffTurnOffTime" text="Heures de fermeture" />
+		<Item name="LangYongDianLiuCeLiang_LangYongDianLiuShiZhiSheBeiDiYiCiKaiJiShiXiShouDeZuiDaShunShiShuRuDianLiu__n_nCeLiangBuZou_JiangDianLiuTanTouAnZuoCeDianLuTuJinXingLianJie" text="Courant de surtension: L'alimentation à découpage, à l'instant de la mise sous tension, circule dans le dispositif d'alimentation avec un courant de crête bien supérieur au courant stable.&#xA;&#xA;Étapes de mesure: Connectez la sonde de courant comme indiqué." />
+		<Item name="LangYongDianLiuLianJieShiYi" text="Schéma de connexion du courant de pointe" />
+		<Item name="LangYongDianLiu" text="Courant d'appel" />
+		<Item name="XianShiDianLiuFengZhiZhuiZongBoXing" text="Afficher la forme d'onde de suivi du courant de pointe" />
+		<Item name="DiaoZhiFenXi_DiaoZhiFenXiTongChangYongYuBiaoZhengCongZhiLiuShuChuDaoKaiGuanJingTiGuanZhaJiZhongDuanDeMaiKuanDiaoZhiFanKui__n_nCeLiangBuZou_JiangDianYaTanTouHeDianLiuTanTouAnZuoCeDeCeLiangYuanLiTuLianJieHao_" text="Analyse de modulation: L'analyse de modulation est couramment utilisée pour caractériser la rétroaction de modulation de largeur d'impulsion de la sortie continue à la borne de grille du transistor de commutation. \nÉtapes de mesure: Connectez la sonde de tension et la sonde de courant selon le schéma de principe de mesure à gauche.&#xA;" />
+		<Item name="DiaoZhiFenXiLianJieShiYi" text="Schéma de connexion de l'analyse de modulation" />
+		<Item name="ZhengMaiKuan" text="Largeur d'impulsion positive" />
+		<Item name="Positive" text="Positif" />
+		<Item name="FuMaiKuan" text="Largeur d'impulsion négative" />
+		<Item name="Negative" text="Négatif" />
+		<Item name="CeLiangCanShu" text="Paramètres de mesure" />
+		<Item name="DiaoZhiFenXi" text="Analyse de la modulation" />
+		<Item name="DiaoZhiYuan" text="Source de modulation" />
+		<Item name="XianShiCanShuZhuiZongBoXing" text="Afficher la forme d'onde de suivi des paramètres" />
+		<Item name="ShunTaiFenXiCeLiang_ShunTaiFenXiZhuYaoShiCeLiangLeZhiLiuShuChuDeFuZaiShunTaiXiangYing_JiZaiFuZaiBianHuaQiJianZhiLiuShuChuWenDingSuoXuDeShiJian__n_nCeLiangBuZou_JiangDianLiuTanTouHeDianYaTanTouCanKaoZuoBianLianJieTuShi" text="Mesure d'analyse transitoire: L'analyse transitoire mesure principalement la réponse transitoire de charge de la sortie CC, c'est-à-dire le temps nécessaire à la stabilisation de la sortie CC lors des changements de charge. \nÉtapes de mesure: Connectez la sonde de courant et la sonde de tension en se référant au schéma à gauche pour la connexion&#xA;" />
+		<Item name="ShunTaiFenXiLianJieShiYi" text="Analyse transitoire Schéma de connexion" />
+		<Item name="ShunTaiXiangYing" text="Réponse transitoire" />
+		<Item name="WenDingShuChuDianYa" text="Tension de sortie stable" />
+		<Item name="DianYaGuoChong" text="Surtension" />
+		<Item name="Power1_XieBoFenXi_" text="Power1 (Analyse harmonique)" />
+		<Item name="XieBoFenXi_XieBoCeShiZhuYaoShiCeLiangDianYuanShuRuDuanDeDianLiu_DianYaDeXieBoQingKuang_TongGuoCeChuShuRuDianYuanXianShangDeDianYaYuDianLiuDeChuQiXieBoZhiLaiFenXiDianYuanZaiShuRuGuoChengSuoShouDeYingXiang__n_nCeLiangBuZou_JiangDianYaTanTouHeDianLiuTanTouAnZuoCeDeCeLiangYuanLiTuLianJieHao_" text="Analyse harmonique: Le test harmonique mesure principalement la situation harmonique du courant/tension à l'extrémité d'entrée de l'alimentation. En mesurant la tension et le courant sur la ligne d'alimentation d'entrée, la valeur harmonique est obtenue pour analyser l'impact de l'alimentation pendant le processus d'entrée. &#xA;Étapes de mesure: Connecter les sondes de tension et de courant selon le schéma de principe de mesure à gauche.&#xA;" />
+		<Item name="XieBoFenXiLianJieShiYi" text="Schéma de connexion de l'analyse harmonique&#xA;" />
+		<Item name="XieBoFenXi" text="Analyse harmonique" />
+		<Item name="PinLv_Hz_" text="Fréquence (Hz)" />
+		<Item name="LiangZhi___" text="Valeur Pourcentage (%)" />
+		<Item name="LiangZhiJunFangGen" text="RMS" />
+		<Item name="XiangWei_°_" text="Phase(°)" />
+		<Item name="JieGuoBiao" text="Tableau des résultats" />
+		<Item name="zhuizongtu" text="Poursuite de l'activité" />
+		<Item name="QiCi" text="Impair" />
+		<Item name="OuCi" text="Pair" />
+		<Item name="QuanBu" text="Entier" />
+		<Item name="XieBoYuan" text="Harmonique" />
+		<Item name="XieBoLeiXing" text="Type harmonique&#xA;" />
+		<Item name="XinHaoLianJieShiYi" text="Guide" />
+		<Item name="XieBoGeShu" text="Nombre harmonique" />
+		<Item name="PinLvCanKao" text="Référence de fréquence" />
+		<Item name="FuDuSheZhi" text="Réglage de l'amplitude" />
+		<Item name="KeBianFuDuSheZhi" text="Paramètres" />
+		<Item name="Power1_HuanLuFenXi_" text="Puissance 1 (analyse en boucle)" />
+		<Item name="HuanLuFenXi_GeiKaiGuanDianYuanDianLuZhuRuYiGePinLvBuDuanBianHuaDeZhengXianBoXinHaoZuoWeiGanRaoXinHao_GenJuQiShuChuQingKuangLaiPanDuanGaiDianLuXiTongDuiGeGePinLvGanRaoXinHaoDeDiaoZhengNengLi__n_nCeLiangBuZou_JiangDianYaTanTou1_2HeAWGShuChuAnYuanLiTuLianJie_" text="Analyse de boucle: Injecter un signal sinusoïdal à fréquence variable dans le circuit de l'alimentation à découpage comme signal d'interférence, et juger de la capacité du système à ajuster les signaux d'interférence de différentes fréquences en fonction de sa situation de sortie.&#xA;&#xA;Étapes de mesure: Connecter les sondes de tension 1, 2 et les sorties AWG selon le schéma." />
+		<Item name="HuanLuFenXiLianJieShiYi" text="Schéma de connexion de l'analyse des boucles" />
+		<Item name="HuanLuFenXi" text="Analyse des boucles" />
+		<Item name="ShuJuLieBiao" text="Liste des données" />
+		<Item name="BoTeTu" text="Tracé de Bode" />
+		<Item name="LianXu" text="Continuité" />
+		<Item name="DanCi" text="Célibataire" />
+		<Item name="SaoMiaoMoShi" text="Mode rouleau" />
+		<Item name="ShuChuYuan" text="Source de sortie" />
+		<Item name="ShuRuYuan" text="Source d'entrée" />
+		<Item name="ShuChuDianYaYuan" text="Source de tension d'entrée" />
+		<Item name="ShuChuDianLiuYuan" text="Source de courant d'entrée" />
+		<Item name="ShuRuDianYaYuan" text="Source de tension de sortie" />
+		<Item name="ShuRuDianLiuYuan" text="Source de courant de sortie" />
+		<Item name="KaiShiPinLv" text="Fréquence de départ" />
+		<Item name="GaoZu" text="HighZ" />
+		<Item name="ZuKang" text="Charge" />
+		<Item name="TingZhiPinLv" text="Fréquence d'arrêt" />
+		<Item name="SaoMiaoDian" text="Point de balayage" />
+		<Item name="HengDing" text="Fixe" />
+		<Item name="KeBian" text="Variable" />
+		<Item name="FuDuMoShi" text="Mode Amplitude" />
+		<Item name="ChuFaZhuangTaiJianCha" text="Vérifier l'état du déclenchement" />
+		<Item name="YunXingFenXi" text="Exécuter" />
+		<Item name="Power1_DianYuanZhiLiang_" text="Power1 (Qualité de l'alimentation)" />
+		<Item name="DianYuanZhiLiangFenXi_CeLiangShuRuDianYaHeDianLiuYiJiChanShengDeGongLv_CeShiJieGuoFanYingLeShuRuJiaoLiuXianLuDeZhiLiang__n_nCeLiangBuZou_JiangDianYaTanTouHeDianLiuTanTouAnTuShiLianJie_" text="Analyse de la qualité de l'alimentation: Mesurez la tension d'entrée, le courant et la puissance générée, et les résultats du test reflètent la qualité de la ligne d'alimentation en courant alternatif.&#xA;&#xA;Étapes de mesure: Connectez les sondes de tension et de courant comme indiqué sur le schéma." />
+		<Item name="GongLvTu" text="Diagramme de puissance" />
+		<Item name="ShuRuGongLvTu" text="Diagramme de puissance d'entrée" />
+		<Item name="ShuChuGongLvTu" text="Diagramme de puissance de sortie" />
+		<Item name="DianYaZhuanHuanSuLvTu" text="dv/dt Diagramme" />
+		<Item name="DianLiuZhuanHuanSuLvTu" text="di/dt Diagramme" />
+		<Item name="DianYuanZhiLiangLianJieShiYi" text="Schéma de connexion de la qualité de l'alimentation" />
+		<Item name="Power1_KaiGuanSunHao_" text="Power1 (Perte de commutation)" />
+		<Item name="KaiGuanSunHao_KaiGuanSunHaoFenXiCeLiangKaiGuanQiJianZaiJingTiGuanDeKaiGuanJieDuanHeChuanDaoJieDuanDeGongLvHeNengLiangSunShi__n_nCeLiangBuZou_JiangDianYaTanTouHuoDianLiuTanTouAnTuShiJinXingLianJie_" text="Pertes de commutation: L'analyse des pertes de commutation mesure les pertes de puissance et d'énergie des dispositifs de commutation pendant les phases de commutation et de conduction des transistors.&#xA;&#xA;Étapes de mesure: Connectez la sonde de tension ou de courant selon le schéma." />
+		<Item name="KaiGuanSunHaoCeShiLianJieShiYi" text="Schéma de connexion du test de perte de commutation" />
+		<Item name="KaiGuanSunHao" text="Perte de commutation" />
+		<Item name="Power1_WenBoFenXi_" text="Power1 (Analyse d'ondulation)" />
+		<Item name="WenBoFenXi_CeLiangDianYuanShuChuZhiLiuXinHaoDeFengDaoFengJiZhi_KeHengLiangDianYuanDeDianYaDiaoJieNengLiHeLvBoDeZhiLiang__n_nCeLiangBuZou_JiangDianYaTanTouHuoDianLiuTanTouAnTuShiJinXingLianJie_" text="Analyse d'ondulation : Mesurez la valeur extrême crête à crête du signal DC émis par l'alimentation, ce qui permet de mesurer la capacité de régulation de tension et la qualité de filtrage de l'alimentation.&#xA;&#xA;Étapes de mesure : Connectez la sonde de tension selon le schéma." />
+		<Item name="WenBoFenXiLianJieShiYi" text="Schéma de connexion de l'analyse d'ondulation" />
+		<Item name="WenBoFenXi" text="Analyse d'ondulation" />
+		<Item name="WenBoYuan" text="Ripple Source" />
+		<Item name="Power1_AnQuanGongZuoQu_" text="Power1 (Zone de fonctionnement sécurisé)" />
+		<Item name="AnQuanGongZuoQu_CeLiangShuRuDianYaHeDianLiuYiJiChanShengDeGongLv_CeShiJieGuoFanYingLeShuRuJiaoLiuXianLuDeZhiLiang__n_nCeLiangBuZou_JiangDianYaTanTouHeDianLiuTanTouAnTuShiLianJie_" text="SOA : Un graphique X-Y mesurant la tension et le courant du dispositif de commutation. Le modèle SOA précisément régulé fournit des résultats de passage/échec pour les tests de spécification des composants.&#xA;&#xA;Étapes de mesure : Connectez la sonde de tension et la sonde de courant comme indiqué sur le schéma." />
+		<Item name="AnQuanGongZuoQu" text="SOA" />
+		<Item name="Rdson_RdsonFenXiCeLiang" text="RDS (on): l'analyse RDS (on) mesure la résistance équivalente du dispositif de commutation dans l'état stable de conduction du transistor.&#xA;&#xA;Étape de mesure: Connectez la sonde de tension ou de courant comme indiqué." />
+		<Item name="RdsonCeShiLianJieShiYi" text="RDS (on) schéma de connexion" />
+		<Item name="KaiQiGuanBiShiJian" text="Heures d'ouverture / fermeture" />
+		<Item name="KaiQiGuanBiShiJian_FenXiCeLiang" text="Temps d'ouverture: L'analyse du temps d'ouverture mesure le temps de réponse d'un dispositif de puissance à une tension d'entrée d'alimentation ouverte atteignant une tension de crête de 10% à une tension de sortie atteignant une tension de crête de sortie de 90%..&#xA;&#xA;Temps d'arrêt: L'analyse du temps d'arrêt mesure le temps de réponse d'un dispositif de puissance lorsque la tension d'entrée atteint 10% de la tension de crête et que la tension de sortie atteint 10% de la tension de crête de sortie après l'arrêt de l'alimentation.&#xA;&#xA;Étape de mesure: Connectez la sonde de tension comme indiqué." />
+		<Item name="KaiQiGuanBiShiJianCeShiLianJieShiYi" text="Temps d'ouverture / fermeture schéma de connexion" />
+		<Item name="ShuRuFengZhiDianYa" text="Tension crête d'entrée" />
+		<Item name="ShuChuFengZhiDianYa" text="Tension de crête de sortie" />
+		<Item name="SheZhiShuChuFengZhiDianYa" text="Régler la tension de crête d'entrée" />
+		<Item name="SheZhiShuRuFengZhiDianYa" text="Régler la tension de crête de sortie" />
+		<Item name="SheZhiCaiJiShiJian" text="Régler l'heure d'acquisition" />
+		<Item name="ZhuanHuanSuLv" text="Taux de conversion" />
+		<Item name="ZhuanHuanSuLvMiaoShu" text="Taux de conversion: mesure le taux de conversion de courant(di/dt) et le taux de conversion de tension(dv/dt) de l'alimentation.&#xA;&#xA;Étapes de mesure: Connectez les sondes de tension et de courant comme indiqué sur le schéma." />
+		<Item name="ZhuanHuanSuLvLianJieShiYi" text="Schéma de connexion de taux de conversion" />
+		<Item name="SlewRateVoltageRaiseRateMax" text="dv/dt(Rise)Max" />
+		<Item name="SlewRateVoltageRaiseRateMin" text="           Min" />
+		<Item name="SlewRateVoltageRaiseRatePk2Pk" text="           Pk-Pk" />
+		<Item name="SlewRateVoltageFallRateMax" text="dv/dt(Fall)Max" />
+		<Item name="SlewRateVoltageFallRateMin" text="           Min" />
+		<Item name="SlewRateVoltageFallRatePk2Pk" text="           Pk-Pk" />
+		<Item name="SlewRateCurrentRaiseRateMax" text="di/dt(Rise)Max" />
+		<Item name="SlewRateCurrentRaiseRateMin" text="           Min" />
+		<Item name="SlewRateCurrentRaiseRatePk2Pk" text="           Pk-Pk" />
+		<Item name="SlewRateCurrentFallRateMax" text="di/dt(Fall)Max" />
+		<Item name="SlewRateCurrentFallRateMin" text="           Min" />
+		<Item name="SlewRateCurrentFallRatePk2Pk" text="           Pk-Pk" />
+		<Item name="DuiShu" text="Logarithme" />
+		<Item name="ZuiDaDianLiu" text="Courant maximum" />
+		<Item name="ZuiDaGongLv" text="Puissance maximale" />
+		<Item name="ZuiDaDianYa" text="Tension maximale" />
+		<Item name="ZuoBiaoLeiXing" text="Type de coordonnées" />
+		<Item name="WeiLiShiTingZhi" text="Arrêt d'urgence" />
+		<Item name="XZhouZuiDaZhi" text="Axe X Max" />
+		<Item name="XZhouZuiXiaoZhi" text="Axe X Min" />
+		<Item name="YZhouZuiXiaoZhi" text="Axe Y Min" />
+		<Item name="YZhouZuiDaZhi" text="Axe Y Max" />
+		<Item name="BtnSOAText" text="Forme d'onde SOA" />
+		<Item name="BtnEditMaskText" text="Modifier le masque" />
+		<Item name="BtnLoadMaskText" text="Masque de charge" />
+		<Item name="BtnSaveMaskText" text="Sauvegarder le masque" />
+		<Item name="DefineMask" text="Définir le masque" />
+		<Item name="BtnAddText" text="Ajouter" />
+		<Item name="BtnDeleteText" text="Supprimer" />
+		<Item name="BtnSaveText" text="Économiser" />
+		<Item name="PSRRDescription" text="PSRR: Un paramètre important pour mesurer la capacité d'inhibition d'un circuit aux variations de la tension d'alimentation. Il décrit la mesure dans laquelle un circuit électrique, lorsque la tension d'alimentation fluctue, est capable de supprimer cette fluctuation et de maintenir la sortie stable. &#xA;&#xA;Étapes de mesure: Connecter les sondes de tension 1, 2 et les sorties AWG selon le schéma." />
+		<Item name="PSRRLianJieShiYi" text="Schéma de connexion PSRR" />
+		<Item name="TiaoZhiFenXi" text="Analyse de modulation" />
+		<Item name="ModulationAnalysisDescription" text="Analyse de modulation: améliorer l'efficacité, la stabilité et la fiabilité du système en mesurant et en analysant des paramètres tels que la fréquence, la période, le rapport cyclique et la largeur d'impulsion du signal de modulation. &#xA;&#xA;Étapes de mesure: Connectez les sondes de tension et de courant comme indiqué sur le schéma" />
+		<Item name="TiaoZhiFenXiLianJieShiYi" text="Schéma de connexion d'analyse de modulation" />
+		<Item name="ModulationPeriod" text="Le cycle" />
+		<Item name="ModulationFrequency" text="Fréquence" />
+		<Item name="ModulationPDuty" text="Ratio d'occupation positif" />
+		<Item name="ModulationNDuty" text="Ratio d'occupation négatif" />
+		<Item name="ModulationPWidth" text="Largeur d'impulsion positive" />
+		<Item name="ModulationNWidth" text="Largeur d'impulsion négative" />
+		<Item name="ModulationRiseTime" text="Temps de montée" />
+		<Item name="ModulationFallTime" text="Temps de descente" />
+
+		<Item name="QuanPing" text="Plein écran" />
+		<Item name="FangXiang" text="Direction" />
+		<Item name="HengXiang" text="Paysage" />
+		<Item name="ZongXiang" text="Portrait" />
+		<Item name="XuanZeDaYinJi" text="Sélectionnez l'imprimante" />
+		<Item name="FuDuDuiShiJian" text="Amplitude vs. Temps" />
+		<Item name="FuDuDangWei" text="Niveau d'amplitude" />
+		<Item name="GongLv_Linear_" text="Puissance (linéaire)" />
+		<Item name="STFTBuJin" text="Pas STFT" />
+		<Item name="STFTFenXiChangDu" text="Longueur d'analyse STFT" />
+		<Item name="PinLvDuiShiJian" text="Fréquence vs. Temps" />
+		<Item name="PinLvDangWei" text="Niveau de fréquence" />
+		<Item name="ShuiPingDangWei" text="Niveau horizontal" />
+		<Item name="KuaDu" text="Portée" />
+		<Item name="ShuiPingZhongXin" text="Centre horizontal" />
+		<Item name="ZhongXinPinLv" text="Fréquence centrale" />
+		<Item name="ZhongZhiPinLv" text="Fréquence de terminaison" />
+		<Item name="FFTChangDu" text="Longueur de la FFT" />
+		<Item name="XiangWeiDuiShiJian" text="Phase Vs. Temps" />
+		<Item name="XiangWeiPu" text="Spectre de phase" />
+		<Item name="PuBuTu" text="Diagramme en cascade" />
+		<Item name="XiangWeiDuiPinLv" text="Phase Vs. Fréquence" />
+		<Item name="ChuiZhiDangWei" text="Échelon vertical" />
+		<Item name="TongDaoSheZhi" text="Chaîne" />
+		<Item name="ShuiPingSheZhi" text="Horizontal" />
+		<Item name="GuiJiSheZhi" text="Trajectoire" />
+		<Item name="STFTSheZhi" text="Stft" />
+		<Item name="_ShePinTongDao" text="Canal Rf" />
+		<Item name="PinLvPuXian" text="Spectre de fréquences" />
+		<Item name="CaiYang" text="Échantillonnage" />
+		<Item name="PingJun" text="Moyenne" />
+		<Item name="ZuiXiaoZhiBaoChi" text="Maintien minimum" />
+		<Item name="ZuiDaZhiBaoChi" text="Maintien maximum" />
+		<Item name="ZhengChang" text="Normal" />
+		<Item name="CanKaoDianPing" text="Niveau de référence" />
+		<Item name="ChuangHanShu" text="Fct. fenêtre" />
+		<Item name="ZhongXinFuZhi" text="Amplitude centrale" />
+		<Item name="Chuang" text="Fenêtre" />
+		<Item name="BianYan" text="Pente" />
+		<Item name="Edge" text="Pente" />
+		<Item name="Pulse" text="Impulsion" />
+		<Item name="Timeout" text="Délai d'expiration" />
+		<Item name="Runt" text="Runt" />
+		<Item name="Window" text="Fenêtre" />
+		<Item name="Transition" text="Pente" />
+		<Item name="Pattern" text="Modèle" />
+		<Item name="SetupHold" text="Maintien de configuration" />
+		<Item name="Auto" text="Automatique" />
+		<Item name="ShangShengYan" text="S'élever" />
+		<Item name="XiaJiangYan" text="Chute" />
+		<Item name="OuHe" text="Accouplement" />
+		<Item name="TriggerOuHe" text="Couplage de déclenchement" />
+		<Item name="DianPing" text="Niveau" />
+		<Item name="ShuRuZuKang" text="Impédance d'entrée" />
+		<Item name="YaoCaiQuDeCaoZuo" text="Mesures à prendre" />
+		<Item name="BaoCunPeiZhi" text="Sauvegarder la configuration" />
+		<Item name="ShiJianCaoZuo" text="Opérations d'événements" />
+		<Item name="RuanJianSouSuo" text="Recherche de logiciels" />
+		<Item name="SouSuo" text="Recherche" />
+		<Item name="BoXingSouSuo" text="Recherche de forme d'onde" />
+		<Item name="SouSuoLeiXing_" text="Type de recherche :" />
+		<Item name="JieGuoShuLiang_" text="Nombre de résultats :" />
+		<Item name="BianHao" text="Nombre" />
+		<Item name="MiaoShu" text="Description" />
+		<Item name="SouSuoShiJianLieBiao" text="Liste des événements" />
+		<Item name="FuZhiDaoSouSuo" text="Copier le déclencheur pour la recherche" />
+		<Item name="SheZhiDaoChuFa" text="Copier la recherche vers le déclencheur" />
+		<Item name="GuanBiDangQianXiang" text="Fermer l'élément actuel" />
+		<Item name="GuanBiQuanBuXiang" text="Fermer tout" />
+		<Item name="SouSuoLeiXing" text="Type de recherche" />
+		<Item name="ChiXuShiJianShangXian" text="Limite supérieure de durée" />
+		<Item name="ChiXuShiJianXiaXian" text="Limite inférieure de durée" />
+		<Item name="DingYiShuRu" text="Définir les intrants" />
+		<Item name="LuoJiZiGeQueRen" text="Confirmation de la qualification logique" />
+		<Item name="DaYu" text="Plus que" />
+		<Item name="XiaoYu" text="Inférieur à" />
+		<Item name="FanWeiNei" text="Dans la plage" />
+		<Item name="Yu" text="Et" />
+		<Item name="Huo" text="Ou" />
+		<Item name="YuFei" text="Et non" />
+		<Item name="TiaoJian" text="Condition" />
+		<Item name="BaoCunJiePing" text="Sauvegarder la capture d'écran" />
+		<Item name="BaoCunBoXing" text="Sauvegarder la forme d'onde" />
+		<Item name="TingZhiCaiJi" text="Arrêter l'acquisition" />
+		<Item name="ChuFaShiJian" text="Événement de déclenchement" />
+		<Item name="CeLiangXianZhiShiBai" text="Échec de la limite de mesure" />
+		<Item name="ZhaoDaoSouSuoShiJian" text="Recherche d'événements" />
+		<Item name="MoBanCeShiMingZhong" text="Template Test Hits" />
+		<Item name="MoBanCeShiShiBai" text="Trouver des événements de recherche" />
+		<Item name="MoBanCeShiTongGuo" text="Test de gabarit réussi" />
+		<Item name="CeShiJieGuo" text="Résultats des tests" />
+		<Item name="BuShiHe" text="Inadapté" />
+		<Item name="BaoCunShu" text="Nombre de sauvegardes" />
+		<Item name="Zheng" text="Positif" />
+		<Item name="Fu" text="Négatif" />
+		<Item name="MaiChongKuanDuShangXian" text="Limite supérieure de la largeur d'impulsion" />
+		<Item name="MaiChongKuanDu" text="Largeur d'impulsion" />
+		<Item name="JiePingGeShi" text="Format de la capture d'écran" />
+		<Item name="WenJianMing" text="Nom de fichier" />
+		<Item name="BaoChiShiJian" text="Temps de maintien" />
+		<Item name="ShiZhongDianPing" text="Niveau d'horloge" />
+		<Item name="JianLi" text="Configuration" />
+		<Item name="BaoChi" text="Maintien" />
+		<Item name="JianLi_BaoChi" text="Configuration/Maintien" />
+		<Item name="ShuJuXiaXianDianPing" text="Niveau de limite inférieure des données" />
+		<Item name="ShuJuShangXianDianPing" text="Niveau de limite supérieure des données" />
+		<Item name="ShiZhongYuan" text="Source d'horloge" />
+		<Item name="JianLiShiJian" text="Temps de préparation" />
+		<Item name="ShiZhongBianYan" text="Front d'horloge" />
+		<Item name="ShuJuYuan" text="Source des données" />
+		<Item name="ChiXuShiJian" text="Durée de l'accord" />
+		<Item name="DianPingZhuangTai" text="État de niveau" />
+		<Item name="XieLv" text="Pente" />
+		<Item name="JinRu" text="Entrer" />
+		<Item name="WaiBu" text="Externe" />
+		<Item name="ChuangKouFanWei" text="Plage de fenêtre" />
+		<Item name="ShiJianTiaoJian" text="Conditions temporelles" />
+		<Item name="ChuangKouDianPingXiaXian" text="Limite inférieure du niveau de fenêtre" />
+		<Item name="ChuangKouDianPingShangXian" text="Limite supérieure du niveau de fenêtre" />
+		<Item name="XuanZeZhengXu" text="Sélectionner la séquence de trame" />
+		<Item name="ShunXuMoShi" text="Mode séquentiel" />
+		<Item name="DuiDie" text="Pile" />
+		<Item name="DieJia" text="Superposition" />
+		<Item name="XianShiLeiXing" text="Type d'affichage" />
+		<Item name="ZhengXuanZe" text="Sélection de trame" />
+		<Item name="JieShuZheng" text="Trame de fin" />
+		<Item name="QiShiZheng" text="Trame de début" />
+		<Item name="XuanDingZheng" text="Trame sélectionnée" />
+		<Item name="CanKaoZheng" text="Trame de référence" />
+		<Item name="XianShiCanKaoZheng" text="Afficher la trame de référence" />
+		<Item name="XuanJianMing" text="Nom" />
+		<Item name="ZhuangTai" text="Statut" />
+		<Item name="YiJiHuo" text="Activé" />
+		<Item name="WeiJiHuo" text="Désactivé" />
+		<Item name="QingXuanZeXuKeWenJian" text="Sélectionner le fichier de licence" />
+		<Item name="XuKeWenJian___lic" text="Fichier de licence|*.lic" />
+		<Item name="YiAnZhuangDeXuanJian_" text="Options installées :" />
+		<Item name="XingHao_" text="Modèle." />
+		<Item name="RuanJianBanBen_" text="Version du logiciel" />
+		<Item name="GuJianBanBen_" text="Version du firmware" />
+		<Item name="YingJianBanBen_" text="Version du matériel" />
+		<Item name="ChanPinXuHao_" text="Numéro de série" />
+		<Item name="ShengChanRiQi_" text="Date de production" />
+		<Item name="XiangXiXinXi" text="Informations détaillées" />
+		<Item name="YiChuXuKeZhengShu" text="Supprimer la licence" />
+		<Item name="AnZhuangXuKeZhengShu" text="Installer la licence" />
+		<Item name="XiTongXinXi" text="Système" />
+		<Item name="TiShi_QingZhengQueJieRuWaiChuFaXinHao_FouZeAWGWuXinHaoShuChu_" text="Conseil : Connecter correctement le signal de déclenchement externe, sinon aucune sortie de signal de l'AWG !" />
+		<Item name="ChuiZhiSheZhi" text="Vertical" />
+		<Item name="CaiJiSheZhi" text="Acquisition" />
+		<Item name="ChuFaSheZhi" text="Déclencheur" />
+		<Item name="ZiDongXiaoZheng" text="Calibrage automatique" />
+		<Item name="XiaoZheng" text="Calibrage" />
+		<Item name="ShuRuShuChu" text="Entrée &amp;&amp; Sortie" />
+		<Item name="TongBu" text="Synchronisation" />
+		<Item name="FuZhuShuRuXinHao" text="Signal d'entrée auxiliaire" />
+		<Item name="TongGuoCeShi" text="Test réussi" />
+		<Item name="FuZhuShuChuXinHao" text="Signal d'entrée auxiliaire" />
+		<Item name="WaiBuShiZhongSuoDingZhuangTai" text="État de verrouillage de l'horloge externe" />
+		<Item name="ShuaXin" text="Rafraîchir" />
+		<Item name="MoKuaiMing" text="Nom du module" />
+		<Item name="BanBenHao" text="Numéro de version" />
+		<Item name="GuJianXinXi_" text="Informations sur le micrologiciel :" />
+		<Item name="YiJiaZaiMoKuai_" text="Module chargé :" />
+		<Item name="XiangXiXinXi_" text="Informations détaillées" />
+		<Item name="JianTiZhongWen" text="Chinois simplifié" />
+		<Item name="FanTiZhongWen" text="Chinois traditionnel" />
+		<Item name="ShiJian_MuBiaoWenDu_TongDaoFengShanZhuanSu_CH1_CH2_CH3_CH4_Pcie_Fpga_Pcie_Board1_Pcie_Board2_Pro_Fpfa_Acq_Fpga_Acq_Board" text="Temps, Température cible, Vitesse du ventilateur du canal, CH1, CH2, CH3, CH4, Pcie_Fpga, Pcie_Board1, Pcie_Board2, Pro_Fpfa, Acq_Fpga, Acq_Board" />
+		<Item name="YouCeFengShan_" text="Ventilateur latéral droit :" />
+		<Item name="ZuoCeFengShan_" text="Ventilateur du côté gauche :" />
+		<Item name="YingPanDangQianWenDu" text="Température actuelle du disque dur" />
+		<Item name="YingPanMuBiaoWenDu" text="Température cible du disque dur" />
+		<Item name="CpuFengShanZhuanSu" text="Vitesse du ventilateur du processeur" />
+		<Item name="PcieFengShanZhuanSu" text="Vitesse du ventilateur Pcie" />
+		<Item name="ChnlFengShanZhuanSu" text="Vitesse du ventilateur Chnl" />
+		<Item name="TongDaoMuBiaoWenDu" text="Température cible du canal" />
+		<Item name="WeiFenCanShu_D_" text="Paramètre différentiel (d)" />
+		<Item name="JiFenCanShu_I_" text="Paramètre intégral (i)" />
+		<Item name="BiLiCanShu_P_" text="Paramètre de proportionnalité (p)" />
+		<Item name="WenDuQuXian" text="Courbe de température" />
+		<Item name="IPDiZhiGeShiBuDui" text="Le format de l'adresse IP est incorrect" />
+		<Item name="ZiWangYanMaGeShiBuDui" text="Le format du masque de sous-réseau est incorrect" />
+		<Item name="WangGuanDiZhiGeShiBuDui" text="Le format de l'adresse de la passerelle est incorrect" />
+		<Item name="ZhuDNSDiZhiGeShiBuDui" text="Le format de l'adresse DNS primaire est incorrect" />
+		<Item name="BeiYongDNSDiZhiGeShiBuDui" text="Le format de l'adresse DNS alternative est incorrect" />
+		<Item name="MeiYouKeYongShiPeiQi" text="Aucun adaptateur disponible" />
+		<Item name="ShiPeiQiZongShu__" text="Nombre total d'adaptateurs." />
+		<Item name="_____________________Di" text="--------------------- No." />
+		<Item name="GeShiPeiQiXinXi_____________________" text="Informations sur l'adaptateur ---------------------" />
+		<Item name="MiaoShuXinXi_____" text="Description Information :" />
+		<Item name="JieKouLeiXing_____" text="Type d'interface :" />
+		<Item name="SuDu_________" text="La vitesse:" />
+		<Item name="HuoQuIPFangShi___" text="Méthode d'obtention de l'IP:" />
+		<Item name="IPDiZhi_______" text="Adresse IP:" />
+		<Item name="ZiWangYanMa_____" text="Masque de sous-réseau :" />
+		<Item name="WangGuan_________" text="Passerelle :" />
+		<Item name="ZhuDNSDiZhi____" text="Adresse DNS primaire :" />
+		<Item name="BeiYongDNSDiZhi__" text="Autre adresse DNS :" />
+		<Item name="DHCPFuWuQi___" text="Serveur Dhcp :" />
+		<Item name="MACDiZhi______" text="Adresse Mac :" />
+		<Item name="DiaoShiShuJuYuan" text="Source de données de débogage" />
+		<Item name="CaiJiBan" text="Carte d'acquisition" />
+		<Item name="DiaoShi" text="Débogage" />
+		<Item name="WenDuJianCe" text="Détection de la température" />
+		<Item name="SanWeiTu" text="Figure tridimensionnelle" />
+		<Item name="YanTu" text="Diagramme de l'œil" />
+		<Item name="GuanBiFuTu" text="Fermer la vue secondaire" />
+		<Item name="LiShaYu" text="Lissajous" />
+		<Item name="P_F_CeShi" text="P/F" />
+		<Item name="HuiFuChuChang" text="Restaurer les paramètres d'usine" />
+		<Item name="GuanBiTuCeng" text="Fermer le calque" />
+		<Item name="KuoZhan" text="Prolongé" />
+		<Item name="ShiLiangFenXi" text="Analyse vectorielle" />
+		<Item name="XinHaoYuan1" text="Source du signal 1" />
+		<Item name="XinHaoYuan2" text="Source du signal 2" />
+		<Item name="ZhuXiao" text="Déconnexion" />
+		<Item name="ZhongQi" text="Redémarrer" />
+		<Item name="ZhengJiWenDu" text="Température de la machine entière" />
+		<Item name="DangQianZhi_" text="Valeur actuelle :" />
+		<Item name="WenDuYuan_" text="Source de température:" />
+		<Item name="FengShanKongZhi" text="Contrôle du ventilateur" />
+		<Item name="FengShanZhuanShu" text="Vitesse du ventilateur" />
+		<Item name="ZhuanShuSheZhi" text="Tr/min" />
+		<Item name="Kai_Guan" text="Activé/Désactivé" />
+		<Item name="_WenDuJianCe" text="Détection de la température" />
+		<Item name="YiSuoDing" text="Verrouillé" />
+		<Item name="WeiSuoDing" text="Déverrouillé" />
+		<Item name="CaiJiMoShi" text="Mode d'acquisition" />
+		<Item name="ChaZhiFangShi" text="Méthode d'interpolation" />
+		<Item name="10MHzShiZhongShuRu" text="Source de référence de la base de temps (10MHz)" />
+		<Item name="ChangCunChuShenDu" text="Profondeur de mémoire" />
+		<Item name="ZhengXian" text="Sinus" />
+		<Item name="CunChuMoShi" text="Mode de stockage" />
+		<Item name="PuTong" text="Norme" />
+		<Item name="KuaiCai" text="Acquisition rapide" />
+		<Item name="BaoLuoXian" text="Enveloppe" />
+		<Item name="DingBu" text="Haut" />
+		<Item name="DengXiaoCaiYang" text="Échantillonnage équivalent" />
+		<Item name="Hui__Fang" text="Lecture" />
+		<Item name="Ting__Zhi" text="Arrêter" />
+		<Item name="ZhengChangDu" text="Longueur de trame" />
+		<Item name="ZongZhengShu" text="Nombre total de trames" />
+		<Item name="DanZheng" text="Trame unique" />
+		<Item name="LianXuZheng" text="Trame continue" />
+		<Item name="XianShiMoShi" text="Mode d'affichage" />
+		<Item name="ZhengChuFaJianGeShiJian" text="Intervalle de déclenchement de trame" />
+		<Item name="Zhong__Cai" text="Redémarrer" />
+		<Item name="ShiJiSheZhi" text="Horizontal" />
+		<Item name="YanChiGuiLing" text="Régler à 0s" />
+		<Item name="ShuiPingKeDu" text="Échelle horizontale" />
+		<Item name="TiShi" text="Conseil" />
+		<!--<Item name="__GuJianBanBen_" text="  固件版本：" />-->
+		<!--<Item name="RuanJianBanBen_" text="软件版本：" />-->
+		<Item name="LuoJi_" text="Digital+ (en anglais)" />
+		<Item name="ShuXue_" text="Math+" />
+		<Item name="CanKao_" text="Réf+" />
+		<Item name="ZongXian_" text="Bus +" />
+		<Item name="ShePin_" text="Rf+" />
+		<Item name="MaiKuan" text="Impulsion" />
+		<Item name="JianGe" text="Intervalle" />
+		<Item name="ShiPin" text="Vidéo" />
+		<Item name="MaXing" text="Modèle" />
+		<Item name="ChaoShi" text="Délai d'expiration" />
+		<Item name="JianLiBaoChi" text="Maintien de configuration" />
+		<Item name="NBianYan" text="N-bord" />
+		<Item name="QianFu" text="Runt" />
+		<Item name="MaoCi" text="Ébavurage" />
+		<Item name="ChuangKou" text="Fenêtre" />
+		<Item name="DuoJi" text="Multiniveau" />
+		<Item name="ChuanXing" text="Série" />
+		<Item name="BaoLuo" text="Enveloppe" />
+		<Item name="FengZhiJianCe" text="Détection de crête" />
+		<Item name="GaoFenBianLv" text="Haute résolution" />
+		<Item name="Ci" text="L'heure" />
+		<Item name="PuTongCunChu" text="Stockage normal" />
+		<Item name="Wei" text="bit" />
+		<Item name="YingYong" text="Application" />
+		<Item name="yyyyNianMMYueddRi" text="année yyyy mois mm jour dd" />
+		<Item name="ShiJian" text="Événement" />
+		<Item name="PeiZhi" text="Configuration" />
+		<Item name="DecodingParameter" text="Paramètre de décodage" />
+		<Item name="RenYi" text="N'importe lequel" />
+		<Item name="RenYiYan" text="Tous" />
+		<Item name="QuanBuSheZhi" text="Tout" />
+		<Item name="QuanBuTuXing" text="Entier" />
+		<Item name="TongDaoFenZuXuanZe" text="Groupe de canaux:" />
+		<Item name="LuoJiShuRuDingYi" text="Définition d'entrée logique" />
+		<Item name="ShiJian" text="Événement" />
+		<Item name="YanChiShiJian" text="Temps de retard" />
+		<Item name="ShiJianJiShu" text="Comptage d'événements" />
+		<Item name="ShiJian_A" text="Événement A" />
+		<Item name="ShiJian_B" text="Événement B" />
+		<Item name="ShiJian_C" text="Événement C" />
+		<Item name="ShiJian_D" text="Événement D" />
+		<Item name="XinYuan1DianPing" text="Source 1 Niveau" />
+		<Item name="XinYuan2DianPing" text="Source 2 Niveau" />
+		<Item name="XinYuan1BianYan" text="Bord1" />
+		<Item name="XinYuan1" text="Source 1" />
+		<Item name="ShiJianXiaXian" text="Limite de temps inférieure" />
+		<Item name="XinYuan2" text="Source 2" />
+		<Item name="XinYuan2BianYan" text="Bord2" />
+		<Item name="ShiJianShangXian" text="Limite supérieure de temps" />
+		<Item name="WaiChuFaShuaiJian" text="Atténuation du déclenchement externe" />
+		<Item name="BuYong" text="Pas besoin" />
+		<Item name="QiangZhi" text="Forcer" />
+		<Item name="FuZhuChuFa" text="Déclencheur auxiliaire" />
+		<Item name="KeShiChuFa" text="Déclencheur de région" />
+		<Item name="CeLiangChuFa" text="Déclencheur de mesure" />
+		<Item name="ShiYi" text="Hold-off" />
+		<Item name="MaoCiKuanDu" text="Largeur de la bavure" />
+		<Item name="JianGeShiJian" text="Temps d'intervalle" />
+		<Item name="JianGeShiJianShangXian" text="Limite supérieure du temps d'intervalle" />
+		<Item name="BianYanLeiXing" text="Type de bord" />
+		<Item name="KongXianShiJian" text="Temps d'inactivité" />
+		<Item name="BianYanShu" text="Nombre d'arêtes" />
+		<Item name="ChuFaFangShi" text="Méthode de déclenchement" />
+		<Item name="ZongXianLeiXing" text="Type de bus" />
+		<Item name="ShuJuDianPing" text="Niveau des données" />
+		<Item name="JianLi__BaoChi" text="Configuration &amp;&amp; Maintenir" />
+		<Item name="MaXingSheZhi" text="Modèle" />
+		<Item name="ShiZhong" text="Horloge" />
+		<Item name="DangTiaoJianManZuShi" text="Lorsque la condition est satisfaite" />
+		<Item name="XinYuanXuanZeJiDianPingSheZhi" text="Sélection et niveau des sources d'approvisionnement" />
+		<Item name="XingShu" text="Nombre de lignes" />
+		<Item name="ChangShu" text="Nombre de champs" />
+		<Item name="RenYiXingChuFa" text="Déclenchement de n'importe quelle ligne" />
+		<Item name="MaiChongKuanDuXiaXian" text="Limite inférieure de la largeur d'impulsion" />
+		<Item name="XiaXian" text="Limite inférieure" />
+		<Item name="ShangXian" text="Limite supérieure" />
+		<Item name="FuZhuDingWei" text="Positionnement auxiliaire" />
+		<Item name="QuYuNei" text="Intersection" />
+		<Item name="QuYuWai" text="Disjoint" />
+		<Item name="SanJiaoXing" text="Triangle" />
+		<Item name="WindowType_Rectangle" text="Rectangle" />
+		<Item name="XingZhuang" text="Géométrie" />
+		<Item name="BianShu" text="Nombre de faces" />
+		<Item name="Zhong__Zhi" text="Réinitialiser" />
+		<Item name="ZiDongLiangCheng" text="Plage automatique" />
+		<Item name="WuCaoZuo" text="Pas d'opération" />
+		<Item name="HunPin" text="Mixage" />
+		<Item name="LvBo" text="Filtre" />
+		<Item name="JunHeng" text="Égalisation" />
+		<Item name="GeZhi" text="Blocage Dc" />
+		<Item name="ZaiBoGuJi" text="Estimation de porteuse" />
+		<Item name="XiangWeiGuJi" text="Estimation de phase" />
+		<Item name="MoNi" text="Analogique" />
+		<Item name="ShuZi" text="Numérique" />
+		<Item name="GeZhiSheZhi" text="Blocage Dc" />
+		<Item name="ShouLianYuZhi" text="Seuil de convergence" />
+		<Item name="FuHaoGeShu" text="Nombre de symboles" />
+		<Item name="ChouTouShu" text="Nombre de taps" />
+		<Item name="JunHengSheZhi" text="Égalisation" />
+		<Item name="DaiKuan" text="Largeur de bande" />
+		<Item name="GunJiangYinZi" text="Facteur de roulis" />
+		<Item name="LvBoSheZhi" text="Filtre" />
+		<Item name="GeShi" text="Format" />
+		<Item name="FuHaoLv" text="Taux de symbole" />
+		<Item name="DingShiTongBu" text="Synchronisation temporelle" />
+		<Item name="ChaZhiFangFa" text="Méthode d'interpolation" />
+		<Item name="DingShiGuJi" text="Estimation de temps" />
+		<Item name="ShiNeng" text="Activer" />
+		<Item name="ZaiBoPinLv" text="Fréquence porteuse" />
+		<Item name="HunPinSheZhi" text="Mixage" />
+		<Item name="FuHaoShu" text="Nombre de symboles" />
+		<Item name="XiangWeiGuJiSheZhi" text="Estimation de la phase" />
+		<Item name="I_LuShiYuTu" text="Diagramme du domaine temporel du canal I" />
+		<Item name="Q_LuShiYuTu" text="Diagramme temporel du canal Q" />
+		<Item name="XingZuoTu" text="Diagramme de constellation" />
+		<Item name="I_LuYanTu" text="Diagramme en œil du canal I" />
+		<Item name="Q_LuYanTu" text="Diagramme en œil du canal Q" />
+		<Item name="ShiLiangTu" text="Diagramme vectoriel" />
+		<Item name="XiangWeiWuChaShiJianTu" text="Diagramme temporel d'erreur de phase" />
+		<Item name="FuDuWuChaShiJianTu" text="Diagramme temporel d'erreur d'amplitude" />
+		<Item name="MuBiaoShuXueTongDao" text="Canal mathématique ciblé" />
+		<Item name="JieDiaoTuXing" text="Graphiques de démodulation" />
+		<Item name="ILuYanTu" text="Diagramme œil du canal I" />
+		<Item name="QLuYanTu" text="Diagramme œil du canal Q" />
+		<Item name="FuHaoBiao" text="Tableau des symboles" />
+		<Item name="FuHaoWuChaBiao" text="Tableau d'erreurs des symboles" />
+		<Item name="TongYongShuZiJieDiao" text="Démodulation numérique universelle" />
+		<Item name="LanYaXinHao" text="Signal Bluetooth" />
+		<Item name="IQShiYuTu" text="Diagramme du domaine temporel de l'Iq" />
+		<Item name="DiaoZhiCanShu" text="Paramètre de modulation" />
+		<Item name="PinLvHeDaiKuanCanShu" text="Paramètres de fréquence et de largeur de bande" />
+		<Item name="SuanFaXuanZe" text="Sélection de l'algorithme" />
+		<Item name="LvBoQiCanShu" text="Paramètres du filtre" />
+		<Item name="ShengYuXianLvBoQi" text="Filtre à cosinus surélevé" />
+		<Item name="GaoSiLvBoQi" text="Filtre gaussien" />
+		<Item name="YongHuZiDingYi" text="Défini par l'utilisateur" />
+		<Item name="CanKaoLvBoQi" text="Filtre de référence" />
+		<Item name="GenShengYuXianLvBoQi" text="Filtre en racine de cosinus surélevé" />
+		<Item name="CeLiangLvBoQi" text="Filtre de mesure" />
+		<Item name="ZaiBoPinLvWuCha" text="Erreur de fréquence porteuse" />
+		<Item name="PinLvJianCe" text="Détection de fréquence" />
+		<Item name="CeLiangDaiKuan" text="Largeur de bande de mesure" />
+		<Item name="ZaiBoTongBu" text="Synchronisation porteuse" />
+		<Item name="JunHengFuWei" text="Réinitialisation de l'égalisation" />
+		<Item name="FuHaoChangDu" text="Symbole Longueur" />
+		<Item name="JunHengShiNeng" text="Activation de l'égalisation" />
+		<Item name="LvBoQiXiShuGeShu" text="Nombre de coefficients de filtrage" />
+		<Item name="GuoCaiYangLv" text="Fréquence de suréchantillonnage" />
+		<Item name="ShouLianXiShu" text="Coefficient de convergence" />
+		<Item name="XunLian" text="Entraînement" />
+		<Item name="JunHengMoShi" text="Modèle d'égalisation" />
+		<Item name="LiangZhe" text="Les deux" />
+		<Item name="Man" text="Complet" />
+		<Item name="JianDan" text="Simple" />
+		<Item name="GaoTong" text="Passe-haut" />
+		<Item name="DaiTong" text="Passe-bande" />
+		<Item name="DaiZu" text="Filtre coupe-bande" />
+		<Item name="PinPuTu" text="Spectrogramme" />
+		<Item name="YuPenQuXian" text="Courbe de la baignoire" />
+		<Item name="Q_FactorQuXian" text="Courbe du facteur Q" />
+		<Item name="GaoTong" text="Passe-haut" />
+		<Item name="DaiTong" text="Passe-bande" />
+		<Item name="DaiZu" text="Filtre coupe-bande" />
+		<Item name="Zero-Max" text="Zéro - Max" />
+		<Item name="TestStatus" text="État du test" />
+		<Item name="ViolationNumber" text="Nombre total de violations" />
+		<Item name="TestingTime" text="Durée des essais" />
+		<Item name="MingZhongGeShu" text="Nombre d'occurrences" />
+		<Item name="GongLv_Logarithm_" text="Puissance (logarithme)" />
+		<Item name="WindowType_Gaussian" text="Gaussien" />
+		<Item name="FanWeiWai" text="Hors de la portée" />
+		<Item name="HuoFei" text="Nor" />
+		<Item name="PinJie" text="Raccordement" />
+		<Item name="PinJie" text="Raccordement" />
+		<Item name="FangZhen" text="Simulation" />
+		<Item name="WenDuQuXianHuiZhi" text="Tracé de la courbe de température" />
+		<Item name="DiBu" text="Le fond" />
+		<Item name="PinJie" text="Raccordement" />
+		<Item name="HuoFei" text="Nor" />
+		<Item name="WuGuan" text="Indépendance" />
+		<Item name="ERes" text="ERes" />
+		<Item name="YiQiYong" text="Activé" />
+		<Item name="YiJinYong" text="Désactivé" />
+		<Item name="TemperatureDiffWarning" text="Différence de température à l'intérieur du système trop importante, sera corrigée automatiquement. Veuillez confirmer que tous les signaux d'entrée ont été supprimés" />
+		<Item name="BoXingZhuiZong" text="Forme d’onde suivre"/>
+		<Item name="CallBackInterval" text="Intervalle de lecture"/>
+		<Item name="YanShi" text="La démonstration"/>
+
+	</Tip>
+	<!--2024年1月25日新增部分-->
+	<Tip>
+		<Item name="XunHuanShuJu" text="Données cycliques" />
+		<Item name="IDShuJu" text="ID" />
+		<Item name="MoNiTongDao1_" text="CH1、" />
+		<Item name="MoNiTongDao2_" text="CH2、" />
+		<Item name="MoNiTongDao3_" text="CH3、" />
+		<Item name="MoNiTongDao4_" text="CH4、" />
+		<Item name="WaiChuFa" text="Déclenchement externe" />
+		<Item name="TongDaoYanChi" text="Délai CH" />
+		<Item name="TongDaoKuanDu" text="Largeur CH" />
+		<Item name="TongDaoJianGe" text="Intervalle CH" />
+		<Item name="TongDaoShuLiang" text="Numéro CH" />
+		<Item name="TongDaoKuanDu" text="Largeur CH" />
+		<Item name="XiangLinXinDaoGongLvBi" text="ACPR" />
+		<Item name="ZhanYongDaiKuan" text="OBW" />
+		<Item name="TongDaoGongLv" text="Puissance de la chaîne" />
+		<Item name="ZongXieBoShiZhen" text="THD" />
+		<Item name="DangQianPinYuCeLiangLeiXing" text="CFDMT" />
+		<Item name="PinPuSheZhi" text="Paramètres du spectre" />
+		<Item name="PinPuSheZhi" text="Paramètres du spectre" />
+		<Item name="TongDaoKuanDu" text="Largeur CH" />
+		<Item name="GongLvBaiFenBi" text="Pourcentage de puissance" />
+		<Item name="GongLvXiaJiang" text="Diminution de puissance" />
+		<Item name="dBXiaJiang" text="Diminution de dB" />
+		<Item name="FenXiLeiXing" text="Type d'analyse" />
+		<Item name="TongDaoShuLiang" text="Numéro CH" />
+		<Item name="TongDaoJianGe" text="Intervalle CH" />
+		<Item name="TongDaoKuanDu" text="Largeur CH" />
+		<Item name="DianYa" text="Tension" />
+		<Item name="DianLiu" text="Courant" />
+		<Item name="ZiDingYiPinLv" text="Fréquence personnalisée" />
+		<Item name="AWGYuan" text="AWG Source" />
+		<Item name="ShiYongShiJianShengYu" text="Durée restante de l'essai" />
+		<Item name="XiaoShi" text="Heures" />
+		<Item name="FuZhuShuChu" text="Sortie auxiliaire:" />
+		<Item name="FuZhuShuRu" text="Entrée auxiliaire:" />
+		<Item name="TongDaoYanSe" text="Couleur" />
+		<Item name="WenDuJianKong" text="Contrôle de la température " />
+		<Item name="YunXingShiChang" text="Temps de fonctionnement" />
+		<Item name="ZhongZhiShiYong" text="Réinitialiser le temps d'essai" />
+		<Item name="JieShuShiYong" text="Terminer l'essai" />
+		<Item name="ShiYongShiJian" text="Temps d'essai" />
+		<Item name="ShiYiShiJian" text="Temps de maintien" />
+		<Item name="LFReject" text="Rejet LF" />
+		<Item name="HFReject" text="Rejet HF" />
+		<Item name="NoiseReject" text="Rejet du bruit" />
+		<Item name="SCLKXinYuan" text="Source SCLK" />
+		<Item name="SDAXinYuan" text="Source SDA" />
+		<Item name="PECByteQiYong" text="Octet PEC"/>
+		<Item name="DataCount" text="Nombre de données" />
+		<Item name="HarmonicTHDF" text="THD-F" />
+		<Item name="HarmonicTHDR" text="THD-R" />
+		<Item name="HighVoltageWaningStr" text="Tension élevée entrée, ce qui peut endommager l'appareil, le logiciel a automatiquement basculé en haute impédance, veuillez déconnecter l'entrée" />
+		<Item name="AudioBusBitDelay" text="Retard de bits" />
+		<Item name="AudioBusClockBit" text="Bit d'horloge" />
+		<Item name="AudioBusChannelNumberPerFream" text="Numéro de canal" />
+		<Item name="DataExportHeader" text="Exportation des données" />
+		<Item name="ChooiceRectangleUsage" text="Comment utiliser le rectangle?" />
+		<Item name="AreaTriggerIntersect" text="Région Interct" />
+		<Item name="AreaTriggerNotIntersect" text="Région disjointe" />
+		<Item name="AreaZoom" text="Zoom" />
+	</Tip>
+	<Tip>
+		<!--手动编写部分，大部分来自于：ScopeX.U2.Properties.Resources.resx和ScopeX.U2.Properties.ToolTips.resx文件中-->
+		<Item name="FastFourierTransform" text="Transformée de Fourier rapide" />
+		<Item name="AboutPrinter" text="Imprimer" />
+		<Item name="AboutClear" text="Effacer" />
+		<Item name="AboutSetting" text="Paramètres" />
+		<Item name="AboutAllApps" text="Appliquer tout" />
+		<Item name="AboutTimebase" text="Paramètres du système horizontal" />
+		<Item name="AboutAcquire" text="Paramètres du système d'acquisition" />
+		<Item name="AboutTrigger" text="Paramètres du système de déclenchement" />
+		<Item name="AboutCursor" text="Curseurs" />
+		<Item name="AWGInfo_Frequency" text="Fréquence" />
+		<Item name="AWGInfo_Amplitude" text="Amplitude" />
+		<Item name="AWGInfo_Offset" text="Biais" />
+		<Item name="ZoomScaleFormat" text="({0:F3}xZoom)" />
+		<Item name="FilterDesign_FreqSampling" text="Taux d'échantillonnage" />
+		<Item name="FilterDesign_Window" text="Méthode de la fenêtre" />
+		<Item name="FilterDesign_Remez" text="Remez" />
+		<Item name="FilterDesign_Butterworth" text="Butterworth" />
+		<Item name="FilterDesign_ChebyshevI" text="Chebyshev Ⅰ" />
+		<Item name="FilterDesign_ChebyshevII" text="Chebyshev Ⅱ" />
+		<Item name="FilterDesign_Elliptic" text="Elliptique" />
+		<Item name="EyeParams_ZeroLevel" text="Niveau 0" />
+		<Item name="EyeParams_OneLevel" text="Niveau 1" />
+		<Item name="EyeParams_EyeAmplitude" text="Amplitude de l'œil" />
+		<Item name="EyeParams_EyeHeight" text="Hauteur de l'œil" />
+		<Item name="EyeParams_EyeWidth" text="Largeur de l'œil" />
+		<Item name="EyeParams_ExtinctionRatio" text="Rapport d'extinction" />
+		<Item name="EyeParams_EyeCrossRatio" text="Rapport de croisement de l'œil" />
+		<Item name="EyeParams_QFactor" text="Facteur Q" />
+		<Item name="JitterParams_TIE" text="Erreur d'intervalle de temps" />
+		<Item name="JitterParams_TjBER" text="Gigue totale à un Ber spécifique" />
+		<Item name="JitterParams_Rj" text="Jitter aléatoire" />
+		<Item name="JitterParams_Dj" text="Jitter déterministe" />
+		<Item name="JitterParams_PjPeak" text="Jitter périodique" />
+		<Item name="JitterParams_DDJ" text="Jitter dépendant des données" />
+		<Item name="JitterParams_DCD" text="Distorsion du cycle de travail" />
+		<Item name="JitterParams_ISI" text="Interférence intersymbole" />
+		<Item name="JitterParams_CC" text="Jitter périodique" />
+		<Item name="MainFigText" text="Fenêtre principale" />
+		<Item name="MathCalcType_Custom" text="Sur mesure" />
+		<Item name="MathCalcType_UserProgram" text="Avancé" />
+		<Item name="PassFail_Stop" text="Arrêter" />
+		<Item name="PassFail_Run" text="Exécuter" />
+		<Item name="AboutAnalogBadge" text="Paramètres du canal analogique" />
+		<Item name="Statistic_VAL" text="Valeur" />
+		<Item name="Statistic_MAX" text="Maximum" />
+		<Item name="Statistic_MIN" text="Minimum" />
+		<Item name="Statistic_AVG" text="Moyenne" />
+		<Item name="Statistic_DEV" text="Écart-type" />
+		<Item name="Statistic_POP" text="Compte" />
+		<Item name="AboutWindowState" text="État de la fenêtre" />
+		<Item name="AboutZoom" text="État de la fenêtre" />
+		<Item name="AboutNormalMani" text="Histogramme régional" />
+		<Item name="AboutClose" text="Fermer" />
+		<Item name="AboutMark" text="Marquage" />
+		<Item name="AboutForm_OptionType_MD2G" text="Extension de la profondeur de stockage maximale de l’oscilloscope jusqu’à 1Gpts/CH (canal complet) 2Gpts/CH (demi-canal)" />
+		<Item name="AboutForm_OptionType_BW-10T20" text="Mise à niveau de la bande passante de 1GHz à 2GHz, MSO7104X à MSO7204X" />
+		<Item name="AboutForm_OptionType_AWG" text="Générateur d'ondes arbitraires à double canal de 60 MHz" />
+		<Item name="AboutForm_OptionType_LA" text="Sonde numérique à 16 canaux (UT-M15) et analyse" />
+		<Item name="AboutForm_OptionType_JITTER" text="Analyse avancée de la gigue et du diagramme de l'œil" />
+		<Item name="AboutForm_OptionType_PWR" text="Analyse de la puissance" />
+		<Item name="AboutForm_OptionType_CAN-FD" text="Déclenchement et décodage série automobile (CAN-FD)" />
+		<Item name="AboutForm_OptionType_FLEX" text="Déclenchement et décodage série automobile (FlexRay)" />
+		<Item name="AboutForm_OptionType_SENT" text="Déclenchement et décodage en série de capteurs automobiles (Envoyer)" />
+		<Item name="AboutForm_OptionType_AUDIO" text="Déclenchement et décodage audio série (I2S, LJ, RJ, TDM)" />
+		<Item name="AboutForm_OptionType_AERO" text="Déclenchement et décodage de signaux série pour l'aérospatiale (MIL-STD-1553, ARINC 429)" />
+		<Item name="AboutForm_OptionType_SMBUS" text="Sélection de déclenchement et d’analyse par bus série intégré (SMBus)" />
+		<Item name="AboutForm_OptionType_SPMI" text="Gestion de l’alimentation serial bus trigger and analysis selector (SPMI)" />
+		<Item name="AboutForm_OptionType_I3C" text="Mipi-i3c bus déclenchement et sélection d’analyse (I3C)" />
+		<Item name="AboutForm_OptionType_PSI5" text="Sélection d’analyse du bus série automobile (PSI5)" />
+		<Item name="AboutForm_OptionType_USB2" text="Sélection de déclenchement et d’analyse par bus USB (USB2.0)" />
+		<Item name="AboutForm_OptionType_PCIe2" text="Sélecteur de déclenchement et d’analyse du bus PCIe (PCIe1.0, 2.0)" />
+		<Item name="AboutForm_OptionType_NET" text="Sélection pour l’analyse du bus ethernet (10base-t, 100base-tx)" />
+		<Item name="AboutForm_OptionType_NRZ" text="Sélecteur d’analyse du signal NRZ (NRZ)" />
+		<Item name="AboutForm_OptionType_MANCH" text="Sélection de pièces pour l’analyse du signal de Manchester (Manchester)" />
+		<Item name="AboutForm_OptionType_8B10B" text="Sélection 8b/10b pour l’analyse du signal (8b/10b)" />
+		<Item name="AboutForm_OptionType_FILTER" text="Advanced filter designer sélection de pièces" />
+		<Item name="AboutForm_OptionType_MAT" text="Sélection de programmation embarquée Matlab qui permet aux utilisateurs de créer du code Matlab pour personnaliser les fonctions mathématiques" />
+		<Item name="AboutForm_OptionType_BND" text="Kits de mise à niveau (Jitter, PWR, CAN-FD, Flexy, Sent, Audio, Aero)" />
+		<Item name="ProgramCS_StartingBaseService" text="Initialisation des services de base ......" />
+		<Item name="ProgramCS_StartError" text="Exception de démarrage, veuillez vérifier le journal des erreurs ! Code d'erreur:" />
+		<Item name="ProgramCS_S00072_S00073_Error" text="Exception de démarrage, veuillez redémarrer le logiciel ! Code d'erreur:" />
+		<Item name="NormalViewSettingPage_WuXian" text="Infini" />
+		<Item name="AcqMode_Normal" text="Normal" />
+		<Item name="AcqMode_Peak" text="Détection de crête" />
+		<Item name="AcqMode_HighRes" text="Haute résolution" />
+		<Item name="AcqMode_Average" text="Moyenne" />
+		<Item name="AcqMode_Envelope" text="Enveloppe" />
+		<Item name="polygon" text="Polygone" />
+		<Item name="ZuiDa" text="Max" />
+		<Item name="MaximumAllowable" text="La plage autorisée des valeurs d'entrée est :" />
+		<Item name="BuNengWeiKong_" text="Ne peut pas être vide !" />
+		<Item name="XiaoShuWeiShuErrorMsg" text="Dépasse la plage maximale des décimales !" />
+		<Item name="ZiFuShuErrorMsg" text="Dépasse la plage maximale des caractères !" />
+		<Item name="YouXiaoFanWei_" text="Plage efficace:" />
+		<Item name="GeShiCuoWu_" text="Erreur de format!" />
+		<Item name="ProgramCS_ACQError" text="Erreur d'acquisition, veuillez redémarrer le logiciel !" />
+		<Item name="ABRegionalRelationship" text="Relation AB" />
+		<Item name="ABRegionalDescription" text="Déclenchement lorsque A&amp;&amp;B sont satisfaits" />
+		<Item name="ExportData" text="Exportation" />
+		<Item name="ChannelNotOpenErrorMsg" text="Le canal {0} n'est pas ouvert, le déclenchement est incorrect" />
+		<Item name="AnanogChannelDelayStep" text="Étape" />
+		<Item name="VisualTrigger" text="Déclencheur de région" />
+		<Item name="VideoTrigger_Line" text="Ligne" />
+		<Item name="FuWeiDao50Percent" text="Réinitialiser à 50 %" />
+		<Item name="FuWeiDaoZero" text="Réinitialiser à 0" />
+		<Item name="Rds(on)BoXingTu" text="Diagramme RDS (on)" />
+	</Tip>
+	<Tip>
+		<!--通用消息，通用消息请勿删除-->
+		<Item name="Yes" text="Oui" />
+		<Item name="No" text="Non" />
+		<!--枚举：ProbeKeyType-->
+		<Item name="前灯" text="Feux avant" />
+		<Item name="运行/停止" text="Exécuter/Arrêter" />
+		<Item name="清除显示" text="Effacer l'affichage" />
+		<Item name="强制触发" text="Déclenchement forcé" />
+		<Item name="无操作" text="Pas d'opération" />
+		<!--枚举：ProbeKeyType-->
+		<!--枚举：AnaChnlProbe-->
+		<Item name="1X" text="1X" />
+		<Item name="10X" text="10X" />
+		<Item name="100X" text="100X" />
+		<Item name="自定义" text="Sur mesure" />
+		<!--枚举：AnaChnlProbe-->
+		<!--枚举：AnaChnlProbeBymVA-->
+		<Item name="100mV/A" text="100 mV/A" />
+		<Item name="200mV/A" text="200 mV/A" />
+		<Item name="500mV/A" text="500 mV/A" />
+		<Item name="自定义" text="Sur mesure" />
+		<!--枚举：AnaChnlProbeBymVA-->
+		<!--枚举：AttenuationType-->
+		<Item name="分贝" text="Décibel" />
+		<Item name="比率" text="Rapport" />
+		<!--枚举：AttenuationType-->
+		<!--枚举：MathType-->
+		<Item name="MathType_Binary" text="De base" />
+		<Item name="MathType_FFT" text="FFT" />
+		<Item name="MathType_ERes" text="ERes" />
+		<Item name="MathType_Custom" text="Sur mesure" />
+		<Item name="MathType_UserProgram" text="Avancé" />
+		<!--枚举：MathType-->
+		<!--枚举：FFTResultOpt-->
+		<Item name="FFTResultOpt_Ampltd" text="Spectre ampl." />
+		<Item name="FFTResultOpt_Power" text="Spectre de puissance" />
+		<Item name="FFTResultOpt_Psd" text="PSD" />
+		<Item name="FFTResultOpt_Real" text="Partie réelle" />
+		<Item name="FFTResultOpt_Imaginary" text="Partie imaginaire" />
+		<Item name="FFTResultOpt_Phase" text="Spectre de phase" />
+		<!--枚举：FFTResultOpt-->
+		<!--枚举：WindowType-->
+		<Item name="WindowType_Rectangle" text="Rectangle" />
+		<Item name="WindowType_Hann" text="Hanning" />
+		<Item name="WindowType_Hamming" text="Hanming" />
+		<Item name="WindowType_Blackman" text="Blackman" />
+		<Item name="WindowType_Flattop" text="Flattop" />
+		<Item name="WindowType_Kaiser" text="Kaiser" />
+		<!--<Item name="WindowType_Kaiser" text="相位谱" />
+		<Item name="WindowType_Gaussian" text="相位谱" />-->
+		<!--枚举：WindowType-->
+		<!--枚举：ArbWfmType-->
+		<Item name="Enum_ArbWfmType_Sinusoid" text="Sine" />
+		<Item name="Enum_ArbWfmType_Square" text="Carré" />
+		<Item name="Enum_ArbWfmType_Pulse" text="Impulsion" />
+		<Item name="Enum_ArbWfmType_Ramp" text="Rampe" />
+		<Item name="Enum_ArbWfmType_Noise" text="Bruit" />
+		<Item name="Enum_ArbWfmType_DC" text="DC" />
+		<Item name="Enum_ArbWfmType_Sinc" text="Sinc" />
+		<Item name="Enum_ArbWfmType_ExpRise" text="Augmentation exponentielle" />
+		<Item name="Enum_ArbWfmType_ExpFall" text="Chute exponentielle" />
+		<Item name="Enum_ArbWfmType_Lorentz" text="Lorentz" />
+		<Item name="Enum_ArbWfmType_Haversine" text="Haversine" />
+		<Item name="Enum_ArbWfmType_Gaussian" text="Gaussien" />
+		<Item name="Enum_ArbWfmType_ECG" text="ECG" />
+		<Item name="Enum_ArbWfmType_Arbitrary" text="Arbitrage" />
+		<!--枚举：ArbWfmType-->
+		<!--枚举：ChannelType-->
+		<Item name="Enum_ChannelType_Analog" text="Analogique" />
+		<Item name="Enum_ChannelType_Logic" text="Numérique" />
+		<Item name="Enum_ChannelType_LogicGroup" text="Numérique" />
+		<Item name="Enum_ChannelType_Decode" text="Décoder" />
+		<Item name="Enum_ChannelType_RadioFrequency" text="Fréquence radio" />
+		<Item name="Enum_ChannelType_Math" text="Mathématiques" />
+		<Item name="Enum_ChannelType_File" text="Fichier" />
+		<Item name="Enum_ChannelType_Parameter" text="Paramètres" />
+		<Item name="Enum_ChannelType_SigGen" text="Source" />
+		<Item name="Enum_ChannelType_Voltmeter" text="DVM" />
+		<Item name="Enum_ChannelType_Cymometer" text="Cymètre" />
+		<!--枚举：ChannelType-->
+		<!--枚举：PowerAnalysisOpt-->
+		<Item name="Enum_PowerAnalysisOpt_PowerQuality" text="Qualité de l'énergie" />
+		<Item name="Enum_PowerAnalysisOpt_Harmonic" text="Analyse harmonique" />
+		<Item name="Enum_PowerAnalysisOpt_Ripple" text="Analyse d'ondulation" />
+		<Item name="Enum_PowerAnalysisOpt_SwitchingLoss" text="Perte de commutation" />
+		<Item name="Enum_PowerAnalysisOpt_SafeOperationArea" text="SOA" />
+		<Item name="Enum_PowerAnalysisOpt_LoopAnalysis" text="Analyse des boucles" />
+		<Item name="Enum_PowerAnalysisOpt_Modulation" text="Modulation" />
+		<Item name="Enum_PowerAnalysisOpt_InrushCurrent" text="Courant d'appel" />
+		<Item name="Enum_PowerAnalysisOpt_PowerEfficency" text="Efficacité énergétique" />
+		<Item name="Enum_PowerAnalysisOpt_Differ" text="Différenciation des formes d'onde" />
+		<Item name="Enum_PowerAnalysisOpt_Transient" text="Analyse transitoire" />
+		<Item name="Enum_PowerAnalysisOpt_RDSon" text="Rds(on)" />
+		<Item name="Enum_PowerAnalysisOpt_TurnOnOff" text="Temps de démarrage/arrêt" />
+		<Item name="Enum_PowerAnalysisOpt_PSRR" text="PSRR" />
+		<Item name="Enum_PowerAnalysisOpt_SlewRate" text="Taux de conversion" />
+		<!--枚举：PowerAnalysisOpt-->
+		<!--枚举：VideoSync-->
+		<Item name="Enum_VideoSync_Odd" text="Champ pair" />
+		<Item name="Enum_VideoSync_Even" text="Champ impair" />
+		<Item name="Enum_VideoSync_All" text="Toutes les lignes" />
+		<Item name="Enum_VideoSync_Specified" text="Rangée spécifiée" />
+		<!--枚举：VideoSync-->
+		<!--枚举：TriggerType-->
+		<Item name="Enum_TriggerType_Edge" text="Pente" />
+		<Item name="Enum_TriggerType_PulseWidth" text="Impulsion" />
+		<Item name="Enum_TriggerType_Video" text="Vidéo" />
+		<Item name="Enum_TriggerType_Transition" text="Pente" />
+		<Item name="Enum_TriggerType_Runt" text="Runt" />
+		<Item name="Enum_TriggerType_BeyondVol" text="Surtension" />
+		<Item name="Enum_TriggerType_Delay" text="Délai" />
+		<Item name="Enum_TriggerType_TimeOut" text="Délai d'expiration" />
+		<Item name="Enum_TriggerType_SustainTime" text="Durée de l'accord" />
+		<Item name="Enum_TriggerType_SetupHold" text="Maintien de configuration" />
+		<Item name="Enum_TriggerType_NEdge" text="N-bord" />
+		<Item name="Enum_TriggerType_Pattern" text="Modèle" />
+		<Item name="Enum_TriggerType_Serial" text="Bus" />
+		<Item name="Enum_TriggerType_State" text="Statut" />
+		<Item name="Enum_TriggerType_Glitch" text="Ébavurage" />
+		<Item name="Enum_TriggerType_Window" text="Fenêtre" />
+		<Item name="Enum_TriggerType_Interval" text="Intervalle" />
+		<Item name="Enum_TriggerType_MultiQulified" text="Cascade" />
+		<!--枚举：TriggerType-->
+		<!--枚举：TriggerType-->
+		<Item name="Enum_JitterSignalType_Custom" text="Signal de données" />
+		<Item name="Enum_JitterSignalType_Clock" text="Signal d'horloge" />
+		<!--枚举：TriggerType-->
+		<!--枚举：VisualTriggerRelation-->
+		<Item name="Enum_VisualTriggerRelation_And" text="Et" />
+		<Item name="Enum_VisualTriggerRelation_Or" text="Ou" />
+		<!--枚举：VisualTriggerRelation-->
+	</Tip>
+	<Tip>
+		<!--消息-->
+		<Item name="MsgTipId.None" text="" />
+		<Item name="MsgTipId.GreatethanMax" text="Hors de portée !" />
+		<Item name="MsgTipId.LessthanMin" text="Hors de portée !" />
+		<Item name="MsgTipId.Unused1" text="Non pris en charge !" />
+		<Item name="MsgTipId.Unused2" text="Le nombre d'affichages de formes d'onde a atteint son maximum" />
+		<Item name="MsgTipId.SearchItemsMaximum" text="Le nombre d'éléments de recherche a atteint son maximum" />
+		<Item name="MsgTipId.DeleteMeasureItems" text="S'il faut effacer toutes les mesures ?" />
+		<Item name="MsgTipId.InvalidData" text="Données illégales !" />
+		<Item name="MsgTipId.Undefined" text="Fonction non définie" />
+		<Item name="MsgTipId.NoPermissionToAccessThisPath" text="L'accès à ce chemin est restreint. Veuillez choisir un autre chemin" />
+		<Item name="MsgTipId.UnSupportedFormat" text="Format non pris en charge！" />
+		<Item name="MsgTipId.SavingFailed" text="                   Échec de la sauvegarde      " />
+		<Item name="MsgTipId.ReadingFailed" text="                   Échec de la lecture    " />
+		<Item name="MsgTipId.SDABitRateFault" text="Signal Échec de la détection du débit en bauds" />
+		<Item name="MsgTipId.ThisItemDisabled" text="Cet élément n'est pas optionnel" />
+		<Item name="MsgTipId.FormulaEndlessLoopDef" text="Formule illégale: \Tla formule est une boucle infinie" />
+		<Item name="MsgTipId.FormulaUndef" text="Formule illégale: \Tla formule 'Mx' n'est pas définie" />
+		<Item name="MsgTipId.SavingSuccess" text="                   Sauvegarde réussie       " />
+		<Item name="MsgTipId.ReadingSuccess" text="                   Lecture réussie       " />
+		<Item name="MsgTipId.SetFreqFail" text="Paramètre de seuil de fréquence hors de portée" />
+		<Item name="MsgTipId.CreateMaskFail" text="Échec de la création du modèle" />
+		<Item name="MsgTipId.InputFormatError" text="Erreur de format d'entrée" />
+		<Item name="MsgTipId.OnlyOneAnalysis" text="Remarque : Les fonctions de test de réussite/échec, de mesure de puissance et d'analyse de données série ne peuvent pas être activées simultanément." />
+		<Item name="MsgTipId.SDAPrepare" text="Les données pour l'analyse en série sont en cours de collecte, veuillez patienter..." />
+		<Item name="MsgTipId.SDAAnalysis" text="Lancement de l'analyse des données sérielles, veuillez patienter..." />
+		<Item name="MsgTipId.Unused3" text="Le nombre de canaux mathématiques a atteint le maximum du système" />
+		<Item name="MsgTipId.USBDeviceOpened" text="La communication USB est activée" />
+		<Item name="MsgTipId.USBDeviceClosed" text="La communication USB est désactivée" />
+		<Item name="MsgTipId.NetCommunicateOpened" text="Connexion de communication réseau réussie" />
+		<Item name="MsgTipId.NetCommunicateClosed" text="Communication réseau déconnectée" />
+		<Item name="MsgTipId.SdaInputError" text="L'amplitude du signal d'entrée est trop faible" />
+		<Item name="MsgTipId.ErrorHappenedCheckIt" text="Un problème est survenu lors de l'analyse. Veuillez vérifier les paramètres et les signaux d'entrée" />
+		<Item name="MsgTipId.OutPutTenMLockSuccess" text="Entrée externe 10m verrouillée avec succès" />
+		<Item name="MsgTipId.OutPutTenMLockFail" text="Échec du verrouillage de l'entrée externe 10m" />
+		<Item name="MsgTipId.OpenMeasureFuction" text="Veuillez activer la mesure des paramètres" />
+		<Item name="MsgTipId.InputError" text="Erreur de signal d'entrée" />
+		<Item name="MsgTipId.FeatureUnsupported" text="Non pris en charge !" />
+		<Item name="MsgTipId.NoMoreChannels" text="Le nombre de canaux de ce type a atteint le maximum du système, ou le canal a déjà été ouvert." />
+		<Item name="MsgTipId.NoMoreMeasuerLabel" text="Ajouter une limite atteinte, supprimer ou modifier des paramètres de mesure" />
+		<Item name="MsgTipId.MeasuerLabelExisted" text="Limite d'ajout atteinte, supprimer ou modifier les paramètres de mesure" />
+		<Item name="MsgTipId.NoMoreRefChannels" text="La fenêtre de rappel a atteint le maximum du système" />
+		<Item name="MsgTipId.CalibrationFault" text="                   Échec de l'étalonnage             " />
+		<Item name="MsgTipId.CalibrationSuccess" text="                   Étalonnage réussi       " />
+		<Item name="MsgTipId.CalibrationCancel" text="                   Calibrage annulé       " />
+		<Item name="MsgTipId.NotInstallExcel" text="Microsoft Excel non installé, impossible de sauvegarder !" />
+		<Item name="MsgTipId.ChannelHadOpened" text="Le canal a été ouvert" />
+		<Item name="MsgTipId.IllegalName" text="Le nom est illégal !" />
+		<Item name="MsgTipId.Information" text="Information" />
+		<Item name="MsgTipId.Asking" text="Conseil" />
+		<Item name="MsgTipId.Warning" text="Avertissement" />
+		<Item name="MsgTipId.Error" text="Erreur" />
+		<Item name="MsgTipId.ResolutionMismatch" text="Ne correspond pas à la résolution actuelle de l'écran !" />
+		<Item name="MsgTipId.FileExisted" text="Le fichier existe déjà, voulez-vous l'écraser ?" />
+		<Item name="MsgTipId.FileOccupied" text="Échec de la sauvegarde ! Le fichier est ouvert dans une autre application, veuillez fermer le fichier et réessayer !" />
+		<Item name="MsgTipId.CheckDiskSpaceError" text="Échec de la sauvegarde ! Une exception s'est produite lors de la vérification de l'espace disque !" />
+		<Item name="MsgTipId.NoMoreDiskSpace" text="Échec de l'enregistrement ! Espace disque insuffisant !" />
+		<Item name="MsgTipId.UnknownErrorSaveData" text="Une erreur inconnue est survenue, peut-être un espace disque insuffisant ou un fichier anormal" />
+		<Item name="MsgTipId.TimeOutSaveData" text="L'enregistrement des données de la mémoire profonde a dépassé le temps imparti" />
+		<Item name="MsgTipId.RestoreFactoryDefault" text="Voulez-vous rétablir les paramètres par défaut ?" />
+		<Item name="MsgTipId.UndoFactoryDefault" text="Voulez-vous annuler la restauration par défaut ?" />
+		<Item name="MsgTipId.UndoFactoryDefaultErr" text="Échec de l'annulation de la restauration des paramètres d'usine !" />
+		<Item name="MsgTipId.SwitchSettingFile" text="Voulez-vous changer le fichier des paramètres système ?" />
+		<Item name="MsgTipId.AppClose" text="Voulez-vous quitter le programme ?" />
+		<Item name="MsgTipId.ComputerShutDown" text="Voulez-vous éteindre l'appareil ?" />
+		<Item name="MsgTipId.ComputerRestart" text="Voulez-vous redémarrer l'appareil ?" />
+		<Item name="MsgTipId.UserLogOut" text="Voulez-vous déconnecter l'utilisateur actuel ?" />
+		<Item name="MsgTipId.AnotherRFChannelExisted" text="D'autres canaux RF existent déjà !" />
+		<Item name="MsgTipId.AutoGetIPFail" text="Échec de l'obtention d'une adresse IP automatique" />
+		<Item name="MsgTipId.AutoGetIPSuccess" text="IP obtenue automatiquement avec succès" />
+		<Item name="MsgTipId.SetIPAddressFail" text="Échec de la configuration de l'adresse IP et du masque de sous-réseau" />
+		<Item name="MsgTipId.SetGatewayFail" text="Échec de la configuration de l'adresse de passerelle" />
+		<Item name="MsgTipId.SetDNSFail" text="Échec des paramètres DNS" />
+		<Item name="MsgTipId.SetIPSuccess" text="Configuration Ip réussie" />
+		<Item name="MsgTipId.GetBrigtnessFail" text="Échec de l'obtention de la luminosité de l'écran" />
+		<Item name="MsgTipId.SetBrigtnessFail" text="Échec de la configuration de la luminosité de l'écran" />
+		<Item name="MsgTipId.GetContrastFail" text="Échec de l'obtention du contraste de l'écran" />
+		<Item name="MsgTipId.SetContrastFail" text="Échec de la configuration du contraste de l'écran" />
+		<Item name="MsgTipId.RemovableStorageDiscovered" text="Un périphérique de stockage amovible a été détecté, souhaitez-vous définir ce périphérique comme chemin de sauvegarde?" />
+		<Item name="MsgTipId.RemovableStorageRemoved" text="Dispositif de stockage amovible Retiré" />
+		<Item name="MsgTipId.UnknownRemovableStorage" text="Type d'appareil inconnu" />
+		<Item name="MsgTipId.AdministrtorAuthorityRequired" text="Les privilèges d'administrateur sont nécessaires pour le paramétrage!" />
+		<Item name="MsgTipId.PrintPageSucceeded" text="Impression terminée!" />
+		<Item name="MsgTipId.PrintPageFailed" text="Échec de l'impression!" />
+		<Item name="MsgTipId.SDADataDeficient" text="Données SDA insuffisantes !" />
+		<Item name="MsgTipId.FunctionUnused" text="Cette fonction n'est pas disponible" />
+		<Item name="MsgTipId.SDADataAmplitudeDiffTooSmall" text="La différence d'amplitude des données SDA est trop faible, impossible de récupérer les données Ui !" />
+		<Item name="MsgTipId.FewUINumber" text="Le nombre d'Ui efficaces est trop faible pour que les diagrammes oculaires se superposent!" />
+		<Item name="MsgTipId.SDADataCyclesTooFew" text="Le cycle de données SDA est trop court, impossible de mesurer le TIE !" />
+		<Item name="MsgTipId.CheckVersion" text="Exception de vérification de version ! Code d'erreur : {0} {1}" />
+		<Item name="MsgTipId.ClearingSuccess" text="                   Effacé avec succès       " />
+		<Item name="MsgTipId.AccessToFolderFailed" text="Ce chemin n'a pas de permission d'accès, le chemin de stockage par défaut a été restauré !" />
+		<Item name="MsgTipId.DefaultingFailed" text="Échec de la restauration des paramètres par défaut !" />
+		<Item name="MsgTipId.AuxInTriggerTip" text="Remarque : Veuillez entrer le signal de l’interface AUX IN, sinon l'oscilloscope ne pourra pas déclencher!" />
+		<Item name="MsgTipId.AuxInSyncAWGTip" text="Conseil : Veuillez entrer le signal de l’interface AUX IN, sinon aucune sortie de signal de l'AWG !" />
+		<Item name="MsgTipId.Ext10MHzLocked" text="Verrouillé" />
+		<Item name="MsgTipId.Ext10MHzUnlocked" text="Déverrouillé" />
+		<Item name="MsgTipId.NoSignal" text="Pas de signal dans le canal !" />
+		<Item name="MsgTipId.AutoSetFail" text="                   Échec de l'automatisation!                   " />
+		<Item name="MsgTipId.SOASaveError" text="Échec de l'enregistrement, vérifier les données!" />
+		<Item name="MsgTipId.SOALoadMaskError" text="Échec de l'importation du modèle, vérifier les données!" />
+		<Item name="MsgTipId.SOALoadMaskSuccess" text="Modèle importé avec succès !" />
+		<Item name="MsgTipId.TIEResultError" text="Erreur dans le résultat du tirage au sort !" />
+		<Item name="MsgTipId.FilePathNotExist" text="L'emplacement de stockage n'existe pas, l'emplacement de stockage par défaut a été rétabli !" />
+		<Item name="MsgTipId.AutoCalibration" text="Veuillez confirmer si tous les signaux d'entrée ont été retirés" />
+		<Item name="MsgTipId.DataLengthIsInsufficient" text="Longueur de données insuffisante, veuillez augmenter la profondeur de stockage" />
+		<Item name="MsgTipId.DataLengthIsTooLarge" text="La longueur des données est trop importante et a été coupée." />
+		<Item name="MsgTipId.AUXOutIsRequired" text="Veuillez connecter le câble à l'interface Aux Out à l'arrière de l'appareil." />
+		<Item name="MsgTipId.AUXInIsRequired" text="Veuillez connecter le signal à l'interface Aux In à l'arrière de l'appareil." />
+		<Item name="MsgTipId.AWGProtected1" text="Le canal AWG 1 a déclenché la protection matérielle, veuillez débrancher le câble du port du canal AWG 1" />
+		<Item name="MsgTipId.AWGProtected2" text="Le canal AWG 2 a déclenché la protection matérielle, veuillez débrancher le câble du port du canal AWG 2" />
+		<Item name="MsgTipId.AWGProtected3" text="Le canal AWG 3 a déclenché la protection matérielle, veuillez débrancher le câble du port du canal AWG 3" />
+		<Item name="MsgTipId.AWGProtected4" text="Le canal AWG 4 a déclenché la protection matérielle, veuillez débrancher le câble du port du canal AWG 4" />
+		<Item name="MsgTipId.AWGModeModulation" text="Mode de modulation : Le porteuse peut uniquement être une onde sinusoïdale, carrée, impulsionnelle, en rampe ou arbitraire." />
+		<Item name="MsgTipId.AWGModeSweep" text="Mode de balayage : Le porteuse peut uniquement être une onde sinusoïdale, carrée, en rampe ou arbitraire." />
+		<Item name="MsgTipId.DigitalOccupyAnalog" text="Le canal numérique est ouvert, le canal analogique (C3, C4) est occupé." />
+		<Item name="MsgTipId.StopBanDigital" text="L'exploitation des chaînes numériques est interdite dans l'État d'arrêt." />
+		<Item name="MsgTipId.FunctionBanDigital" text="Exclusion mutuelle des fonctions ! Interdiction d'opérer les canaux numériques." />
+		<Item name="MsgTipId.DigitalMutex" text="Fonctions Exclusion mutuelle ! Fermer les canaux numériques ?" />
+		<Item name="MsgTipId.ChannelUITooLess" text="Le canal actuel a trop peu de cycles. Il est recommandé d'augmenter la profondeur de stockage ou de réinitialiser la base de temps." />
+		<Item name="MsgTipId.FastIsNotSupportedInScan" text="Le mode rouleau n'est pas pris en charge pour les opérations UltraAcq." />
+		<Item name="MsgTipId.ScanIsNotSupportedInFast" text="Le mode UltraAcq n'est pas pris en charge pour les opérations Roll." />
+		<Item name="MsgTipId.DemoIsNotSupportedInFast" text="Le mode UltraAcq n’est pas pris en charge en mode démo." />
+		<Item name="MsgTipId.MathIsNotSupportedInScan" text="Le mode rouleau n'est pas pris en charge pour les opérations mathématiques." />
+		<Item name="MsgTipId.PowerAnalysisIsNotSupportedInScan" text="Le mode Roll n'est pas pris en charge pour l'analyse de puissance" />
+		<Item name="MsgTipId.JitterIsNotSupportedInScan" text="Le mode Roll n'est pas pris en charge pour l'analyse de la gigue" />
+		<Item name="MsgTipId.PassFailIsNotSupportedInScan" text="Le mode rouleau n'est pas pris en charge pour le test R/f" />
+		<Item name="MsgTipId.DecodeIsNotSupportedInScan" text="Le mode rouleau n'est pas pris en charge sur le bus" />
+		<Item name="MsgTipId.DecodeNotSupportedMoreThan250MStorageDepth" text="Le bus ne prend pas en charge les profondeurs de stockage supérieures à 250m"/>
+		<Item name="MsgTipId.DecodeIsSupportedMinTimebase" text="Hors de la plage d'échelle de la base de temps sur le bus" />
+		<Item name="MsgTipId.JitterIsSupportedMinTimebase" text="Hors de la plage d'échelle de la base de temps sur le jitter/eye" />
+		<Item name="MsgTipId.SegementIsNotSupportedInScan" text="Le mode séquence ne prend pas en charge le mode déroulant." />
+		<Item name="MsgTipId.SegementIsNotSupportedInPowerAnalysis" text="Le mode séquentiel est incompatible avec l'analyse de puissance, voulez-vous désactiver l'analyse de puissance ?" />
+		<Item name="MsgTipId.SegementIsNotSupportedInJitter" text="Le mode séquentiel est incompatible avec l'analyse de gigue, voulez-vous désactiver l'analyse de gigue ?" />
+		<Item name="MsgTipId.SegementIsNotSupportedInPassFail" text="Le mode séquentiel est incompatible avec le test R/f, voulez-vous désactiver le test R/f ?" />
+		<Item name="MsgTipId.SegementIsNotSupportedInDecode" text="Le mode séquentiel est incompatible avec le bus, voulez-vous éteindre le bus ?" />
+		<Item name="MsgTipId.SegementIsNotSupportedInThisAcqMode" text="Le mode séquentiel n'est pas compatible avec ce mode d'échantillonnage, veuillez changer le mode d'échantillonnage" />
+		<Item name="MsgTipId.SegementIsNotSupportedInThisTriggerMode" text="Le mode séquentiel n'est pas compatible avec ce mode de déclenchement, veuillez changer le mode de déclenchement" />
+		<Item name="MsgTipId.SingleTriggerIsNotSupportedInSegement" text="Le mode séquentiel ne peut pas être déclenché individuellement. Veuillez désactiver le mode séquentiel" />
+		<Item name="MsgTipId.PowerAnalysisIsNotSupportedInJitter" text="L'analyse de puissance est incompatible avec l'analyse de gigue, voulez-vous désactiver l'analyse de gigue ?" />
+		<Item name="MsgTipId.PowerAnalysisIsNotSupportedInPassFail" text="L'analyse de puissance est incompatible avec le test P/f, voulez-vous désactiver le test P/f ?" />
+		<Item name="MsgTipId.PowerAnalysisIsNotSupportedInDecode" text="L'analyse de puissance est incompatible avec le bus, voulez-vous éteindre le bus ?" />
+		<Item name="MsgTipId.PowerAnalysisIsNotSupportedInSegment" text="L'analyse de puissance n'est pas compatible avec le mode séquentiel, souhaitez-vous désactiver le mode séquentiel ?" />
+		<Item name="MsgTipId.PwrAnalysisIsNotSupportedInLA" text="L'analyse de puissance n'est pas compatible avec le numérique, souhaitez-vous désactiver le numérique ?" />
+		<Item name="MsgTipId.JitterIsNotSupportedInPowerAnalysis" text="L'analyse de jitter n'est pas compatible avec l'analyse de puissance, souhaitez-vous désactiver l'analyse de puissance ?" />
+		<Item name="MsgTipId.JitterIsNotSupportedInPassFail" text="L'analyse de jitter n'est pas compatible avec le test R/F, souhaitez-vous désactiver le test R/F ?" />
+		<Item name="MsgTipId.JitterIsNotSupportedInDecode" text="L'analyse de jitter n'est pas compatible avec le bus, souhaitez-vous désactiver le bus ?" />
+		<Item name="MsgTipId.JitterIsNotSupportedInSegment" text="L'analyse de jitter n'est pas compatible avec le mode séquentiel, souhaitez-vous désactiver le mode séquentiel ?" />
+		<Item name="MsgTipId.JitterIsNotSupportedInFFT" text="L'analyse de jitter n'est pas compatible avec la FFT, souhaitez-vous désactiver la FFT ?" />
+		<Item name="MsgTipId.FFTIsNotSupportedInJitter" text="La FFT n'est pas compatible avec l'analyse de jitter, souhaitez-vous désactiver l'analyse de jitter ?" />
+		<Item name="MsgTipId.JitterIsNotSupportedInLA" text="L'analyse de jitter n'est pas compatible avec le numérique, souhaitez-vous désactiver le numérique ?" />
+		<Item name="MsgTipId.PassFailIsNotSupportedInPowerAnalysis" text="Le test R/F n'est pas compatible avec l'analyse de puissance, souhaitez-vous désactiver l'analyse de puissance ?" />
+		<Item name="MsgTipId.PassFailIsNotSupportedInJitter" text="Le test R/F n'est pas compatible avec l'analyse de jitter, souhaitez-vous désactiver l'analyse de jitter ?" />
+		<Item name="MsgTipId.PassFailIsNotSupportedInDecode" text="Le test R/F n'est pas compatible avec le bus, souhaitez-vous désactiver le bus ?" />
+		<Item name="MsgTipId.PassFailIsNotSupportedInSegment" text="Le test R/F n'est pas compatible avec le mode séquentiel, souhaitez-vous désactiver le mode séquentiel ?" />
+		<Item name="MsgTipId.DecodeIsNotSupportedInPowerAnalysis" text="Le bus n'est pas compatible avec l'analyse de puissance, souhaitez-vous désactiver l'analyse de puissance ?" />
+		<Item name="MsgTipId.DecodeIsNotSupportedInJitter" text="Le bus n'est pas compatible avec l'analyse de jitter, souhaitez-vous désactiver l'analyse de jitter ?" />
+		<Item name="MsgTipId.DecodeIsNotSupportedInPassFail" text="Le bus n'est pas compatible avec le test R/F, souhaitez-vous désactiver le test R/F ?" />
+		<Item name="MsgTipId.DecodeIsNotSupportedInSegment" text="Le bus n'est pas compatible avec le mode séquentiel, souhaitez-vous désactiver le mode séquentiel ?" />
+		<Item name="MsgTipId.DecodeIsNotSupportedInLA" text="Le bus n'est pas compatible avec le numérique, souhaitez-vous désactiver le numérique ?" />
+		<Item name="MsgTipId.MathIsNotSupportedInLA" text="Les mathématiques ne sont pas compatibles avec le numérique, souhaitez-vous désactiver le numérique ?" />
+		<Item name="MsgTipId.DigitalIsNotSupportedInDecode" text="Le numérique n'est pas compatible avec le bus, souhaitez-vous désactiver le bus ?" />
+		<Item name="MsgTipId.DigitalIsNotSupportedInMath" text="Le numérique n'est pas compatible avec les mathématiques, souhaitez-vous désactiver les mathématiques ?" />
+		<Item name="MsgTipId.DigitalIsNotSupportedInPowerAnalysis" text="Le numérique n'est pas compatible avec l'analyse de puissance, souhaitez-vous désactiver l'analyse de puissance ?" />
+		<Item name="MsgTipId.DigitalIsNotSupportedInJitter" text="Le numérique n'est pas compatible avec l'analyse de jitter, souhaitez-vous désactiver l'analyse de jitter ?" />
+		<Item name="MsgTipId.DigitalIsNotSupportedInLissajous" text="Le numérique n'est pas compatible avec le Lissajous, souhaitez-vous désactiver le Lissajous ?" />
+		<Item name="MsgTipId.LissajousIsNotSupportedInDigital" text="Le Lissajous n'est pas compatible avec le numérique, souhaitez-vous désactiver le numérique ?" />
+		<Item name="MsgTipId.TimeMinScaleBy2_5G" text="Ce mode d'entrelacement prend en charge un minimum de 500ps/div, et a été automatiquement commuté !" />
+		<Item name="MsgTipId.TimeMinScaleBy5G" text="Ce mode d'entrelacement prend en charge un minimum de 200ps/div, et a été automatiquement commuté !" />
+		<Item name="MsgTipId.PurchaseOptions" text="Cette fonction n'est pas disponible, contacter le fournisseur ou le fabricant pour acheter l'option !" />
+		<Item name="MsgTipId.OptionActiveSuccess" text="Activation de l'option réussie, veuillez l'utiliser avec audace !!!" />
+		<Item name="MsgTipId.OptionActiveFail" text="Échec de l'activation de l'option, veuillez contacter le fournisseur ou le fabricant pour obtenir un nouveau certificat de licence." />
+		<Item name="MsgTipId.OptionActived" text="Option activée, veuillez ne pas l'activer à nouveau !" />
+		<Item name="MsgTipId.LicenseFileFormatError" text="Le certificat de licence n'a pas le bon format et ne peut pas être reconnu" />
+		<Item name="MsgTipId.LicenseRemoveYesOrNo" text="Veuillez confirmer si vous souhaitez retirer le certificat de licence" />
+		<Item name="MsgTipId.LicenseRemoveSuccess" text="Suppression du certificat de licence" />
+		<Item name="MsgTipId.CurrentChannelAmpTooLow" text="En cas de gigue, l'amplitude du signal est trop faible" />
+		<Item name="MsgTipId.ChannelClosed" text="Canal fermé, création échouée !" />
+		<Item name="MsgTipId.CurrentChannelNoData" text="Pendant la gigue, les données du canal source actuel ne peuvent pas être obtenues" />
+		<Item name="MsgTipId.PassFailChannelClosed" text="Canal fermé, échec de l'exécution !" />
+		<Item name="MsgTipId.RunningLoopAnalysisTip" text="L'analyse de boucle est en cours, veuillez patienter." />
+		<Item name="MsgTipId.CompletedLoopAnalysisTip" text="L'analyse de boucle est terminée, veuillez consulter les résultats." />
+		<Item name="MsgTipId.RunningPSRRTip" text="PSRR est en cours d'exécution, essayez d'éviter que d'autres actions affectent son fonctionnement!"/>
+		<Item name="MsgTipId.CompletedPSRRTip" text="PSRR run est terminé, consultez les résultats!"/>
+		<Item name="MsgTipId.FileSaveCheck" text="La sélection de la source de stockage est incorrecte, veuillez sélectionner à nouveau la source de stockage !" />
+		<Item name="MsgTipId.HistBinNumberTooFew" text="L'histogramme de jitter a trop peu de BINs !" />
+		<Item name="MsgTipId.BathWaveFitError" text="Erreur d'ajustement de la courbe en baignoire de jitter !" />
+		<Item name="MsgTipId.ProbeConnected" text="Sonde connectée" />
+		<Item name="MsgTipId.ProbeRemoved" text="Sonde retirée" />
+		<Item name="MsgTipId.ProbeUnavailable" text="La sonde passive à haute résistance ne peut pas être utilisée, veuillez la retirer ou la remplacer!"/>
+		<Item name="MsgTipId.RefFileError1" text="Lecture de fichier de forme d'onde anormale, le format de fichier est incorrect ou incompatible !" />
+		<Item name="MsgTipId.RefFileError2" text="Le fichier de forme d'onde est trop volumineux ; les fichiers de plus de 1 Mo ne sont pas pris en charge pour le moment !" />
+		<Item name="MsgTipId.PassFaileStop" text="Stoppé, veuillez recréer le modèle !" />
+		<Item name="MsgTipId.AuxOutputSetPassFail" text="L’entrée de sortie auxiliaire a été automatiquement réglée pour passer le test!" />
+		<Item name="MsgTipId.RestartingProgram" text="Le redémarrage du logiciel de l'oscilloscope prend effet" />
+		<Item name="MsgTipId.FunctionDisabled" text="Cette fonction a été désactivée. Si vous devez l'activer, faites-le dans Paramètres du système - Composants de fonction." />
+		<Item name="MsgTipId.FinetuningofamplitudeON" text="Ouvrir le réglage fin de l'amplitude" />
+		<Item name="MsgTipId.FinetuningofamplitudeOFF" text="Fermer le réglage fin de l'amplitude" />
+		<Item name="MsgTipId.Drag2DrawRectangle" text="Faites glisser pour dessiner un rectangle" />
+		<Item name="MsgTipId.NoActivedChannel" text="Veuillez ouvrir le canal" />
+		<Item name="MsgTipId.OnlyEnableTwoVisualTrigger" text="Toutes les zones sont ouvertes" />
+		<Item name="MsgTipId.ProbeCaliRefSigUnInput" text="La sonde connectée à la borne de l'onde carrée de l'oscilloscope n'a pas été détectée. Cliquer sur « Oui » pour connecter la sonde à la borne de l'onde carrée de l'oscilloscope, ou sur « Non » pour annuler le processus d'étalonnage." />
+		<Item name="MsgTipId.ProbeCaliCannotInput" text="La sonde n'est pas en état suspendu. Déplacer la pointe de la sonde pour la mettre en état suspendu, puis cliquer sur « Oui ». Pour annuler le processus d'étalonnage, cliquer sur « Non »." />
+		<Item name="MsgTipId.ProbeCaliRefSigRemove" text="Maintenez la sonde frontale de la sonde suspendue avant d'effectuer un étalonnage de polarisation." />
+		<Item name="MsgTipId.ProbeCaliNoiseChecked" text="Détectez un bruit excessif, veuillez court - circuiter la sonde frontale de la sonde." />
+		<Item name="MsgTipId.AcqModeCannotSet" text="En mode UltraAcq, le mode d'échantillonnage ne peut pas être réglé sur Average ou Envelope !" />
+		<Item name="MsgTipId.JitterSourceClose" text="Fermeture de ce canal supprimera l'analyse du jitter!" />
+	</Tip>
+	<Tip>
+		<Item name="DsoForm.TlpMain.DsoInfoStrip.TlpLv1.BtnDigital" text="Digital+" />
+		<Item name="DsoForm.TlpMain.DsoInfoStrip.TlpLv1.BtnMath" text="Math+" />
+		<Item name="DsoForm.TlpMain.DsoInfoStrip.TlpLv1.BtnReference" text="Réf+" />
+		<Item name="DsoForm.TlpMain.DsoInfoStrip.TlpLv1.BtnBus" text="Bus+" />
+		<Item name="DsoForm.TlpMain.DsoInfoStrip.TlpLv1.BtnRadio" text="Rf+" />
+		<Item name="DsoForm.TlpMain.WindowDockPanel.WaveformFigure.tableLayoutPanel1.ZoomSettingPage.LabVScale" text="(Zoom 2.000x)" />
+		<Item name="DsoForm.TlpMain.WindowDockPanel.WaveformFigure.tableLayoutPanel1.ZoomSettingPage.label3" text="Expansion verticale" />
+		<Item name="DsoForm.TlpMain.WindowDockPanel.WaveformFigure.tableLayoutPanel1.ZoomSettingPage.LabHScale" text="(Zoom 2.000x)" />
+		<Item name="DsoForm.TlpMain.WindowDockPanel.WaveformFigure.tableLayoutPanel1.ZoomSettingPage.label1" text="Expansion horizontale" />
+		<Item name="StartExtentForm.SystemPage.TlpBody.LblLogout" text="Déconnexion" />
+		<Item name="StartExtentForm.SystemPage.TlpBody.LblRestart" text="Redémarrer" />
+		<Item name="StartExtentForm.SystemPage.TlpBody.LblShutDown" text="Fermeture" />
+		<Item name="StartExtentForm.SystemPage.TlpBody.LblClose" text="Quitter" />
+		<Item name="StartExtentForm.SystemPage.TlpBody.LblMinimize" text="Minimiser" />
+		<Item name="StartExtentForm.TlpBody.LblTempCheck" text="Détection de la température" />
+		<Item name="StartExtentForm.TlpBody.LblSearch" text="Recherche" />
+		<Item name="StartExtentForm.TlpBody.LblBegin" text="Démarrage" />
+		<Item name="StartExtentForm.TlpBody.LblThreeD" text="Figure tridimensionnelle" />
+		<Item name="StartExtentForm.TlpBody.LblEyePattern" text="Diagramme de l'œil" />
+		<Item name="StartExtentForm.TlpBody.LblLayerOff" text="Fermer la vue secondaire" />
+		<Item name="StartExtentForm.TlpBody.LblLissajous" text="Lissajous" />
+		<Item name="StartExtentForm.TlpBody.LblFailTest" text="P/F" />
+		<Item name="StartExtentForm.TlpBody.LblJitterAnalysis" text="Analyse de la gigue" />
+		<Item name="StartExtentForm.TlpBody.LblPwrAnalysis" text="Analyse de la puissance" />
+		<Item name="StartExtentForm.TlpBody.LblReset" text="Réinitialiser" />
+		<Item name="StartExtentForm.TlpBody.LblAbout" text="Système" />
+		<Item name="StartExtentForm.TlpBody.LblRecover" text="Restaurer les paramètres d'usine" />
+		<Item name="StartExtentForm.TlpBody.LblPrinter" text="Imprimer" />
+		<Item name="StartExtentForm.TlpBody.LblSave" text="Stockage" />
+		<Item name="StartExtentForm.TlpBody.LblStart" text="Démarrage" />
+		<Item name="StartExtentForm.TlpBody.LblClear" text="Effacer" />
+		<Item name="StartExtentForm.TlpBody.LblCursor" text="Curseurs" />
+		<Item name="StartExtentForm.TlpBody.LblSetting" text="Paramètres" />
+		<Item name="StartExtentForm.TlpBody.LblScreenShot" text="Écran" />
+		<Item name="StartExtentForm.TlpBody.LblDebug" text="Débogage" />
+		<Item name="StartExtentForm.TlpBody.LblDemo" text="La démonstration" />
+		<Item name="StartExtentForm.TlpBody.LblUserSetting" text="Coutume" />
+
+	</Tip>
+	<Tip>
+		<!--设置界面-->
+		<Item name="SettingForm" text="Paramètres" Title="设置" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group0" text="Affichage" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.DisplaySettingPage.BtnContrastDefultValue" text="Défaut" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.DisplaySettingPage.BtnBrigtnessDefultValue" text="Défaut" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.DisplaySettingPage.LblContrast" text="Contraste :" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.DisplaySettingPage.LblBrightnessControl" text="Luminosité :" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group1" text="Réglages automatiques &amp;&amp; Calibration" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkChannelSetting" text="Chaîne" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkCouplingHold" text="Maintien de l'accouplement" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkOverlapView" text="Affichage en pile" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.BtnAutoCorrection" text="Calibrage automatique" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.LblAutoCorrection" text="Calibrage automatique" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkTriggerSetting" text="Déclencheur" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkAcquisitionSetting" text="Acquisition" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkHorizontalSetting" text="Horizontal" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.LblAutoSettingItems" text="Paramètre d'autoset :" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkVerticalSetting" text="Vertical" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AutoSettingPage.ChkAmpCalibration" text="Si l'amplitude est auto-correctrice" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group2" text="Communication" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork" text="Réseau" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.RdoNetWork.panel1.Btn_0" text="Connecté" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.RdoNetWork.panel1.Btn_1" text="Tous" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.RdoGetIpMethod.panel1.Btn_0" text="Automatique" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.RdoGetIpMethod.panel1.Btn_1" text="Manuel" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblNetWorkStatus" text="Sélection du réseau" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.BtnSetIpAuto" text="Obtenir automatiquement" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblNetWorkCardName" text="Nom du réseau" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.BtnSettingIP" text="Appliquer" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblGetIPAddressMethod" text="Méthode d'acquisition IP" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblIPAdress" text="Adresse IP" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblIPMask" text="Masque de sous-réseau" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblDNSBackup" text="DNS de secours" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblGateway" text="Passerelle " />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblDNSMain" text="DNS principal" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgNetWork.LblMAC" text="Adresse Mac" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgWebServer.ChkWebStatus" text="Arrêt" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgWebServer.LblServer" text="Serveur" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgWebServer.LblStatus" text="Statut" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.NetWorkPage.TcmNetWork.TpgWebServer.LblPort" text="Numéro de port" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group3" text="Aux Entrée/Sortie" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.LblAuxInTip" text="Conseil : Connecter correctement le signal de déclenchement externe, sinon aucune sortie de signal de l'AWG !" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.LblAuxInPolarity" text="Polarité d'entrée" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxInput.panel1.Btn_0" text="Fermer" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxInput.panel1.Btn_1" text="Synchro trigger" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxInput.panel1.Btn_2" text="AWG ExtTrig" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.LblAuxInput" text="Signal d'entrée auxiliaire" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.LblAuxOutPolarity" text="Polarité de la sortie" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxOutput.panel1.Btn_0" text="Fermer" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxOutput.panel1.Btn_1" text="Synchronisation de déclenchement" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxOutput.panel1.Btn_2" text="Déclenchement AWG" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.RboAuxOutput.panel1.Btn_3" text="Test réussi" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.AuxOutputPage.LblAuxOutput" text="Signal d'entrée auxiliaire" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group6" text="Autre" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblTouch" text="Touch Lock" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.ChkTouch" text="Arrêt" CheckedText="Sur" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblStopMeasure" text="Arrêter la mesure" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.ChkStopMeasure" text="Arrêt" CheckedText="Sur"/>
+		<!--<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblLanguage" text="多语言" />-->
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.BtnRestoreFactory" text="Restaurer les paramètres d'usine" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblChannel" text="Couleur" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.BtnSettingTime" text="Paramètres" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblDefault" text="Par défaut" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblTime" text="Date&amp;&amp;Heure" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.scopexLabel1" text="Temps de fonctionnement" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.OtherSettingPage.LblSysRunTime" text="Temps de fonctionnement" />
+		<Item name="SettingForm.BaseTopStrip1.TableLayoutPanel.TitleLabel" text="Paramètres" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group7" text="Composante fonctionnelle" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group4" text="Adaptateur de commande SCPI" />
+		<Item name="KeXuanZuJian" text="Composant optionnel" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.Group5" text="Auto-test" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.LblScreen" text="Détection d'écran" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.BtnScreenDetection" text="Cliquez pour commencer" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.LblTouch" text="Détection tactile" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.BtnTouchDetection" text="Cliquez pour commencer" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.LblKeyboard" text="Détection du clavier" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.BtnKeyboardDetection" text="Cliquez pour commencer" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.LblLed" text="Détection LED" />
+		<Item name="SettingForm.NbgSetting.TlpNavBarContainer.ScreenDetectionPage.BtnLEDDetection" text="Cliquez pour commencer" />
+		<Item name="KeyboardDetectionForm.LblHintOneText" text="Appuyez sur 3 en continu pour quitter le mode auto - Test Run / Stop!!!" />
+		<Item name="KeyboardDetectionForm.LblHintTwoText" text="Veuillez appuyer sur le bouton du clavier pour tester." />
+		<Item name="KeyboardDetectionForm.LblHint_2" text="Quitter le mode de test d'écran!!!" />
+		<Item name="KeyboardDetectionForm.LblHint_3" text="Appuyez sur n'importe quel bouton pour changer la couleur de l'écran!!!" />
+		<Item name="TouchTestForm.TouchColor_4_7" text="Veuillez appuyer sur l'écran" />
+		<Item name="TouchTestForm.TouchColor_4_8" text="tester l'écran tactile" />
+		<Item name="TouchTestForm.TouchColor_4_9" text="s'il fonctionne correctement!" />
+		<Item name="TouchTestForm.TouchColor_5_7" text="Appuyez 3 fois de suite" />
+		<Item name="TouchTestForm.TouchColor_5_8" text="run/stop" />
+		<Item name="TouchTestForm.TouchColor_5_9" text="pour quitter ce test!" />
+	</Tip>
+	<Tip>
+		<!--探头相关界面-->
+		<Item name="ProbeUserCaliForm.Title" text="Sonde Cali" />
+		<Item name="ProbeUserCaliForm.Text" text="Sonde Cali" />
+		<Item name="ProbeUserCaliForm.Ok" text="Calibrage de la sonde" />
+		<Item name="ProbeUserCaliForm.Read" text="Lire les données de Cali" />
+		<Item name="ProbeUserCaliForm.Clear" text="Effacer les données de Cali" />
+		<Item name="ProbeUserCaliForm.Cancel" text="Annuler" />
+		<Item name="ProbeUserCaliForm.CloseRef" text="Fermer l'onde carrée" />
+		<Item name="ProbeUserCaliForm.OpenRef" text="Ouvrir l'onde carrée" />
+		<Item name="ProbeUserCaliForm.Note" text="Avant de commencer l'étalonnage, veuillez suivre les indications de l'image ci - dessous pour connecter la sonde au terminal à ondes carrées." />
+		<Item name="ProbeUserCaliForm.Item.Step" text="Étape" />
+		<Item name="ProbeUserCaliForm.Item.Status" text="Statut" />
+		<Item name="ProbeUserCaliForm.Item.Status.Todo" text="Todo" />
+		<Item name="ProbeUserCaliForm.Item.Status.Doing" text="En cours d'exécution…" />
+		<Item name="ProbeUserCaliForm.Item.Status.Cancel" text="Annulé" />
+		<Item name="ProbeUserCaliForm.Item.Status.Succ" text="Réussi" />
+		<Item name="ProbeUserCaliForm.Item.Status.Fail" text="Échec" />
+		<Item name="ProbeUserCaliForm.Item.Status.ChkFail" text="Non réussi" />
+		<Item name="ProbeUserCaliForm.Item.Status.ChkSucc" text="Réussi" />
+		<Item name="ProbeUserCaliForm.Item.Status.AllComplete" text="tout terminé" />
+
+		<Item name="ProbeUserCaliForm.Item.Step.MeanEnable" text="Activation de la mesure MSO" />
+		<Item name="ProbeUserCaliForm.Item.Step.GainCaliInit" text="Initialisation de l'étalonnage du gain" />
+		<Item name="ProbeUserCaliForm.Item.Step.GainCaliCheck" text="Vérification de la calibration du gain" />
+		<Item name="ProbeUserCaliForm.Item.Step.GainCalib" text="Calibrage du gain" />
+		<Item name="ProbeUserCaliForm.Item.Step.OffsetCaliInit" text="Offset Calib Init" />
+		<Item name="ProbeUserCaliForm.Item.Step.OffsetCaliCheck" text="Vérification de l'étalonnage du décalage" />
+		<Item name="ProbeUserCaliForm.Item.Step.OffsetCalib" text="Calibrage du décalage" />
+		<Item name="ProbeUserCaliForm.Item.Step.SaveCaliData" text="Sauvegarde des données Calib" />
+	</Tip>
+	<Tip>
+		<!--模拟通道界面-->
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.Group0" text="Vertical" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.ChkIndependentWindow" text="Arrêt" CheckedText="Sur" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblIndependentWindow" text="Nouvelle vue" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblUnitSelection" text="Unités" />
+
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblActive" text="Affichage" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblInvert" text="Antiphase" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblbandLimit" text="Limite de la bande passante" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblCoupling" text="Accouplement" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblScale" text="Échelle verticale" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblLabel" text="Étiquette" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.BtnResetPos" text="Régler à 0" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblPosition" text="Position" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.BtnResetBias" text="Régler à 0" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.LblBias" text="Tension de polarisation" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.ChkActive" text="Arrêt" CheckedText="Sur" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.ChkInvert" text="Arrêt" CheckedText="Sur" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.FuDuXiTiao" text="Réglage fin" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.VerticalPage.CopyTo" text="Copier vers" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.Group1" text="Entrée" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblCustomGain" text="Magnification Personnalisée" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.BtnResetDeskew" text="Régler à 0" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblDeskew" text="Dérive de Canal" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.PnlInfo.tableLayoutPanel1.ScopeXLabel2" text="Agrandissement" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.PnlInfo.tableLayoutPanel1.ScopeXLabel1" text="Fabricant" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.PnlInfo.tableLayoutPanel1.ScopeXLabel4" text="Modèle" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.PnlInfo.tableLayoutPanel1.ScopeXLabel5" text="Numéro de série" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.PnlInfo.tableLayoutPanel1.ScopeXLabel6" text="Autre" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblInfo" text="Informations sur la sonde" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.AutoCalib" text="Calibration" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.FactCalib" text="Calibration de base" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.ProbeDefault" text="Default" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.BtnSelectAll" text="Calibrage de la sonde" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.CbxAttenuation" text="Décibel" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.labAttenuation" text="Atténuation" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.CbxProbeBtnType" text="Feux avant" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblProbeBtn" text="Boutons de la sonde" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblInputSource" text="Sélection des entrées" />
+		<Item name="AnalogForm.NbgAnalog.TlpNavBarContainer.ProbePage.LblProbeMag" text="Atténuation sonde" />
+		<Item name="BeiYongDanWei" text="Unités de rechange" />
+		<Item name="DanWeiBiLv" text="Unit Ratio" />
+	</Tip>
+	<Tip>
+		<!--Math 数学相关界面-->
+		<Item name="MathForm.MathPage.TlpMath.PnlVertical.BtnResetVPos" text="Réinitialiser" />
+		<Item name="MathForm.MathPage.TlpMath.PnlVertical.LblVScale" text="Échelle verticale" />
+		<Item name="MathForm.MathPage.TlpMath.PnlVertical.LblVPos" text="Position verticale" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.ChkIndependentWindow" text="Arrêt" CheckedText="Sur" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.LblIndependentWindow" text="Nouvelle vue" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.ChkActive" text="Arrêt" CheckedText="Sur" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.CbxCalcType" text="De base" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.LblCalcType" text="Arithmétique" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHead.LblActive" text="Affichage" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHorizon.BtnResetHPos" text="Réinitialiser" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHorizon.LblHPos" text="Position horizontale" />
+		<Item name="MathForm.MathPage.TlpMath.PnlHorizon.LblHScale" text="Échelle horizontale" />
+		<Item name="MathForm.MathPage.TlpMath.PnlTail.ChkUnit" text="Unité personnalisée" />
+		<Item name="MathForm.MathPage.TlpMath.PnlTail.LblLabel" text="Étiquette" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.GrpFrequncy" text="Gamme de fréquences" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.GrpFrequncy.LblSpan" text="Portée" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.GrpFrequncy.LblCenter" text="Fréquence centrale" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.ChkPeakMarks" text="Arrêt" CheckedText="Sur" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblPeakMarks" text="Marqueur de pic" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblUnit" text="Unités" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.CbxResultType" text="Spectre d'amplitude" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblResultType" text="Sortie" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblNumber" text="Points" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.CbxWindowType" text="Rectangle" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblWindowType" text="Méthode de la fenêtre" />
+		<Item name="MathForm.MathPage.TlpMath.MathFftSubPage.LblSource" text="Source" />
+		<Item name="MathForm.MathPage.TlpMath.MathBinarySubPage.LblLeftSource" text="Source 1" />
+		<Item name="MathForm.MathPage.TlpMath.MathBinarySubPage.LblRightSource" text="Source 2" />
+		<Item name="MathForm.MathPage.TlpMath.MathBinarySubPage.LblOperator" text="Arithmétique" />
+		<Item name="MathForm.MathPage.TlpMath.MathEResSubPage.LblSource" text="Source" />
+		<Item name="MathForm.MathPage.TlpMath.MathEResSubPage.LblBits" text="Amélioration des bits" />
+		<Item name="MathForm.MathPage.TlpMath.MathCustomSubPage.LblFormula" text="Édition de formule" />
+		<Item name="MathForm.MathPage.TlpMath.MathCustomSubPage.BtnFormula" text="Veuillez entrer..." />
+		<Item name="MathForm.MathPage.TlpMath.MathUserProgramSubPage.LblEngineType" text="Type de bibliothèque moteur" />
+		<Item name="MathForm.MathPage.TlpMath.MathUserProgramSubPage.BtnEditCode" text="Édition du code" />
+		<Item name="MathForm.MathPage.TlpMath.MathUserProgramSubPage.LblSource" text="Source" />
+		<!--UserCodeForm-->
+		<Item name="UserCodeForm.BtnExceteOneTime" text="Exécuter une fois" />
+		<Item name="UserCodeForm.BtnSaveToFile" text="Code d'économie" />
+		<Item name="UserCodeForm.BtnImport" text="Code d'importation" />
+		<Item name="UserCodeForm.BtnSetWorkFolder" text="Définir le répertoire de travail" />
+		<Item name="UserCodeForm.GpxResult" text="Résultat de la course" />
+		<Item name="UserCodeForm.GpxCodeEdit" text="Code" />
+		<Item name="UserCodeForm.BtnCancel" text="Arrêter l'exécution" />
+		<Item name="UserCodeForm.BtnExceteRepeat" text="Exécuter en boucle" />
+		<!--<Item name="UserCodeForm.BaseTopStrip1.TableLayoutPanel.TitleLabel" text="Matlab 代码编辑器" />-->
+		<Item name="UserCodeForm" text="Éditeur de code" Title="Éditeur de code" />
+		<!--CustomFormulaForm-->
+		<Item name="CustomFormulaForm.TlpEditor.LblDescription" text="Choisir l'opérateur et l'opérande souhaités pour construire la formule. Les opérateurs avec des parenthèses gauche intégrées doivent compléter les parenthèses droites." />
+		<Item name="CustomFormulaForm.TlpEditor.RdoSource.panel1.Btn_0" text="Tous les CHs" />
+		<Item name="CustomFormulaForm.TlpEditor.RdoSource.panel1.Btn_1" text="Canal analogique" />
+		<Item name="CustomFormulaForm.TlpEditor.RdoSource.panel1.Btn_2" text="CHs numériques" />
+		<Item name="CustomFormulaForm.TlpEditor.RdoSource.panel1.Btn_3" text="Canal de référence" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnClear" text="Effacer" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnBackSpace" text="Supprimer" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnLoadFormula" text="Charger" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnSaveFormula" text="Économiser" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnCancel" text="Annuler" />
+		<Item name="CustomFormulaForm.TlpEditor.BtnAccept" text="OK" />
+		<Item name="CustomFormulaForm.TlpEditor.ScFunctions.LvFunctions" text="Moyenne" />
+		<Item name="CustomFormulaForm.BaseTopStrip1.TableLayoutPanel.TitleLabel" text="Éditeur de formules" />
+		<Item name="CustomFormulaForm" text="Éditeur de formules" Title="Éditeur de formules" />
+	</Tip>
+	<Tip>
+		<!--ReferenceForm 引用相关界面-->
+		<Item name="ReferenceForm.ReferencePage.ChkIndependentWindow" text="Arrêt" CheckedText="Sur" />
+		<Item name="ReferenceForm.ReferencePage.LblIndependentWindow" text="Nouvelle vue" />
+		<Item name="ReferenceForm.ReferencePage.BtnResetHPos" text="Réinitialiser" />
+		<Item name="ReferenceForm.ReferencePage.BtnResetVPos" text="Réinitialiser" />
+		<Item name="ReferenceForm.ReferencePage.ChkActive" text="Arrêt" CheckedText="Sur" />
+		<Item name="ReferenceForm.ReferencePage.LblLabel" text="Étiquette" />
+		<Item name="ReferenceForm.ReferencePage.LblHPos" text="Déplacement horizontal" />
+		<Item name="ReferenceForm.ReferencePage.LblHScale" text="Niveau horizontal" />
+		<Item name="ReferenceForm.ReferencePage.LblVPos" text="Déplacement vertical" />
+		<Item name="ReferenceForm.ReferencePage.LblVScale" text="Échelon vertical" />
+		<Item name="ReferenceForm.ReferencePage.LblPath" text="Sélectionnez un fichier" />
+		<Item name="ReferenceForm.ReferencePage.LblUnit" text="Unités" />
+		<Item name="ReferenceForm.ReferencePage.LblActive" text="Affichage" />
+	</Tip>
+	<Tip>
+		<!--测量菜单界面-->
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnResetStatistic.Tlp.BtnMain" text="Réinitialiser Statistiques" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnCloseAllMeasure.Tlp.BtnMain" text="Effacer les éléments de mesure" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnMeasureOperation.Tlp.BtnMain" text="Opérations de mesure" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnMeasure.Tlp.BtnMain" text="Mesure des paramètres" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnStatistic.Tlp.BtnMain" text="Statistiques" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnMeasureGateCursor.Tlp.BtnMain" text="Seuil - Curseur" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnMeasureGateScreen.Tlp.BtnMain" text="Seuil - Écran" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnSnapShot.Tlp.BtnMain" text="Aperçu des paramètres" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnCymometer.Tlp.BtnMain" text="Cymètre" />
+		<Item name="MeasureMenuForm.MeasureMenuPage.Tlp.BtnVoltmeter.Tlp.BtnMain" text="DVM" />
+		<!--参数测量配置界面-->
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.RdoFigure.panel1.Btn_0" text="Fermer" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.RdoFigure.panel1.Btn_1" text="Histogramme" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.RdoFigure.panel1.Btn_2" text="Tendance" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.RdoFigure.panel1.Btn_3" text="Poursuite de l'activité" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.ChkIndicator" text="Arrêt" CheckedText="Sur" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblFigure" text="Graphiques" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblIndicator" text="Indicateur" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.ChkActive" text="Arrêt" CheckedText="Sur" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblSource2nd" text="À" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.BtnResetStat" text="Réinitialisation statistique" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.BtnThrold" text="Seuil" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.BtnName" text="Pic à pic" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblThrold" text="Référence" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblSource" text="Source" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblName" text="Paramètres" />
+		<Item name="MeasItemCfgForm.MeasItemCfgPage.LblActive" text="Affichage" />
+		<Item name="MeasItemCfgForm" text="Configuration des paramètres" Title="Configuration des paramètres" />
+	</Tip>
+	<Tip>
+		<!--插件资源文件中的字符-->
+		<Item name="ScopeX.ComModel.ProtocolCommon.Polarity.Negative" text="Négatif" />
+		<Item name="ScopeX.ComModel.ProtocolCommon.Polarity.Positive" text="Positif" />
+		<Item name="ScopeX.ComModel.ProtocolCommon.Edge.Fall" text="Chute" />
+		<Item name="ScopeX.ComModel.ProtocolCommon.Edge.Rise" text="S'élever" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.Condition.FrameHead" text="début du cadre" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.Condition.Label" text="Étiquette" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.Condition.SDI" text="IDS" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.Condition.SSM" text="SMS" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.Condition.Data" text="données" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.Condition.LabelAndData" text="balises et données" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.Condition.Error" text="erreur" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.Condition.FrameTail" text="fin du cadre" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.ErrorType.AnyError" text="toute erreur" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.ErrorType.CRCError" text="Vérifier l'erreur de bit" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.ErrorType.WordError" text="erreur de mot" />
+		<Item name="ScopeX.ComModel.ProtocolARINC429.ErrorType.GapError" text="erreur d'écart" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.Condition.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.Condition.Sync" text="Bit de synchronisation" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.Condition4TDM.Sync" text="Bit de synchronisation" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.Condition4TDM.ChannelAndData" text="Canal+Données" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.Condition4TDM.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.SoundChannel.Left" text="Gauche" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.SoundChannel.LeftOrRight" text="G/D" />
+		<Item name="ScopeX.ComModel.ProtocolAudioBus.SoundChannel.Right" text="Droit" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.Error" text="Erreur" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.FrameEnd" text="Fin du cadre" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.FrameStart" text="Début de mot" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.FrameType" text="Type de cadre" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.IDandData" text="ID &amp;&amp; Données" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.Condition.LostConfirmation" text="Confirmation perdue" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.ErrorPacketType.AckLose" text="Échec de la réponse" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.ErrorPacketType.BitFillError" text="Erreur padding" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.FrameType.Data" text="Cadre de données" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.FrameType.Error" text="Cadre d'erreur" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.FrameType.Overload" text="Cadre de surcharge" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.FrameType.Remote" text="Cadre à distance" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Both" text="N'importe lequel" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Read" text="Lire" />
+		<Item name="ScopeX.ComModel.ProtocolCAN.IDFrameDirection.Write" text="Écrire" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.Condition.FrameStart" text="Début de mot" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.Condition.FrameType" text="Type de cadre" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.Condition.ID" text="ID" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.Condition.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.Condition.IDandData" text="ID &amp;&amp; Données" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.Condition.FrameEnd" text="Fin du cadre" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.Condition.Error" text="Erreur" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.ErrorType.AnyError" text="Toutes les erreurs" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.ErrorType.LostError" text="Confirmation perdue" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.ErrorType.BitFillError" text="Erreur de remplissage de bits" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.ErrorType.CRCError" text="Erreur CRC" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.FrameType.Data" text="Cadre de données" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.FrameType.Error" text="Cadre d'erreur" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.FrameType.Overload" text="Cadre de surcharge" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.FrameType.Remote" text="Cadre à distance" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.FrameType.VarFrame" text="Cadre à taux variable" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDFrameDirection.Both" text="N'importe lequel" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDFrameDirection.Read" text="Lire" />
+		<Item name="ScopeX.ComModel.ProtocolCANFD.IDFrameDirection.Write" text="Écrire" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.FrameHead" text="Début de mot" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.MACAddress" text="Adresse Mac" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.MACLenghtOrType" text="Longueur/type MAC" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.QTagInfo" text="Informations de contrôle QTag" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.ClientData" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.DataEndPos" text="fin du paquet" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.Idle" text="inactif" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.Condition.CRCError" text="Erreur CRC" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.SignalType.Difference" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolEthernet.SignalType.Single" text="Simple extrémité" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.Circulate" text="Nombre de cycles" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.Header" text="Champ titre" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.Error" text="Erreur" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.FrameHead" text="Début du cadre" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.FrameTail" text="Fin du cadre" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.IDAndData" text="ID &amp;&amp; Données" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.Indicator" text="Bit indicateur" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Condition.PkgHead" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Indicator.EmptyFrame" text="Cadre vide" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Indicator.NormalFrame" text="Cadre normal" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Indicator.PayloadFrame" text="Cadre de charge utile" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Indicator.StartFrame" text="Cadre de démarrage" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.Indicator.SyncFrame" text="Cadre de synchronisation" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.DynamicEmptyFrame" text="Cadre vide, dynamique" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.PkgHeadCRC" text="En-tête CRC" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.PkgTail" text="Fin du cadre" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.StartFrame" text="Trame init. (sans synchro)" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.StaticEmptyFrame" text="Cadre vide, statique" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameError.SyncFrame" text="Cadre de synchronisation" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameTail.Any" text="Entier" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameTail.Dynamic" text="Dynamique" />
+		<Item name="ScopeX.ComModel.ProtocolFlexRay.FrameTail.Static" text="Statique" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.Start" text="Démarrage" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.ReStart" text="Redémarrer" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.Stop" text="Arrêter" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.Lost" text="Échec de la réponse" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.Address" text="Adresse" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.Condition.AddressAndData" text="Adresse &amp;&amp; Données" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.DataDirection.Read" text="Lire" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.DataDirection.Write" text="Écrire" />
+		<Item name="ScopeX.ComModel.ProtocolI2C.DataDirection.Both" text="N'importe lequel" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.Start" text="Début de mot" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.IDCRCError" text="Erreur de validation de l'ID" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.SUMCRCError" text="Erreur de somme de contrôle" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Condition.CmdOrStatus" text="mot de commande/d'état" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Condition.Error" text="Erreur" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Condition.Data" text="Cadre de données" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Condition.Sync" text="synchrone" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.ErrorType.Oddevent" text="contrôle de parité" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.ErrorType.Sync" text="synchrone" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.ErrorType.Manchester" text="Manchester" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.ErrorType.Notcontinue" text="numéros non consécutifs" />
+		<Item name="ScopeX.ComModel.ProtocolNRZ.IdleLevel.High" text="Haut" />
+		<Item name="ScopeX.ComModel.ProtocolNRZ.IdleLevel.Low" text="Faible" />
+		<Item name="ScopeX.ComModel.ProtocolNRZ.SignalType.Difference" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolNRZ.SignalType.Single" text="Simple extrémité" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.Command" text="Initialiser le code K" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.STP" text="Début du cadre TL" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.SDP" text="Début du cadre LL" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.SeqID" text="ID de séquence" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.TLPType" text="Type de paquet TL" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.TC" text="Catégorie de trafic" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.AT" text="Attribut" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.TransID" text="ID de la transaction" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.MsgCode" text="Message" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.Address" text="Adresse" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.Decode_Error" text="Erreur de décodage" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.EP" text="Drapeau d'erreur de données" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.FormatError" text="Erreur de type de paquet TL" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.ECRCError" text="Erreur de somme de contrôle TL CRC" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.LCRCError" text="Erreur de somme de contrôle LL CRC" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.End" text="Fin du cadre LL" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.Condition.EDB" text="Fin trame LL erreur" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.MRD" text="Demande de lecture de mémoire" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.MRDLK" text="Verrou de demande de lecture de mémoire" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.MWr" text="Demande d'écriture en mémoire" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.IORd" text="Demande de lecture IO" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.IOWr" text="Demande d'écriture IO" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CfgRd0" text="Configurer le type de lecture 0" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CfgWr0" text="Configurer le type d'écriture 0" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CfgRd1" text="Configurer le type de lecture 1" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CfgWr1" text="Configurer le type d'écriture 1" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.TCfgRd" text="Lire la configuration de la confiance" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.TCfgWr" text="Configuration de la confiance en écriture" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.Msg" text="Demande de message" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.MsgD" text="Demande de message de données" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.Cpl" text="Pas de données Complétées" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CplD" text="Complété par des données" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CplLK" text="Terminer la lecture sans données et verrouiller la mémoire" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.TLPType.CplDLK" text="Terminer la lecture de données et verrouiller la mémoire" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.SignalType.Difference" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolPCIe.SignalType.Single" text="Simple extrémité" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.Conditions.FrameStart" text="Démarrage" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.Conditions.CheckError" text="Erreur de vérification" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.Conditions.SpecialData" text="Bit de données" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.Conditions.PackageEnd" text="Bit d'arrêt" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.SignalType.Difference" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.SignalType.Single" text="Simple extrémité" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.OddEvenCheck.None" text="Aucun" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.OddEvenCheck.Even" text="Pair" />
+		<Item name="ScopeX.ComModel.ProtocolRS232.OddEvenCheck.Odd" text="Impair" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.ALIGN" text="Contrôle couche phys." />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.SYNC" text="Synchronisation" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.X_RDY" text="Préparation des données" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.SOF" text="Début de mot" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.FIS_TYPE" text="Type de cadre" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.DATA" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.Hold" text="Maintien" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.EOF" text="Fin du cadre" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.Condition.WTRM" text="Attente de fin de trame" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.SignalType.Single" text="Simple extrémité" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.SignalType.Difference" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.CONTp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.DMATp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.HOLDp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.HOLDAp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.PMACKp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.PMNACKp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.PMREQ_Pp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.PMREQ_Sp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.R_ERRp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.R_IPp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.R_OKp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.R_RDYp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.SYNCp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.WTRMp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.PrimitiveFlag.X_RDp" text="Différentiel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.R_H2D" text="FIS Maître Tx Esclave Rx" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.R_D2H" text="FIS Esclave Tx Maître Rx" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.DMA_Act" text="FIS DMA Esclave Tx Maître Rx" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.DMA_Set" text="FIS DMA bidirectionnel" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.Data" text="Données bidirectionnelles de la SIF" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.BIST" text="FIS Bist bidirectionnelle" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.PIO" text="FIS PIO Esclave Tx Maître Rx" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.SDB" text="FIS Bit Config Esclave Tx Maître Rx" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.R_SATA" text="Conserver l'ATA" />
+		<Item name="ScopeX.ComModel.ProtocolSATA.FISTypeFlag.V_S" text="Détails du fournisseur" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.Sync" text="Synchronisation" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.Status" text="Statut" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.CRC" text="CRC" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.StatusData" text="Statut+Données" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.StatusDataCRC" text="Statut+Données+CRC" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastCondition.Error" text="Erreur" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastError.CRCError" text="Fast Channel CRC Erreur" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastError.ConPulsError" text="Erreur de pulsation continue" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.Sync" text="Bit de synchronisation" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.ID" text="ID" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.IDData" text="ID+Données" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.CRC" text="CRC" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowCondition.CRCError" text="Erreur CRC du canal lent" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowMessageCondition.EnhancedMessage" text="Amélioré" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowMessageCondition.ShortMessage" text="Court" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowEnhancedMessageType.Enhanced4BitID" text="ID amélioré 4 bits" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.SlowEnhancedMessageType.Enhanced8BitID" text="ID amélioré 8 bits" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.ChannelMode.FastChannel" text="Canal Rapide" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.ChannelMode.SlowChannel" text="Lent" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastChannelMode.Nibbles" text="Nibbles" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.FastChannelMode.FastChannel" text="Canal Rapide" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.PauseBit.No" text="Aucun" />
+		<Item name="ScopeX.ComModel.ProtocolSENT.PauseBit.Yes" text="Avec" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.Condition.CS" text="SS Actif" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.Condition.Data" text="Données" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.LevelState.Low" text="Faible" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.LevelState.Hight" text="Haut" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.FramingMode.Slave" text="Sélection des puces" />
+		<Item name="ScopeX.ComModel.ProtocolSPI.FramingMode.Idle" text="Délai d'expiration" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.WriteExRegister" text="Écriture d'enregistrement étendu" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.ReadExRegister" text="Lecture d'enregistrement étendu" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.WriteExRegisterLong" text="Écriture d'enregistrement étendu (long)" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.ReadExRegisterLong" text="Lecture d'enregistrement étendu (long)" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.WriteRegister" text="Écriture dans le registre" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.ReadRegister" text="Lecture du registre" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.MasterWrite" text="Hôte Ecriture" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.MasterRead" text="Lire l'hôte" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.MasterWriteDD" text="DD Block Host Read" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.MasterReadDD" text="DD Block Slave Read" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.WriteRegister0" text="Registre 0 Écriture" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Reset" text="Réinitialiser" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Dormancy" text="Hibernate" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Stop" text="Arrêter" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Wakeup" text="Réveillez-vous" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Identify" text="Identification" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.BusRightTransfer" text="Transfert des droits de bus" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.Condition.Parity_Error" text="Erreur de vérification" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.CheckType.Odd" text="Impair" />
+		<Item name="ScopeX.ComModel.ProtocolSPMI.CheckType.Even" text="Pair" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Sync" text="Synchronisation" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Reset" text="Réinitialiser" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Pause" text="Pause" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Resume" text="Récupération" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.PackageEnd" text="Fin de paquet" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.TokenPackage" text="Paquet de jetons" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.HandshakePackage" text="Paquet de la poignée de main" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.DataPackage" text="Paquet de données" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Special" text="Spécial" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.Condition.Error" text="Erreur" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.TokenPackageType.Out" text="Notification de sortie" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.TokenPackageType.SOF" text="Paquet de départ de la trame" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.TokenPackageType.IN" text="Notification d'entrée" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.TokenPackageType.SETUP" text="Transmission de contrôle" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.SpecialPacketType.Err" text="Préambule/erreur" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.SpecialPacketType.Split" text="Affaires scindées" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.SpecialPacketType.Ping" text="Test Ping" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.SpecialPacketType.Remain" text="Conserver" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.HandshakePackageType.ACK" text="ACK" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.HandshakePackageType.NAK" text="NAK" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.HandshakePackageType.STALL" text="Suspendre" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.HandshakePackageType.Nyet" text="Pas prêt" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.DataPackageType.Data0" text="Données 0" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.DataPackageType.Data1" text="Données 1" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.DataPackageType.Data2" text="Données 2" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.DataPackageType.MData" text="Données M" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.ErrorPackageType.PIDCRC" text="Erreur de vérification de Pidcrc" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.ErrorPackageType.CRC5" text="Erreur de vérification CRC5" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.ErrorPackageType.CRC16" text="Erreur de vérification CRC16" />
+		<Item name="ScopeX.ComModel.ProtocolUSB.ErrorPackageType.BitFill" text="Erreur de remplissage de bits" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.SyncError" text="SyncError" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.ID_DATA" text="ID &amp;&amp; Données" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.SLEEP" text="Cadre de sommeil" />
+		<Item name="ScopeX.ComModel.ProtocolLIN.Condition.WAKE_UP" text="Cadre de réveil" />
+		<Item name="ScopeX.ComModel.ProtocolManchester.Condition.Condition_NONE" text="aucun" />
+		<Item name="ScopeX.ComModel.ProtocolCXPI.Condition.Condition_NONE" text="aucun" />
+		<Item name="ScopeX.ComModel.ProtocolMlt3.Condition.Condition_NONE" text="aucun" />
+		<Item name="ScopeX.ComModel.Protocol8B10B.Condition.Condition_NONE" text="aucun" />
+		<Item name="ScopeX.ComModel.ProtocolMIL.Condition.Condition_NONE" text="aucun" />
+		<Item name="LianXuLingDianPingGeShu" text="Nombre de niveaux zéro consécutifs" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.A" text="Entrée canal A" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.B" text="Entrée canal B" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.C" text="Entrée canal C" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.AB" text="Entrée différentielle AB" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.BC" text="Entrée différentielle BC" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.CA" text="Entrée différentielle CA" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.ABThreshold" text="Le seuil AB" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.BCThreshold" text="Le seuil BC" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.CAThreshold" text="Le seuil CA" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.LPAThreshold" text="Seuil de canal LP A" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.LPCThreshold" text="Seuil de canal LP C" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.SheZhiBoTeLv" text="Définir le taux de Baud" />
+		<Item name="ScopeX.ComModel.ProtocolCPHY.Resource.SheZhiYuZhi" text="Définir le seuil" />
+		<!--PowerAnalysis.resx-->
+		<Item name="DifferSlewRate" text="Vitesse de balayage" />
+		<Item name="EfficiencyCurrent" text="Courant" />
+		<Item name="EfficiencyPower" text="Puissance" />
+		<Item name="EfficiencyVoltage" text="Tension" />
+		<Item name="HarmonicTHDrms" text="RMS" />
+		<Item name="InrushCurrentPk2Pk" text="Courant d'appel" />
+		<Item name="LoopAnalysisInputSource" text="Source d'entrée" />
+		<Item name="LoopAnalysisOutputSource" text="Source de sortie" />
+		<Item name="ModulationDuty" text="Rapport cyclique" />
+		<Item name="ModulationFreq" text="Fréquence" />
+		<Item name="ModulationNegPulse" text="Largeur d'impulsion négative" />
+		<Item name="ModulationPeriod" text="Période" />
+		<Item name="ModulationPosPulse" text="Largeur d'impulsion positive" />
+		<Item name="PwrCurrentSource" text="Courant" />
+		<Item name="PwrHarmonicNum" text="Nombre harmonique" />
+		<Item name="PwrSourceType" text="Type de source" />
+		<Item name="PwrVoltageSource" text="Tension" />
+		<Item name="PwrInVoltageSource" text="Source de tension d'entrée" />
+		<Item name="PwrOutVoltageSource" text="Source de tension de sortie" />
+		<Item name="QualityApparantPower" text="Puissance apparente" />
+		<Item name="QualityFrequency" text="Fréquence" />
+		<Item name="QualityICrestFactor" text="Facteur crête de courant" />
+		<Item name="QualityIrms" text="RMS du courant" />
+		<Item name="QualityPhase" text="Angle de phase" />
+		<Item name="QualityPwrFactor" text="Facteur de puissance" />
+		<Item name="QualityReactivePower" text="Puissance invalide" />
+		<Item name="QualityTruePower" text="Puissance effective" />
+		<Item name="QualityVCrestFactor" text="Facteur crête de courant" />
+		<Item name="QualityVrms" text="RMS de la tension" />
+		<Item name="RippleMax" text="Max" />
+		<Item name="RippleMin" text="Min" />
+		<Item name="RipplePk2Pk" text="Pk-Pk" />
+		<Item name="RippleAverage" text="Average" />
+		<Item name="RippleStddev" text="ACRMS" />
+		<Item name="SOAAcqWfms" text="Formes d'ondes acquises" />
+		<Item name="SOAFailWfms" text="Nombre de formes d'onde défectueuses" />
+		<Item name="SOATestSucceed" text="Test de modèle SOA" />
+		<Item name="SwitchLossCycleCount" text="Nombre de cycles" />
+		<Item name="SwitchLossEnergyTConduct" text="Perte d'énergie par conduction" />
+		<Item name="SwitchLossEnergyTNonConduct" text="Perte d'énergie non conductrice" />
+		<Item name="SwitchLossEnergyTOff" text="Perte d'énergie à l'arrêt" />
+		<Item name="SwitchLossEnergyTOn" text="Perte d'énergie à l'allumage" />
+		<Item name="SwitchLossEnergyTotal" text="Perte d'énergie totale" />
+		<Item name="SwitchLossPowerTConduct" text="Perte de puissance par conduction" />
+		<Item name="SwitchLossPowerTNonConduct" text="Perte de puissance non conductrice" />
+		<Item name="SwitchLossPowerTOff" text="Perte de puissance à l'arrêt" />
+		<Item name="SwitchLossPowerTOn" text="Perte de puissance à l'allumage" />
+		<Item name="SwitchLossPowerTotal" text="Perte de puissance totale" />
+		<Item name="Transient" text="Temps transitoire" />
+		<Item name="ProbeUnit" text="Unités de sonde" />
+		<Item name="EfficiencyInTruePower" text="Entrez la puissance active" />
+		<Item name="EfficiencyOutTruePower" text="Puissance active de sortie" />
+		<Item name="EfficiencyEfficiency" text="Efficacité" />
+		<Item name="TurnOnOffTurnOnTime" text="Heures d'ouverture" />
+		<Item name="TurnOnOffTurnOffTime" text="Heures de fermeture" />
+		<Item name="CeShiMoShi" text="Mode de test" />
+		<Item name="DanCiCeShi" text="Une seule fois" />
+		<Item name="ShiShiCeShi" text="Temps réel" />
+		<Item name="FengZhiDianLiu" text="Courant de crête" />
+		<Item name="SheZhiFengZhiDianLiu" text="Régler le courant de crête" />
+		<Item name="XiaYiBu" text="Prochaines étapes" />
+		<Item name="MsgTipId.PowerAnalysisInrushCurrent" text="Courant de surtension" />
+		<Item name="MsgTipId.PowerAnalysisTurnOnTime" text="Heures d'ouverture" />
+		<Item name="MsgTipId.PowerAnalysisTurnOffTime" text="Heures de fermeture" />
+		<Item name="MsgTipId.PowerAnalysisCloseSourceAndClickNext" text="Veuillez éteindre et appuyez sur Suivant" />
+		<Item name="MsgTipId.PowerAnalysisOpenSourceAndClickNext" text="Veuillez allumer et appuyez sur Suivant" />
+		<Item name="MsgTipId.PowerAnalysisNoSignal" text="Aucun signal satisfaisant aux conditions n'a été détecté!" />
+		<Item name="MsgTipId.PowerAnalysisWaitForTriggerReady" text="Analyse de l'alimentation : Attendre que le déclencheur soit prêt, veuillez ne pas opérer !" />
+		<Item name="MsgTipId.PowerAnalysisWaitForTriggerCompleted" text="Analyse de l'alimentation: Attendez que le déclencheur soit terminé, veuillez ne pas opérer !" />
+		<Item name="MsgTipId.AC2DCTurnOnCompleted" text="Le test du temps de mise sous tension AC-DC a été complété, veuillez examiner les résultats." />
+		<Item name="MsgTipId.AC2DCTurnOffCompleted" text="Le test du temps d'extinction AC-DC a été complété, veuillez examiner les résultats." />
+		<Item name="MsgTipId.DC2DCTurnOnCompleted" text="Le test du temps de mise sous tension DC-DC a été complété, veuillez examiner les résultats." />
+		<Item name="MsgTipId.DC2DCTurnOffCompleted" text="Le test du temps d'extinction DC-DC a été complété, veuillez examiner les résultats." />
+		<Item name="MsgTipId.FilterTip1" text="Un filtre FIR symétrique d'ordre impair doit avoir un gain nul à la fréquence de Nyquist, l'ordre augmente automatiquement de un." />
+		<Item name="MsgTipId.FilterTip2" text="L'ordre du filtre Remez doit être d'au moins 4, l'ordre augmente automatiquement de deux." />
+		<Item name="MsgTipId.MatlabUninstalled" text="Aucune installation de Matlab détectée, veuillez installer Matlab vous-même." />
+		<Item name="PageControlSum" text="Total  " />
+		<Item name="PageControlCurrent" text="Actuel " />
+		<Item name="PageControlCurrentPageNum" text="Numéro de page actuel" />
+		<Item name="SelectScpiAdapter" text="Sélectionner l'adaptateur SCPI" />
+		<Item name="ChannelNotOpen" text="Canal non ouvert" />
+		<Item name="ScopeX.ComModel.Clipping.Pos" text="Forme d'onde de clipping positif" />
+		<Item name="ScopeX.ComModel.Clipping.Neg" text="Forme d'onde de clipping négatif" />
+		<Item name="ScopeX.ComModel.Clipping.Both" text="Forme d'onde de clipping positif/négatif" />
+	</Tip>
+	<Tip>
+		<!--搜索相关的字符-->
+		<Item name="Search.Edge.Rise" text="Front montante" />
+		<Item name="Search.Edge.Fall" text="Front redressement" />
+		<Item name="Search.Edge.Bath" text="Front quelconque" />
+
+		<Item name="Search.Pulse.Positive" text="Pulsion positive" />
+		<Item name="Search.Pulse.Negative" text="Pulsion négative" />
+	</Tip>
+</CustomStringTable>

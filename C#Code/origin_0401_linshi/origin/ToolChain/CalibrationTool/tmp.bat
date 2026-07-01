@@ -1,0 +1,1 @@
+del D:\wangcj\github\Work\WindowsFormsAppNetCore\ScopeX.Hardware.Calibration.Tool\bin\x86\Debug\net6.0-windows\.\JiHe_MSO7000X\AcqDataFiles\*.* /Q

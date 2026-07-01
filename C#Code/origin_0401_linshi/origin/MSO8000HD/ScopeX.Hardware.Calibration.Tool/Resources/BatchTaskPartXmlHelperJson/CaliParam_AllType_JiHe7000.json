@@ -1,0 +1,48 @@
+/*
+  AllType(TiAdc, Gain, Baseline, Offset) Param
+
+*/
+{
+  "SettingParam": {
+    "OscilloType": "JiHe_MSO7000X",
+    "FilePath": "自动校准xml生成\\JiHe7000\\AllType校准.xml",
+    "TiAdcTimeScaleByS": "0.000001",
+    "TiAdcAcqMode": "NORMal",
+    "TiAdcBandwidth": "1GHz",
+    "TiAdcSourceFrequency": "1E9",
+    "SourceImp": "50",
+    "SourceVoltageByV": "0.25",
+
+    //通道循环
+    "ModesStart": "0,2,4,6",
+
+    //TiAdc模式循环
+    "ModesForLoop": {
+      "Start": "@ModesStart@",
+      "Count": 2
+    },
+    "ModeName": "C1C2_5G, C1_10G, C1C2_5G, C2_10G, C3C4_5G, C3_10G, C3C4_5G, C4_10G",
+
+    //阻抗循环
+    "OffsetChnlYScaleStart": "0,3",
+    "OffsetChnlYScaleCount": "3,4",
+
+    //垂直档位循环
+    "OffsetSourceAmpVoltByV": "2,5,5,2,20,40,80",
+    "OffsetInputLevelBymV": "20,100,1000,50,500,1000,10000"
+  },
+  "FuncParam" :{
+    "BaseLine": {
+      "CaliChnls": "@Channels@",
+      "GainErrorByLsb": "20",
+      "GainMaxWaitMilliseconds": 25,
+      "TiAdcErrorByLsb": "20",
+      "TiAdcMaxWaitMilliseconds": 25
+    },
+    "Gain": {
+      "TiAdcErrorByPercent": "20",
+      "TiAdcGainAmpMeasureType": "AMPL",
+      "TiAdcMaxWaitMilliseconds": 25
+    }
+  }
+}

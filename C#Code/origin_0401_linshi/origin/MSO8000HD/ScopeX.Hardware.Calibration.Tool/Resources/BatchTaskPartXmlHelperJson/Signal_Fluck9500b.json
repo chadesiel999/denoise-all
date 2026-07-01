@@ -1,0 +1,22 @@
+/*
+  Fluck9500b Information
+
+*/
+{
+  "Info": {
+    "Name": "Fluck9500b",
+    "VisaAddr": "GPIB4::19::INSTR"
+  },
+
+  "Scpi": {
+    "SetOutputChnl1": "ROUTe:SIGNal CH1",
+    "SetScopeSqu": "SCOpe SQU",
+    "SetSquPos": ":PAR:SQU:POL SYMM",
+    "SetScopeSin": "SCOpe SIN",
+    "SetScopeDC": "SCOpe DC",
+    "SetFrequency": "FREQuency",
+    "SetIMPedanc1": "ROUT:SIGN:IMP",
+    "SetVoltageByV": "VOLTage",
+    "SetONOrOFF1": "OUTPut"
+  }
+}

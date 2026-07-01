@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<AboutInfo>
+	<Type></Type>
+	<FireWare>0.9.2.1</FireWare>
+	<SN>2112170001</SN>
+	<Date>2023/07/07 15:08</Date>
+	<Extra></Extra>
+	<Dlls>
+		<Dll>ScopeX.Hardware.Driver.dll</Dll>
+		<Dll>CSharpGL.dll</Dll>
+		<Dll>CSharpGL.Models.dll</Dll>
+		<Dll>CSharpGL.Windows.dll</Dll>
+		<Dll>EventBroker.dll</Dll>
+		<Dll>IEventBroker.dll</Dll>
+		<Dll>ScottPlot.dll</Dll>
+		<Dll>ScottPlot.WinForms.dll</Dll>
+		<Dll>ScopeX.ComModel.dll</Dll>
+		<Dll>ScopeX.Core.dll</Dll>
+		<Dll>ScopeX.Hardware.Calibration.Data.Base.dll</Dll>
+		<Dll>ScopeX.Hardware.Driver.dll</Dll>
+		<Dll>ScopeX.MathExt.dll</Dll>
+		<Dll>ScopeX.Protocol.ARINC429.dll</Dll>
+		<Dll>ScopeX.Protocol.AudioBus.dll</Dll>
+		<Dll>ScopeX.Protocol.CAN.dll</Dll>
+		<Dll>ScopeX.Protocol.CANFD.dll</Dll>
+		<Dll>ScopeX.Protocol.dll</Dll>
+		<Dll>ScopeX.Protocol.FlexRay.dll</Dll>
+		<Dll>ScopeX.Protocol.I2C.dll</Dll>
+		<Dll>ScopeX.Protocol.LIN.dll</Dll>
+		<Dll>ScopeX.Protocol.MIL.dll</Dll>
+		<Dll>ScopeX.Protocol.PCIe.dll</Dll>
+		<Dll>ScopeX.Protocol.RS232.dll</Dll>
+		<Dll>ScopeX.Protocol.SATA.dll</Dll>
+		<Dll>ScopeX.Protocol.SPI.dll</Dll>
+		<Dll>ScopeX.Protocol.SPMI.dll</Dll>
+		<Dll>ScopeX.Protocol.USB.dll</Dll>
+    <Dll>ScopeX.Protocol.CPHY.dll</Dll>
+    <Dll>ScopeX.Protocol.I3C.dll</Dll>
+   	<Dll>ScopeX.Protocol.SMBus.dll</Dll>
+    <Dll>ScopeX.Protocol.Common_8B10B.dll</Dll>
+    <Dll>ScopeX.Protocol.Mlt3.dll</Dll>
+		<Dll>ScopeX.Scpi.dll</Dll>
+		<Dll>ScopeX.Controls.Common.dll</Dll>
+		<Dll>ScopeX.Controls.Language.dll</Dll>
+		<Dll>ScopeX.Controls.LanguageDefinition.dll</Dll>
+		<Dll>ScopeX.Touch.dll</Dll>
+		<Dll>ScopeX.Touch.ManupulationHelper.dll</Dll>
+		<Dll>ScopeX.UserControls.dll</Dll>
+	</Dlls>
+</AboutInfo>

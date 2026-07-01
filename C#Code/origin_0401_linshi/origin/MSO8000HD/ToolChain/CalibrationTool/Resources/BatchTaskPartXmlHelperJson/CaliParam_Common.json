@@ -1,0 +1,82 @@
+/*
+  名称：Common Calibration Parameter;
+  使用：
+    1）适用MSO7000的TiAdc校准里的TiAdc校准,幅度校准里的幅度校准,基线校准里的基线校准,偏置校准里的偏置校准；
+    2）当使用MSO8000的时候，property要同名替换；
+    3）当校准里面有其他校准时，property要异名添加；比如幅度校准里的基线校准，相关参数如有不同则要异名添加；
+    3）可以与其他具体的校准参数文件叠加使用；
+  Editor: WangCJ, 230204
+*/
+{
+  //设置相关参数
+  "SettingParam": {
+    "TimeScaleByS": "0.0002",
+    "AcqMode": "HIGHres",
+    "TriggerType": "EDGe",
+    "SourceFrequency": "1000",
+    "Bandwidth": "20MHz",
+
+    //通道循环
+    "ChannelsForLoop": {
+      "Start": 0,
+      "Count": 4
+    },
+    "Channels": "1,2,3,4",
+
+
+    //阻抗循环
+    "ImpForLoop": {
+      "Start": 0,
+      "Count": 2
+    },
+    "SourceIMPedanceName": "50欧姆,高阻",
+    "Rigol_SourceIMPedanceSetting": "50,INFinity",
+    "Fluck_SourceIMPedanceSetting": "50,1E6",
+    "BatchTaskIMPedanceSetting": "LOW,HIGH",
+    "IMPedanceOfALLSourceAPPLySetting": "2,0",
+    "ChnlYScaleStart": "2,2",
+    "ChnlYScaleCount": "9,12",
+
+    //垂直档位循环
+    "SourceAmpVoltByV": "0.003,0.006,0.012,0.03,0.06,0.12,0.3,0.6,1.2,3,6,12,20,20",
+    "InputLevelBymV": "0.5, 1 , 2 , 5 , 10, 20, 50, 100 , 200, 500, 1000, 2000, 5000, 10000",
+    "GainStage": "Fpga, Dsa_Adc_Fpga ,Dsa_Adc_Fpga,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga   ,Dsa_Adc_Fpga,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga,Dsa_Adc_Fpga",
+    "BaselineErrorByLsb": "2 , 2 , 2 , 1 , 1 , 1 ,  1, 1   , 1  , 1  , 1   , 1   , 1   , 1"
+  },
+
+  //校准函数相关参数
+  "FuncParam": {
+    "Common": {
+      "StaticTimes": 2,
+      "MaxWaitMilliseconds": 40
+    },
+    "BaseLine": {
+      "CaliChnls": "1|2|3|4",
+      "DACCtrlWord": "0, 50000",
+      "HardwareValidMs": "400",
+      "DestDiv": [ 0, 3 ],
+      "CtrlWord": {
+        "Min": [ 0, 0 ],
+        "Max": [ 50000, 10000 ]
+      }
+    },
+    "Gain": {
+      "GainHardwareValidMs": "200",
+      "ErrorByPercent": "0.5",
+      "DSAStepPercent": "12.2",
+      "ADCStepPercent": "0.06",
+      "FPGAYLevelID": "1",
+      "DSACtrlWord": "0, 32",
+      "ADCCtrlWord": "0, 255",
+      "FpgaCtrlWord": "500, 2000",
+      "AmpMeasureType": "STDD"
+    },
+    "TiAdc": {
+      "SourceFrequencyByMHz": "1000",
+      "GainErrorByPercent": "0.15",
+      "OffsetErrorByLSB": "0.3",
+      "PhaseErrorByPs": "600",
+      "AdjustStep": "5"
+    }
+  }
+}

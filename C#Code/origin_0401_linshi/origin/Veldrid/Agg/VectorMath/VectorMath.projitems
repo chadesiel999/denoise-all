@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>28f9d90e-0d80-497d-9e24-7e80628ce924</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>VectorMath</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AxisAlignedBoundingBox.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bvh\BvhTree.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bvh\BvhTreeItemData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bvh\IIntersectable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bvh\RayHitInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Bvh\TradeOffBvhConstructor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Easing.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Estimator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Frustum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MathHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Matrix4x4.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Plane.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlaneFloat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Quaternion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Ray.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SmallestEnclosingCircle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TrackBallController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vector2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vector2Float.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vector3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vector3Float.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Vector4.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WorldView.cs" />
+  </ItemGroup>
+</Project>

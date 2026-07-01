@@ -1,0 +1,185 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ScopeX.Updater/2.02.0000-Q5": {
+        "dependencies": {
+          "HardwareDLL": "0.7.1.130",
+          "ScopeX.ComModel": "2.1.9",
+          "ScopeX.Updater.Base": "0.7.0.605",
+          "PCIeControl": "1.0.0.1",
+          "ScopeX.Controls.Language": "1.0.10.0",
+          "ScopeX.Controls.LanguageDefinition": "1.0.7.0",
+          "ScopeX.Hardware.Calibration.Data.Base": "0.7.0.605",
+          "ScopeX.Hardware.Driver": "0.7.1.130",
+          "ScopeX.USBBridge": "1.4.4.193",
+          "System.IO.Ports": "5.0.0.0"
+        },
+        "runtime": {
+          "ScopeX.Updater.dll": {}
+        }
+      },
+      "HardwareDLL/0.7.1.130": {
+        "runtime": {
+          "ScopeX.Hardware.Driver.dll": {}
+        }
+      },
+      "ScopeX.ComModel/2.1.9": {
+        "runtime": {
+          "ScopeX.ComModel.dll": {}
+        }
+      },
+      "ScopeX.Updater.Base/0.7.0.605": {
+        "dependencies": {
+          "ScopeX.ComModel": "2.1.9"
+        },
+        "runtime": {
+          "ScopeX.Updater.Base.dll": {}
+        }
+      },
+      "PCIeControl/1.0.0.1": {
+        "runtime": {
+          "PCIeControl.dll": {
+            "assemblyVersion": "1.0.0.1",
+            "fileVersion": "1.0.0.1"
+          }
+        }
+      },
+      "ScopeX.Controls.Language/1.0.10.0": {
+        "runtime": {
+          "ScopeX.Controls.Language.dll": {
+            "assemblyVersion": "1.0.10.0",
+            "fileVersion": "1.0.10.0"
+          }
+        }
+      },
+      "ScopeX.Controls.LanguageDefinition/1.0.7.0": {
+        "runtime": {
+          "ScopeX.Controls.LanguageDefinition.dll": {
+            "assemblyVersion": "1.0.7.0",
+            "fileVersion": "1.0.7.0"
+          }
+        }
+      },
+      "ScopeX.Hardware.Calibration.Data.Base/0.7.0.605": {
+        "runtime": {
+          "ScopeX.Hardware.Calibration.Data.Base.dll": {
+            "assemblyVersion": "0.7.0.605",
+            "fileVersion": "0.7.0.605"
+          }
+        }
+      },
+      "ScopeX.Hardware.Driver/0.7.1.130": {
+        "runtime": {
+          "ScopeX.Hardware.Driver.dll": {
+            "assemblyVersion": "0.7.1.130",
+            "fileVersion": "0.7.1.130"
+          }
+        }
+      },
+      "ScopeX.USBBridge/1.4.4.193": {
+        "runtime": {
+          "ScopeX.USBBridge.dll": {
+            "assemblyVersion": "1.4.4.193",
+            "fileVersion": "1.4.4.193"
+          }
+        }
+      },
+      "System.IO.Ports/5.0.0.0": {
+        "runtime": {
+          "System.IO.Ports.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.421.11614"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "CyUSB/1.2.2.0": {
+        "runtime": {
+          "CyUSB.dll": {
+            "assemblyVersion": "1.2.2.0",
+            "fileVersion": "1.2.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ScopeX.Updater/2.02.0000-Q5": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HardwareDLL/0.7.1.130": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.ComModel/2.1.9": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.Updater.Base/0.7.0.605": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PCIeControl/1.0.0.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.Controls.Language/1.0.10.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.Controls.LanguageDefinition/1.0.7.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.Hardware.Calibration.Data.Base/0.7.0.605": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.Hardware.Driver/0.7.1.130": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ScopeX.USBBridge/1.4.4.193": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.IO.Ports/5.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/13.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CyUSB/1.2.2.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

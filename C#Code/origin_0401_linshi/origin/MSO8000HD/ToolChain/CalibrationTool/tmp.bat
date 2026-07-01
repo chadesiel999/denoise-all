@@ -1,0 +1,1 @@
+del D:\2U_origin_20250821_20G\2U_origin_20250820_after\MSO8000HD\ToolChain\CalibrationTool\ScanFrequencyResultData\*.* /Q;

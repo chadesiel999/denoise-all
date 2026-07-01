@@ -1,0 +1,87 @@
+/*
+  名称：Common Calibration Parameter;
+  使用：
+    1）适用MSO7000的TiAdc校准里的TiAdc校准,幅度校准里的幅度校准,基线校准里的基线校准,偏置校准里的偏置校准；
+    2）当使用MSO8000的时候，property要同名替换；
+    3）当校准里面有其他校准时，property要异名添加；比如幅度校准里的基线校准，相关参数如有不同则要异名添加；
+    3）可以与其他具体的校准参数文件叠加使用；
+  Editor: WangCJ, 230204
+*/
+{
+  //设置相关参数
+  "SettingParam": {
+    "TimeScaleByS": "0.0002", //时基，单位S
+    "AcqMode": "HIGHres", //采样模式设置，参数：HIGHres（高分辨率） / NORMal（普通）
+    "TriggerType": "EDGe", //触发方式
+    "SourceFrequency": "1000", //信号源频率，单位Hz
+    "Bandwidth": "20MHz", //带宽限制
+
+    //通道循环
+    "ChannelsForLoop": { //通道循环定义
+      "Start": 0, //循环起点，对应变量的下标（从0开始）
+      "Count": 4 //循环个数
+    },
+    "Channels": "1,2,3,4", //通道定义:1-Ch1, 2-Ch2,...
+
+
+    //阻抗循环
+    "ImpForLoop": { //阻抗循环定义
+      "Start": 0,
+      "Count": 2
+    },
+    "SourceIMPedanceName": "50欧姆,高阻", //高低阻使用的名称
+    "Rigol_SourceIMPedanceSetting": "50,INFinity", //Rigol信号源高低阻的参数
+    "Fluck_SourceIMPedanceSetting": "50,1E6", //Fluck信号源高低阻的参数
+    "BatchTaskIMPedanceSetting": "LOW,HIGH", //BatchTask使用的高低阻参数
+    "IMPedanceOfALLSourceAPPLySetting": "2,0", //示波器Scpi指令使用的高低阻参数
+    "ChnlYScaleStart": "2,2", //通道垂直档位循环起点
+    "ChnlYScaleCount": "9,12", //通道垂直档位循环个数
+
+    //垂直档位循环
+    "SourceAmpVoltByV": "0.003,0.006,0.012,0.03,0.06,0.12,0.3,0.6,1.2,3,6,12,20,20", //各个垂直档位对应的信号源幅度，单位V
+    "InputLevelBymV": "0.5, 1 , 2 , 5 , 10, 20, 50, 100 , 200, 500, 1000, 2000, 5000, 10000", //各个垂直档位刻度，单位Mv
+    //各个垂直档位增益调整包含的阶段，Dsa-增益粗调，Adc-adc细调，Fpga-数字放大
+    "GainStage": "Fpga, Dsa_Adc_Fpga ,Dsa_Adc_Fpga,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga   ,Dsa_Adc_Fpga,Dsa_Adc_Fpga ,Dsa_Adc_Fpga  ,Dsa_Adc_Fpga,Dsa_Adc_Fpga",
+    "BaselineErrorByLsb": "2 , 2 , 2 , 1 , 1 , 1 ,  1, 1   , 1  , 1  , 1   , 1   , 1   , 1" //基线校准误差，单位LSB
+  },
+
+  //校准函数相关参数
+  "FuncParam": {
+    //公共使用
+    "Common": {
+      "StaticTimes": 2, //统计测量次数
+      "MaxWaitMilliseconds": 40 //校准超时时间
+    },
+    //基线校准使用
+    "BaseLine": {
+      "CaliChnls": "1|2|3|4", //校准的通道
+      "DACCtrlWord": "0, 50000",  //0div校准时后级偏值范围
+      "HardwareValidMs": "400", //硬件生效时间
+      "DestDiv": [ 0, 3 ],  //校准目标div
+      "CtrlWord": {   //校准目标div对应的后级偏取值范围
+        "Min": [ 0, 0 ],
+        "Max": [ 50000, 10000 ]
+      }
+    },
+    //幅度校准使用
+    "Gain": {
+      "GainHardwareValidMs": "200", //增益校准的硬件生效时间
+      "ErrorByPercent": "0.5",    //校准精度
+      "DSAStepPercent": "12.2",   //粗调增益步进
+      "ADCStepPercent": "0.06",   //Adc增益步进
+      "FPGAYLevelID": "1",    //只使用FPGA数字放大的最大档位序号
+      "DSACtrlWord": "0, 32", //粗调增益控制字范围
+      "ADCCtrlWord": "0, 255",  //Adc增益调整控制字范围
+      "FpgaCtrlWord": "500, 2000",  //FPGA数字放大控制字范围
+      "AmpMeasureType": "STDD"    //获取幅度的方式，参数：STDD / AMPL
+    },
+    //TiAdc校准使用
+    "TiAdc": {
+      "SourceFrequencyByMHz": "1000", //信号源频率
+      "GainErrorByPercent": "0.15",   //增益精度
+      "OffsetErrorByLSB": "0.3",      //偏移精度
+      "PhaseErrorByPs": "600",        //相位精度
+      "AdjustStep": "5"               //控制字调整步进
+    }
+  }
+}

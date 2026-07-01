@@ -1,0 +1,2 @@
+[14:43:17] : [***BatchTaskStart***]:C:\Users\liqiang\Desktop\CIJ\origin_platform_bw_cali_20250620\origin_platform_bw_cali_20250508\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\2U可用xml\8000\脚本\6 All系数生成PFC_AFC_TI.xml
+[14:43:17] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000

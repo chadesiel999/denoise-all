@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>9dWifSMMs9.ico</ApplicationIcon>
+    <Version>0.7.6.1012</Version>
+    <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+    <FileVersion>$(VersionPrefix)</FileVersion>
+    <StartupObject>WindowsDSO_UpdatePackageGenerator.Program</StartupObject>
+    <PlatformTarget>x64</PlatformTarget>
+    <Configurations>Debug;Release;</Configurations>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="MainForm.cs" />
+    <Compile Remove="MainForm.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="MainForm.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="9dWifSMMs9.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ScopeX.ComModel\ScopeX.ComModel.csproj" />
+    <ProjectReference Include="..\ScopeX.Updater.Base\ScopeX.Updater.Base.csproj" />
+  </ItemGroup>
+
+</Project>

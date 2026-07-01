@@ -1,0 +1,11 @@
+--- MSO8000HD/ScopeX.Hardware.Driver.JiHe/Component/Acquirer/DBI13G/Acquirer_AnalogChanel_DBI13G_AutoCali.cs
++++ MSO8000HD/ScopeX.Hardware.Driver.JiHe/Component/Acquirer/DBI13G/Acquirer_AnalogChanel_DBI13G_AutoCali.cs
+@@ -555,7 +555,7 @@ namespace ScopeX.Hardware.Driver
+                              ""),
+             };
+             Dictionary<AcqDataType, double> samplingRate = new Dictionary<AcqDataType, double>();
+-            Boolean acqOk = Hd.pAcqWave(false, false, readinfo, ref samplingRate);
++            Boolean acqOk = Hd.AcqWave(false, false, readinfo, ref samplingRate);
+             if ((!acqOk) || AcqedDataPool.AnalogChData.AllChannelData.Count <= subbandId)
+                 return ans;
+ 

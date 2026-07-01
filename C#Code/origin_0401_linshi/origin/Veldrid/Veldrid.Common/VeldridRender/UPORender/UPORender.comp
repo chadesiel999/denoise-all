@@ -1,0 +1,50 @@
+#version 450
+#extension GL_KHR_vulkan_glsl : enable
+
+layout(set =0,binding =0,rgba32f) uniform image2D Tex;
+layout(set =0,binding =1,rgba32f) uniform image2D OutTex;
+layout(set =0,binding =2) uniform ChInfoBuffer
+{
+    int MaxValue;
+    int MinValue;
+    int ChOnCount;
+    //当启用1个通道时表示启用的通道序号，从0开始，当启用两个通道时表示第一个启用的通道需要
+    int ChIndex1;
+    //当启用两个通道时表示第一个启用的通道需要
+    int ChIndex2;
+    int Brightness;
+    vec2 Spare1;
+    mat4x4 Colors;
+};
+layout(local_size_x = 25, local_size_y = 40, local_size_z = 1) in;
+void main()
+{
+    uint grayscale = uint(imageLoad(Tex,ivec2(gl_GlobalInvocationID.xy+vec2(1,1))).x*255.0+0.5);
+    float maxval = 255.0;
+    vec4 color = vec4(0,0,0,0);
+    if(ChOnCount==0)
+    {
+        grayscale =0;
+    }
+    else if(ChOnCount ==1)
+    {
+        color = Colors[ChIndex1];
+    }
+    else if(ChOnCount ==2)
+    {
+        color = Colors[bool(grayscale / 128)?ChIndex2:ChIndex1];
+        grayscale = uint(mod(grayscale,128));
+        maxval = 128;
+    }
+    else 
+    {
+        color = Colors[uint(grayscale /64)];
+        grayscale = uint(mod(grayscale,64));
+        maxval = 64;
+    }
+    if(grayscale ==0)
+    {
+        color = vec4(0,0,0,0);
+    }
+    imageStore(OutTex,ivec2(gl_GlobalInvocationID.xy+vec2(1,1)),vec4(color.xyz,grayscale/maxval));
+}

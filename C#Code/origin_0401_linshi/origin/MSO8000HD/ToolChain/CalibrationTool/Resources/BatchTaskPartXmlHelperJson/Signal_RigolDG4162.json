@@ -1,0 +1,19 @@
+/*
+  RigolDG4162 Information
+
+*/
+{
+  "Info": {
+    "Name": "RigolDG4162",
+    "VisaAddr": "USB0::0x1AB1::0x0641::DG4E183302256::INSTR"
+  },
+
+  "Scpi": {
+    "SetONOrOFF1": ":OUTPut1:STATe",
+    "SetONOrOFF2": ":OUTPut2:STATe",
+    "SetAPPLy1": "SOURce1:APPLy:SQUare",
+    "SetAPPLy2": "SOURce2:APPLy:SQUare",
+    "SetIMPedanc1": "OUTPut1:IMPedance",
+    "SetIMPedanc2": "OUTPut2:IMPedance"
+  }
+}

@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutAcquire" xml:space="preserve">
+    <value>“采集”系统参数</value>
+  </data>
+  <data name="AboutAllApps" xml:space="preserve">
+    <value>全部应用</value>
+  </data>
+  <data name="AboutAnalogBadge" xml:space="preserve">
+    <value>“模拟”通道参数</value>
+  </data>
+  <data name="AboutAwgBadge" xml:space="preserve">
+    <value>“信号源”参数</value>
+  </data>
+  <data name="AboutBusBadge" xml:space="preserve">
+    <value>“总线”通道参数</value>
+  </data>
+  <data name="AboutClear" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="AboutClose" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="AboutCursor" xml:space="preserve">
+    <value>光标测量</value>
+  </data>
+  <data name="AboutCymometer" xml:space="preserve">
+    <value>频率计</value>
+  </data>
+  <data name="AboutDigitalBadge" xml:space="preserve">
+    <value>“数字”通道参数</value>
+  </data>
+  <data name="AboutDisplay" xml:space="preserve">
+    <value>主窗口显示设置</value>
+  </data>
+  <data name="AboutFastReq" xml:space="preserve">
+    <value>快采</value>
+  </data>
+  <data name="AboutFft" xml:space="preserve">
+    <value>快速傅里叶变换</value>
+  </data>
+  <data name="AboutMark" xml:space="preserve">
+    <value>标记</value>
+  </data>
+  <data name="AboutMathBadge" xml:space="preserve">
+    <value>“数学”通道参数</value>
+  </data>
+  <data name="AboutMeasurement" xml:space="preserve">
+    <value>参数测量</value>
+  </data>
+  <data name="AboutNormalMani" xml:space="preserve">
+    <value>区域直方图</value>
+  </data>
+  <data name="AboutPrinter" xml:space="preserve">
+    <value>打印</value>
+  </data>
+  <data name="AboutRefBadge" xml:space="preserve">
+    <value>“参考”通道参数</value>
+  </data>
+  <data name="AboutSave" xml:space="preserve">
+    <value>存储</value>
+  </data>
+  <data name="AboutScreenShot" xml:space="preserve">
+    <value>截屏</value>
+  </data>
+  <data name="AboutSearch" xml:space="preserve">
+    <value>波形搜索</value>
+  </data>
+  <data name="AboutSetting" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="AboutSnapShot" xml:space="preserve">
+    <value>参数快照</value>
+  </data>
+  <data name="AboutTimebase" xml:space="preserve">
+    <value>“水平”系统参数</value>
+  </data>
+  <data name="AboutTrigger" xml:space="preserve">
+    <value>“触发”系统参数</value>
+  </data>
+  <data name="AboutTriggerState" xml:space="preserve">
+    <value>触发状态及Run/Stop</value>
+  </data>
+  <data name="AboutVoltmeter" xml:space="preserve">
+    <value>数字电压表</value>
+  </data>
+  <data name="AboutWindowState" xml:space="preserve">
+    <value>窗口状态</value>
+  </data>
+  <data name="AboutZoom" xml:space="preserve">
+    <value>扩展</value>
+  </data>
+  <data name="NewBus" xml:space="preserve">
+    <value>打开一个新的“总线”通道</value>
+  </data>
+  <data name="NewDigital" xml:space="preserve">
+    <value>打开“数字”通道</value>
+  </data>
+  <data name="NewMath" xml:space="preserve">
+    <value>打开一个新的“数学”通道</value>
+  </data>
+  <data name="NewRef" xml:space="preserve">
+    <value>打开一个新的“参考”通道</value>
+  </data>
+  <data name="OpenAwg1" xml:space="preserve">
+    <value>打开“信号源1”</value>
+  </data>
+  <data name="OpenAwg2" xml:space="preserve">
+    <value>打开“信号源2”</value>
+  </data>
+  <data name="SetAutoset" xml:space="preserve">
+    <value>启动“自动设置”功能</value>
+  </data>
+  <data name="SetRunStop" xml:space="preserve">
+    <value>切换采集状态</value>
+  </data>
+  <data name="SetSingleTriggerMode" xml:space="preserve">
+    <value>启动“单次”触发模式</value>
+  </data>
+</root>

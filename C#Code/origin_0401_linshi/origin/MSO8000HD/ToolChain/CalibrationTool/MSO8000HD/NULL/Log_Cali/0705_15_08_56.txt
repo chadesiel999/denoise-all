@@ -1,0 +1,969 @@
+[15:09:13] : [***BatchTaskStart***]:C:\Users\liqiang\Desktop\CIJ\origin_platform_bw_cali_20250620\origin_platform_bw_cali_20250508\MSO8000HD\ToolChain\CalibrationTool\2U可用xml\基线校准_8G.xml
+[15:09:13] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[15:09:25] : (ExecuteId=638873249656107760;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_10;Chnls_1;DesDiv_0
+[15:09:38] : (638873249656107760) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_1931.2570433333333, OffsetCtrlWord_29977
+[15:09:51] : (638873249656107760) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_39988
+[15:10:04] : (638873249656107760) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_34982
+[15:10:12] : (638873249656107760) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_32479
+[15:10:20] : (638873249656107760) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_31228
+[15:10:31] : (638873249656107760) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_30602
+[15:10:42] : (638873249656107760) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_30289
+[15:10:56] : (638873249656107760) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3046.6503529999995, OffsetCtrlWord_30133
+[15:10:56] : (638873249656107760) AdjustInStep: LastUpperOffsetCtrlWord_30133, LastLowerOffsetCtrlWord_29977
+[15:11:06] : (638873249656107760) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2032.3700576666668, OffsetCtrlWord_29993
+[15:11:06] : (638873249656107760) AdjustInStep: LastUpperOffsetCtrlWord_30133, LastLowerOffsetCtrlWord_29993
+[15:11:14] : (638873249656107760) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29995;
+[15:11:14] : 校准结果：(ExecuteId=638873249656107760;)Ch1[Ok],;总共用时108842ms.
+[15:11:15] : (ExecuteId=638873250751302427;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_10;Chnls_1;DesDiv_3
+[15:11:30] : (638873250751302427) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_401
+[15:11:40] : (638873250751302427) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_3501.404585, OffsetCtrlWord_200
+[15:11:48] : (638873250751302427) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_300
+[15:11:56] : (638873250751302427) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3849.6624383333333, OffsetCtrlWord_250
+[15:11:56] : (638873250751302427) AdjustInStep: LastUpperOffsetCtrlWord_250, LastLowerOffsetCtrlWord_200
+[15:12:09] : (638873250751302427) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_207;
+[15:12:09] : 校准结果：(ExecuteId=638873250751302427;)Ch1[Ok],;总共用时54419ms.
+[15:12:10] : (ExecuteId=638873251301662292;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_10;Chnls_1;DesDiv_-3
+[15:12:27] : (638873251301662292) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_400
+[15:12:36] : (638873251301662292) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_606.4147783333333, OffsetCtrlWord_200
+[15:12:46] : (638873251301662292) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_300
+[15:12:55] : (638873251301662292) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_254.16230766666663, OffsetCtrlWord_250
+[15:12:55] : (638873251301662292) AdjustInStep: LastUpperOffsetCtrlWord_250, LastLowerOffsetCtrlWord_200
+[15:13:04] : (638873251301662292) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_208;
+[15:13:04] : 校准结果：(ExecuteId=638873251301662292;)Ch1[Ok],;总共用时53954ms.
+[15:13:14] : (ExecuteId=638873251948709205;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_20;Chnls_1;DesDiv_0
+[15:13:24] : (638873251948709205) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2201.6416956666667, OffsetCtrlWord_29999
+[15:13:37] : (638873251948709205) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_14999
+[15:13:45] : (638873251948709205) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22499
+[15:13:53] : (638873251948709205) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_26249
+[15:14:00] : (638873251948709205) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_28124
+[15:14:07] : (638873251948709205) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_29061
+[15:14:17] : (638873251948709205) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_597.809823, OffsetCtrlWord_29530
+[15:14:17] : (638873251948709205) AdjustInStep: LastUpperOffsetCtrlWord_29999, LastLowerOffsetCtrlWord_29530
+[15:14:31] : (638873251948709205) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29954;
+[15:14:31] : 校准结果：(ExecuteId=638873251948709205;)Ch1[Ok],;总共用时76194ms.
+[15:14:31] : (ExecuteId=638873252717272130;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_20;Chnls_1;DesDiv_3
+[15:14:40] : (638873252717272130) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_809
+[15:14:48] : (638873252717272130) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_3438.907593, OffsetCtrlWord_404
+[15:14:57] : (638873252717272130) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_606
+[15:15:08] : (638873252717272130) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3784.4471199999994, OffsetCtrlWord_505
+[15:15:08] : (638873252717272130) AdjustInStep: LastUpperOffsetCtrlWord_505, LastLowerOffsetCtrlWord_404
+[15:15:18] : (638873252717272130) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_436;
+[15:15:18] : 校准结果：(ExecuteId=638873252717272130;)Ch1[Ok],;总共用时46765ms.
+[15:15:19] : (ExecuteId=638873253191420803;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_20;Chnls_1;DesDiv_-3
+[15:15:32] : (638873253191420803) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_795
+[15:15:41] : (638873253191420803) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_686.1941110000001, OffsetCtrlWord_397
+[15:15:51] : (638873253191420803) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_21.285075000000003, OffsetCtrlWord_596
+[15:15:51] : (638873253191420803) AdjustInStep: LastUpperOffsetCtrlWord_596, LastLowerOffsetCtrlWord_397
+[15:16:05] : (638873253191420803) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_438;
+[15:16:05] : 校准结果：(ExecuteId=638873253191420803;)Ch1[Ok],;总共用时46508ms.
+[15:16:16] : (ExecuteId=638873253764699796;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_50;Chnls_1;DesDiv_0
+[15:16:35] : (638873253764699796) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_29983
+[15:16:50] : (638873253764699796) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_14991
+[15:17:03] : (638873253764699796) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22487
+[15:17:11] : (638873253764699796) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_26235
+[15:17:21] : (638873253764699796) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_28109
+[15:17:35] : (638873253764699796) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_29046
+[15:17:47] : (638873253764699796) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2232.2268320000003, OffsetCtrlWord_29514
+[15:17:56] : (638873253764699796) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_497.77476900000005, OffsetCtrlWord_29280
+[15:17:56] : (638873253764699796) AdjustInStep: LastUpperOffsetCtrlWord_29514, LastLowerOffsetCtrlWord_29280
+[15:18:05] : (638873253764699796) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2073.373234666667, OffsetCtrlWord_29489
+[15:18:06] : (638873253764699796) AdjustInStep: LastUpperOffsetCtrlWord_29489, LastLowerOffsetCtrlWord_29280
+[15:18:17] : (638873253764699796) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2053.179917, OffsetCtrlWord_29486
+[15:18:17] : (638873253764699796) AdjustInStep: LastUpperOffsetCtrlWord_29486, LastLowerOffsetCtrlWord_29280
+[15:18:26] : (638873253764699796) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2042.83998, OffsetCtrlWord_29485
+[15:18:26] : (638873253764699796) AdjustInStep: LastUpperOffsetCtrlWord_29486, LastLowerOffsetCtrlWord_29485
+[15:18:38] : (638873253764699796) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2042.0098783333333, OffsetCtrlWord_29485
+[15:18:38] : (638873253764699796) AdjustInStep: Current point is invalid!
+[15:18:38] : 校准结果：(ExecuteId=638873253764699796;)Ch1[Failure],;总共用时141595ms.
+[15:18:38] : (ExecuteId=638873255187246477;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_50;Chnls_1;DesDiv_3
+[15:18:53] : (638873255187246477) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_1681
+[15:19:04] : (638873255187246477) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_840
+[15:19:13] : (638873255187246477) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_420
+[15:19:25] : (638873255187246477) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_3592.5512863333333, OffsetCtrlWord_210
+[15:19:34] : (638873255187246477) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2777.3601086666663, OffsetCtrlWord_105
+[15:19:34] : (638873255187246477) AdjustInStep: LastUpperOffsetCtrlWord_210, LastLowerOffsetCtrlWord_105
+[15:20:00] : (638873255187246477) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3540.632131, OffsetCtrlWord_204
+[15:20:00] : (638873255187246477) AdjustInStep: LastUpperOffsetCtrlWord_210, LastLowerOffsetCtrlWord_204
+[15:20:11] : (638873255187246477) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_205;
+[15:20:11] : 校准结果：(ExecuteId=638873255187246477;)Ch1[Ok],;总共用时93042ms.
+[15:20:12] : (ExecuteId=638873256123835045;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_50;Chnls_1;DesDiv_-3
+[15:20:27] : (638873256123835045) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_1661
+[15:20:35] : (638873256123835045) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_830
+[15:20:44] : (638873256123835045) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_415
+[15:20:57] : (638873256123835045) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_516.9607873333333, OffsetCtrlWord_207
+[15:21:07] : (638873256123835045) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_1254.3397186666666, OffsetCtrlWord_103
+[15:21:07] : (638873256123835045) AdjustInStep: LastUpperOffsetCtrlWord_207, LastLowerOffsetCtrlWord_103
+[15:21:17] : (638873256123835045) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_539.8029253333333, OffsetCtrlWord_203
+[15:21:17] : (638873256123835045) AdjustInStep: LastUpperOffsetCtrlWord_203, LastLowerOffsetCtrlWord_103
+[15:21:33] : (638873256123835045) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_553.7648146666667, OffsetCtrlWord_202
+[15:21:33] : (638873256123835045) AdjustInStep: LastUpperOffsetCtrlWord_203, LastLowerOffsetCtrlWord_202
+[15:21:45] : (638873256123835045) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_202;
+[15:21:45] : 校准结果：(ExecuteId=638873256123835045;)Ch1[Ok],;总共用时92778ms.
+[15:21:55] : (ExecuteId=638873257158256151;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_100;Chnls_1;DesDiv_0
+[15:22:09] : (638873257158256151) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2407.419936, OffsetCtrlWord_29984
+[15:22:38] : (638873257158256151) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_14992
+[15:22:44] : (638873257158256151) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22488
+[15:22:58] : (638873257158256151) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_26236
+[15:23:09] : (638873257158256151) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_1030.7975133333332, OffsetCtrlWord_28110
+[15:23:09] : (638873257158256151) AdjustInStep: LastUpperOffsetCtrlWord_29984, LastLowerOffsetCtrlWord_28110
+[15:23:20] : (638873257158256151) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29495;
+[15:23:20] : 校准结果：(ExecuteId=638873257158256151;)Ch1[Ok],;总共用时84626ms.
+[15:23:21] : (ExecuteId=638873258010770790;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_100;Chnls_1;DesDiv_3
+[15:23:35] : (638873258010770790) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2026;
+[15:23:35] : 校准结果：(ExecuteId=638873258010770790;)Ch1[Ok],;总共用时14770ms.
+[15:23:36] : (ExecuteId=638873258164969626;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_100;Chnls_1;DesDiv_-3
+[15:23:50] : (638873258164969626) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_573.3694426666667, OffsetCtrlWord_2011
+[15:24:26] : (638873258164969626) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_11005
+[15:24:40] : (638873258164969626) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_6508
+[15:24:56] : (638873258164969626) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_4259
+[15:25:12] : (638873258164969626) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_3135
+[15:25:25] : (638873258164969626) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_176.58766133333333, OffsetCtrlWord_2573
+[15:25:25] : (638873258164969626) AdjustInStep: LastUpperOffsetCtrlWord_2573, LastLowerOffsetCtrlWord_2011
+[15:25:43] : (638873258164969626) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2047;
+[15:25:43] : 校准结果：(ExecuteId=638873258164969626;)Ch1[Ok],;总共用时126786ms.
+[15:25:53] : (ExecuteId=638873259539544394;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_200;Chnls_1;DesDiv_0
+[15:26:05] : (638873259539544394) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_29984
+[15:26:19] : (638873259539544394) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_14992
+[15:26:33] : (638873259539544394) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22488
+[15:26:48] : (638873259539544394) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_26236
+[15:27:02] : (638873259539544394) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_28110
+[15:27:16] : (638873259539544394) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_29047
+[15:27:32] : (638873259539544394) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2202.760987, OffsetCtrlWord_29515
+[15:27:50] : (638873259539544394) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_456.88867, OffsetCtrlWord_29281
+[15:27:50] : (638873259539544394) AdjustInStep: LastUpperOffsetCtrlWord_29515, LastLowerOffsetCtrlWord_29281
+[15:28:02] : (638873259539544394) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2143.6233813333333, OffsetCtrlWord_29494
+[15:28:02] : (638873259539544394) AdjustInStep: LastUpperOffsetCtrlWord_29494, LastLowerOffsetCtrlWord_29281
+[15:28:21] : (638873259539544394) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2102.855684, OffsetCtrlWord_29482
+[15:28:21] : (638873259539544394) AdjustInStep: LastUpperOffsetCtrlWord_29482, LastLowerOffsetCtrlWord_29281
+[15:28:33] : (638873259539544394) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2004.998614, OffsetCtrlWord_29475
+[15:28:33] : (638873259539544394) AdjustInStep: LastUpperOffsetCtrlWord_29482, LastLowerOffsetCtrlWord_29475
+[15:28:49] : (638873259539544394) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2031.1689466666667, OffsetCtrlWord_29478
+[15:28:49] : (638873259539544394) AdjustInStep: LastUpperOffsetCtrlWord_29482, LastLowerOffsetCtrlWord_29478
+[15:28:49] : 校准结果：(ExecuteId=638873259539544394;)超时退出
+[15:28:49] : (ExecuteId=638873261298768341;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_200;Chnls_1;DesDiv_3
+[15:29:12] : (638873261298768341) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_1641
+[15:29:23] : (638873261298768341) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_820
+[15:29:39] : (638873261298768341) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_410
+[15:29:52] : (638873261298768341) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_3611.673346333333, OffsetCtrlWord_205
+[15:30:06] : (638873261298768341) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2664.635524, OffsetCtrlWord_102
+[15:30:06] : (638873261298768341) AdjustInStep: LastUpperOffsetCtrlWord_205, LastLowerOffsetCtrlWord_102
+[15:30:17] : (638873261298768341) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3475.698598333334, OffsetCtrlWord_198
+[15:30:17] : (638873261298768341) AdjustInStep: LastUpperOffsetCtrlWord_205, LastLowerOffsetCtrlWord_198
+[15:30:29] : (638873261298768341) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3531.695509333333, OffsetCtrlWord_202
+[15:30:29] : (638873261298768341) AdjustInStep: LastUpperOffsetCtrlWord_205, LastLowerOffsetCtrlWord_202
+[15:30:40] : (638873261298768341) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3604.3877813333334, OffsetCtrlWord_203
+[15:30:40] : (638873261298768341) AdjustInStep: LastUpperOffsetCtrlWord_203, LastLowerOffsetCtrlWord_202
+[15:30:54] : (638873261298768341) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3535.930833, OffsetCtrlWord_202
+[15:30:54] : (638873261298768341) AdjustInStep: LastUpperOffsetCtrlWord_203, LastLowerOffsetCtrlWord_202
+[15:31:07] : (638873261298768341) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3539.1595096666665, OffsetCtrlWord_202
+[15:31:07] : (638873261298768341) AdjustInStep: LastUpperOffsetCtrlWord_203, LastLowerOffsetCtrlWord_202
+[15:31:19] : (638873261298768341) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_202;
+[15:31:19] : 校准结果：(ExecuteId=638873261298768341;)Ch1[Ok],;总共用时149257ms.
+[15:31:19] : (ExecuteId=638873262797592177;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_200;Chnls_1;DesDiv_-3
+[15:32:09] : (638873262797592177) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_1632
+[15:32:28] : (638873262797592177) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_816
+[15:32:41] : (638873262797592177) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_408
+[15:32:50] : (638873262797592177) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_560.2577466666667, OffsetCtrlWord_204
+[15:33:04] : (638873262797592177) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_306
+[15:33:18] : (638873262797592177) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_250.50585333333333, OffsetCtrlWord_255
+[15:33:18] : (638873262797592177) AdjustInStep: LastUpperOffsetCtrlWord_255, LastLowerOffsetCtrlWord_204
+[15:33:30] : (638873262797592177) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_528.9586456666667, OffsetCtrlWord_206
+[15:33:30] : (638873262797592177) AdjustInStep: LastUpperOffsetCtrlWord_206, LastLowerOffsetCtrlWord_204
+[15:33:41] : (638873262797592177) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_588.967822, OffsetCtrlWord_205
+[15:33:41] : (638873262797592177) AdjustInStep: Current point is invalid!
+[15:33:41] : 校准结果：(ExecuteId=638873262797592177;)Ch1[Failure],;总共用时141864ms.
+[15:33:52] : (ExecuteId=638873264323726574;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_500;Chnls_1;DesDiv_0
+[15:34:12] : (638873264323726574) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2407.564907, OffsetCtrlWord_30000
+[15:34:24] : (638873264323726574) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_15000
+[15:34:43] : (638873264323726574) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22500
+[15:34:56] : (638873264323726574) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_26250
+[15:35:11] : (638873264323726574) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_1028.5949456666667, OffsetCtrlWord_28125
+[15:35:11] : (638873264323726574) AdjustInStep: LastUpperOffsetCtrlWord_30000, LastLowerOffsetCtrlWord_28125
+[15:35:29] : (638873264323726574) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29511;
+[15:35:29] : 校准结果：(ExecuteId=638873264323726574;)Ch1[Ok],;总共用时96695ms.
+[15:35:29] : (ExecuteId=638873265296853716;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_500;Chnls_1;DesDiv_3
+[15:35:51] : (638873265296853716) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_3581.5085856666665, OffsetCtrlWord_2077
+[15:36:04] : (638873265296853716) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2814.466267, OffsetCtrlWord_1038
+[15:36:04] : (638873265296853716) AdjustInStep: LastUpperOffsetCtrlWord_2077, LastLowerOffsetCtrlWord_1038
+[15:36:32] : (638873265296853716) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2032;
+[15:36:32] : 校准结果：(ExecuteId=638873265296853716;)Ch1[Ok],;总共用时62719ms.
+[15:36:33] : (ExecuteId=638873265930350715;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_500;Chnls_1;DesDiv_-3
+[15:36:50] : (638873265930350715) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_538.4805333333334, OffsetCtrlWord_2056
+[15:37:05] : (638873265930350715) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_1287.6809990000002, OffsetCtrlWord_1028
+[15:37:05] : (638873265930350715) AdjustInStep: LastUpperOffsetCtrlWord_2056, LastLowerOffsetCtrlWord_1028
+[15:37:17] : (638873265930350715) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2043;
+[15:37:17] : 校准结果：(ExecuteId=638873265930350715;)Ch1[Ok],;总共用时44702ms.
+[15:37:28] : (ExecuteId=638873266484198377;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_1000;Chnls_1;DesDiv_0
+[15:37:43] : (638873266484198377) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_30005
+[15:37:56] : (638873266484198377) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_15002
+[15:38:06] : (638873266484198377) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22503
+[15:38:15] : (638873266484198377) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_26254
+[15:38:29] : (638873266484198377) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_28129
+[15:38:41] : (638873266484198377) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_29067
+[15:38:51] : (638873266484198377) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2216.1855806666667, OffsetCtrlWord_29536
+[15:39:00] : (638873266484198377) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_466.63127699999995, OffsetCtrlWord_29301
+[15:39:00] : (638873266484198377) AdjustInStep: LastUpperOffsetCtrlWord_29536, LastLowerOffsetCtrlWord_29301
+[15:39:10] : (638873266484198377) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2114.935122666667, OffsetCtrlWord_29513
+[15:39:10] : (638873266484198377) AdjustInStep: LastUpperOffsetCtrlWord_29513, LastLowerOffsetCtrlWord_29301
+[15:39:23] : (638873266484198377) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2141.8013459999997, OffsetCtrlWord_29504
+[15:39:23] : (638873266484198377) AdjustInStep: Current point is invalid!
+[15:39:23] : 校准结果：(ExecuteId=638873266484198377;)Ch1[Failure],;总共用时114948ms.
+[15:39:23] : (ExecuteId=638873267639833912;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_1000;Chnls_1;DesDiv_3
+[15:39:42] : (638873267639833912) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_2092
+[15:39:52] : (638873267639833912) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_1046
+[15:40:02] : (638873267639833912) AdjustOverStep: ChnlId_1,WaveStatus_OverTop, OffsetCtrlWord_523
+[15:40:09] : (638873267639833912) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_3876.1641446666667, OffsetCtrlWord_261
+[15:40:18] : (638873267639833912) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3121.0001326666666, OffsetCtrlWord_130
+[15:40:18] : (638873267639833912) AdjustInStep: LastUpperOffsetCtrlWord_261, LastLowerOffsetCtrlWord_130
+[15:40:30] : (638873267639833912) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3516.0887019999996, OffsetCtrlWord_204
+[15:40:30] : (638873267639833912) AdjustInStep: LastUpperOffsetCtrlWord_261, LastLowerOffsetCtrlWord_204
+[15:40:42] : (638873267639833912) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3578.7008863333335, OffsetCtrlWord_209
+[15:40:42] : (638873267639833912) AdjustInStep: LastUpperOffsetCtrlWord_209, LastLowerOffsetCtrlWord_204
+[15:40:58] : (638873267639833912) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3565.928078333334, OffsetCtrlWord_207
+[15:40:58] : (638873267639833912) AdjustInStep: LastUpperOffsetCtrlWord_207, LastLowerOffsetCtrlWord_204
+[15:41:07] : (638873267639833912) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3649.4633833333337, OffsetCtrlWord_206
+[15:41:07] : (638873267639833912) AdjustInStep: Current point is invalid!
+[15:41:07] : 校准结果：(ExecuteId=638873267639833912;)Ch1[Failure],;总共用时103108ms.
+[15:41:07] : (ExecuteId=638873268677310543;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_1000;Chnls_1;DesDiv_-3
+[15:41:21] : (638873268677310543) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_2076
+[15:41:34] : (638873268677310543) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_1038
+[15:41:46] : (638873268677310543) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_519
+[15:41:58] : (638873268677310543) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_254.05056266666665, OffsetCtrlWord_259
+[15:42:10] : (638873268677310543) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_1000.7952359999999, OffsetCtrlWord_129
+[15:42:10] : (638873268677310543) AdjustInStep: LastUpperOffsetCtrlWord_259, LastLowerOffsetCtrlWord_129
+[15:42:20] : (638873268677310543) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_540.0573406666666, OffsetCtrlWord_208
+[15:42:20] : (638873268677310543) AdjustInStep: LastUpperOffsetCtrlWord_208, LastLowerOffsetCtrlWord_129
+[15:42:33] : (638873268677310543) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_616.9584033333333, OffsetCtrlWord_207
+[15:42:33] : (638873268677310543) AdjustInStep: LastUpperOffsetCtrlWord_208, LastLowerOffsetCtrlWord_207
+[15:42:46] : (638873268677310543) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_563.2457653333335, OffsetCtrlWord_208
+[15:42:46] : (638873268677310543) AdjustInStep: FirstStepInPoint.reg = SecondStepInPoint.reg!
+[15:42:46] : 校准结果：(ExecuteId=638873268677310543;)Ch1[Failure],;总共用时98746ms.
+[15:54:39] : [***BatchTaskStart***]:C:\Users\liqiang\Desktop\CIJ\origin_platform_bw_cali_20250620\origin_platform_bw_cali_20250508\MSO8000HD\ToolChain\CalibrationTool\2U可用xml\基线校准_8G.xml
+[15:54:39] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[15:54:50] : (ExecuteId=638873276908351955;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_10;Chnls_1;DesDiv_0
+[15:54:59] : (638873276908351955) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2064.860980666667, OffsetCtrlWord_29995
+[15:55:05] : (638873276908351955) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_14997
+[15:55:12] : (638873276908351955) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22496
+[15:55:20] : (638873276908351955) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_26245
+[15:55:26] : (638873276908351955) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_28120
+[15:55:34] : (638873276908351955) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_29057
+[15:55:40] : (638873276908351955) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_29526
+[15:55:47] : (638873276908351955) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_380.341046, OffsetCtrlWord_29760
+[15:55:47] : (638873276908351955) AdjustInStep: LastUpperOffsetCtrlWord_29995, LastLowerOffsetCtrlWord_29760
+[15:55:53] : (638873276908351955) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29993;
+[15:55:53] : 校准结果：(ExecuteId=638873276908351955;)Ch1[Ok],;总共用时62723ms.
+[15:55:54] : (ExecuteId=638873277541849255;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_10;Chnls_1;DesDiv_3
+[15:56:03] : (638873277541849255) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_3558.227745666667, OffsetCtrlWord_207
+[15:56:09] : (638873277541849255) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2803.3127263333336, OffsetCtrlWord_103
+[15:56:09] : (638873277541849255) AdjustInStep: LastUpperOffsetCtrlWord_207, LastLowerOffsetCtrlWord_103
+[15:56:16] : (638873277541849255) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_206;
+[15:56:16] : 校准结果：(ExecuteId=638873277541849255;)Ch1[Ok],;总共用时21886ms.
+[15:56:16] : (ExecuteId=638873277767082186;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_10;Chnls_1;DesDiv_-3
+[15:56:24] : (638873277767082186) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_555.1575393333333, OffsetCtrlWord_208
+[15:56:31] : (638873277767082186) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_10104
+[15:56:37] : (638873277767082186) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_5156
+[15:56:43] : (638873277767082186) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_2682
+[15:56:49] : (638873277767082186) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_1445
+[15:56:54] : (638873277767082186) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_826
+[15:57:01] : (638873277767082186) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_517
+[15:57:07] : (638873277767082186) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_362
+[15:57:13] : (638873277767082186) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_21.622715333333332, OffsetCtrlWord_285
+[15:57:13] : (638873277767082186) AdjustInStep: LastUpperOffsetCtrlWord_285, LastLowerOffsetCtrlWord_208
+[15:57:19] : (638873277767082186) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_209;
+[15:57:19] : 校准结果：(ExecuteId=638873277767082186;)Ch1[Ok],;总共用时62848ms.
+[15:59:48] : [***BatchTaskStart***]:C:\Users\liqiang\Desktop\CIJ\origin_platform_bw_cali_20250620\origin_platform_bw_cali_20250508\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\2U可用xml\基线校准_8G.xml
+[15:59:48] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[16:00:06] : (ExecuteId=638873280062601279;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_10;Chnls_1|2|3|4;DesDiv_0
+[16:00:14] : (638873280062601279) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2056.755035333333, OffsetCtrlWord_29993
+[16:00:14] : (638873280062601279) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_29616;
+[16:00:15] : (638873280062601279) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_29651;
+[16:00:15] : (638873280062601279) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_29705;
+[16:00:23] : (638873280062601279) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_14996
+[16:00:39] : (638873280062601279) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22494
+[16:00:46] : (638873280062601279) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_26243
+[16:00:56] : (638873280062601279) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_28118
+[16:01:03] : (638873280062601279) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_29055
+[16:01:11] : (638873280062601279) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_29524
+[16:01:18] : (638873280062601279) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_371.4827963333333, OffsetCtrlWord_29758
+[16:01:18] : (638873280062601279) AdjustInStep: LastUpperOffsetCtrlWord_29993, LastLowerOffsetCtrlWord_29758
+[16:01:27] : (638873280062601279) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29992;
+[16:01:27] : 校准结果：(ExecuteId=638873280062601279;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时81266ms.
+[16:01:32] : (ExecuteId=638873280922132575;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_10;Chnls_1|2|3|4;DesDiv_3
+[16:01:39] : (638873280922132575) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_206;
+[16:01:39] : (638873280922132575) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_3707.415029333333, OffsetCtrlWord_441
+[16:01:39] : (638873280922132575) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_3264.7726239999997, OffsetCtrlWord_325
+[16:01:39] : (638873280922132575) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_3433.9924119999996, OffsetCtrlWord_381
+[16:01:46] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_2879.1164093333336, OffsetCtrlWord_220
+[16:01:46] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_441, LastLowerOffsetCtrlWord_220
+[16:01:46] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_25162
+[16:01:46] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_25162, LastLowerOffsetCtrlWord_325
+[16:01:46] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_25190
+[16:01:46] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_25190, LastLowerOffsetCtrlWord_381
+[16:01:53] : (638873280922132575) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_398;
+[16:01:53] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_8808
+[16:01:53] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_8808, LastLowerOffsetCtrlWord_325
+[16:01:53] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_4666
+[16:01:53] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_4666, LastLowerOffsetCtrlWord_381
+[16:01:59] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_3222
+[16:01:59] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_3222, LastLowerOffsetCtrlWord_325
+[16:01:59] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_1121
+[16:01:59] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_1121, LastLowerOffsetCtrlWord_381
+[16:02:07] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_1314
+[16:02:07] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_1314, LastLowerOffsetCtrlWord_325
+[16:02:07] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3883.4999379999995, OffsetCtrlWord_509
+[16:02:07] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_509, LastLowerOffsetCtrlWord_381
+[16:02:14] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_663
+[16:02:14] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_663, LastLowerOffsetCtrlWord_325
+[16:02:14] : (638873280922132575) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_413;
+[16:02:21] : (638873280922132575) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_3683.7663616666664, OffsetCtrlWord_440
+[16:02:21] : (638873280922132575) AdjustInStep: LastUpperOffsetCtrlWord_440, LastLowerOffsetCtrlWord_325
+[16:02:29] : (638873280922132575) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_403;
+[16:02:29] : 校准结果：(ExecuteId=638873280922132575;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时56928ms.
+[16:02:33] : (ExecuteId=638873281537587770;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_10;Chnls_1|2|3|4;DesDiv_-3
+[16:02:40] : (638873281537587770) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_209;
+[16:02:40] : (638873281537587770) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_708.5115693333333, OffsetCtrlWord_357
+[16:02:40] : (638873281537587770) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_274.49782, OffsetCtrlWord_473
+[16:02:40] : (638873281537587770) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_514.7865966666667, OffsetCtrlWord_426
+[16:02:47] : (638873281537587770) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_25178
+[16:02:47] : (638873281537587770) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_1163.0653966666666, OffsetCtrlWord_236
+[16:02:47] : (638873281537587770) AdjustInStep: LastUpperOffsetCtrlWord_473, LastLowerOffsetCtrlWord_236
+[16:02:47] : (638873281537587770) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_1285.5636873333333, OffsetCtrlWord_213
+[16:02:47] : (638873281537587770) AdjustInStep: LastUpperOffsetCtrlWord_426, LastLowerOffsetCtrlWord_213
+[16:02:53] : (638873281537587770) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_12767
+[16:02:53] : (638873281537587770) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_400;
+[16:02:53] : (638873281537587770) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_417;
+[16:03:00] : (638873281537587770) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_6562
+[16:03:07] : (638873281537587770) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_3459
+[16:03:13] : (638873281537587770) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_1908
+[16:03:20] : (638873281537587770) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_1132
+[16:03:26] : (638873281537587770) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_744
+[16:03:32] : (638873281537587770) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_550
+[16:03:41] : (638873281537587770) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_366.8162623333333, OffsetCtrlWord_453
+[16:03:41] : (638873281537587770) AdjustInStep: LastUpperOffsetCtrlWord_453, LastLowerOffsetCtrlWord_357
+[16:03:55] : (638873281537587770) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_402;
+[16:03:55] : 校准结果：(ExecuteId=638873281537587770;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时81721ms.
+[16:04:16] : (ExecuteId=638873282562266449;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_20;Chnls_1|2|3|4;DesDiv_0
+[16:04:31] : (638873282562266449) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2062.327309, OffsetCtrlWord_29954
+[16:04:31] : (638873282562266449) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_2203.5572056666665, OffsetCtrlWord_29630
+[16:04:31] : (638873282562266449) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_1762.9104613333336, OffsetCtrlWord_29541
+[16:04:31] : (638873282562266449) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_1972.0857150000002, OffsetCtrlWord_29608
+[16:04:37] : (638873282562266449) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_14977
+[16:04:37] : (638873282562266449) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_14815
+[16:04:37] : (638873282562266449) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_39770
+[16:04:37] : (638873282562266449) AdjustInStep: LastUpperOffsetCtrlWord_39770, LastLowerOffsetCtrlWord_29541
+[16:04:37] : (638873282562266449) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_39804
+[16:04:37] : (638873282562266449) AdjustInStep: LastUpperOffsetCtrlWord_39804, LastLowerOffsetCtrlWord_29608
+[16:04:46] : (638873282562266449) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22465
+[16:04:46] : (638873282562266449) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_22222
+[16:04:46] : (638873282562266449) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4082.310495333333, OffsetCtrlWord_30792
+[16:04:46] : (638873282562266449) AdjustInStep: LastUpperOffsetCtrlWord_30792, LastLowerOffsetCtrlWord_29541
+[16:04:46] : (638873282562266449) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_2629.5798436666664, OffsetCtrlWord_29973
+[16:04:46] : (638873282562266449) AdjustInStep: LastUpperOffsetCtrlWord_29973, LastLowerOffsetCtrlWord_29608
+[16:04:53] : (638873282562266449) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_26209
+[16:04:53] : (638873282562266449) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_25926
+[16:04:53] : (638873282562266449) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_29695;
+[16:04:53] : (638873282562266449) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_29650;
+[16:04:59] : (638873282562266449) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_28081
+[16:04:59] : (638873282562266449) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_27778
+[16:05:06] : (638873282562266449) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_29017
+[16:05:07] : (638873282562266449) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_482.09529133333336, OffsetCtrlWord_28704
+[16:05:07] : (638873282562266449) AdjustInStep: LastUpperOffsetCtrlWord_29630, LastLowerOffsetCtrlWord_28704
+[16:05:13] : (638873282562266449) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_459.310772, OffsetCtrlWord_29485
+[16:05:13] : (638873282562266449) AdjustInStep: LastUpperOffsetCtrlWord_29954, LastLowerOffsetCtrlWord_29485
+[16:05:13] : (638873282562266449) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_29546;
+[16:05:19] : (638873282562266449) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29950;
+[16:05:19] : 校准结果：(ExecuteId=638873282562266449;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时63044ms.
+[16:05:23] : (ExecuteId=638873283239079947;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_20;Chnls_1|2|3|4;DesDiv_3
+[16:05:31] : (638873283239079947) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_3560.0920336666663, OffsetCtrlWord_436
+[16:05:31] : (638873283239079947) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_797;
+[16:05:31] : (638873283239079947) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_3534.9825626666666, OffsetCtrlWord_792
+[16:05:31] : (638873283239079947) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_3501.5863566666667, OffsetCtrlWord_808
+[16:05:47] : (638873283239079947) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2807.663090333333, OffsetCtrlWord_218
+[16:05:47] : (638873283239079947) AdjustInStep: LastUpperOffsetCtrlWord_436, LastLowerOffsetCtrlWord_218
+[16:05:47] : (638873283239079947) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_25396
+[16:05:47] : (638873283239079947) AdjustInStep: LastUpperOffsetCtrlWord_25396, LastLowerOffsetCtrlWord_792
+[16:05:47] : (638873283239079947) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_25404
+[16:05:47] : (638873283239079947) AdjustInStep: LastUpperOffsetCtrlWord_25404, LastLowerOffsetCtrlWord_808
+[16:05:56] : (638873283239079947) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_432;
+[16:05:56] : (638873283239079947) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_1365
+[16:05:56] : (638873283239079947) AdjustInStep: LastUpperOffsetCtrlWord_1365, LastLowerOffsetCtrlWord_792
+[16:05:56] : (638873283239079947) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_2735
+[16:05:56] : (638873283239079947) AdjustInStep: LastUpperOffsetCtrlWord_2735, LastLowerOffsetCtrlWord_808
+[16:06:03] : (638873283239079947) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_805;
+[16:06:03] : (638873283239079947) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3764.306326, OffsetCtrlWord_959
+[16:06:03] : (638873283239079947) AdjustInStep: LastUpperOffsetCtrlWord_959, LastLowerOffsetCtrlWord_808
+[16:06:10] : (638873283239079947) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_835;
+[16:06:10] : 校准结果：(ExecuteId=638873283239079947;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时46373ms.
+[16:06:14] : (ExecuteId=638873283749296022;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_20;Chnls_1|2|3|4;DesDiv_-3
+[16:06:21] : (638873283749296022) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_438;
+[16:06:21] : (638873283749296022) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_557.3062916666667, OffsetCtrlWord_798
+[16:06:21] : (638873283749296022) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_792;
+[16:06:21] : (638873283749296022) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_584.7390646666666, OffsetCtrlWord_813
+[16:06:27] : (638873283749296022) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_25399
+[16:06:27] : (638873283749296022) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_25406
+[16:06:34] : (638873283749296022) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_13098
+[16:06:34] : (638873283749296022) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_13109
+[16:06:40] : (638873283749296022) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_6948
+[16:06:40] : (638873283749296022) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_6961
+[16:06:47] : (638873283749296022) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_3873
+[16:06:47] : (638873283749296022) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_3887
+[16:06:55] : (638873283749296022) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_2335
+[16:06:55] : (638873283749296022) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_2350
+[16:07:01] : (638873283749296022) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_1566
+[16:07:01] : (638873283749296022) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_1581
+[16:07:07] : (638873283749296022) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_1182
+[16:07:07] : (638873283749296022) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_1197
+[16:07:14] : (638873283749296022) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_219.37289866666666, OffsetCtrlWord_990
+[16:07:14] : (638873283749296022) AdjustInStep: LastUpperOffsetCtrlWord_990, LastLowerOffsetCtrlWord_798
+[16:07:14] : (638873283749296022) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_269.678573, OffsetCtrlWord_1005
+[16:07:14] : (638873283749296022) AdjustInStep: LastUpperOffsetCtrlWord_1005, LastLowerOffsetCtrlWord_813
+[16:07:20] : (638873283749296022) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_803;
+[16:07:20] : (638873283749296022) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_565.4307233333334, OffsetCtrlWord_835
+[16:07:20] : (638873283749296022) AdjustInStep: LastUpperOffsetCtrlWord_1005, LastLowerOffsetCtrlWord_835
+[16:07:27] : (638873283749296022) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_845;
+[16:07:27] : 校准结果：(ExecuteId=638873283749296022;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时72213ms.
+[16:07:47] : (ExecuteId=638873284678111438;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_50;Chnls_1|2|3|4;DesDiv_0
+[16:07:53] : (638873284678111438) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29485;
+[16:07:53] : (638873284678111438) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_2236.898768333333, OffsetCtrlWord_30252
+[16:07:53] : (638873284678111438) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_1720.9729073333335, OffsetCtrlWord_29506
+[16:07:53] : (638873284678111438) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_1998.291414666667, OffsetCtrlWord_28725
+[16:08:01] : (638873284678111438) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_15126
+[16:08:01] : (638873284678111438) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_39753
+[16:08:01] : (638873284678111438) AdjustInStep: LastUpperOffsetCtrlWord_39753, LastLowerOffsetCtrlWord_29506
+[16:08:01] : (638873284678111438) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_39362
+[16:08:01] : (638873284678111438) AdjustInStep: LastUpperOffsetCtrlWord_39362, LastLowerOffsetCtrlWord_28725
+[16:08:07] : (638873284678111438) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_22689
+[16:08:07] : (638873284678111438) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_2977.5471669999993, OffsetCtrlWord_30918
+[16:08:07] : (638873284678111438) AdjustInStep: LastUpperOffsetCtrlWord_30918, LastLowerOffsetCtrlWord_29506
+[16:08:07] : (638873284678111438) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_28977;
+[16:08:13] : (638873284678111438) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_26470
+[16:08:13] : (638873284678111438) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_29873;
+[16:08:20] : (638873284678111438) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_577.0532056666667, OffsetCtrlWord_28361
+[16:08:20] : (638873284678111438) AdjustInStep: LastUpperOffsetCtrlWord_30252, LastLowerOffsetCtrlWord_28361
+[16:08:26] : (638873284678111438) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_30037;
+[16:08:26] : 校准结果：(ExecuteId=638873284678111438;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时39015ms.
+[16:08:31] : (ExecuteId=638873285114945546;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_50;Chnls_1|2|3|4;DesDiv_3
+[16:08:39] : (638873285114945546) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2200.964102, OffsetCtrlWord_205
+[16:08:39] : (638873285114945546) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_1691;
+[16:08:39] : (638873285114945546) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_3530.0692536666666, OffsetCtrlWord_1667
+[16:08:39] : (638873285114945546) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_3358.4452253333334, OffsetCtrlWord_6504
+[16:08:47] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_25102
+[16:08:47] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_25102, LastLowerOffsetCtrlWord_205
+[16:08:47] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_25833
+[16:08:47] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_25833, LastLowerOffsetCtrlWord_1667
+[16:08:47] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_28252
+[16:08:47] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_28252, LastLowerOffsetCtrlWord_6504
+[16:08:53] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_17921
+[16:08:53] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_17921, LastLowerOffsetCtrlWord_205
+[16:08:53] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_2435
+[16:08:53] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_2435, LastLowerOffsetCtrlWord_1667
+[16:08:53] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_12109
+[16:08:53] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_12109, LastLowerOffsetCtrlWord_6504
+[16:09:00] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_12811
+[16:09:00] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_12811, LastLowerOffsetCtrlWord_205
+[16:09:00] : (638873285114945546) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_1691;
+[16:09:00] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3693.9754460000004, OffsetCtrlWord_7948
+[16:09:00] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_7948, LastLowerOffsetCtrlWord_6504
+[16:09:07] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_9175
+[16:09:07] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_9175, LastLowerOffsetCtrlWord_205
+[16:09:07] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3553.856071333333, OffsetCtrlWord_7320
+[16:09:07] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_7320, LastLowerOffsetCtrlWord_6504
+[16:09:14] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_6588
+[16:09:14] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_6588, LastLowerOffsetCtrlWord_205
+[16:09:14] : (638873285114945546) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_7296;
+[16:09:21] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_4747
+[16:09:21] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_4747, LastLowerOffsetCtrlWord_205
+[16:09:27] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_3437
+[16:09:27] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_3437, LastLowerOffsetCtrlWord_205
+[16:09:33] : (638873285114945546) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3896.386708, OffsetCtrlWord_2505
+[16:09:33] : (638873285114945546) AdjustInStep: LastUpperOffsetCtrlWord_2505, LastLowerOffsetCtrlWord_205
+[16:09:40] : (638873285114945546) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2032;
+[16:09:40] : 校准结果：(ExecuteId=638873285114945546;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时68850ms.
+[16:09:44] : (ExecuteId=638873285849850180;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_50;Chnls_1|2|3|4;DesDiv_-3
+[16:09:54] : (638873285849850180) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_1895.5414613333332, OffsetCtrlWord_202
+[16:09:54] : (638873285849850180) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_1696;
+[16:09:54] : (638873285849850180) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_1672;
+[16:09:54] : (638873285849850180) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_707.9633676666667, OffsetCtrlWord_6101
+[16:10:02] : (638873285849850180) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_25101
+[16:10:02] : (638873285849850180) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_28050
+[16:10:08] : (638873285849850180) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_12651
+[16:10:08] : (638873285849850180) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_17075
+[16:10:18] : (638873285849850180) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_6426
+[16:10:18] : (638873285849850180) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_11588
+[16:10:24] : (638873285849850180) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_3314
+[16:10:24] : (638873285849850180) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_38.84392666666667, OffsetCtrlWord_8844
+[16:10:24] : (638873285849850180) AdjustInStep: LastUpperOffsetCtrlWord_8844, LastLowerOffsetCtrlWord_6101
+[16:10:33] : (638873285849850180) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_758.062865, OffsetCtrlWord_1758
+[16:10:33] : (638873285849850180) AdjustInStep: LastUpperOffsetCtrlWord_3314, LastLowerOffsetCtrlWord_1758
+[16:10:33] : (638873285849850180) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_566.634698, OffsetCtrlWord_6757
+[16:10:33] : (638873285849850180) AdjustInStep: LastUpperOffsetCtrlWord_8844, LastLowerOffsetCtrlWord_6757
+[16:10:40] : (638873285849850180) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2045;
+[16:10:40] : (638873285849850180) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_6831;
+[16:10:40] : 校准结果：(ExecuteId=638873285849850180;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时55966ms.
+[16:11:01] : (ExecuteId=638873286616439665;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_100;Chnls_1|2|3|4;DesDiv_0
+[16:11:09] : (638873286616439665) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2056.0722683333333, OffsetCtrlWord_29495
+[16:11:09] : (638873286616439665) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_2203.6786346666668, OffsetCtrlWord_30256
+[16:11:09] : (638873286616439665) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_1762.5808946666666, OffsetCtrlWord_29509
+[16:11:09] : (638873286616439665) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_2005.4434973333334, OffsetCtrlWord_28789
+[16:11:16] : (638873286616439665) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_14747
+[16:11:16] : (638873286616439665) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_15128
+[16:11:16] : (638873286616439665) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_39754
+[16:11:16] : (638873286616439665) AdjustInStep: LastUpperOffsetCtrlWord_39754, LastLowerOffsetCtrlWord_29509
+[16:11:16] : (638873286616439665) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_39394
+[16:11:16] : (638873286616439665) AdjustInStep: LastUpperOffsetCtrlWord_39394, LastLowerOffsetCtrlWord_28789
+[16:11:22] : (638873286616439665) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22121
+[16:11:22] : (638873286616439665) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_22692
+[16:11:22] : (638873286616439665) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_2731.897996333333, OffsetCtrlWord_30763
+[16:11:22] : (638873286616439665) AdjustInStep: LastUpperOffsetCtrlWord_30763, LastLowerOffsetCtrlWord_29509
+[16:11:22] : (638873286616439665) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_29005;
+[16:11:30] : (638873286616439665) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_25808
+[16:11:30] : (638873286616439665) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_26474
+[16:11:30] : (638873286616439665) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_29878;
+[16:11:36] : (638873286616439665) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_705.9837786666667, OffsetCtrlWord_27651
+[16:11:36] : (638873286616439665) AdjustInStep: LastUpperOffsetCtrlWord_29495, LastLowerOffsetCtrlWord_27651
+[16:11:36] : (638873286616439665) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_816.578442, OffsetCtrlWord_28365
+[16:11:36] : (638873286616439665) AdjustInStep: LastUpperOffsetCtrlWord_30256, LastLowerOffsetCtrlWord_28365
+[16:11:42] : (638873286616439665) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29484;
+[16:11:42] : (638873286616439665) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_30044;
+[16:11:42] : 校准结果：(ExecuteId=638873286616439665;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时41220ms.
+[16:11:47] : (ExecuteId=638873287075789551;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_100;Chnls_1|2|3|4;DesDiv_3
+[16:11:57] : (638873287075789551) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2026;
+[16:11:57] : (638873287075789551) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_2027;
+[16:11:57] : (638873287075789551) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_3530.450005666667, OffsetCtrlWord_1923
+[16:11:57] : (638873287075789551) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_3363.8468119999998, OffsetCtrlWord_6791
+[16:12:03] : (638873287075789551) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_25961
+[16:12:03] : (638873287075789551) AdjustInStep: LastUpperOffsetCtrlWord_25961, LastLowerOffsetCtrlWord_1923
+[16:12:03] : (638873287075789551) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_28395
+[16:12:03] : (638873287075789551) AdjustInStep: LastUpperOffsetCtrlWord_28395, LastLowerOffsetCtrlWord_6791
+[16:12:09] : (638873287075789551) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4090.154689333333, OffsetCtrlWord_2672
+[16:12:09] : (638873287075789551) AdjustInStep: LastUpperOffsetCtrlWord_2672, LastLowerOffsetCtrlWord_1923
+[16:12:09] : (638873287075789551) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_12240
+[16:12:09] : (638873287075789551) AdjustInStep: LastUpperOffsetCtrlWord_12240, LastLowerOffsetCtrlWord_6791
+[16:12:15] : (638873287075789551) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_1946;
+[16:12:15] : (638873287075789551) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3618.433356, OffsetCtrlWord_8165
+[16:12:15] : (638873287075789551) AdjustInStep: LastUpperOffsetCtrlWord_8165, LastLowerOffsetCtrlWord_6791
+[16:12:22] : (638873287075789551) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3537.9643013333334, OffsetCtrlWord_7785
+[16:12:22] : (638873287075789551) AdjustInStep: LastUpperOffsetCtrlWord_8165, LastLowerOffsetCtrlWord_7785
+[16:12:28] : (638873287075789551) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_7832;
+[16:12:28] : 校准结果：(ExecuteId=638873287075789551;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时40820ms.
+[16:12:33] : (ExecuteId=638873287530491958;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_100;Chnls_1|2|3|4;DesDiv_-3
+[16:12:38] : (638873287530491958) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2047;
+[16:12:38] : (638873287530491958) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_556.7964273333333, OffsetCtrlWord_2031
+[16:12:38] : (638873287530491958) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_553.3974453333333, OffsetCtrlWord_1926
+[16:12:38] : (638873287530491958) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_764.6185003333334, OffsetCtrlWord_6343
+[16:12:45] : (638873287530491958) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_26015
+[16:12:45] : (638873287530491958) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_25963
+[16:12:45] : (638873287530491958) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_28171
+[16:12:51] : (638873287530491958) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_14023
+[16:12:51] : (638873287530491958) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_13944
+[16:12:51] : (638873287530491958) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_17257
+[16:12:58] : (638873287530491958) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_8027
+[16:12:58] : (638873287530491958) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_7935
+[16:12:58] : (638873287530491958) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_11800
+[16:13:04] : (638873287530491958) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_5029
+[16:13:04] : (638873287530491958) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_4930
+[16:13:04] : (638873287530491958) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_135.75967433333332, OffsetCtrlWord_9071
+[16:13:04] : (638873287530491958) AdjustInStep: LastUpperOffsetCtrlWord_9071, LastLowerOffsetCtrlWord_6343
+[16:13:11] : (638873287530491958) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_3530
+[16:13:11] : (638873287530491958) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_3428
+[16:13:11] : (638873287530491958) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_559.359723, OffsetCtrlWord_7283
+[16:13:11] : (638873287530491958) AdjustInStep: LastUpperOffsetCtrlWord_9071, LastLowerOffsetCtrlWord_7283
+[16:13:17] : (638873287530491958) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_29.953766333333334, OffsetCtrlWord_2780
+[16:13:17] : (638873287530491958) AdjustInStep: LastUpperOffsetCtrlWord_2780, LastLowerOffsetCtrlWord_2031
+[16:13:17] : (638873287530491958) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_2677
+[16:13:17] : (638873287530491958) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_7331;
+[16:13:24] : (638873287530491958) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_2044;
+[16:13:24] : (638873287530491958) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_272.51326033333333, OffsetCtrlWord_2301
+[16:13:24] : (638873287530491958) AdjustInStep: LastUpperOffsetCtrlWord_2301, LastLowerOffsetCtrlWord_1926
+[16:13:31] : (638873287530491958) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_555.1458546666667, OffsetCtrlWord_1933
+[16:13:31] : (638873287530491958) AdjustInStep: Current point is invalid!
+[16:13:31] : 校准结果：(ExecuteId=638873287530491958;)Ch1[Ok],Ch2[Ok],Ch3[Failure],Ch4[Ok],;总共用时58793ms.
+[16:13:52] : (ExecuteId=638873288325425844;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_200;Chnls_1|2|3|4;DesDiv_0
+[16:14:00] : (638873288325425844) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29479;
+[16:14:00] : (638873288325425844) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_2244.5226566666665, OffsetCtrlWord_30266
+[16:14:00] : (638873288325425844) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_1713.6583403333334, OffsetCtrlWord_29513
+[16:14:00] : (638873288325425844) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_2037.5548083333333, OffsetCtrlWord_28969
+[16:14:06] : (638873288325425844) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_15133
+[16:14:06] : (638873288325425844) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_39756
+[16:14:06] : (638873288325425844) AdjustInStep: LastUpperOffsetCtrlWord_39756, LastLowerOffsetCtrlWord_29513
+[16:14:07] : (638873288325425844) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_39484
+[16:14:07] : (638873288325425844) AdjustInStep: LastUpperOffsetCtrlWord_39484, LastLowerOffsetCtrlWord_28969
+[16:14:13] : (638873288325425844) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_22699
+[16:14:13] : (638873288325425844) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_3027.5357936666665, OffsetCtrlWord_30952
+[16:14:13] : (638873288325425844) AdjustInStep: LastUpperOffsetCtrlWord_30952, LastLowerOffsetCtrlWord_29513
+[16:14:13] : (638873288325425844) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_29022;
+[16:14:20] : (638873288325425844) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_26482
+[16:14:20] : (638873288325425844) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_29879;
+[16:14:27] : (638873288325425844) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_508.2186, OffsetCtrlWord_28374
+[16:14:27] : (638873288325425844) AdjustInStep: LastUpperOffsetCtrlWord_30266, LastLowerOffsetCtrlWord_28374
+[16:14:34] : (638873288325425844) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_30052;
+[16:14:34] : 校准结果：(ExecuteId=638873288325425844;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时41602ms.
+[16:14:38] : (ExecuteId=638873288787705667;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_200;Chnls_1|2|3|4;DesDiv_3
+[16:14:45] : (638873288787705667) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2191.769689, OffsetCtrlWord_202
+[16:14:45] : (638873288787705667) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_1620;
+[16:14:45] : (638873288787705667) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_3527.655718666667, OffsetCtrlWord_1623
+[16:14:45] : (638873288787705667) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_3165.609738333333, OffsetCtrlWord_5439
+[16:14:51] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_25101
+[16:14:51] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_25101, LastLowerOffsetCtrlWord_202
+[16:14:51] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_25811
+[16:14:51] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_25811, LastLowerOffsetCtrlWord_1623
+[16:14:51] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_27719
+[16:14:51] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_27719, LastLowerOffsetCtrlWord_5439
+[16:14:58] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_17954
+[16:14:58] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_17954, LastLowerOffsetCtrlWord_202
+[16:14:58] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4094, OffsetCtrlWord_2492
+[16:14:58] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_2492, LastLowerOffsetCtrlWord_1623
+[16:14:58] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4094, OffsetCtrlWord_14616
+[16:14:58] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_14616, LastLowerOffsetCtrlWord_5439
+[16:15:05] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_12859
+[16:15:05] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_12859, LastLowerOffsetCtrlWord_202
+[16:15:05] : (638873288787705667) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_1654;
+[16:15:05] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_4091.228853666667, OffsetCtrlWord_9219
+[16:15:05] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_9219, LastLowerOffsetCtrlWord_5439
+[16:15:11] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_9226
+[16:15:11] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_9226, LastLowerOffsetCtrlWord_202
+[16:15:11] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3559.1959733333333, OffsetCtrlWord_7001
+[16:15:11] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_7001, LastLowerOffsetCtrlWord_5439
+[16:15:18] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_6636
+[16:15:18] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_6636, LastLowerOffsetCtrlWord_202
+[16:15:18] : (638873288787705667) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_6957;
+[16:15:24] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_4789
+[16:15:24] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_4789, LastLowerOffsetCtrlWord_202
+[16:15:31] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_3472
+[16:15:31] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_3472, LastLowerOffsetCtrlWord_202
+[16:15:36] : (638873288787705667) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3912.316852, OffsetCtrlWord_2533
+[16:15:36] : (638873288787705667) AdjustInStep: LastUpperOffsetCtrlWord_2533, LastLowerOffsetCtrlWord_202
+[16:15:43] : (638873288787705667) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2039;
+[16:15:43] : 校准结果：(ExecuteId=638873288787705667;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时64558ms.
+[16:15:47] : (ExecuteId=638873289479514456;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_200;Chnls_1|2|3|4;DesDiv_-3
+[16:15:56] : (638873289479514456) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_1886.543935, OffsetCtrlWord_205
+[16:15:56] : (638873289479514456) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_554.364363, OffsetCtrlWord_1620
+[16:15:56] : (638873289479514456) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_557.4612296666666, OffsetCtrlWord_1624
+[16:15:56] : (638873289479514456) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_814.5788773333334, OffsetCtrlWord_5388
+[16:16:02] : (638873289479514456) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_25102
+[16:16:02] : (638873289479514456) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_25810
+[16:16:02] : (638873289479514456) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_25812
+[16:16:02] : (638873289479514456) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_27694
+[16:16:10] : (638873289479514456) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_12653
+[16:16:10] : (638873289479514456) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_13715
+[16:16:10] : (638873289479514456) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_13718
+[16:16:10] : (638873289479514456) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_16541
+[16:16:16] : (638873289479514456) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_6429
+[16:16:16] : (638873289479514456) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_7667
+[16:16:16] : (638873289479514456) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_7671
+[16:16:16] : (638873289479514456) AdjustOverStep: ChnlId_4,WaveStatus_OverBottom, OffsetCtrlWord_10964
+[16:16:25] : (638873289479514456) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_3317
+[16:16:26] : (638873289479514456) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_4643
+[16:16:26] : (638873289479514456) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_4647
+[16:16:26] : (638873289479514456) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_206.71416599999998, OffsetCtrlWord_8176
+[16:16:26] : (638873289479514456) AdjustInStep: LastUpperOffsetCtrlWord_8176, LastLowerOffsetCtrlWord_5388
+[16:16:36] : (638873289479514456) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_750.2388559999999, OffsetCtrlWord_1761
+[16:16:36] : (638873289479514456) AdjustInStep: LastUpperOffsetCtrlWord_3317, LastLowerOffsetCtrlWord_1761
+[16:16:36] : (638873289479514456) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_3131
+[16:16:36] : (638873289479514456) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_3135
+[16:16:36] : (638873289479514456) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_594.5615933333332, OffsetCtrlWord_6611
+[16:16:36] : (638873289479514456) AdjustInStep: LastUpperOffsetCtrlWord_8176, LastLowerOffsetCtrlWord_6611
+[16:16:42] : (638873289479514456) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2038;
+[16:16:42] : (638873289479514456) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_2375
+[16:16:42] : (638873289479514456) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_2379
+[16:16:42] : (638873289479514456) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_6799;
+[16:16:48] : (638873289479514456) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_218.83374066666667, OffsetCtrlWord_1997
+[16:16:48] : (638873289479514456) AdjustInStep: LastUpperOffsetCtrlWord_1997, LastLowerOffsetCtrlWord_1620
+[16:16:48] : (638873289479514456) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_221.59218033333332, OffsetCtrlWord_2001
+[16:16:48] : (638873289479514456) AdjustInStep: LastUpperOffsetCtrlWord_2001, LastLowerOffsetCtrlWord_1624
+[16:16:54] : (638873289479514456) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_553.4926016666667, OffsetCtrlWord_1627
+[16:16:54] : (638873289479514456) AdjustInStep: LastUpperOffsetCtrlWord_1997, LastLowerOffsetCtrlWord_1627
+[16:16:54] : (638873289479514456) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_554.5319166666667, OffsetCtrlWord_1635
+[16:16:54] : (638873289479514456) AdjustInStep: LastUpperOffsetCtrlWord_2001, LastLowerOffsetCtrlWord_1635
+[16:17:01] : (638873289479514456) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_1633;
+[16:17:01] : (638873289479514456) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_1642;
+[16:17:01] : 校准结果：(ExecuteId=638873289479514456;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时73402ms.
+[16:17:22] : (ExecuteId=638873290421002205;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_500;Chnls_1|2|3|4;DesDiv_0
+[16:17:29] : (638873290421002205) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2054.274656666667, OffsetCtrlWord_29511
+[16:17:29] : (638873290421002205) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_2203.5442183333334, OffsetCtrlWord_30280
+[16:17:29] : (638873290421002205) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_1768.3513149999999, OffsetCtrlWord_29528
+[16:17:29] : (638873290421002205) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_2027.2995019999998, OffsetCtrlWord_28950
+[16:17:36] : (638873290421002205) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_14755
+[16:17:36] : (638873290421002205) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_15140
+[16:17:36] : (638873290421002205) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4069, OffsetCtrlWord_39764
+[16:17:36] : (638873290421002205) AdjustInStep: LastUpperOffsetCtrlWord_39764, LastLowerOffsetCtrlWord_29528
+[16:17:36] : (638873290421002205) AdjustOverStep: ChnlId_4,WaveStatus_OverTop, OffsetCtrlWord_39475
+[16:17:42] : (638873290421002205) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_22133
+[16:17:42] : (638873290421002205) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_22710
+[16:17:42] : (638873290421002205) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_2717.695194, OffsetCtrlWord_30772
+[16:17:42] : (638873290421002205) AdjustInStep: LastUpperOffsetCtrlWord_30772, LastLowerOffsetCtrlWord_29528
+[16:17:42] : (638873290421002205) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_2978.322467666667, OffsetCtrlWord_34212
+[16:17:42] : (638873290421002205) AdjustInStep: LastUpperOffsetCtrlWord_34212, LastLowerOffsetCtrlWord_28950
+[16:17:50] : (638873290421002205) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_25822
+[16:17:50] : (638873290421002205) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_26495
+[16:17:50] : (638873290421002205) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_29894;
+[16:17:50] : (638873290421002205) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_29065;
+[16:17:56] : (638873290421002205) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_701.5795656666666, OffsetCtrlWord_27666
+[16:17:56] : (638873290421002205) AdjustInStep: LastUpperOffsetCtrlWord_29511, LastLowerOffsetCtrlWord_27666
+[16:17:56] : (638873290421002205) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_826.3462020000001, OffsetCtrlWord_28387
+[16:17:56] : (638873290421002205) AdjustInStep: LastUpperOffsetCtrlWord_30280, LastLowerOffsetCtrlWord_28387
+[16:18:03] : (638873290421002205) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29502;
+[16:18:03] : (638873290421002205) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_30066;
+[16:18:03] : 校准结果：(ExecuteId=638873290421002205;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时40961ms.
+[16:18:07] : (ExecuteId=638873290877292175;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_500;Chnls_1|2|3|4;DesDiv_3
+[16:18:15] : (638873290877292175) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_3553.9609006666665, OffsetCtrlWord_2032
+[16:18:15] : (638873290877292175) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_2046;
+[16:18:15] : (638873290877292175) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_3529.413597666666, OffsetCtrlWord_1945
+[16:18:15] : (638873290877292175) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_3180.484637, OffsetCtrlWord_6163
+[16:18:21] : (638873290877292175) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_2800.9277866666666, OffsetCtrlWord_1016
+[16:18:21] : (638873290877292175) AdjustInStep: LastUpperOffsetCtrlWord_2032, LastLowerOffsetCtrlWord_1016
+[16:18:21] : (638873290877292175) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4069, OffsetCtrlWord_25972
+[16:18:21] : (638873290877292175) AdjustInStep: LastUpperOffsetCtrlWord_25972, LastLowerOffsetCtrlWord_1945
+[16:18:21] : (638873290877292175) AdjustOverStep: ChnlId_4,WaveStatus_OverTop, OffsetCtrlWord_28081
+[16:18:27] : (638873290877292175) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2024;
+[16:18:28] : (638873290877292175) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4069, OffsetCtrlWord_2773
+[16:18:28] : (638873290877292175) AdjustInStep: LastUpperOffsetCtrlWord_2773, LastLowerOffsetCtrlWord_1945
+[16:18:28] : (638873290877292175) AdjustOverStep: ChnlId_4,WaveStatus_OverTop, OffsetCtrlWord_17122
+[16:18:34] : (638873290877292175) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_1974;
+[16:18:34] : (638873290877292175) AdjustOverStep: ChnlId_4,WaveStatus_OverTop, OffsetCtrlWord_11642
+[16:18:41] : (638873290877292175) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3798.3327753333338, OffsetCtrlWord_8902
+[16:18:41] : (638873290877292175) AdjustInStep: LastUpperOffsetCtrlWord_8902, LastLowerOffsetCtrlWord_6163
+[16:18:48] : (638873290877292175) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3556.0179323333336, OffsetCtrlWord_7792
+[16:18:48] : (638873290877292175) AdjustInStep: LastUpperOffsetCtrlWord_7792, LastLowerOffsetCtrlWord_6163
+[16:18:55] : (638873290877292175) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_7757;
+[16:18:55] : 校准结果：(ExecuteId=638873290877292175;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时47293ms.
+[16:18:59] : (ExecuteId=638873291396736162;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_500;Chnls_1|2|3|4;DesDiv_-3
+[16:19:07] : (638873291396736162) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2043;
+[16:19:07] : (638873291396736162) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_554.9524783333333, OffsetCtrlWord_2051
+[16:19:07] : (638873291396736162) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_1953;
+[16:19:07] : (638873291396736162) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_853.4564963333333, OffsetCtrlWord_5950
+[16:19:13] : (638873291396736162) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_26025
+[16:19:13] : (638873291396736162) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_41, OffsetCtrlWord_27975
+[16:19:13] : (638873291396736162) AdjustInStep: LastUpperOffsetCtrlWord_27975, LastLowerOffsetCtrlWord_5950
+[16:19:20] : (638873291396736162) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_14038
+[16:19:20] : (638873291396736162) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_41, OffsetCtrlWord_14231
+[16:19:20] : (638873291396736162) AdjustInStep: LastUpperOffsetCtrlWord_14231, LastLowerOffsetCtrlWord_5950
+[16:19:28] : (638873291396736162) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_8044
+[16:19:28] : (638873291396736162) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_203.0565373333333, OffsetCtrlWord_9063
+[16:19:28] : (638873291396736162) AdjustInStep: LastUpperOffsetCtrlWord_9063, LastLowerOffsetCtrlWord_5950
+[16:19:34] : (638873291396736162) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_5047
+[16:19:34] : (638873291396736162) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_575.3582703333333, OffsetCtrlWord_7412
+[16:19:34] : (638873291396736162) AdjustInStep: LastUpperOffsetCtrlWord_9063, LastLowerOffsetCtrlWord_7412
+[16:19:41] : (638873291396736162) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_3549
+[16:19:41] : (638873291396736162) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_7533;
+[16:19:49] : (638873291396736162) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_2800
+[16:19:56] : (638873291396736162) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_293.77560166666666, OffsetCtrlWord_2425
+[16:19:56] : (638873291396736162) AdjustInStep: LastUpperOffsetCtrlWord_2425, LastLowerOffsetCtrlWord_2051
+[16:20:03] : (638873291396736162) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_2061;
+[16:20:03] : 校准结果：(ExecuteId=638873291396736162;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时63638ms.
+[16:20:23] : (ExecuteId=638873292239601545;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_1000;Chnls_1|2|3|4;DesDiv_0
+[16:20:30] : (638873292239601545) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_29504;
+[16:20:30] : (638873292239601545) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_2210.869112, OffsetCtrlWord_30305
+[16:20:30] : (638873292239601545) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_1771.460066333333, OffsetCtrlWord_29554
+[16:20:30] : (638873292239601545) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_2020.0863226666668, OffsetCtrlWord_29057
+[16:20:38] : (638873292239601545) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_15152
+[16:20:38] : (638873292239601545) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4044, OffsetCtrlWord_39777
+[16:20:38] : (638873292239601545) AdjustInStep: LastUpperOffsetCtrlWord_39777, LastLowerOffsetCtrlWord_29554
+[16:20:38] : (638873292239601545) AdjustOverStep: ChnlId_4,WaveStatus_OverTop, OffsetCtrlWord_39528
+[16:20:44] : (638873292239601545) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_22728
+[16:20:44] : (638873292239601545) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_2710.2374613333336, OffsetCtrlWord_30798
+[16:20:44] : (638873292239601545) AdjustInStep: LastUpperOffsetCtrlWord_30798, LastLowerOffsetCtrlWord_29554
+[16:20:44] : (638873292239601545) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_2944.2915666666668, OffsetCtrlWord_34292
+[16:20:44] : (638873292239601545) AdjustInStep: LastUpperOffsetCtrlWord_34292, LastLowerOffsetCtrlWord_29057
+[16:20:53] : (638873292239601545) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_26516
+[16:20:53] : (638873292239601545) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_29920;
+[16:20:53] : (638873292239601545) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_2041.6397576666666, OffsetCtrlWord_29215
+[16:20:53] : (638873292239601545) AdjustInStep: LastUpperOffsetCtrlWord_34292, LastLowerOffsetCtrlWord_29215
+[16:20:59] : (638873292239601545) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_767.0816996666666, OffsetCtrlWord_28410
+[16:20:59] : (638873292239601545) AdjustInStep: LastUpperOffsetCtrlWord_30305, LastLowerOffsetCtrlWord_28410
+[16:20:59] : (638873292239601545) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_29251;
+[16:21:05] : (638873292239601545) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_30091;
+[16:21:05] : 校准结果：(ExecuteId=638873292239601545;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时41442ms.
+[16:21:10] : (ExecuteId=638873292700489698;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_1000;Chnls_1|2|3|4;DesDiv_3
+[16:21:18] : (638873292700489698) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_2198.528478333333, OffsetCtrlWord_206
+[16:21:18] : (638873292700489698) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_1954;
+[16:21:18] : (638873292700489698) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_3529.09087, OffsetCtrlWord_1968
+[16:21:18] : (638873292700489698) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_3243.837686333333, OffsetCtrlWord_6614
+[16:21:24] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_25103
+[16:21:24] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_25103, LastLowerOffsetCtrlWord_206
+[16:21:24] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4044, OffsetCtrlWord_25984
+[16:21:24] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_25984, LastLowerOffsetCtrlWord_1968
+[16:21:24] : (638873292700489698) AdjustOverStep: ChnlId_4,WaveStatus_OverTop, OffsetCtrlWord_28307
+[16:21:30] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_17931
+[16:21:30] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_17931, LastLowerOffsetCtrlWord_206
+[16:21:30] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_4044, OffsetCtrlWord_2850
+[16:21:30] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_2850, LastLowerOffsetCtrlWord_1968
+[16:21:30] : (638873292700489698) AdjustOverStep: ChnlId_4,WaveStatus_OverTop, OffsetCtrlWord_17460
+[16:21:36] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_12825
+[16:21:36] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_12825, LastLowerOffsetCtrlWord_206
+[16:21:36] : (638873292700489698) AdjustInStep, OK: ChnlId_3,OffsetCtrlWord_2000;
+[16:21:36] : (638873292700489698) AdjustOverStep: ChnlId_4,WaveStatus_OverTop, OffsetCtrlWord_12037
+[16:21:42] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_9190
+[16:21:42] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_9190, LastLowerOffsetCtrlWord_206
+[16:21:42] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3718.7763796666663, OffsetCtrlWord_9325
+[16:21:42] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_9325, LastLowerOffsetCtrlWord_6614
+[16:21:49] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_6602
+[16:21:49] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_6602, LastLowerOffsetCtrlWord_206
+[16:21:49] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_3520.406115, OffsetCtrlWord_8350
+[16:21:49] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_9325, LastLowerOffsetCtrlWord_8350
+[16:21:56] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_4760
+[16:21:56] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_4760, LastLowerOffsetCtrlWord_206
+[16:21:56] : (638873292700489698) AdjustInStep, OK: ChnlId_4,OffsetCtrlWord_8486;
+[16:22:02] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_4094, OffsetCtrlWord_3448
+[16:22:02] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_3448, LastLowerOffsetCtrlWord_206
+[16:22:09] : (638873292700489698) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_3901.930402, OffsetCtrlWord_2514
+[16:22:09] : (638873292700489698) AdjustInStep: LastUpperOffsetCtrlWord_2514, LastLowerOffsetCtrlWord_206
+[16:22:15] : (638873292700489698) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2034;
+[16:22:15] : 校准结果：(ExecuteId=638873292700489698;)Ch1[Ok],Ch2[Ok],Ch3[Ok],Ch4[Ok],;总共用时65862ms.
+[16:22:20] : (ExecuteId=638873293405774651;)BatchTaskPart_CaliChannelBaseLine_Start:Impedance_1;inputLevelBymV_1000;Chnls_1|2|3|4;DesDiv_-3
+[16:22:27] : (638873293405774651) AdjustInStep,FirstStepInPoint: ChnlId_1,Value_1888.1939563333333, OffsetCtrlWord_208
+[16:22:27] : (638873293405774651) AdjustInStep,FirstStepInPoint: ChnlId_2,Value_556.1662196666667, OffsetCtrlWord_1954
+[16:22:27] : (638873293405774651) AdjustInStep,FirstStepInPoint: ChnlId_3,Value_553.991384, OffsetCtrlWord_1971
+[16:22:27] : (638873293405774651) AdjustInStep,FirstStepInPoint: ChnlId_4,Value_907.5508126666667, OffsetCtrlWord_6556
+[16:22:42] : (638873293405774651) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_25104
+[16:22:42] : (638873293405774651) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_25977
+[16:22:42] : (638873293405774651) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_25985
+[16:22:42] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_28278
+[16:22:42] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_28278, LastLowerOffsetCtrlWord_6556
+[16:23:07] : (638873293405774651) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_12656
+[16:23:07] : (638873293405774651) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_13965
+[16:23:07] : (638873293405774651) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_13978
+[16:23:07] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_17088
+[16:23:07] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_17088, LastLowerOffsetCtrlWord_6556
+[16:23:15] : (638873293405774651) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_6432
+[16:23:15] : (638873293405774651) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_7959
+[16:23:15] : (638873293405774651) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_7974
+[16:23:15] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_11663
+[16:23:16] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_11663, LastLowerOffsetCtrlWord_6556
+[16:23:24] : (638873293405774651) AdjustOverStep: ChnlId_1,WaveStatus_OverBottom, OffsetCtrlWord_3320
+[16:23:24] : (638873293405774651) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_4956
+[16:23:24] : (638873293405774651) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_4972
+[16:23:24] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_9032
+[16:23:24] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_9032, LastLowerOffsetCtrlWord_6556
+[16:23:30] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_1,Value_752.458759, OffsetCtrlWord_1764
+[16:23:30] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_3320, LastLowerOffsetCtrlWord_1764
+[16:23:30] : (638873293405774651) AdjustOverStep: ChnlId_2,WaveStatus_OverBottom, OffsetCtrlWord_3455
+[16:23:31] : (638873293405774651) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_3471
+[16:23:31] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_7757
+[16:23:31] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_7757, LastLowerOffsetCtrlWord_6556
+[16:23:37] : (638873293405774651) AdjustInStep, OK: ChnlId_1,OffsetCtrlWord_2044;
+[16:23:37] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_6.727727999999999, OffsetCtrlWord_2704
+[16:23:37] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_2704, LastLowerOffsetCtrlWord_1954
+[16:23:37] : (638873293405774651) AdjustOverStep: ChnlId_3,WaveStatus_OverBottom, OffsetCtrlWord_2721
+[16:23:37] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_7138
+[16:23:37] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_7138, LastLowerOffsetCtrlWord_6556
+[16:23:44] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_2,Value_553.288375, OffsetCtrlWord_1965
+[16:23:44] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_2704, LastLowerOffsetCtrlWord_1965
+[16:23:44] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_280.10569200000003, OffsetCtrlWord_2346
+[16:23:44] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_2346, LastLowerOffsetCtrlWord_1971
+[16:23:44] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_6838
+[16:23:44] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_6838, LastLowerOffsetCtrlWord_6556
+[16:23:50] : (638873293405774651) AdjustInStep, OK: ChnlId_2,OffsetCtrlWord_1972;
+[16:23:50] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_3,Value_556.0881833333333, OffsetCtrlWord_1979
+[16:23:50] : (638873293405774651) AdjustInStep: Current point is invalid!
+[16:23:50] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_6693
+[16:23:50] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_6693, LastLowerOffsetCtrlWord_6556
+[16:23:57] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_6622
+[16:23:57] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_6622, LastLowerOffsetCtrlWord_6556
+[16:24:04] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_6588
+[16:24:04] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_6588, LastLowerOffsetCtrlWord_6556
+[16:24:10] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_6572
+[16:24:10] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_6572, LastLowerOffsetCtrlWord_6556
+[16:24:18] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_6564
+[16:24:18] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_6564, LastLowerOffsetCtrlWord_6556
+[16:24:24] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_6560
+[16:24:24] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_6560, LastLowerOffsetCtrlWord_6556
+[16:24:30] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_6558
+[16:24:30] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_6558, LastLowerOffsetCtrlWord_6556
+[16:24:37] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_6557
+[16:24:37] : (638873293405774651) AdjustInStep: LastUpperOffsetCtrlWord_6557, LastLowerOffsetCtrlWord_6556
+[16:24:43] : (638873293405774651) AdjustInStep,SecondStepInPoint: ChnlId_4,Value_166, OffsetCtrlWord_6556
+[16:24:43] : (638873293405774651) AdjustInStep: FirstStepInPoint.reg = SecondStepInPoint.reg!
+[16:24:43] : 校准结果：(ExecuteId=638873293405774651;)Ch1[Ok],Ch2[Ok],Ch3[Failure],Ch4[Failure],;总共用时143038ms.
+[16:42:54] : [***BatchTaskStart***]:C:\Users\liqiang\Desktop\CIJ\origin_platform_bw_cali_20250620\origin_platform_bw_cali_20250508\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\2U可用xml\幅度校准_8G_fluck9500b.xml
+[16:42:54] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[16:44:45] : [***BatchTaskStart***]:C:\Users\liqiang\Desktop\CIJ\origin_platform_bw_cali_20250620\origin_platform_bw_cali_20250508\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\2U可用xml\幅度校准_8G_fluck9500b.xml
+[16:44:45] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[16:45:05] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_10;Chnls_1
+[16:45:10] : [CH1]:第1次采集Failure,0Div位置不对或通道增益异常！
+[16:45:10] : [CH1]:Failure,幅度有效统计次数为0!
+[16:45:10] : 校准结果：(ExecuteId=638873307054569335;)[Ch1]:Failure;DsaTimes=0, AdcTimes=0, FpfaTimes=0。总共用时4414ms.
+[16:45:23] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_20;Chnls_1
+[16:45:28] : [CH1]:第1次采集Failure,0Div位置不对或通道增益异常！
+[16:45:28] : [CH1]:Failure,幅度有效统计次数为0!
+[16:45:28] : 校准结果：(ExecuteId=638873307236816152;)[Ch1]:Failure;DsaTimes=0, AdcTimes=0, FpfaTimes=0。总共用时4258ms.
+[16:45:41] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_50;Chnls_1
+[16:45:46] : [CH1] DsaStage: errorDeltaUv_-53809;errorByPercent_-17.936333333333334;Cali_CoarseControlWord_1
+[16:45:46] : [CH1]，粗调已到最小值。
+[16:45:50] : [CH1] FPGAStage: errorDeltaUv_-53512;errorRatio_-0.2170977897504138;Cali_FPGAFinegainWord_1000
+[16:45:54] : [CH1] OK:  errorByPercent_-0.19533333333333333%; Cali_CoarseControlWord_1; Cali_ADCFineControlWord_128; Cali_FPGAFinegainWord_1217;
+[16:45:54] : 校准结果：(ExecuteId=638873307416506347;)[Ch1]:Ok;DsaTimes=1, AdcTimes=0, FpfaTimes=1。总共用时12281ms.
+[16:46:07] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_100;Chnls_1
+[16:46:15] : [CH1] DsaStage: errorDeltaUv_182912;errorByPercent_30.485333333333333;Cali_CoarseControlWord_5
+[16:46:15] : [CH1]，DSA调整为10。
+[16:46:18] : [CH1] DsaStage: errorDeltaUv_-8358;errorByPercent_-1.393;Cali_CoarseControlWord_10
+[16:46:22] : [CH1] FPGAStage: errorDeltaUv_-8744;errorRatio_-0.014788856265306398;Cali_FPGAFinegainWord_1000
+[16:46:26] : [CH1] OK:  errorByPercent_-0.11616666666666667%; Cali_CoarseControlWord_10; Cali_ADCFineControlWord_128; Cali_FPGAFinegainWord_1014;
+[16:46:26] : 校准结果：(ExecuteId=638873307676561826;)[Ch1]:Ok;DsaTimes=1, AdcTimes=0, FpfaTimes=1。总共用时17975ms.
+[16:46:39] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_200;Chnls_1
+[16:46:44] : [CH1] DsaStage: errorDeltaUv_-238133;errorByPercent_-19.844416666666667;Cali_CoarseControlWord_1
+[16:46:44] : [CH1]，粗调已到最小值。
+[16:46:48] : [CH1] FPGAStage: errorDeltaUv_-238798;errorRatio_-0.24843685302361002;Cali_FPGAFinegainWord_1000
+[16:46:59] : [CH1] OK:  errorByPercent_-0.08583333333333333%; Cali_CoarseControlWord_1; Cali_ADCFineControlWord_128; Cali_FPGAFinegainWord_1248;
+[16:46:59] : 校准结果：(ExecuteId=638873307994584851;)[Ch1]:Ok;DsaTimes=1, AdcTimes=0, FpfaTimes=1。总共用时19354ms.
+[16:47:12] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_500;Chnls_1
+[16:47:17] : [CH1] DsaStage: errorDeltaUv_589250;errorByPercent_19.641666666666666;Cali_CoarseControlWord_10
+[16:47:17] : [CH1]，DSA调整为13。
+[16:47:21] : [CH1] DsaStage: errorDeltaUv_33950;errorByPercent_1.1316666666666666;Cali_CoarseControlWord_13
+[16:47:25] : [CH1] FPGAStage: errorDeltaUv_36990;errorRatio_0.012179822785060208;Cali_FPGAFinegainWord_1000
+[16:47:29] : [CH1] OK:  errorByPercent_-0.15066666666666667%; Cali_CoarseControlWord_13; Cali_ADCFineControlWord_128; Cali_FPGAFinegainWord_988;
+[16:47:29] : 校准结果：(ExecuteId=638873308325507074;)[Ch1]:Ok;DsaTimes=1, AdcTimes=0, FpfaTimes=1。总共用时15579ms.
+[16:47:41] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_1000;Chnls_1
+[16:47:46] : [CH1] DsaStage: errorDeltaUv_1034490;errorByPercent_20.6898;Cali_CoarseControlWord_22
+[16:47:46] : [CH1]，DSA调整为25。
+[16:47:50] : [CH1] DsaStage: errorDeltaUv_-4990075;errorByPercent_-99.8015;Cali_CoarseControlWord_25
+[16:47:50] : [CH1]，粗调已到最小值。
+[16:47:54] : [CH1]:第1次采集Failure,0Div位置不对或通道增益异常！
+[16:47:55] : [CH1]:Failure,幅度有效统计次数为0!
+[16:47:55] : 校准结果：(ExecuteId=638873308618640671;)[Ch1]:Failure;DsaTimes=2, AdcTimes=0, FpfaTimes=0。总共用时12168ms.
+[17:00:47] : [***BatchTaskStart***]:C:\Users\liqiang\Desktop\CIJ\origin_platform_bw_cali_20250620\origin_platform_bw_cali_20250508\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\2U可用xml\幅度校准_8G_fluck9500b.xml
+[17:00:47] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[17:01:06] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_10;Chnls_2
+[17:01:12] : [CH2]:第1次采集Failure,0Div位置不对或通道增益异常！
+[17:01:13] : [CH2]:Failure,幅度有效统计次数为0!
+[17:01:13] : 校准结果：(ExecuteId=638873316665774575;)[Ch2]:Failure;DsaTimes=0, AdcTimes=0, FpfaTimes=0。总共用时5839ms.
+[17:01:26] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_20;Chnls_2
+[17:01:31] : [CH2]:第1次采集Failure,0Div位置不对或通道增益异常！
+[17:01:31] : [CH2]:Failure,幅度有效统计次数为0!
+[17:01:31] : 校准结果：(ExecuteId=638873316861903011;)[Ch2]:Failure;DsaTimes=0, AdcTimes=0, FpfaTimes=0。总共用时4761ms.
+[17:01:44] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_50;Chnls_2
+[17:01:49] : [CH2] DsaStage: errorDeltaUv_-46191;errorByPercent_-15.397;Cali_CoarseControlWord_1
+[17:01:49] : [CH2]，粗调已到最小值。
+[17:01:53] : [CH2] FPGAStage: errorDeltaUv_-46484;errorRatio_-0.18335726344688302;Cali_FPGAFinegainWord_1000
+[17:01:57] : [CH2] OK:  errorByPercent_0.13466666666666666%; Cali_CoarseControlWord_1; Cali_ADCFineControlWord_128; Cali_FPGAFinegainWord_1183;
+[17:01:57] : 校准结果：(ExecuteId=638873317047091994;)[Ch2]:Ok;DsaTimes=1, AdcTimes=0, FpfaTimes=1。总共用时11358ms.
+[17:02:09] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_100;Chnls_2
+[17:02:16] : [CH2]:第1次采集Failure,0Div位置不对或通道增益异常！
+[17:02:16] : [CH2]:Failure,幅度有效统计次数为0!
+[17:02:16] : 校准结果：(ExecuteId=638873317297880822;)[Ch2]:Failure;DsaTimes=0, AdcTimes=0, FpfaTimes=0。总共用时6021ms.
+[17:02:29] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_200;Chnls_2
+[17:02:34] : [CH2] DsaStage: errorDeltaUv_-224719;errorByPercent_-18.726583333333334;Cali_CoarseControlWord_1
+[17:02:34] : [CH2]，粗调已到最小值。
+[17:02:38] : [CH2] FPGAStage: errorDeltaUv_-225902;errorRatio_-0.23190890444287945;Cali_FPGAFinegainWord_1000
+[17:02:42] : [CH2] OK:  errorByPercent_-0.1175%; Cali_CoarseControlWord_1; Cali_ADCFineControlWord_128; Cali_FPGAFinegainWord_1231;
+[17:02:42] : 校准结果：(ExecuteId=638873317495483954;)[Ch2]:Ok;DsaTimes=1, AdcTimes=0, FpfaTimes=1。总共用时11540ms.
+[17:02:54] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_500;Chnls_2
+[17:02:59] : [CH2] DsaStage: errorDeltaUv_638850;errorByPercent_21.295;Cali_CoarseControlWord_10
+[17:02:59] : [CH2]，DSA调整为13。
+[17:03:03] : [CH2] DsaStage: errorDeltaUv_78640;errorByPercent_2.6213333333333333;Cali_CoarseControlWord_13
+[17:03:06] : [CH2] FPGAStage: errorDeltaUv_77510;errorRatio_0.025185945780842305;Cali_FPGAFinegainWord_1000
+[17:03:11] : [CH2] OK:  errorByPercent_-0.051666666666666666%; Cali_CoarseControlWord_13; Cali_ADCFineControlWord_128; Cali_FPGAFinegainWord_975;
+[17:03:11] : 校准结果：(ExecuteId=638873317748160306;)[Ch2]:Ok;DsaTimes=1, AdcTimes=0, FpfaTimes=1。总共用时15232ms.
+[17:03:23] : BatchTaskPart_CaliChannelGain_Start:Impedance_1;inputLevelBymV_1000;Chnls_2
+[17:03:28] : [CH2] DsaStage: errorDeltaUv_1123910;errorByPercent_22.4782;Cali_CoarseControlWord_22
+[17:03:28] : [CH2]，DSA调整为26。
+[17:03:32] : [CH2] DsaStage: errorDeltaUv_-106530;errorByPercent_-2.1306;Cali_CoarseControlWord_26
+[17:03:36] : [CH2] FPGAStage: errorDeltaUv_-112200;errorRatio_-0.022955112729653424;Cali_FPGAFinegainWord_1000
+[17:03:40] : [CH2] OK:  errorByPercent_-0.1844%; Cali_CoarseControlWord_26; Cali_ADCFineControlWord_128; Cali_FPGAFinegainWord_1022;
+[17:03:40] : 校准结果：(ExecuteId=638873318037745758;)[Ch2]:Ok;DsaTimes=1, AdcTimes=0, FpfaTimes=1。总共用时15398ms.
+[19:09:49] : [***BatchTaskStart***]:C:\Users\liqiang\Desktop\CIJ\origin_platform_bw_cali_20250620\origin_platform_bw_cali_20250508\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\2U可用xml\8000\脚本\1 BatchTask_Afc_ScanFrequency8G_RS源.xml
+[19:09:49] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[19:14:13] : [***BatchTaskStart***]:C:\Users\liqiang\Desktop\CIJ\origin_platform_bw_cali_20250620\origin_platform_bw_cali_20250508\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\2U可用xml\8000\脚本\2 All系数生成TiADC_acq.xml
+[19:14:13] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000
+[19:18:39] : [***BatchTaskStart***]:C:\Users\liqiang\Desktop\CIJ\origin_platform_bw_cali_20250620\origin_platform_bw_cali_20250508\MSO8000HD\ScopeX.Hardware.Calibration.Tool\bin\Debug\net6.0-windows\2U可用xml\8000\脚本\2 All系数生成TiADC_acq.xml
+[19:18:39] : Instrument Info:UNI-T,MSO8000HD,NULL,3.00.0000

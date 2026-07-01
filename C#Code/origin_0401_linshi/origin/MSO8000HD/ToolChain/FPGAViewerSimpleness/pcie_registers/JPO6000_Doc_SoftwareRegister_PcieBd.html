@@ -1,0 +1,2688 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link href="../SystemConfigFile/OurDefault.css" rel="stylesheet" type="text/css" />
+</head>	
+<title>JPO6000_Doc_SoftwareRegister_PcieBd</title>
+<style>
+<!--
+ table.OurNormalTable
+	{mso-style-parent:"";
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif"}
+-->
+</style>
+<body>
+	<font face="宋体" size="2">
+	<div>
+		<div>
+			<p><table class='RegisterListTable'><tr><th>项目</th><th>内容</th></tr>
+<tr><td>负责人</td><td></td></tr>
+<tr><td>版本</td><td></td></tr>
+<tr><td>描述</td><td></td></tr>
+<tr><td>注意事项</td><td></td></tr>
+<tr><td>模块描述</td><td></td></tr>
+</table>
+</p>
+		  <p>该文档自动生成于:2024.12.16 13:21:23</p>
+		</div>
+		<div><h3 class='memtitle' id='catalog'>目录</h3><p><br><br></p>
+<div><a href='#gid_0'> AnalogChCtrl[共18个寄存器]</a></div>
+<div><a href='#gid_1'> BoardSync[共15个寄存器]</a></div>
+<div><a href='#gid_2'> CaseFanCtrl[共13个寄存器]</a></div>
+<div><a href='#gid_3'> CoefficientsTable[共3个寄存器]</a></div>
+<div><a href='#gid_4'> DMADataSource[共2个寄存器]</a></div>
+<div><a href='#gid_5'> DataPath[共1个寄存器]</a></div>
+<div><a href='#gid_6'> Debug[共2个寄存器]</a></div>
+<div><a href='#gid_7'> FPGAFlashUpdater[共7个寄存器]</a></div>
+<div><a href='#gid_8'> FifoCtrl[共5个寄存器]</a></div>
+<div><a href='#gid_9'> FlashOperator[共11个寄存器]</a></div>
+<div><a href='#gid_10'> Level2Transmit[共9个寄存器]</a></div>
+<div><a href='#gid_11'> PowerManager[共4个寄存器]</a></div>
+<div><a href='#gid_12'> RST_CTRL[共1个寄存器]</a></div>
+<div><a href='#gid_13'> RegMonitor[共2个寄存器]</a></div>
+<div><a href='#gid_14'> SysInfo[共2个寄存器]</a></div>
+<div><a href='#gid_15'> SysMon[共19个寄存器]</a></div>
+<div><a href='#gid_16'> viedo[共4个寄存器]</a></div>
+<div><a href='#gid_17'> VersionInfo[共20个寄存器]</a></div>
+<div><a href='#gid_18'> VersionInfo1[共4个寄存器]</a></div>
+<div><a href='#gid_19'> Xdma[共4个寄存器]</a></div>
+<div><a href='#gid_20'> awg[共1个寄存器]</a></div>
+<div><a href='#gid_21'> DMA_Ctrl[共5个寄存器]</a></div>
+</div>
+<div><h3 class='memtitle' id='gid_0'> AnalogChCtrl</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：AnalogChCtrl</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromMCU_ChannelNo_0'>REG_READPROBEINFOFROMMCU_CHANNELNO</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromMCU_ChannelNo_0'>AnalogChCtrl_ReadProbeInfoFromMCU_ChannelNo</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromMCU_ChannelNo_0'>0X10000 | (0X0AC)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromMCU_Enable_1'>REG_READPROBEINFOFROMMCU_ENABLE</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromMCU_Enable_1'>AnalogChCtrl_ReadProbeInfoFromMCU_Enable</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromMCU_Enable_1'>0X10000 | (0X0B0)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Address_2'>REG_READPROBEINFOFROMFPGA_ADDRESS</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Address_2'>AnalogChCtrl_ReadProbeInfoFromFPGA_Address</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Address_2'>0X10000 | (0X0B4)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Enable_3'>REG_READPROBEINFOFROMFPGA_ENABLE</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Enable_3'>AnalogChCtrl_ReadProbeInfoFromFPGA_Enable</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Enable_3'>0X10000 | (0X0B8)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_ProbeLed_4'>REG_PROBE_LED</a></td>
+<td><a href='#reg_AnalogChCtrl_ProbeLed_4'>AnalogChCtrl_ProbeLed</a></td>
+<td><a href='#reg_AnalogChCtrl_ProbeLed_4'>0X10000 | (0X0BC)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_4094Data_H32_5'>REG_CH_SHIFTEREG_DATA_H32</a></td>
+<td><a href='#reg_AnalogChCtrl_4094Data_H32_5'>AnalogChCtrl_4094Data_H32</a></td>
+<td><a href='#reg_AnalogChCtrl_4094Data_H32_5'>0X10000 | (0X0C0)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_4094Data_L32_6'>REG_CH_SHIFTEREG_DATA_L32</a></td>
+<td><a href='#reg_AnalogChCtrl_4094Data_L32_6'>AnalogChCtrl_4094Data_L32</a></td>
+<td><a href='#reg_AnalogChCtrl_4094Data_L32_6'>0X10000 | (0X0C4)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_4094TransStart_7'>REG_CH_SHIFTEREG_EN</a></td>
+<td><a href='#reg_AnalogChCtrl_4094TransStart_7'>AnalogChCtrl_4094TransStart</a></td>
+<td><a href='#reg_AnalogChCtrl_4094TransStart_7'>0X10000 | (0X0C8)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_CH_DSA_DATA_8'>REG_CH_DSA_DATA</a></td>
+<td><a href='#reg_AnalogChCtrl_CH_DSA_DATA_8'>AnalogChCtrl_CH_DSA_DATA</a></td>
+<td><a href='#reg_AnalogChCtrl_CH_DSA_DATA_8'>0X10000 | (0X0CC)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_CH_DSA_EN_9'>REG_CH_DSA_EN</a></td>
+<td><a href='#reg_AnalogChCtrl_CH_DSA_EN_9'>AnalogChCtrl_CH_DSA_EN</a></td>
+<td><a href='#reg_AnalogChCtrl_CH_DSA_EN_9'>0X10000 | (0X0D0)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_DAC_ConfigData_10'>REG_CH_DAC_DATA</a></td>
+<td><a href='#reg_AnalogChCtrl_DAC_ConfigData_10'>AnalogChCtrl_DAC_ConfigData</a></td>
+<td><a href='#reg_AnalogChCtrl_DAC_ConfigData_10'>0X10000 | (0X0D4)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_DAC_Sel_11'>REG_CH_DAC_SEL</a></td>
+<td><a href='#reg_AnalogChCtrl_DAC_Sel_11'>AnalogChCtrl_DAC_Sel</a></td>
+<td><a href='#reg_AnalogChCtrl_DAC_Sel_11'>0X10000 | (0X0D8)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_channelpower_ctrl_12'>REG_CH_POWER_CTRL</a></td>
+<td><a href='#reg_AnalogChCtrl_channelpower_ctrl_12'>AnalogChCtrl_channelpower_ctrl</a></td>
+<td><a href='#reg_AnalogChCtrl_channelpower_ctrl_12'>0X10000 | (0X0DC)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_DAC_TransStart_13'>REG_CH_DAC_EN</a></td>
+<td><a href='#reg_AnalogChCtrl_DAC_TransStart_13'>AnalogChCtrl_DAC_TransStart</a></td>
+<td><a href='#reg_AnalogChCtrl_DAC_TransStart_13'>0X10000 | (0X0E0)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_TotalByteCount_14'>REG_READPROBEINFOFROMFPGA_TOTALBYTECOUNT</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_TotalByteCount_14'>AnalogChCtrl_ReadProbeInfoFromFPGA_TotalByteCount</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_TotalByteCount_14'>0X10000 | (0X08C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Data_15'>REG_READPROBEINFOFROMFPGA_DATA</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Data_15'>AnalogChCtrl_ReadProbeInfoFromFPGA_Data</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Data_15'>0X10000 | (0X090)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_ReadChannelTemperature_16'>REG_READCHANNELTEMPERATURE</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadChannelTemperature_16'>AnalogChCtrl_ReadChannelTemperature</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadChannelTemperature_16'>0X10000 | (0X094)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_AnalogChCtrl_ReadProbeStatus_17'>REG_READPROBESTATUS</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeStatus_17'>AnalogChCtrl_ReadProbeStatus</a></td>
+<td><a href='#reg_AnalogChCtrl_ReadProbeStatus_17'>0X10000 | (0X098)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_ReadProbeInfoFromMCU_ChannelNo_0' > REG_READPROBEINFOFROMMCU_CHANNELNO</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_ReadProbeInfoFromMCU_ChannelNo</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100AC; 发送读取指定通道所对应的探头的信息,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_rd_probe_info_mcu_ch_no</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_ReadProbeInfoFromMCU_Enable_1' > REG_READPROBEINFOFROMMCU_ENABLE</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_ReadProbeInfoFromMCU_Enable</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100B0; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_rd_probe_info_mcu_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Address_2' > REG_READPROBEINFOFROMFPGA_ADDRESS</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_ReadProbeInfoFromFPGA_Address</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100B4; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_rd_probe_info_from_fpga_addr</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Enable_3' > REG_READPROBEINFOFROMFPGA_ENABLE</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_ReadProbeInfoFromFPGA_Enable</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100B8; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_rd_probe_info_from_fpga_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_ProbeLed_4' > REG_PROBE_LED</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_ProbeLed</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100BC; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_probe_led</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_4094Data_H32_5' > REG_CH_SHIFTEREG_DATA_H32</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_4094Data_H32</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100C0; 使能后将传给4094的64位数据 之高32位，最低8位控制通道的高低阻态和直通衰减，参照模拟通道控制文档,否,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ch_shiftereg_data_h32</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_4094Data_L32_6' > REG_CH_SHIFTEREG_DATA_L32</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_4094Data_L32</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100C4; 使能后将传给4094的64位数据 之低32位，最低8位控制通道的高低阻态和直通衰减，参照模拟通道控制文档,否,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ch_shiftereg_data_l32</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_4094TransStart_7' > REG_CH_SHIFTEREG_EN</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_4094TransStart</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100C8; 使能后将传给4094的40位数据传递给通道板的单片机 延时要满足通过SPI将40位的数据传输完毕，与传输该数据的SPI的Clock有关。先发送40位的数据给FPGA，然后拉高，延时足够的时间，然后拉低。为上升沿有效。,否,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ch_shiftereg_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_CH_DSA_DATA_8' > REG_CH_DSA_DATA</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_CH_DSA_DATA</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100CC; 设置模拟通道衰减值,否,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ch_dsa_data</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_CH_DSA_EN_9' > REG_CH_DSA_EN</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_CH_DSA_EN</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100D0; 设置模拟通道衰减值使能信号,否,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ch_dsa_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_DAC_ConfigData_10' > REG_CH_DAC_DATA</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_DAC_ConfigData</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100D4; 配置给DAC的数据，是按照位域拼合成的。ConfigWord = 0x00030000u | (Port << 12);ConfigWord <<= 8;ConfigWord |= Data << 4;,否,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ch_dac_data</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_DAC_Sel_11' > REG_CH_DAC_SEL</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_DAC_Sel</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100D8; 不同DAC的选择,同时还需要配置不同的端口，偏值电压、基线移动、参考电平、等模拟触发电平需要选择不同的DAC，参照模拟通道控制文档。,否,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ch_dac_sel</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_channelpower_ctrl_12' > REG_CH_POWER_CTRL</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_channelpower_ctrl</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100DC; 高八位为0xff时才能生效，因此，控制通道上下电时需要把高八位置成0xff再发送低8bit上下电控制,否,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ch_power_ctrl</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_DAC_TransStart_13' > REG_CH_DAC_EN</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_DAC_TransStart</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100E0; 上升沿开始传输。然后根据SPI的传输速度传输32位数据等待足够的时间，然后拉低。需要与DAC_Enable_CS一起联动。,否,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ch_dac_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_ReadProbeInfoFromFPGA_TotalByteCount_14' > REG_READPROBEINFOFROMFPGA_TOTALBYTECOUNT</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_ReadProbeInfoFromFPGA_TotalByteCount</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1008C; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_rd_probe_info_from_fpga_byte_count</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_ReadProbeInfoFromFPGA_Data_15' > REG_READPROBEINFOFROMFPGA_DATA</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_ReadProbeInfoFromFPGA_Data</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10090; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_rd_probe_info_from_fpga_data</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_ReadChannelTemperature_16' > REG_READCHANNELTEMPERATURE</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_ReadChannelTemperature</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10094; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_rd_ch_temperature</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_AnalogChCtrl_ReadProbeStatus_17' > REG_READPROBESTATUS</h3><br><a href='#gid_0''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:AnalogChCtrl_ReadProbeStatus</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10098; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_rd_probe_status</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_1'> BoardSync</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：BoardSync</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_BoardSync_Pattern_Shift_Addr_0'>REG_SERDES_PATTERN_SHIFT_ADDR_PCIE</a></td>
+<td><a href='#reg_BoardSync_Pattern_Shift_Addr_0'>BoardSync_Pattern_Shift_Addr</a></td>
+<td><a href='#reg_BoardSync_Pattern_Shift_Addr_0'>0X10000 | (0X078)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Pattern_Shift_Value_1'>REG_SERDES_PATTERN_SHIFT_VALUE_PCIE</a></td>
+<td><a href='#reg_BoardSync_Pattern_Shift_Value_1'>BoardSync_Pattern_Shift_Value</a></td>
+<td><a href='#reg_BoardSync_Pattern_Shift_Value_1'>0X10000 | (0X07C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_IO_Reset_2'>REG_IO_RESET_PCIE</a></td>
+<td><a href='#reg_BoardSync_IO_Reset_2'>BoardSync_IO_Reset</a></td>
+<td><a href='#reg_BoardSync_IO_Reset_2'>0X10000 | (0X080)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Tap_Start_3'>REG_TAP_START_PCIE</a></td>
+<td><a href='#reg_BoardSync_Tap_Start_3'>BoardSync_Tap_Start</a></td>
+<td><a href='#reg_BoardSync_Tap_Start_3'>0X10000 | (0X084)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Tap_Gap_4'>REG_TAP_GAP_PCIE</a></td>
+<td><a href='#reg_BoardSync_Tap_Gap_4'>BoardSync_Tap_Gap</a></td>
+<td><a href='#reg_BoardSync_Tap_Gap_4'>0X10000 | (0X088)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Tap_Stop_5'>REG_TAP_STOP_PCIE</a></td>
+<td><a href='#reg_BoardSync_Tap_Stop_5'>BoardSync_Tap_Stop</a></td>
+<td><a href='#reg_BoardSync_Tap_Stop_5'>0X10000 | (0X08C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Scan_Start_6'>REG_SCAN_START_PCIE</a></td>
+<td><a href='#reg_BoardSync_Scan_Start_6'>BoardSync_Scan_Start</a></td>
+<td><a href='#reg_BoardSync_Scan_Start_6'>0X10000 | (0X090)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Ram_Rd_En_7'>REG_RAM_RD_EN_PCIE</a></td>
+<td><a href='#reg_BoardSync_Ram_Rd_En_7'>BoardSync_Ram_Rd_En</a></td>
+<td><a href='#reg_BoardSync_Ram_Rd_En_7'>0X10000 | (0X094)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Pattern_Sel_8'>REG_PATTERN_SEL_PCIE</a></td>
+<td><a href='#reg_BoardSync_Pattern_Sel_8'>BoardSync_Pattern_Sel</a></td>
+<td><a href='#reg_BoardSync_Pattern_Sel_8'>0X10000 | (0X098)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Ram_Rd_Addr_9'>REG_RAM_RD_ADDR_PCIE</a></td>
+<td><a href='#reg_BoardSync_Ram_Rd_Addr_9'>BoardSync_Ram_Rd_Addr</a></td>
+<td><a href='#reg_BoardSync_Ram_Rd_Addr_9'>0X10000 | (0X09C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Io_Delay_Value_10'>REG_IO_DELAY_VALUE_PCIE</a></td>
+<td><a href='#reg_BoardSync_Io_Delay_Value_10'>BoardSync_Io_Delay_Value</a></td>
+<td><a href='#reg_BoardSync_Io_Delay_Value_10'>0X10000 | (0X0A0)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Io_Delay_Ld_En_11'>REG_IO_DELAY_LOAD_EN_PCIE</a></td>
+<td><a href='#reg_BoardSync_Io_Delay_Ld_En_11'>BoardSync_Io_Delay_Ld_En</a></td>
+<td><a href='#reg_BoardSync_Io_Delay_Ld_En_11'>0X10000 | (0X0A4)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Io_Delay_Addr_12'>REG_IO_DELAY_ADDR_PCIE</a></td>
+<td><a href='#reg_BoardSync_Io_Delay_Addr_12'>BoardSync_Io_Delay_Addr</a></td>
+<td><a href='#reg_BoardSync_Io_Delay_Addr_12'>0X10000 | (0X0A8)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Scan_Result_13'>REG_SCAN_RESULT_PCIE</a></td>
+<td><a href='#reg_BoardSync_Scan_Result_13'>BoardSync_Scan_Result</a></td>
+<td><a href='#reg_BoardSync_Scan_Result_13'>0X10000 | (0X084)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_BoardSync_Scan_Finish_14'>REG_SCAN_FINISH_PCIE</a></td>
+<td><a href='#reg_BoardSync_Scan_Finish_14'>BoardSync_Scan_Finish</a></td>
+<td><a href='#reg_BoardSync_Scan_Finish_14'>0X10000 | (0X088)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Pattern_Shift_Addr_0' > REG_SERDES_PATTERN_SHIFT_ADDR_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Pattern_Shift_Addr</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10078; bit之间延迟校正的地址,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_serdes_pattern_shift_addr_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Pattern_Shift_Value_1' > REG_SERDES_PATTERN_SHIFT_VALUE_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Pattern_Shift_Value</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1007C; 多对Lane之间的对齐操作,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_serdes_pattern_shift_value_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_IO_Reset_2' > REG_IO_RESET_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_IO_Reset</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10080; 高有效，持续时间20ns，先发0，再发1，复位完成后发0,否,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_io_reset_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Tap_Start_3' > REG_TAP_START_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Tap_Start</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10084; 扫窗的起始tap值,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_tap_start_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Tap_Gap_4' > REG_TAP_GAP_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Tap_Gap</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10088; 扫窗的步进gap值,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_tap_gap_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Tap_Stop_5' > REG_TAP_STOP_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Tap_Stop</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1008C; 扫窗的终止tap值,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_tap_stop_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Scan_Start_6' > REG_SCAN_START_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Scan_Start</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10090; 扫窗开始的控制信号，正脉冲有效,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_scan_start_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Ram_Rd_En_7' > REG_RAM_RD_EN_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Ram_Rd_En</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10094; 扫窗结果存储RAM的读使能信号,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ram_rd_en_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Pattern_Sel_8' > REG_PATTERN_SEL_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Pattern_Sel</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10098; 测试模式选择： ; 0：板间传输为正常信号 ; 1：板间传输为Pattern信号,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pattern_sel_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Ram_Rd_Addr_9' > REG_RAM_RD_ADDR_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Ram_Rd_Addr</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1009C; 扫窗结果存储RAM的读地址： ; 0xxx_xxxx_xxxx：代表数据信号线,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_ram_rd_addr_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Io_Delay_Value_10' > REG_IO_DELAY_VALUE_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Io_Delay_Value</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100A0; 软件计算稳定的delay值，与reg_io_delay_addr_pro成对使用，先发送地址reg_io_delay_addr_pro，再发送数据reg_io_delay_value_pro,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_io_delay_value_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Io_Delay_Ld_En_11' > REG_IO_DELAY_LOAD_EN_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Io_Delay_Ld_En</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100A4; 板间传输IODelay延迟值装载使能，跟Io_Delay_Value以及Io_Delay_Addr为一组控制寄存器，首先发送Io_Delay_Value，再发送Io_Delay_Addr，最后发送Io_Delay_Ld_En，先发1，等待1us后，发送0完成配置,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_io_delay_load_en_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Io_Delay_Addr_12' > REG_IO_DELAY_ADDR_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Io_Delay_Addr</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100A8; 软件计算稳定的delay值对应的lane地址，与reg_io_delay_value_pro成对使用,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_io_delay_addr_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Scan_Result_13' > REG_SCAN_RESULT_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Scan_Result</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10084; 扫窗结果的回读值，与pattern长度相关（处理板pattern长度为16）取数通常为“log2(patttern长度)+1“。当回读值为全1时，标明该状态扫窗失败，否则则表示当前扫窗成功，并且回读数为pattern移位的对应值,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_scan_result_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_BoardSync_Scan_Finish_14' > REG_SCAN_FINISH_PCIE</h3><br><a href='#gid_1''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:BoardSync_Scan_Finish</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10088; 扫窗完成的标志位,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_scan_finish_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_2'> CaseFanCtrl</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：CaseFanCtrl</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty_0'>REG_CASE_FAN_PWM_DUTY</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty_0'>CaseFanCtrl_Case_Fan_PWM_Duty</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty_0'>0X10000 | (0X018)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty1_1'>REG_CASE_FAN_PWM_DUTY1</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty1_1'>CaseFanCtrl_Case_Fan_PWM_Duty1</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty1_1'>0X10000 | (0X12C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty2_2'>REG_CASE_FAN_PWM_DUTY2</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty2_2'>CaseFanCtrl_Case_Fan_PWM_Duty2</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty2_2'>0X10000 | (0X130)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty3_3'>REG_CASE_FAN_PWM_DUTY3</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty3_3'>CaseFanCtrl_Case_Fan_PWM_Duty3</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty3_3'>0X10000 | (0X134)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty4_4'>REG_CASE_FAN_PWM_DUTY4</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty4_4'>CaseFanCtrl_Case_Fan_PWM_Duty4</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty4_4'>0X10000 | (0X138)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty5_5'>REG_CASE_FAN_PWM_DUTY5</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty5_5'>CaseFanCtrl_Case_Fan_PWM_Duty5</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty5_5'>0X10000 | (0X13C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty6_6'>REG_CASE_FAN_PWM_DUTY6</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty6_6'>CaseFanCtrl_Case_Fan_PWM_Duty6</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty6_6'>0X10000 | (0X140)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty7_7'>REG_CASE_FAN_PWM_DUTY7</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty7_7'>CaseFanCtrl_Case_Fan_PWM_Duty7</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty7_7'>0X10000 | (0X144)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty8_8'>REG_CASE_FAN_PWM_DUTY8</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty8_8'>CaseFanCtrl_Case_Fan_PWM_Duty8</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty8_8'>0X10000 | (0X148)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty9_9'>REG_CASE_FAN_PWM_DUTY9</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty9_9'>CaseFanCtrl_Case_Fan_PWM_Duty9</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty9_9'>0X10000 | (0X14C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty10_10'>REG_CASE_FAN_PWM_DUTY10</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty10_10'>CaseFanCtrl_Case_Fan_PWM_Duty10</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty10_10'>0X10000 | (0X150)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty11_11'>REG_CASE_FAN_PWM_DUTY11</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty11_11'>CaseFanCtrl_Case_Fan_PWM_Duty11</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty11_11'>0X10000 | (0X154)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty12_12'>REG_CASE_FAN_PWM_DUTY12</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty12_12'>CaseFanCtrl_Case_Fan_PWM_Duty12</a></td>
+<td><a href='#reg_CaseFanCtrl_Case_Fan_PWM_Duty12_12'>0X10000 | (0X170)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty_0' > REG_CASE_FAN_PWM_DUTY</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10018; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty1_1' > REG_CASE_FAN_PWM_DUTY1</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty1</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1012C; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty1</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty2_2' > REG_CASE_FAN_PWM_DUTY2</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty2</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10130; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty2</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty3_3' > REG_CASE_FAN_PWM_DUTY3</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty3</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10134; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty3</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty4_4' > REG_CASE_FAN_PWM_DUTY4</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty4</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10138; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty4</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty5_5' > REG_CASE_FAN_PWM_DUTY5</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty5</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1013C; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty5</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty6_6' > REG_CASE_FAN_PWM_DUTY6</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty6</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10140; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty6</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty7_7' > REG_CASE_FAN_PWM_DUTY7</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty7</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10144; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty7</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty8_8' > REG_CASE_FAN_PWM_DUTY8</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty8</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10148; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty8</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty9_9' > REG_CASE_FAN_PWM_DUTY9</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty9</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1014C; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty9</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty10_10' > REG_CASE_FAN_PWM_DUTY10</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty10</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10150; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty10</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty11_11' > REG_CASE_FAN_PWM_DUTY11</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty11</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10154; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty11</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CaseFanCtrl_Case_Fan_PWM_Duty12_12' > REG_CASE_FAN_PWM_DUTY12</h3><br><a href='#gid_2''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CaseFanCtrl_Case_Fan_PWM_Duty12</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10170; 机箱风扇控制占空比，主频20KHz,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_case_fan_pwm_duty12</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_3'> CoefficientsTable</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：CoefficientsTable</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_CoefficientsTable_Reset_0'>REG_PCIE_COEFFICIENTSTABLE_RESET</a></td>
+<td><a href='#reg_CoefficientsTable_Reset_0'>CoefficientsTable_Reset</a></td>
+<td><a href='#reg_CoefficientsTable_Reset_0'>0X10000 | (0X04C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CoefficientsTable_ActionCode_1'>REG_PCIE_COEFFICIENTSTABLE_ACTION_CODE</a></td>
+<td><a href='#reg_CoefficientsTable_ActionCode_1'>CoefficientsTable_ActionCode</a></td>
+<td><a href='#reg_CoefficientsTable_ActionCode_1'>0X10000 | (0X050)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_CoefficientsTable_ActionStart_2'>REG_PCIE_COEFFICIENTSTABLE_ACTION_START</a></td>
+<td><a href='#reg_CoefficientsTable_ActionStart_2'>CoefficientsTable_ActionStart</a></td>
+<td><a href='#reg_CoefficientsTable_ActionStart_2'>0X10000 | (0X054)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_CoefficientsTable_Reset_0' > REG_PCIE_COEFFICIENTSTABLE_RESET</h3><br><a href='#gid_3''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CoefficientsTable_Reset</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1004C; Spi16本次后传的数据量（字节数）,高16位,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_coefficientstable_reset</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CoefficientsTable_ActionCode_1' > REG_PCIE_COEFFICIENTSTABLE_ACTION_CODE</h3><br><a href='#gid_3''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CoefficientsTable_ActionCode</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10050; Spi16本次后传的数据量（字节数）,高16位,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_coefficientstable_action_code</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_CoefficientsTable_ActionStart_2' > REG_PCIE_COEFFICIENTSTABLE_ACTION_START</h3><br><a href='#gid_3''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:CoefficientsTable_ActionStart</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10054; Spi16本次后传的数据量（字节数）,高16位,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_coefficientstable_action_start</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_4'> DMADataSource</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：DMADataSource</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_DMADataSource_DdrEnable_0'>REG_PCIE_FAST_TRANS_EN</a></td>
+<td><a href='#reg_DMADataSource_DdrEnable_0'>DMADataSource_DdrEnable</a></td>
+<td><a href='#reg_DMADataSource_DdrEnable_0'>0X10000 | (0X0E8)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_DMADataSource_DpxEnable_1'>REG_PCIE_DPX_EN</a></td>
+<td><a href='#reg_DMADataSource_DpxEnable_1'>DMADataSource_DpxEnable</a></td>
+<td><a href='#reg_DMADataSource_DpxEnable_1'>0X10000 | (0X0EC)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_DMADataSource_DdrEnable_0' > REG_PCIE_FAST_TRANS_EN</h3><br><a href='#gid_4''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:DMADataSource_DdrEnable</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100E8; 只有1位的状态控制， ; 置1表示使能快速传输,,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_fast_trans_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_DMADataSource_DpxEnable_1' > REG_PCIE_DPX_EN</h3><br><a href='#gid_4''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:DMADataSource_DpxEnable</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100EC; 只有1位的状态控制， ; 置1表示打开dpx功能,,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_dpx_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_5'> DataPath</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：DataPath</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_DataPath_pcie_linkdemux_select_0'>REG_PCIE_LINKDEMUX_SEL</a></td>
+<td><a href='#reg_DataPath_pcie_linkdemux_select_0'>DataPath_pcie_linkdemux_select</a></td>
+<td><a href='#reg_DataPath_pcie_linkdemux_select_0'>0X10000 | (0X0E4)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_DataPath_pcie_linkdemux_select_0' > REG_PCIE_LINKDEMUX_SEL</h3><br><a href='#gid_5''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:DataPath_pcie_linkdemux_select</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100E4; 数据类型选择： ; 0:正常时域数据， ; 1:DPO映射时域数据， ; 2:协议解码数据， ; 3:频域数据， ; 4:快传数据， ; 5:LA数据 ; 默认态:正常时域数据,,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_linkdemux_sel</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_6'> Debug</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：Debug</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_Debug_PcieDataCountH16_0'>REG_PCIE_DATA_COUNT_H16</a></td>
+<td><a href='#reg_Debug_PcieDataCountH16_0'>Debug_PcieDataCountH16</a></td>
+<td><a href='#reg_Debug_PcieDataCountH16_0'>0X10000 | (0X0B8)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Debug_PcieDataCountL16_1'>REG_PCIE_DATA_COUNT_L16</a></td>
+<td><a href='#reg_Debug_PcieDataCountL16_1'>Debug_PcieDataCountL16</a></td>
+<td><a href='#reg_Debug_PcieDataCountL16_1'>0X10000 | (0X0BC)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_Debug_PcieDataCountH16_0' > REG_PCIE_DATA_COUNT_H16</h3><br><a href='#gid_6''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Debug_PcieDataCountH16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100B8; debug使用,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_data_count_h16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Debug_PcieDataCountL16_1' > REG_PCIE_DATA_COUNT_L16</h3><br><a href='#gid_6''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Debug_PcieDataCountL16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100BC; debug使用,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_data_count_l16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_7'> FPGAFlashUpdater</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：FPGAFlashUpdater</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_FPGAFlashUpdater_ReadStart_0'>REG_PCIE_CONFIG_FLASH_READSTART</a></td>
+<td><a href='#reg_FPGAFlashUpdater_ReadStart_0'>FPGAFlashUpdater_ReadStart</a></td>
+<td><a href='#reg_FPGAFlashUpdater_ReadStart_0'>0X10000 | (0X004)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FPGAFlashUpdater_SpiClock_1'>REG_PCIE_CONFIG_FLASH_SPICLOCK_DIV</a></td>
+<td><a href='#reg_FPGAFlashUpdater_SpiClock_1'>FPGAFlashUpdater_SpiClock</a></td>
+<td><a href='#reg_FPGAFlashUpdater_SpiClock_1'>0X10000 | (0X008)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FPGAFlashUpdater_SS_2'>REG_PCIE_CONFIG_FLASH_SS</a></td>
+<td><a href='#reg_FPGAFlashUpdater_SS_2'>FPGAFlashUpdater_SS</a></td>
+<td><a href='#reg_FPGAFlashUpdater_SS_2'>0X10000 | (0X00C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FPGAFlashUpdater_WriteData_3'>REG_PCIE_CONFIG_FLASH_WRITEDATA</a></td>
+<td><a href='#reg_FPGAFlashUpdater_WriteData_3'>FPGAFlashUpdater_WriteData</a></td>
+<td><a href='#reg_FPGAFlashUpdater_WriteData_3'>0X10000 | (0X010)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FPGAFlashUpdater_WriteStart_4'>REG_PCIE_CONFIG_FLASH_WRITESTART</a></td>
+<td><a href='#reg_FPGAFlashUpdater_WriteStart_4'>FPGAFlashUpdater_WriteStart</a></td>
+<td><a href='#reg_FPGAFlashUpdater_WriteStart_4'>0X10000 | (0X014)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FPGAFlashUpdater_ReadData_5'>REG_PCIE_CONFIG_FLASH_READDATA</a></td>
+<td><a href='#reg_FPGAFlashUpdater_ReadData_5'>FPGAFlashUpdater_ReadData</a></td>
+<td><a href='#reg_FPGAFlashUpdater_ReadData_5'>0X10000 | (0X004)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FPGAFlashUpdater_UpdateFlag_6'>REG_PCIE_CONFIG_FLASH_UPDATEFLAG</a></td>
+<td><a href='#reg_FPGAFlashUpdater_UpdateFlag_6'>FPGAFlashUpdater_UpdateFlag</a></td>
+<td><a href='#reg_FPGAFlashUpdater_UpdateFlag_6'>0X10000 | (0X008)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_FPGAFlashUpdater_ReadStart_0' > REG_PCIE_CONFIG_FLASH_READSTART</h3><br><a href='#gid_7''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FPGAFlashUpdater_ReadStart</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10004; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_config_flash_readstart</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FPGAFlashUpdater_SpiClock_1' > REG_PCIE_CONFIG_FLASH_SPICLOCK_DIV</h3><br><a href='#gid_7''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FPGAFlashUpdater_SpiClock</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10008; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_config_flash_spiclock_div</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FPGAFlashUpdater_SS_2' > REG_PCIE_CONFIG_FLASH_SS</h3><br><a href='#gid_7''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FPGAFlashUpdater_SS</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1000C; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_config_flash_ss</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FPGAFlashUpdater_WriteData_3' > REG_PCIE_CONFIG_FLASH_WRITEDATA</h3><br><a href='#gid_7''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FPGAFlashUpdater_WriteData</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10010; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_config_flash_writedata</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FPGAFlashUpdater_WriteStart_4' > REG_PCIE_CONFIG_FLASH_WRITESTART</h3><br><a href='#gid_7''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FPGAFlashUpdater_WriteStart</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10014; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_config_flash_writestart</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FPGAFlashUpdater_ReadData_5' > REG_PCIE_CONFIG_FLASH_READDATA</h3><br><a href='#gid_7''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FPGAFlashUpdater_ReadData</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10004; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_config_flash_readdata</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FPGAFlashUpdater_UpdateFlag_6' > REG_PCIE_CONFIG_FLASH_UPDATEFLAG</h3><br><a href='#gid_7''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FPGAFlashUpdater_UpdateFlag</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10008; 用与上位机区分Golden版本固件和update版本固件,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_config_flash_updateflag</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_8'> FifoCtrl</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：FifoCtrl</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_FifoCtrl_ChannelMode_0'>REG_PCIE_CHANNEL_MODE</a></td>
+<td><a href='#reg_FifoCtrl_ChannelMode_0'>FifoCtrl_ChannelMode</a></td>
+<td><a href='#reg_FifoCtrl_ChannelMode_0'>0X10000 | (0X0F0)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FifoCtrl_FullProgDepth_1'>REG_PCIE_RXFIFO_PROGFULL_THRESH</a></td>
+<td><a href='#reg_FifoCtrl_FullProgDepth_1'>FifoCtrl_FullProgDepth</a></td>
+<td><a href='#reg_FifoCtrl_FullProgDepth_1'>0X10000 | (0X0F4)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FifoCtrl_ProgEmpty_2'>REG_PCIE_DATA_RXFIFO_EMPTY_THRESH</a></td>
+<td><a href='#reg_FifoCtrl_ProgEmpty_2'>FifoCtrl_ProgEmpty</a></td>
+<td><a href='#reg_FifoCtrl_ProgEmpty_2'>0X10000 | (0X0F8)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FifoCtrl_ReadFromFIFO_Num_3'>REG_PCIE_READ_FIFO_LEN</a></td>
+<td><a href='#reg_FifoCtrl_ReadFromFIFO_Num_3'>FifoCtrl_ReadFromFIFO_Num</a></td>
+<td><a href='#reg_FifoCtrl_ReadFromFIFO_Num_3'>0X10000 | (0X0FC)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FifoCtrl_FullFlag_4'>REG_PCIE_DATA_RXFIFO_FULL</a></td>
+<td><a href='#reg_FifoCtrl_FullFlag_4'>FifoCtrl_FullFlag</a></td>
+<td><a href='#reg_FifoCtrl_FullFlag_4'>0X10000 | (0X09C)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_FifoCtrl_ChannelMode_0' > REG_PCIE_CHANNEL_MODE</h3><br><a href='#gid_8''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FifoCtrl_ChannelMode</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100F0; 通道模式选择，控制pcie板FIFO的满标志判断逻辑,,否,否,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_channel_mode</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FifoCtrl_FullProgDepth_1' > REG_PCIE_RXFIFO_PROGFULL_THRESH</h3><br><a href='#gid_8''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FifoCtrl_FullProgDepth</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100F4; 给pcie_fifo预满数据量， ; 最大为32768，初始化值为28672,,否,是,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_rxfifo_progfull_thresh</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FifoCtrl_ProgEmpty_2' > REG_PCIE_DATA_RXFIFO_EMPTY_THRESH</h3><br><a href='#gid_8''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FifoCtrl_ProgEmpty</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100F8; 给pcie_fifo空数据量,,否,否,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_data_rxfifo_empty_thresh</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FifoCtrl_ReadFromFIFO_Num_3' > REG_PCIE_READ_FIFO_LEN</h3><br><a href='#gid_8''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FifoCtrl_ReadFromFIFO_Num</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100FC; DMA读取pcie每个FIFO的 ; 数据量,初始化值为16000,,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_read_fifo_len</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FifoCtrl_FullFlag_4' > REG_PCIE_DATA_RXFIFO_FULL</h3><br><a href='#gid_8''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FifoCtrl_FullFlag</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1009C; pcie缓存FIFO编程满标志,,否,否,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_data_rxfifo_full</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_9'> FlashOperator</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：FlashOperator</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_FlashOperator_ActionReset_0'>REG_PCIE_FLASH_OPERATOR_SYS_RST</a></td>
+<td><a href='#reg_FlashOperator_ActionReset_0'>FlashOperator_ActionReset</a></td>
+<td><a href='#reg_FlashOperator_ActionReset_0'>0X10000 | (0X02C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FlashOperator_WhichFlash_1'>REG_PCIE_FLASH_OPERATOR_FLASH_WHICH_FLASH</a></td>
+<td><a href='#reg_FlashOperator_WhichFlash_1'>FlashOperator_WhichFlash</a></td>
+<td><a href='#reg_FlashOperator_WhichFlash_1'>0X10000 | (0X030)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FlashOperator_StartAddress_L16_2'>REG_PCIE_FLASH_OPERATOR_START_ADDR_L16</a></td>
+<td><a href='#reg_FlashOperator_StartAddress_L16_2'>FlashOperator_StartAddress_L16</a></td>
+<td><a href='#reg_FlashOperator_StartAddress_L16_2'>0X10000 | (0X034)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FlashOperator_StartAddress_H16_3'>REG_PCIE_FLASH_OPERATOR_START_ADDR_H16</a></td>
+<td><a href='#reg_FlashOperator_StartAddress_H16_3'>FlashOperator_StartAddress_H16</a></td>
+<td><a href='#reg_FlashOperator_StartAddress_H16_3'>0X10000 | (0X038)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FlashOperator_EndAddress_L16_4'>REG_PCIE_FLASH_OPERATOR_END_ADDR_L16</a></td>
+<td><a href='#reg_FlashOperator_EndAddress_L16_4'>FlashOperator_EndAddress_L16</a></td>
+<td><a href='#reg_FlashOperator_EndAddress_L16_4'>0X10000 | (0X03C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FlashOperator_EndAddress_H16_5'>REG_PCIE_FLASH_OPERATOR_END_ADDR_H16</a></td>
+<td><a href='#reg_FlashOperator_EndAddress_H16_5'>FlashOperator_EndAddress_H16</a></td>
+<td><a href='#reg_FlashOperator_EndAddress_H16_5'>0X10000 | (0X040)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FlashOperator_ActionCode_6'>REG_PCIE_FLASH_OPERATOR_ACTION_CODE</a></td>
+<td><a href='#reg_FlashOperator_ActionCode_6'>FlashOperator_ActionCode</a></td>
+<td><a href='#reg_FlashOperator_ActionCode_6'>0X10000 | (0X044)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FlashOperator_ActionStart_7'>REG_PCIE_FLASH_OPERATOR_FLASH_ACTION_START</a></td>
+<td><a href='#reg_FlashOperator_ActionStart_7'>FlashOperator_ActionStart</a></td>
+<td><a href='#reg_FlashOperator_ActionStart_7'>0X10000 | (0X048)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FlashOperator_ActionStatus_8'>REG_PCIE_FLASH_OPERATOR_FLASH_ACTION_STATUS</a></td>
+<td><a href='#reg_FlashOperator_ActionStatus_8'>FlashOperator_ActionStatus</a></td>
+<td><a href='#reg_FlashOperator_ActionStatus_8'>0X10000 | (0X074)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FlashOperator_FlashID_L16_9'>REG_PCIE_FLASH_OPERATOR_FLASH_ID_L16</a></td>
+<td><a href='#reg_FlashOperator_FlashID_L16_9'>FlashOperator_FlashID_L16</a></td>
+<td><a href='#reg_FlashOperator_FlashID_L16_9'>0X10000 | (0X078)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_FlashOperator_FlashID_H16_10'>REG_PCIE_FLASH_OPERATOR_FLASH_ID_H16</a></td>
+<td><a href='#reg_FlashOperator_FlashID_H16_10'>FlashOperator_FlashID_H16</a></td>
+<td><a href='#reg_FlashOperator_FlashID_H16_10'>0X10000 | (0X07C)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_ActionReset_0' > REG_PCIE_FLASH_OPERATOR_SYS_RST</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_ActionReset</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1002C; Spi16本次后传的数据量（字节数）,高16位,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_sys_rst</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_WhichFlash_1' > REG_PCIE_FLASH_OPERATOR_FLASH_WHICH_FLASH</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_WhichFlash</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10030; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_flash_which_flash</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_StartAddress_L16_2' > REG_PCIE_FLASH_OPERATOR_START_ADDR_L16</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_StartAddress_L16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10034; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_start_addr_l16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_StartAddress_H16_3' > REG_PCIE_FLASH_OPERATOR_START_ADDR_H16</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_StartAddress_H16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10038; Spi16本次后传的数据量（字节数）,高16位,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_start_addr_h16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_EndAddress_L16_4' > REG_PCIE_FLASH_OPERATOR_END_ADDR_L16</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_EndAddress_L16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1003C; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_end_addr_l16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_EndAddress_H16_5' > REG_PCIE_FLASH_OPERATOR_END_ADDR_H16</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_EndAddress_H16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10040; Spi16本次后传的数据量（字节数）,高16位,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_end_addr_h16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_ActionCode_6' > REG_PCIE_FLASH_OPERATOR_ACTION_CODE</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_ActionCode</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10044; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_action_code</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_ActionStart_7' > REG_PCIE_FLASH_OPERATOR_FLASH_ACTION_START</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_ActionStart</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10048; Spi16本次后传的数据量（字节数）,高16位,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_flash_action_start</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_ActionStatus_8' > REG_PCIE_FLASH_OPERATOR_FLASH_ACTION_STATUS</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_ActionStatus</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10074; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_flash_action_status</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_FlashID_L16_9' > REG_PCIE_FLASH_OPERATOR_FLASH_ID_L16</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_FlashID_L16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10078; 软件获取FlashID_L16，在读FlashID命令执行完成(ActionStart)后读取,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_flash_id_l16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_FlashOperator_FlashID_H16_10' > REG_PCIE_FLASH_OPERATOR_FLASH_ID_H16</h3><br><a href='#gid_9''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:FlashOperator_FlashID_H16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1007C; 软件获取FlashID_H16,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_flash_operator_flash_id_h16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_10'> Level2Transmit</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：Level2Transmit</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_Level2Transmit_WhichSpi_0'>REG_PCIE_LEVEL2TRANSMIT_WHICHSPI</a></td>
+<td><a href='#reg_Level2Transmit_WhichSpi_0'>Level2Transmit_WhichSpi</a></td>
+<td><a href='#reg_Level2Transmit_WhichSpi_0'>0X10000 | (0X058)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Level2Transmit_DDR_StartAddress_L16_1'>REG_PCIE_LEVEL2TRANSMIT_DDR_START_ADDRESS_L16</a></td>
+<td><a href='#reg_Level2Transmit_DDR_StartAddress_L16_1'>Level2Transmit_DDR_StartAddress_L16</a></td>
+<td><a href='#reg_Level2Transmit_DDR_StartAddress_L16_1'>0X10000 | (0X05C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Level2Transmit_DDR_StartAddress_H16_2'>REG_PCIE_LEVEL2TRANSMIT_DDR_START_ADDRESS_H16</a></td>
+<td><a href='#reg_Level2Transmit_DDR_StartAddress_H16_2'>Level2Transmit_DDR_StartAddress_H16</a></td>
+<td><a href='#reg_Level2Transmit_DDR_StartAddress_H16_2'>0X10000 | (0X060)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Level2Transmit_DDR_TotalBytes_L16_3'>REG_PCIE_LEVEL2TRANSMIT_DDR_TOTAL_BYTES_L16</a></td>
+<td><a href='#reg_Level2Transmit_DDR_TotalBytes_L16_3'>Level2Transmit_DDR_TotalBytes_L16</a></td>
+<td><a href='#reg_Level2Transmit_DDR_TotalBytes_L16_3'>0X10000 | (0X064)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Level2Transmit_DDR_TotalBytes_H16_4'>REG_PCIE_LEVEL2TRANSMIT_DDR_TOTAL_BYTES_H16</a></td>
+<td><a href='#reg_Level2Transmit_DDR_TotalBytes_H16_4'>Level2Transmit_DDR_TotalBytes_H16</a></td>
+<td><a href='#reg_Level2Transmit_DDR_TotalBytes_H16_4'>0X10000 | (0X068)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Level2Transmit_DoWhat_5'>REG_PCIE_LEVEL2TRANSMIT_DO_WHAT</a></td>
+<td><a href='#reg_Level2Transmit_DoWhat_5'>Level2Transmit_DoWhat</a></td>
+<td><a href='#reg_Level2Transmit_DoWhat_5'>0X10000 | (0X06C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Level2Transmit_Reset_6'>REG_PCIE_LEVEL2TRANSMIT_RESET</a></td>
+<td><a href='#reg_Level2Transmit_Reset_6'>Level2Transmit_Reset</a></td>
+<td><a href='#reg_Level2Transmit_Reset_6'>0X10000 | (0X070)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Level2Transmit_ActionStart_7'>REG_PCIE_LEVEL2TRANSMIT_ACTION_START</a></td>
+<td><a href='#reg_Level2Transmit_ActionStart_7'>Level2Transmit_ActionStart</a></td>
+<td><a href='#reg_Level2Transmit_ActionStart_7'>0X10000 | (0X074)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Level2Transmit_ActionStatus_8'>REG_PCIE_LEVEL2TRANSMIT_ACTION_STATUS</a></td>
+<td><a href='#reg_Level2Transmit_ActionStatus_8'>Level2Transmit_ActionStatus</a></td>
+<td><a href='#reg_Level2Transmit_ActionStatus_8'>0X10000 | (0X080)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_Level2Transmit_WhichSpi_0' > REG_PCIE_LEVEL2TRANSMIT_WHICHSPI</h3><br><a href='#gid_10''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Level2Transmit_WhichSpi</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10058; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_level2transmit_whichspi</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Level2Transmit_DDR_StartAddress_L16_1' > REG_PCIE_LEVEL2TRANSMIT_DDR_START_ADDRESS_L16</h3><br><a href='#gid_10''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Level2Transmit_DDR_StartAddress_L16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1005C; 0=PCIE,1=PROC,BIT2~BIT7=1,23,4,5,6,7,8Acq板插槽号,从1开始;bit8~bit9,1=TMC的fpga，2=TMC的3014,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_level2transmit_ddr_start_address_l16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Level2Transmit_DDR_StartAddress_H16_2' > REG_PCIE_LEVEL2TRANSMIT_DDR_START_ADDRESS_H16</h3><br><a href='#gid_10''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Level2Transmit_DDR_StartAddress_H16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10060; 0=PCIE,1=PROC,BIT2~BIT7=1,23,4,5,6,7,8Acq板插槽号,从1开始;bit8~bit9,1=TMC的fpga，2=TMC的3014,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_level2transmit_ddr_start_address_h16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Level2Transmit_DDR_TotalBytes_L16_3' > REG_PCIE_LEVEL2TRANSMIT_DDR_TOTAL_BYTES_L16</h3><br><a href='#gid_10''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Level2Transmit_DDR_TotalBytes_L16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10064; 软件获取FlashID_L16，在读FlashID命令执行完成(ActionStart)后读取,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_level2transmit_ddr_total_bytes_l16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Level2Transmit_DDR_TotalBytes_H16_4' > REG_PCIE_LEVEL2TRANSMIT_DDR_TOTAL_BYTES_H16</h3><br><a href='#gid_10''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Level2Transmit_DDR_TotalBytes_H16</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10068; 软件获取FlashID_L16，在读FlashID命令执行完成(ActionStart)后读取,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_level2transmit_ddr_total_bytes_h16</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Level2Transmit_DoWhat_5' > REG_PCIE_LEVEL2TRANSMIT_DO_WHAT</h3><br><a href='#gid_10''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Level2Transmit_DoWhat</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1006C; 软件获取FlashID_H16,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_level2transmit_do_what</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Level2Transmit_Reset_6' > REG_PCIE_LEVEL2TRANSMIT_RESET</h3><br><a href='#gid_10''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Level2Transmit_Reset</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10070; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_level2transmit_reset</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Level2Transmit_ActionStart_7' > REG_PCIE_LEVEL2TRANSMIT_ACTION_START</h3><br><a href='#gid_10''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Level2Transmit_ActionStart</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10074; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_level2transmit_action_start</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Level2Transmit_ActionStatus_8' > REG_PCIE_LEVEL2TRANSMIT_ACTION_STATUS</h3><br><a href='#gid_10''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Level2Transmit_ActionStatus</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10080; none </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_level2transmit_action_status</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_11'> PowerManager</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：PowerManager</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_PowerManager_ProcBoard_Power_0'>REG_PRO_BD_POWER_EN</a></td>
+<td><a href='#reg_PowerManager_ProcBoard_Power_0'>PowerManager_ProcBoard_Power</a></td>
+<td><a href='#reg_PowerManager_ProcBoard_Power_0'>0X10000 | (0X01C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_PowerManager_AcqBoard_Power_1'>REG_ACQ_BD_POWER_EN</a></td>
+<td><a href='#reg_PowerManager_AcqBoard_Power_1'>PowerManager_AcqBoard_Power</a></td>
+<td><a href='#reg_PowerManager_AcqBoard_Power_1'>0X10000 | (0X020)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_PowerManager_LA_Power_2'>REG_PCIE_LA_POWER_EN</a></td>
+<td><a href='#reg_PowerManager_LA_Power_2'>PowerManager_LA_Power</a></td>
+<td><a href='#reg_PowerManager_LA_Power_2'>0X10000 | (0X168)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_PowerManager_ExtTrig_Power_3'>REG_PCIE_EXTTRIG_POWER_EN</a></td>
+<td><a href='#reg_PowerManager_ExtTrig_Power_3'>PowerManager_ExtTrig_Power</a></td>
+<td><a href='#reg_PowerManager_ExtTrig_Power_3'>0X10000 | (0X16C)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_PowerManager_ProcBoard_Power_0' > REG_PRO_BD_POWER_EN</h3><br><a href='#gid_11''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:PowerManager_ProcBoard_Power</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1001C; 处理板上电控制，初始化时发送1上电，0下电,是,,是,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pro_bd_power_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_PowerManager_AcqBoard_Power_1' > REG_ACQ_BD_POWER_EN</h3><br><a href='#gid_11''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:PowerManager_AcqBoard_Power</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10020; 采集板上电控制，独热码控制对应采集板上电，目前7000X项目只使用了ACQ3，因此发送0x04上电，0x00下电,,,是,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_acq_bd_power_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_PowerManager_LA_Power_2' > REG_PCIE_LA_POWER_EN</h3><br><a href='#gid_11''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:PowerManager_LA_Power</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10168; LA上电控制，初始化时发送1上电，0下电,是,,是,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_la_power_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_PowerManager_ExtTrig_Power_3' > REG_PCIE_EXTTRIG_POWER_EN</h3><br><a href='#gid_11''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:PowerManager_ExtTrig_Power</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1016C; 外触发上电控制，初始化时发送1上电，0下电,是,,是,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_exttrig_power_en</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_12'> RST_CTRL</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：RST_CTRL</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_RST_CTRL_PcieReset_0'>REG_PCIE_RESET</a></td>
+<td><a href='#reg_RST_CTRL_PcieReset_0'>RST_CTRL_PcieReset</a></td>
+<td><a href='#reg_RST_CTRL_PcieReset_0'>0X10000 | (0X100)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_RST_CTRL_PcieReset_0' > REG_PCIE_RESET</h3><br><a href='#gid_12''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:RST_CTRL_PcieReset</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10100; pcie板卡复位，不输出到处理板， ; 初始化时复位，上升沿有效,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_reset</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_13'> RegMonitor</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：RegMonitor</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_RegMonitor_RegAddress_0'>PCIE_READ_WREG_ADDR</a></td>
+<td><a href='#reg_RegMonitor_RegAddress_0'>RegMonitor_RegAddress</a></td>
+<td><a href='#reg_RegMonitor_RegAddress_0'>0X10000 | (0X024)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_RegMonitor_ReadbackValue_1'>PCIE_READ_WREG_DATA</a></td>
+<td><a href='#reg_RegMonitor_ReadbackValue_1'>RegMonitor_ReadbackValue</a></td>
+<td><a href='#reg_RegMonitor_ReadbackValue_1'>0X10000 | (0X00C)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_RegMonitor_RegAddress_0' > PCIE_READ_WREG_ADDR</h3><br><a href='#gid_13''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:RegMonitor_RegAddress</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10024; 读回下发寄存器的值,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_read_wreg_addr</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_RegMonitor_ReadbackValue_1' > PCIE_READ_WREG_DATA</h3><br><a href='#gid_13''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:RegMonitor_ReadbackValue</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1000C; 读回下发寄存器的值,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_read_wreg_data</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_14'> SysInfo</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：SysInfo</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_SysInfo_WorkOKTest_0'>PCIE_REG_READ_BACK</a></td>
+<td><a href='#reg_SysInfo_WorkOKTest_0'>SysInfo_WorkOKTest</a></td>
+<td><a href='#reg_SysInfo_WorkOKTest_0'>0X10000 | (0XFF8)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysInfo_WorkOKTest_1'>PCIE_REG_READ_BACK</a></td>
+<td><a href='#reg_SysInfo_WorkOKTest_1'>SysInfo_WorkOKTest</a></td>
+<td><a href='#reg_SysInfo_WorkOKTest_1'>0X10000 | (0XFF8)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_SysInfo_WorkOKTest_0' > PCIE_REG_READ_BACK</h3><br><a href='#gid_14''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysInfo_WorkOKTest</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10FF8; 16位数据，由此寄存器写入，再由此寄存器读出，两者数据一致，表明上电OK。,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_reg_read_back</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysInfo_WorkOKTest_1' > PCIE_REG_READ_BACK</h3><br><a href='#gid_14''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysInfo_WorkOKTest</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10FF8; 16位数据，由此寄存器写入，再由此寄存器读出，两者数据一致，表明上电OK。,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_reg_read_back</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_15'> SysMon</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：SysMon</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_pcie_0'>REG_PCIE_CT_1820_DRIVER_RST_N</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_pcie_0'>SysMon_Ct_1820_Driver_Rst_N_pcie</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_pcie_0'>0X10000 | (0X104)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Sysmon_Rst_1'>REG_PCIE_SYSMON_RST</a></td>
+<td><a href='#reg_SysMon_Sysmon_Rst_1'>SysMon_Sysmon_Rst</a></td>
+<td><a href='#reg_SysMon_Sysmon_Rst_1'>0X10000 | (0X108)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_pro_2'>REG_PRO_CT_1820_DRIVER_RST_N</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_pro_2'>SysMon_Ct_1820_Driver_Rst_N_pro</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_pro_2'>0X10000 | (0X10C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_acq1_3'>REG_ACQ1_CT_1820_DRIVER_RST_N</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_acq1_3'>SysMon_Ct_1820_Driver_Rst_N_acq1</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_acq1_3'>0X10000 | (0X158)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_acq2_4'>REG_ACQ2_CT_1820_DRIVER_RST_N</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_acq2_4'>SysMon_Ct_1820_Driver_Rst_N_acq2</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_acq2_4'>0X10000 | (0X15C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_adc_r_5'>REG_ADC_R_CT_1820_DRIVER_RST_N</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_adc_r_5'>SysMon_Ct_1820_Driver_Rst_N_adc_r</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_adc_r_5'>0X10000 | (0X160)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_adc_m_6'>REG_ADC_M_CT_1820_DRIVER_RST_N</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_adc_m_6'>SysMon_Ct_1820_Driver_Rst_N_adc_m</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Rst_N_adc_m_6'>0X10000 | (0X164)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_7'>REG_PCIE_CT_1820_DRIVER_TEMP_DATA</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_7'>SysMon_Ct_1820_Driver_Temp_Data</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_7'>0X10000 | (0X0A0)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Sysmon_Temperature_8'>REG_PCIE_SYSMON_TEMPERATURE</a></td>
+<td><a href='#reg_SysMon_Sysmon_Temperature_8'>SysMon_Sysmon_Temperature</a></td>
+<td><a href='#reg_SysMon_Sysmon_Temperature_8'>0X10000 | (0X0A4)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Sysmon_Vccint_9'>REG_PCIE_SYSMON_VCCINT</a></td>
+<td><a href='#reg_SysMon_Sysmon_Vccint_9'>SysMon_Sysmon_Vccint</a></td>
+<td><a href='#reg_SysMon_Sysmon_Vccint_9'>0X10000 | (0X0A8)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Sysmon_Vccaux_10'>REG_PCIE_SYSMON_VCCAUX</a></td>
+<td><a href='#reg_SysMon_Sysmon_Vccaux_10'>SysMon_Sysmon_Vccaux</a></td>
+<td><a href='#reg_SysMon_Sysmon_Vccaux_10'>0X10000 | (0X0AC)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Sysmon_Vccbram_11'>REG_PCIE_SYSMON_VCCBRAM</a></td>
+<td><a href='#reg_SysMon_Sysmon_Vccbram_11'>SysMon_Sysmon_Vccbram</a></td>
+<td><a href='#reg_SysMon_Sysmon_Vccbram_11'>0X10000 | (0X0B0)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_pro_12'>REG_PRO_CT_1820_DRIVER_TEMP_DATA</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_pro_12'>SysMon_Ct_1820_Driver_Temp_Data_pro</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_pro_12'>0X10000 | (0X0B4)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_HardwareVersion_13'>REG_HARDWARE_VERSION</a></td>
+<td><a href='#reg_SysMon_HardwareVersion_13'>SysMon_HardwareVersion</a></td>
+<td><a href='#reg_SysMon_HardwareVersion_13'>0X10000 | (0X0C0)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Pcie_Pll_Locked_14'>REG_PCIE_PLL_LOCKED</a></td>
+<td><a href='#reg_SysMon_Pcie_Pll_Locked_14'>SysMon_Pcie_Pll_Locked</a></td>
+<td><a href='#reg_SysMon_Pcie_Pll_Locked_14'>0X10000 | (0X0C4)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_acq1_15'>REG_ACQ1_CT_1820_DRIVER_TEMP_DATA</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_acq1_15'>SysMon_Ct_1820_Driver_Temp_Data_acq1</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_acq1_15'>0X10000 | (0X0C8)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_acq2_16'>REG_ACQ2_CT_1820_DRIVER_TEMP_DATA</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_acq2_16'>SysMon_Ct_1820_Driver_Temp_Data_acq2</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_acq2_16'>0X10000 | (0X0CC)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_adc_r_17'>REG_ADC_R_CT_1820_DRIVER_TEMP_DATA</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_adc_r_17'>SysMon_Ct_1820_Driver_Temp_Data_adc_r</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_adc_r_17'>0X10000 | (0X0D0)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_adc_m_18'>REG_ADC_M_CT_1820_DRIVER_TEMP_DATA</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_adc_m_18'>SysMon_Ct_1820_Driver_Temp_Data_adc_m</a></td>
+<td><a href='#reg_SysMon_Ct_1820_Driver_Temp_Data_adc_m_18'>0X10000 | (0X0D4)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Rst_N_pcie_0' > REG_PCIE_CT_1820_DRIVER_RST_N</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Rst_N_pcie</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10104; ct1820采集板温度传感器模块复位,,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_ct_1820_driver_rst_n</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Sysmon_Rst_1' > REG_PCIE_SYSMON_RST</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Sysmon_Rst</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10108; PCIe卡FPGA温度检测模块复位,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_sysmon_rst</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Rst_N_pro_2' > REG_PRO_CT_1820_DRIVER_RST_N</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Rst_N_pro</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1010C; ct1820采集板温度传感器模块复位,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pro_ct_1820_driver_rst_n</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Rst_N_acq1_3' > REG_ACQ1_CT_1820_DRIVER_RST_N</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Rst_N_acq1</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10158; ct1820采集板温度传感器模块复位,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_acq1_ct_1820_driver_rst_n</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Rst_N_acq2_4' > REG_ACQ2_CT_1820_DRIVER_RST_N</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Rst_N_acq2</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1015C; ct1820采集板温度传感器模块复位,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_acq2_ct_1820_driver_rst_n</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Rst_N_adc_r_5' > REG_ADC_R_CT_1820_DRIVER_RST_N</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Rst_N_adc_r</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10160; ct1820采集板温度传感器模块复位,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_adc_r_ct_1820_driver_rst_n</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Rst_N_adc_m_6' > REG_ADC_M_CT_1820_DRIVER_RST_N</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Rst_N_adc_m</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10164; ct1820采集板温度传感器模块复位,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_adc_m_ct_1820_driver_rst_n</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Temp_Data_7' > REG_PCIE_CT_1820_DRIVER_TEMP_DATA</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Temp_Data</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100A0; 公式 temprature(℃) =temp_data*0.0625，temp_data为返回值，最高位表示温度的符号（并非符号位）,,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_ct_1820_driver_temp_data</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Sysmon_Temperature_8' > REG_PCIE_SYSMON_TEMPERATURE</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Sysmon_Temperature</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100A4; 公式 temprature(℃) = (ADC_CODE * 501.3743) / 1024 -273.6777 其中，ADC_CODE对应temprature寄存器中的值,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_sysmon_temperature</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Sysmon_Vccint_9' > REG_PCIE_SYSMON_VCCINT</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Sysmon_Vccint</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100A8; 公式vccint(V)   = ADC_CODE  / 1024 * 3 其中,ADC_CODE对应vccint寄存器中的值,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_sysmon_vccint</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Sysmon_Vccaux_10' > REG_PCIE_SYSMON_VCCAUX</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Sysmon_Vccaux</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100AC; 公式vccaux(V) = ADC_CODE  / 1024 * 3 其中,ADC_CODE对应vccaux寄存器中的值,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_sysmon_vccaux</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Sysmon_Vccbram_11' > REG_PCIE_SYSMON_VCCBRAM</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Sysmon_Vccbram</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100B0; 公式vccbram(V)= ADC_CODE  / 1024 * 3 其中,ADC_CODE对应vccbram寄存器中的值,是,否,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_sysmon_vccbram</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Temp_Data_pro_12' > REG_PRO_CT_1820_DRIVER_TEMP_DATA</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Temp_Data_pro</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100B4; 公式 temprature(℃) =temp_data*0.0625，temp_data为返回值，最高位表示温度的符号（并非符号位）,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pro_ct_1820_driver_temp_data</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_HardwareVersion_13' > REG_HARDWARE_VERSION</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_HardwareVersion</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100C0; 硬件版本信息，V3,V4,V5,V6,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_hardware_version</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Pcie_Pll_Locked_14' > REG_PCIE_PLL_LOCKED</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Pcie_Pll_Locked</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100C4; 7044和7043锁定状态,[7:0]7044锁定，[15:8]7043锁定状态,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_pll_locked</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Temp_Data_acq1_15' > REG_ACQ1_CT_1820_DRIVER_TEMP_DATA</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Temp_Data_acq1</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100C8; 公式 temprature(℃) =temp_data*0.0625，temp_data为返回值，最高位表示温度的符号（并非符号位）,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_acq1_ct_1820_driver_temp_data</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Temp_Data_acq2_16' > REG_ACQ2_CT_1820_DRIVER_TEMP_DATA</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Temp_Data_acq2</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100CC; 公式 temprature(℃) =temp_data*0.0625，temp_data为返回值，最高位表示温度的符号（并非符号位）,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_acq2_ct_1820_driver_temp_data</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Temp_Data_adc_r_17' > REG_ADC_R_CT_1820_DRIVER_TEMP_DATA</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Temp_Data_adc_r</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100D0; 公式 temprature(℃) =temp_data*0.0625，temp_data为返回值，最高位表示温度的符号（并非符号位）,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_adc_r_ct_1820_driver_temp_data</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_SysMon_Ct_1820_Driver_Temp_Data_adc_m_18' > REG_ADC_M_CT_1820_DRIVER_TEMP_DATA</h3><br><a href='#gid_15''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:SysMon_Ct_1820_Driver_Temp_Data_adc_m</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X100D4; 公式 temprature(℃) =temp_data*0.0625，temp_data为返回值，最高位表示温度的符号（并非符号位）,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_adc_m_ct_1820_driver_temp_data</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_16'> viedo</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：viedo</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_viedo_SyncNumber_0'>VIDEO_TRI_SYNC_NUMBER</a></td>
+<td><a href='#reg_viedo_SyncNumber_0'>viedo_SyncNumber</a></td>
+<td><a href='#reg_viedo_SyncNumber_0'>0X10000 | (0X110)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_viedo_CustomHorizontal_1'>VIDEO_TRI_CUSTOM_HORIZONTAL</a></td>
+<td><a href='#reg_viedo_CustomHorizontal_1'>viedo_CustomHorizontal</a></td>
+<td><a href='#reg_viedo_CustomHorizontal_1'>0X10000 | (0X114)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_viedo_TrigMode_2'>VIDEO_TRI_TRIG_MODE</a></td>
+<td><a href='#reg_viedo_TrigMode_2'>viedo_TrigMode</a></td>
+<td><a href='#reg_viedo_TrigMode_2'>0X10000 | (0X118)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_viedo_VideoMode_3'>VIDEO_TRI_VIDEO_MODE</a></td>
+<td><a href='#reg_viedo_VideoMode_3'>viedo_VideoMode</a></td>
+<td><a href='#reg_viedo_VideoMode_3'>0X10000 | (0X11C)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_viedo_SyncNumber_0' > VIDEO_TRI_SYNC_NUMBER</h3><br><a href='#gid_16''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:viedo_SyncNumber</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10110; 视频触发同步设置,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:video_tri_sync_number</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_viedo_CustomHorizontal_1' > VIDEO_TRI_CUSTOM_HORIZONTAL</h3><br><a href='#gid_16''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:viedo_CustomHorizontal</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10114; 视频触发同步设置,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:video_tri_custom_horizontal</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_viedo_TrigMode_2' > VIDEO_TRI_TRIG_MODE</h3><br><a href='#gid_16''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:viedo_TrigMode</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10118; 视频触发模式控制,有奇偶场触发  固定行触发  任意行触发,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:video_tri_trig_mode</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_viedo_VideoMode_3' > VIDEO_TRI_VIDEO_MODE</h3><br><a href='#gid_16''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:viedo_VideoMode</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1011C; 视频触发制式控制是输入信号制式  NTSC  PAL 等,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:video_tri_video_mode</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_17'> VersionInfo</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：VersionInfo</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord0_0'>PCIE_VERSION_COMMENT_WORD0</a></td>
+<td><a href='#reg_VersionInfo_CommentWord0_0'>VersionInfo_CommentWord0</a></td>
+<td><a href='#reg_VersionInfo_CommentWord0_0'>0X10000 | (0X010)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord1_1'>PCIE_VERSION_COMMENT_WORD1</a></td>
+<td><a href='#reg_VersionInfo_CommentWord1_1'>VersionInfo_CommentWord1</a></td>
+<td><a href='#reg_VersionInfo_CommentWord1_1'>0X10000 | (0X014)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord10_2'>PCIE_VERSION_COMMENT_WORD10</a></td>
+<td><a href='#reg_VersionInfo_CommentWord10_2'>VersionInfo_CommentWord10</a></td>
+<td><a href='#reg_VersionInfo_CommentWord10_2'>0X10000 | (0X018)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord11_3'>PCIE_VERSION_COMMENT_WORD11</a></td>
+<td><a href='#reg_VersionInfo_CommentWord11_3'>VersionInfo_CommentWord11</a></td>
+<td><a href='#reg_VersionInfo_CommentWord11_3'>0X10000 | (0X01C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord12_4'>PCIE_VERSION_COMMENT_WORD12</a></td>
+<td><a href='#reg_VersionInfo_CommentWord12_4'>VersionInfo_CommentWord12</a></td>
+<td><a href='#reg_VersionInfo_CommentWord12_4'>0X10000 | (0X020)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord13_5'>PCIE_VERSION_COMMENT_WORD13</a></td>
+<td><a href='#reg_VersionInfo_CommentWord13_5'>VersionInfo_CommentWord13</a></td>
+<td><a href='#reg_VersionInfo_CommentWord13_5'>0X10000 | (0X024)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord2_6'>PCIE_VERSION_COMMENT_WORD2</a></td>
+<td><a href='#reg_VersionInfo_CommentWord2_6'>VersionInfo_CommentWord2</a></td>
+<td><a href='#reg_VersionInfo_CommentWord2_6'>0X10000 | (0X030)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord3_7'>PCIE_VERSION_COMMENT_WORD3</a></td>
+<td><a href='#reg_VersionInfo_CommentWord3_7'>VersionInfo_CommentWord3</a></td>
+<td><a href='#reg_VersionInfo_CommentWord3_7'>0X10000 | (0X034)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord4_8'>PCIE_VERSION_COMMENT_WORD4</a></td>
+<td><a href='#reg_VersionInfo_CommentWord4_8'>VersionInfo_CommentWord4</a></td>
+<td><a href='#reg_VersionInfo_CommentWord4_8'>0X10000 | (0X038)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord5_9'>PCIE_VERSION_COMMENT_WORD5</a></td>
+<td><a href='#reg_VersionInfo_CommentWord5_9'>VersionInfo_CommentWord5</a></td>
+<td><a href='#reg_VersionInfo_CommentWord5_9'>0X10000 | (0X03C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord6_10'>PCIE_VERSION_COMMENT_WORD6</a></td>
+<td><a href='#reg_VersionInfo_CommentWord6_10'>VersionInfo_CommentWord6</a></td>
+<td><a href='#reg_VersionInfo_CommentWord6_10'>0X10000 | (0X040)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord7_11'>PCIE_VERSION_COMMENT_WORD7</a></td>
+<td><a href='#reg_VersionInfo_CommentWord7_11'>VersionInfo_CommentWord7</a></td>
+<td><a href='#reg_VersionInfo_CommentWord7_11'>0X10000 | (0X044)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord8_12'>PCIE_VERSION_COMMENT_WORD8</a></td>
+<td><a href='#reg_VersionInfo_CommentWord8_12'>VersionInfo_CommentWord8</a></td>
+<td><a href='#reg_VersionInfo_CommentWord8_12'>0X10000 | (0X048)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_CommentWord9_13'>PCIE_VERSION_COMMENT_WORD9</a></td>
+<td><a href='#reg_VersionInfo_CommentWord9_13'>VersionInfo_CommentWord9</a></td>
+<td><a href='#reg_VersionInfo_CommentWord9_13'>0X10000 | (0X04C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_DesignerWord0_14'>PCIE_VERSION_DESIGNER_WORD0</a></td>
+<td><a href='#reg_VersionInfo_DesignerWord0_14'>VersionInfo_DesignerWord0</a></td>
+<td><a href='#reg_VersionInfo_DesignerWord0_14'>0X10000 | (0X058)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_DesignerWord1_15'>PCIE_VERSION_DESIGNER_WORD1</a></td>
+<td><a href='#reg_VersionInfo_DesignerWord1_15'>VersionInfo_DesignerWord1</a></td>
+<td><a href='#reg_VersionInfo_DesignerWord1_15'>0X10000 | (0X05C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_DesignerWord2_16'>PCIE_VERSION_DESIGNER_WORD2</a></td>
+<td><a href='#reg_VersionInfo_DesignerWord2_16'>VersionInfo_DesignerWord2</a></td>
+<td><a href='#reg_VersionInfo_DesignerWord2_16'>0X10000 | (0X060)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_DesignerWord3_17'>PCIE_VERSION_DESIGNER_WORD3</a></td>
+<td><a href='#reg_VersionInfo_DesignerWord3_17'>VersionInfo_DesignerWord3</a></td>
+<td><a href='#reg_VersionInfo_DesignerWord3_17'>0X10000 | (0X064)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_VersionWord0_18'>PCIE_VERSION_VERSION_WORD0</a></td>
+<td><a href='#reg_VersionInfo_VersionWord0_18'>VersionInfo_VersionWord0</a></td>
+<td><a href='#reg_VersionInfo_VersionWord0_18'>0X10000 | (0X068)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo_VersionWord1_19'>PCIE_VERSION_VERSION_WORD1</a></td>
+<td><a href='#reg_VersionInfo_VersionWord1_19'>VersionInfo_VersionWord1</a></td>
+<td><a href='#reg_VersionInfo_VersionWord1_19'>0X10000 | (0X06C)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord0_0' > PCIE_VERSION_COMMENT_WORD0</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord0</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10010; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word0</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord1_1' > PCIE_VERSION_COMMENT_WORD1</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord1</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10014; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word1</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord10_2' > PCIE_VERSION_COMMENT_WORD10</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord10</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10018; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word10</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord11_3' > PCIE_VERSION_COMMENT_WORD11</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord11</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1001C; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word11</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord12_4' > PCIE_VERSION_COMMENT_WORD12</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord12</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10020; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word12</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord13_5' > PCIE_VERSION_COMMENT_WORD13</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord13</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10024; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word13</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord2_6' > PCIE_VERSION_COMMENT_WORD2</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord2</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10030; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word2</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord3_7' > PCIE_VERSION_COMMENT_WORD3</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord3</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10034; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word3</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord4_8' > PCIE_VERSION_COMMENT_WORD4</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord4</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10038; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word4</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord5_9' > PCIE_VERSION_COMMENT_WORD5</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord5</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1003C; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word5</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord6_10' > PCIE_VERSION_COMMENT_WORD6</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord6</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10040; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word6</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord7_11' > PCIE_VERSION_COMMENT_WORD7</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord7</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10044; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word7</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord8_12' > PCIE_VERSION_COMMENT_WORD8</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord8</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10048; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word8</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_CommentWord9_13' > PCIE_VERSION_COMMENT_WORD9</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_CommentWord9</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1004C; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_comment_word9</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_DesignerWord0_14' > PCIE_VERSION_DESIGNER_WORD0</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_DesignerWord0</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10058; 版本信息，设计者,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_designer_word0</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_DesignerWord1_15' > PCIE_VERSION_DESIGNER_WORD1</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_DesignerWord1</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1005C; 版本信息，设计者,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_designer_word1</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_DesignerWord2_16' > PCIE_VERSION_DESIGNER_WORD2</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_DesignerWord2</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10060; 版本信息，设计者,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_designer_word2</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_DesignerWord3_17' > PCIE_VERSION_DESIGNER_WORD3</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_DesignerWord3</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10064; 版本信息，设计者,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_designer_word3</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_VersionWord0_18' > PCIE_VERSION_VERSION_WORD0</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_VersionWord0</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10068; 版本信息，版本号,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_version_word0</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo_VersionWord1_19' > PCIE_VERSION_VERSION_WORD1</h3><br><a href='#gid_17''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo_VersionWord1</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1006C; 版本信息，版本号,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:pcie_version_version_word1</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_18'> VersionInfo1</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：VersionInfo1</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_VersionInfo1_CommentWord14_0'>REG_PCIE_VERSION_COMMENT_WORD14</a></td>
+<td><a href='#reg_VersionInfo1_CommentWord14_0'>VersionInfo1_CommentWord14</a></td>
+<td><a href='#reg_VersionInfo1_CommentWord14_0'>0X10000 | (0X028)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo1_CommentWord15_1'>REG_PCIE_VERSION_COMMENT_WORD15</a></td>
+<td><a href='#reg_VersionInfo1_CommentWord15_1'>VersionInfo1_CommentWord15</a></td>
+<td><a href='#reg_VersionInfo1_CommentWord15_1'>0X10000 | (0X02C)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo1_CompileTimeWord0_2'>REG_PCIE_VERSION_TIME_WORD0</a></td>
+<td><a href='#reg_VersionInfo1_CompileTimeWord0_2'>VersionInfo1_CompileTimeWord0</a></td>
+<td><a href='#reg_VersionInfo1_CompileTimeWord0_2'>0X10000 | (0X050)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_VersionInfo1_CompileTimeWord1_3'>REG_PCIE_VERSION_TIME_WORD1</a></td>
+<td><a href='#reg_VersionInfo1_CompileTimeWord1_3'>VersionInfo1_CompileTimeWord1</a></td>
+<td><a href='#reg_VersionInfo1_CompileTimeWord1_3'>0X10000 | (0X054)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo1_CommentWord14_0' > REG_PCIE_VERSION_COMMENT_WORD14</h3><br><a href='#gid_18''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo1_CommentWord14</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10028; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_version_comment_word14</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo1_CommentWord15_1' > REG_PCIE_VERSION_COMMENT_WORD15</h3><br><a href='#gid_18''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo1_CommentWord15</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X1002C; 版本信息，备注,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_version_comment_word15</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo1_CompileTimeWord0_2' > REG_PCIE_VERSION_TIME_WORD0</h3><br><a href='#gid_18''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo1_CompileTimeWord0</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10050; 版本信息，编译时间,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_version_time_word0</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_VersionInfo1_CompileTimeWord1_3' > REG_PCIE_VERSION_TIME_WORD1</h3><br><a href='#gid_18''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:VersionInfo1_CompileTimeWord1</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10054; 版本信息，编译时间,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pcie_version_time_word1</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_19'> Xdma</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：Xdma</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_Xdma_XdmaIrqReset_0'>REG_XDMA_IRQ_RESET</a></td>
+<td><a href='#reg_Xdma_XdmaIrqReset_0'>Xdma_XdmaIrqReset</a></td>
+<td><a href='#reg_Xdma_XdmaIrqReset_0'>0X10000 | (0X028)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Xdma_SamplingModePcie_1'>REG_SAMPLE_MODE_PCIE</a></td>
+<td><a href='#reg_Xdma_SamplingModePcie_1'>Xdma_SamplingModePcie</a></td>
+<td><a href='#reg_Xdma_SamplingModePcie_1'>0X10000 | (0X120)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Xdma_PassFailWarn_2'>REG_PASS_FAIL_WARN</a></td>
+<td><a href='#reg_Xdma_PassFailWarn_2'>Xdma_PassFailWarn</a></td>
+<td><a href='#reg_Xdma_PassFailWarn_2'>0X10000 | (0X128)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_Xdma_XdmaWrFinish_3'>REG_XDMA_WR_FINISH</a></td>
+<td><a href='#reg_Xdma_XdmaWrFinish_3'>Xdma_XdmaWrFinish</a></td>
+<td><a href='#reg_Xdma_XdmaWrFinish_3'>0X10000 | (0X070)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_Xdma_XdmaIrqReset_0' > REG_XDMA_IRQ_RESET</h3><br><a href='#gid_19''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Xdma_XdmaIrqReset</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10028; Xdma的中断复位,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_xdma_irq_reset</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Xdma_SamplingModePcie_1' > REG_SAMPLE_MODE_PCIE</h3><br><a href='#gid_19''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Xdma_SamplingModePcie</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10120; 采集模式控制,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_sample_mode_pcie</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Xdma_PassFailWarn_2' > REG_PASS_FAIL_WARN</h3><br><a href='#gid_19''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Xdma_PassFailWarn</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10128; 是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_pass_fail_warn</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_Xdma_XdmaWrFinish_3' > REG_XDMA_WR_FINISH</h3><br><a href='#gid_19''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:Xdma_XdmaWrFinish</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10070; Xdma的中断标识，用于查询XDMA数据是否存满,是,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_xdma_wr_finish</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_20'> awg</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：awg</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_awg_AwgPowerEn_0'>REG_AWG_PWR_CTRL</a></td>
+<td><a href='#reg_awg_AwgPowerEn_0'>awg_AwgPowerEn</a></td>
+<td><a href='#reg_awg_AwgPowerEn_0'>0X10000 | (0X124)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_awg_AwgPowerEn_0' > REG_AWG_PWR_CTRL</h3><br><a href='#gid_20''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:awg_AwgPowerEn</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X10124; AWG上电,,,,,,,,,,,,,,,,,,,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:reg_awg_pwr_ctrl</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id='gid_21'> DMA_Ctrl</h3><br><a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称：</td></tr></table ></div>
+<div class='memdoc'><p>定义的寄存器如下：</p>
+<table class='RegisterListTable'><tr><th>中文名称</th><th>软件名称</th><th>地址</th></tr>
+<tr>
+<td><a href='#reg_ReadTotalBytes_0'>USER_NUMBER</a></td>
+<td><a href='#reg_ReadTotalBytes_0'>ReadTotalBytes</a></td>
+<td><a href='#reg_ReadTotalBytes_0'>0X0000 | (0X8050)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_WriteTotalBytes_1'>DMAWR_NUMBER</a></td>
+<td><a href='#reg_WriteTotalBytes_1'>WriteTotalBytes</a></td>
+<td><a href='#reg_WriteTotalBytes_1'>0X0000 | (0X8054)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_InterruptControl_2'>INTERRUPT_CONTROL</a></td>
+<td><a href='#reg_InterruptControl_2'>InterruptControl</a></td>
+<td><a href='#reg_InterruptControl_2'>0X0000 | (0X8108)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_ReadFromAcqOrDpo_3'>FRAMEIN_CONTROL0</a></td>
+<td><a href='#reg_ReadFromAcqOrDpo_3'>ReadFromAcqOrDpo</a></td>
+<td><a href='#reg_ReadFromAcqOrDpo_3'>0X0000 | (0X8188)</a></td>
+</tr>
+<tr>
+<td><a href='#reg_DMAFrameoutControl_4'>FRAMEOUT_CONTROL0</a></td>
+<td><a href='#reg_DMAFrameoutControl_4'>DMAFrameoutControl</a></td>
+<td><a href='#reg_DMAFrameoutControl_4'>0X0000 | (0X81C8)</a></td>
+</tr>
+</table>
+</div
+</div
+</div>
+<div><h3 class='memtitle' id = 'reg_ReadTotalBytes_0' > USER_NUMBER</h3><br><a href='#gid_21''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:ReadTotalBytes</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X8050; 在每次DMA读之前，先发送，因为其他地方可能修改了此值。字节数，需为XXX的整数倍。需要根据业务情况而设置。,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:user_number</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_WriteTotalBytes_1' > DMAWR_NUMBER</h3><br><a href='#gid_21''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:WriteTotalBytes</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X8054; 在每次DMA写之前，先发送，因为其他地方可能修改了此值。字节数，需为XXX的整数倍。需要根据业务情况而设置。,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:DmaWr_number</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_InterruptControl_2' > INTERRUPT_CONTROL</h3><br><a href='#gid_21''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:InterruptControl</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X8108; DMA中断控制信号，只有中断控制信号和中断请求信号同时为1的时候才能令中断状态信号为1，中断状态信号通过寄存器读回。,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:interrupt_control</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_ReadFromAcqOrDpo_3' > FRAMEIN_CONTROL0</h3><br><a href='#gid_21''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:ReadFromAcqOrDpo</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X8188; 需要根据业务情况而设置。目前只有0和1选择，其中0表示读采集板的数据，1表示读DPO的数据。,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:framein_control0</p>
+</div>
+</div>
+</div>
+<div><h3 class='memtitle' id = 'reg_DMAFrameoutControl_4' > FRAMEOUT_CONTROL0</h3><br><a href='#gid_21''>返回组目录</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='#catalog'>返回总目录</a>
+<div class='memitem'>
+<div class='memproto'><table class='memname'><tr><td class='memname'>软件名称:DMAFrameoutControl</td></tr></table></div>
+<div class='memdoc'>
+<p><b>描述</b></p>
+<p>abs-addr:0X81C8;,,,,, </p>
+<p><b>备注</th></b></p>
+<p>reg_hw_name:frameout_control0</p>
+</div>
+</div>
+</div>
+
+	</div>
+	</font>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/*
+  JiHe Scpi Command
+
+*/
+{
+  //仪器包含的SCPI指令
+  "Scpi": {
+    "SetTimeScaleByS": ":TIM:SCAL", //设置时基，单位S
+    "SetStore25K": ":FACT:STOR Of25KDots",  //设置存储深度位25K
+    "SetCH1Bandwidth": ":CHAN1:BWL",  //设置通道1带宽
+    "SetCH2Bandwidth": ":CHAN2:BWL",
+    "SetCH3Bandwidth": ":CHAN3:BWL",
+    "SetCH4Bandwidth": ":CHAN4:BWL",
+    "SetCH1Bias": ":CHANnel1:BIAS",  //设置通道1偏置
+    "SetCH2Bias": ":CHANnel2:BIAS",
+    "SetCH3Bias": ":CHANnel3:BIAS",
+    "SetCH4Bias": ":CHANnel4:BIAS",
+    "SetAcquisitionMode": ":ACQ:TYP", //设置采集模式
+    "SetTrigTyp": ":TRIG:TYP", //设置触发方式
+    "SetTrigSour": ":TRIG:EDG:SOUR", //设置触发源
+    "SetTrigLev": ":TRIG:EDG:LEV" //设置触发电平
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "status": true,
+  "signalType": "正弦波",
+  "generatedAt": "2026-03-25 11:42:17",
+  "context": {
+    "signalType": "正弦波",
+    "waveformAnalysis": {
+      "sampleRateHz": 976000000.0,
+      "timeScaleS": 0.0000012,
+      "verticalScaleV": 0.8,
+      "verticalOffsetV": -0.03,
+      "metrics": {
+        "FrequencyHz": { "value": 999842.37, "sourceKey": "Freq" },
+        "PeriodS": { "value": 0.0000010002, "sourceKey": "Period" },
+        "AmplitudeV": { "value": 1.627, "sourceKey": "Amplitude" },
+        "PeakToPeakV": { "value": 3.241, "sourceKey": "Pk2Pk" },
+        "RmsV": { "value": 1.148, "sourceKey": "RMS" },
+        "AverageV": { "value": 0.012, "sourceKey": "Average" }
+      }
+    }
+  }
+}

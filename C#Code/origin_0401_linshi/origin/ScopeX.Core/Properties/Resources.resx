@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my Int64 String</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded String representing a Byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a Byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:String" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:String" />
+              <xsd:attribute name="type" type="xsd:String" />
+              <xsd:attribute name="mimetype" type="xsd:String" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:String" />
+              <xsd:attribute name="name" type="xsd:String" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:String" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:String" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:String" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:String" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:String" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:String" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:String" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Clock_Interface_Coaxial_Pair_2_048Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\Clock Interface Coaxial Pair 2.048Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Clock_Interface_Symmetric_Pair_2_048Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\Clock Interface Symmetric Pair 2.048Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS0_Data_Contradirectional_64Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\DS0 Data Contradirectional 64Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS0_Double_64Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\DS0 Double 64Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS0_Single_64Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\DS0 Single 64Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS0_Timing_64Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\DS0 Timing 64Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS1A_2_048Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\DS1A 2.048Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS1C_3_152Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\DS1C 3.152Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS1_1_544Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\DS1 1.544Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS1_G_703_1_544M" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\DS1 G.703 1.544M.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS1_Old_Rate_1_544Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\DS1 Old Rate 1.544Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS2_6_312Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\DS2 6.312Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS2_Rate_Coax_Pair_6_312Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\DS2 Rate Coax Pair 6.312Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS2_Rate_Symmetric_Pair_6_312Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\DS2 Rate Symmetric Pair 6.312Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS3_44_736Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\DS3 44.736Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS3_G_703_44_736Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\DS3 G.703 44.736Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS3_Old_Rate_44_736Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\DS3 Old Rate 44.736Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS4NA_139_26Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\DS4NA 139.26Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="DS4_Max_Output_138_26Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\DS4 Max Output 138.26Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="E1_Coaxial_Pair_2_048Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\E1 Coaxial Pair 2.048Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="E1_Symmetric_Pair_2_048Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\E1 Symmetric Pair 2.048Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="E2_8_448Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\E2 8.448Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="E3_34_368Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\E3 34.368Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="E4_Binary_0_139_26Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\E4 Binary 0 139.26Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="E4_Binary_1_139_26Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\E4 Binary 1 139.26Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HST1_480Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\USB\HST1 480Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HST2_480Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\USB\HST2 480Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HST3_480Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\USB\HST3 480Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HST4_480Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\USB\HST4 480Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HST5_480Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\USB\HST5 480Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HST6_480Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\USB\HST6 480Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STM1E_Binary_0_155_52Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\STM1E Binary 0 155.52Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STM1E_Binary_1_155_52Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\STM1E Binary 1 155.52Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STM_0_CMI_0_51_84Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\STM_0 CMI 0 51.84Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STM_0_CMI_1_51_84Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\STM_0 CMI 1 51.84Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STM_0_HDBx_51_84Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\STM_0 HDBx 51.84Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STS_1_Eye_51_84Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\STS_1 Eye 51.84Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STS_1_Pulse_51_84Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\STS_1 Pulse 51.84Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STS_3_155_52Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\STS_3 155.52Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="STS_3_Max_Output_155_52Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ANSI T1.102\STS_3 Max Output 155.52Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_32Mb_32_064Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\32Mb 32.064Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_97Mb_97_728Mb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StdMask\ITU-T\97Mb 97.728Mb.msk;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

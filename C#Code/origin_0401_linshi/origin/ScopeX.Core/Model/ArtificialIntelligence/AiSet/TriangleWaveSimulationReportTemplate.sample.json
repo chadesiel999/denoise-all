@@ -1,0 +1,51 @@
+{
+  "status": true,
+  "requestId": 771534,
+  "executedRequestId": 771535,
+  "signalType": "三角波",
+  "generatedAt": "2026-03-25 11:44:02",
+  "context": {
+    "requestId": 771534,
+    "executedId": 771535,
+    "signalType": "三角波",
+    "aiSet": {
+      "enable": true,
+      "signalRecognitionEnable": true,
+      "windowsEnable": true,
+      "paramsEnable": true,
+      "tips": [
+        "仿真提示1：当前参数为写死测试数据",
+        "仿真提示2：后续可切换为实时测量值"
+      ],
+      "aiSetInfos": [
+        "仿真信息：当前信号类型为三角波"
+      ]
+    },
+    "waveformAnalysis": {
+      "enable": true,
+      "source": "C3",
+      "template": "三角波",
+      "sampleRateHz": 952000000.0,
+      "timeScaleS": 0.0000025,
+      "verticalScaleV": 0.5,
+      "verticalOffsetV": -0.08,
+      "measurementStatus": "已获取：来自参数测量快照结果。",
+      "metrics": {
+        "FrequencyHz": { "value": 499920.11, "sourceKey": "Freq" },
+        "PeriodS": { "value": 0.0000020003, "sourceKey": "Period" },
+        "AmplitudeV": { "value": 0.963, "sourceKey": "Amplitude" },
+        "PeakToPeakV": { "value": 1.924, "sourceKey": "Pk2Pk" },
+        "RmsV": { "value": 0.557, "sourceKey": "RMS" },
+        "RiseTimeS": { "value": 0.0000009984, "sourceKey": "Rise" },
+        "FallTimeS": { "value": 0.0000010028, "sourceKey": "Fall" },
+        "CycleAverageV": { "value": -0.004, "sourceKey": "CycAverage" },
+        "CycleRmsV": { "value": 0.556, "sourceKey": "CycRMS" }
+      },
+      "metricNotes": [
+        "备注：系统可扩展测量参数包括 频率、周期、幅值、峰峰值、最大值、最小值、均值、均方根、占空比、上升时间、下降时间、过冲、脉宽、延迟、相位、抖动 等。"
+      ]
+    }
+  },
+  "prompt": "请基于上下文生成三角波测试报告。",
+  "report": "【模拟报告】三角波周期稳定，Rise/Fall接近对称，CycAverage接近0，整体波形质量良好。"
+}

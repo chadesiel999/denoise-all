@@ -1,0 +1,23 @@
+/*
+  Fluck9500b Information
+
+*/
+{
+  //仪器信息
+  "Info": {
+    "Name": "Fluck9500b", //仪器型号名称
+    "VisaAddr": "GPIB4::19::INSTR" //仪器的Visa地址
+  },
+  //Scpi指令
+  "Scpi": {
+    "SetOutputChnl1": "ROUTe:SIGNal CH1", //设置输出通道1输出信号
+    "SetScopeSqu": "SCOpe SQU", //输出波形为方波
+    "SetSquPos": ":PAR:SQU:POL SYMM", //设置方波位置为对称(Symmetry)
+    "SetScopeSin": "SCOpe SIN", //输出波形为正弦波
+    "SetScopeDC": "SCOpe DC", //输出波形为直流
+    "SetFrequency": "FREQuency", //设置输出频率
+    "SetIMPedanc1": "ROUT:SIGN:IMP", //设置信号阻抗，参数：50 / 1E6
+    "SetVoltageByV": "VOLTage", //设置信号电压，单位V
+    "SetONOrOFF1": "OUTPut" //输出控制，参数：ON / OFF
+  }
+}
